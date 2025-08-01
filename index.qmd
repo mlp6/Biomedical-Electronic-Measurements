@@ -1,0 +1,9 @@
+---
+title: "Biomedical Electronic Measurements"
+subtitle: "BME253L (Fall 2025)"
+format:
+  html: default
+  pdf: default
+---
+
+{{< include _schedule.qmd >}}
