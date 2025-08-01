@@ -161,7 +161,7 @@ window.Quarto = {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software-install-tutorials.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./software-install-tutorials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software Installation &amp; Tutorials</span></a>
   </div>
 </li>
@@ -394,6 +394,11 @@ Note
 <section id="learning-module-schedule" class="level3">
 <h3 class="anchored" data-anchor-id="learning-module-schedule">Learning Module Schedule</h3>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Module</th>
@@ -403,73 +408,12 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Zephyr &amp; Nordic SoC Overview</td>
-<td><a href="slides/zephyr-gpio-isr-callbacks.qmd">Lecture Notes &amp; Slides</a></td>
-<td><a href="https://www.gradescope.com/courses/941957/assignments/5544155">Completion Survey</a> (Due: TBD) <br> <a href="software-install-tutorials.qmd">Software Installs &amp; Tutorials</a> (Due: TBD)</td>
-</tr>
-<tr class="even">
-<td>Event-Driven State Machines</td>
-<td><a href="slides/event-driven-state-machine.qmd">Lecture Notes &amp; Slides</a></td>
-<td><a href="https://www.gradescope.com/courses/941957/assignments/5548632">Wireless HRM</a> <br> <a href="labs/event-driven-state-machine-lab.qmd">Event-Driven State Machine Lab</a></td>
-</tr>
-<tr class="odd">
-<td>Version Control (<code>git</code>)</td>
-<td><a href="slides/git-fundamentals.qmd">Lecture Notes &amp; Slides</a></td>
-<td><a href="https://www.gradescope.com/courses/941957/assignments/5583313">Git Fundamentals Quiz</a> <br> <a href="labs/git-fundamentals-lab.qmd">Git Fundamentals Lab</a></td>
-</tr>
-<tr class="even">
-<td>C Programming</td>
-<td><a href="slides/c-programming.qmd">Lecture Notes &amp; Slides</a></td>
-<td><a href="https://www.gradescope.com/courses/941957/assignments/5671363">C Programming Quiz</a> <br> <a href="https://gitlab.oit.duke.edu/kits/BME-554L-001-Sp25/c-programming-lab">C Programming Lab</a> <br> <a href="https://www.gradescope.com/courses/941957/assignments/5672751">C Programming Lab</a></td>
-</tr>
-<tr class="odd">
-<td>Devicetree, GPIO &amp; Callbacks</td>
-<td><a href="slides/zephyr-gpio-isr-callbacks.qmd">Lecture Notes &amp; Slides</a> <br> <a href="https://academy.nordicsemi.com/courses/nrf-connect-sdk-fundamentals/lessons/lesson-2-reading-buttons-and-controlling-leds/">Nordic DevAcademy Lesson 2: Reading Buttons &amp; Controlling LEDs</a></td>
-<td><a href="labs/zephyr-gpio-isr-callbacks-lab.qmd">DT/GPIO/CB Lab</a></td>
-</tr>
-<tr class="even">
-<td>Timers &amp; Work Queues</td>
-<td><a href="slides/zephyr-timers.qmd">Lecture Notes &amp; Slides</a></td>
-<td><a href="labs/zephyr-timers-lab.qmd">Timers Lab</a></td>
-</tr>
-<tr class="odd">
-<td><a href="https://embeddedmedicaldevices.pages.oit.duke.edu/zephyr-threads-events/Zephyr-Threads-Events.html">Threads &amp; Kernel Events</a></td>
-<td><a href="https://academy.nordicsemi.com/courses/nrf-connect-sdk-intermediate/lessons/lesson-1-zephyr-rtos-advanced/">(Optional) Zephyr RTOS: Beyond the basics</a></td>
-<td><a href="https://gitlab.oit.duke.edu/EmbeddedMedicalDevices/zephyr-threads-events/-/blob/main/Zephyr-Threads-Kernel-Events-Lab.md?ref_type=heads">Heartbeat &amp; Kernel Events Refactor Lab</a></td>
-</tr>
-<tr class="even">
-<td>State Machine Framework</td>
-<td><a href="slides/zephyr-smf.qmd">Lecture Notes &amp; Slides</a></td>
-<td><a href="labs/zephyr-smf-lab.qmd">State Machine Framework Refactor Lab</a></td>
-</tr>
-<tr class="odd">
-<td>Debugging</td>
-<td><a href="https://academy.nordicsemi.com/courses/nrf-connect-sdk-intermediate/lessons/lesson-2-debugging/">Debugging DevAcademy Module</a></td>
-<td>None</td>
-</tr>
-<tr class="even">
-<td>Analog-to-Digital Conversion (ADC)</td>
-<td><a href="slides/zephyr-adc.qmd">Lecture Notes &amp; Slides</a> <br> <a href="https://academy.nordicsemi.com/courses/nrf-connect-sdk-intermediate/lessons/lesson-6-analog-to-digital-converter-adc/">Nordic DevAcademy: ADC</a></td>
-<td><a href="labs/zephyr-adc-lab.qmd">ADC Lab</a></td>
-</tr>
-<tr class="odd">
-<td>Pulse Width Modulation (PWM)</td>
-<td><a href="slides/zephyr-pwm.qmd">Lecture Notes &amp; Slides</a> <br> <a href="https://academy.nordicsemi.com/courses/nrf-connect-sdk-intermediate/lessons/lesson-4-pulse-width-modulation-pwm/topic/pulse-width-modulation-pwm/">Nordic DevAcademy: PWM</a></td>
-<td><a href="labs/zephyr-pwm-lab.qmd">PWM Lab</a></td>
-</tr>
-<tr class="even">
-<td><a href="https://embeddedmedicaldevices.pages.oit.duke.edu/zephyr-serial-comm/Zephyr-Serial-Communication.html">UART/I2C/SPI &amp; Sensors</a></td>
-<td><a href="https://academy.nordicsemi.com/lessons/lesson-4-serial-communication-uart/">UART DevAcademy Module</a> &amp; <a href="https://academy.nordicsemi.com/lessons/lesson-6-serial-com-i2c/">Serial Communication DevAcademy Module</a></td>
-<td>None</td>
-</tr>
-<tr class="odd">
-<td>Bluetooth Low Energy (BLE)</td>
-<td><a href="slides/zephyr-ble.qmd">Lecture Notes &amp; Slides</a> <br> <a href="https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/">DevAcademic: BLE (Lessons 1-4)</a></td>
-<td><a href="labs/ecg-temp-ble-lab.qmd">ECG &amp; Temperature Sensing BLE Device</a></td>
+<td>Topic</td>
+<td>Lecture Notes &amp; Slides</td>
+<td>Quizzes / Problem Sets / Lab Reports</td>
 </tr>
 </tbody>
 </table>
-<!-- | [Device Safety (VBUS)](https://gitlab.oit.duke.edu/EmbeddedMedicalDevices/zephyr-vbus) |  Coming Soon | Coming Soon | -->
 </section>
 <section id="special-dates" class="level3">
 <h3 class="anchored" data-anchor-id="special-dates">Special Dates</h3>

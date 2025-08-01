@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-08-01">
 
-<title>Biomedical Electronic Measurements</title>
+<title>Software Installation and Tutorials – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,9 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Biomedical Electronic Measurements
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-syllabus.html">Course Information</a></li><li class="breadcrumb-item"><a href="./software-install-tutorials.html">Software Installation &amp; Tutorials</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -134,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software-install-tutorials.html" class="sidebar-item-text sidebar-link">
+  <a href="./software-install-tutorials.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Software Installation &amp; Tutorials</span></a>
   </div>
 </li>
@@ -177,14 +176,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#visual-studio-code-ide" id="toc-visual-studio-code-ide" class="nav-link active" data-scroll-target="#visual-studio-code-ide">Visual Studio Code (IDE)</a></li>
+  <li><a href="#kicad" id="toc-kicad" class="nav-link" data-scroll-target="#kicad">KiCad</a></li>
+  <li><a href="#technical-report-preparation" id="toc-technical-report-preparation" class="nav-link" data-scroll-target="#technical-report-preparation">Technical Report Preparation</a></li>
+  <li><a href="#what-to-submit" id="toc-what-to-submit" class="nav-link" data-scroll-target="#what-to-submit">What to Submit</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="software-install-tutorials.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-syllabus.html">Course Information</a></li><li class="breadcrumb-item"><a href="./software-install-tutorials.html">Software Installation &amp; Tutorials</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Biomedical Electronic Measurements</h1>
+<h1 class="title">Software Installation and Tutorials</h1>
 <p class="subtitle lead">BME253L (Fall 2025)</p>
 </div>
 
@@ -193,6 +201,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 1, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -202,29 +216,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Module</th>
-<th>Materials</th>
-<th>Assessment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Topic</td>
-<td>Lecture Notes &amp; Slides</td>
-<td>Quizzes / Problem Sets / Lab Reports</td>
-</tr>
-</tbody>
-</table>
+<!-- TODO: tailor this for Arduino coding -->
+<section id="visual-studio-code-ide" class="level2">
+<h2 class="anchored" data-anchor-id="visual-studio-code-ide">Visual Studio Code (IDE)</h2>
+<p>We will be using <a href="https://code.visualstudio.com/">Visual Studio Code</a> as the IDE for all projects in this class. In addition to installing the base program, please install the following Extensions:</p>
+<ul>
+<li><code>nRF Connect for VS Code (Extension Pack)</code></li>
+<li><code>GitLens</code> (help with git operations / visualization)</li>
+<li><code>C/C++</code> (not the extension pack, since it include <code>CMake Tools</code> that has some incompatibilities with the Zephyr build tools)</li>
+<li><code>Cmake</code></li>
+<li>Microsoft <code>IntelliCode</code> (assistance with C syntax)</li>
+<li>State diagram software (see below)</li>
+<li><a href="https://code.visualstudio.com/docs/copilot/overview">GitHub CoPilot</a> (AI-assisted coding)
+<ul>
+<li>Sign up for free GitHub Education Student account to get access to this extension: https://github.com/education/students</li>
+<li>You will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.</li>
+<li>Install the GitHub CoPilot extension</li>
+</ul></li>
+</ul>
+<!-- TODO: add this -->
+</section>
+<section id="kicad" class="level2">
+<h2 class="anchored" data-anchor-id="kicad">KiCad</h2>
+<p>We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.</p>
+<p>Install KiCad on your laptop: https://www.kicad.org/</p>
+<!-- TODO: move this to a dedicated page -->
+</section>
+<section id="technical-report-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="technical-report-preparation">Technical Report Preparation</h2>
+<p>Each lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be included as part of your assignment git repositories.</p>
+<p>You will need to be able to perform the following tasks in your Jupyter notebooks:</p>
+<ul>
+<li>Read CSV text data saved from an oscilloscope.</li>
+<li>Generate plots</li>
+</ul>
+<!-- TODO: make this a dedicated page -->
+<p>If you need to install a Python environment on your laptop, then this is a good starting point: <a href="https://code.visualstudio.com/docs/python/python-tutorial">Getting Started with Python in VS Code</a>.</p>
+<p>This is a good tutorial on getting started with Jupyter notebooks in VS Code: <a href="https://code.visualstudio.com/docs/python/jupyter-support">Jupyter Notebooks in Visual Studio Code</a>.</p>
+<!-- TODO: maybe eliminate this? -->
+</section>
+<section id="what-to-submit" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-submit">What to Submit</h2>
+<p>Complete the online Gradescope “quiz” indicating completion of each of the main tasks above.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -631,4 +667,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
