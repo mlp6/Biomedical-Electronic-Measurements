@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Biomedical Electronic Measurements",
+    "section": "",
+    "text": "Dr. Mark Palmeri (mlp6)\n\nEmail: mark.palmeri@duke.edu\nEd Discussion (private message, TAs included)\nOffice Hours: TBD (258 Hudson Hall Annex)\n\n\n\n\n\nCeci Schmidz (cls157)\nTBD\n\n\n\n\n\n\n\nTip\n\n\n\nQuestions that can be answered by Dr. Palmeri or a teaching assistant should be posted on Ed Discussion.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#personnel",
+    "href": "course-syllabus.html#personnel",
+    "title": "Biomedical Electronic Measurements",
+    "section": "",
+    "text": "Dr. Mark Palmeri (mlp6)\n\nEmail: mark.palmeri@duke.edu\nEd Discussion (private message, TAs included)\nOffice Hours: TBD (258 Hudson Hall Annex)\n\n\n\n\n\nCeci Schmidz (cls157)\nTBD\n\n\n\n\n\n\n\nTip\n\n\n\nQuestions that can be answered by Dr. Palmeri or a teaching assistant should be posted on Ed Discussion.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-times-locations",
+    "href": "course-syllabus.html#course-times-locations",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Course Times & Locations",
+    "text": "Course Times & Locations\n\nLecture\nMonday & Wednesday, 08:30-09:45, Wilkinson 136 (Panopto recorded)\n\n\nLabs\nThere are no formally scheduled lab sections, but you will need to use the lab equipment to perform testing of your devices. Your TAs will announce times when they will hold lab hours. Otherwise, the lab is open to you to use on your schedule when classes are not scheduled in that room.\n\n\n\n\n\n\nWarning\n\n\n\nNo food or drink is allowed in the lab! Failure to adhere to this policy will have consequences on your lab grades.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease review the lab policies before using the lab for the first time this semester.\n\n\n\n\n\n\n\n\nNote\n\n\n\nB209 Door Code: 4-1-5-2",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-objectives",
+    "href": "course-syllabus.html#course-objectives",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Course Objectives",
+    "text": "Course Objectives\nThis course will give students experience with the design, function and deployment of embedded medical devices. Students will have hands on experience with electronic hardware and firmware (software) development, along with gaining experience with biosignal transduction into circuits.\nUpon completion of this course, students should be able to:\n\nVersion control software / firmware development using git.\nUse an Integrated Development Environment (IDE) for firmware development.\nDescribe hardware using a Devicetree hierarchical data structure.\nDevelop firmware using Zephyr as a bare-metal super-loop and a Realtime Operating System (RTOS)\nImplement state machines and generate state diagrams using the Unified Modeling Language (UML).\nUtilize callbacks / interupt service routines for realtime event detection and response.\nUtilize threads and work queues.\nDevelop firmware to control common periperals, including GPIO, ADC and PWM.\nUse different serial communication protocols, including UART, I2C, SPI, and BLE.\nUtilize firmware logging at different levels.\nTest firmware implementation on the nRF52833DK using electronic bench equipment and generate technical reports with data analysis for device verification.\nDevelop firmware with workflows that adhere to relevant industry and safety standards (e.g., UL, IEC60601, IEC62304) for FDA 510k clearance.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#prerequisites",
+    "href": "course-syllabus.html#prerequisites",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nMandatory\n\nEGR105L or equivalent experience [git, Python]\nIntrumentation (BME354L) / Mechatronics\nSignals & Systems (BME271/671 or equivalent experience [filtering, FFTs])",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#learning-management-system",
+    "href": "course-syllabus.html#learning-management-system",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Learning Management System",
+    "text": "Learning Management System\nWe will be using Canvas as the learning management system for this course. Most resources will be linked to the course website. All grades will be posted via Canvas/Gradescope.\nDuke’s GitLab server will be used for most course lab exercises, and code-related questions will be submitted to Dr. Palmeri / TAs using GitLab Issues.\nEd Discussion will be used for general course questions and discussion.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#class-schedule",
+    "href": "course-syllabus.html#class-schedule",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Class Schedule",
+    "text": "Class Schedule\nThis class is organized in a sequence of modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\nThis course uses a version of Mastery Learning, where “mastery” of a given module is necessary to progress onto the subsequent module. Quizzes are used to evaluate “knowledge”; lab exercises are used to demonstrate application of skills. In this course, assignments of later modules depends on the successful completion of earlier modules.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\n\n\n\n\nZephyr & Nordic SoC Overview\nLecture Notes & Slides\nCompletion Survey (Due: TBD)  Software Installs & Tutorials (Due: TBD)\n\n\nEvent-Driven State Machines\nLecture Notes & Slides\nWireless HRM  Event-Driven State Machine Lab\n\n\nVersion Control (git)\nLecture Notes & Slides\nGit Fundamentals Quiz  Git Fundamentals Lab\n\n\nC Programming\nLecture Notes & Slides\nC Programming Quiz  C Programming Lab  C Programming Lab\n\n\nDevicetree, GPIO & Callbacks\nLecture Notes & Slides  Nordic DevAcademy Lesson 2: Reading Buttons & Controlling LEDs\nDT/GPIO/CB Lab\n\n\nTimers & Work Queues\nLecture Notes & Slides\nTimers Lab\n\n\nThreads & Kernel Events\n(Optional) Zephyr RTOS: Beyond the basics\nHeartbeat & Kernel Events Refactor Lab\n\n\nState Machine Framework\nLecture Notes & Slides\nState Machine Framework Refactor Lab\n\n\nDebugging\nDebugging DevAcademy Module\nNone\n\n\nAnalog-to-Digital Conversion (ADC)\nLecture Notes & Slides  Nordic DevAcademy: ADC\nADC Lab\n\n\nPulse Width Modulation (PWM)\nLecture Notes & Slides  Nordic DevAcademy: PWM\nPWM Lab\n\n\nUART/I2C/SPI & Sensors\nUART DevAcademy Module & Serial Communication DevAcademy Module\nNone\n\n\nBluetooth Low Energy (BLE)\nLecture Notes & Slides  DevAcademic: BLE (Lessons 1-4)\nECG & Temperature Sensing BLE Device\n\n\n\n\n\n\nSpecial Dates\n\nFall Break (Oct 11-14, 2025)\nLDOC (Nov 25, 2025)",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#attendance-participation",
+    "href": "course-syllabus.html#attendance-participation",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Attendance & Participation",
+    "text": "Attendance & Participation\nClass participation in lecture and utilize lab time with your TAs is strongly encouraged. Lecture will be used to provide skill overview and live demonstrations, many of while will kickstart your efforts for your project. Lab time will provide you access to equipment and the TAs for assistance.\nStudents are responsible for obtaining missed lecture content from other students in the class. All lecture slides/presented content will be made availabe online (Canvas/Gitlab), and lectures will be recorded via Panopto and posted to Canvas.\nParticipation on Ed Discussion is also encouraged, in the form of:\n\nAsking questions about the course material (ideally, publicly, so that others can benefit (Anonymous okay))\nAnswering questions from other students\nSharing interesting articles or resources related to the course material",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#assignments-grading",
+    "href": "course-syllabus.html#assignments-grading",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Assignments & Grading",
+    "text": "Assignments & Grading\n\nGrading\nFundamental knowledge will be assessed with online quizzes (~30%).\nLab exercises will focus on implementing key functionality towards the final working device (a wireless ECG and temperature sensor). Each lab exercise will be evaluated with code reviews and technical reports that assess functionality (~50%).\nTesting of the final working device will be presented in a final technical report (~20%).\nAll assignment grades will be posted to Gradescope (and linked to the Canvas gradebook) throughout the semester to track your performance.\n\n\nCourse Grade\nThis course is not “curved” (i.e., a distribution of grades will not be enforced), and a traditional grading scheme will be used (e.g., 90-93 = A-, 94-97 = A, 97-100 = A+). Participation throughout the semester will influence rounding up/down for fractional grades.\nFailing the course can happen with a cummulative score \\(&lt;\\) 70 (C-).\n\n\nRegrades\nAny regrading requests need to be made within one week of grades for a given assignment being released. You must make the request via Gradescope and provide a description of why you feel a regrade is appropriate. Requesting a regrade could lead to additional loss of credit when an assignment is re-evaluated.\nSome assignments will have an opportunity to be resubmitted based on grading feedback at the discretion of Dr. Palmeri.\n\n\nLate Policy / SDAO Accomodations\nLate submission windows will be available for all assignments, minus the final project, and should be used to accomodate acute illness, travel, high workload from other classes and other unforeseen circumstances. This late submission window can be utilized without penalty and without prior approval.\nStudents with SDAO accomodations for extended time on assignments can use this extended late submission window for all assignments.\nAny assignments submitted after the late submission window will only be accepted for partial credit at the discretion of Dr. Palmeri or if prior approval was sought before the original due date.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#duke-community-standard",
+    "href": "course-syllabus.html#duke-community-standard",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Duke Community Standard",
+    "text": "Duke Community Standard\nAll students are expected to adhere to all principles of the Duke Community Standard. Violations of the Duke Community Standard will be referred immediately to the Office of Student Conduct. Please do not hesitate to talk with Dr. Palmeri about any situations involving academic honor, especially if it is ambiguous what should be done.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#faq",
+    "href": "course-syllabus.html#faq",
+    "title": "Biomedical Electronic Measurements",
+    "section": "FAQ",
+    "text": "FAQ\n\nCan I collaborate with other students?\nEngineering is inherently a collaborative field, and in this class, you are encouraged to work collaboratively on your projects. That being said, all of the work that you submit must be generated by you and reflect your understanding of the material.\n\n\n\n\n\n\nImportant\n\n\n\nAll resources used in your projects that were developed by another person or company must be properly acknowledged using comments in your code and lab reports.\n\n\n\n\nCan I use AI?\nThe use of artificial intelligence is a rapidly developing resource / tool in engineering. In software development, there are many levels of AI-assitance available. Such form of assistance include the IntelliCode tools and GitHub CoPilot (free to students through the GitHub Education program). These tools can be leveraged to help with syntax.\n\n\n\n\n\n\nCaution\n\n\n\nYou are strongly cautioned to not rely on these tools for logical implementation.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Coming soon…",
+    "crumbs": [
+      "Course Information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "bme-lab-policies.html",
+    "href": "bme-lab-policies.html",
+    "title": "BME Lab Procedures and Safety Expectations",
+    "section": "",
+    "text": "Important\n\n\n\nSafety is Always First, Cleanliness a close second\n\n\nSafety always comes first in lab. To that end, you are expected to follow the rules in this document. Failure to do so may result in revocation of laboratory privileges, reduction of your course grade, and possible withdrawal from your course. Understanding risks and learning to work safely in the laboratory are an important part of your education.\nBefore entering lab, your safety training must be current. You need Duke’s Occupational and Environmental Safety Office’s:\n\nFire/Life Safety, and\nLaboratory Safety-General\n\ntraining modules. We know that you may have done this training before, but it expires in one year, and you must be current through the end of the semester.\nMost accidents are the result of a series of failures. That said, most accidents are preventable. You are responsible for your safety and the safety of those around you. The vast majority of accidents involve some combination of inattention, carelessness, horseplay, impairment, broken tools, and lack of knowledge. All of these factors can be mitigated and it’s your job to do so.\nYou are responsible for keeping the lab clean.\n\n\n\n\n\n\nWarning\n\n\n\nFailure to keep a clean workspace can result in a lower grade for you and your team.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you or someone else in lab needs immediate medical attention, call 911.\n\n\nIn case you need to report your location, you are in CIEMAS B209. Non-emergent problems, call 681-WELL (681-9355). If you are injured in lab, you must let an instructor/TA/lab staff member know as soon as possible. Lab staff after-hours phone number is on the contact cards posted outside every lab door.\n\n\n\n\n\n\nNote\n\n\n\nKeep these points in mind… - In an emergency, call 911. Location: CIEMAS B209\n\nIn the event of a non-emergent injury, seek medical attention and let an instructor/TA/lab staff know within 12 hours.\nFind the emergency exits.\nNever work alone. Two or more people must be present and able to see and hear each other.\nInspect every tool before use. Remove broken tools from service, place them on the broken tools shelf at the back of the room, and notify lab staff.\nWear safety glasses when appropriate. This includes, but is not limited to, activities such as soldering, sanding, filing, hammering, cutting, and drilling.\nWear hearing protection when using noisy tools such as drills and the Dremel tool. Ear buds or music headphones are not sufficient hearing protection.\nNever work impaired. If you are tired, stressed, in a rush, or impaired in any other way then do not work in lab. Go home and recuperate.\nTie back long hair to keep it away from tools.\nClosed-toe shoes must be worn in the lab. Long trousers are preferred.\nProperly secure materials. Clamps, vises and portable worktables are available.\nDon’t force anything. If the job requires significant force, you’re doing it wrong.\nKeep food and drink out of the lab!\nPower down equipment when finished with it.\nA fire extinguisher is outside the door.\nWash your hands before leaving lab.\nBits of unused solder, wire and lead trimmings all go in a “Solder Scrap” container.\nAnything contaminated with solder paste (wipes, boards, applicators) goes in a “Solder Scrap” container.\nOther hazardous waste dealt with on a case by case basis; ask lab staff for help.\nPut tools away, in the right place. Tool drawers are labeled, but if you’re unsure where to put a tool, ask your TA/lab staff.\nDo not hoard parts or tools.\nThis bears repeating: Take the parts you need, but only the parts you need. Do not hoard parts. If you see a part becoming scarce, let lab staff know so they can re-order.\nBenches are for temporary use only. Leave no trace that you were at the bench when you leave for the day. Rarely, with approval, a bench can be claimed for the semester.\nAny and all paint must be pre-approved by an instructor/TA/lab staff. Unapproved paint on projects will result in a lower grade. (Spray paint indoors is never approved.)\nA representative from your group is expected to participate in weekly cleaning. Your instructor will give you the schedule.\nPlace a cover on the bench for messy work. Chucks and Ram Board are available for this.\nLab staff have a collection of good soldering tips and fine tools (e.g. tweezers). If you have need for something better than you can find in lab, ask lab staff.",
+    "crumbs": [
+      "Course Information",
+      "BME Lab Policies"
+    ]
+  },
+  {
+    "objectID": "resources/teaching_assistant_expectations.html",
+    "href": "resources/teaching_assistant_expectations.html",
+    "title": "Teaching Assistant Expectations",
+    "section": "",
+    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
+    "crumbs": [
+      "Resources",
+      "Teaching Assistant Expectations"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Biomedical Electronic Measurements",
+    "section": "",
+    "text": "Module\nMaterials\nAssessment\n\n\n\n\nZephyr & Nordic SoC Overview\nLecture Notes & Slides\nCompletion Survey (Due: TBD)  Software Installs & Tutorials (Due: TBD)\n\n\nEvent-Driven State Machines\nLecture Notes & Slides\nWireless HRM  Event-Driven State Machine Lab\n\n\nVersion Control (git)\nLecture Notes & Slides\nGit Fundamentals Quiz  Git Fundamentals Lab\n\n\nC Programming\nLecture Notes & Slides\nC Programming Quiz  C Programming Lab  C Programming Lab\n\n\nDevicetree, GPIO & Callbacks\nLecture Notes & Slides  Nordic DevAcademy Lesson 2: Reading Buttons & Controlling LEDs\nDT/GPIO/CB Lab\n\n\nTimers & Work Queues\nLecture Notes & Slides\nTimers Lab\n\n\nThreads & Kernel Events\n(Optional) Zephyr RTOS: Beyond the basics\nHeartbeat & Kernel Events Refactor Lab\n\n\nState Machine Framework\nLecture Notes & Slides\nState Machine Framework Refactor Lab\n\n\nDebugging\nDebugging DevAcademy Module\nNone\n\n\nAnalog-to-Digital Conversion (ADC)\nLecture Notes & Slides  Nordic DevAcademy: ADC\nADC Lab\n\n\nPulse Width Modulation (PWM)\nLecture Notes & Slides  Nordic DevAcademy: PWM\nPWM Lab\n\n\nUART/I2C/SPI & Sensors\nUART DevAcademy Module & Serial Communication DevAcademy Module\nNone\n\n\nBluetooth Low Energy (BLE)\nLecture Notes & Slides  DevAcademic: BLE (Lessons 1-4)\nECG & Temperature Sensing BLE Device"
+  }
+]
