@@ -34,9 +34,9 @@ website:
       - section: "Learning Modules"
       - section: Labs
         contents:
-        - href: https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_intro_hout.pdf
+        - href: labs/introduction.qmd
           text: "Introduction"
-        - href: https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_ohm_hout.pdf
+        - href: labs/ohms_law.qmd
           text: "Ohm's Law and Power"
       - section: Resources
         contents:

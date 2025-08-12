@@ -1,3 +1,4 @@
-| Module | Materials | Assessment  |
-| --- | --- | --- |
-| Topic | Lecture Notes & Slides | Quizzes / Problem Sets / Lab Reports | 
+| Module | Materials | Assessment | Lab Exercise |
+| --- | --- | --- | --- |
+| Voltage & Current | Lecture Notes & Slides | Quizzes & Problem Sets | [Introduction](labs/introduction.qmd)
+| Ohm's Law & Power | Lecture Notes & Slides | Quizzes & Problem Sets | [Ohm's Law & Power](labs/ohms_power.qmd)

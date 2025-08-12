@@ -1,0 +1,9 @@
+---
+title: "Ohm's Law and Power"
+date: "2025-09-10"
+format:
+  html: default
+---
+
+<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_ohms_hout.pdf" width="100%" height="800px" style="border:none;">
+</iframe>
