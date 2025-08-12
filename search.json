@@ -1,5 +1,78 @@
 [
   {
+    "objectID": "software-install-tutorials.html",
+    "href": "software-install-tutorials.html",
+    "title": "Software Installation and Tutorials",
+    "section": "",
+    "text": "We will be using Visual Studio Code as the IDE for all projects in this class. In addition to installing the base program, please install the following Extensions:\n\nnRF Connect for VS Code (Extension Pack)\nGitLens (help with git operations / visualization)\nC/C++ (not the extension pack, since it include CMake Tools that has some incompatibilities with the Zephyr build tools)\nCmake\nMicrosoft IntelliCode (assistance with C syntax)\nState diagram software (see below)\nGitHub CoPilot (AI-assisted coding)\n\nSign up for free GitHub Education Student account to get access to this extension: https://github.com/education/students\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.\nInstall the GitHub CoPilot extension",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
+    "href": "software-install-tutorials.html#visual-studio-code-ide",
+    "title": "Software Installation and Tutorials",
+    "section": "",
+    "text": "We will be using Visual Studio Code as the IDE for all projects in this class. In addition to installing the base program, please install the following Extensions:\n\nnRF Connect for VS Code (Extension Pack)\nGitLens (help with git operations / visualization)\nC/C++ (not the extension pack, since it include CMake Tools that has some incompatibilities with the Zephyr build tools)\nCmake\nMicrosoft IntelliCode (assistance with C syntax)\nState diagram software (see below)\nGitHub CoPilot (AI-assisted coding)\n\nSign up for free GitHub Education Student account to get access to this extension: https://github.com/education/students\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.\nInstall the GitHub CoPilot extension",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#kicad",
+    "href": "software-install-tutorials.html#kicad",
+    "title": "Software Installation and Tutorials",
+    "section": "KiCad",
+    "text": "KiCad\nWe will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#technical-report-preparation",
+    "href": "software-install-tutorials.html#technical-report-preparation",
+    "title": "Software Installation and Tutorials",
+    "section": "Technical Report Preparation",
+    "text": "Technical Report Preparation\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be included as part of your assignment git repositories.\nYou will need to be able to perform the following tasks in your Jupyter notebooks:\n\nRead CSV text data saved from an oscilloscope.\nGenerate plots\n\n\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#what-to-submit",
+    "href": "software-install-tutorials.html#what-to-submit",
+    "title": "Software Installation and Tutorials",
+    "section": "What to Submit",
+    "text": "What to Submit\nComplete the online Gradescope “quiz” indicating completion of each of the main tasks above.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Biomedical Electronic Measurements",
+    "section": "",
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current\nLecture Notes & Slides\nQuizzes & Problem Sets\nIntroduction\n\n\nOhm’s Law & Power\nLecture Notes & Slides\nQuizzes & Problem Sets\nOhm’s Law & Power"
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Coming soon…",
+    "crumbs": [
+      "Course Information",
+      "FAQ"
+    ]
+  },
+  {
     "objectID": "course-syllabus.html",
     "href": "course-syllabus.html",
     "title": "Biomedical Electronic Measurements",
@@ -70,7 +143,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\nThis course uses a version of Mastery Learning, where “mastery” of a given module is necessary to progress onto the subsequent module. Quizzes are used to evaluate “knowledge”; lab exercises are used to demonstrate application of skills. In this course, assignments of later modules depends on the successful completion of earlier modules.\n\nLearning Module Schedule\n\n\n\n\n\n\n\n\nModule\nMaterials\nAssessment\n\n\n\n\nTopic\nLecture Notes & Slides\nQuizzes / Problem Sets / Lab Reports\n\n\n\n\n\nSpecial Dates\n\nFall Break (Oct 11-14, 2025)\nLDOC (Nov 25, 2025)",
+    "text": "Class Schedule\nThis class is organized in a sequence of modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\nThis course uses a version of Mastery Learning, where “mastery” of a given module is necessary to progress onto the subsequent module. Quizzes are used to evaluate “knowledge”; lab exercises are used to demonstrate application of skills. In this course, assignments of later modules depends on the successful completion of earlier modules.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current\nLecture Notes & Slides\nQuizzes & Problem Sets\nIntroduction\n\n\nOhm’s Law & Power\nLecture Notes & Slides\nQuizzes & Problem Sets\nOhm’s Law & Power\n\n\n\n\n\nSpecial Dates\n\nFall Break (Oct 11-14, 2025)\nLDOC (Nov 25, 2025)",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
@@ -121,24 +194,6 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Biomedical Electronic Measurements",
-    "section": "",
-    "text": "Module\nMaterials\nAssessment\n\n\n\n\nTopic\nLecture Notes & Slides\nQuizzes / Problem Sets / Lab Reports"
-  },
-  {
-    "objectID": "resources/teaching_assistant_expectations.html",
-    "href": "resources/teaching_assistant_expectations.html",
-    "title": "Teaching Assistant Expectations",
-    "section": "",
-    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
-    "crumbs": [
-      "Resources",
-      "Teaching Assistant Expectations"
-    ]
-  },
-  {
     "objectID": "bme-lab-policies.html",
     "href": "bme-lab-policies.html",
     "title": "BME Lab Procedures and Safety Expectations",
@@ -150,69 +205,14 @@
     ]
   },
   {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Frequently Asked Questions",
+    "objectID": "resources/teaching_assistant_expectations.html",
+    "href": "resources/teaching_assistant_expectations.html",
+    "title": "Teaching Assistant Expectations",
     "section": "",
-    "text": "Coming soon…",
+    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
     "crumbs": [
-      "Course Information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html",
-    "href": "software-install-tutorials.html",
-    "title": "Software Installation and Tutorials",
-    "section": "",
-    "text": "We will be using Visual Studio Code as the IDE for all projects in this class. In addition to installing the base program, please install the following Extensions:\n\nnRF Connect for VS Code (Extension Pack)\nGitLens (help with git operations / visualization)\nC/C++ (not the extension pack, since it include CMake Tools that has some incompatibilities with the Zephyr build tools)\nCmake\nMicrosoft IntelliCode (assistance with C syntax)\nState diagram software (see below)\nGitHub CoPilot (AI-assisted coding)\n\nSign up for free GitHub Education Student account to get access to this extension: https://github.com/education/students\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.\nInstall the GitHub CoPilot extension",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
-    "href": "software-install-tutorials.html#visual-studio-code-ide",
-    "title": "Software Installation and Tutorials",
-    "section": "",
-    "text": "We will be using Visual Studio Code as the IDE for all projects in this class. In addition to installing the base program, please install the following Extensions:\n\nnRF Connect for VS Code (Extension Pack)\nGitLens (help with git operations / visualization)\nC/C++ (not the extension pack, since it include CMake Tools that has some incompatibilities with the Zephyr build tools)\nCmake\nMicrosoft IntelliCode (assistance with C syntax)\nState diagram software (see below)\nGitHub CoPilot (AI-assisted coding)\n\nSign up for free GitHub Education Student account to get access to this extension: https://github.com/education/students\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.\nInstall the GitHub CoPilot extension",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html#kicad",
-    "href": "software-install-tutorials.html#kicad",
-    "title": "Software Installation and Tutorials",
-    "section": "KiCad",
-    "text": "KiCad\nWe will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html#technical-report-preparation",
-    "href": "software-install-tutorials.html#technical-report-preparation",
-    "title": "Software Installation and Tutorials",
-    "section": "Technical Report Preparation",
-    "text": "Technical Report Preparation\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be included as part of your assignment git repositories.\nYou will need to be able to perform the following tasks in your Jupyter notebooks:\n\nRead CSV text data saved from an oscilloscope.\nGenerate plots\n\n\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html#what-to-submit",
-    "href": "software-install-tutorials.html#what-to-submit",
-    "title": "Software Installation and Tutorials",
-    "section": "What to Submit",
-    "text": "What to Submit\nComplete the online Gradescope “quiz” indicating completion of each of the main tasks above.",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
+      "Resources",
+      "Teaching Assistant Expectations"
     ]
   }
 ]
