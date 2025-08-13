@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Duke BME">
+<meta name="dcterms.date" content="2025-10-01">
 
-<title>Biomedical Electronic Measurements</title>
+<title>Impedance – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-fced259a1985fd972ecb57c7cd45153f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a01fe99a0d9e8404cce06d01badf0d8e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-fced259a1985fd972ecb57c7cd45153f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a01fe99a0d9e8404cce06d01badf0d8e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,37 +69,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -109,7 +82,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-syllabus.html">Course Information</a></li><li class="breadcrumb-item"><a href="./course-syllabus.html">Course Syllabus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/impedance.html">Impedance</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -121,7 +94,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Biomedical Electronic Measurements</a> 
+      <a href="../">Biomedical Electronic Measurements</a> 
     </div>
       </div>
     <div class="sidebar-menu-container"> 
@@ -137,13 +110,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link active">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bme-lab-policies.html" class="sidebar-item-text sidebar-link">
+  <a href="../bme-lab-policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BME Lab Policies</span></a>
   </div>
 </li>
@@ -161,13 +134,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software-install-tutorials.html" class="sidebar-item-text sidebar-link">
+  <a href="../software-install-tutorials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software Installation &amp; Tutorials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./faq.html" class="sidebar-item-text sidebar-link">
+  <a href="../faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
@@ -188,19 +161,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/ohms_power.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/ohms_power.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ohm’s Law and Power</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/impedance.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/impedance.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Impedance</span></a>
   </div>
 </li>
@@ -217,13 +190,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources/XYZs_of_Oscopes_Tektronix.pdf" class="sidebar-item-text sidebar-link">
+  <a href="../resources/XYZs_of_Oscopes_Tektronix.pdf" class="sidebar-item-text sidebar-link">
  <span class="menu-text">XYZ of Oscilloscopes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources/teaching_assistant_expectations.html" class="sidebar-item-text sidebar-link">
+  <a href="../resources/teaching_assistant_expectations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching Assistant Expectations</span></a>
   </div>
 </li>
@@ -234,63 +207,38 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#personnel" id="toc-personnel" class="nav-link active" data-scroll-target="#personnel">Personnel</a>
-  <ul class="collapse">
-  <li><a href="#instructor" id="toc-instructor" class="nav-link" data-scroll-target="#instructor">Instructor</a></li>
-  <li><a href="#teaching-assistants" id="toc-teaching-assistants" class="nav-link" data-scroll-target="#teaching-assistants">Teaching Assistants</a></li>
-  </ul></li>
-  <li><a href="#course-times-locations" id="toc-course-times-locations" class="nav-link" data-scroll-target="#course-times-locations">Course Times &amp; Locations</a>
-  <ul class="collapse">
-  <li><a href="#lecture" id="toc-lecture" class="nav-link" data-scroll-target="#lecture">Lecture</a></li>
-  <li><a href="#labs" id="toc-labs" class="nav-link" data-scroll-target="#labs">Labs</a></li>
-  </ul></li>
-  <li><a href="#course-objectives" id="toc-course-objectives" class="nav-link" data-scroll-target="#course-objectives">Course Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a>
-  <ul class="collapse">
-  <li><a href="#mandatory" id="toc-mandatory" class="nav-link" data-scroll-target="#mandatory">Mandatory</a></li>
-  </ul></li>
-  <li><a href="#learning-management-system" id="toc-learning-management-system" class="nav-link" data-scroll-target="#learning-management-system">Learning Management System</a></li>
-  <li><a href="#class-schedule" id="toc-class-schedule" class="nav-link" data-scroll-target="#class-schedule">Class Schedule</a>
-  <ul class="collapse">
-  <li><a href="#learning-module-schedule" id="toc-learning-module-schedule" class="nav-link" data-scroll-target="#learning-module-schedule">Learning Module Schedule</a></li>
-  <li><a href="#special-dates" id="toc-special-dates" class="nav-link" data-scroll-target="#special-dates">Special Dates</a></li>
-  </ul></li>
-  <li><a href="#attendance-participation" id="toc-attendance-participation" class="nav-link" data-scroll-target="#attendance-participation">Attendance &amp; Participation</a></li>
-  <li><a href="#assignments-grading" id="toc-assignments-grading" class="nav-link" data-scroll-target="#assignments-grading">Assignments &amp; Grading</a>
-  <ul class="collapse">
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  <li><a href="#course-grade" id="toc-course-grade" class="nav-link" data-scroll-target="#course-grade">Course Grade</a></li>
-  <li><a href="#regrades" id="toc-regrades" class="nav-link" data-scroll-target="#regrades">Regrades</a></li>
-  <li><a href="#late-policy-sdao-accomodations" id="toc-late-policy-sdao-accomodations" class="nav-link" data-scroll-target="#late-policy-sdao-accomodations">Late Policy / SDAO Accomodations</a></li>
-  </ul></li>
-  <li><a href="#duke-community-standard" id="toc-duke-community-standard" class="nav-link" data-scroll-target="#duke-community-standard">Duke Community Standard</a></li>
-  <li><a href="#faq" id="toc-faq" class="nav-link" data-scroll-target="#faq">FAQ</a>
-  <ul class="collapse">
-  <li><a href="#can-i-collaborate-with-other-students" id="toc-can-i-collaborate-with-other-students" class="nav-link" data-scroll-target="#can-i-collaborate-with-other-students">Can I collaborate with other students?</a></li>
-  <li><a href="#can-i-use-ai" id="toc-can-i-use-ai" class="nav-link" data-scroll-target="#can-i-use-ai">Can I use AI?</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="course-syllabus.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-syllabus.html">Course Information</a></li><li class="breadcrumb-item"><a href="./course-syllabus.html">Course Syllabus</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/impedance.html">Impedance</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Biomedical Electronic Measurements</h1>
-<p class="subtitle lead">BME253L (Fall 2025)</p>
-</div>
+<h1 class="title">Impedance</h1>
+<p class="subtitle lead">BME253L - Fall 2025 - Palmeri</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Lab</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Duke BME </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 1, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -300,249 +248,10 @@ window.Quarto = {
 </header>
 
 
-<section id="personnel" class="level2">
-<h2 class="anchored" data-anchor-id="personnel">Personnel</h2>
-<section id="instructor" class="level3">
-<h3 class="anchored" data-anchor-id="instructor">Instructor</h3>
-<p>Dr.&nbsp;Mark Palmeri (<code>mlp6</code>)</p>
-<ul>
-<li>Email: <a href="mailto:mark.palmeri@duke.edu">mark.palmeri@duke.edu</a></li>
-<li>Ed Discussion (private message, TAs included)</li>
-<li>Office Hours: TBD (258 Hudson Hall Annex)</li>
-</ul>
-</section>
-<section id="teaching-assistants" class="level3">
-<h3 class="anchored" data-anchor-id="teaching-assistants">Teaching Assistants</h3>
-<ul>
-<li>Ceci Schmidz (<code>cls157</code>)</li>
-<li>TBD</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Questions that can be answered by Dr.&nbsp;Palmeri or a teaching assistant should be posted on Ed Discussion.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="course-times-locations" class="level2">
-<h2 class="anchored" data-anchor-id="course-times-locations">Course Times &amp; Locations</h2>
-<section id="lecture" class="level3">
-<h3 class="anchored" data-anchor-id="lecture">Lecture</h3>
-<p>Monday &amp; Wednesday, 08:30-09:45, Wilkinson 136 (Panopto recorded)</p>
-</section>
-<section id="labs" class="level3">
-<h3 class="anchored" data-anchor-id="labs">Labs</h3>
-<p>There are no formally scheduled lab sections, but you will need to use the lab equipment to perform testing of your devices. Your TAs will announce times when they will hold lab hours. Otherwise, the lab is open to you to use on your schedule when classes are not scheduled in that room.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>No food or drink is allowed in the lab! Failure to adhere to this policy will have consequences on your lab grades.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Please review the <a href="./bme-lab-policies.html">lab policies</a> before using the lab for the first time this semester.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>B209 Door Code: 4-1-5-2</p>
-</div>
-</div>
-</section>
-</section>
-<section id="course-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="course-objectives">Course Objectives</h2>
-<p>This course will give students experience with the design, function and deployment of embedded medical devices. Students will have hands on experience with electronic hardware and firmware (software) development, along with gaining experience with biosignal transduction into circuits.</p>
-<p>Upon completion of this course, students should be able to:</p>
-<ul>
-<li>Version control software / firmware development using <code>git</code>.</li>
-<li>Use an Integrated Development Environment (IDE) for firmware development.</li>
-<li>Describe hardware using a Devicetree hierarchical data structure.</li>
-<li>Develop firmware using Zephyr as a bare-metal super-loop and a Realtime Operating System (RTOS)</li>
-<li>Implement state machines and generate state diagrams using the Unified Modeling Language (UML).</li>
-<li>Utilize callbacks / interupt service routines for realtime event detection and response.</li>
-<li>Utilize threads and work queues.</li>
-<li>Develop firmware to control common periperals, including GPIO, ADC and PWM.</li>
-<li>Use different serial communication protocols, including UART, I2C, SPI, and BLE.</li>
-<li>Utilize firmware logging at different levels.</li>
-<li>Test firmware implementation on the <code>nRF52833DK</code> using electronic bench equipment and generate technical reports with data analysis for device verification.</li>
-<li>Develop firmware with workflows that adhere to relevant industry and safety standards (e.g., UL, IEC60601, IEC62304) for FDA 510k clearance.</li>
-</ul>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<section id="mandatory" class="level3">
-<h3 class="anchored" data-anchor-id="mandatory">Mandatory</h3>
-<ul>
-<li>EGR105L or equivalent experience [git, Python]</li>
-<li>Intrumentation (BME354L) / Mechatronics</li>
-<li>Signals &amp; Systems (BME271/671 or equivalent experience [filtering, FFTs])</li>
-</ul>
-</section>
-</section>
-<section id="learning-management-system" class="level2">
-<h2 class="anchored" data-anchor-id="learning-management-system">Learning Management System</h2>
-<p>We will be using <a href="https://canvas.duke.edu">Canvas</a> as the learning management system for this course. Most resources will be linked to the course website. All grades will be posted via Canvas/Gradescope.</p>
-<p>Duke’s <a href="https://gitlab.oit.duke.edu">GitLab</a> server will be used for most course lab exercises, and code-related questions will be submitted to Dr.&nbsp;Palmeri / TAs using GitLab Issues.</p>
-<p>Ed Discussion will be used for general course questions and discussion.</p>
-</section>
-<section id="class-schedule" class="level2">
-<h2 class="anchored" data-anchor-id="class-schedule">Class Schedule</h2>
-<p>This class is organized in a sequence of modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.</p>
-<p>This course uses a version of <a href="https://en.wikipedia.org/wiki/Mastery_learning">Mastery Learning</a>, where “mastery” of a given module is necessary to progress onto the subsequent module. Quizzes are used to evaluate “knowledge”; lab exercises are used to demonstrate application of skills. In this course, assignments of later modules depends on the successful completion of earlier modules.</p>
-<section id="learning-module-schedule" class="level3">
-<h3 class="anchored" data-anchor-id="learning-module-schedule">Learning Module Schedule</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Module</th>
-<th>Materials</th>
-<th>Assessment</th>
-<th>Lab Exercise</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Voltage &amp; Current</td>
-<td>Lecture Notes &amp; Slides</td>
-<td>Quizzes &amp; Problem Sets</td>
-<td><a href="./labs/introduction.html">Introduction</a></td>
-</tr>
-<tr class="even">
-<td>Ohm’s Law &amp; Power</td>
-<td>Lecture Notes &amp; Slides</td>
-<td>Quizzes &amp; Problem Sets</td>
-<td><a href="./labs/ohms_power.html">Ohm’s Law &amp; Power</a></td>
-</tr>
-<tr class="odd">
-<td>Complex Impedance</td>
-<td>Lecture Notes &amp; Slides</td>
-<td>Quizzes &amp; Problem Sets</td>
-<td><a href="./labs/impedance.html">Impedance</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="special-dates" class="level3">
-<h3 class="anchored" data-anchor-id="special-dates">Special Dates</h3>
-<ul>
-<li>Fall Break (Oct 11-14, 2025)</li>
-<li>LDOC (Nov 25, 2025)</li>
-</ul>
-</section>
-</section>
-<section id="attendance-participation" class="level2">
-<h2 class="anchored" data-anchor-id="attendance-participation">Attendance &amp; Participation</h2>
-<p>Class participation in lecture and utilize lab time with your TAs is strongly encouraged. Lecture will be used to provide skill overview and live demonstrations, many of while will kickstart your efforts for your project. Lab time will provide you access to equipment and the TAs for assistance.</p>
-<p>Students are responsible for obtaining missed lecture content from other students in the class. All lecture slides/presented content will be made availabe online (Canvas/Gitlab), and lectures will be recorded via Panopto and posted to Canvas.</p>
-<p>Participation on Ed Discussion is also encouraged, in the form of:</p>
-<ul>
-<li>Asking questions about the course material (ideally, publicly, so that others can benefit (Anonymous okay))</li>
-<li>Answering questions from other students</li>
-<li>Sharing interesting articles or resources related to the course material</li>
-</ul>
-</section>
-<section id="assignments-grading" class="level2">
-<h2 class="anchored" data-anchor-id="assignments-grading">Assignments &amp; Grading</h2>
-<section id="grading" class="level3">
-<h3 class="anchored" data-anchor-id="grading">Grading</h3>
-<p>Fundamental knowledge will be assessed with online quizzes (~30%).</p>
-<p>Lab exercises will focus on implementing key functionality towards the final working device (a wireless ECG and temperature sensor). Each lab exercise will be evaluated with code reviews and technical reports that assess functionality (~50%).</p>
-<p>Testing of the final working device will be presented in a final technical report (~20%).</p>
-<p>All assignment grades will be posted to Gradescope (and linked to the Canvas gradebook) throughout the semester to track your performance.</p>
-</section>
-<section id="course-grade" class="level3">
-<h3 class="anchored" data-anchor-id="course-grade">Course Grade</h3>
-<p>This course is not “curved” (i.e., a distribution of grades will not be enforced), and a traditional grading scheme will be used (e.g., 90-93 = A-, 94-97 = A, 97-100 = A+). Participation throughout the semester will influence rounding up/down for fractional grades.</p>
-<p>Failing the course can happen with a cummulative score <span class="math inline">\(&lt;\)</span> 70 (C-).</p>
-</section>
-<section id="regrades" class="level3">
-<h3 class="anchored" data-anchor-id="regrades">Regrades</h3>
-<p>Any regrading requests need to be made <strong>within one week of grades for a given assignment being released</strong>. You must make the request via Gradescope and provide a description of why you feel a regrade is appropriate. Requesting a regrade could lead to additional loss of credit when an assignment is re-evaluated.</p>
-<p>Some assignments will have an opportunity to be resubmitted based on grading feedback at the discretion of Dr.&nbsp;Palmeri.</p>
-</section>
-<section id="late-policy-sdao-accomodations" class="level3">
-<h3 class="anchored" data-anchor-id="late-policy-sdao-accomodations">Late Policy / SDAO Accomodations</h3>
-<p>Late submission windows will be available for all assignments, minus the final project, and should be used to accomodate acute illness, travel, high workload from other classes and other unforeseen circumstances. This late submission window can be utilized without penalty and without prior approval.</p>
-<p>Students with SDAO accomodations for extended time on assignments can use this extended late submission window for all assignments.</p>
-<p>Any assignments submitted after the late submission window will only be accepted for partial credit at the discretion of Dr.&nbsp;Palmeri or if prior approval was sought <strong>before the original due date</strong>.</p>
-</section>
-</section>
-<section id="duke-community-standard" class="level2">
-<h2 class="anchored" data-anchor-id="duke-community-standard">Duke Community Standard</h2>
-<p>All students are expected to adhere to all principles of the <a href="https://trinity.duke.edu/undergraduate/academic-policies/community-standard-student-conduct">Duke Community Standard</a>. Violations of the Duke Community Standard will be referred immediately to the Office of Student Conduct. Please do not hesitate to talk with Dr.&nbsp;Palmeri about any situations involving academic honor, especially if it is ambiguous what should be done.</p>
-</section>
-<section id="faq" class="level2">
-<h2 class="anchored" data-anchor-id="faq">FAQ</h2>
-<section id="can-i-collaborate-with-other-students" class="level3">
-<h3 class="anchored" data-anchor-id="can-i-collaborate-with-other-students">Can I collaborate with other students?</h3>
-<p>Engineering is inherently a collaborative field, and in this class, you are encouraged to work collaboratively on your projects. That being said, all of the work that you submit must be generated by you and reflect your understanding of the material.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>All resources used in your projects that were developed by another person or company must be properly acknowledged using comments in your code and lab reports.</p>
-</div>
-</div>
-</section>
-<section id="can-i-use-ai" class="level3">
-<h3 class="anchored" data-anchor-id="can-i-use-ai">Can I use AI?</h3>
-<p>The use of artificial intelligence is a rapidly developing resource / tool in engineering. In software development, there are many levels of AI-assitance available. Such form of assistance include the <a href="https://visualstudio.microsoft.com/services/intellicode/">IntelliCode</a> tools and <a href="https://github.com/features/copilot">GitHub CoPilot</a> (free to students through the <a href="https://github.com/education/students">GitHub Education</a> program). These tools can be leveraged to help with syntax.</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You are strongly cautioned to not rely on these tools for logical implementation.</p>
-</div>
-</div>
+<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_impedance_hout.pdf" width="100%" height="800px" style="border:none;">
+</iframe>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -949,4 +658,4 @@ Caution
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
