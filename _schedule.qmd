@@ -2,3 +2,4 @@
 | --- | --- | --- | --- |
 | Voltage & Current | Lecture Notes & Slides | Quizzes & Problem Sets | [Introduction](labs/introduction.qmd)
 | Ohm's Law & Power | Lecture Notes & Slides | Quizzes & Problem Sets | [Ohm's Law & Power](labs/ohms_power.qmd)
+| Complex Impedance | Lecture Notes & Slides | Quizzes & Problem Sets | [Impedance](labs/impedance.qmd)

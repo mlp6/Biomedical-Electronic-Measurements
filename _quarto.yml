@@ -38,6 +38,8 @@ website:
           text: "Introduction"
         - href: labs/ohms_power.qmd
           text: "Ohm's Law and Power"
+        - href: labs/impedance.qmd
+          text: "Impedance"
       - section: Resources
         contents:
         - href: resources/XYZs_of_Oscopes_Tektronix.pdf
