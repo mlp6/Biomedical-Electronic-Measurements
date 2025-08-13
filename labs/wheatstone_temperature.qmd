@@ -5,5 +5,5 @@ format:
   html: default
 ---
 
-<!-- <iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_impedance_hout.pdf" width="100%" height="800px" style="border:none;">
-</iframe> -->
+<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_wheatstone_hout.pdf" width="100%" height="800px" style="border:none;">
+</iframe>
