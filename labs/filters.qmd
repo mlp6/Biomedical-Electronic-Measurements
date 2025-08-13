@@ -1,0 +1,9 @@
+---
+title: "Filters"
+date: "2025-10-01"
+format:
+  html: default
+---
+
+<!-- <iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_impedance_hout.pdf" width="100%" height="800px" style="border:none;">
+</iframe> -->

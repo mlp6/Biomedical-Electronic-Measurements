@@ -38,8 +38,16 @@ website:
           text: "Introduction"
         - href: labs/ohms_power.qmd
           text: "Ohm's Law and Power"
+        - href: labs/caps_inductors_scopes.qmd
+          text: "Capacitors, Inductors, and Oscilloscopes"
         - href: labs/impedance.qmd
           text: "Impedance"
+        - href: labs/filters.qmd
+          text: "Filters"
+        - href: labs/transient_resp.qmd
+          text: "Transient Response"
+        - href: labs/wheatstone_temperature.qmd
+          text: "Wheatstone Bridge: Temperature Measurement"
       - section: Resources
         contents:
         - href: resources/XYZs_of_Oscopes_Tektronix.pdf

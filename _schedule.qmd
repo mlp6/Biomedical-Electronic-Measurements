@@ -1,5 +1,13 @@
 | Module | Materials | Assessment | Lab Exercise |
 | --- | --- | --- | --- |
-| Voltage & Current | Lecture Notes & Slides | Quizzes & Problem Sets | [Introduction](labs/introduction.qmd)
-| Ohm's Law & Power | Lecture Notes & Slides | Quizzes & Problem Sets | [Ohm's Law & Power](labs/ohms_power.qmd)
-| Complex Impedance | Lecture Notes & Slides | Quizzes & Problem Sets | [Impedance](labs/impedance.qmd)
+| Voltage & Current | Lecture Notes & Slides | Quizzes & Problem Sets | [Introduction](labs/introduction.qmd) |
+| Ohm's Law & Power | Lecture Notes & Slides | Quizzes & Problem Sets | [Ohm's Law & Power](labs/ohms_power.qmd) |
+| Capacitors & Inductors | Lecture Notes & Slides | Quizzes & Problem Sets | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |
+| Complex Impedance | Lecture Notes & Slides | Quizzes & Problem Sets | [Impedance](labs/impedance.qmd) |
+| Filters | Lecture Notes & Slides | Quizzes & Problem Sets | [Filters](labs/filters.qmd) |
+| Transient Response | Lecture Notes & Slides | Quizzes & Problem Sets | [Transient Response](transient_resp.qmd) |
+| Operational Amplifiers | Lecture Notes & Slides | Quizzes & Problem Sets | Opamps Lab |
+| Wheatstone Bridge | | | [Wheatstone Bridge: Temperature Measurement](labs/wheatstone_temperature.qmd) |
+| Transformers | | | |
+| Diodes | | | |
+| Final Exam & Lab Practical | | | |
