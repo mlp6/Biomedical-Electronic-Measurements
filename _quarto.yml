@@ -36,10 +36,12 @@ website:
         contents:
         - href: labs/introduction.qmd
           text: "Introduction"
-        - href: labs/ohms_law.qmd
+        - href: labs/ohms_power.qmd
           text: "Ohm's Law and Power"
       - section: Resources
         contents:
+        - href: resources/XYZs_of_Oscopes_Tektronix.pdf
+          text: "XYZ of Oscilloscopes"
         - href: resources/teaching_assistant_expectations.qmd
           text: "Teaching Assistant Expectations"
 
