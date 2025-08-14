@@ -85,9 +85,14 @@ Upon completion of this course, students should be able to:
 
 ## Prerequisites
 
-### Mandatory
-
 * EGR105L or equivalent experience [git, Python]
+
+## Textbooks
+
+* Practical Electronics for Inventors, Paul Scherz and Simon Monk. 3 rd or 4th edition
+* [Lessons in Electic Circuits](http://www.ibiblio.org/kuphaldt/electricCircuits/)
+* Fundamentals of Electrical Engineering, Giorgio Rizzoni (First Edition or Second Edition, McGraw Hill, ISBN 9780073380377)
+* The Art of Electronics, Horowitz and Hill
 
 ## Learning Management System
 
