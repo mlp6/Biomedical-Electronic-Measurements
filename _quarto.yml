@@ -46,6 +46,10 @@ website:
           text: "Filters"
         - href: labs/transient_resp.qmd
           text: "Transient Response"
+        - href: labs/opamps.qmd
+          text: "Operational Amplifiers"
+        - href: labs/transformers_diodes.qmd
+          text: "Transformers and Diodes"
         - href: labs/wheatstone_temperature.qmd
           text: "Wheatstone Bridge: Temperature Measurement"
       - section: Resources
