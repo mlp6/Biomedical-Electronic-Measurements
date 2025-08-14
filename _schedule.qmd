@@ -6,7 +6,7 @@
 | Capacitors & Inductors <br> DC RC/RL Circuit Analysis | Lecture Notes & Slides | Quizzes & Problem Sets | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |
 | Complex Impedance, AC Signals, Phasors | Lecture Notes & Slides | Quizzes & Problem Sets | [Impedance](labs/impedance.qmd) |
 | AC RLC Circuit Analysis <br> Passive Filters <br> Transfer Functions & Bode Plots (Frequency Domain) | Lecture Notes & Slides | Quizzes & Problem Sets | [Filters](labs/filters.qmd) |
-| Transient Response (Time Domain) | Lecture Notes & Slides | Quizzes & Problem Sets | [Transient Response](transient_resp.qmd) |
+| Transient Response (Time Domain) | Lecture Notes & Slides | Quizzes & Problem Sets | [Transient Response](labs/transient_resp.qmd) |
 | Operational Amplifiers | Lecture Notes & Slides | Quizzes & Problem Sets | Opamps Lab |
 | Amplifiers & Active Filters | | |
 | Diodes | | | |
