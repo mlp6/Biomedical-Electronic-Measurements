@@ -121,7 +121,18 @@
     "href": "course-syllabus.html#prerequisites",
     "title": "Biomedical Electronic Measurements",
     "section": "Prerequisites",
-    "text": "Prerequisites\n\nMandatory\n\nEGR105L or equivalent experience [git, Python]",
+    "text": "Prerequisites\n\nEGR105L or equivalent experience [git, Python]",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#textbooks",
+    "href": "course-syllabus.html#textbooks",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Textbooks",
+    "text": "Textbooks\n\nPractical Electronics for Inventors, Paul Scherz and Simon Monk. 3 rd or 4th edition\nLessons in Electic Circuits\nFundamentals of Electrical Engineering, Giorgio Rizzoni (First Edition or Second Edition, McGraw Hill, ISBN 9780073380377)\nThe Art of Electronics, Horowitz and Hill",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
