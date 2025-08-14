@@ -332,14 +332,14 @@ window.Quarto = {
 <ul>
 <li>Email: <a href="mailto:mark.palmeri@duke.edu">mark.palmeri@duke.edu</a></li>
 <li>Ed Discussion (private message, TAs included)</li>
-<li>Office Hours: TBD (258 Hudson Hall Annex)</li>
+<li>Office Hours: Tues, 13:00-15:00 (258 Hudson Hall Annex)</li>
 </ul>
 </section>
 <section id="teaching-assistants" class="level3">
 <h3 class="anchored" data-anchor-id="teaching-assistants">Teaching Assistants</h3>
 <ul>
-<li>Ceci Schmidz (<code>cls157</code>)</li>
-<li>TBD</li>
+<li>Erin O’Kane</li>
+<li>Olutoni Akintoye</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -360,11 +360,25 @@ Tip
 <h2 class="anchored" data-anchor-id="course-times-locations">Course Times &amp; Locations</h2>
 <section id="lecture" class="level3">
 <h3 class="anchored" data-anchor-id="lecture">Lecture</h3>
-<p>Monday &amp; Wednesday, 08:30-09:45, Wilkinson 136 (Panopto recorded)</p>
+<p>Monday &amp; Wednesday, 10:05-11:20, CIEMAS 1411 (Panopto recorded)</p>
 </section>
 <section id="labs" class="level3">
 <h3 class="anchored" data-anchor-id="labs">Labs</h3>
-<p>There are no formally scheduled lab sections, but you will need to use the lab equipment to perform testing of your devices. Your TAs will announce times when they will hold lab hours. Otherwise, the lab is open to you to use on your schedule when classes are not scheduled in that room.</p>
+<p>Wednesday, 13:25-16:25, Hudson 028A (Basement)</p>
+<p>Attendance and participation in all lab periods is required to pass this course. Labs can only be made up with <strong>advanced</strong> appoval from Dr.&nbsp;Palmeri. Days/times to make up labs will be decided by your TA and Lab Instructor in advance of missing lab.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Two unexcused lab absences will result in automatic failure of this class.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -408,21 +422,35 @@ Note
 </section>
 <section id="course-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="course-objectives">Course Objectives</h2>
-<p>This course will give students experience with the design, function and deployment of embedded medical devices. Students will have hands on experience with electronic hardware and firmware (software) development, along with gaining experience with biosignal transduction into circuits.</p>
+<p>This course introduces students to the foundational concepts and practical skills in electronic circuits designed for detecting biological signals.</p>
 <p>Upon completion of this course, students should be able to:</p>
 <ul>
-<li>Version control software / firmware development using <code>git</code>.</li>
-<li>Use an Integrated Development Environment (IDE) for firmware development.</li>
-<li>Describe hardware using a Devicetree hierarchical data structure.</li>
-<li>Develop firmware using Zephyr as a bare-metal super-loop and a Realtime Operating System (RTOS)</li>
-<li>Implement state machines and generate state diagrams using the Unified Modeling Language (UML).</li>
-<li>Utilize callbacks / interupt service routines for realtime event detection and response.</li>
-<li>Utilize threads and work queues.</li>
-<li>Develop firmware to control common periperals, including GPIO, ADC and PWM.</li>
-<li>Use different serial communication protocols, including UART, I2C, SPI, and BLE.</li>
-<li>Utilize firmware logging at different levels.</li>
-<li>Test firmware implementation on the <code>nRF52833DK</code> using electronic bench equipment and generate technical reports with data analysis for device verification.</li>
-<li>Develop firmware with workflows that adhere to relevant industry and safety standards (e.g., UL, IEC60601, IEC62304) for FDA 510k clearance.</li>
+<li>Perform circuit analysis using:
+<ul>
+<li>Ohm’s Law</li>
+<li>Kirchhoff’s Voltage and Current Laws (KVL &amp; KCL)</li>
+<li>Equivalent Resistance for Series and Parallel Circuits</li>
+<li>Node Voltage Analysis</li>
+<li>Mesh Current Analysis</li>
+</ul></li>
+<li>Analysis circuits using the complex impedance of reactive capacitors and inductors.
+<ul>
+<li>Use phasors to describe amplitude and phase for reactive circuit analysis.</li>
+<li>Generate and interpret Bode plots</li>
+</ul></li>
+<li>Analysis and design first- and second-order filters in the frequency and time domains.</li>
+<li>Circuit schematic capture (KiCad)</li>
+<li>Circuit SPICE simulation (KiCad)</li>
+<li>Develop skills to use common electronic bench equipment to drive and measurement electronic circuits, including:
+<ul>
+<li>Use DC and AC voltage sources.</li>
+<li>Use oscilloscopes to evaluate time and frequency domain circuit response.</li>
+<li>Use digitial multimeters to measure voltage, current and impedance.</li>
+<li>Use function generators to generate time-varying signals to input into circuits.</li>
+</ul></li>
+<li>Understand ideal operational amplifiers and their use in active amplifiers and filters.</li>
+<li>Understand basic semiconductor physics to describe how diodes work, and use diodes for clamping and rectification.</li>
+<li>Work with basic digital input/output signals using an Arduino-based microcontroller.</li>
 </ul>
 </section>
 <section id="prerequisites" class="level2">
@@ -431,15 +459,12 @@ Note
 <h3 class="anchored" data-anchor-id="mandatory">Mandatory</h3>
 <ul>
 <li>EGR105L or equivalent experience [git, Python]</li>
-<li>Intrumentation (BME354L) / Mechatronics</li>
-<li>Signals &amp; Systems (BME271/671 or equivalent experience [filtering, FFTs])</li>
 </ul>
 </section>
 </section>
 <section id="learning-management-system" class="level2">
 <h2 class="anchored" data-anchor-id="learning-management-system">Learning Management System</h2>
 <p>We will be using <a href="https://canvas.duke.edu">Canvas</a> as the learning management system for this course. Most resources will be linked to the course website. All grades will be posted via Canvas/Gradescope.</p>
-<p>Duke’s <a href="https://gitlab.oit.duke.edu">GitLab</a> server will be used for most course lab exercises, and code-related questions will be submitted to Dr.&nbsp;Palmeri / TAs using GitLab Issues.</p>
 <p>Ed Discussion will be used for general course questions and discussion.</p>
 </section>
 <section id="class-schedule" class="level2">
@@ -531,14 +556,14 @@ Note
 <h3 class="anchored" data-anchor-id="special-dates">Special Dates</h3>
 <ul>
 <li>Fall Break (Oct 11-14, 2025)</li>
-<li>LDOC (Nov 25, 2025)</li>
+<li>LDOC (Dec 05, 2025)</li>
+<li>Final Exam (Lab Practical): Dec 10, 2025 (09:00-12:00)</li>
 </ul>
 </section>
 </section>
 <section id="attendance-participation" class="level2">
 <h2 class="anchored" data-anchor-id="attendance-participation">Attendance &amp; Participation</h2>
-<p>Class participation in lecture and utilize lab time with your TAs is strongly encouraged. Lecture will be used to provide skill overview and live demonstrations, many of while will kickstart your efforts for your project. Lab time will provide you access to equipment and the TAs for assistance.</p>
-<p>Students are responsible for obtaining missed lecture content from other students in the class. All lecture slides/presented content will be made availabe online (Canvas/Gitlab), and lectures will be recorded via Panopto and posted to Canvas.</p>
+<p>Class participation in lecture is strongly encouraged. Students are responsible for obtaining missed lecture content from other students in the class. All lecture slides/presented content will be made availabe online (Canvas), and lectures will be recorded via Panopto and posted to Canvas.</p>
 <p>Participation on Ed Discussion is also encouraged, in the form of:</p>
 <ul>
 <li>Asking questions about the course material (ideally, publicly, so that others can benefit (Anonymous okay))</li>
@@ -550,15 +575,47 @@ Note
 <h2 class="anchored" data-anchor-id="assignments-grading">Assignments &amp; Grading</h2>
 <section id="grading" class="level3">
 <h3 class="anchored" data-anchor-id="grading">Grading</h3>
-<p>Fundamental knowledge will be assessed with online quizzes (~30%).</p>
-<p>Lab exercises will focus on implementing key functionality towards the final working device (a wireless ECG and temperature sensor). Each lab exercise will be evaluated with code reviews and technical reports that assess functionality (~50%).</p>
-<p>Testing of the final working device will be presented in a final technical report (~20%).</p>
+<p>Fundamental knowledge will be assessed with regular online quizzes (~30%).</p>
+<p>Lab exercises, as described above, are mandatory to pass the class. Lab exercises will synthesize your theoretical and analytic circuit analysis skills with practical circuit debugging and testing. Lab exercises will include pre-lab efforts (15%) and post-lab Jupyter notebook submissions of data collection and analysis from the lab exercises (15%).</p>
+<p>A final lab practical, held during the final exam period in the lab, will be worth 25%.</p>
+<p>There will be two midterm exams, each worth 20%.</p>
+<table class="caption-top table">
+<caption>Grade Distribution</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Grade Category</th>
+<th style="text-align: left;">Relative Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Quizzes</td>
+<td style="text-align: left;">15%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pre-Labs</td>
+<td style="text-align: left;">15%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Post-Labs</td>
+<td style="text-align: left;">15%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Midterms</td>
+<td style="text-align: left;">2 × 15% = 30%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lab Practical</td>
+<td style="text-align: left;">25%</td>
+</tr>
+</tbody>
+</table>
 <p>All assignment grades will be posted to Gradescope (and linked to the Canvas gradebook) throughout the semester to track your performance.</p>
 </section>
 <section id="course-grade" class="level3">
 <h3 class="anchored" data-anchor-id="course-grade">Course Grade</h3>
 <p>This course is not “curved” (i.e., a distribution of grades will not be enforced), and a traditional grading scheme will be used (e.g., 90-93 = A-, 94-97 = A, 97-100 = A+). Participation throughout the semester will influence rounding up/down for fractional grades.</p>
-<p>Failing the course can happen with a cummulative score <span class="math inline">\(&lt;\)</span> 70 (C-).</p>
+<p>Failing the course can happen with a cummulative score <span class="math inline">\(&lt;\)</span> 65 (D) or more than one unexcused lab absence.</p>
 </section>
 <section id="regrades" class="level3">
 <h3 class="anchored" data-anchor-id="regrades">Regrades</h3>
@@ -567,9 +624,9 @@ Note
 </section>
 <section id="late-policy-sdao-accomodations" class="level3">
 <h3 class="anchored" data-anchor-id="late-policy-sdao-accomodations">Late Policy / SDAO Accomodations</h3>
-<p>Late submission windows will be available for all assignments, minus the final project, and should be used to accomodate acute illness, travel, high workload from other classes and other unforeseen circumstances. This late submission window can be utilized without penalty and without prior approval.</p>
+<p>Late submission windows will be available for all assignments, minus the in-person lab sessions and the final lab practical, and should be used to accomodate acute illness, travel, high workload from other classes and other unforeseen circumstances. <em>This late submission window can be utilized without penalty and without prior approval.</em></p>
 <p>Students with SDAO accomodations for extended time on assignments can use this extended late submission window for all assignments.</p>
-<p>Any assignments submitted after the late submission window will only be accepted for partial credit at the discretion of Dr.&nbsp;Palmeri or if prior approval was sought <strong>before the original due date</strong>.</p>
+<p>Any assignments submitted after the late submission window will only be accepted for partial credit at the discretion of Dr.&nbsp;Palmeri or if prior approval was sought <strong>before the original (not extended) due date</strong>.</p>
 </section>
 </section>
 <section id="duke-community-standard" class="level2">
@@ -591,7 +648,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>All resources used in your projects that were developed by another person or company must be properly acknowledged using comments in your code and lab reports.</p>
+<p>All resources used in your assignment submissions that were developed by another person or company must be properly acknowledged.</p>
 </div>
 </div>
 </section>
@@ -608,7 +665,7 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You are strongly cautioned to not rely on these tools for logical implementation.</p>
+<p>You are strongly cautioned to not rely on these tools for solving circuit analysis problems, as these tools will not be available for your midterm exams and final lab practical. They are best used to help complete code syntax in this class.</p>
 </div>
 </div>
 
