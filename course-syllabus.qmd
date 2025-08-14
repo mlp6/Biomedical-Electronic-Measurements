@@ -55,10 +55,6 @@ Please review the [lab policies](bme-lab-policies.qmd) before using the lab for
 the first time this semester.
 :::
 
-::: callout-note
-B209 Door Code: 4-1-5-2
-:::
-
 ## Course Objectives
 
 This course introduces students to the foundational concepts and practical
@@ -107,12 +103,6 @@ This class is organized in a sequence of modules.  Specific details surrounding
 dates for assignments associated with each module will be posted to Gradescope
 and linked below.
 
-This course uses a version of [Mastery Learning](https://en.wikipedia.org/wiki/Mastery_learning), where "mastery" of a
-given module is necessary to progress onto the subsequent module. Quizzes are
-used to evaluate "knowledge"; lab exercises are used to demonstrate application
-of skills.  In this course, assignments of later modules depends on the
-successful completion of earlier modules.
-
 ### Learning Module Schedule
 
 {{< include _schedule.qmd >}}
@@ -120,6 +110,8 @@ successful completion of earlier modules.
 ### Special Dates
 
 * Fall Break (Oct 11-14, 2025)
+* Midterm I (TBD)
+* Midterm II (TBD)
 * LDOC (Dec 05, 2025)
 * Final Exam (Lab Practical): Dec 10, 2025 (09:00-12:00)
 
