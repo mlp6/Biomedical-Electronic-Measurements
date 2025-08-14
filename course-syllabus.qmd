@@ -104,9 +104,9 @@ Ed Discussion will be used for general course questions and discussion.
 
 ## Class Schedule
 
-This class is organized in a sequence of modules.  Specific details surrounding
-dates for assignments associated with each module will be posted to Gradescope
-and linked below.
+This class is organized in a sequence of learning modules.  Specific details
+surrounding dates for assignments associated with each module will be posted to
+Gradescope and linked below.  
 
 ### Learning Module Schedule
 
@@ -114,11 +114,16 @@ and linked below.
 
 ### Special Dates
 
-* Fall Break (Oct 11-14, 2025)
-* Midterm I (TBD)
-* Midterm II (TBD)
-* LDOC (Dec 05, 2025)
-* Final Exam (Lab Practical): Dec 10, 2025 (09:00-12:00)
+* Labor Day - No Class (Sep 01, 2025)
+* Fall Break - No Class (Oct 11-14, 2025)
+* Midterm I (Mon, Sep 22, 2025)
+* Midterm II (Wed, Oct 08, 2025)
+* Midterm III (Wed, Dec 03, 2025)
+* Final Lab Practical (Dec 10, 2025, 09:00-12:00)
+
+::: callout-important
+Unless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.
+:::
 
 ## Attendance & Participation
 
@@ -137,22 +142,25 @@ Participation on Ed Discussion is also encouraged, in the form of:
 
 ### Grading
 
-Fundamental knowledge will be assessed with regular online quizzes (~30%).
+Fundamental knowledge will be assessed with regular online quizzes (~15%).
 
 Lab exercises, as described above, are mandatory to pass the class.  Lab
 exercises will synthesize your theoretical and analytic circuit analysis skills
-with practical circuit debugging and testing.  Lab exercises will include pre-lab efforts (15%) and post-lab Jupyter notebook submissions of data collection and analysis from the lab exercises (15%).
+with practical circuit debugging and testing.  Lab exercises will include
+pre-lab efforts (15%) and post-lab Jupyter notebook submissions of data
+collection and analysis from the lab exercises (15%).
 
-A final lab practical, held during the final exam period in the lab, will be worth 25%.
+A final lab practical, held during the final exam period in the lab, will be
+worth 25%.
 
-There will be two midterm exams, each worth 20%.
+There will be three midterm exams, each worth 10%.
 
 | Grade Category   | Relative Percentage   |
 |:----------------|:---------------------|
 | Quizzes         | 15%                  |
 | Pre-Labs        | 15%                  |
 | Post-Labs       | 15%                  |
-| Midterms        | 2 × 15% = 30%        |
+| Midterms        | 3 × 10% = 30%        |
 | Lab Practical   | 25%                  |
 
 : Grade Distribution
@@ -167,8 +175,10 @@ enforced), and a traditional grading scheme will be used (e.g., 90-93 = A-,
 94-97 = A, 97-100 = A+).  Participation throughout the semester will influence
 rounding up/down for fractional grades.
 
+::: callout-warning
 Failing the course can happen with a cummulative score $<$ 65 (D) or more than
 one unexcused lab absence.
+:::
 
 ### Regrades
 

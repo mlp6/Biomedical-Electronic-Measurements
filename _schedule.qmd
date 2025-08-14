@@ -1,13 +1,15 @@
 | Module | Materials | Assessment | Lab Exercise |
 | --- | --- | --- | --- |
-| Voltage & Current <br> Series & Parallel Resistance <br> Kirchhof's Laws | Lecture Notes & Slides | Quizzes & Problem Sets | [Introduction](labs/introduction.qmd) |
-| Ohm's Law & Power <br> Voltage & Current Dividers | Lecture Notes & Slides | Quizzes & Problem Sets | [Ohm's Law & Power](labs/ohms_power.qmd) |
-| Node Voltage & Mesh Current Analysis <br> Norton & Thevenin Equivalent Circuits <br> Superposition | Lecture Notes & Slice | Quizzes & Problem Sets | | 
-| Capacitors & Inductors <br> DC RC/RL Circuit Analysis | Lecture Notes & Slides | Quizzes & Problem Sets | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |
-| Complex Impedance, AC Signals, Phasors | Lecture Notes & Slides | Quizzes & Problem Sets | [Impedance](labs/impedance.qmd) |
-| AC RLC Circuit Analysis <br> Passive Filters <br> Transfer Functions & Bode Plots (Frequency Domain) | Lecture Notes & Slides | Quizzes & Problem Sets | [Filters](labs/filters.qmd) |
-| Transient Response (Time Domain) | Lecture Notes & Slides | Quizzes & Problem Sets | [Transient Response](labs/transient_resp.qmd) |
-| Operational Amplifiers & Active Filters | Lecture Notes & Slides | Quizzes & Problem Sets | [Opamps](labs/opamps.qmd) |
+| Voltage & Current <br> Series & Parallel Resistance <br> Kirchhof's Laws | | | [Introduction](labs/introduction.qmd) |
+| Ohm's Law & Power <br> Voltage & Current Dividers <br> Node Voltage & Mesh Current Analysis <br> Thevenin & Norton Equivalent Sources <br> Source Superposition | | | [Ohm's Law & Power](labs/ohms_power.qmd) |
+| Midterm I | | |
+| Capacitors & Inductors <br> DC RC/RL Circuit Analysis | | | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |
+| Complex Impedance, AC Signals, Phasors | | | [Impedance](labs/impedance.qmd) |
+| AC RLC Circuit Analysis <br> Passive Filters <br> Transfer Functions & Bode Plots (Frequency Domain) | | | [Filters](labs/filters.qmd) |
+| Transient Response (Time Domain) | | | [Transient Response](labs/transient_resp.qmd) |
+| Midterm II | | |
+| Operational Amplifiers & Active Filters | | | [Opamps](labs/opamps.qmd) |
 | Transformers & Diodes | | | [Transformers & Diodes](labs/transformers_diodes.qmd )|
+| Midterm III | | |
 | Wheatstone Bridge | | | [Wheatstone Bridge: Temperature Measurement](labs/wheatstone_temperature.qmd) |
-| Final Exam & Lab Practical | | | |
+| Final Lab Practical | | |
