@@ -4,7 +4,7 @@
 
 [Course Website](https://mlp6.github.io/Biomedical-Electronic-Measurements/)
 
-[Canvas](https://canvas.duke.edu/courses/61472))
+[Canvas](https://canvas.duke.edu/courses/61472)
 
 [Ed Discussion](https://edstem.org/us/courses/81250/)
 
