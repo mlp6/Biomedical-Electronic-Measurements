@@ -13,7 +13,7 @@ format:
 Dr. Mark Palmeri (`mlp6`)
 
 * Email: [mark.palmeri@duke.edu](mailto:mark.palmeri@duke.edu)
-* Ed Discussion (private message, TAs included)
+* [Ed Discussion](https://edstem.org/us/courses/81250) (private message, TAs included)
 * Office Hours: Tues, 13:00-15:00 (258 Hudson Hall Annex)
 
 ### Teaching Assistants
@@ -23,14 +23,14 @@ Dr. Mark Palmeri (`mlp6`)
 
 ::: callout-tip
 Questions that can be answered by Dr. Palmeri or a teaching assistant should be
-posted on Ed Discussion.
+posted on [Ed Discussion](https://edstem.org/us/courses/81250/).
 :::
 
 ## Course Times & Locations
 
 ### Lecture
 
-Monday & Wednesday, 10:05-11:20, CIEMAS 1411 (Panopto recorded)
+Monday & Wednesday, 10:05-11:20, CIEMAS 1411 (Panopto recording **not** available)
 
 ### Labs
 
@@ -79,9 +79,9 @@ Upon completion of this course, students should be able to:
   * Use oscilloscopes to evaluate time and frequency domain circuit response.
   * Use digitial multimeters to measure voltage, current and impedance.
   * Use function generators to generate time-varying signals to input into circuits.
-* Understand ideal operational amplifiers and their use in active amplifiers and filters.
+* Understand ideal operational amplifiers and their use in active amplifiers, filters and comparators.
 * Understand basic semiconductor physics to describe how diodes work, and use diodes for clamping and rectification.
-* Work with basic digital input/output signals using an Arduino-based microcontroller.
+* Work with basic digital input/output signals.
 
 ## Prerequisites
 
@@ -96,11 +96,11 @@ Upon completion of this course, students should be able to:
 
 ## Learning Management System
 
-We will be using [Canvas](https://canvas.duke.edu) as the learning management
+We will be using [Canvas](https://canvas.duke.edu/courses/61472) as the learning management
 system for this course.  Most resources will be linked to the course website.
 All grades will be posted via Canvas/Gradescope.
 
-Ed Discussion will be used for general course questions and discussion.
+[Ed Discussion](https://edstem.org/us/courses/81250) will be used for general course questions and discussion.
 
 ## Class Schedule
 
@@ -129,10 +129,12 @@ Unless there are unforeseen circumstances that affect our course schedule, midte
 
 Class participation in lecture is strongly encouraged.  Students are responsible
 for obtaining missed lecture content from other students in the class.  All
-lecture slides/presented content will be made availabe online (Canvas),
-and lectures will be recorded via Panopto and posted to Canvas.
+lecture slides/presented content will be made availabe online ([Canvas](https://canvas.duke.edu/courses/61472)).
+Our classroom this semester is not equipped for Panopto recording, so students
+who miss lecture will be responsible for getting lecture materials from fellow
+students.
 
-Participation on Ed Discussion is also encouraged, in the form of:
+Participation on [Ed Discussion](https://edstem.org/us/courses/81250/) is also encouraged, in the form of:
 
 * Asking questions about the course material (ideally, publicly, so that others can benefit (Anonymous okay))
 * Answering questions from other students
