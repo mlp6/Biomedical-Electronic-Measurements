@@ -2,18 +2,10 @@
 
 # Embedded Medical Devices (BME554L)
 
-## Course Website
+[Course Website](https://mlp6.github.io/Biomedical-Electronic-Measurements/)
 
-https://mlp6.github.io/Biomedical-Electronic-Measurements/
+[Canvas](https://canvas.duke.edu/courses/61472))
 
-## Canvas
+[Ed Discussion](https://edstem.org/us/courses/81250/)
 
-Coming soon...
-
-## Ed Discussion
-
-Coming soon...
-
-## Gradescope
-
-Coming soon...
+[Gradescope](https://www.gradescope.com/courses/1075795)
