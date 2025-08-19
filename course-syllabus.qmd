@@ -160,8 +160,7 @@ There will be three midterm exams, each worth 10%.
 | Grade Category   | Relative Percentage   |
 |:----------------|:---------------------|
 | Quizzes         | 15%                  |
-| Pre-Labs        | 15%                  |
-| Post-Labs       | 15%                  |
+| Labs            | 15% (pre-lab) + 15% (post-lab) = 30%         |
 | Midterms        | 3 × 10% = 30%        |
 | Lab Practical   | 25%                  |
 
