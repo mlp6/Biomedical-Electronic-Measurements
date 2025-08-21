@@ -59,7 +59,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuit\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical"
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical"
   },
   {
     "objectID": "faq.html",
@@ -269,28 +269,28 @@
     "href": "slides/intro-circuits-slides.html#what-is-current",
     "title": "Introduction to Circuits",
     "section": "What is current?",
-    "text": "What is current?\nCurrent\nCurrent is the time rate change of charge passing through a defined area.\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\nPolarity Conventions\n\n(+) direction of current flow represents flow of (+) charges (i.e., not electrons)\n\nSI Units\n\n[C] and [A] are SI units.\n\n\nCommon Unit Prefixes\n\n\nPower of 10\nPrefix\n\n\n\n\n\\(\\times 10^{12}\\)\nT (Tera)\n\n\n\\(\\times 10^9\\)\nG (Giga)\n\n\n\\(\\times 10^6\\)\nM (Mega)\n\n\n\\(\\times 10^3\\)\nk (kilo)\n\n\n\\(\\times 10^{-3}\\)\nm (milli)\n\n\n\\(\\times 10^{-6}\\)\n\\(\\mu\\) (micro)\n\n\n\\(\\times 10^{-9}\\)\nn (nano)\n\n\n\\(\\times 10^{-12}\\)\np (pico)\n\n\n\nCommon Current Magnitudes\n\nCommon Current Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nCircuit breaker limits / house electrical wires max\n10-20 A\n\n\nHome circuit breaker total\n200-300 A\n\n\nHairdryer\n&lt; 10 A\n\n\nCar Battery Max\n100s A\n\n\nLaptop Battery\n&lt; 1 A\n\n\nCellphone Battery\n10 mA (idle)  3 A (cell, camera)\n\n\nNerve Membrane Current\npA"
+    "text": "What is current?"
   },
   {
     "objectID": "slides/intro-circuits-slides.html#what-is-voltage",
     "href": "slides/intro-circuits-slides.html#what-is-voltage",
     "title": "Introduction to Circuits",
     "section": "What is voltage?",
-    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\nCommon Voltage Magnitudes\n\nCommon Voltage Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nWall Outlet\n110-240 V (AC)\n\n\nTransmission Line\nkV-MV\n\n\nLightning\n~100 MV\n\n\nAlkaline Battery Cell\n~1.5 V\n\n\nNerve Action Potential\n~75 mV\n\n\n\n\n\n\n\n\n\nImportant\n\n\nVoltage is a relative quantity; absolute voltage does not exist!"
+    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]"
   },
   {
     "objectID": "slides/intro-circuits-slides.html#what-is-power",
     "href": "slides/intro-circuits-slides.html#what-is-power",
     "title": "Introduction to Circuits",
     "section": "What is power?",
-    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]\nWhat do the units look like?\n\\[\n\\left[\\frac{J}{C} \\frac{C}{s}\\right] = \\left[\\frac{J}{s}\\right] = [W] (Watt)\n\\]"
+    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]"
   },
   {
     "objectID": "slides/intro-circuits-slides.html#what-happens-to-power",
     "href": "slides/intro-circuits-slides.html#what-happens-to-power",
     "title": "Introduction to Circuits",
     "section": "What happens to power?",
-    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power.\nSign Conventions\n\\(P &lt; 0\\): energy is provided to the circuit (source) \\(P &gt; 0\\): energy is dissipated / stored (load)\nPower dissipated by a circuit element (load) is (+) when (+) current (\\(I\\)) flows from a (+) -&gt; (-) voltage (V)."
+    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power."
   },
   {
     "objectID": "course-syllabus.html",
@@ -374,7 +374,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuit\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
