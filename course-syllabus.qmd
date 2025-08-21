@@ -144,25 +144,23 @@ Participation on [Ed Discussion](https://edstem.org/us/courses/81250/) is also e
 
 ### Grading
 
-Fundamental knowledge will be assessed with regular online quizzes (~15%).
+Fundamental knowledge will be assessed with regular problem sets and online quizzes.
 
 Lab exercises, as described above, are mandatory to pass the class.  Lab
 exercises will synthesize your theoretical and analytic circuit analysis skills
 with practical circuit debugging and testing.  Lab exercises will include
-pre-lab efforts (15%) and post-lab Jupyter notebook submissions of data
-collection and analysis from the lab exercises (15%).
+pre-lab exercises and post-lab submissions of data collection and analysis from
+the lab exercises.
 
-A final lab practical, held during the final exam period in the lab, will be
-worth 25%.
-
-There will be three midterm exams, each worth 10%.
+There will be three midterm exams and a final lab practical will be held during
+the final exam period in the lab.
 
 | Grade Category   | Relative Percentage   |
 |:----------------|:---------------------|
-| Quizzes         | 15%                  |
+| Problem Sets & Quizzes    | 20%                  |
 | Labs            | 15% (pre-lab) + 15% (post-lab) = 30%         |
 | Midterms        | 3 × 10% = 30%        |
-| Lab Practical   | 25%                  |
+| Lab Practical   | 20%                  |
 
 : Grade Distribution
 
@@ -238,7 +236,7 @@ available.  Such form of assistance include the
 [IntelliCode](https://visualstudio.microsoft.com/services/intellicode/) tools
 and [GitHub CoPilot](https://github.com/features/copilot) (free to students
 through the [GitHub Education](https://github.com/education/students) program).
-These tools can be leveraged to help with syntax.  
+These tools can be leveraged to help with coding syntax.  
 
 ::: callout-caution
 You are strongly cautioned to not rely on these tools for solving circuit
