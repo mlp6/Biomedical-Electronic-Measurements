@@ -35,6 +35,9 @@ website:
         - href: faq.qmd
           text: FAQ
       - section: "Learning Modules"
+        contents:
+        - href: slides/intro-circuits.qmd
+          text: "Introduction to Circuits"
       - section: "Problem Sets"
         contents:
         - href: problem_sets/ProblemSetFormatGuidelines.md

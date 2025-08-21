@@ -1,0 +1,18 @@
+institute: "Duke University"
+subtitle: "BME253L - Fall 2025 - Palmeri"
+author: "Dr. Mark Palmeri, M.D., Ph.D."
+date-format: long
+format:
+  live-revealjs:
+    footer: "[🔗 https://mlp6.github.io/Biomedical-Electronic-Measurements/](https://mlp6.github.io/Biomedical-Electronic-Measurements/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    #logo: "images/logo.png" 
+    toc: false
+    smaller: true
+  live-html:
+    code-link: true
+    css: styles.css
+engine: knitr
+highlight-style: a11y-light

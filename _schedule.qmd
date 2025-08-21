@@ -1,6 +1,6 @@
 | Module | Materials | Assessment | Lab Exercise |
 | --- | --- | --- | --- |
-| Voltage & Current <br> Series & Parallel Resistance <br> Kirchhof's Laws | | | [Introduction](labs/introduction.qmd) |
+| Voltage & Current <br> Series & Parallel Resistance <br> Kirchhof's Laws | [Introduction to Circuit](slides/intro-circuits.qmd) | | [Introduction](labs/introduction.qmd) |
 | Ohm's Law & Power <br> Voltage & Current Dividers <br> Node Voltage & Mesh Current Analysis <br> Thevenin & Norton Equivalent Sources <br> Source Superposition | | | [Ohm's Law & Power](labs/ohms_power.qmd) |
 | Midterm I | | |
 | Capacitors & Inductors <br> DC RC/RL Circuit Analysis | | | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |

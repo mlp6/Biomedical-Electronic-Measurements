@@ -1,0 +1,156 @@
+---
+title: "Introduction to Circuits"
+date: "2025-08-25"
+format:
+  live-html: 
+    output-file: intro-circuits-notes.html
+  live-revealjs: 
+    output-file: intro-circuits-slides.html
+---
+
+## Learning Objectives
+
+* What are circuits?
+* How does electric circuit analysis apply to other biomedical systems?
+* Circuit analysis conventions
+
+## Circuit
+
+Circuits are interconnection of elements (sources and loads).
+
+![](images/source_load.svg)
+
+::: {.callout-note title="Question"}
+What are common sources and loads in electronic circuits?
+:::
+
+## Sources
+
+* Voltage differentials -> EMF -> electric current (moving electrons) to flow through "closed circuit" paths.
+
+* The potential energy in the source to move electrons to the load, where that energy is either **dissipated** or **stored**.
+
+## Biomedical Circuit Correlates
+
+## Cardiovascular
+
+* **Source**: Heart (pressure differential)
+* **Load**: 
+  * Circulatory system 
+  * Organs 
+  * Resistance & elasticity (storage of energy)
+* **Current**: Volumetric Flow Rate
+
+::: {.callout-note title="Question"}
+How does sympathetic and parasympathetic tone modulate systemic resistance and pressure?
+:::
+
+## Respiratory
+
+* **Source**: Diaphragm & Intercostal Muscles
+* **Load**: Airways / Lungs
+* **Current**: Volumetric Airflow Rate
+
+## What is charge?
+
+$$
+\begin{gather}
+q_e = -1.602 \times 10^{-19} C (Coulomb)\\
+q_p = -q_e
+\end{gather}
+$$
+
+## What is current?
+
+### Current
+**Current** is the time rate change of charge passing through a defined area.
+
+$$
+i = \frac{dq}{dt} \left[\frac{C}{s}\right] = [A] (Ampere)
+$$
+
+### Polarity Conventions
+
+* (+) direction of current flow represents flow of (+) charges (i.e., not electrons)
+
+### SI Units
+
+* [C] and [A] are SI units.
+
+| Power of 10 | Prefix |
+| ----------- | ------ |
+| $\times 10^{12}$ | T (Tera) |
+| $\times 10^9$ | G (Giga) |
+| $\times 10^6$ | M (Mega) |
+| $\times 10^3$ | k (kilo) |
+| $\times 10^{-3}$ | m (milli) |
+| $\times 10^{-6}$ | $\mu$ (micro) |
+| $\times 10^{-9}$ | n (nano) |
+| $\times 10^{-12}$ | p (pico) |
+
+: Common Unit Prefixes
+
+### Common Current Magnitudes
+
+| Description | Approx. Magnitude |
+| ----------- | ----------------- |
+| Circuit breaker limits / house electrical wires max | 10-20 A |
+| Home circuit breaker total | 200-300 A |
+| Hairdryer | < 10 A |
+| Car Battery Max | 100s A |
+| Laptop Battery | < 1 A |
+| Cellphone Battery | 10 mA (idle) <br> 3 A (cell, camera) | 
+| Nerve Membrane Current | pA |
+
+: Common Current Magnitudes
+
+## What is voltage?
+
+A voltage differential represents the energy ($dW$) available in flowing charge ($dq$), avialalbe as stored potential energy in a source.
+
+$$
+V = \frac{dW}{dq} \left[\frac{J}{C}\right] = [V] (Volt)
+$$
+
+### Common Voltage Magnitudes
+
+| Description | Approx. Magnitude |
+| ----------- | ----------------- |
+| Wall Outlet | 110-240 V (AC) |
+| Transmission Line | kV-MV |
+| Lightning | ~100 MV |
+| Alkaline Battery Cell | ~1.5 V |
+| Nerve Action Potential | ~75 mV |
+
+: Common Voltage Magnitudes
+
+::: callout-important
+Voltage is a **relative** quantity; absolute voltage does not exist!
+:::
+
+## What is power?
+
+Power represents the rate at which work can be done (i.e., energy / unit time).
+
+$$
+P = \frac{dw}{dt} = \frac{dW}{dq} \frac{dq}{dt} = VI
+$$
+
+### What do the units look like?
+
+$$
+\left[\frac{J}{C} \frac{C}{s}\right] = \left[\frac{J}{s}\right] = [W] (Watt)
+$$
+
+## What happens to power?
+
+Circuit elements my absorb (dissipate or store) [load] or provide [source] power.
+
+### Sign Conventions
+
+$P < 0$: energy is provided to the circuit (source)
+$P > 0$: energy is dissipated / stored (load)
+
+Power *dissipated* by a circuit element (load) is (+) when (+) current ($I$) flows from a (+) -> (-) voltage (V).
+
+![](images/power_source_load.svg)
