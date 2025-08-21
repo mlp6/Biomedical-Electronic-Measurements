@@ -59,7 +59,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\n\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical"
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuit\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical"
   },
   {
     "objectID": "faq.html",
@@ -71,6 +71,226 @@
       "Course Information",
       "FAQ"
     ]
+  },
+  {
+    "objectID": "problem_sets/ProblemSetFormatGuidelines.html",
+    "href": "problem_sets/ProblemSetFormatGuidelines.html",
+    "title": "Problem Set Format Guidelines",
+    "section": "",
+    "text": "Please follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nAlways draw the circuit/diagram for each problem involving a circuit/diagram.\nLabel all circuit elements with symbols.\n\nSolve problems symbolically before substituting in numerical values.\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems. Place comments in the code where appropriate to indicate your thought process.\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set Format Guidelines"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html",
+    "href": "slides/intro-circuits-notes.html",
+    "title": "Introduction to Circuits",
+    "section": "",
+    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#learning-objectives",
+    "href": "slides/intro-circuits-notes.html#learning-objectives",
+    "title": "Introduction to Circuits",
+    "section": "",
+    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#circuit",
+    "href": "slides/intro-circuits-notes.html#circuit",
+    "title": "Introduction to Circuits",
+    "section": "Circuit",
+    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\nQuestion\n\n\n\nWhat are common sources and loads in electronic circuits?",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#sources",
+    "href": "slides/intro-circuits-notes.html#sources",
+    "title": "Introduction to Circuits",
+    "section": "Sources",
+    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored.",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
+    "href": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
+    "title": "Introduction to Circuits",
+    "section": "Biomedical Circuit Correlates",
+    "text": "Biomedical Circuit Correlates",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#cardiovascular",
+    "href": "slides/intro-circuits-notes.html#cardiovascular",
+    "title": "Introduction to Circuits",
+    "section": "Cardiovascular",
+    "text": "Cardiovascular\n\nSource: Heart (pressure differential)\nLoad:\n\nCirculatory system\nOrgans\nResistance & elasticity (storage of energy)\n\nCurrent: Volumetric Flow Rate\n\n\n\n\n\n\n\nQuestion\n\n\n\nHow does sympathetic and parasympathetic tone modulate systemic resistance and pressure?",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#respiratory",
+    "href": "slides/intro-circuits-notes.html#respiratory",
+    "title": "Introduction to Circuits",
+    "section": "Respiratory",
+    "text": "Respiratory\n\nSource: Diaphragm & Intercostal Muscles\nLoad: Airways / Lungs\nCurrent: Volumetric Airflow Rate",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-is-charge",
+    "href": "slides/intro-circuits-notes.html#what-is-charge",
+    "title": "Introduction to Circuits",
+    "section": "What is charge?",
+    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-is-current",
+    "href": "slides/intro-circuits-notes.html#what-is-current",
+    "title": "Introduction to Circuits",
+    "section": "What is current?",
+    "text": "What is current?\n\nCurrent\nCurrent is the time rate change of charge passing through a defined area.\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\n\n\nPolarity Conventions\n\n(+) direction of current flow represents flow of (+) charges (i.e., not electrons)\n\n\n\nSI Units\n\n[C] and [A] are SI units.\n\n\nCommon Unit Prefixes\n\n\nPower of 10\nPrefix\n\n\n\n\n\\(\\times 10^{12}\\)\nT (Tera)\n\n\n\\(\\times 10^9\\)\nG (Giga)\n\n\n\\(\\times 10^6\\)\nM (Mega)\n\n\n\\(\\times 10^3\\)\nk (kilo)\n\n\n\\(\\times 10^{-3}\\)\nm (milli)\n\n\n\\(\\times 10^{-6}\\)\n\\(\\mu\\) (micro)\n\n\n\\(\\times 10^{-9}\\)\nn (nano)\n\n\n\\(\\times 10^{-12}\\)\np (pico)\n\n\n\n\n\nCommon Current Magnitudes\n\nCommon Current Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nCircuit breaker limits / house electrical wires max\n10-20 A\n\n\nHome circuit breaker total\n200-300 A\n\n\nHairdryer\n&lt; 10 A\n\n\nCar Battery Max\n100s A\n\n\nLaptop Battery\n&lt; 1 A\n\n\nCellphone Battery\n10 mA (idle)  3 A (cell, camera)\n\n\nNerve Membrane Current\npA",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-is-voltage",
+    "href": "slides/intro-circuits-notes.html#what-is-voltage",
+    "title": "Introduction to Circuits",
+    "section": "What is voltage?",
+    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\n\nCommon Voltage Magnitudes\n\nCommon Voltage Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nWall Outlet\n110-240 V (AC)\n\n\nTransmission Line\nkV-MV\n\n\nLightning\n~100 MV\n\n\nAlkaline Battery Cell\n~1.5 V\n\n\nNerve Action Potential\n~75 mV\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nVoltage is a relative quantity; absolute voltage does not exist!",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-is-power",
+    "href": "slides/intro-circuits-notes.html#what-is-power",
+    "title": "Introduction to Circuits",
+    "section": "What is power?",
+    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]\n\nWhat do the units look like?\n\\[\n\\left[\\frac{J}{C} \\frac{C}{s}\\right] = \\left[\\frac{J}{s}\\right] = [W] (Watt)\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-happens-to-power",
+    "href": "slides/intro-circuits-notes.html#what-happens-to-power",
+    "title": "Introduction to Circuits",
+    "section": "What happens to power?",
+    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power.\n\nSign Conventions\n\\(P &lt; 0\\): energy is provided to the circuit (source) \\(P &gt; 0\\): energy is dissipated / stored (load)\nPower dissipated by a circuit element (load) is (+) when (+) current (\\(I\\)) flows from a (+) -&gt; (-) voltage (V).",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#learning-objectives",
+    "href": "slides/intro-circuits-slides.html#learning-objectives",
+    "title": "Introduction to Circuits",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nWhat are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#circuit",
+    "href": "slides/intro-circuits-slides.html#circuit",
+    "title": "Introduction to Circuits",
+    "section": "Circuit",
+    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\n\nQuestion\n\n\nWhat are common sources and loads in electronic circuits?"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#sources",
+    "href": "slides/intro-circuits-slides.html#sources",
+    "title": "Introduction to Circuits",
+    "section": "Sources",
+    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored."
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
+    "href": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
+    "title": "Introduction to Circuits",
+    "section": "Biomedical Circuit Correlates",
+    "text": "Biomedical Circuit Correlates"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#cardiovascular",
+    "href": "slides/intro-circuits-slides.html#cardiovascular",
+    "title": "Introduction to Circuits",
+    "section": "Cardiovascular",
+    "text": "Cardiovascular\n\nSource: Heart (pressure differential)\nLoad:\n\nCirculatory system\nOrgans\nResistance & elasticity (storage of energy)\n\nCurrent: Volumetric Flow Rate\n\n\n\n\n\n\n\n\nQuestion\n\n\nHow does sympathetic and parasympathetic tone modulate systemic resistance and pressure?"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#respiratory",
+    "href": "slides/intro-circuits-slides.html#respiratory",
+    "title": "Introduction to Circuits",
+    "section": "Respiratory",
+    "text": "Respiratory\n\nSource: Diaphragm & Intercostal Muscles\nLoad: Airways / Lungs\nCurrent: Volumetric Airflow Rate"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-charge",
+    "href": "slides/intro-circuits-slides.html#what-is-charge",
+    "title": "Introduction to Circuits",
+    "section": "What is charge?",
+    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-current",
+    "href": "slides/intro-circuits-slides.html#what-is-current",
+    "title": "Introduction to Circuits",
+    "section": "What is current?",
+    "text": "What is current?\nCurrent\nCurrent is the time rate change of charge passing through a defined area.\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\nPolarity Conventions\n\n(+) direction of current flow represents flow of (+) charges (i.e., not electrons)\n\nSI Units\n\n[C] and [A] are SI units.\n\n\nCommon Unit Prefixes\n\n\nPower of 10\nPrefix\n\n\n\n\n\\(\\times 10^{12}\\)\nT (Tera)\n\n\n\\(\\times 10^9\\)\nG (Giga)\n\n\n\\(\\times 10^6\\)\nM (Mega)\n\n\n\\(\\times 10^3\\)\nk (kilo)\n\n\n\\(\\times 10^{-3}\\)\nm (milli)\n\n\n\\(\\times 10^{-6}\\)\n\\(\\mu\\) (micro)\n\n\n\\(\\times 10^{-9}\\)\nn (nano)\n\n\n\\(\\times 10^{-12}\\)\np (pico)\n\n\n\nCommon Current Magnitudes\n\nCommon Current Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nCircuit breaker limits / house electrical wires max\n10-20 A\n\n\nHome circuit breaker total\n200-300 A\n\n\nHairdryer\n&lt; 10 A\n\n\nCar Battery Max\n100s A\n\n\nLaptop Battery\n&lt; 1 A\n\n\nCellphone Battery\n10 mA (idle)  3 A (cell, camera)\n\n\nNerve Membrane Current\npA"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-voltage",
+    "href": "slides/intro-circuits-slides.html#what-is-voltage",
+    "title": "Introduction to Circuits",
+    "section": "What is voltage?",
+    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\nCommon Voltage Magnitudes\n\nCommon Voltage Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nWall Outlet\n110-240 V (AC)\n\n\nTransmission Line\nkV-MV\n\n\nLightning\n~100 MV\n\n\nAlkaline Battery Cell\n~1.5 V\n\n\nNerve Action Potential\n~75 mV\n\n\n\n\n\n\n\n\n\nImportant\n\n\nVoltage is a relative quantity; absolute voltage does not exist!"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-power",
+    "href": "slides/intro-circuits-slides.html#what-is-power",
+    "title": "Introduction to Circuits",
+    "section": "What is power?",
+    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]\nWhat do the units look like?\n\\[\n\\left[\\frac{J}{C} \\frac{C}{s}\\right] = \\left[\\frac{J}{s}\\right] = [W] (Watt)\n\\]"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-happens-to-power",
+    "href": "slides/intro-circuits-slides.html#what-happens-to-power",
+    "title": "Introduction to Circuits",
+    "section": "What happens to power?",
+    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power.\nSign Conventions\n\\(P &lt; 0\\): energy is provided to the circuit (source) \\(P &gt; 0\\): energy is dissipated / stored (load)\nPower dissipated by a circuit element (load) is (+) when (+) current (\\(I\\)) flows from a (+) -&gt; (-) voltage (V)."
   },
   {
     "objectID": "course-syllabus.html",
@@ -154,7 +374,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\n\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuit\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
@@ -176,7 +396,7 @@
     "href": "course-syllabus.html#assignments-grading",
     "title": "Biomedical Electronic Measurements",
     "section": "Assignments & Grading",
-    "text": "Assignments & Grading\n\nGrading\nFundamental knowledge will be assessed with regular online quizzes (~15%).\nLab exercises, as described above, are mandatory to pass the class. Lab exercises will synthesize your theoretical and analytic circuit analysis skills with practical circuit debugging and testing. Lab exercises will include pre-lab efforts (15%) and post-lab Jupyter notebook submissions of data collection and analysis from the lab exercises (15%).\nA final lab practical, held during the final exam period in the lab, will be worth 25%.\nThere will be three midterm exams, each worth 10%.\n\nGrade Distribution\n\n\nGrade Category\nRelative Percentage\n\n\n\n\nQuizzes\n15%\n\n\nLabs\n15% (pre-lab) + 15% (post-lab) = 30%\n\n\nMidterms\n3 × 10% = 30%\n\n\nLab Practical\n25%\n\n\n\nAll assignment grades will be posted to Gradescope (and linked to the Canvas gradebook) throughout the semester to track your performance.\n\n\nCourse Grade\nThis course is not “curved” (i.e., a distribution of grades will not be enforced), and a traditional grading scheme will be used (e.g., 90-93 = A-, 94-97 = A, 97-100 = A+). Participation throughout the semester will influence rounding up/down for fractional grades.\n\n\n\n\n\n\nWarning\n\n\n\nFailing the course can happen with a cummulative score \\(&lt;\\) 65 (D) or more than one unexcused lab absence.\n\n\n\n\nRegrades\nAny regrading requests need to be made within one week of grades for a given assignment being released. You must make the request via Gradescope and provide a description of why you feel a regrade is appropriate. Requesting a regrade could lead to additional loss of credit when an assignment is re-evaluated.\nSome assignments will have an opportunity to be resubmitted based on grading feedback at the discretion of Dr. Palmeri.\n\n\nLate Policy / SDAO Accomodations\nLate submission windows will be available for all assignments, minus the in-person lab sessions and the final lab practical, and should be used to accomodate acute illness, travel, high workload from other classes and other unforeseen circumstances. This late submission window can be utilized without penalty and without prior approval.\nStudents with SDAO accomodations for extended time on assignments can use this extended late submission window for all assignments.\nAny assignments submitted after the late submission window will only be accepted for partial credit at the discretion of Dr. Palmeri or if prior approval was sought before the original (not extended) due date.",
+    "text": "Assignments & Grading\n\nGrading\nFundamental knowledge will be assessed with regular problem sets and online quizzes. There are important guidelines to follow when submitting your problem sets electronically to Gradescope.\nLab exercises, as described above, are mandatory to pass the class. Lab exercises will synthesize your theoretical and analytic circuit analysis skills with practical circuit debugging and testing. Lab exercises will include pre-lab exercises and post-lab submissions of data collection and analysis from the lab exercises.\nThere will be three midterm exams and a final lab practical will be held during the final exam period in the lab.\n\nGrade Distribution\n\n\nGrade Category\nRelative Percentage\n\n\n\n\nProblem Sets & Quizzes\n20%\n\n\nLabs\n15% (pre-lab) + 15% (post-lab) = 30%\n\n\nMidterms\n3 × 10% = 30%\n\n\nLab Practical\n20%\n\n\n\nAll assignment grades will be posted to Gradescope (and linked to the Canvas gradebook) throughout the semester to track your performance.\n\n\nCourse Grade\nThis course is not “curved” (i.e., a distribution of grades will not be enforced), and a traditional grading scheme will be used (e.g., 90-93 = A-, 94-97 = A, 97-100 = A+). Participation throughout the semester will influence rounding up/down for fractional grades.\n\n\n\n\n\n\nWarning\n\n\n\nFailing the course can happen with a cummulative score \\(&lt;\\) 65 (D) or more than one unexcused lab absence.\n\n\n\n\nRegrades\nAny regrading requests need to be made within one week of grades for a given assignment being released. You must make the request via Gradescope and provide a description of why you feel a regrade is appropriate. Requesting a regrade could lead to additional loss of credit when an assignment is re-evaluated.\nSome assignments will have an opportunity to be resubmitted based on grading feedback at the discretion of Dr. Palmeri.\n\n\nLate Policy / SDAO Accomodations\nLate submission windows will be available for all assignments, minus the in-person lab sessions and the final lab practical, and should be used to accomodate acute illness, travel, high workload from other classes and other unforeseen circumstances. This late submission window can be utilized without penalty and without prior approval.\nStudents with SDAO accomodations for extended time on assignments can use this extended late submission window for all assignments.\nAny assignments submitted after the late submission window will only be accepted for partial credit at the discretion of Dr. Palmeri or if prior approval was sought before the original (not extended) due date.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
@@ -198,7 +418,7 @@
     "href": "course-syllabus.html#faq",
     "title": "Biomedical Electronic Measurements",
     "section": "FAQ",
-    "text": "FAQ\n\nCan I collaborate with other students?\nEngineering is inherently a collaborative field, and in this class, you are encouraged to work collaboratively on your projects. That being said, all of the work that you submit must be generated by you and reflect your understanding of the material.\n\n\n\n\n\n\nImportant\n\n\n\nAll resources used in your assignment submissions that were developed by another person or company must be properly acknowledged.\n\n\n\n\nCan I use AI?\nThe use of artificial intelligence is a rapidly developing resource / tool in engineering. In software development, there are many levels of AI-assitance available. Such form of assistance include the IntelliCode tools and GitHub CoPilot (free to students through the GitHub Education program). These tools can be leveraged to help with syntax.\n\n\n\n\n\n\nCaution\n\n\n\nYou are strongly cautioned to not rely on these tools for solving circuit analysis problems, as these tools will not be available for your midterm exams and final lab practical. They are best used to help complete code syntax in this class.",
+    "text": "FAQ\n\nCan I collaborate with other students?\nEngineering is inherently a collaborative field, and in this class, you are encouraged to work collaboratively on your projects. That being said, all of the work that you submit must be generated by you and reflect your understanding of the material.\n\n\n\n\n\n\nImportant\n\n\n\nAll resources used in your assignment submissions that were developed by another person or company must be properly acknowledged.\n\n\n\n\nCan I use AI?\nThe use of artificial intelligence is a rapidly developing resource / tool in engineering. In software development, there are many levels of AI-assitance available. Such form of assistance include the IntelliCode tools and GitHub CoPilot (free to students through the GitHub Education program). These tools can be leveraged to help with coding syntax.\n\n\n\n\n\n\nCaution\n\n\n\nYou are strongly cautioned to not rely on these tools for solving circuit analysis problems, as these tools will not be available for your midterm exams and final lab practical. They are best used to help complete code syntax in this class.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"

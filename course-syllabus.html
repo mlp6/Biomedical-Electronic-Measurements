@@ -180,18 +180,48 @@ window.Quarto = {
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Learning Modules</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Learning Modules</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/intro-circuits-notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Circuits</span></a>
+  </div>
+</li>
+      </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Labs</span></a>
+ <span class="menu-text">Problem Sets</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./problem_sets/ProblemSetFormatGuidelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set Format Guidelines</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Labs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./labs/introduction.html" class="sidebar-item-text sidebar-link">
@@ -250,13 +280,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Resources</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./resources/XYZs_of_Oscopes_Tektronix.pdf" class="sidebar-item-text sidebar-link">
@@ -493,7 +523,7 @@ Important
 <tbody>
 <tr class="odd">
 <td>Voltage &amp; Current <br> Series &amp; Parallel Resistance <br> Kirchhof’s Laws</td>
-<td></td>
+<td><a href="./slides/intro-circuits-notes.html">Introduction to Circuit</a></td>
 <td></td>
 <td><a href="./labs/introduction.html">Introduction</a></td>
 </tr>
@@ -611,10 +641,9 @@ Important
 <h2 class="anchored" data-anchor-id="assignments-grading">Assignments &amp; Grading</h2>
 <section id="grading" class="level3">
 <h3 class="anchored" data-anchor-id="grading">Grading</h3>
-<p>Fundamental knowledge will be assessed with regular online quizzes (~15%).</p>
-<p>Lab exercises, as described above, are mandatory to pass the class. Lab exercises will synthesize your theoretical and analytic circuit analysis skills with practical circuit debugging and testing. Lab exercises will include pre-lab efforts (15%) and post-lab Jupyter notebook submissions of data collection and analysis from the lab exercises (15%).</p>
-<p>A final lab practical, held during the final exam period in the lab, will be worth 25%.</p>
-<p>There will be three midterm exams, each worth 10%.</p>
+<p>Fundamental knowledge will be assessed with regular problem sets and online quizzes. There are important <a href="./problem_sets/ProblemSetFormatGuidelines.html">guidelines</a> to follow when submitting your problem sets electronically to Gradescope.</p>
+<p>Lab exercises, as described above, are mandatory to pass the class. Lab exercises will synthesize your theoretical and analytic circuit analysis skills with practical circuit debugging and testing. Lab exercises will include pre-lab exercises and post-lab submissions of data collection and analysis from the lab exercises.</p>
+<p>There will be three midterm exams and a final lab practical will be held during the final exam period in the lab.</p>
 <table class="caption-top table">
 <caption>Grade Distribution</caption>
 <thead>
@@ -625,8 +654,8 @@ Important
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Quizzes</td>
-<td style="text-align: left;">15%</td>
+<td style="text-align: left;">Problem Sets &amp; Quizzes</td>
+<td style="text-align: left;">20%</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Labs</td>
@@ -638,7 +667,7 @@ Important
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lab Practical</td>
-<td style="text-align: left;">25%</td>
+<td style="text-align: left;">20%</td>
 </tr>
 </tbody>
 </table>
@@ -698,7 +727,7 @@ Important
 </section>
 <section id="can-i-use-ai" class="level3">
 <h3 class="anchored" data-anchor-id="can-i-use-ai">Can I use AI?</h3>
-<p>The use of artificial intelligence is a rapidly developing resource / tool in engineering. In software development, there are many levels of AI-assitance available. Such form of assistance include the <a href="https://visualstudio.microsoft.com/services/intellicode/">IntelliCode</a> tools and <a href="https://github.com/features/copilot">GitHub CoPilot</a> (free to students through the <a href="https://github.com/education/students">GitHub Education</a> program). These tools can be leveraged to help with syntax.</p>
+<p>The use of artificial intelligence is a rapidly developing resource / tool in engineering. In software development, there are many levels of AI-assitance available. Such form of assistance include the <a href="https://visualstudio.microsoft.com/services/intellicode/">IntelliCode</a> tools and <a href="https://github.com/features/copilot">GitHub CoPilot</a> (free to students through the <a href="https://github.com/education/students">GitHub Education</a> program). These tools can be leveraged to help with coding syntax.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
