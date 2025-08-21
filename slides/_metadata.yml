@@ -16,3 +16,4 @@ format:
     css: styles.css
 engine: knitr
 highlight-style: a11y-light
+slide-level: 3
