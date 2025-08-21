@@ -1,0 +1,30 @@
+---
+title: "Problem Set Format Guidelines"
+date: 2025-08-25
+format:
+  html: default
+  pdf: default
+---
+
+
+Please follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.
+
+* Each problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).
+* Always draw the circuit/diagram for each problem involving a circuit/diagram.
+* Label all circuit elements with symbols.  
+* Solve problems symbolically before substituting in numerical values.
+* Please write legibly and include all relevant steps in arriving at your solution.
+* Please place a box around all final solutions.
+
+::: callout-important
+All answers must have units!!  No units = no credit!
+:::
+
+* Attach any computer code (e.g., Python code) used to solve problems.  Place comments in the code where appropriate to indicate your thought process.
+* All plots must be appropriately labeled with units.
+
+* Problem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.
+
+::: callout-warning
+Failure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.
+:::

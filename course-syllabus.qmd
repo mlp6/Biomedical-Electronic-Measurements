@@ -144,7 +144,10 @@ Participation on [Ed Discussion](https://edstem.org/us/courses/81250/) is also e
 
 ### Grading
 
-Fundamental knowledge will be assessed with regular problem sets and online quizzes.
+Fundamental knowledge will be assessed with regular problem sets and online
+quizzes.  There are important
+[guidelines](problem_sets/ProblemSetFormatGuidelines.md) to follow when
+submitting your problem sets electronically to Gradescope.
 
 Lab exercises, as described above, are mandatory to pass the class.  Lab
 exercises will synthesize your theoretical and analytic circuit analysis skills

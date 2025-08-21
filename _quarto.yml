@@ -35,6 +35,10 @@ website:
         - href: faq.qmd
           text: FAQ
       - section: "Learning Modules"
+      - section: "Problem Sets"
+        contents:
+        - href: problem_sets/ProblemSetFormatGuidelines.md
+          text: "Problem Set Format Guidelines"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
