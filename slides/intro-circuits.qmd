@@ -75,7 +75,7 @@ $$
 
 ### SI Units
 
-* [C] and [A] are SI units.
+Coulombs and amperes are SI units.
 
 | Power of 10 | Prefix |
 | ----------- | ------ |
