@@ -32,7 +32,7 @@ What are common sources and loads in electronic circuits?
 
 ## Biomedical Circuit Correlates
 
-## Cardiovascular
+### Cardiovascular
 
 * **Source**: Heart (pressure differential)
 * **Load**: 
@@ -41,11 +41,15 @@ What are common sources and loads in electronic circuits?
   * Resistance & elasticity (storage of energy)
 * **Current**: Volumetric Flow Rate
 
+### Cardiovascular Analogy
+
+![](images/physio_source_load.svg){fig-align="center"}
+
 ::: {.callout-note title="Question"}
 How does sympathetic and parasympathetic tone modulate systemic resistance and pressure?
 :::
 
-## Respiratory
+### Respiratory
 
 * **Source**: Diaphragm & Intercostal Muscles
 * **Load**: Airways / Lungs
