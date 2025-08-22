@@ -132,29 +132,7 @@
     "href": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
     "title": "Introduction to Circuits",
     "section": "Biomedical Circuit Correlates",
-    "text": "Biomedical Circuit Correlates",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#cardiovascular",
-    "href": "slides/intro-circuits-notes.html#cardiovascular",
-    "title": "Introduction to Circuits",
-    "section": "Cardiovascular",
-    "text": "Cardiovascular\n\nSource: Heart (pressure differential)\nLoad:\n\nCirculatory system\nOrgans\nResistance & elasticity (storage of energy)\n\nCurrent: Volumetric Flow Rate\n\n\n\n\n\n\n\nQuestion\n\n\n\nHow does sympathetic and parasympathetic tone modulate systemic resistance and pressure?",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#respiratory",
-    "href": "slides/intro-circuits-notes.html#respiratory",
-    "title": "Introduction to Circuits",
-    "section": "Respiratory",
-    "text": "Respiratory\n\nSource: Diaphragm & Intercostal Muscles\nLoad: Airways / Lungs\nCurrent: Volumetric Airflow Rate",
+    "text": "Biomedical Circuit Correlates\n\nCardiovascular\n\nSource: Heart (pressure differential)\nLoad:\n\nCirculatory system\nOrgans\nResistance & elasticity (storage of energy)\n\nCurrent: Volumetric Flow Rate\n\n\n\nCardiovascular Analogy\n\n\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nHow does sympathetic and parasympathetic tone modulate systemic resistance and pressure?\n\n\n\n\nRespiratory\n\nSource: Diaphragm & Intercostal Muscles\nLoad: Airways / Lungs\nCurrent: Volumetric Airflow Rate",
     "crumbs": [
       "Learning Modules",
       "Introduction to Circuits"
@@ -242,20 +220,6 @@
     "title": "Introduction to Circuits",
     "section": "Biomedical Circuit Correlates",
     "text": "Biomedical Circuit Correlates"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#cardiovascular",
-    "href": "slides/intro-circuits-slides.html#cardiovascular",
-    "title": "Introduction to Circuits",
-    "section": "Cardiovascular",
-    "text": "Cardiovascular\n\nSource: Heart (pressure differential)\nLoad:\n\nCirculatory system\nOrgans\nResistance & elasticity (storage of energy)\n\nCurrent: Volumetric Flow Rate\n\n\n\n\n\n\n\n\nQuestion\n\n\nHow does sympathetic and parasympathetic tone modulate systemic resistance and pressure?"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#respiratory",
-    "href": "slides/intro-circuits-slides.html#respiratory",
-    "title": "Introduction to Circuits",
-    "section": "Respiratory",
-    "text": "Respiratory\n\nSource: Diaphragm & Intercostal Muscles\nLoad: Airways / Lungs\nCurrent: Volumetric Airflow Rate"
   },
   {
     "objectID": "slides/intro-circuits-slides.html#what-is-charge",
