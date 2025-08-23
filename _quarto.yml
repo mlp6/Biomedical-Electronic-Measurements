@@ -38,10 +38,6 @@ website:
         contents:
         - href: slides/intro-circuits.qmd
           text: "Introduction to Circuits"
-      - section: "Problem Sets"
-        contents:
-        - href: problem_sets/ProblemSetFormatGuidelines.md
-          text: "Problem Set Format Guidelines"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
@@ -68,6 +64,12 @@ website:
           text: "XYZ of Oscilloscopes"
         - href: resources/teaching_assistant_expectations.qmd
           text: "Teaching Assistant Expectations"
+      - section: "Problem Sets"
+        contents:
+        - href: problem_sets/_formatting_guidelines.qmd
+          text: "Formatting Guidelines"
+        - href: problem_sets/ps1.qmd
+          text: "Problem Set 01"
 
     page-footer:
       right: 'This page is built with [Quarto](https://quarto.org/).'

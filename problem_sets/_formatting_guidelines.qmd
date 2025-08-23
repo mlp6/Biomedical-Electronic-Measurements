@@ -1,11 +1,4 @@
----
-title: "Problem Set Format Guidelines"
-date: 2025-08-25
-format:
-  html: default
-  pdf: default
----
-
+## Problem Set Format Guidelines
 
 Please follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.
 

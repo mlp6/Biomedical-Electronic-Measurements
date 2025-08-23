@@ -1,51 +1,59 @@
 ---
 title: Software Installation and Tutorials
 subtitle: "BME253L (Fall 2025)"
-date: 2025-08-01
+date: 2025-08-25
 format:
   html: default
   pdf: default
 ---
 
-<!-- TODO: tailor this for Arduino coding -->
-## Visual Studio Code (IDE)
-
-We will be using [Visual Studio Code](https://code.visualstudio.com/) as the IDE for all projects in this class.  In addition to installing the base program, please install the following Extensions:
-
-* `nRF Connect for VS Code (Extension Pack)`
-* `GitLens` (help with git operations / visualization)
-* `C/C++` (not the extension pack, since it include `CMake Tools` that has some incompatibilities with the Zephyr build tools)
-* `Cmake`
-* Microsoft `IntelliCode` (assistance with C syntax)
-* State diagram software (see below)
-* [GitHub CoPilot](https://code.visualstudio.com/docs/copilot/overview) (AI-assisted coding)
-  * Sign up for free GitHub Education Student account to get access to this extension: https://github.com/education/students
-  * You will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain.  Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.
-  * Install the GitHub CoPilot extension
-
-<!-- TODO: add this -->
 ## KiCad
 
-We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.
+We will be using KiCad for electronic computer aided design (ECAD), including
+schematic capture and Simulation Program with Integrated Circuit Emphasis
+(SPICE) simulations.
 
 Install KiCad on your laptop: https://www.kicad.org/
 
-<!-- TODO: move this to a dedicated page -->
-## Technical Report Preparation
+## Visual Studio Code (IDE)
 
-Each lab exercise will have an associated technical report submitted.  These reports will be prepared and submitted using Python-based Jupyter notebooks that will be included as part of your assignment git repositories.
+I recommend using [Visual Studio Code](https://code.visualstudio.com/) as the
+IDE for all projects in this class that require data analysis, plotting, etc.
 
-You will need to be able to perform the following tasks in your Jupyter notebooks:
+In addition to installing the base program, please install the following
+Extensions:
 
-* Read CSV text data saved from an oscilloscope.
-* Generate plots
+- Python Extension Pack
 
-<!-- TODO: make this a dedicated page -->
-If you need to install a Python environment on your laptop, then this is a good starting point: [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial).
+- Jupyter
 
-This is a good tutorial on getting started with Jupyter notebooks in VS Code: [Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/python/jupyter-support).
+- [GitHub CoPilot](https://code.visualstudio.com/docs/copilot/overview) (AI-assisted coding)
 
-<!-- TODO: maybe eliminate this? -->
-## What to Submit
+- Sign up for free GitHub Education Student account to get "Pro" access to this
+extension: [https://github.com/education/students](https://github.com/education/students)
 
-Complete the online Gradescope "quiz" indicating completion of each of the main tasks above.
+::: callout-tip
+You will need a document to verify your student status that includes your dates
+of enrollment, which your DukeCard does not contain.  Instead, you can get an
+Enrollment Verification document through DukeHub (Academics Tab) and convert the
+downloaded PDF to a JPG or PNG file to upload to GitHub.
+:::
+
+## Technical Report Preparation (Jupyter Notebook)
+
+Each lab exercise will have an associated technical report submitted.  These
+reports will be prepared and submitted using Python-based Jupyter notebooks that
+will be converted to PDF files and uploaded to Gradescope.
+
+If you need to install a Python environment on your laptop, then this is a good
+starting point: 
+[Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial).
+
+This is a good tutorial on getting started with Jupyter notebooks in VS Code:
+[Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/python/jupyter-support).
+
+You can also choose to edit your Jupyter notebooks with a cloud-based tool, like [Google CoLab](https://colab.google/), but that approach will not receive help / troubleshooting from Dr. Palmeri or the teaching team.
+
+## Gradescope
+
+Please complete the Gradescope quiz when you are done installing all of these tools.

@@ -146,7 +146,7 @@ Participation on [Ed Discussion](https://edstem.org/us/courses/81250/) is also e
 
 Fundamental knowledge will be assessed with regular problem sets and online
 quizzes.  There are important
-[guidelines](problem_sets/ProblemSetFormatGuidelines.md) to follow when
+[guidelines](problem_sets/_formatting_guidelines.qmd) to follow when
 submitting your problem sets electronically to Gradescope.
 
 Lab exercises, as described above, are mandatory to pass the class.  Lab
