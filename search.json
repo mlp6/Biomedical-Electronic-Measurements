@@ -4,18 +4,7 @@
     "href": "software-install-tutorials.html",
     "title": "Software Installation and Tutorials",
     "section": "",
-    "text": "We will be using Visual Studio Code as the IDE for all projects in this class. In addition to installing the base program, please install the following Extensions:\n\nnRF Connect for VS Code (Extension Pack)\nGitLens (help with git operations / visualization)\nC/C++ (not the extension pack, since it include CMake Tools that has some incompatibilities with the Zephyr build tools)\nCmake\nMicrosoft IntelliCode (assistance with C syntax)\nState diagram software (see below)\nGitHub CoPilot (AI-assisted coding)\n\nSign up for free GitHub Education Student account to get access to this extension: https://github.com/education/students\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.\nInstall the GitHub CoPilot extension",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
-    "href": "software-install-tutorials.html#visual-studio-code-ide",
-    "title": "Software Installation and Tutorials",
-    "section": "",
-    "text": "We will be using Visual Studio Code as the IDE for all projects in this class. In addition to installing the base program, please install the following Extensions:\n\nnRF Connect for VS Code (Extension Pack)\nGitLens (help with git operations / visualization)\nC/C++ (not the extension pack, since it include CMake Tools that has some incompatibilities with the Zephyr build tools)\nCmake\nMicrosoft IntelliCode (assistance with C syntax)\nState diagram software (see below)\nGitHub CoPilot (AI-assisted coding)\n\nSign up for free GitHub Education Student account to get access to this extension: https://github.com/education/students\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.\nInstall the GitHub CoPilot extension",
+    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
     "crumbs": [
       "Course Information",
       "Software Installation & Tutorials"
@@ -25,30 +14,41 @@
     "objectID": "software-install-tutorials.html#kicad",
     "href": "software-install-tutorials.html#kicad",
     "title": "Software Installation and Tutorials",
-    "section": "KiCad",
-    "text": "KiCad\nWe will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
+    "section": "",
+    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
     "crumbs": [
       "Course Information",
       "Software Installation & Tutorials"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#technical-report-preparation",
-    "href": "software-install-tutorials.html#technical-report-preparation",
+    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
+    "href": "software-install-tutorials.html#visual-studio-code-ide",
     "title": "Software Installation and Tutorials",
-    "section": "Technical Report Preparation",
-    "text": "Technical Report Preparation\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be included as part of your assignment git repositories.\nYou will need to be able to perform the following tasks in your Jupyter notebooks:\n\nRead CSV text data saved from an oscilloscope.\nGenerate plots\n\n\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.",
+    "section": "Visual Studio Code (IDE)",
+    "text": "Visual Studio Code (IDE)\nI recommend using Visual Studio Code as the IDE for all projects in this class that require data analysis, plotting, etc.\nIn addition to installing the base program, please install the following Extensions:\n\nPython Extension Pack\nJupyter\nGitHub CoPilot (AI-assisted coding)\nSign up for free GitHub Education Student account to get “Pro” access to this extension: https://github.com/education/students\n\n\n\n\n\n\n\nTip\n\n\n\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.",
     "crumbs": [
       "Course Information",
       "Software Installation & Tutorials"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#what-to-submit",
-    "href": "software-install-tutorials.html#what-to-submit",
+    "objectID": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
+    "href": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
     "title": "Software Installation and Tutorials",
-    "section": "What to Submit",
-    "text": "What to Submit\nComplete the online Gradescope “quiz” indicating completion of each of the main tasks above.",
+    "section": "Technical Report Preparation (Jupyter Notebook)",
+    "text": "Technical Report Preparation (Jupyter Notebook)\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be converted to PDF files and uploaded to Gradescope.\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.\nYou can also choose to edit your Jupyter notebooks with a cloud-based tool, like Google CoLab, but that approach will not receive help / troubleshooting from Dr. Palmeri or the teaching team.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#gradescope",
+    "href": "software-install-tutorials.html#gradescope",
+    "title": "Software Installation and Tutorials",
+    "section": "Gradescope",
+    "text": "Gradescope\nPlease complete the Gradescope quiz when you are done installing all of these tools.",
     "crumbs": [
       "Course Information",
       "Software Installation & Tutorials"
@@ -59,7 +59,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
   },
   {
     "objectID": "faq.html",
@@ -73,14 +73,25 @@
     ]
   },
   {
-    "objectID": "problem_sets/ProblemSetFormatGuidelines.html",
-    "href": "problem_sets/ProblemSetFormatGuidelines.html",
-    "title": "Problem Set Format Guidelines",
+    "objectID": "problem_sets/ps1.html",
+    "href": "problem_sets/ps1.html",
+    "title": "Problem Set 01",
     "section": "",
-    "text": "Please follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nAlways draw the circuit/diagram for each problem involving a circuit/diagram.\nLabel all circuit elements with symbols.\n\nSolve problems symbolically before substituting in numerical values.\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems. Place comments in the code where appropriate to indicate your thought process.\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
     "crumbs": [
       "Problem Sets",
-      "Problem Set Format Guidelines"
+      "Problem Set 01"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps1.html#problem-set-format-guidelines",
+    "href": "problem_sets/ps1.html#problem-set-format-guidelines",
+    "title": "Problem Set 01",
+    "section": "Problem Set Format Guidelines",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nAlways draw the circuit/diagram for each problem involving a circuit/diagram.\nLabel all circuit elements with symbols.\n\nSolve problems symbolically before substituting in numerical values.\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems. Place comments in the code where appropriate to indicate your thought process.\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 01"
     ]
   },
   {
@@ -338,7 +349,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits\n\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"

@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-08-25">
 
-<title>Problem Set Format Guidelines – Biomedical Electronic Measurements</title>
+<title>Problem Set 01 – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,8 +68,38 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -81,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/ProblemSetFormatGuidelines.html">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ProblemSetFormatGuidelines.html">Problem Set Format Guidelines</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/_formatting_guidelines.qmd">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ps1.html">Problem Set 01</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -171,29 +201,12 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Problem Sets</span></a>
+ <span class="menu-text">Labs</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../problem_sets/ProblemSetFormatGuidelines.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Problem Set Format Guidelines</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Labs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/introduction.html" class="sidebar-item-text sidebar-link">
@@ -252,13 +265,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Resources</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources/XYZs_of_Oscopes_Tektronix.pdf" class="sidebar-item-text sidebar-link">
@@ -273,20 +286,49 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Problem Sets</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problem_sets/_formatting_guidelines.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formatting Guidelines</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problem_sets/ps1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Problem Set 01</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ProblemSetFormatGuidelines.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-set-format-guidelines" id="toc-problem-set-format-guidelines" class="nav-link active" data-scroll-target="#problem-set-format-guidelines">Problem Set Format Guidelines</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/ProblemSetFormatGuidelines.html">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ProblemSetFormatGuidelines.html">Problem Set Format Guidelines</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/_formatting_guidelines.qmd">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ps1.html">Problem Set 01</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Problem Set Format Guidelines</h1>
+<h1 class="title">Problem Set 01</h1>
 <p class="subtitle lead">BME253L - Fall 2025 - Palmeri</p>
   <div class="quarto-categories">
     <div class="quarto-category">Problem Set</div>
@@ -319,6 +361,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<!-- TODO: recreate screenshot figures -->
+<p>Please complete the following problems and tasks, and upload your solutions to Gradescope, using the <a href="_formatting_guidelines.qmd">formatting guidelines</a> below.</p>
+<ol type="1">
+<li><p><strong>Battery Energy Capacity</strong> The energy capacity of a pacemaker battery is usually specified in milliampere-hours (mA-h). For example, a 1000 mA-h battery can supply 1 A for 1 hour, 500 mA for 2 h, etc.</p>
+<ol type="a">
+<li><p>How many coulombs of charge can nominally be drawn from a 3000 mA-h battery?</p></li>
+<li><p>How many electrons are necessary for your answer to (a)?</p></li>
+</ol></li>
+<li><p><strong>Battery Charging</strong> The figure below shows a <em>two-rate charge cycle</em> for a battery. Find:</p>
+<ol type="a">
+<li><p>The total charge transferred to the battery.</p></li>
+<li><p>The total energy transferred to the battery.</p>
+<p><img src="images/ps1/two-cycle-charge.png" class="img-fluid"></p></li>
+</ol></li>
+<li><p><strong>KCL</strong> Apply KCL to determine the unknown currents in the circuit below. Assume that <span class="math inline">\(I_0 = -2 A\)</span>, <span class="math inline">\(I_1 = -4 A\)</span>, <span class="math inline">\(I_S = 8 A\)</span>, and <span class="math inline">\(V_S = 12 V\)</span>.</p>
+<p><img src="images/ps1/kcl.png" class="img-fluid"></p></li>
+<li><p><strong>KVL</strong> Apply KVL to find the voltages <span class="math inline">\(v_1\)</span> and <span class="math inline">\(v_2\)</span> in the circuit below:</p>
+<p><img src="images/ps1/kvl.png" class="img-fluid"></p></li>
+<li><p><strong>Power Sign Conventions</strong> For the circuit below:</p>
+<ol type="a">
+<li><p>Which components are power sources and which are power loads?</p></li>
+<li><p>Is energy conserved in this circuit? Explain.</p>
+<p><img src="images/ps1/power_source_load.png" class="img-fluid"></p></li>
+</ol></li>
+<li><p><strong>Power &amp; Energy</strong> A nichrome heating element requires 23 A at 110 V.</p>
+<ol type="a">
+<li><p>How much power is nominally dissipated as heat from this element?</p></li>
+<li><p>How much energy is dissipated by this heating element over a 24-h period?</p></li>
+<li><p>If this heating element is powered by a source at a rate of 6 cents/kWh, what is the cost of the energy neede for a 24-h period?</p></li>
+</ol></li>
+<li><p><strong>Parallel Resistance</strong> A 24 V battery is used to power IV pumps on two surgical beds in a post-operative suite. The beds are attached in parallel to this single battery, and each bed should nominally act as a 75 W load on the battery. One of the beds, however, has a larger capacity IV pump installed that acts as a cummulative 100 W load for that bed.</p>
+<ol type="a">
+<li><p>What is the effective resistance of each bed based on its power load?</p></li>
+<li><p>What is the total equivalent resistance experience by the battery when both beds are attached to it in parallel?</p></li>
+</ol></li>
+<li><p><strong>More Parallel Resistance</strong> A medical student comes into the post-operative suite described above and attaches a laptop and a cellphone (in parallel) to the battery powering the two beds.</p>
+<ol type="a">
+<li><p>What is the equivalent resistance of the total load now attached to the battery (2 15-W, 1 75-W and 1 100-W load, in parallel)?</p></li>
+<li><p>What is the total current drawn from the battery with these 4 loads attached?</p></li>
+</ol></li>
+<li><p><strong>Types of Battery Cells</strong> Answer the following questions about batteries:</p>
+<ol type="a">
+<li><p>What are the differences between rechargeable and non-rechargeable batteries,</p></li>
+<li><p>What are the different types of rechargeable batteries (e.g., lead acid, NiCd, NiMH, Li-ion)?</p></li>
+<li><p>What the physical limits are for the voltage that can be generated by a single battery cell?</p></li>
+<li><p>What is the nominal voltage difference between an AAA, AA, C, and D cell alkaline batteries?</p></li>
+<li><p>How does the power capacity of a 9 V alkaline battery compare to a D cell battery?</p></li>
+<li><p>What criteria need to be taken into account when a biomedical engineer is choosing a battery for an implantable device?</p></li>
+</ol></li>
+</ol>
+<section id="problem-set-format-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="problem-set-format-guidelines">Problem Set Format Guidelines</h2>
 <p>Please follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.</p>
 <ul>
 <li>Each problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).</li>
@@ -362,6 +456,7 @@ Warning
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -768,4 +863,4 @@ Warning
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
