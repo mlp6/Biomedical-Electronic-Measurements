@@ -18,13 +18,13 @@ Please complete the following problems and tasks, and upload your solutions to G
 
 
 1. **Battery Charging** The figure below shows a *two-rate charge cycle* for a
-battery.  Find:
+battery.  Solve for:
 
     a. The total charge transferred to the battery.
 
     b. The total energy transferred to the battery.
 
-        ![](images/ps1/two-cycle-charge.png)
+        ![](images/ps1/two-rate-charge-plots.png)
 
 1. **KCL** Apply KCL to determine the unknown currents in the circuit below.  Assume
 that $I_0 = -2 A$, $I_1 = -4 A$, $I_S = 8 A$, and $V_S = 12 V$.

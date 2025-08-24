@@ -1,0 +1,62 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=10cm,
+        height=6cm,
+        every axis/.append style={font=\Large},
+        xlabel={Time (h)},
+        ylabel={Battery Voltage (V)},
+        grid=major,
+        xtick=data,
+        ytick=data,
+        minor tick num=1,
+        major grid style={line width=.2pt,draw=gray!50},
+        minor grid style={line width=.1pt,draw=gray!20},
+    ]
+    
+    \addplot[
+        color=blue,
+        thick,
+    ] table {
+        0 1
+        5 1.75
+        5 1.25
+        10 1.5
+    };
+    \end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width=10cm,
+        height=6cm,
+        every axis/.append style={font=\Large},
+        xlabel={Time (h)},
+        ylabel={Battery Current (mA)},
+        grid=major,
+        xtick=data,
+        ytick=data,
+        minor tick num=1,
+        major grid style={line width=.2pt,draw=gray!50},
+        minor grid style={line width=.1pt,draw=gray!20},
+    ]
+    
+    \addplot[
+        color=blue,
+        thick,
+    ] table {
+        0 50 
+        5 50
+        5 20
+        10 20
+        10 0
+    };
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}
