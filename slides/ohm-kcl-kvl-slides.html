@@ -13,7 +13,7 @@
 
   <meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
   <meta name="dcterms.date" content="2025-08-25">
-  <title>Biomedical Electronic Measurements – Introduction to Circuits</title>
+  <title>Biomedical Electronic Measurements – Ohm’s and Kirchoff’s Laws</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -132,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introduction to Circuits</h1>
+  <h1 class="title">Ohm’s and Kirchoff’s Laws</h1>
   <p class="subtitle">BME253L - Fall 2025</p>
 
 <div class="quarto-title-authors">
@@ -151,285 +151,85 @@ Dr.&nbsp;Mark Palmeri, M.D., Ph.D.
 <section id="learning-objectives" class="title-slide slide level2 center">
 <h2>Learning Objectives</h2>
 <ul>
-<li>What are circuits?</li>
-<li>How does electric circuit analysis apply to other biomedical systems?</li>
-<li>Circuit analysis conventions</li>
-</ul>
-</section>
-
-<section id="circuit" class="title-slide slide level2 center">
-<h2>Circuit</h2>
-<p>Circuits are interconnection of elements (sources and loads).</p>
-
-<img data-src="images/source_load.svg" class="r-stretch"><div title="Question">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Question</strong></p>
-</div>
-<div class="callout-content">
-<p>What are common sources and loads in electronic circuits?</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="sources" class="title-slide slide level2 center">
-<h2>Sources</h2>
-<ul>
-<li><p>Voltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.</p></li>
-<li><p>The potential energy in the source to move electrons to the load, where that energy is either <strong>dissipated</strong> or <strong>stored</strong>.</p></li>
+<li><p>Reinforce pwoer and energy flow in circuits</p></li>
+<li><p>Define Ohm’s Law</p></li>
+<li><p>Define Kirchoff’s Voltage and Current Laws</p></li>
+<li><p>Resistive Loads</p></li>
+<li><p>Voltage and Current Measurement Devices</p></li>
 </ul>
 </section>
 
 <section>
-<section id="biomedical-circuit-correlates" class="title-slide slide level2 center">
-<h2>Biomedical Circuit Correlates</h2>
-
-</section>
-<section id="cardiovascular" class="slide level3">
-<h3>Cardiovascular</h3>
-<ul>
-<li><strong>Source</strong>: Heart (pressure differential)</li>
-<li><strong>Load</strong>:
-<ul>
-<li>Circulatory system</li>
-<li>Organs</li>
-<li>Resistance &amp; elasticity (storage of energy)</li>
-</ul></li>
-<li><strong>Current</strong>: Volumetric Flow Rate</li>
-</ul>
-</section>
-<section id="cardiovascular-analogy" class="slide level3">
-<h3>Cardiovascular Analogy</h3>
-
-<img data-src="images/physio_source_load.svg" class="quarto-figure quarto-figure-center r-stretch"><div title="Question">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Question</strong></p>
-</div>
-<div class="callout-content">
-<p>How does sympathetic and parasympathetic tone modulate systemic resistance and pressure?</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="respiratory" class="slide level3">
-<h3>Respiratory</h3>
-<ul>
-<li><strong>Source</strong>: Diaphragm &amp; Intercostal Muscles</li>
-<li><strong>Load</strong>: Airways / Lungs</li>
-<li><strong>Current</strong>: Volumetric Airflow Rate</li>
-</ul>
-</section></section>
-<section id="what-is-charge" class="title-slide slide level2 center">
-<h2>What is charge?</h2>
-<p><span class="math display">\[
-\begin{gather}
-q_e = -1.602 \times 10^{-19} C (Coulomb)\\
-q_p = -q_e
-\end{gather}
-\]</span></p>
-</section>
-
-<section>
-<section id="what-is-current" class="title-slide slide level2 center">
-<h2>What is current?</h2>
-
-</section>
-<section id="current" class="slide level3">
-<h3>Current</h3>
-<p><strong>Current</strong> is the time rate change of charge passing through a defined area.</p>
+<section id="review-from-last-lecture" class="title-slide slide level2 center">
+<h2>Review from Last Lecture</h2>
 <p><span class="math display">\[
 i = \frac{dq}{dt} \left[\frac{C}{s}\right] = [A] (Ampere)
 \]</span></p>
-</section>
-<section id="polarity-conventions" class="slide level3">
-<h3>Polarity Conventions</h3>
-<ul>
-<li>(+) direction of current flow represents flow of (+) charges (i.e., not electrons)</li>
-</ul>
-</section>
-<section id="si-units" class="slide level3">
-<h3>SI Units</h3>
-<p>Coulombs and amperes are SI units.</p>
-<table class="caption-top">
-<caption>Common Unit Prefixes</caption>
-<thead>
-<tr class="header">
-<th>Power of 10</th>
-<th>Prefix</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\times 10^{12}\)</span></td>
-<td>T (Tera)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\times 10^9\)</span></td>
-<td>G (Giga)</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\times 10^6\)</span></td>
-<td>M (Mega)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\times 10^3\)</span></td>
-<td>k (kilo)</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\times 10^{-3}\)</span></td>
-<td>m (milli)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\times 10^{-6}\)</span></td>
-<td><span class="math inline">\(\mu\)</span> (micro)</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\times 10^{-9}\)</span></td>
-<td>n (nano)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\times 10^{-12}\)</span></td>
-<td>p (pico)</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="common-current-magnitudes" class="slide level3">
-<h3>Common Current Magnitudes</h3>
-<table class="caption-top">
-<caption>Common Current Magnitudes</caption>
-<thead>
-<tr class="header">
-<th>Description</th>
-<th>Approx. Magnitude</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Circuit breaker limits / house electrical wires max</td>
-<td>10-20 A</td>
-</tr>
-<tr class="even">
-<td>Home circuit breaker total</td>
-<td>200-300 A</td>
-</tr>
-<tr class="odd">
-<td>Hairdryer</td>
-<td>&lt; 10 A</td>
-</tr>
-<tr class="even">
-<td>Car Battery Max</td>
-<td>100s A</td>
-</tr>
-<tr class="odd">
-<td>Laptop Battery</td>
-<td>&lt; 1 A</td>
-</tr>
-<tr class="even">
-<td>Cellphone Battery</td>
-<td>10 mA (idle) <br> 3 A (cell, camera)</td>
-</tr>
-<tr class="odd">
-<td>Nerve Membrane Current</td>
-<td>pA</td>
-</tr>
-</tbody>
-</table>
-</section></section>
-<section>
-<section id="what-is-voltage" class="title-slide slide level2 center">
-<h2>What is voltage?</h2>
-<p>A voltage differential represents the energy (<span class="math inline">\(dW\)</span>) available in flowing charge (<span class="math inline">\(dq\)</span>), avialalbe as stored potential energy in a source.</p>
 <p><span class="math display">\[
 V = \frac{dW}{dq} \left[\frac{J}{C}\right] = [V] (Volt)
 \]</span></p>
-</section>
-<section id="common-voltage-magnitudes" class="slide level3">
-<h3>Common Voltage Magnitudes</h3>
-<table class="caption-top">
-<caption>Common Voltage Magnitudes</caption>
-<thead>
-<tr class="header">
-<th>Description</th>
-<th>Approx. Magnitude</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Wall Outlet</td>
-<td>110-240 V (AC)</td>
-</tr>
-<tr class="even">
-<td>Transmission Line</td>
-<td>kV-MV</td>
-</tr>
-<tr class="odd">
-<td>Lightning</td>
-<td>~100 MV</td>
-</tr>
-<tr class="even">
-<td>Alkaline Battery Cell</td>
-<td>~1.5 V</td>
-</tr>
-<tr class="odd">
-<td>Nerve Action Potential</td>
-<td>~75 mV</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>Voltage is a <strong>relative</strong> quantity; absolute voltage does not exist!</p>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="what-is-power" class="title-slide slide level2 center">
-<h2>What is power?</h2>
-<p>Power represents the rate at which work can be done (i.e., energy / unit time).</p>
 <p><span class="math display">\[
-P = \frac{dw}{dt} = \frac{dW}{dq} \frac{dq}{dt} = VI
+P = \frac{dw}{dt} = \frac{dW}{dq} \frac{dq}{dt} = VI \left[W = \frac{J}{s}\right]
+\]</span></p>
+<ul>
+<li>Power is the capacity to do work per unit time, where:</li>
+</ul>
+<p><span class="math display">\[
+Work = Q \times V
+\]</span></p>
+<p>which is the transfer of energy associated with moving charge across a potential difference.</p>
+</section>
+<section class="slide level3">
+
+<ul>
+<li><p>Sources provide energy to a circuit (<span class="math inline">\(P &lt; 0\)</span>).</p></li>
+<li><p>Loads consume energy from a circuit (<span class="math inline">\(P &gt; 0\)</span>).</p></li>
+<li><p>Postive power is when postive current flows from <span class="math inline">\((+) -&gt; (-)\)</span> voltage drop across a circuit element:</p></li>
+</ul>
+
+<img data-src="images/power_source_load.svg" class="r-stretch"></section></section>
+<section>
+<section id="power-sourceload-example" class="title-slide slide level2 center">
+<h2>Power Source/Load Example</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img data-src="images/power_source_load_example.png"></p>
+</div><div class="column" style="width:35%;">
+<p>Given:</p>
+<p><span class="math display">\[
+\begin{gather}
+P_1 = -100 W \\
+P_2 = 50 W \\
+P_3 = 30 W \\
+v_1 = 10 V \\
+v_2 = 5 V \\
+i_3 = 6 A
+\end{gather}
+\]</span></p>
+</div></div>
+<p>We don’t know what these circuit components are, but given power/voltage/current associated with them, we can determine if they are sources or loads, and solve for the unknown quantities.</p>
+</section>
+<section id="circuit-element-1" class="slide level3">
+<h3>Circuit Element 1</h3>
+<p>Source or load?</p>
+</section>
+<section id="solve-for-i_1" class="slide level3">
+<h3>Solve for <span class="math inline">\(i_1\)</span></h3>
+<p><span class="math display">\[
+\begin{gather}
+P_1 = v_1 i_1 \\
+-100 W = 10 V (i_1) \\
+i_1 = -10 A
+\end{gather}
 \]</span></p>
 </section>
-<section id="what-do-the-units-look-like" class="slide level3">
-<h3>What do the units look like?</h3>
-<p><span class="math display">\[
-\left[\frac{J}{C} \frac{C}{s}\right] = \left[\frac{J}{s}\right] = [W] (Watt)
-\]</span></p>
-</section></section>
-<section>
-<section id="what-happens-to-power" class="title-slide slide level2 center">
-<h2>What happens to power?</h2>
-<p>Circuit elements my absorb (dissipate or store) [load] or provide [source] power.</p>
-</section>
-<section id="sign-conventions" class="slide level3">
-<h3>Sign Conventions</h3>
-<p><span class="math inline">\(P &lt; 0\)</span>: energy is provided to the circuit (source) <span class="math inline">\(P &gt; 0\)</span>: energy is dissipated / stored (load)</p>
-<p>Power <em>dissipated</em> by a circuit element (load) is (+) when (+) current (<span class="math inline">\(I\)</span>) flows from a (+) -&gt; (-) voltage (V).</p>
+<section id="what-does-this-mean" class="slide level3">
+<h3>What does this mean?</h3>
+<p>Element 1 is a <strong>source</strong>.</p>
+<p>Does this make sense?</p>
 
 
-
-<img data-src="images/power_source_load.svg" class="r-stretch"><script type="ojs-module-contents">
+<script type="ojs-module-contents">
 eyJjb250ZW50cyI6W119
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">

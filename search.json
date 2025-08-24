@@ -59,7 +59,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
   },
   {
     "objectID": "faq.html",
@@ -268,6 +268,71 @@
     "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power."
   },
   {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#learning-objectives",
+    "href": "slides/ohm-kcl-kvl-slides.html#learning-objectives",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nReinforce pwoer and energy flow in circuits\nDefine Ohm’s Law\nDefine Kirchoff’s Voltage and Current Laws\nResistive Loads\nVoltage and Current Measurement Devices"
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#review-from-last-lecture",
+    "href": "slides/ohm-kcl-kvl-slides.html#review-from-last-lecture",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Review from Last Lecture",
+    "text": "Review from Last Lecture\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI \\left[W = \\frac{J}{s}\\right]\n\\]\n\nPower is the capacity to do work per unit time, where:\n\n\\[\nWork = Q \\times V\n\\]\nwhich is the transfer of energy associated with moving charge across a potential difference."
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#power-sourceload-example",
+    "href": "slides/ohm-kcl-kvl-slides.html#power-sourceload-example",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Power Source/Load Example",
+    "text": "Power Source/Load Example\n\n\n\n\nGiven:\n\\[\n\\begin{gather}\nP_1 = -100 W \\\\\nP_2 = 50 W \\\\\nP_3 = 30 W \\\\\nv_1 = 10 V \\\\\nv_2 = 5 V \\\\\ni_3 = 6 A\n\\end{gather}\n\\]\n\nWe don’t know what these circuit components are, but given power/voltage/current associated with them, we can determine if they are sources or loads, and solve for the unknown quantities."
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html",
+    "href": "slides/ohm-kcl-kvl-notes.html",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "",
+    "text": "Reinforce pwoer and energy flow in circuits\nDefine Ohm’s Law\nDefine Kirchoff’s Voltage and Current Laws\nResistive Loads\nVoltage and Current Measurement Devices",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#learning-objectives",
+    "href": "slides/ohm-kcl-kvl-notes.html#learning-objectives",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "",
+    "text": "Reinforce pwoer and energy flow in circuits\nDefine Ohm’s Law\nDefine Kirchoff’s Voltage and Current Laws\nResistive Loads\nVoltage and Current Measurement Devices",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#review-from-last-lecture",
+    "href": "slides/ohm-kcl-kvl-notes.html#review-from-last-lecture",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Review from Last Lecture",
+    "text": "Review from Last Lecture\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI \\left[W = \\frac{J}{s}\\right]\n\\]\n\nPower is the capacity to do work per unit time, where:\n\n\\[\nWork = Q \\times V\n\\]\nwhich is the transfer of energy associated with moving charge across a potential difference.\n\n\nSources provide energy to a circuit (\\(P &lt; 0\\)).\nLoads consume energy from a circuit (\\(P &gt; 0\\)).\nPostive power is when postive current flows from \\((+) -&gt; (-)\\) voltage drop across a circuit element:",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#power-sourceload-example",
+    "href": "slides/ohm-kcl-kvl-notes.html#power-sourceload-example",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Power Source/Load Example",
+    "text": "Power Source/Load Example\n\n\n\n\nGiven:\n\\[\n\\begin{gather}\nP_1 = -100 W \\\\\nP_2 = 50 W \\\\\nP_3 = 30 W \\\\\nv_1 = 10 V \\\\\nv_2 = 5 V \\\\\ni_3 = 6 A\n\\end{gather}\n\\]\n\n\nWe don’t know what these circuit components are, but given power/voltage/current associated with them, we can determine if they are sources or loads, and solve for the unknown quantities.\n\nCircuit Element 1\nSource or load?\n\n\nSolve for \\(i_1\\)\n\\[\n\\begin{gather}\nP_1 = v_1 i_1 \\\\\n-100 W = 10 V (i_1) \\\\\ni_1 = -10 A\n\\end{gather}\n\\]\n\n\nWhat does this mean?\nElement 1 is a source.\nDoes this make sense?",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
     "objectID": "course-syllabus.html",
     "href": "course-syllabus.html",
     "title": "Biomedical Electronic Measurements",
@@ -349,7 +414,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
