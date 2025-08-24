@@ -91,6 +91,167 @@ $$
 
 ### What does this mean?
 
-Element 1 is a **source**.
+- Element 1 is a **source**!
 
-Does this make sense?
+- Does this make sense?
+
+### Circuit Element 2
+
+Source or load?
+
+### Solve for $i_2$
+
+$$
+\begin{gather}
+P_2 = v_w i_2 \\
+50 W = 5 V (i_2) \\
+i_2 = 10 A
+\end{gather}
+$$
+
+### What does this mean?
+
+Element 2 is a **load**!
+
+## Kirchoff's Current Law (KCL)
+
+- Conservation of energy means that for a given node, **all current flowing in and out of the node must be conserved**.
+
+$$
+\begin{gather}
+\Sigma i_{in} = \Sigma i_{out}
+\end{gather}
+$$
+
+- For Node A, what currents are "in" and "out"?
+
+- As drawn (arbitrary), both are "out", so:
+
+$$
+\begin{gather}
+\Sigma i_{in} = 0 \\
+\Sigma i_{out} = i_1 + i_2 = -10 A + 10 A = 0 ✅
+\end{gather}
+$$
+
+- In this circuit, $i_1 = -i_2$, which makes sense because they are the same magnitude, but flowing in different directions relative.
+
+## Kirchoff's Current Law (KCL)
+
+- Generalized form of current conservation at a node:
+
+$$
+\Sigma_{n=1}^N i_n = 0
+$$
+
+- You have to be very careful to correctly capture current direction ("in"/"out") and magnitude.
+
+### Circuit Element 3
+
+Source or load?
+
+$$
+v_3 = \frac{P_3}{i_3} = \frac{30 W}{6 A} = 5 V
+$$
+
+Positive current flow "down" a voltage drop, so load!
+
+### Circuit Element 4
+
+Source or load?  You tell me... do we know enough?
+
+### Yes, we do!
+
+- Conservation of energy!
+
+- $\Sigma_n P_n = 0$
+
+- $P_1 + P_2 + P_3 + P_4 = 0$
+
+- $P_4$ = 20 W (positive, so a load!)
+
+### What are $v_4$ and $i_4$?
+
+- Assume that wires in circuits are ideal conductors (i.e., no energy loss).
+
+- $v_B$ = $v_C$ (same node)
+
+- Apply KCL:
+
+$$
+\begin{gather}
+i_{in} = i_{out} \\
+i_2 + i_4 = i_3 \\
+i_4 = i_3 - i_2 = 6 A - 10 A = -4 A \\
+v_4 = \frac{P_4}{i_4} = \frac{20 W}{-4 A} = -5 V
+\end{gather}
+$$
+
+### Did we have to solve for $i_4$?
+
+- No!
+
+- $v_B = v_C$ (ideal conductor assumption; same **node**)
+
+- Circuit elements 3 & 4 share common node $D$.
+
+- As drawn on the circuit:
+
+$$
+\begin{gather}
+v_3 = v_B - v_D \\
+v_4 = v_D - v_C = v_D - v_B = -v_3 = -5 V
+\end{gather}
+$$
+
+- Then you can solve for $i_4 = \frac{P_4}{v_4} = \frac{20 W}{-5 V} = -4 A$.
+
+## Kirchoff's Voltage Law (KVL)
+
+- The last example demonstrated another fundamental circuit analysis law:
+
+$$
+\Sigma_{n=1}^{N} v_n = 0
+$$
+
+- For a closed loop of a circuit (continuous path of conduction), the sum of all voltage gains = sum of all voltage losses.
+
+$$
+\Sigma v_{source} = \Sigma v_{load}
+$$
+
+### Does our circuit obey KVL?
+
+- We have 3 (not 2) closed loops:
+
+    - $D \rightarrow A \rightarrow (B + C) \rightarrow D$
+
+    $$
+    \begin{gather}
+    \Sigma v = 0 = -v_1 + v_2 - v_4\\
+    0 = -10 V + 5 V - (-5 V) = 0 ✅ 
+    \end{gather}
+    $$
+
+    - $D \rightarrow A \rightarrow B \rightarrow D$
+    $$
+    \begin{gather}
+    \Sigma v = 0 = -v_1 + v_2 + v_3\\
+    0 = -10 V + 5 V + 5 V = 0 ✅ 
+    \end{gather}
+    $$
+
+    - $D \rightarrow B \rightarrow C \rightarrow D$
+
+    $$
+    \begin{gather}
+    \Sigma v = 0 = -v_3 - v_4 \\
+    0 = -5 V - (-5 V) = 0 ✅ 
+    \end{gather}
+    $$
+
+### What happens if we reverse the loops?
+
+- You tell me.
+
+- Prove it.
