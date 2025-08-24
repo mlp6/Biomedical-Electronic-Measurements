@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}
+
+\draw (0,0) to[twoport, t=$A$] (0,3);
+
+\draw (3,3) to[twoport, t=$B$, v=$3 V$] (0,3);
+
+\draw (3,3) to[twoport, t=$D$, f=$3 A$] (3,0);
+
+\draw (3,0) to[twoport, t=$C$, v=$5 V$] (0,0);
+
+\draw (3,3) -- (6,3) to[twoport, t=$E$, f=$2 A$, v=$10 V$] (6,0);
+
+\draw (6,0) -- (3,0);
+
+\end{circuitikz}
+\end{document}
