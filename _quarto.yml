@@ -38,6 +38,8 @@ website:
         contents:
         - href: slides/intro-circuits.qmd
           text: "Introduction to Circuits"
+        - href: slides/ohm-kcl-kvl.qmd
+          text: "Ohm's Law, KCL, and KVL"
       - section: Labs
         contents:
         - href: labs/introduction.qmd

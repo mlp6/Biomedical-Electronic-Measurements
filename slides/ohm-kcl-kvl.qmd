@@ -1,0 +1,96 @@
+---
+title: "Ohm's and Kirchoff's Laws"
+date: "2025-08-25"
+format:
+  live-html: 
+    output-file: ohm-kcl-kvl-notes.html
+  live-revealjs: 
+    output-file: ohm-kcl-kvl-slides.html
+---
+
+## Learning Objectives
+
+- Reinforce pwoer and energy flow in circuits
+
+- Define Ohm's Law
+
+- Define Kirchoff's Voltage and Current Laws
+
+- Resistive Loads
+
+- Voltage and Current Measurement Devices
+
+## Review from Last Lecture
+
+$$
+i = \frac{dq}{dt} \left[\frac{C}{s}\right] = [A] (Ampere)
+$$
+
+$$
+V = \frac{dW}{dq} \left[\frac{J}{C}\right] = [V] (Volt)
+$$
+
+$$
+P = \frac{dw}{dt} = \frac{dW}{dq} \frac{dq}{dt} = VI \left[W = \frac{J}{s}\right]
+$$
+
+- Power is the capacity to do work per unit time, where:
+
+$$
+Work = Q \times V
+$$
+
+which is the transfer of energy associated with moving charge across a potential difference.
+
+---
+
+- Sources provide energy to a circuit ($P < 0$).
+
+- Loads consume energy from a circuit ($P > 0$).
+
+- Postive power is when postive current flows from $(+) -> (-)$ voltage drop across a circuit element:
+
+![](images/power_source_load.svg)
+
+## Power Source/Load Example
+
+::::{.columns}
+::: {.column width="65%"} 
+![](images/power_source_load_example.png)
+:::
+::: {.column width="35%"} 
+Given:
+
+$$
+\begin{gather}
+P_1 = -100 W \\
+P_2 = 50 W \\
+P_3 = 30 W \\
+v_1 = 10 V \\
+v_2 = 5 V \\
+i_3 = 6 A
+\end{gather}
+$$
+:::
+:::
+
+We don't know what these circuit components are, but given power/voltage/current associated with them, we can determine if they are sources or loads, and solve for the unknown quantities.
+
+### Circuit Element 1
+
+Source or load?
+
+### Solve for $i_1$
+$$
+\begin{gather}
+P_1 = v_1 i_1 \\
+-100 W = 10 V (i_1) \\
+i_1 = -10 A
+\end{gather}
+$$
+
+### What does this mean?
+
+Element 1 is a **source**.
+
+Does this make sense?
