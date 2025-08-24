@@ -1,3 +1,7 @@
 /.quarto/
 _site/
 *.bkp
+*.aux
+*.dvi
+*.log
+*.synctex.gz
