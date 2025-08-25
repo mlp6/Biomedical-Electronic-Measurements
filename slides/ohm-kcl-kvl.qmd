@@ -345,3 +345,23 @@ $$
 ### Ceramic Resistor Labeling
 
 ![](images/resistor_labels.png)
+
+## Switches
+
+Switches are mechanical devices that interrupt or divert current flow in a circuit.
+
+![](images/switches.png)
+
+- Open interrupter switches create an **open circuit**:
+
+    - $R \rightarrow \infty$
+
+    - $i = 0$ (regardless of $v$, to a point)
+
+- Closed interrupter switches create a **short circuit**:
+
+    - $R = 0$
+
+    - $v = 0$ (regardless of $i$)
+
+- $P_{open} = 0 = P_{short}$ (why?)
