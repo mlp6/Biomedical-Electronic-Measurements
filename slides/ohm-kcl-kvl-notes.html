@@ -354,6 +354,11 @@ window.Quarto = {
   <li><a href="#does-our-circuit-obey-kvl" id="toc-does-our-circuit-obey-kvl" class="nav-link" data-scroll-target="#does-our-circuit-obey-kvl">Does our circuit obey KVL?</a></li>
   <li><a href="#what-happens-if-we-reverse-the-loops" id="toc-what-happens-if-we-reverse-the-loops" class="nav-link" data-scroll-target="#what-happens-if-we-reverse-the-loops">What happens if we reverse the loops?</a></li>
   </ul></li>
+  <li><a href="#summary-of-connection-constraints" id="toc-summary-of-connection-constraints" class="nav-link" data-scroll-target="#summary-of-connection-constraints">Summary of Connection Constraints</a></li>
+  <li><a href="#parallel-devices" id="toc-parallel-devices" class="nav-link" data-scroll-target="#parallel-devices">Parallel Devices</a>
+  <ul class="collapse">
+  <li><a href="#serial-devices" id="toc-serial-devices" class="nav-link" data-scroll-target="#serial-devices">Serial Devices</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ohm-kcl-kvl-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -636,6 +641,46 @@ v_4 = v_D - v_C = v_D - v_B = -v_3 = -5 V
 <li><p>You tell me.</p></li>
 <li><p>Prove it.</p></li>
 </ul>
+</section>
+</section>
+<section id="summary-of-connection-constraints" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-connection-constraints">Summary of Connection Constraints</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Balance of Power: <span class="math inline">\(\Sigma_n P_n = 0\)</span></p></li>
+<li><p>Conservation of Current at a Node (KCL): <span class="math inline">\(\Sigma_n i_n = 0\)</span></p></li>
+<li><p>Conservation of Voltage around a Closed Loop (KVL): <span class="math inline">\(\Sigma_n v_n = 0\)</span></p></li>
+</ul>
+</div>
+</div>
+<p>What do these laws tell us…</p>
+</section>
+<section id="parallel-devices" class="level2">
+<h2 class="anchored" data-anchor-id="parallel-devices">Parallel Devices</h2>
+<p>Devices in <strong>parallel</strong> have the same voltage difference across them:</p>
+<p><img src="images/parallel_devices.png" class="img-fluid quarto-figure quarto-figure-center"> <span class="math display">\[
+v_1 = v_2
+\]</span></p>
+<section id="serial-devices" class="level3">
+<h3 class="anchored" data-anchor-id="serial-devices">Serial Devices</h3>
+<p>Devices in <strong>series</strong> have the same current flowing through them.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/series_devices.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+i_1 = i_2
+\]</span></p>
 
 
 <script type="ojs-module-contents">

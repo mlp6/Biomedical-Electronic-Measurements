@@ -310,6 +310,20 @@
     "text": "Kirchoff’s Voltage Law (KVL)\n\nThe last example demonstrated another fundamental circuit analysis law:\n\n\\[\n\\Sigma_{n=1}^{N} v_n = 0\n\\]\n\nFor a closed loop of a circuit (continuous path of conduction), the sum of all voltage gains = sum of all voltage losses.\n\n\\[\n\\Sigma v_{source} = \\Sigma v_{load}\n\\]"
   },
   {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#summary-of-connection-constraints",
+    "href": "slides/ohm-kcl-kvl-slides.html#summary-of-connection-constraints",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Summary of Connection Constraints",
+    "text": "Summary of Connection Constraints\n\n\n\n\n\n\nImportant\n\n\n\nBalance of Power: \\(\\Sigma_n P_n = 0\\)\nConservation of Current at a Node (KCL): \\(\\Sigma_n i_n = 0\\)\nConservation of Voltage around a Closed Loop (KVL): \\(\\Sigma_n v_n = 0\\)\n\n\n\n\nWhat do these laws tell us…"
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#parallel-devices",
+    "href": "slides/ohm-kcl-kvl-slides.html#parallel-devices",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Parallel Devices",
+    "text": "Parallel Devices\nDevices in parallel have the same voltage difference across them:\n \\[\nv_1 = v_2\n\\]"
+  },
+  {
     "objectID": "slides/ohm-kcl-kvl-notes.html",
     "href": "slides/ohm-kcl-kvl-notes.html",
     "title": "Ohm’s and Kirchoff’s Laws",
@@ -381,6 +395,28 @@
     "title": "Ohm’s and Kirchoff’s Laws",
     "section": "Kirchoff’s Voltage Law (KVL)",
     "text": "Kirchoff’s Voltage Law (KVL)\n\nThe last example demonstrated another fundamental circuit analysis law:\n\n\\[\n\\Sigma_{n=1}^{N} v_n = 0\n\\]\n\nFor a closed loop of a circuit (continuous path of conduction), the sum of all voltage gains = sum of all voltage losses.\n\n\\[\n\\Sigma v_{source} = \\Sigma v_{load}\n\\]\n\nDoes our circuit obey KVL?\n\nWe have 3 (not 2) closed loops:\n\n\\(D \\rightarrow A \\rightarrow (B + C) \\rightarrow D\\)\n\n\\[\n  \\begin{gather}\n  \\Sigma v = 0 = -v_1 + v_2 - v_4\\\\\n  0 = -10 V + 5 V - (-5 V) = 0 ✅\n  \\end{gather}\n  \\]\n\n\\(D \\rightarrow A \\rightarrow B \\rightarrow D\\) \\[\n  \\begin{gather}\n  \\Sigma v = 0 = -v_1 + v_2 + v_3\\\\\n  0 = -10 V + 5 V + 5 V = 0 ✅\n  \\end{gather}\n  \\]\n\\(D \\rightarrow B \\rightarrow C \\rightarrow D\\)\n\n\\[\n  \\begin{gather}\n  \\Sigma v = 0 = -v_3 - v_4 \\\\\n  0 = -5 V - (-5 V) = 0 ✅\n  \\end{gather}\n  \\]\n\n\n\nWhat happens if we reverse the loops?\n\nYou tell me.\nProve it.",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#summary-of-connection-constraints",
+    "href": "slides/ohm-kcl-kvl-notes.html#summary-of-connection-constraints",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Summary of Connection Constraints",
+    "text": "Summary of Connection Constraints\n\n\n\n\n\n\nImportant\n\n\n\n\nBalance of Power: \\(\\Sigma_n P_n = 0\\)\nConservation of Current at a Node (KCL): \\(\\Sigma_n i_n = 0\\)\nConservation of Voltage around a Closed Loop (KVL): \\(\\Sigma_n v_n = 0\\)\n\n\n\nWhat do these laws tell us…",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#parallel-devices",
+    "href": "slides/ohm-kcl-kvl-notes.html#parallel-devices",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Parallel Devices",
+    "text": "Parallel Devices\nDevices in parallel have the same voltage difference across them:\n \\[\nv_1 = v_2\n\\]\n\nSerial Devices\nDevices in series have the same current flowing through them.\n\n\n\n\n\n\\[\ni_1 = i_2\n\\]",
     "crumbs": [
       "Learning Modules",
       "Ohm's Law, KCL, and KVL"
