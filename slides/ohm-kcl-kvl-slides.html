@@ -420,7 +420,8 @@ v_4 = v_D - v_C = v_D - v_B = -v_3 = -5 V
 <section id="parallel-devices" class="title-slide slide level2 center">
 <h2>Parallel Devices</h2>
 <p>Devices in <strong>parallel</strong> have the same voltage difference across them:</p>
-<p><img data-src="images/parallel_devices.png" class="quarto-figure quarto-figure-center"> <span class="math display">\[
+
+<img data-src="images/parallel_devices.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
 v_1 = v_2
 \]</span></p>
 </section>
@@ -431,6 +432,55 @@ v_1 = v_2
 <img data-src="images/series_devices.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
 i_1 = i_2
 \]</span></p>
+</section></section>
+<section>
+<section id="resistive-loads" class="title-slide slide level2 center">
+<h2>Resistive Loads</h2>
+<ul>
+<li>Resistors are <strong>dissipative</strong> loads (typically as heat).</li>
+</ul>
+
+<img data-src="images/resistance_fig_2_18.png" class="r-stretch"><ul>
+<li><p>Conductive wire before/after the resistor element is considered “ideal” (non-dissipative).</p></li>
+<li><p><span class="math inline">\(\rho_{carbon} = 3.5 \times 10^{-5} \Omega \cdot m\)</span></p></li>
+</ul>
+</section>
+<section id="ohms-law" class="slide level3">
+<h3>Ohm’s Law</h3>
+<p><span class="math display">\[
+\begin{gather}
+R = \frac{V}{I}\\
+V = IR
+\end{gather}
+\]</span></p>
+<ul>
+<li><p>Applicable over the linear range of “<span class="math inline">\(I-V\)</span>” behavior (i.e., resistance, <span class="math inline">\(R\)</span> doesn’t change as a a function of voltage or current).</p></li>
+<li><p><span class="math inline">\([\Omega]\)</span> Ohm <span class="math inline">\(\rightarrow 1 \Omega = 1 \frac{V}{A}\)</span></p></li>
+<li><p>Resistors always dissipate power (<span class="math inline">\(P &gt; 0\)</span>):</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+P_R = i_R v_R = i_R (i_R R) = i_R^2 R \geq 0\\
+P_R = i_R v_R = \left(\frac{v_R}{R}\right)v_R = \frac{v_R^2}{R} \geq 0
+\end{gather}
+\]</span></p>
+</section>
+<section id="conductance" class="slide level3">
+<h3>Conductance</h3>
+<ul>
+<li><p>Conductance (<span class="math inline">\(G\)</span>) is the reciprocal of resistance.</p></li>
+<li><p>Unit: Siemen [<span class="math inline">\(S\)</span>]</p></li>
+<li><p><span class="math inline">\(1 S = 1 \frac{A}{V}\)</span></p></li>
+<li><p><span class="math inline">\(i = G v\)</span></p></li>
+</ul>
+</section>
+<section id="resistive-power" class="slide level3">
+<h3>Resistive Power</h3>
+<ul>
+<li><p><span class="math inline">\(P_R = i^2R = \frac{v^2}{R}\)</span></p></li>
+<li><p><strong>Quadratic</strong> dependence on <span class="math inline">\(i\)</span> and <span class="math inline">\(v\)</span>.</p></li>
+<li><p>Resistors have a maximum power rating that they can tolerate before they are damaged.</p></li>
+</ul>
 
 
 <script type="ojs-module-contents">
