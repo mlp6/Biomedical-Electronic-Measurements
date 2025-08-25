@@ -367,6 +367,7 @@ window.Quarto = {
   <li><a href="#resistive-power" id="toc-resistive-power" class="nav-link" data-scroll-target="#resistive-power">Resistive Power</a></li>
   <li><a href="#ceramic-resistor-labeling" id="toc-ceramic-resistor-labeling" class="nav-link" data-scroll-target="#ceramic-resistor-labeling">Ceramic Resistor Labeling</a></li>
   </ul></li>
+  <li><a href="#switches" id="toc-switches" class="nav-link" data-scroll-target="#switches">Switches</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ohm-kcl-kvl-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -750,6 +751,25 @@ P_R = i_R v_R = \left(\frac{v_R}{R}\right)v_R = \frac{v_R^2}{R} \geq 0
 <section id="ceramic-resistor-labeling" class="level3">
 <h3 class="anchored" data-anchor-id="ceramic-resistor-labeling">Ceramic Resistor Labeling</h3>
 <p><img src="images/resistor_labels.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="switches" class="level2">
+<h2 class="anchored" data-anchor-id="switches">Switches</h2>
+<p>Switches are mechanical devices that interrupt or divert current flow in a circuit.</p>
+<p><img src="images/switches.png" class="img-fluid"></p>
+<ul>
+<li><p>Open interrupter switches create an <strong>open circuit</strong>:</p>
+<ul>
+<li><p><span class="math inline">\(R \rightarrow \infty\)</span></p></li>
+<li><p><span class="math inline">\(i = 0\)</span> (regardless of <span class="math inline">\(v\)</span>, to a point)</p></li>
+</ul></li>
+<li><p>Closed interrupter switches create a <strong>short circuit</strong>:</p>
+<ul>
+<li><p><span class="math inline">\(R = 0\)</span></p></li>
+<li><p><span class="math inline">\(v = 0\)</span> (regardless of <span class="math inline">\(i\)</span>)</p></li>
+</ul></li>
+<li><p><span class="math inline">\(P_{open} = 0 = P_{short}\)</span> (why?)</p></li>
+</ul>
 
 
 <script type="ojs-module-contents">
@@ -766,7 +786,6 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
 </section>
 
 </main> <!-- /main -->

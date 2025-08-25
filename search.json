@@ -331,6 +331,13 @@
     "text": "Resistive Loads\n\nResistors are dissipative loads (typically as heat).\n\n\n\nConductive wire before/after the resistor element is considered “ideal” (non-dissipative).\n\\(\\rho_{carbon} = 3.5 \\times 10^{-5} \\Omega \\cdot m\\)"
   },
   {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#switches",
+    "href": "slides/ohm-kcl-kvl-slides.html#switches",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Switches",
+    "text": "Switches\nSwitches are mechanical devices that interrupt or divert current flow in a circuit.\n\n\nOpen interrupter switches create an open circuit:\n\n\\(R \\rightarrow \\infty\\)\n\\(i = 0\\) (regardless of \\(v\\), to a point)\n\nClosed interrupter switches create a short circuit:\n\n\\(R = 0\\)\n\\(v = 0\\) (regardless of \\(i\\))\n\n\\(P_{open} = 0 = P_{short}\\) (why?)"
+  },
+  {
     "objectID": "slides/ohm-kcl-kvl-notes.html",
     "href": "slides/ohm-kcl-kvl-notes.html",
     "title": "Ohm’s and Kirchoff’s Laws",
@@ -435,6 +442,17 @@
     "title": "Ohm’s and Kirchoff’s Laws",
     "section": "Resistive Loads",
     "text": "Resistive Loads\n\nResistors are dissipative loads (typically as heat).\n\n\n\nConductive wire before/after the resistor element is considered “ideal” (non-dissipative).\n\\(\\rho_{carbon} = 3.5 \\times 10^{-5} \\Omega \\cdot m\\)\n\n\nOhm’s Law\n\\[\n\\begin{gather}\nR = \\frac{V}{I}\\\\\nV = IR\n\\end{gather}\n\\]\n\nApplicable over the linear range of “\\(I-V\\)” behavior (i.e., resistance, \\(R\\) doesn’t change as a a function of voltage or current).\n\\([\\Omega]\\) Ohm \\(\\rightarrow 1 \\Omega = 1 \\frac{V}{A}\\)\nResistors always dissipate power (\\(P &gt; 0\\)):\n\n\\[\n\\begin{gather}\nP_R = i_R v_R = i_R (i_R R) = i_R^2 R \\geq 0\\\\\nP_R = i_R v_R = \\left(\\frac{v_R}{R}\\right)v_R = \\frac{v_R^2}{R} \\geq 0\n\\end{gather}\n\\]\n\n\nConductance\n\nConductance (\\(G\\)) is the reciprocal of resistance.\nUnit: Siemen [\\(S\\)]\n\\(1 S = 1 \\frac{A}{V}\\)\n\\(i = G v\\)\n\n\n\nConductivity of Materials\n\n\n\nResistive Power\n\n\\(P_R = i^2R = \\frac{v^2}{R}\\)\nQuadratic dependence on \\(i\\) and \\(v\\).\nResistors have a maximum power rating that they can tolerate before they are damaged.m\n\n\n\nCeramic Resistor Labeling",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#switches",
+    "href": "slides/ohm-kcl-kvl-notes.html#switches",
+    "title": "Ohm’s and Kirchoff’s Laws",
+    "section": "Switches",
+    "text": "Switches\nSwitches are mechanical devices that interrupt or divert current flow in a circuit.\n\n\nOpen interrupter switches create an open circuit:\n\n\\(R \\rightarrow \\infty\\)\n\\(i = 0\\) (regardless of \\(v\\), to a point)\n\nClosed interrupter switches create a short circuit:\n\n\\(R = 0\\)\n\\(v = 0\\) (regardless of \\(i\\))\n\n\\(P_{open} = 0 = P_{short}\\) (why?)",
     "crumbs": [
       "Learning Modules",
       "Ohm's Law, KCL, and KVL"
