@@ -255,3 +255,34 @@ $$
 - You tell me.
 
 - Prove it.
+
+## Summary of Connection Constraints
+
+::: callout-important
+- Balance of Power: $\Sigma_n P_n = 0$
+
+- Conservation of Current at a Node (KCL): $\Sigma_n i_n = 0$
+
+- Conservation of Voltage around a Closed Loop (KVL): $\Sigma_n v_n = 0$
+:::
+
+What do these laws tell us...
+
+## Parallel Devices
+
+Devices in **parallel** have the same voltage difference across them:
+
+![](images/parallel_devices.png){fig-align="center"}
+$$
+v_1 = v_2
+$$
+
+### Serial Devices
+
+Devices in **series** have the same current flowing through them.
+
+![](images/series_devices.png){fig-align="center"}
+
+$$
+i_1 = i_2
+$$
