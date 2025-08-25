@@ -330,10 +330,18 @@ $$
 
 - $i = G v$
 
+### Conductivity of Materials
+
+![](images/conductivity_materials.png)
+
 ### Resistive Power
 
 - $P_R = i^2R = \frac{v^2}{R}$
 
 - **Quadratic** dependence on $i$ and $v$.
 
-- Resistors have a maximum power rating that they can tolerate before they are damaged.
+- Resistors have a maximum power rating that they can tolerate before they are damaged.m
+
+### Ceramic Resistor Labeling
+
+![](images/resistor_labels.png)
