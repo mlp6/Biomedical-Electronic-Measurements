@@ -273,6 +273,7 @@ What do these laws tell us...
 Devices in **parallel** have the same voltage difference across them:
 
 ![](images/parallel_devices.png){fig-align="center"}
+
 $$
 v_1 = v_2
 $$
@@ -286,3 +287,53 @@ Devices in **series** have the same current flowing through them.
 $$
 i_1 = i_2
 $$
+
+## Resistive Loads
+
+- Resistors are **dissipative** loads (typically as heat).
+
+![](images/resistance_fig_2_18.png)
+
+- Conductive wire before/after the resistor element is considered "ideal" (non-dissipative).
+
+- $\rho_{carbon} = 3.5 \times 10^{-5} \Omega \cdot m$
+
+### Ohm's Law
+
+$$
+\begin{gather}
+R = \frac{V}{I}\\
+V = IR
+\end{gather}
+$$
+
+- Applicable over the linear range of "$I-V$" behavior (i.e., resistance, $R$ doesn't change as a a function of voltage or current).
+
+- $[\Omega]$ Ohm $\rightarrow 1 \Omega = 1 \frac{V}{A}$
+
+- Resistors always dissipate power ($P > 0$):
+
+$$
+\begin{gather}
+P_R = i_R v_R = i_R (i_R R) = i_R^2 R \geq 0\\
+P_R = i_R v_R = \left(\frac{v_R}{R}\right)v_R = \frac{v_R^2}{R} \geq 0
+\end{gather}
+$$
+
+### Conductance
+
+- Conductance ($G$) is the reciprocal of resistance.
+
+- Unit: Siemen [$S$]
+
+- $1 S = 1 \frac{A}{V}$
+
+- $i = G v$
+
+### Resistive Power
+
+- $P_R = i^2R = \frac{v^2}{R}$
+
+- **Quadratic** dependence on $i$ and $v$.
+
+- Resistors have a maximum power rating that they can tolerate before they are damaged.
