@@ -59,7 +59,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Ohm’s & Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL, Resistive Loads, Meters\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nVoltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
   },
   {
     "objectID": "faq.html",
@@ -270,77 +270,105 @@
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#learning-objectives",
     "href": "slides/ohm-kcl-kvl-slides.html#learning-objectives",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Learning Objectives",
     "text": "Learning Objectives\n\nReinforce pwoer and energy flow in circuits\nDefine Ohm’s Law\nDefine Kirchoff’s Voltage and Current Laws\nResistive Loads\nVoltage and Current Measurement Devices"
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#review-from-last-lecture",
     "href": "slides/ohm-kcl-kvl-slides.html#review-from-last-lecture",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Review from Last Lecture",
     "text": "Review from Last Lecture\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI \\left[W = \\frac{J}{s}\\right]\n\\]\n\nPower is the capacity to do work per unit time, where:\n\n\\[\nWork = Q \\times V\n\\]\nwhich is the transfer of energy associated with moving charge across a potential difference."
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#power-sourceload-example",
     "href": "slides/ohm-kcl-kvl-slides.html#power-sourceload-example",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Power Source/Load Example",
     "text": "Power Source/Load Example\n\n\n\n\nGiven:\n\\[\n\\begin{gather}\nP_1 = -100 W \\\\\nP_2 = 50 W \\\\\nP_3 = 30 W \\\\\nv_1 = 10 V \\\\\nv_2 = 5 V \\\\\ni_3 = 6 A\n\\end{gather}\n\\]\n\nWe don’t know what these circuit components are, but given power/voltage/current associated with them, we can determine if they are sources or loads, and solve for the unknown quantities."
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#kirchoffs-current-law-kcl",
     "href": "slides/ohm-kcl-kvl-slides.html#kirchoffs-current-law-kcl",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Kirchoff’s Current Law (KCL)",
     "text": "Kirchoff’s Current Law (KCL)\n\nConservation of energy means that for a given node, all current flowing in and out of the node must be conserved.\n\n\\[\n\\begin{gather}\n\\Sigma i_{in} = \\Sigma i_{out}\n\\end{gather}\n\\]\n\nFor Node A, what currents are “in” and “out”?\nAs drawn (arbitrary), both are “out”, so:\n\n\\[\n\\begin{gather}\n\\Sigma i_{in} = 0 \\\\\n\\Sigma i_{out} = i_1 + i_2 = -10 A + 10 A = 0 ✅\n\\end{gather}\n\\]\n\nIn this circuit, \\(i_1 = -i_2\\), which makes sense because they are the same magnitude, but flowing in different directions relative."
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#kirchoffs-current-law-kcl-1",
     "href": "slides/ohm-kcl-kvl-slides.html#kirchoffs-current-law-kcl-1",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Kirchoff’s Current Law (KCL)",
     "text": "Kirchoff’s Current Law (KCL)\n\nGeneralized form of current conservation at a node:\n\n\\[\n\\Sigma_{n=1}^N i_n = 0\n\\]\n\nYou have to be very careful to correctly capture current direction (“in”/“out”) and magnitude."
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#kirchoffs-voltage-law-kvl",
     "href": "slides/ohm-kcl-kvl-slides.html#kirchoffs-voltage-law-kvl",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Kirchoff’s Voltage Law (KVL)",
     "text": "Kirchoff’s Voltage Law (KVL)\n\nThe last example demonstrated another fundamental circuit analysis law:\n\n\\[\n\\Sigma_{n=1}^{N} v_n = 0\n\\]\n\nFor a closed loop of a circuit (continuous path of conduction), the sum of all voltage gains = sum of all voltage losses.\n\n\\[\n\\Sigma v_{source} = \\Sigma v_{load}\n\\]"
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#summary-of-connection-constraints",
     "href": "slides/ohm-kcl-kvl-slides.html#summary-of-connection-constraints",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Summary of Connection Constraints",
     "text": "Summary of Connection Constraints\n\n\n\n\n\n\nImportant\n\n\n\nBalance of Power: \\(\\Sigma_n P_n = 0\\)\nConservation of Current at a Node (KCL): \\(\\Sigma_n i_n = 0\\)\nConservation of Voltage around a Closed Loop (KVL): \\(\\Sigma_n v_n = 0\\)\n\n\n\n\nWhat do these laws tell us…"
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#parallel-devices",
     "href": "slides/ohm-kcl-kvl-slides.html#parallel-devices",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Parallel Devices",
     "text": "Parallel Devices\nDevices in parallel have the same voltage difference across them:\n\n\\[\nv_1 = v_2\n\\]"
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#resistive-loads",
     "href": "slides/ohm-kcl-kvl-slides.html#resistive-loads",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Resistive Loads",
     "text": "Resistive Loads\n\nResistors are dissipative loads (typically as heat).\n\n\n\nConductive wire before/after the resistor element is considered “ideal” (non-dissipative).\n\\(\\rho_{carbon} = 3.5 \\times 10^{-5} \\Omega \\cdot m\\)"
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#switches",
     "href": "slides/ohm-kcl-kvl-slides.html#switches",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Switches",
     "text": "Switches\nSwitches are mechanical devices that interrupt or divert current flow in a circuit.\n\n\nOpen interrupter switches create an open circuit:\n\n\\(R \\rightarrow \\infty\\)\n\\(i = 0\\) (regardless of \\(v\\), to a point)\n\nClosed interrupter switches create a short circuit:\n\n\\(R = 0\\)\n\\(v = 0\\) (regardless of \\(i\\))\n\n\\(P_{open} = 0 = P_{short}\\) (why?)"
   },
   {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#ideal-sources",
+    "href": "slides/ohm-kcl-kvl-slides.html#ideal-sources",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
+    "section": "Ideal Sources",
+    "text": "Ideal Sources\n\n\nFor an ideal voltage source, the source current is a function of the attached circuit resistance.\nFor an ideal current course, the source voltage is a function of the attached circuit resistance."
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#real-source",
+    "href": "slides/ohm-kcl-kvl-slides.html#real-source",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
+    "section": "“Real” Source",
+    "text": "“Real” Source\n\n\nReal sources have internal resistance.\nIdeally:\n\nInternal resistance of a voltage source \\(\\rightarrow 0\\).\nInternal resistance of a current source \\(\\rightarrow \\infty\\).\n\nWhy?\n\n\n\n\n\n\n\nTip\n\n\nThink KCL and KVL…"
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#measuring-voltage-current-resistance",
+    "href": "slides/ohm-kcl-kvl-slides.html#measuring-voltage-current-resistance",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
+    "section": "Measuring Voltage, Current & Resistance",
+    "text": "Measuring Voltage, Current & Resistance"
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-slides.html#summary-of-circuit-analysis",
+    "href": "slides/ohm-kcl-kvl-slides.html#summary-of-circuit-analysis",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
+    "section": "Summary of Circuit Analysis",
+    "text": "Summary of Circuit Analysis\n\nCircuits are a connection collection of circuit elements that deliver, dissipate and store energy.\nOhm’s Law, KCL & KVL can be used to solve for the \\(v\\) and \\(i\\) quantities for circuit components.\nDefine directions (arbitrary) for current flow for all circuit components.\n\n\n\n\n\n\n\nTip\n\n\nYou do not have to try to “figure out” if a circuit component is a source or load; just assign the current direction and stick with it. The sign of the current will tell you what you need for its given direction."
+  },
+  {
     "objectID": "slides/ohm-kcl-kvl-notes.html",
     "href": "slides/ohm-kcl-kvl-notes.html",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "",
     "text": "Reinforce pwoer and energy flow in circuits\nDefine Ohm’s Law\nDefine Kirchoff’s Voltage and Current Laws\nResistive Loads\nVoltage and Current Measurement Devices",
     "crumbs": [
@@ -351,7 +379,7 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#learning-objectives",
     "href": "slides/ohm-kcl-kvl-notes.html#learning-objectives",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "",
     "text": "Reinforce pwoer and energy flow in circuits\nDefine Ohm’s Law\nDefine Kirchoff’s Voltage and Current Laws\nResistive Loads\nVoltage and Current Measurement Devices",
     "crumbs": [
@@ -362,7 +390,7 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#review-from-last-lecture",
     "href": "slides/ohm-kcl-kvl-notes.html#review-from-last-lecture",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Review from Last Lecture",
     "text": "Review from Last Lecture\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI \\left[W = \\frac{J}{s}\\right]\n\\]\n\nPower is the capacity to do work per unit time, where:\n\n\\[\nWork = Q \\times V\n\\]\nwhich is the transfer of energy associated with moving charge across a potential difference.\n\n\nSources provide energy to a circuit (\\(P &lt; 0\\)).\nLoads consume energy from a circuit (\\(P &gt; 0\\)).\nPostive power is when postive current flows from \\((+) -&gt; (-)\\) voltage drop across a circuit element:",
     "crumbs": [
@@ -373,9 +401,9 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#power-sourceload-example",
     "href": "slides/ohm-kcl-kvl-notes.html#power-sourceload-example",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Power Source/Load Example",
-    "text": "Power Source/Load Example\n\n\n\n\nGiven:\n\\[\n\\begin{gather}\nP_1 = -100 W \\\\\nP_2 = 50 W \\\\\nP_3 = 30 W \\\\\nv_1 = 10 V \\\\\nv_2 = 5 V \\\\\ni_3 = 6 A\n\\end{gather}\n\\]\n\n\nWe don’t know what these circuit components are, but given power/voltage/current associated with them, we can determine if they are sources or loads, and solve for the unknown quantities.\n\nCircuit Element 1\nSource or load?\n\n\nSolve for \\(i_1\\)\n\\[\n\\begin{gather}\nP_1 = v_1 i_1 \\\\\n-100 W = 10 V (i_1) \\\\\ni_1 = -10 A\n\\end{gather}\n\\]\n\n\nWhat does this mean?\n\nElement 1 is a source!\nDoes this make sense?\n\n\n\nCircuit Element 2\nSource or load?\n\n\nSolve for \\(i_2\\)\n\\[\n\\begin{gather}\nP_2 = v_w i_2 \\\\\n50 W = 5 V (i_2) \\\\\ni_2 = 10 A\n\\end{gather}\n\\]\n\n\nWhat does this mean?\nElement 2 is a load!",
+    "text": "Power Source/Load Example\n\n\n\n\nGiven:\n\\[\n\\begin{gather}\nP_1 = -100 W \\\\\nP_2 = 50 W \\\\\nP_3 = 30 W \\\\\nv_1 = 10 V \\\\\nv_2 = 5 V \\\\\ni_3 = 6 A\n\\end{gather}\n\\]\n\n\nWe don’t know what these circuit components are, but given power/voltage/current associated with them, we can determine if they are sources or loads, and solve for the unknown quantities.\n\nCircuit Element 1\n\n\n\nSource or load?\nSolve for \\(i_1\\): \\[\n\\begin{gather}\nP_1 = v_1 i_1 \\\\\n-100 W = 10 V (i_1) \\\\\ni_1 = -10 A\n\\end{gather}\n\\]\nElement 1 is a source!\n\n\n\n\n\n\n\nCircuit Element 2\n\n\n\nSource or load?\nSolve for \\(i_2\\): \\[\n\\begin{gather}\nP_2 = v_w i_2 \\\\\n50 W = 5 V (i_2) \\\\\ni_2 = 10 A\n\\end{gather}\n\\]\nElement 2 is a load!",
     "crumbs": [
       "Learning Modules",
       "Ohm's Law, KCL, and KVL"
@@ -384,7 +412,7 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#kirchoffs-current-law-kcl",
     "href": "slides/ohm-kcl-kvl-notes.html#kirchoffs-current-law-kcl",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Kirchoff’s Current Law (KCL)",
     "text": "Kirchoff’s Current Law (KCL)\n\nConservation of energy means that for a given node, all current flowing in and out of the node must be conserved.\n\n\\[\n\\begin{gather}\n\\Sigma i_{in} = \\Sigma i_{out}\n\\end{gather}\n\\]\n\nFor Node A, what currents are “in” and “out”?\nAs drawn (arbitrary), both are “out”, so:\n\n\\[\n\\begin{gather}\n\\Sigma i_{in} = 0 \\\\\n\\Sigma i_{out} = i_1 + i_2 = -10 A + 10 A = 0 ✅\n\\end{gather}\n\\]\n\nIn this circuit, \\(i_1 = -i_2\\), which makes sense because they are the same magnitude, but flowing in different directions relative.",
     "crumbs": [
@@ -395,7 +423,7 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#kirchoffs-current-law-kcl-1",
     "href": "slides/ohm-kcl-kvl-notes.html#kirchoffs-current-law-kcl-1",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Kirchoff’s Current Law (KCL)",
     "text": "Kirchoff’s Current Law (KCL)\n\nGeneralized form of current conservation at a node:\n\n\\[\n\\Sigma_{n=1}^N i_n = 0\n\\]\n\nYou have to be very careful to correctly capture current direction (“in”/“out”) and magnitude.\n\n\nCircuit Element 3\nSource or load?\n\\[\nv_3 = \\frac{P_3}{i_3} = \\frac{30 W}{6 A} = 5 V\n\\]\nPositive current flow “down” a voltage drop, so load!\n\n\nCircuit Element 4\nSource or load? You tell me… do we know enough?\n\n\nYes, we do!\n\nConservation of energy!\n\\(\\Sigma_n P_n = 0\\)\n\\(P_1 + P_2 + P_3 + P_4 = 0\\)\n\\(P_4\\) = 20 W (positive, so a load!)\n\n\n\nWhat are \\(v_4\\) and \\(i_4\\)?\n\nAssume that wires in circuits are ideal conductors (i.e., no energy loss).\n\\(v_B\\) = \\(v_C\\) (same node)\nApply KCL:\n\n\\[\n\\begin{gather}\ni_{in} = i_{out} \\\\\ni_2 + i_4 = i_3 \\\\\ni_4 = i_3 - i_2 = 6 A - 10 A = -4 A \\\\\nv_4 = \\frac{P_4}{i_4} = \\frac{20 W}{-4 A} = -5 V\n\\end{gather}\n\\]\n\n\nDid we have to solve for \\(i_4\\)?\n\nNo!\n\\(v_B = v_C\\) (ideal conductor assumption; same node)\nCircuit elements 3 & 4 share common node \\(D\\).\nAs drawn on the circuit:\n\n\\[\n\\begin{gather}\nv_3 = v_B - v_D \\\\\nv_4 = v_D - v_C = v_D - v_B = -v_3 = -5 V\n\\end{gather}\n\\]\n\nThen you can solve for \\(i_4 = \\frac{P_4}{v_4} = \\frac{20 W}{-5 V} = -4 A\\).",
     "crumbs": [
@@ -406,7 +434,7 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#kirchoffs-voltage-law-kvl",
     "href": "slides/ohm-kcl-kvl-notes.html#kirchoffs-voltage-law-kvl",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Kirchoff’s Voltage Law (KVL)",
     "text": "Kirchoff’s Voltage Law (KVL)\n\nThe last example demonstrated another fundamental circuit analysis law:\n\n\\[\n\\Sigma_{n=1}^{N} v_n = 0\n\\]\n\nFor a closed loop of a circuit (continuous path of conduction), the sum of all voltage gains = sum of all voltage losses.\n\n\\[\n\\Sigma v_{source} = \\Sigma v_{load}\n\\]\n\nDoes our circuit obey KVL?\n\nWe have 3 (not 2) closed loops:\n\n\\(D \\rightarrow A \\rightarrow (B + C) \\rightarrow D\\)\n\n\\[\n  \\begin{gather}\n  \\Sigma v = 0 = -v_1 + v_2 - v_4\\\\\n  0 = -10 V + 5 V - (-5 V) = 0 ✅\n  \\end{gather}\n  \\]\n\n\\(D \\rightarrow A \\rightarrow B \\rightarrow D\\) \\[\n  \\begin{gather}\n  \\Sigma v = 0 = -v_1 + v_2 + v_3\\\\\n  0 = -10 V + 5 V + 5 V = 0 ✅\n  \\end{gather}\n  \\]\n\\(D \\rightarrow B \\rightarrow C \\rightarrow D\\)\n\n\\[\n  \\begin{gather}\n  \\Sigma v = 0 = -v_3 - v_4 \\\\\n  0 = -5 V - (-5 V) = 0 ✅\n  \\end{gather}\n  \\]\n\n\n\nWhat happens if we reverse the loops?\n\nYou tell me.\nProve it.",
     "crumbs": [
@@ -417,7 +445,7 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#summary-of-connection-constraints",
     "href": "slides/ohm-kcl-kvl-notes.html#summary-of-connection-constraints",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Summary of Connection Constraints",
     "text": "Summary of Connection Constraints\n\n\n\n\n\n\nImportant\n\n\n\n\nBalance of Power: \\(\\Sigma_n P_n = 0\\)\nConservation of Current at a Node (KCL): \\(\\Sigma_n i_n = 0\\)\nConservation of Voltage around a Closed Loop (KVL): \\(\\Sigma_n v_n = 0\\)\n\n\n\nWhat do these laws tell us…",
     "crumbs": [
@@ -428,7 +456,7 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#parallel-devices",
     "href": "slides/ohm-kcl-kvl-notes.html#parallel-devices",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Parallel Devices",
     "text": "Parallel Devices\nDevices in parallel have the same voltage difference across them:\n\n\n\n\n\n\\[\nv_1 = v_2\n\\]\n\nSerial Devices\nDevices in series have the same current flowing through them.\n\n\n\n\n\n\\[\ni_1 = i_2\n\\]",
     "crumbs": [
@@ -439,9 +467,9 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#resistive-loads",
     "href": "slides/ohm-kcl-kvl-notes.html#resistive-loads",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Resistive Loads",
-    "text": "Resistive Loads\n\nResistors are dissipative loads (typically as heat).\n\n\n\nConductive wire before/after the resistor element is considered “ideal” (non-dissipative).\n\\(\\rho_{carbon} = 3.5 \\times 10^{-5} \\Omega \\cdot m\\)\n\n\nOhm’s Law\n\\[\n\\begin{gather}\nR = \\frac{V}{I}\\\\\nV = IR\n\\end{gather}\n\\]\n\nApplicable over the linear range of “\\(I-V\\)” behavior (i.e., resistance, \\(R\\) doesn’t change as a a function of voltage or current).\n\\([\\Omega]\\) Ohm \\(\\rightarrow 1 \\Omega = 1 \\frac{V}{A}\\)\nResistors always dissipate power (\\(P &gt; 0\\)):\n\n\\[\n\\begin{gather}\nP_R = i_R v_R = i_R (i_R R) = i_R^2 R \\geq 0\\\\\nP_R = i_R v_R = \\left(\\frac{v_R}{R}\\right)v_R = \\frac{v_R^2}{R} \\geq 0\n\\end{gather}\n\\]\n\n\nConductance\n\nConductance (\\(G\\)) is the reciprocal of resistance.\nUnit: Siemen [\\(S\\)]\n\\(1 S = 1 \\frac{A}{V}\\)\n\\(i = G v\\)\n\n\n\nConductivity of Materials\n\n\n\nResistive Power\n\n\\(P_R = i^2R = \\frac{v^2}{R}\\)\nQuadratic dependence on \\(i\\) and \\(v\\).\nResistors have a maximum power rating that they can tolerate before they are damaged.m\n\n\n\nCeramic Resistor Labeling",
+    "text": "Resistive Loads\n\nResistors are dissipative loads (typically as heat).\n\n\n\nConductive wire before/after the resistor element is considered “ideal” (non-dissipative).\n\\(\\rho_{carbon} = 3.5 \\times 10^{-5} \\Omega \\cdot m\\)\n\n\nOhm’s Law\n\\[\n\\begin{gather}\nR = \\frac{V}{I}\\\\\nV = IR\n\\end{gather}\n\\]\n\nApplicable over the linear range of “\\(I-V\\)” behavior (i.e., resistance, \\(R\\) doesn’t change as a a function of voltage or current).\n\\([\\Omega]\\) Ohm \\(\\rightarrow 1 \\Omega = 1 \\frac{V}{A}\\)\nResistors always dissipate power (\\(P &gt; 0\\)):\n\n\\[\n\\begin{gather}\nP_R = i_R v_R = i_R (i_R R) = i_R^2 R \\geq 0\\\\\nP_R = i_R v_R = \\left(\\frac{v_R}{R}\\right)v_R = \\frac{v_R^2}{R} \\geq 0\n\\end{gather}\n\\]\n\n\nConductance\n\nConductance (\\(G\\)) is the reciprocal of resistance.\nUnit: Siemen [\\(S\\)]\n\\(1 S = 1 \\frac{A}{V}\\)\n\\(i = G v\\)\n\n\n\nConductivity of Materials\n\n\n\n\n\n\n\nResistive Power\n\n\\(P_R = i^2R = \\frac{v^2}{R}\\)\nQuadratic dependence on \\(i\\) and \\(v\\).\nResistors have a maximum power rating that they can tolerate before they are damaged.m\n\n\n\nCeramic Resistor Labeling",
     "crumbs": [
       "Learning Modules",
       "Ohm's Law, KCL, and KVL"
@@ -450,9 +478,53 @@
   {
     "objectID": "slides/ohm-kcl-kvl-notes.html#switches",
     "href": "slides/ohm-kcl-kvl-notes.html#switches",
-    "title": "Ohm’s and Kirchoff’s Laws",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
     "section": "Switches",
-    "text": "Switches\nSwitches are mechanical devices that interrupt or divert current flow in a circuit.\n\n\nOpen interrupter switches create an open circuit:\n\n\\(R \\rightarrow \\infty\\)\n\\(i = 0\\) (regardless of \\(v\\), to a point)\n\nClosed interrupter switches create a short circuit:\n\n\\(R = 0\\)\n\\(v = 0\\) (regardless of \\(i\\))\n\n\\(P_{open} = 0 = P_{short}\\) (why?)",
+    "text": "Switches\nSwitches are mechanical devices that interrupt or divert current flow in a circuit.\n\n\n\n\n\n\nOpen interrupter switches create an open circuit:\n\n\\(R \\rightarrow \\infty\\)\n\\(i = 0\\) (regardless of \\(v\\), to a point)\n\nClosed interrupter switches create a short circuit:\n\n\\(R = 0\\)\n\\(v = 0\\) (regardless of \\(i\\))\n\n\\(P_{open} = 0 = P_{short}\\) (why?)",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#ideal-sources",
+    "href": "slides/ohm-kcl-kvl-notes.html#ideal-sources",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
+    "section": "Ideal Sources",
+    "text": "Ideal Sources\n\n\nFor an ideal voltage source, the source current is a function of the attached circuit resistance.\nFor an ideal current course, the source voltage is a function of the attached circuit resistance.",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#real-source",
+    "href": "slides/ohm-kcl-kvl-notes.html#real-source",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
+    "section": "“Real” Source",
+    "text": "“Real” Source\n\n\n\n\n\n\nReal sources have internal resistance.\nIdeally:\n\nInternal resistance of a voltage source \\(\\rightarrow 0\\).\nInternal resistance of a current source \\(\\rightarrow \\infty\\).\n\nWhy?\n\n\n\n\n\n\n\nTip\n\n\n\nThink KCL and KVL…\n\n\n\nImplications of Internal Source Resistance\n\n“Steals” power from being delivered to attached load.\nGenerates parasitic heat internally.\n\n\n\n“Bad” Loads\n\n\n\n\n\n\nShorted voltage source?\n\n\n\nWhat happens if the load attached to a voltage source is a short circuit (i.e., \\(R_L = 0\\))?\n\n\n\n\n\n\n\n\nOpen current source?\n\n\n\nWhat happens if the load attached to a current source is an open circuit (i.e., \\(R_L \\rightarrow \\infty\\))?",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#measuring-voltage-current-resistance",
+    "href": "slides/ohm-kcl-kvl-notes.html#measuring-voltage-current-resistance",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
+    "section": "Measuring Voltage, Current & Resistance",
+    "text": "Measuring Voltage, Current & Resistance",
+    "crumbs": [
+      "Learning Modules",
+      "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "slides/ohm-kcl-kvl-notes.html#summary-of-circuit-analysis",
+    "href": "slides/ohm-kcl-kvl-notes.html#summary-of-circuit-analysis",
+    "title": "Ohm’s & Kirchoff’s Laws, Resistive Loads and Meters",
+    "section": "Summary of Circuit Analysis",
+    "text": "Summary of Circuit Analysis\n\nCircuits are a connection collection of circuit elements that deliver, dissipate and store energy.\nOhm’s Law, KCL & KVL can be used to solve for the \\(v\\) and \\(i\\) quantities for circuit components.\nDefine directions (arbitrary) for current flow for all circuit components.\n\n\n\n\n\n\n\nTip\n\n\n\nYou do not have to try to “figure out” if a circuit component is a source or load; just assign the current direction and stick with it. The sign of the current will tell you what you need for its given direction.\n\n\n\n\nLabel the voltage polarity of all sources and passive elements.\n\n\n\n\n\n\n\nTip\n\n\n\nHave your currents point into the (+) voltage terminal of circuit components, and then if \\(i &gt; 0\\), you know that \\(P &gt; 0\\).\n\n\n\nCompute circuit components powers.\n\n\\((+) i\\) flows into \\((+) v \\rightarrow P &gt; 0\\)\n\\((+) i\\) flows out of \\((+) v \\rightarrow P &lt; 0\\)\n\n\\(\\Sigma_n P_n = 0\\) ✅",
     "crumbs": [
       "Learning Modules",
       "Ohm's Law, KCL, and KVL"
@@ -540,7 +612,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nOhm’s Law & Power  Voltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Ohm’s & Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL, Resistive Loads, Meters\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nVoltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"

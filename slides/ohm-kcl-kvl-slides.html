@@ -12,8 +12,8 @@
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
-  <meta name="dcterms.date" content="2025-08-25">
-  <title>Biomedical Electronic Measurements – Ohm’s and Kirchoff’s Laws</title>
+  <meta name="dcterms.date" content="2025-08-27">
+  <title>Biomedical Electronic Measurements – Ohm’s &amp; Kirchoff’s Laws, Resistive Loads and Meters</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -132,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Ohm’s and Kirchoff’s Laws</h1>
+  <h1 class="title">Ohm’s &amp; Kirchoff’s Laws, Resistive Loads and Meters</h1>
   <p class="subtitle">BME253L - Fall 2025</p>
 
 <div class="quarto-title-authors">
@@ -146,7 +146,7 @@ Dr.&nbsp;Mark Palmeri, M.D., Ph.D.
     </div>
 </div>
 
-  <p class="date">August 25, 2025</p>
+  <p class="date">August 27, 2025</p>
 </section>
 <section id="learning-objectives" class="title-slide slide level2 center">
 <h2>Learning Objectives</h2>
@@ -211,42 +211,41 @@ i_3 = 6 A
 </section>
 <section id="circuit-element-1" class="slide level3">
 <h3>Circuit Element 1</h3>
-<p>Source or load?</p>
-</section>
-<section id="solve-for-i_1" class="slide level3">
-<h3>Solve for <span class="math inline">\(i_1\)</span></h3>
-<p><span class="math display">\[
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Source or load?</li>
+<li>Solve for <span class="math inline">\(i_1\)</span>: <span class="math display">\[
 \begin{gather}
 P_1 = v_1 i_1 \\
 -100 W = 10 V (i_1) \\
 i_1 = -10 A
 \end{gather}
-\]</span></p>
-</section>
-<section id="what-does-this-mean" class="slide level3">
-<h3>What does this mean?</h3>
-<ul>
-<li><p>Element 1 is a <strong>source</strong>!</p></li>
-<li><p>Does this make sense?</p></li>
+\]</span></li>
+<li>Element 1 is a <strong>source</strong>!</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="images/power_source_load_example.png"></p>
+</div></div>
 </section>
 <section id="circuit-element-2" class="slide level3">
 <h3>Circuit Element 2</h3>
-<p>Source or load?</p>
-</section>
-<section id="solve-for-i_2" class="slide level3">
-<h3>Solve for <span class="math inline">\(i_2\)</span></h3>
-<p><span class="math display">\[
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Source or load?</li>
+<li>Solve for <span class="math inline">\(i_2\)</span>: <span class="math display">\[
 \begin{gather}
 P_2 = v_w i_2 \\
 50 W = 5 V (i_2) \\
 i_2 = 10 A
 \end{gather}
-\]</span></p>
-</section>
-<section id="what-does-this-mean-1" class="slide level3">
-<h3>What does this mean?</h3>
-<p>Element 2 is a <strong>load</strong>!</p>
+\]</span></li>
+<li>Element 2 is a <strong>load</strong>!</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="images/power_source_load_example.png"></p>
+</div></div>
 </section></section>
 <section id="kirchoffs-current-law-kcl" class="title-slide slide level2 center">
 <h2>Kirchoff’s Current Law (KCL)</h2>
@@ -477,7 +476,7 @@ P_R = i_R v_R = \left(\frac{v_R}{R}\right)v_R = \frac{v_R^2}{R} \geq 0
 <section id="conductivity-of-materials" class="slide level3">
 <h3>Conductivity of Materials</h3>
 
-<img data-src="images/conductivity_materials.png" class="r-stretch"></section>
+<img data-src="images/conductivity_materials.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="resistive-power" class="slide level3">
 <h3>Resistive Power</h3>
 <ul>
@@ -489,12 +488,12 @@ P_R = i_R v_R = \left(\frac{v_R}{R}\right)v_R = \frac{v_R^2}{R} \geq 0
 <section id="ceramic-resistor-labeling" class="slide level3">
 <h3>Ceramic Resistor Labeling</h3>
 
-<img data-src="images/resistor_labels.png" class="r-stretch"></section></section>
+<img data-src="images/resistor_labels.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section id="switches" class="title-slide slide level2 center">
 <h2>Switches</h2>
 <p>Switches are mechanical devices that interrupt or divert current flow in a circuit.</p>
 
-<img data-src="images/switches.png" class="r-stretch"><ul>
+<img data-src="images/switches.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
 <li><p>Open interrupter switches create an <strong>open circuit</strong>:</p>
 <ul>
 <li><p><span class="math inline">\(R \rightarrow \infty\)</span></p></li>
@@ -506,6 +505,141 @@ P_R = i_R v_R = \left(\frac{v_R}{R}\right)v_R = \frac{v_R^2}{R} \geq 0
 <li><p><span class="math inline">\(v = 0\)</span> (regardless of <span class="math inline">\(i\)</span>)</p></li>
 </ul></li>
 <li><p><span class="math inline">\(P_{open} = 0 = P_{short}\)</span> (why?)</p></li>
+</ul>
+</section>
+
+<section id="ideal-sources" class="title-slide slide level2 center">
+<h2>Ideal Sources</h2>
+
+<img data-src="images/ideal_sources.png" class="r-stretch"><ul>
+<li><p>For an ideal voltage source, the source current is a function of the attached circuit resistance.</p></li>
+<li><p>For an ideal current course, the source voltage is a function of the attached circuit resistance.</p></li>
+</ul>
+</section>
+
+<section>
+<section id="real-source" class="title-slide slide level2 center">
+<h2>“Real” Source</h2>
+
+<img data-src="images/real_sources.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><p>Real sources have internal resistance.</p></li>
+<li><p>Ideally:</p>
+<ul>
+<li><p>Internal resistance of a voltage source <span class="math inline">\(\rightarrow 0\)</span>.</p></li>
+<li><p>Internal resistance of a current source <span class="math inline">\(\rightarrow \infty\)</span>.</p></li>
+</ul></li>
+<li><p>Why?</p></li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Think KCL and KVL…</p>
+</div>
+</div>
+</div>
+</section>
+<section id="implications-of-internal-source-resistance" class="slide level3">
+<h3>Implications of Internal Source Resistance</h3>
+<ul>
+<li><p>“Steals” power from being delivered to attached load.</p></li>
+<li><p>Generates parasitic heat internally.</p></li>
+</ul>
+</section>
+<section id="bad-loads" class="slide level3">
+<h3>“Bad” Loads</h3>
+<div title="Shorted voltage source?">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Shorted voltage source?</strong></p>
+</div>
+<div class="callout-content">
+<p>What happens if the load attached to a voltage source is a short circuit (i.e., <span class="math inline">\(R_L = 0\)</span>)?</p>
+</div>
+</div>
+</div>
+</div>
+<div title="Open current source?">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Open current source?</strong></p>
+</div>
+<div class="callout-content">
+<p>What happens if the load attached to a current source is an open circuit (i.e., <span class="math inline">\(R_L \rightarrow \infty\)</span>)?</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="measuring-voltage-current-resistance" class="title-slide slide level2 center">
+<h2>Measuring Voltage, Current &amp; Resistance</h2>
+
+<img data-src="images/meters.png" class="r-stretch"></section>
+<section class="slide level3">
+
+
+<img data-src="images/meter_measurements.png" class="r-stretch"></section></section>
+<section>
+<section id="summary-of-circuit-analysis" class="title-slide slide level2 center">
+<h2>Summary of Circuit Analysis</h2>
+<ul>
+<li><p><strong>Circuits</strong> are a connection collection of circuit elements that deliver, dissipate and store energy.</p></li>
+<li><p>Ohm’s Law, KCL &amp; KVL can be used to solve for the <span class="math inline">\(v\)</span> and <span class="math inline">\(i\)</span> quantities for circuit components.</p></li>
+<li><p>Define directions (arbitrary) for current flow for all circuit components.</p></li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>You do not have to try to “figure out” if a circuit component is a source or load; just assign the current direction and stick with it. The sign of the current will tell you what you need for its given direction.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level3">
+
+<ul>
+<li>Label the voltage polarity of all sources and passive elements.</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Have your currents point into the (+) voltage terminal of circuit components, and then if <span class="math inline">\(i &gt; 0\)</span>, you know that <span class="math inline">\(P &gt; 0\)</span>.</p>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Compute circuit components powers.</p>
+<ul>
+<li><p><span class="math inline">\((+) i\)</span> flows into <span class="math inline">\((+) v \rightarrow P &gt; 0\)</span></p></li>
+<li><p><span class="math inline">\((+) i\)</span> flows out of <span class="math inline">\((+) v \rightarrow P &lt; 0\)</span></p></li>
+</ul></li>
+<li><p><span class="math inline">\(\Sigma_n P_n = 0\)</span> ✅</p></li>
 </ul>
 
 
@@ -523,7 +657,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
