@@ -1,6 +1,6 @@
 ---
-title: "Ohm's and Kirchoff's Laws"
-date: "2025-08-25"
+title: "Ohm's & Kirchoff's Laws, Resistive Loads and Meters"
+date: "2025-08-27"
 format:
   live-html: 
     output-file: ohm-kcl-kvl-notes.html
@@ -78,9 +78,10 @@ We don't know what these circuit components are, but given power/voltage/current
 
 ### Circuit Element 1
 
-Source or load?
-
-### Solve for $i_1$
+::::{.columns}
+::: {.column width="40%"} 
+- Source or load?
+- Solve for $i_1$:
 $$
 \begin{gather}
 P_1 = v_1 i_1 \\
@@ -88,19 +89,19 @@ P_1 = v_1 i_1 \\
 i_1 = -10 A
 \end{gather}
 $$
-
-### What does this mean?
-
 - Element 1 is a **source**!
-
-- Does this make sense?
+:::
+::: {.column width="60%"} 
+![](images/power_source_load_example.png)
+:::
+::::
 
 ### Circuit Element 2
 
-Source or load?
-
-### Solve for $i_2$
-
+::::{.columns}
+::: {.column width="40%"}
+- Source or load?
+- Solve for $i_2$:
 $$
 \begin{gather}
 P_2 = v_w i_2 \\
@@ -108,10 +109,12 @@ P_2 = v_w i_2 \\
 i_2 = 10 A
 \end{gather}
 $$
-
-### What does this mean?
-
-Element 2 is a **load**!
+- Element 2 is a **load**!
+:::
+::: {.column width="60%"}
+![](images/power_source_load_example.png)
+:::
+::::
 
 ## Kirchoff's Current Law (KCL)
 
@@ -332,7 +335,7 @@ $$
 
 ### Conductivity of Materials
 
-![](images/conductivity_materials.png)
+![](images/conductivity_materials.png){fig-align="center"}
 
 ### Resistive Power
 
@@ -344,13 +347,13 @@ $$
 
 ### Ceramic Resistor Labeling
 
-![](images/resistor_labels.png)
+![](images/resistor_labels.png){fig-align="center"}
 
 ## Switches
 
 Switches are mechanical devices that interrupt or divert current flow in a circuit.
 
-![](images/switches.png)
+![](images/switches.png){fig-align="center"}
 
 - Open interrupter switches create an **open circuit**:
 
@@ -365,3 +368,84 @@ Switches are mechanical devices that interrupt or divert current flow in a circu
     - $v = 0$ (regardless of $i$)
 
 - $P_{open} = 0 = P_{short}$ (why?)
+
+## Ideal Sources
+
+![](images/ideal_sources.png)
+
+- For an ideal voltage source, the source current is a function of the attached circuit resistance.
+
+- For an ideal current course, the source voltage is a function of the attached circuit resistance.
+
+## "Real" Source
+
+![](images/real_sources.png){fig-align="center"}
+
+- Real sources have internal resistance.
+
+- Ideally:
+
+    - Internal resistance of a voltage source $\rightarrow 0$.
+
+    - Internal resistance of a current source $\rightarrow \infty$.
+
+- Why?
+
+::: callout-tip
+Think KCL and KVL...
+:::
+
+### Implications of Internal Source Resistance
+
+- "Steals" power from being delivered to attached load.
+
+- Generates parasitic heat internally.
+
+### "Bad" Loads
+
+::: {.callout-warning title="Shorted voltage source?"}
+What happens if the load attached to a voltage source is a short circuit (i.e., $R_L = 0$)?
+:::
+
+::: {.callout-warning title="Open current source?"}
+What happens if the load attached to a current source is an open circuit (i.e., $R_L \rightarrow \infty$)?
+:::
+
+## Measuring Voltage, Current & Resistance
+
+![](images/meters.png)
+
+---
+
+![](images/meter_measurements.png)
+
+## Summary of Circuit Analysis
+
+- **Circuits** are a connection collection of circuit elements that deliver, dissipate and store energy.
+
+- Ohm's Law, KCL & KVL can be used to solve for the $v$ and $i$ quantities for circuit components.
+
+- Define directions (arbitrary) for current flow for all circuit components.
+
+::: callout-tip
+You do not have to try to "figure out" if a circuit component is a source or
+load; just assign the current direction and stick with it.  The sign of the
+current will tell you what you need for its given direction.
+:::
+
+---
+
+- Label the voltage polarity of all sources and passive elements.
+
+::: callout-tip
+Have your currents point into the (+) voltage terminal of circuit components,
+and then if $i > 0$, you know that $P > 0$.
+:::
+
+- Compute circuit components powers.
+
+    - $(+) i$ flows into $(+) v \rightarrow P > 0$
+
+    - $(+) i$ flows out of $(+) v \rightarrow P < 0$
+
+- $\Sigma_n P_n = 0$ ✅  
