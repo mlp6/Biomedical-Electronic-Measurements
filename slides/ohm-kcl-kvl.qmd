@@ -10,7 +10,7 @@ format:
 
 ## Learning Objectives
 
-- Reinforce pwoer and energy flow in circuits
+- Analyze Power and Energy Flow in Circuits
 
 - Define Ohm's Law
 
