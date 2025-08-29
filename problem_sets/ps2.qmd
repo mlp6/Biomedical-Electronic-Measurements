@@ -1,0 +1,35 @@
+---
+title: "Problem Set 02"
+date: 2025-09-03
+format:
+  html: default
+  pdf: default
+---
+
+Please complete the following problems and tasks, and upload your solutions to Gradescope, using the [formatting guidelines](_formatting_guidelines.qmd) below.
+
+1. **Variable Resistor / Potentiometer**
+
+1. **Internal Source Resistance**
+
+1. **Series Resistance**
+
+1. **Circuit Analysis**
+
+1. **Equivalent Resistance**
+
+1. **Equivalent Resistance**
+
+1. **Voltage Division**
+
+1. **Thermistor**
+
+1. **Material Conductance**  Copper and nickel-chromium ("nichrome") are two common conductors you will find in your living space.
+
+    a. Where do you commonly find these two conductors in your living space, and what are the properties of these conductors that make them appropriate for their application(s)?
+
+    a. Aluminum is another common conductor user in high voltage transmission lines and high power household appliance wires.  Why would aluminum be considered over copper for these applications?
+
+    a. Why isn't aluminum wiring used 
+
+{{< include _formatting_guidelines.qmd >}}
