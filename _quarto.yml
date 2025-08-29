@@ -74,6 +74,8 @@ website:
           text: "Formatting Guidelines"
         - href: problem_sets/ps1.qmd
           text: "Problem Set 01"
+        - href: problem_sets/ps2.qmd
+          text: "Problem Set 02"
 
     page-footer:
       right: 'This page is built with [Quarto](https://quarto.org/).'
