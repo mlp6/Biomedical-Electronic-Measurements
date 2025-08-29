@@ -30,6 +30,10 @@ Please complete the following problems and tasks, and upload your solutions to G
 
     a. Aluminum is another common conductor user in high voltage transmission lines and high power household appliance wires.  Why would aluminum be considered over copper for these applications?
 
-    a. Why isn't aluminum wiring used 
+    a. Why isn't aluminum wiring used instead of copper in wiring most building outlets and lighting circuits?
+
+::: callout-tip
+Material properties to keep in mind when answering these questions including resistivity, melting point, thermal expansion, and density.
+:::
 
 {{< include _formatting_guidelines.qmd >}}
