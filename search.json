@@ -11,6 +11,462 @@
     ]
   },
   {
+    "objectID": "slides/r_eq-notes.html",
+    "href": "slides/r_eq-notes.html",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "",
+    "text": "Solve [switched] resistive circuits.\nSimplify series and parallel resistance networks \\(\\rightarrow\\) equivalent resistance.",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
+    "objectID": "slides/r_eq-notes.html#learning-objectives",
+    "href": "slides/r_eq-notes.html#learning-objectives",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "",
+    "text": "Solve [switched] resistive circuits.\nSimplify series and parallel resistance networks \\(\\rightarrow\\) equivalent resistance.",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
+    "objectID": "slides/r_eq-notes.html#review-from-last-lecture",
+    "href": "slides/r_eq-notes.html#review-from-last-lecture",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Review from Last Lecture",
+    "text": "Review from Last Lecture\n\nKCL, KVL & Ohm’s Law\nBalance of Power\nResistive Loads\n[Non-]ideal Sources\nMeasuring Voltage & Current",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
+    "objectID": "slides/r_eq-notes.html#analyzing-switched-resistive-circuit",
+    "href": "slides/r_eq-notes.html#analyzing-switched-resistive-circuit",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Analyzing Switched Resistive Circuit",
+    "text": "Analyzing Switched Resistive Circuit\n\n\n\n\nGiven:\n\n\\(v_s\\) = 300 V\n\\(R_1\\) = 100 \\(\\Omega\\)\n\\(R_2\\) = 100 \\(\\Omega\\)\n\\(R_3\\) = 200 \\(\\Omega\\)\n\\(R_o\\) = 100 \\(\\Omega\\)\n\n\n\nFind \\(v_o\\) with both the switch open and closed.\nWe will start with the switch open case…\n\nStep 1: Assign & Label Nodes, Voltage References & Currents\n\n\n\n\n\n\nImportant\n\n\n\nUse the (+) sign convention!\n\n\n\n\n\n\n\n\n\nWhat does the open switch mean?\n\n\n\n\n\n\nTip\n\n\n\nAn open switch means no current can flow through \\(R_3\\)!\n\n\n\n\n\nStep 2: KVL & KCL\n\n\n\n\n\nKVL\n\n\\(D \\rightarrow A \\rightarrow B \\rightarrow C \\rightarrow D\\)\n\\(-v_s + v_1 + v_2 + v_o = 0\\)\n\nKCL\n\n\\(A: i_s = i_1\\)\n\\(B: i_1 = i_2\\)\n\\(C: i_2 = i_o\\)\nSo, \\(i_s = i_1 = i_2 = i_o\\)\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nThis is one, closed-path loop!\n\n\n\n\nStep 3: Apply Element Equations (Ohm’s Law)\n\nOhms’ Law\n\n\\(v_1 = R_1 i_s\\)\n\\(v_2 = R_2 i_s\\)\n\\(v_o = R_o i_s\\)\n\nSubstitute voltage expressions into KVL expression, all in terms of \\(i_s\\):\n\n\\[\n\\begin{gather}\n-v_s + R_1 i_s + R_2 i_s + R_o i_s = 0 \\\\\nv_s = i_s \\left( R_1 + R_2 + R_0 \\right)\n\\end{gather}\n\\]\n\n\n\n\n\n\nSeries Resistance Foreshadowing\n\n\n\nNotice the sum of the resistors…\n\n\n\n\\[\n\\begin{gather}\ni_s = \\frac{v_s}{R_1 + R_2 + R_3} = \\frac{300 V}{300 \\Omega} = 1 A \\\\\nv_o = R_o i_s = (100 \\Omega) (1 A) = 100 V\n\\end{gather}\n\\]\n\n\nStep 4: Check Power Balanace\n\\[\n\\begin{gather}\nP = IV = I^2 R = \\frac{V^2}{R} \\\\\n\\Sigma_n P_n = 0 \\\\\n(-300 V)(1 A) + (1 A)^2(100 \\Omega) + (1 A)^2(100 \\Omega) + (1 A)^2(100 \\Omega) = 0 ✅\n\\end{gather}\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
+    "objectID": "slides/r_eq-notes.html#next-closed-switch",
+    "href": "slides/r_eq-notes.html#next-closed-switch",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Next: Closed Switch",
+    "text": "Next: Closed Switch\n\nStep 1: Assign & Label Nodes, Voltage References & Currents\n\n\n\n\n\n\n\nStep 2: KVL & KCL\n\n\n\n\n\n\n\n\n\nKVL\n\n\\(D \\rightarrow A \\rightarrow B \\rightarrow C \\rightarrow D\\)\n\n\\(-v_s + v_1 + v_2 + v_o = 0\\)\n\n\\(D \\rightarrow A \\rightarrow B \\rightarrow D\\)\n\n\\(-v_s + v_1 + v_3 = 0\\)\n\n\\(D \\rightarrow B \\rightarrow C \\rightarrow D\\)\n\n\\(-v_3 + v_2 + v_0 = 0\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKCL\n\n\\(A: i_s = i_1\\)\n\\(B: i_1 = i_2 + i_3\\)\n\\(C: i_2 = i_o\\)\n\\(D: i_3 + i_o = i_s\\)\n\n\n\n\n\n\nStep 3: Element Constraints\n\\[\n\\begin{gather}\nv_1 = i_1 R_1 \\\\\nv_2 = i_2 R_2 \\\\\nv_3 = i_3 R_3 \\\\\nv_o = i_o R_o\n\\end{gather}\n\\]\nNext, start to solve!\n\n\nSubstitute current expressions into Ohm’s law relationships:\n\\[\n\\begin{gather}\ni_s = i_1 = i_3 + i_o \\\\\ni_2 = i_0 \\\\\nv_1 = R_1 \\left(i_o + i_3\\right) \\\\\nv_2 = i_o R_2\n\\end{gather}\n\\]\n\n\n\nSubstitute these expressions into KVL equations:\n\nFirst KVL expression: \\[\n\\begin{gather}\n-v_s + R_1 i_o + R_1 i_3 + i_o R_2 + i_o R_o = 0 \\\\\n-v_s + i_o \\left(R_1 + R_2 + R_o\\right) + i_3 R_1 = 0\n\\end{gather}\n\\]\nSecond KVL expression:\n\n\\[\n\\begin{gather}\n-v_s + R_1 i_o + R_1 i_3 + R_3 i_3 = 0 \\\\\n-v_s + R_1 i_o + i_3 \\left(R_1 + R_3 \\right) = 0\n\\end{gather}\n\\]\n\n\n\nSolve for \\(i_3\\) in the first expression and substitute it into the second expression:\n\n\\[\n\\begin{gather}\ni_3 = \\frac{v_s - i_o \\left(R_1 + R_2 + R_o\\right)}{R_1} \\\\\n-v_s + R_1 i_o + \\left(\\frac{R_1 + R_3}{R_1}\\right)\\left[ v_s - i_o \\left(R_1 + R_2 + R_o\\right)\\right] = 0\n\\end{gather}\n\\]\n\nSolve for \\(i_o\\) and \\(v_o\\):\n\n\\[\nv_s \\left[ -1 + \\frac{R_1 + R_3}{R_1} \\right] = i_o \\left[ \\frac{R_1 + R_3}{R_1} \\left( R_1 + R_2 + R_o \\right) - R_1 \\right] \\\\\n\\]\n\n\\(v_s\\) and all the \\(R\\) values are given, so: \\[\n\\begin{gather}\ni_o = 0.75 A \\\\\nv_o = i_o R_o = (0.75 A) (100 \\Omega) = 75 V\n\\end{gather}\n\\]\n\n\nStep 4: Check Power Balance\n\\[\n\\begin{align}\nP_1 & = (100 \\Omega) \\left( i_o + i_3 \\right)^2\\\\\ni_3 & = \\frac{v_s - i_o\\left(R_1 + R_2 +R_3\\right)}{R_1} = 0.75 A \\\\\nP_1 & = 225 W \\\\\nP_2 & = (100 \\Omega) i_o^2 = 56.25 W \\\\\nP_3 & = (200 \\Omega) i_3^2 = 112.5 W \\\\\nP_o & = (100 \\Omega) i_o^2 = 56.25 W\n\\end{align}\n\\]\nTotal Power Dissipated = 450 W\n\\[\n\\begin{align}\nP_s & = i_s v_s \\\\\ni_s & = i_o + i_3\n\\end{align}\n\\]\nTotal Power Generated: -450 W ✅",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
+    "objectID": "slides/r_eq-notes.html#simplifying-circuits-series-parallel-equivalent-resistance",
+    "href": "slides/r_eq-notes.html#simplifying-circuits-series-parallel-equivalent-resistance",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Simplifying Circuits: Series & Parallel Equivalent Resistance",
+    "text": "Simplifying Circuits: Series & Parallel Equivalent Resistance\n\nSolving circuits with many components can quickly become cumbersome, especially if we don’t need to know the voltage and current associated with each individual circuit element.\nWe can simplify resistive networks (connections of resistors), using the following relationships:\n\nTwo resistors are considered to be in parallel if they share the same node on each of their connections (i.e., have the same voltage drop across them due to the same nodes).\nTwo resistors are considered to be in series if the same current flows through them through a common node.\n\nTwo circuits are considered electrically equivalent if they share the same I-V (current / voltage) relationship.\n\n\nLet’s take a look at that open switch example…\n\n\n\n\n\n\n\n\n\nRemember that \\(i_s = i_1 = i_2 = i_o\\)\n\n\\(R_1\\) is in series with \\(R_2\\), which is in series with \\(R_o\\); they are all in series with one another!\n\nRemember applying KVL:\n\n\\(v_s = i_s \\left(R_1 + R_2 + R_o\\right)\\).\nThis looks like Ohm’s law for a single resistor (\\(R_{eq}\\)): \\(v_s = i_s R_{eq}\\), where:\n\\(R_{eq} = R_1 + R_2 + R_o\\)",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
+    "objectID": "slides/r_eq-notes.html#series-resistance",
+    "href": "slides/r_eq-notes.html#series-resistance",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Series Resistance",
+    "text": "Series Resistance\n\nIf \\(R_1, R_2, ... R_N\\) are in series, then \\(i_{R_1} = i_{R_2} = ... i_{R_N}\\), which means:\n\n\\[\nR_{eq} = \\Sigma_{n=1}^N R_n\n\\]\n\n\n\n\n\n\nWhy is this useful? Way easier to solve for \\(i_o\\) in this case; it is just Ohm’s Law!",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
+    "objectID": "slides/r_eq-notes.html#voltage-division",
+    "href": "slides/r_eq-notes.html#voltage-division",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Voltage Division",
+    "text": "Voltage Division\nWhat do series resistors do to a source voltage?\n\n\n\n\n\n\n\n\n\n\\(KVL: -v_s + v_i + v_2 = 0\\)\n\\(KCL_{B}: i_1 = i_2\\)\n\\(v_s = R_1 i_1 + R_2 i_1\\)\n\\(i_1 = \\frac{v_s}{R_1 + R_2}\\)\n\\(v_1 = i_1 R_1 = v_s \\frac{R_1}{R_1 + R_2}\\)\n\\(v_2 = i_2 R_2 = v_s \\frac{R_2}{R_1 + R_2}\\)\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nSeries resistors divide voltage in proportion to \\(\\frac{R_n}{R_{eq}}\\)!\n\n\n\nCommon Uses of Voltage Dividers\n\nMultiple Fixed Voltage Sources: Create smaller source voltages from a larger single source.\nSignal Level Adjustment: Reduce a high voltage signal to a lower voltage level suitable for input to a measurement circuit.\nEvaluate Impact of “Real” Voltage Source Impedance: Evaluate the parasitic voltage / power loses due to interal voltage source resistance.\n\n\n\n\n\n\n\nImportant\n\n\n\nVoltage division will be one of the most important circuit analyses we do in medical instrumentation.",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
+    "objectID": "slides/r_eq-notes.html#parallel-resistance-circuits",
+    "href": "slides/r_eq-notes.html#parallel-resistance-circuits",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Parallel Resistance Circuits",
+    "text": "Parallel Resistance Circuits\n\n\n\n\n\n\n\\(R_1\\) & \\(R_2\\) share common nodes and have the same voltage drop across them, so they are in parallel.\nKCL: \\(i_s = i_1 + i_2\\)\nKVL: \\(-v1 + v_2 = 0 \\rightarrow v_1 = v_2\\)\nOhm’s Law: \\(i_1 = \\frac{v_1}{R_1}\\) and \\(i_2 = \\frac{v_2}{R_2} = \\frac{v_1}{R_2}\\)\n\n\nWhat is \\(R_{eq}\\) for \\(i_s\\)?\n\n\\(i_s = v_1 \\left( \\frac{1}{R_1} + \\frac{1}{R_2} \\right)\\)\n\\(v_1 = i_s R_{eq}\\)\n\\(R_{eq} = \\frac{R_1 R_2}{R_1 + R_2}\\)\n\nFor \\(N\\) resistors in parallel:\n\\[\nR_{eq} = \\frac{1}{\\frac{1}{R_1} + \\frac{1}{R_2} + ... \\frac{1}{R_N}} = \\left( \\Sigma_{n=1}^N \\frac{1}{R_n} \\right)^{-1}\n\\]\nOr in terms of conductance:\n\\[\nG_{eq} = \\Sigma_{n=1}^N G_n\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
+    "objectID": "slides/r_eq-slides.html#learning-objectives",
+    "href": "slides/r_eq-slides.html#learning-objectives",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nSolve [switched] resistive circuits.\nSimplify series and parallel resistance networks \\(\\rightarrow\\) equivalent resistance."
+  },
+  {
+    "objectID": "slides/r_eq-slides.html#review-from-last-lecture",
+    "href": "slides/r_eq-slides.html#review-from-last-lecture",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Review from Last Lecture",
+    "text": "Review from Last Lecture\n\nKCL, KVL & Ohm’s Law\nBalance of Power\nResistive Loads\n[Non-]ideal Sources\nMeasuring Voltage & Current"
+  },
+  {
+    "objectID": "slides/r_eq-slides.html#analyzing-switched-resistive-circuit",
+    "href": "slides/r_eq-slides.html#analyzing-switched-resistive-circuit",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Analyzing Switched Resistive Circuit",
+    "text": "Analyzing Switched Resistive Circuit\n\n\n\n\nGiven:\n\n\\(v_s\\) = 300 V\n\\(R_1\\) = 100 \\(\\Omega\\)\n\\(R_2\\) = 100 \\(\\Omega\\)\n\\(R_3\\) = 200 \\(\\Omega\\)\n\\(R_o\\) = 100 \\(\\Omega\\)\n\n\nFind \\(v_o\\) with both the switch open and closed.\nWe will start with the switch open case…"
+  },
+  {
+    "objectID": "slides/r_eq-slides.html#next-closed-switch",
+    "href": "slides/r_eq-slides.html#next-closed-switch",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Next: Closed Switch",
+    "text": "Next: Closed Switch"
+  },
+  {
+    "objectID": "slides/r_eq-slides.html#simplifying-circuits-series-parallel-equivalent-resistance",
+    "href": "slides/r_eq-slides.html#simplifying-circuits-series-parallel-equivalent-resistance",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Simplifying Circuits: Series & Parallel Equivalent Resistance",
+    "text": "Simplifying Circuits: Series & Parallel Equivalent Resistance\n\nSolving circuits with many components can quickly become cumbersome, especially if we don’t need to know the voltage and current associated with each individual circuit element.\nWe can simplify resistive networks (connections of resistors), using the following relationships:\n\nTwo resistors are considered to be in parallel if they share the same node on each of their connections (i.e., have the same voltage drop across them due to the same nodes).\nTwo resistors are considered to be in series if the same current flows through them through a common node.\n\nTwo circuits are considered electrically equivalent if they share the same I-V (current / voltage) relationship."
+  },
+  {
+    "objectID": "slides/r_eq-slides.html#series-resistance",
+    "href": "slides/r_eq-slides.html#series-resistance",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Series Resistance",
+    "text": "Series Resistance\n\nIf \\(R_1, R_2, ... R_N\\) are in series, then \\(i_{R_1} = i_{R_2} = ... i_{R_N}\\), which means:\n\n\\[\nR_{eq} = \\Sigma_{n=1}^N R_n\n\\]\n\n\nWhy is this useful? Way easier to solve for \\(i_o\\) in this case; it is just Ohm’s Law!"
+  },
+  {
+    "objectID": "slides/r_eq-slides.html#voltage-division",
+    "href": "slides/r_eq-slides.html#voltage-division",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Voltage Division",
+    "text": "Voltage Division\nWhat do series resistors do to a source voltage?\n\n\n\n\n\n\n\n\n\n\\(KVL: -v_s + v_i + v_2 = 0\\)\n\\(KCL_{B}: i_1 = i_2\\)\n\\(v_s = R_1 i_1 + R_2 i_1\\)\n\\(i_1 = \\frac{v_s}{R_1 + R_2}\\)\n\\(v_1 = i_1 R_1 = v_s \\frac{R_1}{R_1 + R_2}\\)\n\\(v_2 = i_2 R_2 = v_s \\frac{R_2}{R_1 + R_2}\\)\n\n\n\n\n\n\n\n\nImportant\n\n\nSeries resistors divide voltage in proportion to \\(\\frac{R_n}{R_{eq}}\\)!"
+  },
+  {
+    "objectID": "slides/r_eq-slides.html#parallel-resistance-circuits",
+    "href": "slides/r_eq-slides.html#parallel-resistance-circuits",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Parallel Resistance Circuits",
+    "text": "Parallel Resistance Circuits\n\n\n\\(R_1\\) & \\(R_2\\) share common nodes and have the same voltage drop across them, so they are in parallel.\nKCL: \\(i_s = i_1 + i_2\\)\nKVL: \\(-v1 + v_2 = 0 \\rightarrow v_1 = v_2\\)\nOhm’s Law: \\(i_1 = \\frac{v_1}{R_1}\\) and \\(i_2 = \\frac{v_2}{R_2} = \\frac{v_1}{R_2}\\)"
+  },
+  {
+    "objectID": "resources/teaching_assistant_expectations.html",
+    "href": "resources/teaching_assistant_expectations.html",
+    "title": "Teaching Assistant Expectations",
+    "section": "",
+    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
+    "crumbs": [
+      "Resources",
+      "Teaching Assistant Expectations"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Biomedical Electronic Measurements",
+    "section": "",
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Ohm’s & Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL, Resistive Loads, Meters  Equivalent Resistance\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nVoltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Coming soon…",
+    "crumbs": [
+      "Course Information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps1.html",
+    "href": "problem_sets/ps1.html",
+    "title": "Problem Set 01",
+    "section": "",
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 01"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps1.html#problem-set-format-guidelines",
+    "href": "problem_sets/ps1.html#problem-set-format-guidelines",
+    "title": "Problem Set 01",
+    "section": "Problem Set Format Guidelines",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nAlways draw the circuit/diagram for each problem involving a circuit/diagram.\nLabel all circuit elements with symbols.\n\nSolve problems symbolically before substituting in numerical values.\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems. Place comments in the code where appropriate to indicate your thought process.\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 01"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Biomedical Electronic Measurements",
+    "section": "",
+    "text": "Dr. Mark Palmeri (mlp6)\n\nEmail: mark.palmeri@duke.edu\nEd Discussion (private message, TAs included)\nOffice Hours: Tues, 13:00-15:00 (258 Hudson Hall Annex)\n\n\n\n\n\nErin O’Kane\nOlutoni Akintoye\n\n\n\n\n\n\n\nTip\n\n\n\nQuestions that can be answered by Dr. Palmeri or a teaching assistant should be posted on Ed Discussion.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#personnel",
+    "href": "course-syllabus.html#personnel",
+    "title": "Biomedical Electronic Measurements",
+    "section": "",
+    "text": "Dr. Mark Palmeri (mlp6)\n\nEmail: mark.palmeri@duke.edu\nEd Discussion (private message, TAs included)\nOffice Hours: Tues, 13:00-15:00 (258 Hudson Hall Annex)\n\n\n\n\n\nErin O’Kane\nOlutoni Akintoye\n\n\n\n\n\n\n\nTip\n\n\n\nQuestions that can be answered by Dr. Palmeri or a teaching assistant should be posted on Ed Discussion.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-times-locations",
+    "href": "course-syllabus.html#course-times-locations",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Course Times & Locations",
+    "text": "Course Times & Locations\n\nLecture\nMonday & Wednesday, 10:05-11:20, CIEMAS 1411 (Panopto recording not available)\n\n\nLabs\nWednesday, 13:25-16:25, Hudson 028A (Basement)\nAttendance and participation in all lab periods is required to pass this course. Labs can only be made up with advanced appoval from Dr. Palmeri. Days/times to make up labs will be decided by your TA and Lab Instructor in advance of missing lab.\n\n\n\n\n\n\nCaution\n\n\n\nTwo unexcused lab absences will result in automatic failure of this class.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nNo food or drink is allowed in the lab! Failure to adhere to this policy will have consequences on your lab grades.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease review the lab policies before using the lab for the first time this semester.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-objectives",
+    "href": "course-syllabus.html#course-objectives",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Course Objectives",
+    "text": "Course Objectives\nThis course introduces students to the foundational concepts and practical skills in electronic circuits designed for detecting biological signals.\nUpon completion of this course, students should be able to:\n\nPerform circuit analysis using:\n\nOhm’s Law\nKirchhoff’s Voltage and Current Laws (KVL & KCL)\nEquivalent Resistance for Series and Parallel Circuits\nNode Voltage Analysis\nMesh Current Analysis\n\nAnalysis circuits using the complex impedance of reactive capacitors and inductors.\n\nUse phasors to describe amplitude and phase for reactive circuit analysis.\nGenerate and interpret Bode plots\n\nAnalysis and design first- and second-order filters in the frequency and time domains.\nCircuit schematic capture (KiCad)\nCircuit SPICE simulation (KiCad)\nDevelop skills to use common electronic bench equipment to drive and measurement electronic circuits, including:\n\nUse DC and AC voltage sources.\nUse oscilloscopes to evaluate time and frequency domain circuit response.\nUse digitial multimeters to measure voltage, current and impedance.\nUse function generators to generate time-varying signals to input into circuits.\n\nUnderstand ideal operational amplifiers and their use in active amplifiers, filters and comparators.\nUnderstand basic semiconductor physics to describe how diodes work, and use diodes for clamping and rectification.\nWork with basic digital input/output signals.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#prerequisites",
+    "href": "course-syllabus.html#prerequisites",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nEGR105L or equivalent experience [git, Python]",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#textbooks",
+    "href": "course-syllabus.html#textbooks",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Textbooks",
+    "text": "Textbooks\n\nRequired: Practical Electronics for Inventors, Paul Scherz and Simon Monk. 3rd or 4th edition\nLessons in Electic Circuits (Free Online)\nFundamentals of Electrical Engineering, Giorgio Rizzoni (First Edition or Second Edition, McGraw Hill, ISBN 9780073380377)\nThe Art of Electronics, Horowitz and Hill",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#learning-management-system",
+    "href": "course-syllabus.html#learning-management-system",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Learning Management System",
+    "text": "Learning Management System\nWe will be using Canvas as the learning management system for this course. Most resources will be linked to the course website. All grades will be posted via Canvas/Gradescope.\nEd Discussion will be used for general course questions and discussion.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#class-schedule",
+    "href": "course-syllabus.html#class-schedule",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Class Schedule",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Ohm’s & Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL, Resistive Loads, Meters  Equivalent Resistance\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nVoltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#attendance-participation",
+    "href": "course-syllabus.html#attendance-participation",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Attendance & Participation",
+    "text": "Attendance & Participation\nClass participation in lecture is strongly encouraged. Students are responsible for obtaining missed lecture content from other students in the class. All lecture slides/presented content will be made availabe online (Canvas). Our classroom this semester is not equipped for Panopto recording, so students who miss lecture will be responsible for getting lecture materials from fellow students.\nParticipation on Ed Discussion is also encouraged, in the form of:\n\nAsking questions about the course material (ideally, publicly, so that others can benefit (Anonymous okay))\nAnswering questions from other students\nSharing interesting articles or resources related to the course material",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#assignments-grading",
+    "href": "course-syllabus.html#assignments-grading",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Assignments & Grading",
+    "text": "Assignments & Grading\n\nGrading\nFundamental knowledge will be assessed with regular problem sets and online quizzes. There are important guidelines to follow when submitting your problem sets electronically to Gradescope.\nLab exercises, as described above, are mandatory to pass the class. Lab exercises will synthesize your theoretical and analytic circuit analysis skills with practical circuit debugging and testing. Lab exercises will include pre-lab exercises and post-lab submissions of data collection and analysis from the lab exercises.\nThere will be three midterm exams and a final lab practical will be held during the final exam period in the lab.\n\nGrade Distribution\n\n\nGrade Category\nRelative Percentage\n\n\n\n\nProblem Sets & Quizzes\n20%\n\n\nLabs\n15% (pre-lab) + 15% (post-lab) = 30%\n\n\nMidterms\n3 × 10% = 30%\n\n\nLab Practical\n20%\n\n\n\nAll assignment grades will be posted to Gradescope (and linked to the Canvas gradebook) throughout the semester to track your performance.\n\n\nCourse Grade\nThis course is not “curved” (i.e., a distribution of grades will not be enforced), and a traditional grading scheme will be used (e.g., 90-93 = A-, 94-97 = A, 97-100 = A+). Participation throughout the semester will influence rounding up/down for fractional grades.\n\n\n\n\n\n\nWarning\n\n\n\nFailing the course can happen with a cummulative score \\(&lt;\\) 65 (D) or more than one unexcused lab absence.\n\n\n\n\nRegrades\nAny regrading requests need to be made within one week of grades for a given assignment being released. You must make the request via Gradescope and provide a description of why you feel a regrade is appropriate. Requesting a regrade could lead to additional loss of credit when an assignment is re-evaluated.\nSome assignments will have an opportunity to be resubmitted based on grading feedback at the discretion of Dr. Palmeri.\n\n\nLate Policy / SDAO Accomodations\nLate submission windows will be available for all assignments, minus the in-person lab sessions and the final lab practical, and should be used to accomodate acute illness, travel, high workload from other classes and other unforeseen circumstances. This late submission window can be utilized without penalty and without prior approval.\nStudents with SDAO accomodations for extended time on assignments can use this extended late submission window for all assignments.\nAny assignments submitted after the late submission window will only be accepted for partial credit at the discretion of Dr. Palmeri or if prior approval was sought before the original (not extended) due date.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#duke-community-standard",
+    "href": "course-syllabus.html#duke-community-standard",
+    "title": "Biomedical Electronic Measurements",
+    "section": "Duke Community Standard",
+    "text": "Duke Community Standard\nAll students are expected to adhere to all principles of the Duke Community Standard. Violations of the Duke Community Standard will be referred immediately to the Office of Student Conduct. Please do not hesitate to talk with Dr. Palmeri about any situations involving academic honor, especially if it is ambiguous what should be done.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#faq",
+    "href": "course-syllabus.html#faq",
+    "title": "Biomedical Electronic Measurements",
+    "section": "FAQ",
+    "text": "FAQ\n\nCan I collaborate with other students?\nEngineering is inherently a collaborative field, and in this class, you are encouraged to work collaboratively on your projects. That being said, all of the work that you submit must be generated by you and reflect your understanding of the material.\n\n\n\n\n\n\nImportant\n\n\n\nAll resources used in your assignment submissions that were developed by another person or company must be properly acknowledged.\n\n\n\n\nCan I use AI?\nThe use of artificial intelligence is a rapidly developing resource / tool in engineering. In software development, there are many levels of AI-assitance available. Such form of assistance include the IntelliCode tools and GitHub CoPilot (free to students through the GitHub Education program). These tools can be leveraged to help with coding syntax.\n\n\n\n\n\n\nCaution\n\n\n\nYou are strongly cautioned to not rely on these tools for solving circuit analysis problems, as these tools will not be available for your midterm exams and final lab practical. They are best used to help complete code syntax in this class.",
+    "crumbs": [
+      "Course Information",
+      "Course Syllabus"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html",
+    "href": "software-install-tutorials.html",
+    "title": "Software Installation and Tutorials",
+    "section": "",
+    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#kicad",
+    "href": "software-install-tutorials.html#kicad",
+    "title": "Software Installation and Tutorials",
+    "section": "",
+    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
+    "href": "software-install-tutorials.html#visual-studio-code-ide",
+    "title": "Software Installation and Tutorials",
+    "section": "Visual Studio Code (IDE)",
+    "text": "Visual Studio Code (IDE)\nI recommend using Visual Studio Code as the IDE for all projects in this class that require data analysis, plotting, etc.\nIn addition to installing the base program, please install the following Extensions:\n\nPython Extension Pack\nJupyter\nGitHub CoPilot (AI-assisted coding)\nSign up for free GitHub Education Student account to get “Pro” access to this extension: https://github.com/education/students\n\n\n\n\n\n\n\nTip\n\n\n\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
+    "href": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
+    "title": "Software Installation and Tutorials",
+    "section": "Technical Report Preparation (Jupyter Notebook)",
+    "text": "Technical Report Preparation (Jupyter Notebook)\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be converted to PDF files and uploaded to Gradescope.\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.\nYou can also choose to edit your Jupyter notebooks with a cloud-based tool, like Google CoLab, but that approach will not receive help / troubleshooting from Dr. Palmeri or the teaching team.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#gradescope",
+    "href": "software-install-tutorials.html#gradescope",
+    "title": "Software Installation and Tutorials",
+    "section": "Gradescope",
+    "text": "Gradescope\nPlease complete the Gradescope quiz when you are done installing all of these tools.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#learning-objectives",
+    "href": "slides/intro-circuits-slides.html#learning-objectives",
+    "title": "Introduction to Circuits",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nWhat are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#circuit",
+    "href": "slides/intro-circuits-slides.html#circuit",
+    "title": "Introduction to Circuits",
+    "section": "Circuit",
+    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\n\nQuestion\n\n\nWhat are common sources and loads in electronic circuits?"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#sources",
+    "href": "slides/intro-circuits-slides.html#sources",
+    "title": "Introduction to Circuits",
+    "section": "Sources",
+    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored."
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
+    "href": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
+    "title": "Introduction to Circuits",
+    "section": "Biomedical Circuit Correlates",
+    "text": "Biomedical Circuit Correlates"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-charge",
+    "href": "slides/intro-circuits-slides.html#what-is-charge",
+    "title": "Introduction to Circuits",
+    "section": "What is charge?",
+    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-current",
+    "href": "slides/intro-circuits-slides.html#what-is-current",
+    "title": "Introduction to Circuits",
+    "section": "What is current?",
+    "text": "What is current?"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-voltage",
+    "href": "slides/intro-circuits-slides.html#what-is-voltage",
+    "title": "Introduction to Circuits",
+    "section": "What is voltage?",
+    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-power",
+    "href": "slides/intro-circuits-slides.html#what-is-power",
+    "title": "Introduction to Circuits",
+    "section": "What is power?",
+    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-happens-to-power",
+    "href": "slides/intro-circuits-slides.html#what-happens-to-power",
+    "title": "Introduction to Circuits",
+    "section": "What happens to power?",
+    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power."
+  },
+  {
     "objectID": "slides/intro-circuits-notes.html",
     "href": "slides/intro-circuits-notes.html",
     "title": "Introduction to Circuits",
@@ -118,307 +574,6 @@
     "crumbs": [
       "Learning Modules",
       "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#learning-objectives",
-    "href": "slides/intro-circuits-slides.html#learning-objectives",
-    "title": "Introduction to Circuits",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nWhat are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#circuit",
-    "href": "slides/intro-circuits-slides.html#circuit",
-    "title": "Introduction to Circuits",
-    "section": "Circuit",
-    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\n\nQuestion\n\n\nWhat are common sources and loads in electronic circuits?"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#sources",
-    "href": "slides/intro-circuits-slides.html#sources",
-    "title": "Introduction to Circuits",
-    "section": "Sources",
-    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored."
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
-    "href": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
-    "title": "Introduction to Circuits",
-    "section": "Biomedical Circuit Correlates",
-    "text": "Biomedical Circuit Correlates"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-charge",
-    "href": "slides/intro-circuits-slides.html#what-is-charge",
-    "title": "Introduction to Circuits",
-    "section": "What is charge?",
-    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-current",
-    "href": "slides/intro-circuits-slides.html#what-is-current",
-    "title": "Introduction to Circuits",
-    "section": "What is current?",
-    "text": "What is current?"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-voltage",
-    "href": "slides/intro-circuits-slides.html#what-is-voltage",
-    "title": "Introduction to Circuits",
-    "section": "What is voltage?",
-    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-power",
-    "href": "slides/intro-circuits-slides.html#what-is-power",
-    "title": "Introduction to Circuits",
-    "section": "What is power?",
-    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-happens-to-power",
-    "href": "slides/intro-circuits-slides.html#what-happens-to-power",
-    "title": "Introduction to Circuits",
-    "section": "What happens to power?",
-    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power."
-  },
-  {
-    "objectID": "software-install-tutorials.html",
-    "href": "software-install-tutorials.html",
-    "title": "Software Installation and Tutorials",
-    "section": "",
-    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html#kicad",
-    "href": "software-install-tutorials.html#kicad",
-    "title": "Software Installation and Tutorials",
-    "section": "",
-    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
-    "href": "software-install-tutorials.html#visual-studio-code-ide",
-    "title": "Software Installation and Tutorials",
-    "section": "Visual Studio Code (IDE)",
-    "text": "Visual Studio Code (IDE)\nI recommend using Visual Studio Code as the IDE for all projects in this class that require data analysis, plotting, etc.\nIn addition to installing the base program, please install the following Extensions:\n\nPython Extension Pack\nJupyter\nGitHub CoPilot (AI-assisted coding)\nSign up for free GitHub Education Student account to get “Pro” access to this extension: https://github.com/education/students\n\n\n\n\n\n\n\nTip\n\n\n\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
-    "href": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
-    "title": "Software Installation and Tutorials",
-    "section": "Technical Report Preparation (Jupyter Notebook)",
-    "text": "Technical Report Preparation (Jupyter Notebook)\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be converted to PDF files and uploaded to Gradescope.\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.\nYou can also choose to edit your Jupyter notebooks with a cloud-based tool, like Google CoLab, but that approach will not receive help / troubleshooting from Dr. Palmeri or the teaching team.",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "software-install-tutorials.html#gradescope",
-    "href": "software-install-tutorials.html#gradescope",
-    "title": "Software Installation and Tutorials",
-    "section": "Gradescope",
-    "text": "Gradescope\nPlease complete the Gradescope quiz when you are done installing all of these tools.",
-    "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html",
-    "href": "course-syllabus.html",
-    "title": "Biomedical Electronic Measurements",
-    "section": "",
-    "text": "Dr. Mark Palmeri (mlp6)\n\nEmail: mark.palmeri@duke.edu\nEd Discussion (private message, TAs included)\nOffice Hours: Tues, 13:00-15:00 (258 Hudson Hall Annex)\n\n\n\n\n\nErin O’Kane\nOlutoni Akintoye\n\n\n\n\n\n\n\nTip\n\n\n\nQuestions that can be answered by Dr. Palmeri or a teaching assistant should be posted on Ed Discussion.",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#personnel",
-    "href": "course-syllabus.html#personnel",
-    "title": "Biomedical Electronic Measurements",
-    "section": "",
-    "text": "Dr. Mark Palmeri (mlp6)\n\nEmail: mark.palmeri@duke.edu\nEd Discussion (private message, TAs included)\nOffice Hours: Tues, 13:00-15:00 (258 Hudson Hall Annex)\n\n\n\n\n\nErin O’Kane\nOlutoni Akintoye\n\n\n\n\n\n\n\nTip\n\n\n\nQuestions that can be answered by Dr. Palmeri or a teaching assistant should be posted on Ed Discussion.",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#course-times-locations",
-    "href": "course-syllabus.html#course-times-locations",
-    "title": "Biomedical Electronic Measurements",
-    "section": "Course Times & Locations",
-    "text": "Course Times & Locations\n\nLecture\nMonday & Wednesday, 10:05-11:20, CIEMAS 1411 (Panopto recording not available)\n\n\nLabs\nWednesday, 13:25-16:25, Hudson 028A (Basement)\nAttendance and participation in all lab periods is required to pass this course. Labs can only be made up with advanced appoval from Dr. Palmeri. Days/times to make up labs will be decided by your TA and Lab Instructor in advance of missing lab.\n\n\n\n\n\n\nCaution\n\n\n\nTwo unexcused lab absences will result in automatic failure of this class.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nNo food or drink is allowed in the lab! Failure to adhere to this policy will have consequences on your lab grades.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease review the lab policies before using the lab for the first time this semester.",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#course-objectives",
-    "href": "course-syllabus.html#course-objectives",
-    "title": "Biomedical Electronic Measurements",
-    "section": "Course Objectives",
-    "text": "Course Objectives\nThis course introduces students to the foundational concepts and practical skills in electronic circuits designed for detecting biological signals.\nUpon completion of this course, students should be able to:\n\nPerform circuit analysis using:\n\nOhm’s Law\nKirchhoff’s Voltage and Current Laws (KVL & KCL)\nEquivalent Resistance for Series and Parallel Circuits\nNode Voltage Analysis\nMesh Current Analysis\n\nAnalysis circuits using the complex impedance of reactive capacitors and inductors.\n\nUse phasors to describe amplitude and phase for reactive circuit analysis.\nGenerate and interpret Bode plots\n\nAnalysis and design first- and second-order filters in the frequency and time domains.\nCircuit schematic capture (KiCad)\nCircuit SPICE simulation (KiCad)\nDevelop skills to use common electronic bench equipment to drive and measurement electronic circuits, including:\n\nUse DC and AC voltage sources.\nUse oscilloscopes to evaluate time and frequency domain circuit response.\nUse digitial multimeters to measure voltage, current and impedance.\nUse function generators to generate time-varying signals to input into circuits.\n\nUnderstand ideal operational amplifiers and their use in active amplifiers, filters and comparators.\nUnderstand basic semiconductor physics to describe how diodes work, and use diodes for clamping and rectification.\nWork with basic digital input/output signals.",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#prerequisites",
-    "href": "course-syllabus.html#prerequisites",
-    "title": "Biomedical Electronic Measurements",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nEGR105L or equivalent experience [git, Python]",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#textbooks",
-    "href": "course-syllabus.html#textbooks",
-    "title": "Biomedical Electronic Measurements",
-    "section": "Textbooks",
-    "text": "Textbooks\n\nRequired: Practical Electronics for Inventors, Paul Scherz and Simon Monk. 3rd or 4th edition\nLessons in Electic Circuits (Free Online)\nFundamentals of Electrical Engineering, Giorgio Rizzoni (First Edition or Second Edition, McGraw Hill, ISBN 9780073380377)\nThe Art of Electronics, Horowitz and Hill",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#learning-management-system",
-    "href": "course-syllabus.html#learning-management-system",
-    "title": "Biomedical Electronic Measurements",
-    "section": "Learning Management System",
-    "text": "Learning Management System\nWe will be using Canvas as the learning management system for this course. Most resources will be linked to the course website. All grades will be posted via Canvas/Gradescope.\nEd Discussion will be used for general course questions and discussion.",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#class-schedule",
-    "href": "course-syllabus.html#class-schedule",
-    "title": "Biomedical Electronic Measurements",
-    "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Ohm’s & Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL, Resistive Loads, Meters\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nVoltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#attendance-participation",
-    "href": "course-syllabus.html#attendance-participation",
-    "title": "Biomedical Electronic Measurements",
-    "section": "Attendance & Participation",
-    "text": "Attendance & Participation\nClass participation in lecture is strongly encouraged. Students are responsible for obtaining missed lecture content from other students in the class. All lecture slides/presented content will be made availabe online (Canvas). Our classroom this semester is not equipped for Panopto recording, so students who miss lecture will be responsible for getting lecture materials from fellow students.\nParticipation on Ed Discussion is also encouraged, in the form of:\n\nAsking questions about the course material (ideally, publicly, so that others can benefit (Anonymous okay))\nAnswering questions from other students\nSharing interesting articles or resources related to the course material",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#assignments-grading",
-    "href": "course-syllabus.html#assignments-grading",
-    "title": "Biomedical Electronic Measurements",
-    "section": "Assignments & Grading",
-    "text": "Assignments & Grading\n\nGrading\nFundamental knowledge will be assessed with regular problem sets and online quizzes. There are important guidelines to follow when submitting your problem sets electronically to Gradescope.\nLab exercises, as described above, are mandatory to pass the class. Lab exercises will synthesize your theoretical and analytic circuit analysis skills with practical circuit debugging and testing. Lab exercises will include pre-lab exercises and post-lab submissions of data collection and analysis from the lab exercises.\nThere will be three midterm exams and a final lab practical will be held during the final exam period in the lab.\n\nGrade Distribution\n\n\nGrade Category\nRelative Percentage\n\n\n\n\nProblem Sets & Quizzes\n20%\n\n\nLabs\n15% (pre-lab) + 15% (post-lab) = 30%\n\n\nMidterms\n3 × 10% = 30%\n\n\nLab Practical\n20%\n\n\n\nAll assignment grades will be posted to Gradescope (and linked to the Canvas gradebook) throughout the semester to track your performance.\n\n\nCourse Grade\nThis course is not “curved” (i.e., a distribution of grades will not be enforced), and a traditional grading scheme will be used (e.g., 90-93 = A-, 94-97 = A, 97-100 = A+). Participation throughout the semester will influence rounding up/down for fractional grades.\n\n\n\n\n\n\nWarning\n\n\n\nFailing the course can happen with a cummulative score \\(&lt;\\) 65 (D) or more than one unexcused lab absence.\n\n\n\n\nRegrades\nAny regrading requests need to be made within one week of grades for a given assignment being released. You must make the request via Gradescope and provide a description of why you feel a regrade is appropriate. Requesting a regrade could lead to additional loss of credit when an assignment is re-evaluated.\nSome assignments will have an opportunity to be resubmitted based on grading feedback at the discretion of Dr. Palmeri.\n\n\nLate Policy / SDAO Accomodations\nLate submission windows will be available for all assignments, minus the in-person lab sessions and the final lab practical, and should be used to accomodate acute illness, travel, high workload from other classes and other unforeseen circumstances. This late submission window can be utilized without penalty and without prior approval.\nStudents with SDAO accomodations for extended time on assignments can use this extended late submission window for all assignments.\nAny assignments submitted after the late submission window will only be accepted for partial credit at the discretion of Dr. Palmeri or if prior approval was sought before the original (not extended) due date.",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#duke-community-standard",
-    "href": "course-syllabus.html#duke-community-standard",
-    "title": "Biomedical Electronic Measurements",
-    "section": "Duke Community Standard",
-    "text": "Duke Community Standard\nAll students are expected to adhere to all principles of the Duke Community Standard. Violations of the Duke Community Standard will be referred immediately to the Office of Student Conduct. Please do not hesitate to talk with Dr. Palmeri about any situations involving academic honor, especially if it is ambiguous what should be done.",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#faq",
-    "href": "course-syllabus.html#faq",
-    "title": "Biomedical Electronic Measurements",
-    "section": "FAQ",
-    "text": "FAQ\n\nCan I collaborate with other students?\nEngineering is inherently a collaborative field, and in this class, you are encouraged to work collaboratively on your projects. That being said, all of the work that you submit must be generated by you and reflect your understanding of the material.\n\n\n\n\n\n\nImportant\n\n\n\nAll resources used in your assignment submissions that were developed by another person or company must be properly acknowledged.\n\n\n\n\nCan I use AI?\nThe use of artificial intelligence is a rapidly developing resource / tool in engineering. In software development, there are many levels of AI-assitance available. Such form of assistance include the IntelliCode tools and GitHub CoPilot (free to students through the GitHub Education program). These tools can be leveraged to help with coding syntax.\n\n\n\n\n\n\nCaution\n\n\n\nYou are strongly cautioned to not rely on these tools for solving circuit analysis problems, as these tools will not be available for your midterm exams and final lab practical. They are best used to help complete code syntax in this class.",
-    "crumbs": [
-      "Course Information",
-      "Course Syllabus"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps1.html",
-    "href": "problem_sets/ps1.html",
-    "title": "Problem Set 01",
-    "section": "",
-    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 01"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps1.html#problem-set-format-guidelines",
-    "href": "problem_sets/ps1.html#problem-set-format-guidelines",
-    "title": "Problem Set 01",
-    "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nAlways draw the circuit/diagram for each problem involving a circuit/diagram.\nLabel all circuit elements with symbols.\n\nSolve problems symbolically before substituting in numerical values.\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems. Place comments in the code where appropriate to indicate your thought process.\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 01"
-    ]
-  },
-  {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Frequently Asked Questions",
-    "section": "",
-    "text": "Coming soon…",
-    "crumbs": [
-      "Course Information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Biomedical Electronic Measurements",
-    "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Ohm’s & Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL, Resistive Loads, Meters\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nVoltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
-  },
-  {
-    "objectID": "resources/teaching_assistant_expectations.html",
-    "href": "resources/teaching_assistant_expectations.html",
-    "title": "Teaching Assistant Expectations",
-    "section": "",
-    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
-    "crumbs": [
-      "Resources",
-      "Teaching Assistant Expectations"
     ]
   },
   {
