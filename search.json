@@ -110,6 +110,17 @@
     ]
   },
   {
+    "objectID": "slides/r_eq-notes.html#physiology-analogs",
+    "href": "slides/r_eq-notes.html#physiology-analogs",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Physiology Analogs",
+    "text": "Physiology Analogs\n\nCardiovascular System\n\nParallel circuit - pulmonary capillary beds - very low resistance\nParallel & series circuit - arterial distribution via aorta\n\nNeuro ventricular shunt - lower resistance\nPulmonary reactive airway disease",
+    "crumbs": [
+      "Learning Modules",
+      "Series and Parallel Resistance"
+    ]
+  },
+  {
     "objectID": "slides/r_eq-slides.html#learning-objectives",
     "href": "slides/r_eq-slides.html#learning-objectives",
     "title": "Switched, Series & Parallel Resistance",
@@ -164,6 +175,13 @@
     "title": "Switched, Series & Parallel Resistance",
     "section": "Parallel Resistance Circuits",
     "text": "Parallel Resistance Circuits\n\n\n\\(R_1\\) & \\(R_2\\) share common nodes and have the same voltage drop across them, so they are in parallel.\nKCL: \\(i_s = i_1 + i_2\\)\nKVL: \\(-v1 + v_2 = 0 \\rightarrow v_1 = v_2\\)\nOhm’s Law: \\(i_1 = \\frac{v_1}{R_1}\\) and \\(i_2 = \\frac{v_2}{R_2} = \\frac{v_1}{R_2}\\)"
+  },
+  {
+    "objectID": "slides/r_eq-slides.html#physiology-analogs",
+    "href": "slides/r_eq-slides.html#physiology-analogs",
+    "title": "Switched, Series & Parallel Resistance",
+    "section": "Physiology Analogs",
+    "text": "Physiology Analogs\n\nCardiovascular System\n\nParallel circuit - pulmonary capillary beds - very low resistance\nParallel & series circuit - arterial distribution via aorta\n\nNeuro ventricular shunt - lower resistance\nPulmonary reactive airway disease"
   },
   {
     "objectID": "resources/teaching_assistant_expectations.html",
