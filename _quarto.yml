@@ -40,6 +40,8 @@ website:
           text: "Introduction to Circuits"
         - href: slides/ohm-kcl-kvl.qmd
           text: "Ohm's Law, KCL, and KVL"
+        - href: slides/r_eq.qmd
+          text: "Series and Parallel Resistance"
       - section: Labs
         contents:
         - href: labs/introduction.qmd

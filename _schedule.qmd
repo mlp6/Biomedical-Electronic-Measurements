@@ -1,6 +1,6 @@
 | Module | Materials | Assessment | Lab Exercise |
 | --- | --- | --- | --- |
-| Voltage & Current <br> Series & Parallel Resistance <br> Ohm's & Kirchhof's Laws | [Introduction to Circuits](slides/intro-circuits.qmd) <br> [Ohm's Law, KCL & KVL, Resistive Loads, Meters](slides/ohm-kcl-kvl.qmd) | [Software Installation & Tutorials](software-install-tutorials.qmd) <br> [Problem Set 01](problem_sets/ps1.qmd) | [Introduction](labs/introduction.qmd) |
+| Voltage & Current <br> Series & Parallel Resistance <br> Ohm's & Kirchhof's Laws | [Introduction to Circuits](slides/intro-circuits.qmd) <br> [Ohm's Law, KCL & KVL, Resistive Loads, Meters](slides/ohm-kcl-kvl.qmd) <br> [Equivalent Resistance](slides/r_eq.qmd) | [Software Installation & Tutorials](software-install-tutorials.qmd) <br> [Problem Set 01](problem_sets/ps1.qmd) | [Introduction](labs/introduction.qmd) |
 | Voltage & Current Dividers <br> Node Voltage & Mesh Current Analysis <br> Thevenin & Norton Equivalent Sources <br> Source Superposition | | | [Ohm's Law & Power](labs/ohms_power.qmd) |
 | Midterm I (Sep 22, 2025) | | |
 | Capacitors & Inductors <br> DC RC/RL Circuit Analysis | | | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |
