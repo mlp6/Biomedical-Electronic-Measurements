@@ -401,3 +401,15 @@ Or in terms of conductance:
 $$
 G_{eq} = \Sigma_{n=1}^N G_n
 $$
+
+## Physiology Analogs
+
+- Cardiovascular System
+
+    - Parallel circuit - pulmonary capillary beds - very low resistance
+
+    - Parallel & series circuit - arterial distribution via aorta
+
+- Neuro ventricular shunt - lower resistance
+
+- Pulmonary reactive airway disease
