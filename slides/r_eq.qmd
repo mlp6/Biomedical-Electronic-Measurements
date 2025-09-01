@@ -316,8 +316,88 @@ Total Power Generated: -450 W ✅
 
 ## Series Resistance
 
-If $R_1, R_2, ... R_N$ are in **series**, then $i_{R_1} = i_{R_2} = ... i_{R_N}$, which means:
+- If $R_1, R_2, ... R_N$ are in **series**, then $i_{R_1} = i_{R_2} = ... i_{R_N}$, which means:
 
 $$
 R_{eq} = \Sigma_{n=1}^N R_n
+$$
+
+![](images/r_eq_ckt_series_r_eq.png){fig-align="center"}
+
+- Why is this useful?  Way easier to solve for $i_o$ in this case; it is just Ohm's Law!
+
+## Voltage Division
+
+What do series resistors do to a source voltage?
+
+:::: {.columns}
+::: {.column width=30%}
+![](images/voltage_divider.png){fig-align="center"}
+:::
+::: {.column width=70%}
+- $KVL: -v_s + v_i + v_2 = 0$
+
+- $KCL_{B}: i_1 = i_2$
+
+- $v_s = R_1 i_1 + R_2 i_1$
+
+- $i_1 = \frac{v_s}{R_1 + R_2}$
+
+- $v_1 = i_1 R_1 = v_s \frac{R_1}{R_1 + R_2}$
+
+- $v_2 = i_2 R_2 = v_s \frac{R_2}{R_1 + R_2}$
+:::
+::::
+
+::: callout-important
+Series resistors divide voltage in proportion to $\frac{R_n}{R_{eq}}$! 
+:::
+
+### Common Uses of Voltage Dividers
+
+- **Multiple Fixed Voltage Sources**: Create smaller source voltages from a
+larger single source.
+
+- **Signal Level Adjustment**: Reduce a high voltage signal to a lower voltage
+level suitable for input to a measurement circuit.
+
+- **Evaluate Impact of "Real" Voltage Source Impedance**: Evaluate the parasitic voltage / power loses due to interal voltage source resistance.
+
+::: callout-important
+Voltage division will be one of the most important circuit analyses we do in medical instrumentation.
+:::
+
+## Parallel Resistance Circuits
+
+![](images/r_eq_ckt_parallel.png){fig-align="center"}
+
+- $R_1$ & $R_2$ share common nodes and have the same voltage drop across them,
+so they are in **parallel**.
+
+- KCL: $i_s = i_1 + i_2$
+
+- KVL: $-v1 + v_2 = 0 \rightarrow v_1 = v_2$
+
+- Ohm's Law: $i_1 = \frac{v_1}{R_1}$ and $i_2 = \frac{v_2}{R_2} = \frac{v_1}{R_2}$
+
+---
+
+What is $R_{eq}$ for $i_s$?
+
+- $i_s = v_1 \left( \frac{1}{R_1} + \frac{1}{R_2} \right)$
+
+- $v_1 = i_s R_{eq}$
+
+- $R_{eq} = \frac{R_1 R_2}{R_1 + R_2}$
+
+For $N$ resistors in parallel:
+
+$$
+R_{eq} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + ... \frac{1}{R_N}} = \left( \Sigma_{n=1}^N \frac{1}{R_n} \right)^{-1}
+$$
+
+Or in terms of conductance:
+
+$$
+G_{eq} = \Sigma_{n=1}^N G_n
 $$
