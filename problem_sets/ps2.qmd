@@ -64,11 +64,13 @@ that each bulb will dissipate.
 :::
 ::::
 
-1. **Equivalent Resistance:** Find the equivalent resistance seen by the srouce in the circuit below and use the result to solve for $i_1$, $i_2$ and $v_3$.
+1. **Equivalent Resistance:** Find the equivalent resistance seen by the source in the circuit below and use the result to solve for $i_1$, $i_2$ and $v_3$.
 
 ![](images/ps2/equiv_res.png)
 
-1. **Equivalent Resistance**
+1. **Equivalent Resistance:** For the circuit below, solve for the equivalent resistance seen by the source and solve for $i$.
+
+![](images/ps2/equiv_res2.png)
 
 1. **Voltage Division**
 
