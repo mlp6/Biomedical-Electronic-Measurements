@@ -72,7 +72,17 @@ that each bulb will dissipate.
 
 ![](images/ps2/equiv_res2.png)
 
-1. **Voltage Division**
+1. **Voltage Division:** The voltage divider shown below nominally provides
+$v_{out} = 5\,V$ for a source voltage of $V = 10\,V$.  The resistors are
+nominally each $5\,k\Omega$, but their finite tolerances mean they might not be
+exactly the same.
+
+    a. If the resistors have $\pm$ 10% tolerance, find the "worst-case" output
+    voltages (i.e., greatest deviations greater than and less than $5\,V$).
+
+    a. Repeat (a) for $\pm$ 5% tolerances.
+
+![](images/ps2/voltage_divider.png)
 
 1. **Thermistor:** A thermistor is a nonlinear device that changes resistance as a function of its temperature.  The relationship between resistance and temperature is:
 
