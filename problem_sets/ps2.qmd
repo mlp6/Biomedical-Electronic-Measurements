@@ -41,7 +41,28 @@ plot.
 these bulbs are connected in series across this same source, determine the power
 that each bulb will dissipate.
 
-1. **Circuit Analysis**
+1. **Circuit Analysis:** For the circuit below, find:
+
+    a. The currents $i_2$ and $i_3$.
+
+    a. The power delivered by the 3 A current soruce and by the 12 V voltage source.
+
+    a. The total power dissipated by the circuit.
+
+:::: {.columns}
+::: {.column width=75%}
+![](images/ps2/current_and_volt_sources.png)
+:::
+::: {.column width=25%}
+- $R_1 = 25\,\Omega$
+
+- $R_2 = 10\,\Omega$
+
+- $R_3 = 5\,\Omega$
+
+- $R_4 = 7\,\Omega$
+:::
+::::
 
 1. **Equivalent Resistance**
 
