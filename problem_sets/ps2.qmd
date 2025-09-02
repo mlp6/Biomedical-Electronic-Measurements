@@ -10,6 +10,19 @@ Please complete the following problems and tasks, and upload your solutions to G
 
 1. **Variable Resistor / Potentiometer**
 
+For the circuit below, determine the power absorbed by the variable resistor
+($R$), ranging from 0-20 $\Omega$.  Plot the power absorption as a function of
+$R$.  Your plot should be generated "formally" using Python (i.e., not
+hand-drawn).  Include your code with your plot.  
+
+::: callout-tip
+Presenting your code with your plot may be most easily done using a Jupyter
+notebook, where you can render your output as a PDF for upload to Gradescope.
+This is a good opportunity to make sure you know how to do this.
+:::
+
+![](images/ps2/pot_power.png)
+
 1. **Internal Source Resistance**
 
 1. **Series Resistance**
