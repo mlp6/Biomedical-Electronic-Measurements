@@ -49,7 +49,23 @@ that each bulb will dissipate.
 
 1. **Voltage Division**
 
-1. **Thermistor**
+1. **Thermistor:** A thermistor is a nonlinear device that changes resistance as a function of its temperature.  The relationship between resistance and temperature is:
+
+    $$
+    R_{th}(T) = R_o e^{-\beta(T-To)}, 
+    $$
+
+    - $R_{th}$ = resistance at temperature $T$ ($\Omega$)
+
+    - $R_o$ = resistance at $T_o$ = 298 $K$
+
+    - $\beta$ = material constant ($K^{-1}$)
+
+    - $T$ = absolute temperature ($K$)
+
+    a. If $R_o = 300 \Omega$ and $\beta = 0.01 K^{-1}$, plot $R_{th}(T)$ as a function of $350 \leq T \leq 750$.
+
+    a. If the thermistor is in parallel with a fixed value $250 \Omega$ resistor, find the expression for the equivalent resistance for this resistive network and add a new line to your plot from (a) representing the modified $R_{th}(T)$.  Be sure to plot this line in a new color and include a descriptive legend on your plot.
 
 1. **Material Conductance**  Copper and nickel-chromium ("nichrome") are two common conductors you will find in your living space.
 
