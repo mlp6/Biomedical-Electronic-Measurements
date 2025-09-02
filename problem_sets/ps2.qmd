@@ -49,28 +49,28 @@ that each bulb will dissipate.
 
     a. The total power dissipated by the circuit.
 
-:::: {.columns}
-::: {.column width=75%}
-![](images/ps2/current_and_volt_sources.png)
-:::
-::: {.column width=25%}
-- $R_1 = 25\,\Omega$
+    :::: {.columns}
+    ::: {.column width=75%}
+    ![](images/ps2/current_and_volt_sources.png)
+    :::
+    ::: {.column width=25%}
+    - $R_1 = 25\,\Omega$
 
-- $R_2 = 10\,\Omega$
+    - $R_2 = 10\,\Omega$
 
-- $R_3 = 5\,\Omega$
+    - $R_3 = 5\,\Omega$
 
-- $R_4 = 7\,\Omega$
-:::
-::::
+    - $R_4 = 7\,\Omega$
+    :::
+    ::::
 
 1. **Equivalent Resistance:** Find the equivalent resistance seen by the source in the circuit below and use the result to solve for $i_1$, $i_2$ and $v_3$.
 
-![](images/ps2/equiv_res.png)
+    ![](images/ps2/equiv_res.png)
 
 1. **Equivalent Resistance:** For the circuit below, solve for the equivalent resistance seen by the source and solve for $i$.
 
-![](images/ps2/equiv_res2.png)
+    ![](images/ps2/equiv_res2.png)
 
 1. **Voltage Division:** The voltage divider shown below nominally provides
 $v_{out} = 5\,V$ for a source voltage of $V = 10\,V$.  The resistors are
@@ -82,7 +82,7 @@ exactly the same.
 
     a. Repeat (a) for $\pm$ 5% tolerances.
 
-![](images/ps2/voltage_divider.png)
+    ![](images/ps2/voltage_divider.png)
 
 1. **Thermistor:** A thermistor is a nonlinear device that changes resistance as a function of its temperature.  The relationship between resistance and temperature is:
 
