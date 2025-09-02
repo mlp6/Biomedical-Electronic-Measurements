@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}
+
+\draw (0,0) to[vsource, v=$V_S$] (0,3);
+
+\draw (0,3) to[R, l=$R_S$] (3,3);
+
+\draw (5,3) to[R, l=$R_L$, v=$V_L$, f=$I_L$] (5,0);
+
+\draw (3,3) -- (5,3);
+\draw (5,0) -- (0,0);
+
+% add terminal nodes
+\draw (3,3) node[circle, fill, inner sep=1pt] {};
+\draw (3,0) node[circle, fill, inner sep=1pt] {};
+
+% add dashed outline of nonideal source
+\draw[dashed] (-1.25,-0.75) rectangle (2.75,3.75);
+\node at (0.75,-1) {Nonideal Source};
+
+\end{circuitikz}
+\end{document}

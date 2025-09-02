@@ -8,12 +8,11 @@ format:
 
 Please complete the following problems and tasks, and upload your solutions to Gradescope, using the [formatting guidelines](_formatting_guidelines.qmd) below.
 
-1. **Variable Resistor / Potentiometer**
-
-For the circuit below, determine the power absorbed by the variable resistor
-($R$), ranging from 0-20 $\Omega$.  Plot the power absorption as a function of
-$R$.  Your plot should be generated "formally" using Python (i.e., not
-hand-drawn).  Include your code with your plot.  
+1. **Variable Resistor / Potentiometer** For the circuit below, determine the
+power absorbed by the variable resistor ($R$), ranging from 0-20 $\Omega$.  Plot
+the power absorption as a function of $R$.  Your plot should be generated
+"formally" using Python (i.e., not hand-drawn).  Include your code with your
+plot.  
 
 ::: callout-tip
 Presenting your code with your plot may be most easily done using a Jupyter
@@ -23,7 +22,17 @@ This is a good opportunity to make sure you know how to do this.
 
 ![](images/ps2/pot_power.png)
 
-1. **Internal Source Resistance**
+1. **Internal Source Resistance** For the circuit below, solve for the following:
+
+    a. Find the total power supplied by the ideal source.  (*Hint: that implies the value of $R_S$)
+
+    a. Find the power dissipated and lost in the nonideal source.
+
+    a. What is the power supplied by the source to the circuit as a function of the load resistance ($R_L$)?
+
+    a. Plot the voltage across the load $V_L$ and the power delivered to the load ($P_L$) as a function of current $I_L: 0-30 A$.  (Like the previous problem, include code and plot.)
+
+![](images/ps2/source_resistance.png)
 
 1. **Series Resistance**
 
