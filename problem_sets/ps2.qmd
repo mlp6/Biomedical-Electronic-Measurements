@@ -41,7 +41,7 @@ plot.
 these bulbs are connected in series across this same source, determine the power
 that each bulb will dissipate.
 
-1. **Circuit Analysis:** For the circuit below, find:
+1. **Circuit Analysis:** For the circuit below, with $R_1 = 25\,\Omega$, $R_2 = 10\,\Omega$, $R_3 = 5\,\Omega$, $R_4 = 7\,\Omega$, find:
 
     a. The currents $i_2$ and $i_3$.
 
@@ -49,20 +49,8 @@ that each bulb will dissipate.
 
     a. The total power dissipated by the circuit.
 
-    :::: {.columns}
-    ::: {.column width=75%}
     ![](images/ps2/current_and_volt_sources.png)
-    :::
-    ::: {.column width=25%}
-    - $R_1 = 25\,\Omega$
 
-    - $R_2 = 10\,\Omega$
-
-    - $R_3 = 5\,\Omega$
-
-    - $R_4 = 7\,\Omega$
-    :::
-    ::::
 
 1. **Equivalent Resistance:** Find the equivalent resistance seen by the source in the circuit below and use the result to solve for $i_1$, $i_2$ and $v_3$.
 
