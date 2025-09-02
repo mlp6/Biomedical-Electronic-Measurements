@@ -199,18 +199,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Ohm’s & Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL, Resistive Loads, Meters  Equivalent Resistance\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nVoltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
-  },
-  {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Frequently Asked Questions",
-    "section": "",
-    "text": "Coming soon…",
-    "crumbs": [
-      "Course Information",
-      "FAQ"
-    ]
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
   },
   {
     "objectID": "problem_sets/ps1.html",
@@ -228,10 +217,43 @@
     "href": "problem_sets/ps1.html#problem-set-format-guidelines",
     "title": "Problem Set 01",
     "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nAlways draw the circuit/diagram for each problem involving a circuit/diagram.\nLabel all circuit elements with symbols.\n\nSolve problems symbolically before substituting in numerical values.\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems. Place comments in the code where appropriate to indicate your thought process.\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 01"
+    ]
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Coming soon…",
+    "crumbs": [
+      "Course Information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps2.html",
+    "href": "problem_sets/ps2.html",
+    "title": "Problem Set 02",
+    "section": "",
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 02"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps2.html#problem-set-format-guidelines",
+    "href": "problem_sets/ps2.html#problem-set-format-guidelines",
+    "title": "Problem Set 02",
+    "section": "Problem Set Format Guidelines",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 02"
     ]
   },
   {
@@ -316,7 +338,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nVoltage & Current  Series & Parallel Resistance  Ohm’s & Kirchhof’s Laws\nIntroduction to Circuits  Ohm’s Law, KCL & KVL, Resistive Loads, Meters  Equivalent Resistance\nSoftware Installation & Tutorials  Problem Set 01\nIntroduction\n\n\nVoltage & Current Dividers  Node Voltage & Mesh Current Analysis  Thevenin & Norton Equivalent Sources  Source Superposition\n\n\nOhm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
