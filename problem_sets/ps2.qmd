@@ -16,7 +16,7 @@ for upload to Gradescope.  This is a good opportunity to make sure you know how
 to do this.
 :::
 
-1. **Variable Resistor / Potentiometer** For the circuit below, determine the
+1. **Variable Resistor / Potentiometer:** For the circuit below, determine the
 power absorbed by the variable resistor ($R$), ranging from 0-20 $\Omega$.  Plot
 the power absorption as a function of $R$.  Your plot should be generated
 "formally" using Python (i.e., not hand-drawn).  Include your code with your
@@ -24,7 +24,7 @@ plot.
 
     ![](images/ps2/pot_power.png)
 
-1. **Internal Source Resistance** For the circuit below, solve for the following:
+1. **Internal Source Resistance:** For the circuit below, solve for the following:
 
     a. Find the total power supplied by the ideal source.  (*Hint: that implies the value of $R_S$)
 
@@ -36,7 +36,10 @@ plot.
 
     ![](images/ps2/source_resistance.png)
 
-1. **Series Resistance**
+1. **Series Resistance:** An incandescent lightbult rated at 100 W will dissipate
+100 W as heat and light when connected to a 100 V ideal voltage source.  If 3 of
+these bulbs are connected in series across this same source, determine the power
+that each bulb will dissipate.
 
 1. **Circuit Analysis**
 
