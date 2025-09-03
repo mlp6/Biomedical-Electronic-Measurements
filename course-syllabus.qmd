@@ -13,13 +13,13 @@ format:
 Dr. Mark Palmeri (`mlp6`)
 
 * Email: [mark.palmeri@duke.edu](mailto:mark.palmeri@duke.edu)
-* [Ed Discussion](https://edstem.org/us/courses/81250) (private message, TAs included)
+* [Ed Discussion](https://edstem.org/us/courses/81250)
 * Office Hours: Tues, 13:00-15:00 (258 Hudson Hall Annex)
 
 ### Teaching Assistants
 
-* Erin O'Kane
-* Olutoni Akintoye
+* Erin O'Kane (Office Hours: Thurs, 12:30-14:30, CIEMAS 2559)
+* Olutoni Akintoye (Office Hours: Sat 12:00-15:00 & Sun 14:00-17:00, Wilkinson 130)
 
 ::: callout-tip
 Questions that can be answered by Dr. Palmeri or a teaching assistant should be
