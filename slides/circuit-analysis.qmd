@@ -1,6 +1,6 @@
 ---
 title: "Circuit Analysis Techniques"
-date: "2025-09-03"
+date: "2025-09-08"
 format:
   live-html: 
     output-file: circuit-analysis-notes.html
@@ -102,6 +102,7 @@ v_5 & = v_C - v_D = v_C
 \end{align}
 $$
 :::
+::::
 
 ::: callout-important
 Note that 5 unknown voltages ($v_{1-5}$) have been reduced to 3 ($v_{A-C}$)!
@@ -165,7 +166,7 @@ i_6 & = \frac{v_D}{R_5}
 \end{align}
 $$
 
-### Substitute element equations $\rightarrow$ KCL equations
+### Sub $v$'s into KCL $i$ expressions
 
 - Node B
 
@@ -184,6 +185,8 @@ $$
 \frac{v_B}{R_3} + v_C\left(\frac{-1}{R_3}-\frac{1}{R_4}-\frac{1}{R_5} \right) + \frac{v_D}{R_5} = 0
 \end{gather}
 $$
+
+---
 
 - Node D
 
@@ -254,6 +257,8 @@ $$
 - $v_3 = v_B - v_{S2}$
 
 - KCL @ B: $i_1 = i_2 + i_3$
+:::
+::::
 
 ### Solve for $v_B$
 
