@@ -26,7 +26,7 @@ plot.
 
 1. **Internal Source Resistance:** For the circuit below, solve for the following:
 
-    a. Find the total power supplied by the ideal source.  (*Hint: that implies the value of $R_S$)
+    a. Find the total power supplied by the ideal source.  (*Hint: that implies the value of $R_S$.*)
 
     a. Find the power dissipated and lost in the nonideal source.
 
