@@ -42,6 +42,8 @@ website:
           text: "Ohm's Law, KCL, and KVL"
         - href: slides/r_eq.qmd
           text: "Series and Parallel Resistance"
+        - href: slides/circuit-analysis.qmd
+          text: "Circuit Analysis Techniques"
       - section: Labs
         contents:
         - href: labs/introduction.qmd

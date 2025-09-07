@@ -1,0 +1,222 @@
+---
+title: "Circuit Analysis Techniques"
+date: "2025-09-03"
+format:
+  live-html: 
+    output-file: circuit-analysis-notes.html
+  live-revealjs: 
+    output-file: circuit-analysis-slides.html
+---
+
+## Learning Objectives
+
+- Practice using voltage and current division, with equivalent resistances, to analyze circuits.
+
+- Introduce and implement Node Voltage Analysis (NVA)
+
+- Introduce and implement Mesh Current Analysis (MCA)
+
+## Solve for $v_o$ Using Voltage Division
+
+![](images/r_eq_ckt_labeled_sw_closed.png){fig-align="center"}
+
+::: {style="text-align: center;"}
+Given: $v_s = 300 V$, $R_1 = R_2 = R_0 = 100 \Omega$, $R_3 = 200 \Omega$
+:::
+
+### Step 1: Solve for $v_o$ in terms of $v_3$
+
+![](images/r_eq_ckt_labeled_sw_closed.png){fig-align="center"}
+
+- Voltage division of nodes $B \rightarrow C \rightarrow D$.
+
+- $v_o = v_3 \frac{R_o}{R_o + R_2}$
+
+### Step 2: Solve for $v_3$ in terms of $v_s$
+
+$$
+\begin{gather}
+v_3 = v_s \frac{R_3 || (R_o + R_2)}{R_1 + R_3 || (R_o+R_2)} \\
+v_o = 75 V
+\end{gather}
+$$
+
+::: callout-note
+We didn't have the explicitly use KCL, KVL or Ohm's law (*but they are all in play for the voltage division and equivalent resistance relationships*)!
+:::
+
+## Solve for $i_1(R_x)$ Using Current Division 
+
+![](images/current_division_example.png){fig-align="center"}
+
+### Simplify to Equivalent Circuit with Two Branches
+
+$$
+\begin{gather}
+i_1 = i_s \frac{R_{eq}}{R_1 + R_{eq}} \\
+R_{eq} = R_2 || (R+R') \\
+\end{gather}
+$$
+
+Let $R_3 = R + R'$ (series equivalent), just to make expression easier to read.
+
+$$
+i_1 = i_s \frac{R_2 R_3}{R_2 R_3 + R_1 R_3 + R_1 R_2}
+$$
+
+## Node Voltage Analysis (NVA)
+
+- More complex circuits will quickly become overwhelming with number of simultaneous equations to solve based on KVL, KCL and Ohm's law.
+
+::: {.callout-note title="Example"}
+A circuit with 6 elements yields 12 equations and 12 unknowns!
+:::
+
+- One approach to reducing this number of equations and unknowns is to express the system of circuit analysis equiations in terms of **node voltages**.
+
+![](images/node_voltage_R.png){fig-align="center"}
+
+$$
+\begin{gather}
+i_R = \frac{v_A - v_B}{R} \\
+v_R = v_A - v_B
+\end{gather}
+$$
+
+### NVA: General Approach
+
+- Label nodes, reference (`GND` = 0), and component voltages.
+
+:::: {.columns}
+::: {.column width=60%}
+![](images/nva_general_approach.png){fig-align="center"}
+:::
+::: {.column width=40%}
+$$
+\begin{align}
+v_1 & = v_A - v_D = v_A \\
+v_2 & = v_A - v_B \\
+v_3 & = v_B - v_D = v_B \\
+v_4 & = v_B - v_C \\
+v_5 & = v_C - v_D = v_C 
+\end{align}
+$$
+:::
+
+::: callout-important
+Note that 5 unknown voltages ($v_{1-5}$) have been reduced to 3 ($v_{A-C}$)!
+:::
+
+- Nodes shared by components get reduced.
+
+- The reference (ground) node is 0.
+
+### NVA Example: Ladder Circuit
+
+![](images/nva_ladder_ckt.png){fig-align="center"}
+
+- Identify & label all nodes.
+
+- Label component voltages.
+
+- Select & label reference node (ground).
+
+::: callout-tip
+Choose a reference node that is shared by a lot of components.  Since it is "0", that node will disappear from all equations.
+:::
+
+### Write element voltages in terms of node voltages.
+
+![](images/nva_ladder_ckt.png){fig-align="center"}
+
+$$
+\begin{align}
+v_E & = 0 \\
+v_s & = v_A - v_E = v_A \\
+v_1 & = v_A - v_B \\
+v_2 & = v_B - v_E = v_B \\
+v_3 & = v_B - v_C \\
+v_4 & = v_C - v_E = v_C \\
+v_5 & = v_C - v_D \\
+v_6 & = v_D - v_E = v_D
+\end{align}
+$$
+
+### Apply KCL at nodes (except at sources and reference)
+
+$$
+\begin{align}
+B & : i_1 = i_2 + i_3 \\
+C & : i_3 = i_4 + i_5 \\
+D & : i_5 = i_6
+\end{align}
+$$
+
+### Apply Ohm's Law (to relate $i$s to $v$s)
+
+$$
+\begin{align}
+i_1 & = \frac{v_A - v_B}{R_1} = \frac{v_S - v_B}{R_1} \\
+i_2 & = \frac{v_B}{R_2} \\
+i_3 & = \frac{v_B - v_C}{R_3} \\
+i_4 & = \frac{v_C}{R_4} \\
+i_5 & = \frac{v_C - v_D}{R_5} \\
+i_6 & = \frac{v_D}{R_5}
+\end{align}
+$$
+
+### Substitute element equations $\rightarrow$ KCL equations
+
+- Node B
+
+$$
+\begin{gather}
+\frac{v_s - v_B}{R_1} = \frac{v_B}{R_2} + \frac{v_B-v_C}{R_3} \\
+v_B\left( \frac{-1}{R_1}-\frac{1}{R_2}-\frac{1}{R_3} \right) + \frac{v_C}{R_3} = \frac{-v_s}{R_1}
+\end{gather}
+$$
+
+- Node C
+
+$$
+\begin{gather}
+\frac{v_B-v_C}{R_3} = \frac{v_C}{R_4} + \frac{v_C-v_D}{R_5} \\
+\frac{v_B}{R_3} + v_C\left(\frac{-1}{R_3}-\frac{1}{R_4}-\frac{1}{R_5} \right) + \frac{v_D}{R_5} = 0
+\end{gather}
+$$
+
+- Node D
+
+$$
+\begin{gather}
+\frac{v_C - v_D}{R_5} = \frac{v_D}{R_6} \\
+\frac{v_C}{R_5}+v_D\left(\frac{-1}{R_5}-\frac{1}{R_6} \right) = 0
+\end{gather}
+$$
+
+### Solve Simultaneous Equations
+
+- We now have 3 equations and 3 unknowns!
+
+- Setup 3x3 matrix with 3 linear, independent rows and columns to solve for $[v]$.
+
+$$
+\begin{bmatrix}
+\left(-\frac{1}{R_1}-\frac{1}{R_2}-\frac{1}{R_3}\right) & \frac{1}{R_3} & 0 \\
+\frac{1}{R_3} & \left(-\frac{1}{R_3}-\frac{1}{R_4}-\frac{1}{R_5}\right) & \frac{1}{R_5} \\
+0 & \frac{1}{R_5} & \left(-\frac{1}{R_5}-\frac{1}{R_6}\right) 
+\end{bmatrix}
+\begin{bmatrix}
+v_B \\
+v_C \\
+v_D
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{-v_s}{R_1} \\
+0 \\
+0
+\end{bmatrix}
+$$
+
+- Solve for $[v]$ and then relative back to element equations to solve for element voltages and currents.
