@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Duke BME">
-<meta name="dcterms.date" content="2025-10-01">
+<meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
+<meta name="dcterms.date" content="2025-09-08">
 
-<title>Transformers &amp; Diodes – Biomedical Electronic Measurements</title>
+<title>Circuit Analysis Techniques – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-fced259a1985fd972ecb57c7cd45153f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-996cf6f23eb4eafe8d88ce9e7f038e2f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e89caad7b8eed9b4925a1559a1d81c73.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,9 +70,40 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -82,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/transformers_diodes.html">Transformers and Diodes</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/circuit-analysis-notes.html">Circuit Analysis Techniques</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -181,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/circuit-analysis-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/circuit-analysis-notes.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Circuit Analysis Techniques</span></a>
   </div>
 </li>
@@ -240,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/transformers_diodes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../labs/transformers_diodes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transformers and Diodes</span></a>
   </div>
 </li>
@@ -309,36 +342,70 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#solve-for-v_o-using-voltage-division" id="toc-solve-for-v_o-using-voltage-division" class="nav-link" data-scroll-target="#solve-for-v_o-using-voltage-division">Solve for <span class="math inline">\(v_o\)</span> Using Voltage Division</a>
+  <ul class="collapse">
+  <li><a href="#step-1-solve-for-v_o-in-terms-of-v_3" id="toc-step-1-solve-for-v_o-in-terms-of-v_3" class="nav-link" data-scroll-target="#step-1-solve-for-v_o-in-terms-of-v_3">Step 1: Solve for <span class="math inline">\(v_o\)</span> in terms of <span class="math inline">\(v_3\)</span></a></li>
+  <li><a href="#step-2-solve-for-v_3-in-terms-of-v_s" id="toc-step-2-solve-for-v_3-in-terms-of-v_s" class="nav-link" data-scroll-target="#step-2-solve-for-v_3-in-terms-of-v_s">Step 2: Solve for <span class="math inline">\(v_3\)</span> in terms of <span class="math inline">\(v_s\)</span></a></li>
+  </ul></li>
+  <li><a href="#solve-for-i_1r_x-using-current-division" id="toc-solve-for-i_1r_x-using-current-division" class="nav-link" data-scroll-target="#solve-for-i_1r_x-using-current-division">Solve for <span class="math inline">\(i_1(R_x)\)</span> Using Current Division</a>
+  <ul class="collapse">
+  <li><a href="#simplify-to-equivalent-circuit-with-two-branches" id="toc-simplify-to-equivalent-circuit-with-two-branches" class="nav-link" data-scroll-target="#simplify-to-equivalent-circuit-with-two-branches">Simplify to Equivalent Circuit with Two Branches</a></li>
+  </ul></li>
+  <li><a href="#node-voltage-analysis-nva" id="toc-node-voltage-analysis-nva" class="nav-link" data-scroll-target="#node-voltage-analysis-nva">Node Voltage Analysis (NVA)</a>
+  <ul class="collapse">
+  <li><a href="#nva-general-approach" id="toc-nva-general-approach" class="nav-link" data-scroll-target="#nva-general-approach">NVA: General Approach</a></li>
+  <li><a href="#nva-example-ladder-circuit" id="toc-nva-example-ladder-circuit" class="nav-link" data-scroll-target="#nva-example-ladder-circuit">NVA Example: Ladder Circuit</a></li>
+  <li><a href="#write-element-voltages-in-terms-of-node-voltages." id="toc-write-element-voltages-in-terms-of-node-voltages." class="nav-link" data-scroll-target="#write-element-voltages-in-terms-of-node-voltages.">Write element voltages in terms of node voltages.</a></li>
+  <li><a href="#apply-kcl-at-nodes-except-at-sources-and-reference" id="toc-apply-kcl-at-nodes-except-at-sources-and-reference" class="nav-link" data-scroll-target="#apply-kcl-at-nodes-except-at-sources-and-reference">Apply KCL at nodes (except at sources and reference)</a></li>
+  <li><a href="#apply-ohms-law-to-relate-is-to-vs" id="toc-apply-ohms-law-to-relate-is-to-vs" class="nav-link" data-scroll-target="#apply-ohms-law-to-relate-is-to-vs">Apply Ohm’s Law (to relate <span class="math inline">\(i\)</span>s to <span class="math inline">\(v\)</span>s)</a></li>
+  <li><a href="#sub-vs-into-kcl-i-expressions" id="toc-sub-vs-into-kcl-i-expressions" class="nav-link" data-scroll-target="#sub-vs-into-kcl-i-expressions">Sub <span class="math inline">\(v\)</span>’s into KCL <span class="math inline">\(i\)</span> expressions</a></li>
+  <li><a href="#solve-simultaneous-equations" id="toc-solve-simultaneous-equations" class="nav-link" data-scroll-target="#solve-simultaneous-equations">Solve Simultaneous Equations</a></li>
+  </ul></li>
+  <li><a href="#nva-example-two-sources" id="toc-nva-example-two-sources" class="nav-link" data-scroll-target="#nva-example-two-sources">NVA Example: Two-Sources</a>
+  <ul class="collapse">
+  <li><a href="#setup-nva-equations" id="toc-setup-nva-equations" class="nav-link" data-scroll-target="#setup-nva-equations">Setup NVA Equations</a></li>
+  <li><a href="#solve-for-v_b" id="toc-solve-for-v_b" class="nav-link" data-scroll-target="#solve-for-v_b">Solve for <span class="math inline">\(v_B\)</span></a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="circuit-analysis-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/transformers_diodes.html">Transformers and Diodes</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/circuit-analysis-notes.html">Circuit Analysis Techniques</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Transformers &amp; Diodes</h1>
-<p class="subtitle lead">BME253L - Fall 2025 - Palmeri</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Lab</div>
-  </div>
-  </div>
+<h1 class="title">Circuit Analysis Techniques</h1>
+<p class="subtitle lead">BME253L - Fall 2025</p>
+</div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Dr.&nbsp;Mark Palmeri, M.D., Ph.D. </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Duke University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Duke BME </p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2025</p>
+      <p class="date">September 8, 2025</p>
     </div>
   </div>
   
@@ -350,12 +417,362 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_trans_hout.pdf" width="100%" height="800px" style="border:none;">
-</iframe>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li><p>Practice using voltage and current division, with equivalent resistances, to analyze circuits.</p></li>
+<li><p>Introduce and implement Node Voltage Analysis (NVA)</p></li>
+<li><p>Introduce and implement Mesh Current Analysis (MCA)</p></li>
+</ul>
+</section>
+<section id="solve-for-v_o-using-voltage-division" class="level2">
+<h2 class="anchored" data-anchor-id="solve-for-v_o-using-voltage-division">Solve for <span class="math inline">\(v_o\)</span> Using Voltage Division</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/r_eq_ckt_labeled_sw_closed.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div style="text-align: center;">
+<p>Given: <span class="math inline">\(v_s = 300 V\)</span>, <span class="math inline">\(R_1 = R_2 = R_0 = 100 \Omega\)</span>, <span class="math inline">\(R_3 = 200 \Omega\)</span></p>
+</div>
+<section id="step-1-solve-for-v_o-in-terms-of-v_3" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-solve-for-v_o-in-terms-of-v_3">Step 1: Solve for <span class="math inline">\(v_o\)</span> in terms of <span class="math inline">\(v_3\)</span></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/r_eq_ckt_labeled_sw_closed.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p>Voltage division of nodes <span class="math inline">\(B \rightarrow C \rightarrow D\)</span>.</p></li>
+<li><p><span class="math inline">\(v_o = v_3 \frac{R_o}{R_o + R_2}\)</span></p></li>
+</ul>
+</section>
+<section id="step-2-solve-for-v_3-in-terms-of-v_s" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-solve-for-v_3-in-terms-of-v_s">Step 2: Solve for <span class="math inline">\(v_3\)</span> in terms of <span class="math inline">\(v_s\)</span></h3>
+<p><span class="math display">\[
+\begin{gather}
+v_3 = v_s \frac{R_3 || (R_o + R_2)}{R_1 + R_3 || (R_o+R_2)} \\
+v_o = 75 V
+\end{gather}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We didn’t have the explicitly use KCL, KVL or Ohm’s law (<em>but they are all in play for the voltage division and equivalent resistance relationships</em>)!</p>
+</div>
+</div>
+</section>
+</section>
+<section id="solve-for-i_1r_x-using-current-division" class="level2">
+<h2 class="anchored" data-anchor-id="solve-for-i_1r_x-using-current-division">Solve for <span class="math inline">\(i_1(R_x)\)</span> Using Current Division</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/current_division_example.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<section id="simplify-to-equivalent-circuit-with-two-branches" class="level3">
+<h3 class="anchored" data-anchor-id="simplify-to-equivalent-circuit-with-two-branches">Simplify to Equivalent Circuit with Two Branches</h3>
+<p><span class="math display">\[
+\begin{gather}
+i_1 = i_s \frac{R_{eq}}{R_1 + R_{eq}} \\
+R_{eq} = R_2 || (R+R') \\
+\end{gather}
+\]</span></p>
+<p>Let <span class="math inline">\(R_3 = R + R'\)</span> (series equivalent), just to make expression easier to read.</p>
+<p><span class="math display">\[
+i_1 = i_s \frac{R_2 R_3}{R_2 R_3 + R_1 R_3 + R_1 R_2}
+\]</span></p>
+</section>
+</section>
+<section id="node-voltage-analysis-nva" class="level2">
+<h2 class="anchored" data-anchor-id="node-voltage-analysis-nva">Node Voltage Analysis (NVA)</h2>
+<ul>
+<li>More complex circuits will quickly become overwhelming with number of simultaneous equations to solve based on KVL, KCL and Ohm’s law.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A circuit with 6 elements yields 12 equations and 12 unknowns!</p>
+</div>
+</div>
+<ul>
+<li>One approach to reducing this number of equations and unknowns is to express the system of circuit analysis equiations in terms of <strong>node voltages</strong>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/node_voltage_R.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\begin{gather}
+i_R = \frac{v_A - v_B}{R} \\
+v_R = v_A - v_B
+\end{gather}
+\]</span></p>
+<section id="nva-general-approach" class="level3">
+<h3 class="anchored" data-anchor-id="nva-general-approach">NVA: General Approach</h3>
+<ul>
+<li>Label nodes, reference (<code>GND</code> = 0), and component voltages.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/nva_general_approach.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p><span class="math display">\[
+\begin{align}
+v_1 &amp; = v_A - v_D = v_A \\
+v_2 &amp; = v_A - v_B \\
+v_3 &amp; = v_B - v_D = v_B \\
+v_4 &amp; = v_B - v_C \\
+v_5 &amp; = v_C - v_D = v_C
+\end{align}
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that 5 unknown voltages (<span class="math inline">\(v_{1-5}\)</span>) have been reduced to 3 (<span class="math inline">\(v_{A-C}\)</span>)!</p>
+</div>
+</div>
+<ul>
+<li><p>Nodes shared by components get reduced.</p></li>
+<li><p>The reference (ground) node is 0.</p></li>
+</ul>
+</section>
+<section id="nva-example-ladder-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="nva-example-ladder-circuit">NVA Example: Ladder Circuit</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/nva_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p>Identify &amp; label all nodes.</p></li>
+<li><p>Label component voltages.</p></li>
+<li><p>Select &amp; label reference node (ground).</p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Choose a reference node that is shared by a lot of components. Since it is “0”, that node will disappear from all equations.</p>
+</div>
+</div>
+</section>
+<section id="write-element-voltages-in-terms-of-node-voltages." class="level3">
+<h3 class="anchored" data-anchor-id="write-element-voltages-in-terms-of-node-voltages.">Write element voltages in terms of node voltages.</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/nva_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\begin{align}
+v_E &amp; = 0 \\
+v_s &amp; = v_A - v_E = v_A \\
+v_1 &amp; = v_A - v_B \\
+v_2 &amp; = v_B - v_E = v_B \\
+v_3 &amp; = v_B - v_C \\
+v_4 &amp; = v_C - v_E = v_C \\
+v_5 &amp; = v_C - v_D \\
+v_6 &amp; = v_D - v_E = v_D
+\end{align}
+\]</span></p>
+</section>
+<section id="apply-kcl-at-nodes-except-at-sources-and-reference" class="level3">
+<h3 class="anchored" data-anchor-id="apply-kcl-at-nodes-except-at-sources-and-reference">Apply KCL at nodes (except at sources and reference)</h3>
+<p><span class="math display">\[
+\begin{align}
+B &amp; : i_1 = i_2 + i_3 \\
+C &amp; : i_3 = i_4 + i_5 \\
+D &amp; : i_5 = i_6
+\end{align}
+\]</span></p>
+</section>
+<section id="apply-ohms-law-to-relate-is-to-vs" class="level3">
+<h3 class="anchored" data-anchor-id="apply-ohms-law-to-relate-is-to-vs">Apply Ohm’s Law (to relate <span class="math inline">\(i\)</span>s to <span class="math inline">\(v\)</span>s)</h3>
+<p><span class="math display">\[
+\begin{align}
+i_1 &amp; = \frac{v_A - v_B}{R_1} = \frac{v_S - v_B}{R_1} \\
+i_2 &amp; = \frac{v_B}{R_2} \\
+i_3 &amp; = \frac{v_B - v_C}{R_3} \\
+i_4 &amp; = \frac{v_C}{R_4} \\
+i_5 &amp; = \frac{v_C - v_D}{R_5} \\
+i_6 &amp; = \frac{v_D}{R_5}
+\end{align}
+\]</span></p>
+</section>
+<section id="sub-vs-into-kcl-i-expressions" class="level3">
+<h3 class="anchored" data-anchor-id="sub-vs-into-kcl-i-expressions">Sub <span class="math inline">\(v\)</span>’s into KCL <span class="math inline">\(i\)</span> expressions</h3>
+<ul>
+<li>Node B</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+\frac{v_s - v_B}{R_1} = \frac{v_B}{R_2} + \frac{v_B-v_C}{R_3} \\
+v_B\left( \frac{-1}{R_1}-\frac{1}{R_2}-\frac{1}{R_3} \right) + \frac{v_C}{R_3} = \frac{-v_s}{R_1}
+\end{gather}
+\]</span></p>
+<ul>
+<li>Node C</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+\frac{v_B-v_C}{R_3} = \frac{v_C}{R_4} + \frac{v_C-v_D}{R_5} \\
+\frac{v_B}{R_3} + v_C\left(\frac{-1}{R_3}-\frac{1}{R_4}-\frac{1}{R_5} \right) + \frac{v_D}{R_5} = 0
+\end{gather}
+\]</span></p>
+<hr>
+<ul>
+<li>Node D</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+\frac{v_C - v_D}{R_5} = \frac{v_D}{R_6} \\
+\frac{v_C}{R_5}+v_D\left(\frac{-1}{R_5}-\frac{1}{R_6} \right) = 0
+\end{gather}
+\]</span></p>
+</section>
+<section id="solve-simultaneous-equations" class="level3">
+<h3 class="anchored" data-anchor-id="solve-simultaneous-equations">Solve Simultaneous Equations</h3>
+<ul>
+<li><p>We now have 3 equations and 3 unknowns!</p></li>
+<li><p>Setup 3x3 matrix with 3 linear, independent rows and columns to solve for <span class="math inline">\([v]\)</span>.</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{bmatrix}
+\left(-\frac{1}{R_1}-\frac{1}{R_2}-\frac{1}{R_3}\right) &amp; \frac{1}{R_3} &amp; 0 \\
+\frac{1}{R_3} &amp; \left(-\frac{1}{R_3}-\frac{1}{R_4}-\frac{1}{R_5}\right) &amp; \frac{1}{R_5} \\
+0 &amp; \frac{1}{R_5} &amp; \left(-\frac{1}{R_5}-\frac{1}{R_6}\right)
+\end{bmatrix}
+\begin{bmatrix}
+v_B \\
+v_C \\
+v_D
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{-v_s}{R_1} \\
+0 \\
+0
+\end{bmatrix}
+\]</span></p>
+<ul>
+<li>Solve for <span class="math inline">\([v]\)</span> and then relative back to element equations to solve for element voltages and currents.</li>
+</ul>
+</section>
+</section>
+<section id="nva-example-two-sources" class="level2">
+<h2 class="anchored" data-anchor-id="nva-example-two-sources">NVA Example: Two-Sources</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/nva_two_sources.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li><p>Nodes A &amp; C are set by two voltage sources.</p>
+<ul>
+<li><p><span class="math inline">\(v_A = v_{S1}\)</span></p></li>
+<li><p><span class="math inline">\(v_B = v_{S2}\)</span></p></li>
+</ul></li>
+<li><p>Node D is reference (0).</p></li>
+<li><p>Only <span class="math inline">\(v_B\)</span> is unknown.</p></li>
+</ul>
+</div>
+</div>
+<section id="setup-nva-equations" class="level3">
+<h3 class="anchored" data-anchor-id="setup-nva-equations">Setup NVA Equations</h3>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/nva_two_sources.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<ul>
+<li><p><span class="math inline">\(v_1 = v_{S1} - v_B\)</span></p></li>
+<li><p><span class="math inline">\(v_2 = v_B\)</span></p></li>
+<li><p><span class="math inline">\(v_3 = v_B - v_{S2}\)</span></p></li>
+<li><p>KCL @ B: <span class="math inline">\(i_1 = i_2 + i_3\)</span></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="solve-for-v_b" class="level3">
+<h3 class="anchored" data-anchor-id="solve-for-v_b">Solve for <span class="math inline">\(v_B\)</span></h3>
+<p><span class="math display">\[
+\begin{gather}
+\frac{v_{S1} - v_B}{R_1} = \frac{v_B}{R_2} + \frac{v_B - V_{S2}}{R_3} \\
+v_B = \frac{\frac{v_{S1}}{R_1} + \frac{v_{S2}}{R_3}}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}}
+\end{gather}
+\]</span></p>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+</section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../slides";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -760,4 +1177,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

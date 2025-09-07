@@ -12,8 +12,8 @@
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
-  <meta name="dcterms.date" content="2025-09-03">
-  <title>Biomedical Electronic Measurements – Switched, Series &amp; Parallel Resistance</title>
+  <meta name="dcterms.date" content="2025-09-08">
+  <title>Biomedical Electronic Measurements – Circuit Analysis Techniques</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -132,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Switched, Series &amp; Parallel Resistance</h1>
+  <h1 class="title">Circuit Analysis Techniques</h1>
   <p class="subtitle">BME253L - Fall 2025</p>
 
 <div class="quarto-title-authors">
@@ -146,495 +146,40 @@ Dr.&nbsp;Mark Palmeri, M.D., Ph.D.
     </div>
 </div>
 
-  <p class="date">September 3, 2025</p>
+  <p class="date">September 8, 2025</p>
 </section>
 <section id="learning-objectives" class="title-slide slide level2 center">
 <h2>Learning Objectives</h2>
 <ul>
-<li><p>Solve [switched] resistive circuits.</p></li>
-<li><p>Simplify series and parallel resistance networks <span class="math inline">\(\rightarrow\)</span> equivalent resistance.</p></li>
-</ul>
-</section>
-
-<section id="review-from-last-lecture" class="title-slide slide level2 center">
-<h2>Review from Last Lecture</h2>
-<ul>
-<li><p>KCL, KVL &amp; Ohm’s Law</p></li>
-<li><p>Balance of Power</p></li>
-<li><p>Resistive Loads</p></li>
-<li><p>[Non-]ideal Sources</p></li>
-<li><p>Measuring Voltage &amp; Current</p></li>
+<li><p>Practice using voltage and current division, with equivalent resistances, to analyze circuits.</p></li>
+<li><p>Introduce and implement Node Voltage Analysis (NVA)</p></li>
+<li><p>Introduce and implement Mesh Current Analysis (MCA)</p></li>
 </ul>
 </section>
 
 <section>
-<section id="analyzing-switched-resistive-circuit" class="title-slide slide level2 center">
-<h2>Analyzing Switched Resistive Circuit</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><img data-src="images/r_eq_ckt.png"></p>
-</div><div class="column" style="width:30%;">
-<p>Given:</p>
-<ul>
-<li><span class="math inline">\(v_s\)</span> = 300 V</li>
-<li><span class="math inline">\(R_1\)</span> = 100 <span class="math inline">\(\Omega\)</span></li>
-<li><span class="math inline">\(R_2\)</span> = 100 <span class="math inline">\(\Omega\)</span></li>
-<li><span class="math inline">\(R_3\)</span> = 200 <span class="math inline">\(\Omega\)</span></li>
-<li><span class="math inline">\(R_o\)</span> = 100 <span class="math inline">\(\Omega\)</span></li>
-</ul>
-</div></div>
-<p><strong>Find <span class="math inline">\(v_o\)</span> with both the switch open and closed.</strong></p>
-<p>We will start with the switch open case…</p>
-</section>
-<section id="step-1-assign-label-nodes-voltage-references-currents" class="slide level3">
-<h3>Step 1: Assign &amp; Label Nodes, Voltage References &amp; Currents</h3>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>Use the (+) sign convention!</p>
-</div>
-</div>
-</div>
+<section id="solve-for-v_o-using-voltage-division" class="title-slide slide level2 center">
+<h2>Solve for <span class="math inline">\(v_o\)</span> Using Voltage Division</h2>
 
-<img data-src="images/r_eq_ckt_labeled.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="what-does-the-open-switch-mean" class="slide level3">
-<h3>What does the open switch mean?</h3>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>An open switch means no current can flow through <span class="math inline">\(R_3\)</span>!</p>
-</div>
-</div>
-</div>
-
-<img data-src="images/r_eq_ckt_labeled_sw_open.png" class="r-stretch"></section>
-<section id="step-2-kvl-kcl" class="slide level3">
-<h3>Step 2: KVL &amp; KCL</h3>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="images/r_eq_ckt_labeled_sw_open.png"></p>
-</div><div class="column" style="width:40%;">
-<ul>
-<li><p>KVL</p>
-<ul>
-<li><p><span class="math inline">\(D \rightarrow A \rightarrow B \rightarrow C \rightarrow D\)</span></p></li>
-<li><p><span class="math inline">\(-v_s + v_1 + v_2 + v_o = 0\)</span></p></li>
-</ul></li>
-<li><p>KCL</p>
-<ul>
-<li><p><span class="math inline">\(A: i_s = i_1\)</span></p></li>
-<li><p><span class="math inline">\(B: i_1 = i_2\)</span></p></li>
-<li><p><span class="math inline">\(C: i_2 = i_o\)</span></p></li>
-<li><p>So, <span class="math inline">\(i_s = i_1 = i_2 = i_o\)</span></p></li>
-</ul></li>
-</ul>
-</div></div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>This is one, closed-path loop!</p>
-</div>
-</div>
+<img data-src="images/r_eq_ckt_labeled_sw_closed.png" class="quarto-figure quarto-figure-center r-stretch"><div style="text-align: center;">
+<p>Given: <span class="math inline">\(v_s = 300 V\)</span>, <span class="math inline">\(R_1 = R_2 = R_0 = 100 \Omega\)</span>, <span class="math inline">\(R_3 = 200 \Omega\)</span></p>
 </div>
 </section>
-<section id="step-3-apply-element-equations-ohms-law" class="slide level3">
-<h3>Step 3: Apply Element Equations (Ohm’s Law)</h3>
-<ul>
-<li><p>Ohms’ Law</p>
-<ul>
-<li><p><span class="math inline">\(v_1 = R_1 i_s\)</span></p></li>
-<li><p><span class="math inline">\(v_2 = R_2 i_s\)</span></p></li>
-<li><p><span class="math inline">\(v_o = R_o i_s\)</span></p></li>
-</ul></li>
-<li><p>Substitute voltage expressions into KVL expression, all in terms of <span class="math inline">\(i_s\)</span>:</p></li>
+<section id="step-1-solve-for-v_o-in-terms-of-v_3" class="slide level3">
+<h3>Step 1: Solve for <span class="math inline">\(v_o\)</span> in terms of <span class="math inline">\(v_3\)</span></h3>
+
+<img data-src="images/r_eq_ckt_labeled_sw_closed.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><p>Voltage division of nodes <span class="math inline">\(B \rightarrow C \rightarrow D\)</span>.</p></li>
+<li><p><span class="math inline">\(v_o = v_3 \frac{R_o}{R_o + R_2}\)</span></p></li>
 </ul>
+</section>
+<section id="step-2-solve-for-v_3-in-terms-of-v_s" class="slide level3">
+<h3>Step 2: Solve for <span class="math inline">\(v_3\)</span> in terms of <span class="math inline">\(v_s\)</span></h3>
 <p><span class="math display">\[
 \begin{gather}
--v_s + R_1 i_s + R_2 i_s + R_o i_s = 0 \\
-v_s = i_s \left( R_1 + R_2 + R_0 \right)
+v_3 = v_s \frac{R_3 || (R_o + R_2)}{R_1 + R_3 || (R_o+R_2)} \\
+v_o = 75 V
 \end{gather}
-\]</span></p>
-<div title="Series Resistance Foreshadowing">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Series Resistance Foreshadowing</strong></p>
-</div>
-<div class="callout-content">
-<p>Notice the sum of the resistors…</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level3">
-
-<p><span class="math display">\[
-\begin{gather}
-i_s = \frac{v_s}{R_1 + R_2 + R_3} = \frac{300 V}{300 \Omega} = 1 A \\
-v_o = R_o i_s = (100 \Omega) (1 A) = 100 V
-\end{gather}
-\]</span></p>
-</section>
-<section id="step-4-check-power-balanace" class="slide level3">
-<h3>Step 4: Check Power Balanace</h3>
-<p><span class="math display">\[
-\begin{gather}
-P = IV = I^2 R = \frac{V^2}{R} \\
-\Sigma_n P_n = 0 \\
-(-300 V)(1 A) + (1 A)^2(100 \Omega) + (1 A)^2(100 \Omega) + (1 A)^2(100 \Omega) = 0 ✅
-\end{gather}
-\]</span></p>
-</section></section>
-<section>
-<section id="next-closed-switch" class="title-slide slide level2 center">
-<h2>Next: Closed Switch</h2>
-
-</section>
-<section id="step-1-assign-label-nodes-voltage-references-currents-1" class="slide level3">
-<h3>Step 1: Assign &amp; Label Nodes, Voltage References &amp; Currents</h3>
-
-<img data-src="images/r_eq_ckt_labeled_sw_closed.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="step-2-kvl-kcl-1" class="slide level3">
-<h3>Step 2: KVL &amp; KCL</h3>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/r_eq_ckt_labeled_sw_closed.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:40%;">
-<ul>
-<li><p>KVL</p>
-<ul>
-<li><p><span class="math inline">\(D \rightarrow A \rightarrow B \rightarrow C \rightarrow D\)</span></p>
-<ul>
-<li><span class="math inline">\(-v_s + v_1 + v_2 + v_o = 0\)</span></li>
-</ul></li>
-<li><p><span class="math inline">\(D \rightarrow A \rightarrow B \rightarrow D\)</span></p>
-<ul>
-<li><span class="math inline">\(-v_s + v_1 + v_3 = 0\)</span></li>
-</ul></li>
-<li><p><span class="math inline">\(D \rightarrow B \rightarrow C \rightarrow D\)</span></p>
-<ul>
-<li><span class="math inline">\(-v_3 + v_2 + v_0 = 0\)</span></li>
-</ul></li>
-</ul></li>
-</ul>
-</div></div>
-</section>
-<section class="slide level3">
-
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/r_eq_ckt_labeled_sw_closed.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:40%;">
-<ul>
-<li><p>KCL</p>
-<ul>
-<li><p><span class="math inline">\(A: i_s = i_1\)</span></p></li>
-<li><p><span class="math inline">\(B: i_1 = i_2 + i_3\)</span></p></li>
-<li><p><span class="math inline">\(C: i_2 = i_o\)</span></p></li>
-<li><p><span class="math inline">\(D: i_3 + i_o = i_s\)</span></p></li>
-</ul></li>
-</ul>
-</div></div>
-</section>
-<section id="step-3-element-constraints" class="slide level3">
-<h3>Step 3: Element Constraints</h3>
-<p><span class="math display">\[
-\begin{gather}
-v_1 = i_1 R_1 \\
-v_2 = i_2 R_2 \\
-v_3 = i_3 R_3 \\
-v_o = i_o R_o
-\end{gather}
-\]</span></p>
-<p>Next, start to solve!</p>
-</section>
-<section class="slide level3">
-
-<ol type="1">
-<li><p>Substitute current expressions into Ohm’s law relationships:</p>
-<p><span class="math display">\[
-\begin{gather}
-i_s = i_1 = i_3 + i_o \\
-i_2 = i_0 \\
-v_1 = R_1 \left(i_o + i_3\right) \\
-v_2 = i_o R_2
-\end{gather}
-\]</span></p></li>
-</ol>
-</section>
-<section class="slide level3">
-
-<ol start="2" type="1">
-<li><p>Substitute these expressions into KVL equations:</p>
-<ol type="a">
-<li><p>First KVL expression: <span class="math display">\[
-\begin{gather}
--v_s + R_1 i_o + R_1 i_3 + i_o R_2 + i_o R_o = 0 \\
--v_s + i_o \left(R_1 + R_2 + R_o\right) + i_3 R_1 = 0
-\end{gather}
-\]</span></p></li>
-<li><p>Second KVL expression:</p></li>
-</ol>
-<p><span class="math display">\[
-\begin{gather}
--v_s + R_1 i_o + R_1 i_3 + R_3 i_3 = 0 \\
--v_s + R_1 i_o + i_3 \left(R_1 + R_3 \right) = 0
-\end{gather}
-\]</span></p></li>
-</ol>
-</section>
-<section class="slide level3">
-
-<ol start="3" type="1">
-<li>Solve for <span class="math inline">\(i_3\)</span> in the first expression and substitute it into the second expression:</li>
-</ol>
-<p><span class="math display">\[
-\begin{gather}
-i_3 = \frac{v_s - i_o \left(R_1 + R_2 + R_o\right)}{R_1} \\
--v_s + R_1 i_o + \left(\frac{R_1 + R_3}{R_1}\right)\left[ v_s - i_o \left(R_1 + R_2 + R_o\right)\right] = 0
-\end{gather}
-\]</span></p>
-<ol start="4" type="1">
-<li>Solve for <span class="math inline">\(i_o\)</span> and <span class="math inline">\(v_o\)</span>:</li>
-</ol>
-<p><span class="math display">\[
-v_s \left[ -1 + \frac{R_1 + R_3}{R_1} \right] = i_o \left[ \frac{R_1 + R_3}{R_1} \left( R_1 + R_2 + R_o \right) - R_1 \right] \\
-\]</span></p>
-</section>
-<section class="slide level3">
-
-<p><span class="math inline">\(v_s\)</span> and all the <span class="math inline">\(R\)</span> values are given, so: <span class="math display">\[
-\begin{gather}
-i_o = 0.75 A \\
-v_o = i_o R_o = (0.75 A) (100 \Omega) = 75 V
-\end{gather}
-\]</span></p>
-</section>
-<section id="step-4-check-power-balance" class="slide level3">
-<h3>Step 4: Check Power Balance</h3>
-<p><span class="math display">\[
-\begin{align}
-P_1 &amp; = (100 \Omega) \left( i_o + i_3 \right)^2\\
-i_3 &amp; = \frac{v_s - i_o\left(R_1 + R_2 +R_3\right)}{R_1} = 0.75 A \\
-P_1 &amp; = 225 W \\
-P_2 &amp; = (100 \Omega) i_o^2 = 56.25 W \\
-P_3 &amp; = (200 \Omega) i_3^2 = 112.5 W \\
-P_o &amp; = (100 \Omega) i_o^2 = 56.25 W
-\end{align}
-\]</span></p>
-<p>Total Power Dissipated = 450 W</p>
-<p><span class="math display">\[
-\begin{align}
-P_s &amp; = i_s v_s \\
-i_s &amp; = i_o + i_3
-\end{align}
-\]</span></p>
-<p>Total Power Generated: -450 W ✅</p>
-</section></section>
-<section>
-<section id="simplifying-circuits-series-parallel-equivalent-resistance" class="title-slide slide level2 center">
-<h2>Simplifying Circuits: Series &amp; Parallel Equivalent Resistance</h2>
-<ul>
-<li><p>Solving circuits with many components can quickly become cumbersome, especially if we don’t need to know the voltage and current associated with each individual circuit element.</p></li>
-<li><p>We can simplify resistive networks (connections of resistors), using the following relationships:</p>
-<ul>
-<li><p>Two resistors are considered to be in <strong>parallel</strong> if they share the same node on each of their connections (i.e., have the same voltage drop across them due to the same nodes).</p></li>
-<li><p>Two resistors are considered to be in <strong>series</strong> if the same current flows through them through a common node.</p></li>
-</ul></li>
-<li><p>Two circuits are considered electrically equivalent if they share the same I-V (current / voltage) relationship.</p></li>
-</ul>
-</section>
-<section id="lets-take-a-look-at-that-open-switch-example" class="slide level3">
-<h3>Let’s take a look at that open switch example…</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/r_eq_ckt_labeled_sw_open.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li><p>Remember that <span class="math inline">\(i_s = i_1 = i_2 = i_o\)</span></p>
-<ul>
-<li><span class="math inline">\(R_1\)</span> is in series with <span class="math inline">\(R_2\)</span>, which is in series with <span class="math inline">\(R_o\)</span>; they are all in series with one another!</li>
-</ul></li>
-<li><p>Remember applying KVL:</p>
-<ul>
-<li><p><span class="math inline">\(v_s = i_s \left(R_1 + R_2 + R_o\right)\)</span>.</p></li>
-<li><p>This looks like Ohm’s law for a single resistor (<span class="math inline">\(R_{eq}\)</span>): <span class="math inline">\(v_s = i_s R_{eq}\)</span>, where:</p></li>
-<li><p><span class="math inline">\(R_{eq} = R_1 + R_2 + R_o\)</span></p></li>
-</ul></li>
-</ul>
-</div></div>
-</section></section>
-<section id="series-resistance" class="title-slide slide level2 center">
-<h2>Series Resistance</h2>
-<ul>
-<li>If <span class="math inline">\(R_1, R_2, ... R_N\)</span> are in <strong>series</strong>, then <span class="math inline">\(i_{R_1} = i_{R_2} = ... i_{R_N}\)</span>, which means:</li>
-</ul>
-<p><span class="math display">\[
-R_{eq} = \Sigma_{n=1}^N R_n
-\]</span></p>
-
-<img data-src="images/r_eq_ckt_series_r_eq.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li>Why is this useful? Way easier to solve for <span class="math inline">\(i_o\)</span> in this case; it is just Ohm’s Law!</li>
-</ul>
-</section>
-
-<section>
-<section id="voltage-division" class="title-slide slide level2 center">
-<h2>Voltage Division</h2>
-<p>What do series resistors do to a source voltage?</p>
-<div class="columns">
-<div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/voltage_divider.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:70%;">
-<ul>
-<li><p><span class="math inline">\(KVL: -v_s + v_i + v_2 = 0\)</span></p></li>
-<li><p><span class="math inline">\(KCL_{B}: i_1 = i_2\)</span></p></li>
-<li><p><span class="math inline">\(v_s = R_1 i_1 + R_2 i_1\)</span></p></li>
-<li><p><span class="math inline">\(i_1 = \frac{v_s}{R_1 + R_2}\)</span></p></li>
-<li><p><span class="math inline">\(v_1 = i_1 R_1 = v_s \frac{R_1}{R_1 + R_2}\)</span></p></li>
-<li><p><span class="math inline">\(v_2 = i_2 R_2 = v_s \frac{R_2}{R_1 + R_2}\)</span></p></li>
-</ul>
-</div></div>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>Series resistors divide voltage in proportion to <span class="math inline">\(\frac{R_n}{R_{eq}}\)</span>!</p>
-</div>
-</div>
-</div>
-</section>
-<section id="common-uses-of-voltage-dividers" class="slide level3">
-<h3>Common Uses of Voltage Dividers</h3>
-<ul>
-<li><p><strong>Multiple Fixed Voltage Sources</strong>: Create smaller source voltages from a larger single source.</p></li>
-<li><p><strong>Signal Level Adjustment</strong>: Reduce a high voltage signal to a lower voltage level suitable for input to a measurement circuit.</p></li>
-<li><p><strong>Evaluate Impact of “Real” Voltage Source Impedance</strong>: Evaluate the parasitic voltage / power loses due to interal voltage source resistance.</p></li>
-</ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>Voltage division will be one of the most important circuit analyses we do in medical instrumentation.</p>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="parallel-resistance-circuits" class="title-slide slide level2 center">
-<h2>Parallel Resistance Circuits</h2>
-
-<img data-src="images/r_eq_ckt_parallel.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li><p><span class="math inline">\(R_1\)</span> &amp; <span class="math inline">\(R_2\)</span> share common nodes and have the same voltage drop across them, so they are in <strong>parallel</strong>.</p></li>
-<li><p>KCL: <span class="math inline">\(i_s = i_1 + i_2\)</span></p></li>
-<li><p>KVL: <span class="math inline">\(-v1 + v_2 = 0 \rightarrow v_1 = v_2\)</span></p></li>
-<li><p>Ohm’s Law: <span class="math inline">\(i_1 = \frac{v_1}{R_1}\)</span> and <span class="math inline">\(i_2 = \frac{v_2}{R_2} = \frac{v_1}{R_2}\)</span></p></li>
-</ul>
-</section>
-<section class="slide level3">
-
-<p>What is <span class="math inline">\(R_{eq}\)</span> for <span class="math inline">\(i_s\)</span>?</p>
-<ul>
-<li><p><span class="math inline">\(i_s = v_1 \left( \frac{1}{R_1} + \frac{1}{R_2} \right)\)</span></p></li>
-<li><p><span class="math inline">\(v_1 = i_s R_{eq}\)</span></p></li>
-<li><p><span class="math inline">\(R_{eq} = \frac{R_1 R_2}{R_1 + R_2}\)</span></p></li>
-</ul>
-<p>For <span class="math inline">\(N\)</span> resistors in parallel:</p>
-<p><span class="math display">\[
-R_{eq} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + ... \frac{1}{R_N}} = \left( \Sigma_{n=1}^N \frac{1}{R_n} \right)^{-1}
-\]</span></p>
-<p>Or in terms of conductance:</p>
-<p><span class="math display">\[
-G_{eq} = \Sigma_{n=1}^N G_n
-\]</span></p>
-</section></section>
-<section>
-<section id="current-divider" class="title-slide slide level2 center">
-<h2>Current Divider</h2>
-
-<img data-src="images/current_divider.png" class="quarto-figure quarto-figure-center r-stretch"><div title="Question?">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Question?</strong></p>
-</div>
-<div class="callout-content">
-<p>What is the “fastest” way to solve for <span class="math inline">\(v_1\)</span>?</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="solve-for-r_eq-and-ohms-law" class="slide level3">
-<h3>Solve for <span class="math inline">\(R_{eq}\)</span> and Ohm’s Law</h3>
-<p><span class="math display">\[
-\begin{alig
-R_{eq} &amp; = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2}} \\
-v_1 $ = i_S R_{eq}
-\end{align}
-\]</span></p>
-</section>
-<section id="what-about-i_1-and-i_2" class="slide level3">
-<h3>What about <span class="math inline">\(i_1\)</span> and <span class="math inline">\(i_2\)</span>?</h3>
-
-<img data-src="images/current_divider.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
-\begin{align}
-i_1 &amp; = \frac{v_1}{R_1} = \frac{i_S R_{eq}}{R_1} = i_S \frac{\frac{1}{R_1}}{\frac{1}{R_1} + \frac{1}{R_2}} \\
-i_1 &amp; = i_S \left(\frac{R_2}{R_1+R_2}\right) \\
-i_2 &amp; = i_S - i_1 \\
-i_2 &amp; = i_S \left( \frac{R_1}{R_1 + R_2} \right)
-\end{align}
 \]</span></p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -645,42 +190,272 @@ i_2 &amp; = i_S \left( \frac{R_1}{R_1 + R_2} \right)
 <p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p>The current in one branch is proportional to its conductance, which is proportional to the resistance in the alternate branch(es)!</p>
+<p>We didn’t have the explicitly use KCL, KVL or Ohm’s law (<em>but they are all in play for the voltage division and equivalent resistance relationships</em>)!</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="solve-for-i_1r_x-using-current-division" class="title-slide slide level2 center">
+<h2>Solve for <span class="math inline">\(i_1(R_x)\)</span> Using Current Division</h2>
+
+<img data-src="images/current_division_example.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="simplify-to-equivalent-circuit-with-two-branches" class="slide level3">
+<h3>Simplify to Equivalent Circuit with Two Branches</h3>
+<p><span class="math display">\[
+\begin{gather}
+i_1 = i_s \frac{R_{eq}}{R_1 + R_{eq}} \\
+R_{eq} = R_2 || (R+R') \\
+\end{gather}
+\]</span></p>
+<p>Let <span class="math inline">\(R_3 = R + R'\)</span> (series equivalent), just to make expression easier to read.</p>
+<p><span class="math display">\[
+i_1 = i_s \frac{R_2 R_3}{R_2 R_3 + R_1 R_3 + R_1 R_2}
+\]</span></p>
+</section></section>
+<section>
+<section id="node-voltage-analysis-nva" class="title-slide slide level2 center">
+<h2>Node Voltage Analysis (NVA)</h2>
+<ul>
+<li>More complex circuits will quickly become overwhelming with number of simultaneous equations to solve based on KVL, KCL and Ohm’s law.</li>
+</ul>
+<div title="Example">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example</strong></p>
+</div>
+<div class="callout-content">
+<p>A circuit with 6 elements yields 12 equations and 12 unknowns!</p>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>One approach to reducing this number of equations and unknowns is to express the system of circuit analysis equiations in terms of <strong>node voltages</strong>.</li>
+</ul>
+
+<img data-src="images/node_voltage_R.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
+\begin{gather}
+i_R = \frac{v_A - v_B}{R} \\
+v_R = v_A - v_B
+\end{gather}
+\]</span></p>
+</section>
+<section id="nva-general-approach" class="slide level3">
+<h3>NVA: General Approach</h3>
+<ul>
+<li>Label nodes, reference (<code>GND</code> = 0), and component voltages.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/nva_general_approach.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p><span class="math display">\[
+\begin{align}
+v_1 &amp; = v_A - v_D = v_A \\
+v_2 &amp; = v_A - v_B \\
+v_3 &amp; = v_B - v_D = v_B \\
+v_4 &amp; = v_B - v_C \\
+v_5 &amp; = v_C - v_D = v_C
+\end{align}
+\]</span></p>
+</div></div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Note that 5 unknown voltages (<span class="math inline">\(v_{1-5}\)</span>) have been reduced to 3 (<span class="math inline">\(v_{A-C}\)</span>)!</p>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Nodes shared by components get reduced.</p></li>
+<li><p>The reference (ground) node is 0.</p></li>
+</ul>
+</section>
+<section id="nva-example-ladder-circuit" class="slide level3">
+<h3>NVA Example: Ladder Circuit</h3>
+
+<img data-src="images/nva_ladder_ckt.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><p>Identify &amp; label all nodes.</p></li>
+<li><p>Label component voltages.</p></li>
+<li><p>Select &amp; label reference node (ground).</p></li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Choose a reference node that is shared by a lot of components. Since it is “0”, that node will disappear from all equations.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="lets-look-at-the-limiting-cases" class="slide level3">
-<h3>Lets look at the limiting cases…</h3>
+<section id="write-element-voltages-in-terms-of-node-voltages." class="slide level3">
+<h3>Write element voltages in terms of node voltages.</h3>
 
-<img data-src="images/current_divider.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li><p>If <span class="math inline">\(R_2 \rightarrow 0\)</span>, then <span class="math inline">\(i_i \rightarrow 0\)</span>. In other words, current flows to the path of least (in this case, no) resistance.</p></li>
-<li><p>If <span class="math inline">\(R_2 \rightarrow \infty\)</span>, then <span class="math inline">\(i_1 \rightarrow i_S\)</span>.</p></li>
+<img data-src="images/nva_ladder_ckt.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
+\begin{align}
+v_E &amp; = 0 \\
+v_s &amp; = v_A - v_E = v_A \\
+v_1 &amp; = v_A - v_B \\
+v_2 &amp; = v_B - v_E = v_B \\
+v_3 &amp; = v_B - v_C \\
+v_4 &amp; = v_C - v_E = v_C \\
+v_5 &amp; = v_C - v_D \\
+v_6 &amp; = v_D - v_E = v_D
+\end{align}
+\]</span></p>
+</section>
+<section id="apply-kcl-at-nodes-except-at-sources-and-reference" class="slide level3">
+<h3>Apply KCL at nodes (except at sources and reference)</h3>
+<p><span class="math display">\[
+\begin{align}
+B &amp; : i_1 = i_2 + i_3 \\
+C &amp; : i_3 = i_4 + i_5 \\
+D &amp; : i_5 = i_6
+\end{align}
+\]</span></p>
+</section>
+<section id="apply-ohms-law-to-relate-is-to-vs" class="slide level3">
+<h3>Apply Ohm’s Law (to relate <span class="math inline">\(i\)</span>s to <span class="math inline">\(v\)</span>s)</h3>
+<p><span class="math display">\[
+\begin{align}
+i_1 &amp; = \frac{v_A - v_B}{R_1} = \frac{v_S - v_B}{R_1} \\
+i_2 &amp; = \frac{v_B}{R_2} \\
+i_3 &amp; = \frac{v_B - v_C}{R_3} \\
+i_4 &amp; = \frac{v_C}{R_4} \\
+i_5 &amp; = \frac{v_C - v_D}{R_5} \\
+i_6 &amp; = \frac{v_D}{R_5}
+\end{align}
+\]</span></p>
+</section>
+<section id="sub-vs-into-kcl-i-expressions" class="slide level3">
+<h3>Sub <span class="math inline">\(v\)</span>’s into KCL <span class="math inline">\(i\)</span> expressions</h3>
+<ul>
+<li>Node B</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+\frac{v_s - v_B}{R_1} = \frac{v_B}{R_2} + \frac{v_B-v_C}{R_3} \\
+v_B\left( \frac{-1}{R_1}-\frac{1}{R_2}-\frac{1}{R_3} \right) + \frac{v_C}{R_3} = \frac{-v_s}{R_1}
+\end{gather}
+\]</span></p>
+<ul>
+<li>Node C</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+\frac{v_B-v_C}{R_3} = \frac{v_C}{R_4} + \frac{v_C-v_D}{R_5} \\
+\frac{v_B}{R_3} + v_C\left(\frac{-1}{R_3}-\frac{1}{R_4}-\frac{1}{R_5} \right) + \frac{v_D}{R_5} = 0
+\end{gather}
+\]</span></p>
+</section>
+<section class="slide level3">
+
+<ul>
+<li>Node D</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+\frac{v_C - v_D}{R_5} = \frac{v_D}{R_6} \\
+\frac{v_C}{R_5}+v_D\left(\frac{-1}{R_5}-\frac{1}{R_6} \right) = 0
+\end{gather}
+\]</span></p>
+</section>
+<section id="solve-simultaneous-equations" class="slide level3">
+<h3>Solve Simultaneous Equations</h3>
+<ul>
+<li><p>We now have 3 equations and 3 unknowns!</p></li>
+<li><p>Setup 3x3 matrix with 3 linear, independent rows and columns to solve for <span class="math inline">\([v]\)</span>.</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{bmatrix}
+\left(-\frac{1}{R_1}-\frac{1}{R_2}-\frac{1}{R_3}\right) &amp; \frac{1}{R_3} &amp; 0 \\
+\frac{1}{R_3} &amp; \left(-\frac{1}{R_3}-\frac{1}{R_4}-\frac{1}{R_5}\right) &amp; \frac{1}{R_5} \\
+0 &amp; \frac{1}{R_5} &amp; \left(-\frac{1}{R_5}-\frac{1}{R_6}\right)
+\end{bmatrix}
+\begin{bmatrix}
+v_B \\
+v_C \\
+v_D
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{-v_s}{R_1} \\
+0 \\
+0
+\end{bmatrix}
+\]</span></p>
+<ul>
+<li>Solve for <span class="math inline">\([v]\)</span> and then relative back to element equations to solve for element voltages and currents.</li>
 </ul>
 </section></section>
-<section id="physiology-analogs" class="title-slide slide level2 center">
-<h2>Physiology Analogs</h2>
+<section>
+<section id="nva-example-two-sources" class="title-slide slide level2 center">
+<h2>NVA Example: Two-Sources</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/nva_two_sources.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
 <ul>
-<li><p>Cardiovascular System</p>
+<li><p>Nodes A &amp; C are set by two voltage sources.</p>
 <ul>
-<li><p>Parallel circuit - pulmonary capillary beds - very low resistance</p></li>
-<li><p>Parallel &amp; series circuit - arterial distribution via aorta</p></li>
+<li><p><span class="math inline">\(v_A = v_{S1}\)</span></p></li>
+<li><p><span class="math inline">\(v_B = v_{S2}\)</span></p></li>
 </ul></li>
-<li><p>Neuro ventricular shunt - lower resistance</p></li>
-<li><p>Pulmonary reactive airway disease</p></li>
+<li><p>Node D is reference (0).</p></li>
+<li><p>Only <span class="math inline">\(v_B\)</span> is unknown.</p></li>
 </ul>
+</div></div>
 </section>
-
-<section id="summary" class="title-slide slide level2 center">
-<h2>Summary</h2>
+<section id="setup-nva-equations" class="slide level3">
+<h3>Setup NVA Equations</h3>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/nva_two_sources.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
 <ul>
-<li><p>Solving for <span class="math inline">\(R_{eq}\)</span> can greatly simplify circuits to “simple” loops for circuit analysis.</p></li>
-<li><p>Voltage and current division are:</p>
-<ul>
-<li><p>Reduce circuit analysis to “simple” circuit analysis rules.</p></li>
-<li><p>Can be used to design circuits where voltage and current need to be controlled in specific ways.</p></li>
-</ul></li>
+<li><p><span class="math inline">\(v_1 = v_{S1} - v_B\)</span></p></li>
+<li><p><span class="math inline">\(v_2 = v_B\)</span></p></li>
+<li><p><span class="math inline">\(v_3 = v_B - v_{S2}\)</span></p></li>
+<li><p>KCL @ B: <span class="math inline">\(i_1 = i_2 + i_3\)</span></p></li>
 </ul>
+</div></div>
+</section>
+<section id="solve-for-v_b" class="slide level3">
+<h3>Solve for <span class="math inline">\(v_B\)</span></h3>
+<p><span class="math display">\[
+\begin{gather}
+\frac{v_{S1} - v_B}{R_1} = \frac{v_B}{R_2} + \frac{v_B - V_{S2}}{R_3} \\
+v_B = \frac{\frac{v_{S1}}{R_1} + \frac{v_{S2}}{R_3}}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}}
+\end{gather}
+\]</span></p>
 
 
 <script type="ojs-module-contents">
@@ -697,7 +472,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
