@@ -5,3 +5,5 @@ _site/
 *.dvi
 *.log
 *.synctex.gz
+*.html
+*_files/
