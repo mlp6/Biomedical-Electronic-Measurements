@@ -220,3 +220,46 @@ v_D
 $$
 
 - Solve for $[v]$ and then relative back to element equations to solve for element voltages and currents.
+
+## NVA Example: Two-Sources
+
+:::: {.columns}
+::: {.column width=55%}
+![](images/nva_two_sources.png){fig-align="center"}
+:::
+::: {.column width=45%}
+- Nodes A & C are set by two voltage sources.
+
+    - $v_A = v_{S1}$
+
+    - $v_B = v_{S2}$
+
+- Node D is reference (0).
+
+- Only $v_B$ is unknown.
+:::
+::::
+
+### Setup NVA Equations
+
+:::: {.columns}
+::: {.column width=55%}
+![](images/nva_two_sources.png){fig-align="center"}
+:::
+::: {.column width=45%}
+- $v_1 = v_{S1} - v_B$
+
+- $v_2 = v_B$
+
+- $v_3 = v_B - v_{S2}$
+
+- KCL @ B: $i_1 = i_2 + i_3$
+
+### Solve for $v_B$
+
+$$
+\begin{gather}
+\frac{v_{S1} - v_B}{R_1} = \frac{v_B}{R_2} + \frac{v_B - V_{S2}}{R_3} \\
+v_B = \frac{\frac{v_{S1}}{R_1} + \frac{v_{S2}}{R_3}}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}}
+\end{gather}
+$$
