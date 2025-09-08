@@ -74,14 +74,19 @@ A circuit with 6 elements yields 12 equations and 12 unknowns!
 
 - One approach to reducing this number of equations and unknowns is to express the system of circuit analysis equiations in terms of **node voltages**.
 
+:::: {.columns}
+::: {.column width=50%}
 ![](images/node_voltage_R.png){fig-align="center"}
-
+:::
+::: {.column width=50%}
 $$
 \begin{gather}
 i_R = \frac{v_A - v_B}{R} \\
 v_R = v_A - v_B
 \end{gather}
 $$
+:::
+::::
 
 ### NVA: General Approach
 
@@ -128,8 +133,11 @@ Choose a reference node that is shared by a lot of components.  Since it is "0",
 
 ### Write element voltages in terms of node voltages.
 
+:::: {.columns}
+::: {.column width=50%}
 ![](images/nva_ladder_ckt.png){fig-align="center"}
-
+:::
+::: {.column width=50%}
 $$
 \begin{align}
 v_E & = 0 \\
@@ -142,6 +150,8 @@ v_5 & = v_C - v_D \\
 v_6 & = v_D - v_E = v_D
 \end{align}
 $$
+:::
+::::
 
 ### Apply KCL at nodes (except at sources and reference)
 
