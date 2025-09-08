@@ -9,7 +9,7 @@
 <meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
 <meta name="dcterms.date" content="2025-09-08">
 
-<title>Circuit Analysis Techniques – Biomedical Electronic Measurements</title>
+<title>Node Voltage &amp; Mesh Current Analysis – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -374,11 +374,19 @@ window.Quarto = {
   </ul></li>
   <li><a href="#mesh-current-analysis-mca" id="toc-mesh-current-analysis-mca" class="nav-link" data-scroll-target="#mesh-current-analysis-mca">Mesh Current Analysis (MCA)</a>
   <ul class="collapse">
-  <li><a href="#mesh-1" id="toc-mesh-1" class="nav-link" data-scroll-target="#mesh-1">Mesh 1</a></li>
-  <li><a href="#mesh-2" id="toc-mesh-2" class="nav-link" data-scroll-target="#mesh-2">Mesh 2</a></li>
-  <li><a href="#mesh-3" id="toc-mesh-3" class="nav-link" data-scroll-target="#mesh-3">Mesh 3</a></li>
+  <li><a href="#mca-procedure" id="toc-mca-procedure" class="nav-link" data-scroll-target="#mca-procedure">MCA Procedure</a></li>
+  <li><a href="#mesh-a" id="toc-mesh-a" class="nav-link" data-scroll-target="#mesh-a">Mesh A</a></li>
+  <li><a href="#mesh-b" id="toc-mesh-b" class="nav-link" data-scroll-target="#mesh-b">Mesh B</a></li>
+  <li><a href="#mesh-c" id="toc-mesh-c" class="nav-link" data-scroll-target="#mesh-c">Mesh C</a></li>
   </ul></li>
   <li><a href="#solve-linear-set-of-equations" id="toc-solve-linear-set-of-equations" class="nav-link" data-scroll-target="#solve-linear-set-of-equations">Solve Linear Set of Equations</a></li>
+  <li><a href="#mca-current-sources" id="toc-mca-current-sources" class="nav-link" data-scroll-target="#mca-current-sources">MCA: Current Sources</a></li>
+  <li><a href="#mca-shared-mesh-current-sources" id="toc-mca-shared-mesh-current-sources" class="nav-link" data-scroll-target="#mca-shared-mesh-current-sources">MCA: Shared Mesh Current Sources</a>
+  <ul class="collapse">
+  <li><a href="#mesh-a-1" id="toc-mesh-a-1" class="nav-link" data-scroll-target="#mesh-a-1">Mesh A</a></li>
+  <li><a href="#mesh-b-c" id="toc-mesh-b-c" class="nav-link" data-scroll-target="#mesh-b-c">Mesh B &amp; C</a></li>
+  <li><a href="#solve-ohms-law-in-terms-of-mesh-currents" id="toc-solve-ohms-law-in-terms-of-mesh-currents" class="nav-link" data-scroll-target="#solve-ohms-law-in-terms-of-mesh-currents">Solve: Ohm’s Law (in terms of mesh currents)</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="circuit-analysis-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -387,7 +395,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/circuit-analysis-notes.html">Circuit Analysis Techniques</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Circuit Analysis Techniques</h1>
+<h1 class="title">Node Voltage &amp; Mesh Current Analysis</h1>
 <p class="subtitle lead">BME253L - Fall 2025</p>
 </div>
 
@@ -753,14 +761,16 @@ v_B = \frac{\frac{v_{S1}}{R_1} + \frac{v_{S2}}{R_3}}{\frac{1}{R_1} + \frac{1}{R_
 </section>
 <section id="mesh-current-analysis-mca" class="level2">
 <h2 class="anchored" data-anchor-id="mesh-current-analysis-mca">Mesh Current Analysis (MCA)</h2>
-<ul>
-<li>Like NVA, which leverages KCL to simplify circuit analysis, MCA leverages KVL to simplify circuit analysis.</li>
-</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/mca_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
+<ul>
+<li>Like NVA, which leverages KCL to simplify circuit analysis, MCA leverages KVL to simplify circuit analysis.</li>
+</ul>
+<section id="mca-procedure" class="level3">
+<h3 class="anchored" data-anchor-id="mca-procedure">MCA Procedure</h3>
 <ol type="1">
 <li><p>Identify <strong>meshes</strong> (closed loops, like used for NVA).</p></li>
 <li><p>Assign unknonw mesh currents in a <strong>clockwise</strong> direction.</p></li>
@@ -782,8 +792,9 @@ Important
 <li><p>Apply KVL to each mesh with mesh currents being used for circuit elements.</p></li>
 <li><p>Solve linear set of equations.</p></li>
 </ol>
-<section id="mesh-1" class="level3">
-<h3 class="anchored" data-anchor-id="mesh-1">Mesh 1</h3>
+</section>
+<section id="mesh-a" class="level3">
+<h3 class="anchored" data-anchor-id="mesh-a">Mesh A</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/mca_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
@@ -791,8 +802,8 @@ Important
 </div>
 <p><span class="math display">\[
 \begin{gather}
--v_s + i_1 R_1 + (i_1 - i_2) R_2 = 0 \\
-v_s = i_1 (R_1 + R_2) - i_2 R_2
+-v_s + i_A R_1 + (i_A - i_B) R_2 = 0 \\
+v_s = i_A (R_1 + R_2) - i_B R_2
 \end{gather}
 \]</span></p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -805,12 +816,12 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(i_1\)</span> and <span class="math inline">\(i_2\)</span> are <strong>not</strong> the physical element currents; they are the <strong>mesh currents</strong>. The physical currents will be the superposition of the relevant mesh currents.</p>
+<p><span class="math inline">\(i_A\)</span> and <span class="math inline">\(i_B\)</span> are <strong>not</strong> the physical element currents; they are the <strong>mesh currents</strong>. The physical currents will be the superposition of the relevant mesh currents.</p>
 </div>
 </div>
 </section>
-<section id="mesh-2" class="level3">
-<h3 class="anchored" data-anchor-id="mesh-2">Mesh 2</h3>
+<section id="mesh-b" class="level3">
+<h3 class="anchored" data-anchor-id="mesh-b">Mesh B</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/mca_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
@@ -818,13 +829,13 @@ Important
 </div>
 <p><span class="math display">\[
 \begin{gather}
-i_2 R_3 + (i_2 - i_3) R_4 + (i_2 - i_1) R_2 = 0 \\
--i_1 R_2 + i_2 (R_2 + R_3 + R_4) - i_3 R_4 = 0
+i_B R_3 + (i_B - i_C) R_4 + (i_B - i_A) R_2 = 0 \\
+-i_A R_2 + i_B (R_2 + R_3 + R_4) - i_C R_4 = 0
 \end{gather}
 \]</span></p>
 </section>
-<section id="mesh-3" class="level3">
-<h3 class="anchored" data-anchor-id="mesh-3">Mesh 3</h3>
+<section id="mesh-c" class="level3">
+<h3 class="anchored" data-anchor-id="mesh-c">Mesh C</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/mca_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
@@ -832,8 +843,8 @@ i_2 R_3 + (i_2 - i_3) R_4 + (i_2 - i_1) R_2 = 0 \\
 </div>
 <p><span class="math display">\[
 \begin{gather}
-i_3 R_5 + i_3 R_6 + (i_3 - i_2) R_4 = 0 \\
--i_2 R_4 + i_3 (R_4 + R_5 + R_6) = 0
+i_C R_5 + i_C R_6 + (i_C - i_B) R_4 = 0 \\
+-i_B R_4 + i_C (R_4 + R_5 + R_6) = 0
 \end{gather}
 \]</span></p>
 </section>
@@ -847,9 +858,9 @@ R_1 + R_2 &amp; -R_2 &amp; 0 \\
 0 &amp; -R_4 &amp; R_4 + R_5 + R_6
 \end{bmatrix}
 \begin{bmatrix}
-i_1 \\
-i_2 \\
-i_3
+i_A \\
+i_B \\
+i_C
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -876,6 +887,92 @@ Looks like Ohm’s Law!
 \]</span></p>
 </div>
 </div>
+<ul>
+<li>Solve for physical currents and voltages in terms of known mesh currents.</li>
+</ul>
+</section>
+<section id="mca-current-sources" class="level2">
+<h2 class="anchored" data-anchor-id="mca-current-sources">MCA: Current Sources</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mca_two_sources.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p>Mesh A: <span class="math inline">\(-V_S + i_A R_1 + (i_A - i_B) R_2 = 0\)</span></p></li>
+<li><p>Mesh B: <span class="math inline">\(i_B = -I_S\)</span></p></li>
+<li><p>Solve for <span class="math inline">\(i_A = \frac{V_s - I_s R_2}{R_1 + R_2}\)</span></p></li>
+<li><p>Solve for physical voltages and currents in terms of mesh currents.</p></li>
+</ul>
+</section>
+<section id="mca-shared-mesh-current-sources" class="level2">
+<h2 class="anchored" data-anchor-id="mca-shared-mesh-current-sources">MCA: Shared Mesh Current Sources</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mca_super_mesh.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Solve for <span class="math inline">\(i_4\)</span>.</p>
+<ol type="1">
+<li>Setup meshes.</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember to keep all mesh current orientations clockwise!</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>KVL around each mesh.</li>
+</ol>
+<section id="mesh-a-1" class="level3">
+<h3 class="anchored" data-anchor-id="mesh-a-1">Mesh A</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mca_super_mesh.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+i_A = I_{S1}
+\]</span></p>
+</section>
+<section id="mesh-b-c" class="level3">
+<h3 class="anchored" data-anchor-id="mesh-b-c">Mesh B &amp; C</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mca_super_mesh.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><span class="math inline">\(I_{S2}\)</span> is shared between meshes <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+I_{S2} = i_C - i_B
+\]</span></p>
+<ul>
+<li>Meshes <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> are a <strong>super mesh</strong> since their currents are related by <span class="math inline">\(I_{S2}\)</span> We can then take KVL around their combined closed path:</li>
+</ul>
+<p><span class="math display">\[
+v_{R_2} + v_{R_3} + v_{R_4} + v_{R_5} = 0
+\]</span></p>
+</section>
+<section id="solve-ohms-law-in-terms-of-mesh-currents" class="level3">
+<h3 class="anchored" data-anchor-id="solve-ohms-law-in-terms-of-mesh-currents">Solve: Ohm’s Law (in terms of mesh currents)</h3>
+<p><span class="math display">\[
+\begin{gather}
+(i_B - i_A) R_2 + i_B R_3 + i_C R_4 + i_C R_5 = 0 \\
+i_A = I_{S1} \\
+i_C = i_B + I_{S2} = i_4 \\
+i_4 = I_{S1} \left(\frac{R_2}{R_2 + R_3 + R_4 + R_5}\right) + I_{S2} \left(\frac{R_2 + R_3}{R_2 + R_3 + R_4 + R_5}\right)
+\end{gather}
+\]</span></p>
 
 
 <script type="ojs-module-contents">
@@ -892,6 +989,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+</section>
 </section>
 
 </main> <!-- /main -->

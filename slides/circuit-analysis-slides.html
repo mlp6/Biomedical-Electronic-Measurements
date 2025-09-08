@@ -13,7 +13,7 @@
 
   <meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
   <meta name="dcterms.date" content="2025-09-08">
-  <title>Biomedical Electronic Measurements – Circuit Analysis Techniques</title>
+  <title>Biomedical Electronic Measurements – Node Voltage &amp; Mesh Current Analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -132,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Circuit Analysis Techniques</h1>
+  <h1 class="title">Node Voltage &amp; Mesh Current Analysis</h1>
   <p class="subtitle">BME253L - Fall 2025</p>
 
 <div class="quarto-title-authors">
@@ -460,11 +460,14 @@ v_B = \frac{\frac{v_{S1}}{R_1} + \frac{v_{S2}}{R_3}}{\frac{1}{R_1} + \frac{1}{R_
 <section>
 <section id="mesh-current-analysis-mca" class="title-slide slide level2 center">
 <h2>Mesh Current Analysis (MCA)</h2>
-<ul>
+
+<img data-src="images/mca_ladder_ckt.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
 <li>Like NVA, which leverages KCL to simplify circuit analysis, MCA leverages KVL to simplify circuit analysis.</li>
 </ul>
-
-<img data-src="images/mca_ladder_ckt.png" class="quarto-figure quarto-figure-center r-stretch"><ol type="1">
+</section>
+<section id="mca-procedure" class="slide level3">
+<h3>MCA Procedure</h3>
+<ol type="1">
 <li><p>Identify <strong>meshes</strong> (closed loops, like used for NVA).</p></li>
 <li><p>Assign unknonw mesh currents in a <strong>clockwise</strong> direction.</p></li>
 </ol>
@@ -486,13 +489,13 @@ v_B = \frac{\frac{v_{S1}}{R_1} + \frac{v_{S2}}{R_3}}{\frac{1}{R_1} + \frac{1}{R_
 <li><p>Solve linear set of equations.</p></li>
 </ol>
 </section>
-<section id="mesh-1" class="slide level3">
-<h3>Mesh 1</h3>
+<section id="mesh-a" class="slide level3">
+<h3>Mesh A</h3>
 
 <img data-src="images/mca_ladder_ckt.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
 \begin{gather}
--v_s + i_1 R_1 + (i_1 - i_2) R_2 = 0 \\
-v_s = i_1 (R_1 + R_2) - i_2 R_2
+-v_s + i_A R_1 + (i_A - i_B) R_2 = 0 \\
+v_s = i_A (R_1 + R_2) - i_B R_2
 \end{gather}
 \]</span></p>
 <div class="callout callout-important callout-titled callout-style-default">
@@ -504,28 +507,28 @@ v_s = i_1 (R_1 + R_2) - i_2 R_2
 <p><strong>Important</strong></p>
 </div>
 <div class="callout-content">
-<p><span class="math inline">\(i_1\)</span> and <span class="math inline">\(i_2\)</span> are <strong>not</strong> the physical element currents; they are the <strong>mesh currents</strong>. The physical currents will be the superposition of the relevant mesh currents.</p>
+<p><span class="math inline">\(i_A\)</span> and <span class="math inline">\(i_B\)</span> are <strong>not</strong> the physical element currents; they are the <strong>mesh currents</strong>. The physical currents will be the superposition of the relevant mesh currents.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="mesh-2" class="slide level3">
-<h3>Mesh 2</h3>
+<section id="mesh-b" class="slide level3">
+<h3>Mesh B</h3>
 
 <img data-src="images/mca_ladder_ckt.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
 \begin{gather}
-i_2 R_3 + (i_2 - i_3) R_4 + (i_2 - i_1) R_2 = 0 \\
--i_1 R_2 + i_2 (R_2 + R_3 + R_4) - i_3 R_4 = 0
+i_B R_3 + (i_B - i_C) R_4 + (i_B - i_A) R_2 = 0 \\
+-i_A R_2 + i_B (R_2 + R_3 + R_4) - i_C R_4 = 0
 \end{gather}
 \]</span></p>
 </section>
-<section id="mesh-3" class="slide level3">
-<h3>Mesh 3</h3>
+<section id="mesh-c" class="slide level3">
+<h3>Mesh C</h3>
 
 <img data-src="images/mca_ladder_ckt.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
 \begin{gather}
-i_3 R_5 + i_3 R_6 + (i_3 - i_2) R_4 = 0 \\
--i_2 R_4 + i_3 (R_4 + R_5 + R_6) = 0
+i_C R_5 + i_C R_6 + (i_C - i_B) R_4 = 0 \\
+-i_B R_4 + i_C (R_4 + R_5 + R_6) = 0
 \end{gather}
 \]</span></p>
 </section></section>
@@ -538,9 +541,9 @@ R_1 + R_2 &amp; -R_2 &amp; 0 \\
 0 &amp; -R_4 &amp; R_4 + R_5 + R_6
 \end{bmatrix}
 \begin{bmatrix}
-i_1 \\
-i_2 \\
-i_3
+i_A \\
+i_B \\
+i_C
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -569,6 +572,80 @@ v_s \\
 </div>
 </div>
 </div>
+<ul>
+<li>Solve for physical currents and voltages in terms of known mesh currents.</li>
+</ul>
+</section>
+
+<section id="mca-current-sources" class="title-slide slide level2 center">
+<h2>MCA: Current Sources</h2>
+
+<img data-src="images/mca_two_sources.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><p>Mesh A: <span class="math inline">\(-V_S + i_A R_1 + (i_A - i_B) R_2 = 0\)</span></p></li>
+<li><p>Mesh B: <span class="math inline">\(i_B = -I_S\)</span></p></li>
+<li><p>Solve for <span class="math inline">\(i_A = \frac{V_s - I_s R_2}{R_1 + R_2}\)</span></p></li>
+<li><p>Solve for physical voltages and currents in terms of mesh currents.</p></li>
+</ul>
+</section>
+
+<section>
+<section id="mca-shared-mesh-current-sources" class="title-slide slide level2 center">
+<h2>MCA: Shared Mesh Current Sources</h2>
+
+<img data-src="images/mca_super_mesh.png" class="quarto-figure quarto-figure-center r-stretch"><p>Solve for <span class="math inline">\(i_4\)</span>.</p>
+<ol type="1">
+<li>Setup meshes.</li>
+</ol>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Remember to keep all mesh current orientations clockwise!</p>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>KVL around each mesh.</li>
+</ol>
+</section>
+<section id="mesh-a-1" class="slide level3">
+<h3>Mesh A</h3>
+
+<img data-src="images/mca_super_mesh.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
+i_A = I_{S1}
+\]</span></p>
+</section>
+<section id="mesh-b-c" class="slide level3">
+<h3>Mesh B &amp; C</h3>
+
+<img data-src="images/mca_super_mesh.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><span class="math inline">\(I_{S2}\)</span> is shared between meshes <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+I_{S2} = i_C - i_B
+\]</span></p>
+<ul>
+<li>Meshes <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> are a <strong>super mesh</strong> since their currents are related by <span class="math inline">\(I_{S2}\)</span> We can then take KVL around their combined closed path:</li>
+</ul>
+<p><span class="math display">\[
+v_{R_2} + v_{R_3} + v_{R_4} + v_{R_5} = 0
+\]</span></p>
+</section>
+<section id="solve-ohms-law-in-terms-of-mesh-currents" class="slide level3">
+<h3>Solve: Ohm’s Law (in terms of mesh currents)</h3>
+<p><span class="math display">\[
+\begin{gather}
+(i_B - i_A) R_2 + i_B R_3 + i_C R_4 + i_C R_5 = 0 \\
+i_A = I_{S1} \\
+i_C = i_B + I_{S2} = i_4 \\
+i_4 = I_{S1} \left(\frac{R_2}{R_2 + R_3 + R_4 + R_5}\right) + I_{S2} \left(\frac{R_2 + R_3}{R_2 + R_3 + R_4 + R_5}\right)
+\end{gather}
+\]</span></p>
 
 
 <script type="ojs-module-contents">
@@ -585,7 +662,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
