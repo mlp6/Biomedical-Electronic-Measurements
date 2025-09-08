@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}
+
+\draw (0,0) to[V, v=$v_s$] (0,3);
+\draw (0,3) to[R=$R_1$] (3,3);
+\draw (3,3) to[R=$R_2$] (3,0) node[ground]{};
+\draw (3,3) to[R=$R_3$] (6,3);
+\draw (6,3) to[R=$R_4$] (6,0);
+\draw (6,3) to[R=$R_5$] (9,3) to[R=$R_6$] (9,0);
+\draw (9,0) -- (0,0);
+
+\draw[->, thick, magenta] (1.0,1.75) arc (150: -90: 0.5);
+\node[text=magenta] at (1.5,1.5) {$i_A$};
+
+\draw[->, thick, magenta] (4.0,1.75) arc (150: -90: 0.5);
+\node[text=magenta] at (4.5,1.5) {$i_B$};
+
+\draw[->, thick, magenta] (7.0,1.75) arc (150: -90: 0.5);
+\node[text=magenta] at (7.5,1.5) {$i_C$};
+
+\end{circuitikz}
+\end{document}

@@ -1,5 +1,5 @@
 ---
-title: "Circuit Analysis Techniques"
+title: "Node Voltage & Mesh Current Analysis"
 date: "2025-09-08"
 format:
   live-html: 
@@ -271,9 +271,11 @@ $$
 
 ## Mesh Current Analysis (MCA)
 
+![](images/mca_ladder_ckt.png){fig-align="center"}
+
 - Like NVA, which leverages KCL to simplify circuit analysis, MCA leverages KVL to simplify circuit analysis.
 
-![](images/mca_ladder_ckt.png){fig-align="center"}
+### MCA Procedure
 
 1. Identify **meshes** (closed loops, like used for NVA).
 
@@ -287,40 +289,40 @@ It is okay to assign a mesh current orientation that is opposite that of a curre
 
 4. Solve linear set of equations.
 
-### Mesh 1
+### Mesh A
 
 ![](images/mca_ladder_ckt.png){fig-align="center"}
 
 $$
 \begin{gather}
--v_s + i_1 R_1 + (i_1 - i_2) R_2 = 0 \\
-v_s = i_1 (R_1 + R_2) - i_2 R_2
+-v_s + i_A R_1 + (i_A - i_B) R_2 = 0 \\
+v_s = i_A (R_1 + R_2) - i_B R_2
 \end{gather}
 $$
 
 ::: callout-important
-$i_1$ and $i_2$ are **not** the physical element currents; they are the **mesh currents**.  The physical currents will be the superposition of the relevant mesh currents.
+$i_A$ and $i_B$ are **not** the physical element currents; they are the **mesh currents**.  The physical currents will be the superposition of the relevant mesh currents.
 :::
 
-### Mesh 2
+### Mesh B
 
 ![](images/mca_ladder_ckt.png){fig-align="center"}
 
 $$
 \begin{gather}
-i_2 R_3 + (i_2 - i_3) R_4 + (i_2 - i_1) R_2 = 0 \\
--i_1 R_2 + i_2 (R_2 + R_3 + R_4) - i_3 R_4 = 0
+i_B R_3 + (i_B - i_C) R_4 + (i_B - i_A) R_2 = 0 \\
+-i_A R_2 + i_B (R_2 + R_3 + R_4) - i_C R_4 = 0
 \end{gather}
 $$
 
-### Mesh 3
+### Mesh C
 
 ![](images/mca_ladder_ckt.png){fig-align="center"}
 
 $$
 \begin{gather}
-i_3 R_5 + i_3 R_6 + (i_3 - i_2) R_4 = 0 \\
--i_2 R_4 + i_3 (R_4 + R_5 + R_6) = 0
+i_C R_5 + i_C R_6 + (i_C - i_B) R_4 = 0 \\
+-i_B R_4 + i_C (R_4 + R_5 + R_6) = 0
 \end{gather}
 $$
 
@@ -333,9 +335,9 @@ R_1 + R_2 & -R_2 & 0 \\
 0 & -R_4 & R_4 + R_5 + R_6 
 \end{bmatrix}
 \begin{bmatrix}
-i_1 \\
-i_2 \\
-i_3
+i_A \\
+i_B \\
+i_C
 \end{bmatrix}
 = 
 \begin{bmatrix}
@@ -353,3 +355,66 @@ $$
 \end{gather}
 $$
 :::
+
+- Solve for physical currents and voltages in terms of known mesh currents.
+
+## MCA: Current Sources
+
+![](images/mca_two_sources.png){fig-align="center"}
+
+- Mesh A: $-V_S + i_A R_1 + (i_A - i_B) R_2 = 0$
+
+- Mesh B: $i_B = -I_S$
+
+- Solve for $i_A = \frac{V_s - I_s R_2}{R_1 + R_2}$
+
+- Solve for physical voltages and currents in terms of mesh currents.
+
+## MCA: Shared Mesh Current Sources
+
+![](images/mca_super_mesh.png){fig-align="center"}
+
+Solve for $i_4$.
+
+1. Setup meshes.
+
+::: callout-important
+Remember to keep all mesh current orientations clockwise!
+:::
+
+2. KVL around each mesh.
+
+### Mesh A
+
+![](images/mca_super_mesh.png){fig-align="center"}
+
+$$
+i_A = I_{S1}
+$$
+
+### Mesh B & C
+
+![](images/mca_super_mesh.png){fig-align="center"}
+
+- $I_{S2}$ is shared between meshes $B$ and $C$.
+
+$$
+I_{S2} = i_C - i_B
+$$
+
+- Meshes $B$ and $C$ are a **super mesh** since their currents are related by $I_{S2}$  We can then take KVL around their combined closed path:
+
+$$
+v_{R_2} + v_{R_3} + v_{R_4} + v_{R_5} = 0
+$$
+
+### Solve: Ohm's Law (in terms of mesh currents)
+
+$$
+\begin{gather}
+(i_B - i_A) R_2 + i_B R_3 + i_C R_4 + i_C R_5 = 0 \\
+i_A = I_{S1} \\
+i_C = i_B + I_{S2} = i_4 \\
+i_4 = I_{S1} \left(\frac{R_2}{R_2 + R_3 + R_4 + R_5}\right) + I_{S2} \left(\frac{R_2 + R_3}{R_2 + R_3 + R_4 + R_5}\right)
+\end{gather}
+$$
