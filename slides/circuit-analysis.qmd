@@ -268,3 +268,88 @@ $$
 v_B = \frac{\frac{v_{S1}}{R_1} + \frac{v_{S2}}{R_3}}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}}
 \end{gather}
 $$
+
+## Mesh Current Analysis (MCA)
+
+- Like NVA, which leverages KCL to simplify circuit analysis, MCA leverages KVL to simplify circuit analysis.
+
+![](images/mca_ladder_ckt.png){fig-align="center"}
+
+1. Identify **meshes** (closed loops, like used for NVA).
+
+2. Assign unknonw mesh currents in a **clockwise** direction.
+
+::: callout-important
+It is okay to assign a mesh current orientation that is opposite that of a current source.  That will work itself out in the sign of the current.
+:::
+
+3. Apply KVL to each mesh with mesh currents being used for circuit elements.
+
+4. Solve linear set of equations.
+
+### Mesh 1
+
+![](images/mca_ladder_ckt.png){fig-align="center"}
+
+$$
+\begin{gather}
+-v_s + i_1 R_1 + (i_1 - i_2) R_2 = 0 \\
+v_s = i_1 (R_1 + R_2) - i_2 R_2
+\end{gather}
+$$
+
+::: callout-important
+$i_1$ and $i_2$ are **not** the physical element currents; they are the **mesh currents**.  The physical currents will be the superposition of the relevant mesh currents.
+:::
+
+### Mesh 2
+
+![](images/mca_ladder_ckt.png){fig-align="center"}
+
+$$
+\begin{gather}
+i_2 R_3 + (i_2 - i_3) R_4 + (i_2 - i_1) R_2 = 0 \\
+-i_1 R_2 + i_2 (R_2 + R_3 + R_4) - i_3 R_4 = 0
+\end{gather}
+$$
+
+### Mesh 3
+
+![](images/mca_ladder_ckt.png){fig-align="center"}
+
+$$
+\begin{gather}
+i_3 R_5 + i_3 R_6 + (i_3 - i_2) R_4 = 0 \\
+-i_2 R_4 + i_3 (R_4 + R_5 + R_6) = 0
+\end{gather}
+$$
+
+## Solve Linear Set of Equations
+
+$$
+\begin{bmatrix}
+R_1 + R_2 & -R_2 & 0 \\
+-R_2 & R_2 + R_3 + R_4 & -R_4 \\
+0 & -R_4 & R_4 + R_5 + R_6 
+\end{bmatrix}
+\begin{bmatrix}
+i_1 \\
+i_2 \\
+i_3
+\end{bmatrix}
+= 
+\begin{bmatrix}
+v_s \\
+0 \\
+0
+\end{bmatrix}
+$$
+
+::: {.callout-tip title="Looks like Ohm's Law!"}
+$$
+\begin{gather}
+\bar{R} \bar{I} = \bar{V} \\
+\bar{I} = \bar{R}^{-1} \bar{V}
+\end{gather}
+$$
+:::
