@@ -688,6 +688,20 @@
     "text": "NVA Example: Two-Sources\n\n\n\n\n\n\n\n\n\nNodes A & C are set by two voltage sources.\n\n\\(v_A = v_{S1}\\)\n\\(v_B = v_{S2}\\)\n\nNode D is reference (0).\nOnly \\(v_B\\) is unknown."
   },
   {
+    "objectID": "slides/circuit-analysis-slides.html#mesh-current-analysis-mca",
+    "href": "slides/circuit-analysis-slides.html#mesh-current-analysis-mca",
+    "title": "Circuit Analysis Techniques",
+    "section": "Mesh Current Analysis (MCA)",
+    "text": "Mesh Current Analysis (MCA)\n\nLike NVA, which leverages KCL to simplify circuit analysis, MCA leverages KVL to simplify circuit analysis.\n\n\n\nIdentify meshes (closed loops, like used for NVA).\nAssign unknonw mesh currents in a clockwise direction.\n\n\n\n\n\n\n\nImportant\n\n\nIt is okay to assign a mesh current orientation that is opposite that of a current source. That will work itself out in the sign of the current.\n\n\n\n\nApply KVL to each mesh with mesh currents being used for circuit elements.\nSolve linear set of equations."
+  },
+  {
+    "objectID": "slides/circuit-analysis-slides.html#solve-linear-set-of-equations",
+    "href": "slides/circuit-analysis-slides.html#solve-linear-set-of-equations",
+    "title": "Circuit Analysis Techniques",
+    "section": "Solve Linear Set of Equations",
+    "text": "Solve Linear Set of Equations\n\\[\n\\begin{bmatrix}\nR_1 + R_2 & -R_2 & 0 \\\\\n-R_2 & R_2 + R_3 + R_4 & -R_4 \\\\\n0 & -R_4 & R_4 + R_5 + R_6\n\\end{bmatrix}\n\\begin{bmatrix}\ni_1 \\\\\ni_2 \\\\\ni_3\n\\end{bmatrix}\n=\n\\begin{bmatrix}\nv_s \\\\\n0 \\\\\n0\n\\end{bmatrix}\n\\]\n\n\n\n\n\n\n\nLooks like Ohm’s Law!\n\n\n\\[\n\\begin{gather}\n\\bar{R} \\bar{I} = \\bar{V} \\\\\n\\bar{I} = \\bar{R}^{-1} \\bar{V}\n\\end{gather}\n\\]"
+  },
+  {
     "objectID": "slides/circuit-analysis-notes.html",
     "href": "slides/circuit-analysis-notes.html",
     "title": "Circuit Analysis Techniques",
@@ -748,6 +762,28 @@
     "title": "Circuit Analysis Techniques",
     "section": "NVA Example: Two-Sources",
     "text": "NVA Example: Two-Sources\n\n\n\n\n\n\n\n\n\nNodes A & C are set by two voltage sources.\n\n\\(v_A = v_{S1}\\)\n\\(v_B = v_{S2}\\)\n\nNode D is reference (0).\nOnly \\(v_B\\) is unknown.\n\n\n\n\nSetup NVA Equations\n\n\n\n\n\n\n\n\n\n\\(v_1 = v_{S1} - v_B\\)\n\\(v_2 = v_B\\)\n\\(v_3 = v_B - v_{S2}\\)\nKCL @ B: \\(i_1 = i_2 + i_3\\)\n\n\n\n\n\nSolve for \\(v_B\\)\n\\[\n\\begin{gather}\n\\frac{v_{S1} - v_B}{R_1} = \\frac{v_B}{R_2} + \\frac{v_B - V_{S2}}{R_3} \\\\\nv_B = \\frac{\\frac{v_{S1}}{R_1} + \\frac{v_{S2}}{R_3}}{\\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}}\n\\end{gather}\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Circuit Analysis Techniques"
+    ]
+  },
+  {
+    "objectID": "slides/circuit-analysis-notes.html#mesh-current-analysis-mca",
+    "href": "slides/circuit-analysis-notes.html#mesh-current-analysis-mca",
+    "title": "Circuit Analysis Techniques",
+    "section": "Mesh Current Analysis (MCA)",
+    "text": "Mesh Current Analysis (MCA)\n\nLike NVA, which leverages KCL to simplify circuit analysis, MCA leverages KVL to simplify circuit analysis.\n\n\n\n\n\n\n\nIdentify meshes (closed loops, like used for NVA).\nAssign unknonw mesh currents in a clockwise direction.\n\n\n\n\n\n\n\nImportant\n\n\n\nIt is okay to assign a mesh current orientation that is opposite that of a current source. That will work itself out in the sign of the current.\n\n\n\nApply KVL to each mesh with mesh currents being used for circuit elements.\nSolve linear set of equations.\n\n\nMesh 1\n\n\n\n\n\n\\[\n\\begin{gather}\n-v_s + i_1 R_1 + (i_1 - i_2) R_2 = 0 \\\\\nv_s = i_1 (R_1 + R_2) - i_2 R_2\n\\end{gather}\n\\]\n\n\n\n\n\n\nImportant\n\n\n\n\\(i_1\\) and \\(i_2\\) are not the physical element currents; they are the mesh currents. The physical currents will be the superposition of the relevant mesh currents.\n\n\n\n\nMesh 2\n\n\n\n\n\n\\[\n\\begin{gather}\ni_2 R_3 + (i_2 - i_3) R_4 + (i_2 - i_1) R_2 = 0 \\\\\n-i_1 R_2 + i_2 (R_2 + R_3 + R_4) - i_3 R_4 = 0\n\\end{gather}\n\\]\n\n\nMesh 3\n\n\n\n\n\n\\[\n\\begin{gather}\ni_3 R_5 + i_3 R_6 + (i_3 - i_2) R_4 = 0 \\\\\n-i_2 R_4 + i_3 (R_4 + R_5 + R_6) = 0\n\\end{gather}\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Circuit Analysis Techniques"
+    ]
+  },
+  {
+    "objectID": "slides/circuit-analysis-notes.html#solve-linear-set-of-equations",
+    "href": "slides/circuit-analysis-notes.html#solve-linear-set-of-equations",
+    "title": "Circuit Analysis Techniques",
+    "section": "Solve Linear Set of Equations",
+    "text": "Solve Linear Set of Equations\n\\[\n\\begin{bmatrix}\nR_1 + R_2 & -R_2 & 0 \\\\\n-R_2 & R_2 + R_3 + R_4 & -R_4 \\\\\n0 & -R_4 & R_4 + R_5 + R_6\n\\end{bmatrix}\n\\begin{bmatrix}\ni_1 \\\\\ni_2 \\\\\ni_3\n\\end{bmatrix}\n=\n\\begin{bmatrix}\nv_s \\\\\n0 \\\\\n0\n\\end{bmatrix}\n\\]\n\n\n\n\n\n\nLooks like Ohm’s Law!\n\n\n\n\\[\n\\begin{gather}\n\\bar{R} \\bar{I} = \\bar{V} \\\\\n\\bar{I} = \\bar{R}^{-1} \\bar{V}\n\\end{gather}\n\\]",
     "crumbs": [
       "Learning Modules",
       "Circuit Analysis Techniques"

@@ -372,6 +372,13 @@ window.Quarto = {
   <li><a href="#setup-nva-equations" id="toc-setup-nva-equations" class="nav-link" data-scroll-target="#setup-nva-equations">Setup NVA Equations</a></li>
   <li><a href="#solve-for-v_b" id="toc-solve-for-v_b" class="nav-link" data-scroll-target="#solve-for-v_b">Solve for <span class="math inline">\(v_B\)</span></a></li>
   </ul></li>
+  <li><a href="#mesh-current-analysis-mca" id="toc-mesh-current-analysis-mca" class="nav-link" data-scroll-target="#mesh-current-analysis-mca">Mesh Current Analysis (MCA)</a>
+  <ul class="collapse">
+  <li><a href="#mesh-1" id="toc-mesh-1" class="nav-link" data-scroll-target="#mesh-1">Mesh 1</a></li>
+  <li><a href="#mesh-2" id="toc-mesh-2" class="nav-link" data-scroll-target="#mesh-2">Mesh 2</a></li>
+  <li><a href="#mesh-3" id="toc-mesh-3" class="nav-link" data-scroll-target="#mesh-3">Mesh 3</a></li>
+  </ul></li>
+  <li><a href="#solve-linear-set-of-equations" id="toc-solve-linear-set-of-equations" class="nav-link" data-scroll-target="#solve-linear-set-of-equations">Solve Linear Set of Equations</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="circuit-analysis-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -742,6 +749,133 @@ v_D
 v_B = \frac{\frac{v_{S1}}{R_1} + \frac{v_{S2}}{R_3}}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}}
 \end{gather}
 \]</span></p>
+</section>
+</section>
+<section id="mesh-current-analysis-mca" class="level2">
+<h2 class="anchored" data-anchor-id="mesh-current-analysis-mca">Mesh Current Analysis (MCA)</h2>
+<ul>
+<li>Like NVA, which leverages KCL to simplify circuit analysis, MCA leverages KVL to simplify circuit analysis.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mca_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ol type="1">
+<li><p>Identify <strong>meshes</strong> (closed loops, like used for NVA).</p></li>
+<li><p>Assign unknonw mesh currents in a <strong>clockwise</strong> direction.</p></li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is okay to assign a mesh current orientation that is opposite that of a current source. That will work itself out in the sign of the current.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li><p>Apply KVL to each mesh with mesh currents being used for circuit elements.</p></li>
+<li><p>Solve linear set of equations.</p></li>
+</ol>
+<section id="mesh-1" class="level3">
+<h3 class="anchored" data-anchor-id="mesh-1">Mesh 1</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mca_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\begin{gather}
+-v_s + i_1 R_1 + (i_1 - i_2) R_2 = 0 \\
+v_s = i_1 (R_1 + R_2) - i_2 R_2
+\end{gather}
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(i_1\)</span> and <span class="math inline">\(i_2\)</span> are <strong>not</strong> the physical element currents; they are the <strong>mesh currents</strong>. The physical currents will be the superposition of the relevant mesh currents.</p>
+</div>
+</div>
+</section>
+<section id="mesh-2" class="level3">
+<h3 class="anchored" data-anchor-id="mesh-2">Mesh 2</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mca_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\begin{gather}
+i_2 R_3 + (i_2 - i_3) R_4 + (i_2 - i_1) R_2 = 0 \\
+-i_1 R_2 + i_2 (R_2 + R_3 + R_4) - i_3 R_4 = 0
+\end{gather}
+\]</span></p>
+</section>
+<section id="mesh-3" class="level3">
+<h3 class="anchored" data-anchor-id="mesh-3">Mesh 3</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mca_ladder_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\begin{gather}
+i_3 R_5 + i_3 R_6 + (i_3 - i_2) R_4 = 0 \\
+-i_2 R_4 + i_3 (R_4 + R_5 + R_6) = 0
+\end{gather}
+\]</span></p>
+</section>
+</section>
+<section id="solve-linear-set-of-equations" class="level2">
+<h2 class="anchored" data-anchor-id="solve-linear-set-of-equations">Solve Linear Set of Equations</h2>
+<p><span class="math display">\[
+\begin{bmatrix}
+R_1 + R_2 &amp; -R_2 &amp; 0 \\
+-R_2 &amp; R_2 + R_3 + R_4 &amp; -R_4 \\
+0 &amp; -R_4 &amp; R_4 + R_5 + R_6
+\end{bmatrix}
+\begin{bmatrix}
+i_1 \\
+i_2 \\
+i_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+v_s \\
+0 \\
+0
+\end{bmatrix}
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Looks like Ohm's Law!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Looks like Ohm’s Law!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{gather}
+\bar{R} \bar{I} = \bar{V} \\
+\bar{I} = \bar{R}^{-1} \bar{V}
+\end{gather}
+\]</span></p>
+</div>
+</div>
 
 
 <script type="ojs-module-contents">
@@ -758,7 +892,6 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
 </section>
 
 </main> <!-- /main -->
