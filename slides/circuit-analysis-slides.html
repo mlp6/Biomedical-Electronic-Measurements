@@ -237,13 +237,21 @@ i_1 = i_s \frac{R_2 R_3}{R_2 R_3 + R_1 R_3 + R_1 R_2}
 <ul>
 <li>One approach to reducing this number of equations and unknowns is to express the system of circuit analysis equiations in terms of <strong>node voltages</strong>.</li>
 </ul>
-
-<img data-src="images/node_voltage_R.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/node_voltage_R.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><span class="math display">\[
 \begin{gather}
 i_R = \frac{v_A - v_B}{R} \\
 v_R = v_A - v_B
 \end{gather}
 \]</span></p>
+</div></div>
 </section>
 <section id="nva-general-approach" class="slide level3">
 <h3>NVA: General Approach</h3>
@@ -310,8 +318,15 @@ v_5 &amp; = v_C - v_D = v_C
 </section>
 <section id="write-element-voltages-in-terms-of-node-voltages." class="slide level3">
 <h3>Write element voltages in terms of node voltages.</h3>
-
-<img data-src="images/nva_ladder_ckt.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/nva_ladder_ckt.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><span class="math display">\[
 \begin{align}
 v_E &amp; = 0 \\
 v_s &amp; = v_A - v_E = v_A \\
@@ -323,6 +338,7 @@ v_5 &amp; = v_C - v_D \\
 v_6 &amp; = v_D - v_E = v_D
 \end{align}
 \]</span></p>
+</div></div>
 </section>
 <section id="apply-kcl-at-nodes-except-at-sources-and-reference" class="slide level3">
 <h3>Apply KCL at nodes (except at sources and reference)</h3>
