@@ -207,6 +207,17 @@ I'm not going to show you this; you are going to do it!
 
 ::: callout-important
 A major benefit of using an equivalent source is that if we have an unknown or changing load ($R_L$), we can easily solve for $i_L$ as a simple voltage division with known $V_T$ and $R_T$.
+
+Extremely useful for instrument design!
+
+- Current draw as a function of load (e.g., make sure to not exceed $I_{max}$ of a supply).
+
+- Power consumption as a function of load.
 :::
+
+### Another example...
+
+![](images/thevenin_ex2.png){fig-align="center"}
+
  
 ## Norton Equivalent Sources
