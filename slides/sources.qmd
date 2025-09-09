@@ -1,0 +1,202 @@
+---
+title: "Source Superposition & Thevenin/Norton Equivalents"
+date: "2025-09-10"
+format:
+  live-html: 
+    output-file: sources-notes.html
+  live-revealjs: 
+    output-file: sources-slides.html
+---
+
+## Summary of Analysis Approaches (So Far)
+
+- Power Balance
+
+- KCL & KVL
+
+- Ohm's Law
+
+- Equivalent Resistance
+
+- Voltage & Current Division
+
+- NVA & MCA
+
+## Learning Objectives
+
+- Superposition (Linear Circuits)
+
+- Thevenin Equivalent Sources (Voltage)
+
+- Norton Equivalents Sources (Current)
+
+## Superposition
+
+::: {.callout-note title="Superposition Statement"}
+- In a **linear** circuit containing $N$ sources, each branch voltage and
+current is the linear sum of $N$ voltages and currents (i.e., each source
+contributes to part of the total element current and voltage).
+
+- Each source's contribution can be calculated by "eliminating" the contribution
+of the other sources and solving for element currents/voltages.
+:::
+
+### "Eliminating" Sources
+
+- "Eliminating" a source means removing its voltage or current contribution to the circuit.
+
+- A **voltage sourse** can be eliminated by replacing it with a **short circuit**.  
+
+    - Branch current can still be conducted.
+    
+    - Forcing no $\Delta$ V related to the voltage source.
+
+- A **current source** can be eliminated by replacing it with an **open circuit**.
+
+    - Voltage difference allowed between two nodes.
+    
+    - Blocking current from flowing from other sources because the eliminated current source *exclusively* dictactes that branch current.
+
+### Superposition Example
+
+::: callout-note
+Solve for $i_3$ using source superposition.
+:::
+
+:::: {.columns}
+::: {.column width=65%}
+![](images/superposition_two_sources.png)
+:::
+::: {.column width=35%}
+- $V_S = 10 V$
+
+- $R_1 = 200 \Omega$
+
+- $R_2 = 200 \Omega$
+
+- $R_3 = 100 \Omega$
+
+- $I_S = 0.1 A$
+:::
+::::
+
+:::callout-note
+$$
+i_3 = i_{3_{V_S}} + i_{3_{I_S}}
+$$
+:::
+
+### Step 1: Eliminate $I_S$; Solve for $i_{3_{V_S}}$
+
+![](images/superposition_two_sources_eliminate_Is.png){fig-align="center"}
+
+$$
+i_{3_{V_S}} = \frac{V_S}{R_1+R_2+R_3} = 0.2 A
+$$
+
+::: callout-note
+$i_{3_{V_S}}$ is the contribution to total $i_3$ from $V_S$.
+:::
+
+### Step 2: Eliminate $V_S$; Solve for $i_{3_{I_S}}$
+
+![](images/superposition_two_sources_eliminate_Vs.png){fig-align="center"}
+
+::: callout-tip
+While any circuit analysis techinque we have used to date is fair game, current division resonates with me...
+:::
+
+$$
+I_{3_{I_S}} = \frac{v_A}{R_2+R_3} = -I_S\left(\frac{R_1}{R_1+R_2+R_3}\right) = -0.04 A
+$$
+
+### Step 3: Sum Contributions from $I_S$ and $V_S$
+
+![](images/superposition_two_sources.png){fig-align="center"}
+
+$$
+i_3 = i_{3_{V_S}} + i_{3_{I_S}} = 0.02 A + (-0.04 A) = -0.02 A
+$$
+
+### Let's revisit the "super mesh" circuit...
+
+![](images/superposition_super_mesh.png){fig-align="center"}
+
+- Solve for $i_4$ using source superposition.
+
+- Let's walk through the approach together...
+
+## Equivalent Circuits
+
+::: callout-important
+Each "block" (physical or functional) of a circuit can be represented by a
+2-terminal equivalent circuit, composed of a single source and resistance that
+completely captures the $i-v$ characteristics of that block.
+
+- If that single source is a voltage source, then it is known as a **Thevenin
+source** equivalent.
+
+- If that single source is a current source, then it is known as a **Norton
+source** equivalent.
+:::
+
+## Thevenin Equivalent Sources
+
+::: {.callout-note title="Thevenin Theorem"}
+When a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm's law), can be replaced by an equivalent circuit with:
+
+1. An ideal voltage source ($V_T$), and
+
+2. An equivalent resistance ($R_T$).
+:::
+
+![](images/thevenin.png){fig-align="center"}
+
+How do we solve for $V_T$ and $R_T$?
+
+### Step 1: Find the equivalent resistance
+
+Find the **equivalent resistance** as "seen" by the terminals of that source block.
+
+a. Remove the load from the terminals of the block.
+
+b. Eliminate all independent voltage and current sources.
+
+::: callout-note
+To date, we have only dealth with independent voltage and current sources (i.e., their source voltage or current values are not dependent on other voltages/currents in the circuit).
+:::
+
+c. Compute the equivalent resistance with the load removed.
+
+### Step 1: Example
+
+![](images/thevenin_R_T.png){fig-align="center"}
+
+### Step 2: Find the equivalent source voltage
+
+Solve for the equivalent Thevenin source voltage, which is equal to the terminal
+voltage when the terminals are "open" (i.e., no load is attached to them).
+
+a. Remove the load from the terminals (create an "open" load condition).
+
+b. Keep all sources.
+
+c. Solve for $V_T = $V_{{ab}_{Open Circuit}}$ 
+
+### Back to our example...
+
+![](images/thevenin_V_T.png){fig-align="center"}
+
+$$
+V_T = V_{ab} = V_B = v_s \left(\frac{R_2}{R_1+R_2}\right)
+$$
+
+### Thevenin Equivalent Circuit
+
+![](images/thevenin_equiv_ex.png){fig-align="center"}
+
+::: {.callout-tip title="Are these equivalent?"}
+Let's convince ourselves that $i_L$ is the same for both circuits...
+:::
+
+## Norton Equivalent Sources

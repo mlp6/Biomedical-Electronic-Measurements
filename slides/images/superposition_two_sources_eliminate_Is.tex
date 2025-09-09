@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}
+
+\draw (0,0) to[V=$V_{S}$] (0,3);
+\draw (0,3) to[R=$R_1$] (3,3);
+\draw (3,3) to[R=$R_2$] (6,3);
+\draw (6,3) to[R=$R_3$, f=$i_{3_{V_S}}$] (6,0);
+\draw (6,0) -- (3,0) -- (0,0);
+\node[ground] at (3,0) {};
+
+\end{circuitikz}
+\end{document}
