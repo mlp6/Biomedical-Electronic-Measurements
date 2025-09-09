@@ -199,4 +199,14 @@ $$
 Let's convince ourselves that $i_L$ is the same for both circuits...
 :::
 
+### Oh wait...
+
+I'm not going to show you this; you are going to do it!
+ 
+### Why use a Thevenin Equivalent Circuit?
+
+::: callout-important
+A major benefit of using an equivalent source is that if we have an unknown or changing load ($R_L$), we can easily solve for $i_L$ as a simple voltage division with known $V_T$ and $R_T$.
+:::
+ 
 ## Norton Equivalent Sources
