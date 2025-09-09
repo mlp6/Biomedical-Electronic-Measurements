@@ -44,6 +44,8 @@ website:
           text: "Series and Parallel Resistance"
         - href: slides/circuit-analysis.qmd
           text: "Circuit Analysis Techniques"
+        - href: slides/sources.qmd
+          text: "Source Transformations"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
