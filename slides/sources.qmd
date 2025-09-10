@@ -263,7 +263,7 @@ current at the terminals.
 The circuits are equivalent if they have the same $i-v$ characteristics.
 :::
 
-**Thevenin**
+### Thevenin
 
 $$
 \begin{gather}
@@ -272,7 +272,7 @@ i_L = \frac{v_L}{R_L} = \frac{V_T}{R_T+R_L}
 \end{gather}
 $$
 
-**Norton**
+### Norton
 $$
 \begin{gather}
 i_L = i_N \frac{R_T}{R_N+R_L} \\
@@ -300,8 +300,50 @@ Use source transformations to change a circuit into a voltage or current divisio
 
 ### Source Transformation Example
 
-Next time...
+![](images/source_transform_ex.png){fig-align="center"}
+
+Now a simple current divider!
+
+$$
+i_4 = \left( \frac{v_1}{R_1} - I_S - \frac{v_s}{R_3} \right) \left[ \frac{\frac{1}{R_4}}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_4}}\right]
+$$
 
 ## Maximum Power Transfer
 
-Coming soon...
+We can use our "simple" Thevenin equivalent circuit to now represent any source:load combination.
+
+:::: {.columns}
+::: {.column width=50%}
+![](images/source_load.svg){fig-align="center"}
+:::
+::: {.column width=50%}
+![](images/thevenin_max_power.png){fig-align="center"}
+:::
+::::
+
+::: {.callout-note title="Power Maximum Transfer Condition"}
+What load resistance allows us to deliver the most power to the load?
+:::
+
+### Solve for Maximum Power Transfer
+
+$$
+\begin{gather}
+P_L = V_L I_L = I_L^2 R_L \\
+I_L = \frac{V_T}{R_T + R_L} \\
+P_L = \left( \frac{V_T}{R_T+R_L}\right)^2 R_L \\
+P_L = \frac{V_T^2 R_L}{(R_T + R_L)^2}
+\end{gather}
+$$
+
+### How to Match Load and Source Resistance
+
+If we can only adjust $R_L$ (i.e., the source conditions are fixed), then power is maximized when:
+
+$$
+\frac{dP_L}{dR_L} = 0
+$$
+
+::: callout-important
+Maximum power is delivered to the load when $R_T = R_L$!!
+:::

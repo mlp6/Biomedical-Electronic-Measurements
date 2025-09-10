@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}
+
+\draw (0,0) to[V=$V_T$] (0,3);
+\draw (0,3) to[R=$R_T$] (3,3); 
+\draw (3,3) node[circle, fill, inner sep=2pt, label=above:$a$] (a) {};
+\draw (3,0) node[circle, fill, inner sep=2pt, label=below:$b$] (b) {};
+\draw (0,0) to (b);
+\draw (a) -- (4,3) to[R=$R_L$] (4,0) -- (b);
+
+\end{circuitikz}
+\end{document}
