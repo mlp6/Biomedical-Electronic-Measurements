@@ -699,7 +699,7 @@
     "href": "slides/sources-slides.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
     "title": "Source Superposition & Thevenin/Norton Equivalents",
     "section": "Proof that Thevening & Norton Equivalents Circuits are Equivalent",
-    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics.\n\n\n\nThevenin\n\\[\n\\begin{gather}\nV_L = V_T \\frac{R_L}{R_T+R_L} \\\\\ni_L = \\frac{v_L}{R_L} = \\frac{V_T}{R_T+R_L}\n\\end{gather}\n\\]\nNorton \\[\n\\begin{gather}\ni_L = i_N \\frac{R_T}{R_N+R_L} \\\\\nV_L = i_L R_L = I_N R_N \\frac{R_L}{R_N+R_L} \\\\\ni_N = \\frac{V_T}{R_T} \\\\\nV_L = V_T \\frac{R_L}{R_T+R_L}\n\\end{gather}\n\\]\nThey are the same!"
+    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics."
   },
   {
     "objectID": "slides/sources-slides.html#source-transformation",
@@ -713,7 +713,7 @@
     "href": "slides/sources-slides.html#maximum-power-transfer",
     "title": "Source Superposition & Thevenin/Norton Equivalents",
     "section": "Maximum Power Transfer",
-    "text": "Maximum Power Transfer\nComing soon…"
+    "text": "Maximum Power Transfer\nWe can use our “simple” Thevenin equivalent circuit to now represent any source:load combination.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPower Maximum Transfer Condition\n\n\nWhat load resistance allows us to deliver the most power to the load?"
   },
   {
     "objectID": "slides/sources-notes.html",
@@ -797,7 +797,7 @@
     "href": "slides/sources-notes.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
     "title": "Source Superposition & Thevenin/Norton Equivalents",
     "section": "Proof that Thevening & Norton Equivalents Circuits are Equivalent",
-    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics.\n\n\nThevenin\n\\[\n\\begin{gather}\nV_L = V_T \\frac{R_L}{R_T+R_L} \\\\\ni_L = \\frac{v_L}{R_L} = \\frac{V_T}{R_T+R_L}\n\\end{gather}\n\\]\nNorton \\[\n\\begin{gather}\ni_L = i_N \\frac{R_T}{R_N+R_L} \\\\\nV_L = i_L R_L = I_N R_N \\frac{R_L}{R_N+R_L} \\\\\ni_N = \\frac{V_T}{R_T} \\\\\nV_L = V_T \\frac{R_L}{R_T+R_L}\n\\end{gather}\n\\]\nThey are the same!",
+    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics.\n\n\n\nThevenin\n\\[\n\\begin{gather}\nV_L = V_T \\frac{R_L}{R_T+R_L} \\\\\ni_L = \\frac{v_L}{R_L} = \\frac{V_T}{R_T+R_L}\n\\end{gather}\n\\]\n\n\nNorton\n\\[\n\\begin{gather}\ni_L = i_N \\frac{R_T}{R_N+R_L} \\\\\nV_L = i_L R_L = I_N R_N \\frac{R_L}{R_N+R_L} \\\\\ni_N = \\frac{V_T}{R_T} \\\\\nV_L = V_T \\frac{R_L}{R_T+R_L}\n\\end{gather}\n\\]\nThey are the same!",
     "crumbs": [
       "Learning Modules",
       "Source Transformations"
@@ -808,7 +808,7 @@
     "href": "slides/sources-notes.html#source-transformation",
     "title": "Source Superposition & Thevenin/Norton Equivalents",
     "section": "Source Transformation",
-    "text": "Source Transformation\n\n\n\n\n\n\nNote\n\n\n\nWe can use these equivalent circuits to transform between voltage and current sources using Ohm’s law:\n\\[\nV_T = I_N R_T\n\\]\n\n\n\n\n\n\n\n\nTip\n\n\n\nUse source transformations to change a circuit into a voltage or current division problem that is easier to solve!\n\n\n\nSource Transformation Example\nNext time…",
+    "text": "Source Transformation\n\n\n\n\n\n\nNote\n\n\n\nWe can use these equivalent circuits to transform between voltage and current sources using Ohm’s law:\n\\[\nV_T = I_N R_T\n\\]\n\n\n\n\n\n\n\n\nTip\n\n\n\nUse source transformations to change a circuit into a voltage or current division problem that is easier to solve!\n\n\n\nSource Transformation Example\n\n\n\n\n\nNow a simple current divider!\n\\[\ni_4 = \\left( \\frac{v_1}{R_1} - I_S - \\frac{v_s}{R_3} \\right) \\left[ \\frac{\\frac{1}{R_4}}{\\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3} + \\frac{1}{R_4}}\\right]\n\\]",
     "crumbs": [
       "Learning Modules",
       "Source Transformations"
@@ -819,7 +819,7 @@
     "href": "slides/sources-notes.html#maximum-power-transfer",
     "title": "Source Superposition & Thevenin/Norton Equivalents",
     "section": "Maximum Power Transfer",
-    "text": "Maximum Power Transfer\nComing soon…",
+    "text": "Maximum Power Transfer\nWe can use our “simple” Thevenin equivalent circuit to now represent any source:load combination.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPower Maximum Transfer Condition\n\n\n\nWhat load resistance allows us to deliver the most power to the load?\n\n\n\nSolve for Maximum Power Transfer\n\\[\n\\begin{gather}\nP_L = V_L I_L = I_L^2 R_L \\\\\nI_L = \\frac{V_T}{R_T + R_L} \\\\\nP_L = \\left( \\frac{V_T}{R_T+R_L}\\right)^2 R_L \\\\\nP_L = \\frac{V_T^2 R_L}{(R_T + R_L)^2}\n\\end{gather}\n\\]\n\n\nHow to Match Load and Source Resistance\nIf we can only adjust \\(R_L\\) (i.e., the source conditions are fixed), then power is maximized when:\n\\[\n\\frac{dP_L}{dR_L} = 0\n\\]\n\n\n\n\n\n\nImportant\n\n\n\nMaximum power is delivered to the load when \\(R_T = R_L\\)!!",
     "crumbs": [
       "Learning Modules",
       "Source Transformations"

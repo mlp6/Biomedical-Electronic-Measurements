@@ -499,6 +499,7 @@ V_T = V_{ab} = V_B = v_s \left(\frac{R_2}{R_1+R_2}\right)
 </div>
 </div></div>
 </section></section>
+<section>
 <section id="proof-that-thevening-norton-equivalents-circuits-are-equivalent" class="title-slide slide level2 center">
 <h2>Proof that Thevening &amp; Norton Equivalents Circuits are Equivalent</h2>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -514,14 +515,19 @@ V_T = V_{ab} = V_B = v_s \left(\frac{R_2}{R_1+R_2}\right)
 </div>
 </div>
 </div>
-<p><strong>Thevenin</strong></p>
+</section>
+<section id="thevenin" class="slide level3">
+<h3>Thevenin</h3>
 <p><span class="math display">\[
 \begin{gather}
 V_L = V_T \frac{R_L}{R_T+R_L} \\
 i_L = \frac{v_L}{R_L} = \frac{V_T}{R_T+R_L}
 \end{gather}
 \]</span></p>
-<p><strong>Norton</strong> <span class="math display">\[
+</section>
+<section id="norton" class="slide level3">
+<h3>Norton</h3>
+<p><span class="math display">\[
 \begin{gather}
 i_L = i_N \frac{R_T}{R_N+R_L} \\
 V_L = i_L R_L = I_N R_N \frac{R_L}{R_N+R_L} \\
@@ -530,8 +536,7 @@ V_L = V_T \frac{R_L}{R_T+R_L}
 \end{gather}
 \]</span></p>
 <p>They are the same!</p>
-</section>
-
+</section></section>
 <section>
 <section id="source-transformation" class="title-slide slide level2 center">
 <h2>Source Transformation</h2>
@@ -567,11 +572,76 @@ V_T = I_N R_T
 </section>
 <section id="source-transformation-example" class="slide level3">
 <h3>Source Transformation Example</h3>
-<p>Next time…</p>
+
+<img data-src="images/source_transform_ex.png" class="quarto-figure quarto-figure-center r-stretch"><p>Now a simple current divider!</p>
+<p><span class="math display">\[
+i_4 = \left( \frac{v_1}{R_1} - I_S - \frac{v_s}{R_3} \right) \left[ \frac{\frac{1}{R_4}}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_4}}\right]
+\]</span></p>
 </section></section>
+<section>
 <section id="maximum-power-transfer" class="title-slide slide level2 center">
 <h2>Maximum Power Transfer</h2>
-<p>Coming soon…</p>
+<p>We can use our “simple” Thevenin equivalent circuit to now represent any source:load combination.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/source_load.svg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/thevenin_max_power.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+<div title="Power Maximum Transfer Condition">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Power Maximum Transfer Condition</strong></p>
+</div>
+<div class="callout-content">
+<p>What load resistance allows us to deliver the most power to the load?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="solve-for-maximum-power-transfer" class="slide level3">
+<h3>Solve for Maximum Power Transfer</h3>
+<p><span class="math display">\[
+\begin{gather}
+P_L = V_L I_L = I_L^2 R_L \\
+I_L = \frac{V_T}{R_T + R_L} \\
+P_L = \left( \frac{V_T}{R_T+R_L}\right)^2 R_L \\
+P_L = \frac{V_T^2 R_L}{(R_T + R_L)^2}
+\end{gather}
+\]</span></p>
+</section>
+<section id="how-to-match-load-and-source-resistance" class="slide level3">
+<h3>How to Match Load and Source Resistance</h3>
+<p>If we can only adjust <span class="math inline">\(R_L\)</span> (i.e., the source conditions are fixed), then power is maximized when:</p>
+<p><span class="math display">\[
+\frac{dP_L}{dR_L} = 0
+\]</span></p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Maximum power is delivered to the load when <span class="math inline">\(R_T = R_L\)</span>!!</p>
+</div>
+</div>
+</div>
 
 
 <script type="ojs-module-contents">
@@ -588,7 +658,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

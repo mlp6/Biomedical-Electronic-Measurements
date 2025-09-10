@@ -381,12 +381,20 @@ window.Quarto = {
   <li><a href="#step-1-calculate-r_n" id="toc-step-1-calculate-r_n" class="nav-link" data-scroll-target="#step-1-calculate-r_n">Step 1: Calculate <span class="math inline">\(R_N\)</span></a></li>
   <li><a href="#step-2-calculate-the-norton-equivalent-source" id="toc-step-2-calculate-the-norton-equivalent-source" class="nav-link" data-scroll-target="#step-2-calculate-the-norton-equivalent-source">Step 2: Calculate the Norton Equivalent Source</a></li>
   </ul></li>
-  <li><a href="#proof-that-thevening-norton-equivalents-circuits-are-equivalent" id="toc-proof-that-thevening-norton-equivalents-circuits-are-equivalent" class="nav-link" data-scroll-target="#proof-that-thevening-norton-equivalents-circuits-are-equivalent">Proof that Thevening &amp; Norton Equivalents Circuits are Equivalent</a></li>
+  <li><a href="#proof-that-thevening-norton-equivalents-circuits-are-equivalent" id="toc-proof-that-thevening-norton-equivalents-circuits-are-equivalent" class="nav-link" data-scroll-target="#proof-that-thevening-norton-equivalents-circuits-are-equivalent">Proof that Thevening &amp; Norton Equivalents Circuits are Equivalent</a>
+  <ul class="collapse">
+  <li><a href="#thevenin" id="toc-thevenin" class="nav-link" data-scroll-target="#thevenin">Thevenin</a></li>
+  <li><a href="#norton" id="toc-norton" class="nav-link" data-scroll-target="#norton">Norton</a></li>
+  </ul></li>
   <li><a href="#source-transformation" id="toc-source-transformation" class="nav-link" data-scroll-target="#source-transformation">Source Transformation</a>
   <ul class="collapse">
   <li><a href="#source-transformation-example" id="toc-source-transformation-example" class="nav-link" data-scroll-target="#source-transformation-example">Source Transformation Example</a></li>
   </ul></li>
-  <li><a href="#maximum-power-transfer" id="toc-maximum-power-transfer" class="nav-link" data-scroll-target="#maximum-power-transfer">Maximum Power Transfer</a></li>
+  <li><a href="#maximum-power-transfer" id="toc-maximum-power-transfer" class="nav-link" data-scroll-target="#maximum-power-transfer">Maximum Power Transfer</a>
+  <ul class="collapse">
+  <li><a href="#solve-for-maximum-power-transfer" id="toc-solve-for-maximum-power-transfer" class="nav-link" data-scroll-target="#solve-for-maximum-power-transfer">Solve for Maximum Power Transfer</a></li>
+  <li><a href="#how-to-match-load-and-source-resistance" id="toc-how-to-match-load-and-source-resistance" class="nav-link" data-scroll-target="#how-to-match-load-and-source-resistance">How to Match Load and Source Resistance</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="sources-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -826,14 +834,18 @@ Note
 <p>The circuits are equivalent if they have the same <span class="math inline">\(i-v\)</span> characteristics.</p>
 </div>
 </div>
-<p><strong>Thevenin</strong></p>
+<section id="thevenin" class="level3">
+<h3 class="anchored" data-anchor-id="thevenin">Thevenin</h3>
 <p><span class="math display">\[
 \begin{gather}
 V_L = V_T \frac{R_L}{R_T+R_L} \\
 i_L = \frac{v_L}{R_L} = \frac{V_T}{R_T+R_L}
 \end{gather}
 \]</span></p>
-<p><strong>Norton</strong> <span class="math display">\[
+</section>
+<section id="norton" class="level3">
+<h3 class="anchored" data-anchor-id="norton">Norton</h3>
+<p><span class="math display">\[
 \begin{gather}
 i_L = i_N \frac{R_T}{R_N+R_L} \\
 V_L = i_L R_L = I_N R_N \frac{R_L}{R_N+R_L} \\
@@ -842,6 +854,7 @@ V_L = V_T \frac{R_L}{R_T+R_L}
 \end{gather}
 \]</span></p>
 <p>They are the same!</p>
+</section>
 </section>
 <section id="source-transformation" class="level2">
 <h2 class="anchored" data-anchor-id="source-transformation">Source Transformation</h2>
@@ -876,12 +889,78 @@ Tip
 </div>
 <section id="source-transformation-example" class="level3">
 <h3 class="anchored" data-anchor-id="source-transformation-example">Source Transformation Example</h3>
-<p>Next time…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/source_transform_ex.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Now a simple current divider!</p>
+<p><span class="math display">\[
+i_4 = \left( \frac{v_1}{R_1} - I_S - \frac{v_s}{R_3} \right) \left[ \frac{\frac{1}{R_4}}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_4}}\right]
+\]</span></p>
 </section>
 </section>
 <section id="maximum-power-transfer" class="level2">
 <h2 class="anchored" data-anchor-id="maximum-power-transfer">Maximum Power Transfer</h2>
-<p>Coming soon…</p>
+<p>We can use our “simple” Thevenin equivalent circuit to now represent any source:load combination.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/source_load.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/thevenin_max_power.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Power Maximum Transfer Condition">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Power Maximum Transfer Condition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What load resistance allows us to deliver the most power to the load?</p>
+</div>
+</div>
+<section id="solve-for-maximum-power-transfer" class="level3">
+<h3 class="anchored" data-anchor-id="solve-for-maximum-power-transfer">Solve for Maximum Power Transfer</h3>
+<p><span class="math display">\[
+\begin{gather}
+P_L = V_L I_L = I_L^2 R_L \\
+I_L = \frac{V_T}{R_T + R_L} \\
+P_L = \left( \frac{V_T}{R_T+R_L}\right)^2 R_L \\
+P_L = \frac{V_T^2 R_L}{(R_T + R_L)^2}
+\end{gather}
+\]</span></p>
+</section>
+<section id="how-to-match-load-and-source-resistance" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-match-load-and-source-resistance">How to Match Load and Source Resistance</h3>
+<p>If we can only adjust <span class="math inline">\(R_L\)</span> (i.e., the source conditions are fixed), then power is maximized when:</p>
+<p><span class="math display">\[
+\frac{dP_L}{dR_L} = 0
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Maximum power is delivered to the load when <span class="math inline">\(R_T = R_L\)</span>!!</p>
+</div>
+</div>
 
 
 <script type="ojs-module-contents">
@@ -898,6 +977,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+</section>
 </section>
 
 </main> <!-- /main -->
