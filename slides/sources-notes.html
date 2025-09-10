@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
-<meta name="dcterms.date" content="2025-08-25">
+<meta name="dcterms.date" content="2025-09-10">
 
-<title>Introduction to Circuits – Biomedical Electronic Measurements</title>
+<title>Source Superposition &amp; Thevenin/Norton Equivalents – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Introduction to Circuits</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/sources-notes.html">Source Transformations</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -196,7 +196,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/intro-circuits-notes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../slides/intro-circuits-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Circuits</span></a>
   </div>
 </li>
@@ -220,7 +220,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/sources-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/sources-notes.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Source Transformations</span></a>
   </div>
 </li>
@@ -353,44 +353,49 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#circuit" id="toc-circuit" class="nav-link" data-scroll-target="#circuit">Circuit</a></li>
-  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
-  <li><a href="#biomedical-circuit-correlates" id="toc-biomedical-circuit-correlates" class="nav-link" data-scroll-target="#biomedical-circuit-correlates">Biomedical Circuit Correlates</a>
+  <li><a href="#summary-of-analysis-approaches-so-far" id="toc-summary-of-analysis-approaches-so-far" class="nav-link active" data-scroll-target="#summary-of-analysis-approaches-so-far">Summary of Analysis Approaches (So Far)</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#superposition" id="toc-superposition" class="nav-link" data-scroll-target="#superposition">Superposition</a>
   <ul class="collapse">
-  <li><a href="#cardiovascular" id="toc-cardiovascular" class="nav-link" data-scroll-target="#cardiovascular">Cardiovascular</a></li>
-  <li><a href="#cardiovascular-analogy" id="toc-cardiovascular-analogy" class="nav-link" data-scroll-target="#cardiovascular-analogy">Cardiovascular Analogy</a></li>
-  <li><a href="#respiratory" id="toc-respiratory" class="nav-link" data-scroll-target="#respiratory">Respiratory</a></li>
+  <li><a href="#eliminating-sources" id="toc-eliminating-sources" class="nav-link" data-scroll-target="#eliminating-sources">“Eliminating” Sources</a></li>
+  <li><a href="#superposition-example" id="toc-superposition-example" class="nav-link" data-scroll-target="#superposition-example">Superposition Example</a></li>
+  <li><a href="#step-1-eliminate-i_s-solve-for-i_3_v_s" id="toc-step-1-eliminate-i_s-solve-for-i_3_v_s" class="nav-link" data-scroll-target="#step-1-eliminate-i_s-solve-for-i_3_v_s">Step 1: Eliminate <span class="math inline">\(I_S\)</span>; Solve for <span class="math inline">\(i_{3_{V_S}}\)</span></a></li>
+  <li><a href="#step-2-eliminate-v_s-solve-for-i_3_i_s" id="toc-step-2-eliminate-v_s-solve-for-i_3_i_s" class="nav-link" data-scroll-target="#step-2-eliminate-v_s-solve-for-i_3_i_s">Step 2: Eliminate <span class="math inline">\(V_S\)</span>; Solve for <span class="math inline">\(i_{3_{I_S}}\)</span></a></li>
+  <li><a href="#step-3-sum-contributions-from-i_s-and-v_s" id="toc-step-3-sum-contributions-from-i_s-and-v_s" class="nav-link" data-scroll-target="#step-3-sum-contributions-from-i_s-and-v_s">Step 3: Sum Contributions from <span class="math inline">\(I_S\)</span> and <span class="math inline">\(V_S\)</span></a></li>
+  <li><a href="#lets-revisit-the-super-mesh-circuit" id="toc-lets-revisit-the-super-mesh-circuit" class="nav-link" data-scroll-target="#lets-revisit-the-super-mesh-circuit">Let’s revisit the “super mesh” circuit…</a></li>
   </ul></li>
-  <li><a href="#what-is-charge" id="toc-what-is-charge" class="nav-link" data-scroll-target="#what-is-charge">What is charge?</a></li>
-  <li><a href="#what-is-current" id="toc-what-is-current" class="nav-link" data-scroll-target="#what-is-current">What is current?</a>
+  <li><a href="#equivalent-circuits" id="toc-equivalent-circuits" class="nav-link" data-scroll-target="#equivalent-circuits">Equivalent Circuits</a></li>
+  <li><a href="#thevenin-equivalent-sources" id="toc-thevenin-equivalent-sources" class="nav-link" data-scroll-target="#thevenin-equivalent-sources">Thevenin Equivalent Sources</a>
   <ul class="collapse">
-  <li><a href="#current" id="toc-current" class="nav-link" data-scroll-target="#current">Current</a></li>
-  <li><a href="#polarity-conventions" id="toc-polarity-conventions" class="nav-link" data-scroll-target="#polarity-conventions">Polarity Conventions</a></li>
-  <li><a href="#si-units" id="toc-si-units" class="nav-link" data-scroll-target="#si-units">SI Units</a></li>
-  <li><a href="#common-current-magnitudes" id="toc-common-current-magnitudes" class="nav-link" data-scroll-target="#common-current-magnitudes">Common Current Magnitudes</a></li>
+  <li><a href="#step-1-find-the-equivalent-resistance" id="toc-step-1-find-the-equivalent-resistance" class="nav-link" data-scroll-target="#step-1-find-the-equivalent-resistance">Step 1: Find the equivalent resistance</a></li>
+  <li><a href="#step-1-example" id="toc-step-1-example" class="nav-link" data-scroll-target="#step-1-example">Step 1: Example</a></li>
+  <li><a href="#step-2-find-the-equivalent-source-voltage" id="toc-step-2-find-the-equivalent-source-voltage" class="nav-link" data-scroll-target="#step-2-find-the-equivalent-source-voltage">Step 2: Find the equivalent source voltage</a></li>
+  <li><a href="#back-to-our-example" id="toc-back-to-our-example" class="nav-link" data-scroll-target="#back-to-our-example">Back to our example…</a></li>
+  <li><a href="#thevenin-equivalent-circuit" id="toc-thevenin-equivalent-circuit" class="nav-link" data-scroll-target="#thevenin-equivalent-circuit">Thevenin Equivalent Circuit</a></li>
+  <li><a href="#oh-wait" id="toc-oh-wait" class="nav-link" data-scroll-target="#oh-wait">Oh wait…</a></li>
+  <li><a href="#why-use-a-thevenin-equivalent-circuit" id="toc-why-use-a-thevenin-equivalent-circuit" class="nav-link" data-scroll-target="#why-use-a-thevenin-equivalent-circuit">Why use a Thevenin Equivalent Circuit?</a></li>
+  <li><a href="#another-example" id="toc-another-example" class="nav-link" data-scroll-target="#another-example">Another example…</a></li>
   </ul></li>
-  <li><a href="#what-is-voltage" id="toc-what-is-voltage" class="nav-link" data-scroll-target="#what-is-voltage">What is voltage?</a>
+  <li><a href="#norton-equivalent-sources" id="toc-norton-equivalent-sources" class="nav-link" data-scroll-target="#norton-equivalent-sources">Norton Equivalent Sources</a>
   <ul class="collapse">
-  <li><a href="#common-voltage-magnitudes" id="toc-common-voltage-magnitudes" class="nav-link" data-scroll-target="#common-voltage-magnitudes">Common Voltage Magnitudes</a></li>
+  <li><a href="#step-1-calculate-r_n" id="toc-step-1-calculate-r_n" class="nav-link" data-scroll-target="#step-1-calculate-r_n">Step 1: Calculate <span class="math inline">\(R_N\)</span></a></li>
+  <li><a href="#step-2-calculate-the-norton-equivalent-source" id="toc-step-2-calculate-the-norton-equivalent-source" class="nav-link" data-scroll-target="#step-2-calculate-the-norton-equivalent-source">Step 2: Calculate the Norton Equivalent Source</a></li>
   </ul></li>
-  <li><a href="#what-is-power" id="toc-what-is-power" class="nav-link" data-scroll-target="#what-is-power">What is power?</a>
+  <li><a href="#proof-that-thevening-norton-equivalents-circuits-are-equivalent" id="toc-proof-that-thevening-norton-equivalents-circuits-are-equivalent" class="nav-link" data-scroll-target="#proof-that-thevening-norton-equivalents-circuits-are-equivalent">Proof that Thevening &amp; Norton Equivalents Circuits are Equivalent</a></li>
+  <li><a href="#source-transformation" id="toc-source-transformation" class="nav-link" data-scroll-target="#source-transformation">Source Transformation</a>
   <ul class="collapse">
-  <li><a href="#what-do-the-units-look-like" id="toc-what-do-the-units-look-like" class="nav-link" data-scroll-target="#what-do-the-units-look-like">What do the units look like?</a></li>
+  <li><a href="#source-transformation-example" id="toc-source-transformation-example" class="nav-link" data-scroll-target="#source-transformation-example">Source Transformation Example</a></li>
   </ul></li>
-  <li><a href="#what-happens-to-power" id="toc-what-happens-to-power" class="nav-link" data-scroll-target="#what-happens-to-power">What happens to power?</a>
-  <ul class="collapse">
-  <li><a href="#sign-conventions" id="toc-sign-conventions" class="nav-link" data-scroll-target="#sign-conventions">Sign Conventions</a></li>
-  </ul></li>
+  <li><a href="#maximum-power-transfer" id="toc-maximum-power-transfer" class="nav-link" data-scroll-target="#maximum-power-transfer">Maximum Power Transfer</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="intro-circuits-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="sources-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Introduction to Circuits</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/sources-notes.html">Source Transformations</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction to Circuits</h1>
+<h1 class="title">Source Superposition &amp; Thevenin/Norton Equivalents</h1>
 <p class="subtitle lead">BME253L - Fall 2025</p>
 </div>
 
@@ -415,7 +420,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 25, 2025</p>
+      <p class="date">September 10, 2025</p>
     </div>
   </div>
   
@@ -427,237 +432,177 @@ window.Quarto = {
 </header>
 
 
+<section id="summary-of-analysis-approaches-so-far" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-analysis-approaches-so-far">Summary of Analysis Approaches (So Far)</h2>
+<ul>
+<li><p>Power Balance</p></li>
+<li><p>KCL &amp; KVL</p></li>
+<li><p>Ohm’s Law</p></li>
+<li><p>Equivalent Resistance</p></li>
+<li><p>Voltage &amp; Current Division</p></li>
+<li><p>NVA &amp; MCA</p></li>
+</ul>
+</section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <ul>
-<li>What are circuits?</li>
-<li>How does electric circuit analysis apply to other biomedical systems?</li>
-<li>Circuit analysis conventions</li>
+<li><p>Superposition (Linear Circuits)</p></li>
+<li><p>Thevenin Equivalent Sources (Voltage)</p></li>
+<li><p>Norton Equivalents Sources (Current)</p></li>
 </ul>
 </section>
-<section id="circuit" class="level2">
-<h2 class="anchored" data-anchor-id="circuit">Circuit</h2>
-<p>Circuits are interconnection of elements (sources and loads).</p>
-<p><img src="images/source_load.svg" class="img-fluid"></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Question">
+<section id="superposition" class="level2">
+<h2 class="anchored" data-anchor-id="superposition">Superposition</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Superposition Statement">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Question
+Superposition Statement
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>What are common sources and loads in electronic circuits?</p>
-</div>
-</div>
-</section>
-<section id="sources" class="level2">
-<h2 class="anchored" data-anchor-id="sources">Sources</h2>
 <ul>
-<li><p>Voltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.</p></li>
-<li><p>The potential energy in the source to move electrons to the load, where that energy is either <strong>dissipated</strong> or <strong>stored</strong>.</p></li>
+<li><p>In a <strong>linear</strong> circuit containing <span class="math inline">\(N\)</span> sources, each branch voltage and current is the linear sum of <span class="math inline">\(N\)</span> voltages and currents (i.e., each source contributes to part of the total element current and voltage).</p></li>
+<li><p>Each source’s contribution can be calculated by “eliminating” the contribution of the other sources and solving for element currents/voltages.</p></li>
 </ul>
-</section>
-<section id="biomedical-circuit-correlates" class="level2">
-<h2 class="anchored" data-anchor-id="biomedical-circuit-correlates">Biomedical Circuit Correlates</h2>
-<section id="cardiovascular" class="level3">
-<h3 class="anchored" data-anchor-id="cardiovascular">Cardiovascular</h3>
+</div>
+</div>
+<section id="eliminating-sources" class="level3">
+<h3 class="anchored" data-anchor-id="eliminating-sources">“Eliminating” Sources</h3>
 <ul>
-<li><strong>Source</strong>: Heart (pressure differential)</li>
-<li><strong>Load</strong>:
+<li><p>“Eliminating” a source means removing its voltage or current contribution to the circuit.</p></li>
+<li><p>A <strong>voltage sourse</strong> can be eliminated by replacing it with a <strong>short circuit</strong>.</p>
 <ul>
-<li>Circulatory system</li>
-<li>Organs</li>
-<li>Resistance &amp; elasticity (storage of energy)</li>
+<li><p>Branch current can still be conducted.</p></li>
+<li><p>Forcing no <span class="math inline">\(\Delta\)</span> V related to the voltage source.</p></li>
 </ul></li>
-<li><strong>Current</strong>: Volumetric Flow Rate</li>
+<li><p>A <strong>current source</strong> can be eliminated by replacing it with an <strong>open circuit</strong>.</p>
+<ul>
+<li><p>Voltage difference allowed between two nodes.</p></li>
+<li><p>Blocking current from flowing from other sources because the eliminated current source <em>exclusively</em> dictactes that branch current.</p></li>
+</ul></li>
 </ul>
 </section>
-<section id="cardiovascular-analogy" class="level3">
-<h3 class="anchored" data-anchor-id="cardiovascular-analogy">Cardiovascular Analogy</h3>
+<section id="superposition-example" class="level3">
+<h3 class="anchored" data-anchor-id="superposition-example">Superposition Example</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Solve for <span class="math inline">\(i_3\)</span> using source superposition.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img src="images/superposition_two_sources.png" class="img-fluid"></p>
+</div><div class="column" style="width:35%;">
+<ul>
+<li><p><span class="math inline">\(V_S = 10 V\)</span></p></li>
+<li><p><span class="math inline">\(R_1 = 200 \Omega\)</span></p></li>
+<li><p><span class="math inline">\(R_2 = 200 \Omega\)</span></p></li>
+<li><p><span class="math inline">\(R_3 = 100 \Omega\)</span></p></li>
+<li><p><span class="math inline">\(I_S = 0.1 A\)</span></p></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+i_3 = i_{3_{V_S}} + i_{3_{I_S}}
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="step-1-eliminate-i_s-solve-for-i_3_v_s" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-eliminate-i_s-solve-for-i_3_v_s">Step 1: Eliminate <span class="math inline">\(I_S\)</span>; Solve for <span class="math inline">\(i_{3_{V_S}}\)</span></h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/physio_source_load.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/superposition_two_sources_eliminate_Is.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="Question">
+<p><span class="math display">\[
+i_{3_{V_S}} = \frac{V_S}{R_1+R_2+R_3} = 0.2 A
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Question
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>How does sympathetic and parasympathetic tone modulate systemic resistance and pressure?</p>
+<p><span class="math inline">\(i_{3_{V_S}}\)</span> is the contribution to total <span class="math inline">\(i_3\)</span> from <span class="math inline">\(V_S\)</span>.</p>
 </div>
 </div>
 </section>
-<section id="respiratory" class="level3">
-<h3 class="anchored" data-anchor-id="respiratory">Respiratory</h3>
+<section id="step-2-eliminate-v_s-solve-for-i_3_i_s" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-eliminate-v_s-solve-for-i_3_i_s">Step 2: Eliminate <span class="math inline">\(V_S\)</span>; Solve for <span class="math inline">\(i_{3_{I_S}}\)</span></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/superposition_two_sources_eliminate_Vs.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>While any circuit analysis techinque we have used to date is fair game, current division resonates with me…</p>
+</div>
+</div>
+<p><span class="math display">\[
+I_{3_{I_S}} = \frac{v_A}{R_2+R_3} = -I_S\left(\frac{R_1}{R_1+R_2+R_3}\right) = -0.04 A
+\]</span></p>
+</section>
+<section id="step-3-sum-contributions-from-i_s-and-v_s" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-sum-contributions-from-i_s-and-v_s">Step 3: Sum Contributions from <span class="math inline">\(I_S\)</span> and <span class="math inline">\(V_S\)</span></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/superposition_two_sources.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+i_3 = i_{3_{V_S}} + i_{3_{I_S}} = 0.02 A + (-0.04 A) = -0.02 A
+\]</span></p>
+</section>
+<section id="lets-revisit-the-super-mesh-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="lets-revisit-the-super-mesh-circuit">Let’s revisit the “super mesh” circuit…</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/superposition_super_mesh.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 <ul>
-<li><strong>Source</strong>: Diaphragm &amp; Intercostal Muscles</li>
-<li><strong>Load</strong>: Airways / Lungs</li>
-<li><strong>Current</strong>: Volumetric Airflow Rate</li>
+<li><p>Solve for <span class="math inline">\(i_4\)</span> using source superposition.</p></li>
+<li><p>Let’s walk through the approach together…</p></li>
 </ul>
 </section>
 </section>
-<section id="what-is-charge" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-charge">What is charge?</h2>
-<p><span class="math display">\[
-\begin{gather}
-q_e = -1.602 \times 10^{-19} C (Coulomb)\\
-q_p = -q_e
-\end{gather}
-\]</span></p>
-</section>
-<section id="what-is-current" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-current">What is current?</h2>
-<section id="current" class="level3">
-<h3 class="anchored" data-anchor-id="current">Current</h3>
-<p><strong>Current</strong> is the time rate change of charge passing through a defined area.</p>
-<p><span class="math display">\[
-i = \frac{dq}{dt} \left[\frac{C}{s}\right] = [A] (Ampere)
-\]</span></p>
-</section>
-<section id="polarity-conventions" class="level3">
-<h3 class="anchored" data-anchor-id="polarity-conventions">Polarity Conventions</h3>
-<ul>
-<li>(+) direction of current flow represents flow of (+) charges (i.e., not electrons)</li>
-</ul>
-</section>
-<section id="si-units" class="level3">
-<h3 class="anchored" data-anchor-id="si-units">SI Units</h3>
-<p>Coulombs and amperes are SI units.</p>
-<table class="caption-top table">
-<caption>Common Unit Prefixes</caption>
-<thead>
-<tr class="header">
-<th>Power of 10</th>
-<th>Prefix</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\times 10^{12}\)</span></td>
-<td>T (Tera)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\times 10^9\)</span></td>
-<td>G (Giga)</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\times 10^6\)</span></td>
-<td>M (Mega)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\times 10^3\)</span></td>
-<td>k (kilo)</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\times 10^{-3}\)</span></td>
-<td>m (milli)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\times 10^{-6}\)</span></td>
-<td><span class="math inline">\(\mu\)</span> (micro)</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\times 10^{-9}\)</span></td>
-<td>n (nano)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\times 10^{-12}\)</span></td>
-<td>p (pico)</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="common-current-magnitudes" class="level3">
-<h3 class="anchored" data-anchor-id="common-current-magnitudes">Common Current Magnitudes</h3>
-<table class="caption-top table">
-<caption>Common Current Magnitudes</caption>
-<thead>
-<tr class="header">
-<th>Description</th>
-<th>Approx. Magnitude</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Circuit breaker limits / house electrical wires max</td>
-<td>10-20 A</td>
-</tr>
-<tr class="even">
-<td>Home circuit breaker total</td>
-<td>200-300 A</td>
-</tr>
-<tr class="odd">
-<td>Hairdryer</td>
-<td>&lt; 10 A</td>
-</tr>
-<tr class="even">
-<td>Car Battery Max</td>
-<td>100s A</td>
-</tr>
-<tr class="odd">
-<td>Laptop Battery</td>
-<td>&lt; 1 A</td>
-</tr>
-<tr class="even">
-<td>Cellphone Battery</td>
-<td>10 mA (idle) <br> 3 A (cell, camera)</td>
-</tr>
-<tr class="odd">
-<td>Nerve Membrane Current</td>
-<td>pA</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="what-is-voltage" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-voltage">What is voltage?</h2>
-<p>A voltage differential represents the energy (<span class="math inline">\(dW\)</span>) available in flowing charge (<span class="math inline">\(dq\)</span>), avialalbe as stored potential energy in a source.</p>
-<p><span class="math display">\[
-V = \frac{dW}{dq} \left[\frac{J}{C}\right] = [V] (Volt)
-\]</span></p>
-<section id="common-voltage-magnitudes" class="level3">
-<h3 class="anchored" data-anchor-id="common-voltage-magnitudes">Common Voltage Magnitudes</h3>
-<table class="caption-top table">
-<caption>Common Voltage Magnitudes</caption>
-<thead>
-<tr class="header">
-<th>Description</th>
-<th>Approx. Magnitude</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Wall Outlet</td>
-<td>110-240 V (AC)</td>
-</tr>
-<tr class="even">
-<td>Transmission Line</td>
-<td>kV-MV</td>
-</tr>
-<tr class="odd">
-<td>Lightning</td>
-<td>~100 MV</td>
-</tr>
-<tr class="even">
-<td>Alkaline Battery Cell</td>
-<td>~1.5 V</td>
-</tr>
-<tr class="odd">
-<td>Nerve Action Potential</td>
-<td>~75 mV</td>
-</tr>
-</tbody>
-</table>
+<section id="equivalent-circuits" class="level2">
+<h2 class="anchored" data-anchor-id="equivalent-circuits">Equivalent Circuits</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -668,32 +613,275 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Voltage is a <strong>relative</strong> quantity; absolute voltage does not exist!</p>
+<p>Each “block” (physical or functional) of a circuit can be represented by a 2-terminal equivalent circuit, composed of a single source and resistance that completely captures the <span class="math inline">\(i-v\)</span> characteristics of that block.</p>
+<ul>
+<li><p>If that single source is a voltage source, then it is known as a <strong>Thevenin source</strong> equivalent.</p></li>
+<li><p>If that single source is a current source, then it is known as a <strong>Norton source</strong> equivalent.</p></li>
+</ul>
 </div>
 </div>
 </section>
+<section id="thevenin-equivalent-sources" class="level2">
+<h2 class="anchored" data-anchor-id="thevenin-equivalent-sources">Thevenin Equivalent Sources</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Thevenin Theorem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Thevenin Theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:</p>
+<ol type="1">
+<li><p>An ideal voltage source (<span class="math inline">\(V_T\)</span>), in series with</p></li>
+<li><p>An equivalent resistance (<span class="math inline">\(R_T\)</span>).</p></li>
+</ol>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/thevenin.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>How do we solve for <span class="math inline">\(V_T\)</span> and <span class="math inline">\(R_T\)</span>?</p>
+<section id="step-1-find-the-equivalent-resistance" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-find-the-equivalent-resistance">Step 1: Find the equivalent resistance</h3>
+<p>Find the <strong>equivalent resistance</strong> as “seen” by the terminals of that source block.</p>
+<ol type="a">
+<li><p>Remove the load from the terminals of the block.</p></li>
+<li><p>Eliminate all independent voltage and current sources.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To date, we have only dealth with independent voltage and current sources (i.e., their source voltage or current values are not dependent on other voltages/currents in the circuit).</p>
+</div>
+</div>
+<ol start="3" type="a">
+<li>Compute the equivalent resistance with the load removed.</li>
+</ol>
 </section>
-<section id="what-is-power" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-power">What is power?</h2>
-<p>Power represents the rate at which work can be done (i.e., energy / unit time).</p>
+<section id="step-1-example" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-example">Step 1: Example</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/thevenin_R_T.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="step-2-find-the-equivalent-source-voltage" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-find-the-equivalent-source-voltage">Step 2: Find the equivalent source voltage</h3>
+<p>Solve for the equivalent Thevenin source voltage, which is equal to the terminal voltage when the terminals are “open” (i.e., no load is attached to them).</p>
+<ol type="a">
+<li><p>Remove the load from the terminals (create an “open” load condition).</p></li>
+<li><p>Keep all sources.</p></li>
+<li><p>Solve for <span class="math inline">\(V_T = V_{{ab}_{OC}}\)</span></p></li>
+</ol>
+</section>
+<section id="back-to-our-example" class="level3">
+<h3 class="anchored" data-anchor-id="back-to-our-example">Back to our example…</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/thevenin_V_T.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 <p><span class="math display">\[
-P = \frac{dw}{dt} = \frac{dW}{dq} \frac{dq}{dt} = VI
+V_T = V_{ab} = V_B = v_s \left(\frac{R_2}{R_1+R_2}\right)
 \]</span></p>
-<section id="what-do-the-units-look-like" class="level3">
-<h3 class="anchored" data-anchor-id="what-do-the-units-look-like">What do the units look like?</h3>
+</section>
+<section id="thevenin-equivalent-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="thevenin-equivalent-circuit">Thevenin Equivalent Circuit</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/thevenin_equiv_ex.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Are these equivalent?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Are these equivalent?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let’s convince ourselves that <span class="math inline">\(i_L\)</span> is the same for both circuits…</p>
+</div>
+</div>
+</section>
+<section id="oh-wait" class="level3">
+<h3 class="anchored" data-anchor-id="oh-wait">Oh wait…</h3>
+<p>I’m not going to show you this; you are going to do it!</p>
+</section>
+<section id="why-use-a-thevenin-equivalent-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="why-use-a-thevenin-equivalent-circuit">Why use a Thevenin Equivalent Circuit?</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A major benefit of using an equivalent source is that if we have an unknown or changing load (<span class="math inline">\(R_L\)</span>), we can easily solve for <span class="math inline">\(i_L\)</span> as a simple voltage division with known <span class="math inline">\(V_T\)</span> and <span class="math inline">\(R_T\)</span>.</p>
+<p>Extremely useful for instrument design!</p>
+<ul>
+<li><p>Current draw as a function of load (e.g., make sure to not exceed <span class="math inline">\(I_{max}\)</span> of a supply).</p></li>
+<li><p>Power consumption as a function of load.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="another-example" class="level3">
+<h3 class="anchored" data-anchor-id="another-example">Another example…</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/thevenin_ex2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="norton-equivalent-sources" class="level2">
+<h2 class="anchored" data-anchor-id="norton-equivalent-sources">Norton Equivalent Sources</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Norton Theorem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Norton Theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:</p>
+<ol type="1">
+<li><p>An ideal current source (<span class="math inline">\(V_T\)</span>), in parallel with</p></li>
+<li><p>An equivalent resistance (<span class="math inline">\(R_N = R_T\)</span>).</p></li>
+</ol>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/norton.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<section id="step-1-calculate-r_n" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-calculate-r_n">Step 1: Calculate <span class="math inline">\(R_N\)</span></h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is the same process as calculating the Thevenin equivalent resistance (<span class="math inline">\(R_T\)</span>)!</p>
+</div>
+</div>
+</section>
+<section id="step-2-calculate-the-norton-equivalent-source" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-calculate-the-norton-equivalent-source">Step 2: Calculate the Norton Equivalent Source</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ol type="1">
+<li><p>Similar to calculating the Thevenin equivalent source, but instead of solving for the open-circuit voltage at the terminals, solve for the short circuit current at the terminals.</p></li>
+<li><p>This short circuit current is the Norton source current (<span class="math inline">\(I_N\)</span>).</p></li>
+</ol>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/norton_I_N.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="proof-that-thevening-norton-equivalents-circuits-are-equivalent" class="level2">
+<h2 class="anchored" data-anchor-id="proof-that-thevening-norton-equivalents-circuits-are-equivalent">Proof that Thevening &amp; Norton Equivalents Circuits are Equivalent</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The circuits are equivalent if they have the same <span class="math inline">\(i-v\)</span> characteristics.</p>
+</div>
+</div>
+<p><strong>Thevenin</strong></p>
 <p><span class="math display">\[
-\left[\frac{J}{C} \frac{C}{s}\right] = \left[\frac{J}{s}\right] = [W] (Watt)
+\begin{gather}
+V_L = V_T \frac{R_L}{R_T+R_L} \\
+i_L = \frac{v_L}{R_L} = \frac{V_T}{R_T+R_L}
+\end{gather}
 \]</span></p>
+<p><strong>Norton</strong> <span class="math display">\[
+\begin{gather}
+i_L = i_N \frac{R_T}{R_N+R_L} \\
+V_L = i_L R_L = I_N R_N \frac{R_L}{R_N+R_L} \\
+i_N = \frac{V_T}{R_T} \\
+V_L = V_T \frac{R_L}{R_T+R_L}
+\end{gather}
+\]</span></p>
+<p>They are the same!</p>
+</section>
+<section id="source-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="source-transformation">Source Transformation</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We can use these equivalent circuits to transform between voltage and current sources using Ohm’s law:</p>
+<p><span class="math display">\[
+V_T = I_N R_T
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use source transformations to change a circuit into a voltage or current division problem that is easier to solve!</p>
+</div>
+</div>
+<section id="source-transformation-example" class="level3">
+<h3 class="anchored" data-anchor-id="source-transformation-example">Source Transformation Example</h3>
+<p>Next time…</p>
 </section>
 </section>
-<section id="what-happens-to-power" class="level2">
-<h2 class="anchored" data-anchor-id="what-happens-to-power">What happens to power?</h2>
-<p>Circuit elements my absorb (dissipate or store) [load] or provide [source] power.</p>
-<section id="sign-conventions" class="level3">
-<h3 class="anchored" data-anchor-id="sign-conventions">Sign Conventions</h3>
-<p><span class="math inline">\(P &lt; 0\)</span>: energy is provided to the circuit (source) <span class="math inline">\(P &gt; 0\)</span>: energy is dissipated / stored (load)</p>
-<p>Power <em>dissipated</em> by a circuit element (load) is (+) when (+) current (<span class="math inline">\(I\)</span>) flows from a (+) -&gt; (-) voltage (V).</p>
-<p><img src="images/power_source_load.svg" class="img-fluid"></p>
+<section id="maximum-power-transfer" class="level2">
+<h2 class="anchored" data-anchor-id="maximum-power-transfer">Maximum Power Transfer</h2>
+<p>Coming soon…</p>
 
 
 <script type="ojs-module-contents">
@@ -710,7 +898,6 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
 </section>
 
 </main> <!-- /main -->

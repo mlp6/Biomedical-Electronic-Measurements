@@ -393,58 +393,76 @@
     "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power."
   },
   {
-    "objectID": "software-install-tutorials.html",
-    "href": "software-install-tutorials.html",
-    "title": "Software Installation and Tutorials",
+    "objectID": "resources/teaching_assistant_expectations.html",
+    "href": "resources/teaching_assistant_expectations.html",
+    "title": "Teaching Assistant Expectations",
     "section": "",
-    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
+    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
     "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
+      "Resources",
+      "Teaching Assistant Expectations"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#kicad",
-    "href": "software-install-tutorials.html#kicad",
-    "title": "Software Installation and Tutorials",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+  },
+  {
+    "objectID": "problem_sets/ps1.html",
+    "href": "problem_sets/ps1.html",
+    "title": "Problem Set 01",
+    "section": "",
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
     "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
+      "Problem Sets",
+      "Problem Set 01"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
-    "href": "software-install-tutorials.html#visual-studio-code-ide",
-    "title": "Software Installation and Tutorials",
-    "section": "Visual Studio Code (IDE)",
-    "text": "Visual Studio Code (IDE)\nI recommend using Visual Studio Code as the IDE for all projects in this class that require data analysis, plotting, etc.\nIn addition to installing the base program, please install the following Extensions:\n\nPython Extension Pack\nJupyter\nGitHub CoPilot (AI-assisted coding)\nSign up for free GitHub Education Student account to get “Pro” access to this extension: https://github.com/education/students\n\n\n\n\n\n\n\nTip\n\n\n\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.",
+    "objectID": "problem_sets/ps1.html#problem-set-format-guidelines",
+    "href": "problem_sets/ps1.html#problem-set-format-guidelines",
+    "title": "Problem Set 01",
+    "section": "Problem Set Format Guidelines",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
     "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
+      "Problem Sets",
+      "Problem Set 01"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
-    "href": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
-    "title": "Software Installation and Tutorials",
-    "section": "Technical Report Preparation (Jupyter Notebook)",
-    "text": "Technical Report Preparation (Jupyter Notebook)\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be converted to PDF files and uploaded to Gradescope.\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.\nYou can also choose to edit your Jupyter notebooks with a cloud-based tool, like Google CoLab, but that approach will not receive help / troubleshooting from Dr. Palmeri or the teaching team.",
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Coming soon…",
     "crumbs": [
       "Course Information",
-      "Software Installation & Tutorials"
+      "FAQ"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#gradescope",
-    "href": "software-install-tutorials.html#gradescope",
-    "title": "Software Installation and Tutorials",
-    "section": "Gradescope",
-    "text": "Gradescope\nPlease complete the Gradescope quiz when you are done installing all of these tools.",
+    "objectID": "problem_sets/ps2.html",
+    "href": "problem_sets/ps2.html",
+    "title": "Problem Set 02",
+    "section": "",
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
     "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
+      "Problem Sets",
+      "Problem Set 02"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps2.html#problem-set-format-guidelines",
+    "href": "problem_sets/ps2.html#problem-set-format-guidelines",
+    "title": "Problem Set 02",
+    "section": "Problem Set Format Guidelines",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 02"
     ]
   },
   {
@@ -529,7 +547,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
@@ -580,76 +598,231 @@
     ]
   },
   {
-    "objectID": "problem_sets/ps2.html",
-    "href": "problem_sets/ps2.html",
-    "title": "Problem Set 02",
+    "objectID": "software-install-tutorials.html",
+    "href": "software-install-tutorials.html",
+    "title": "Software Installation and Tutorials",
     "section": "",
-    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 02"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps2.html#problem-set-format-guidelines",
-    "href": "problem_sets/ps2.html#problem-set-format-guidelines",
-    "title": "Problem Set 02",
-    "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 02"
-    ]
-  },
-  {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Frequently Asked Questions",
-    "section": "",
-    "text": "Coming soon…",
+    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
     "crumbs": [
       "Course Information",
-      "FAQ"
+      "Software Installation & Tutorials"
     ]
   },
   {
-    "objectID": "problem_sets/ps1.html",
-    "href": "problem_sets/ps1.html",
-    "title": "Problem Set 01",
+    "objectID": "software-install-tutorials.html#kicad",
+    "href": "software-install-tutorials.html#kicad",
+    "title": "Software Installation and Tutorials",
     "section": "",
-    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
+    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 01"
+      "Course Information",
+      "Software Installation & Tutorials"
     ]
   },
   {
-    "objectID": "problem_sets/ps1.html#problem-set-format-guidelines",
-    "href": "problem_sets/ps1.html#problem-set-format-guidelines",
-    "title": "Problem Set 01",
-    "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
+    "href": "software-install-tutorials.html#visual-studio-code-ide",
+    "title": "Software Installation and Tutorials",
+    "section": "Visual Studio Code (IDE)",
+    "text": "Visual Studio Code (IDE)\nI recommend using Visual Studio Code as the IDE for all projects in this class that require data analysis, plotting, etc.\nIn addition to installing the base program, please install the following Extensions:\n\nPython Extension Pack\nJupyter\nGitHub CoPilot (AI-assisted coding)\nSign up for free GitHub Education Student account to get “Pro” access to this extension: https://github.com/education/students\n\n\n\n\n\n\n\nTip\n\n\n\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 01"
+      "Course Information",
+      "Software Installation & Tutorials"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Biomedical Electronic Measurements",
-    "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+    "objectID": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
+    "href": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
+    "title": "Software Installation and Tutorials",
+    "section": "Technical Report Preparation (Jupyter Notebook)",
+    "text": "Technical Report Preparation (Jupyter Notebook)\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be converted to PDF files and uploaded to Gradescope.\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.\nYou can also choose to edit your Jupyter notebooks with a cloud-based tool, like Google CoLab, but that approach will not receive help / troubleshooting from Dr. Palmeri or the teaching team.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
   },
   {
-    "objectID": "resources/teaching_assistant_expectations.html",
-    "href": "resources/teaching_assistant_expectations.html",
-    "title": "Teaching Assistant Expectations",
-    "section": "",
-    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
+    "objectID": "software-install-tutorials.html#gradescope",
+    "href": "software-install-tutorials.html#gradescope",
+    "title": "Software Installation and Tutorials",
+    "section": "Gradescope",
+    "text": "Gradescope\nPlease complete the Gradescope quiz when you are done installing all of these tools.",
     "crumbs": [
-      "Resources",
-      "Teaching Assistant Expectations"
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "slides/sources-slides.html#summary-of-analysis-approaches-so-far",
+    "href": "slides/sources-slides.html#summary-of-analysis-approaches-so-far",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Summary of Analysis Approaches (So Far)",
+    "text": "Summary of Analysis Approaches (So Far)\n\nPower Balance\nKCL & KVL\nOhm’s Law\nEquivalent Resistance\nVoltage & Current Division\nNVA & MCA"
+  },
+  {
+    "objectID": "slides/sources-slides.html#learning-objectives",
+    "href": "slides/sources-slides.html#learning-objectives",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nSuperposition (Linear Circuits)\nThevenin Equivalent Sources (Voltage)\nNorton Equivalents Sources (Current)"
+  },
+  {
+    "objectID": "slides/sources-slides.html#superposition",
+    "href": "slides/sources-slides.html#superposition",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Superposition",
+    "text": "Superposition\n\n\n\n\n\n\n\nSuperposition Statement\n\n\n\nIn a linear circuit containing \\(N\\) sources, each branch voltage and current is the linear sum of \\(N\\) voltages and currents (i.e., each source contributes to part of the total element current and voltage).\nEach source’s contribution can be calculated by “eliminating” the contribution of the other sources and solving for element currents/voltages."
+  },
+  {
+    "objectID": "slides/sources-slides.html#equivalent-circuits",
+    "href": "slides/sources-slides.html#equivalent-circuits",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Equivalent Circuits",
+    "text": "Equivalent Circuits\n\n\n\n\n\n\nImportant\n\n\nEach “block” (physical or functional) of a circuit can be represented by a 2-terminal equivalent circuit, composed of a single source and resistance that completely captures the \\(i-v\\) characteristics of that block.\n\nIf that single source is a voltage source, then it is known as a Thevenin source equivalent.\nIf that single source is a current source, then it is known as a Norton source equivalent."
+  },
+  {
+    "objectID": "slides/sources-slides.html#thevenin-equivalent-sources",
+    "href": "slides/sources-slides.html#thevenin-equivalent-sources",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Thevenin Equivalent Sources",
+    "text": "Thevenin Equivalent Sources\n\n\n\n\n\n\n\nThevenin Theorem\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal voltage source (\\(V_T\\)), in series with\nAn equivalent resistance (\\(R_T\\)).\n\n\n\n\n\n\nHow do we solve for \\(V_T\\) and \\(R_T\\)?"
+  },
+  {
+    "objectID": "slides/sources-slides.html#norton-equivalent-sources",
+    "href": "slides/sources-slides.html#norton-equivalent-sources",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Norton Equivalent Sources",
+    "text": "Norton Equivalent Sources\n\n\n\n\n\n\n\nNorton Theorem\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal current source (\\(V_T\\)), in parallel with\nAn equivalent resistance (\\(R_N = R_T\\))."
+  },
+  {
+    "objectID": "slides/sources-slides.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
+    "href": "slides/sources-slides.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Proof that Thevening & Norton Equivalents Circuits are Equivalent",
+    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics.\n\n\n\nThevenin\n\\[\n\\begin{gather}\nV_L = V_T \\frac{R_L}{R_T+R_L} \\\\\ni_L = \\frac{v_L}{R_L} = \\frac{V_T}{R_T+R_L}\n\\end{gather}\n\\]\nNorton \\[\n\\begin{gather}\ni_L = i_N \\frac{R_T}{R_N+R_L} \\\\\nV_L = i_L R_L = I_N R_N \\frac{R_L}{R_N+R_L} \\\\\ni_N = \\frac{V_T}{R_T} \\\\\nV_L = V_T \\frac{R_L}{R_T+R_L}\n\\end{gather}\n\\]\nThey are the same!"
+  },
+  {
+    "objectID": "slides/sources-slides.html#source-transformation",
+    "href": "slides/sources-slides.html#source-transformation",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Source Transformation",
+    "text": "Source Transformation\n\n\n\n\n\n\nNote\n\n\nWe can use these equivalent circuits to transform between voltage and current sources using Ohm’s law:\n\\[\nV_T = I_N R_T\n\\]\n\n\n\n\n\n\n\n\n\nTip\n\n\nUse source transformations to change a circuit into a voltage or current division problem that is easier to solve!"
+  },
+  {
+    "objectID": "slides/sources-slides.html#maximum-power-transfer",
+    "href": "slides/sources-slides.html#maximum-power-transfer",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Maximum Power Transfer",
+    "text": "Maximum Power Transfer\nComing soon…"
+  },
+  {
+    "objectID": "slides/sources-notes.html",
+    "href": "slides/sources-notes.html",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "",
+    "text": "Power Balance\nKCL & KVL\nOhm’s Law\nEquivalent Resistance\nVoltage & Current Division\nNVA & MCA",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#summary-of-analysis-approaches-so-far",
+    "href": "slides/sources-notes.html#summary-of-analysis-approaches-so-far",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "",
+    "text": "Power Balance\nKCL & KVL\nOhm’s Law\nEquivalent Resistance\nVoltage & Current Division\nNVA & MCA",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#learning-objectives",
+    "href": "slides/sources-notes.html#learning-objectives",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nSuperposition (Linear Circuits)\nThevenin Equivalent Sources (Voltage)\nNorton Equivalents Sources (Current)",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#superposition",
+    "href": "slides/sources-notes.html#superposition",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Superposition",
+    "text": "Superposition\n\n\n\n\n\n\nSuperposition Statement\n\n\n\n\nIn a linear circuit containing \\(N\\) sources, each branch voltage and current is the linear sum of \\(N\\) voltages and currents (i.e., each source contributes to part of the total element current and voltage).\nEach source’s contribution can be calculated by “eliminating” the contribution of the other sources and solving for element currents/voltages.\n\n\n\n\n“Eliminating” Sources\n\n“Eliminating” a source means removing its voltage or current contribution to the circuit.\nA voltage sourse can be eliminated by replacing it with a short circuit.\n\nBranch current can still be conducted.\nForcing no \\(\\Delta\\) V related to the voltage source.\n\nA current source can be eliminated by replacing it with an open circuit.\n\nVoltage difference allowed between two nodes.\nBlocking current from flowing from other sources because the eliminated current source exclusively dictactes that branch current.\n\n\n\n\nSuperposition Example\n\n\n\n\n\n\nNote\n\n\n\nSolve for \\(i_3\\) using source superposition.\n\n\n\n\n\n\n\n\\(V_S = 10 V\\)\n\\(R_1 = 200 \\Omega\\)\n\\(R_2 = 200 \\Omega\\)\n\\(R_3 = 100 \\Omega\\)\n\\(I_S = 0.1 A\\)\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\\[\ni_3 = i_{3_{V_S}} + i_{3_{I_S}}\n\\]\n\n\n\n\nStep 1: Eliminate \\(I_S\\); Solve for \\(i_{3_{V_S}}\\)\n\n\n\n\n\n\\[\ni_{3_{V_S}} = \\frac{V_S}{R_1+R_2+R_3} = 0.2 A\n\\]\n\n\n\n\n\n\nNote\n\n\n\n\\(i_{3_{V_S}}\\) is the contribution to total \\(i_3\\) from \\(V_S\\).\n\n\n\n\nStep 2: Eliminate \\(V_S\\); Solve for \\(i_{3_{I_S}}\\)\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nWhile any circuit analysis techinque we have used to date is fair game, current division resonates with me…\n\n\n\\[\nI_{3_{I_S}} = \\frac{v_A}{R_2+R_3} = -I_S\\left(\\frac{R_1}{R_1+R_2+R_3}\\right) = -0.04 A\n\\]\n\n\nStep 3: Sum Contributions from \\(I_S\\) and \\(V_S\\)\n\n\n\n\n\n\\[\ni_3 = i_{3_{V_S}} + i_{3_{I_S}} = 0.02 A + (-0.04 A) = -0.02 A\n\\]\n\n\nLet’s revisit the “super mesh” circuit…\n\n\n\n\n\n\nSolve for \\(i_4\\) using source superposition.\nLet’s walk through the approach together…",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#equivalent-circuits",
+    "href": "slides/sources-notes.html#equivalent-circuits",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Equivalent Circuits",
+    "text": "Equivalent Circuits\n\n\n\n\n\n\nImportant\n\n\n\nEach “block” (physical or functional) of a circuit can be represented by a 2-terminal equivalent circuit, composed of a single source and resistance that completely captures the \\(i-v\\) characteristics of that block.\n\nIf that single source is a voltage source, then it is known as a Thevenin source equivalent.\nIf that single source is a current source, then it is known as a Norton source equivalent.",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#thevenin-equivalent-sources",
+    "href": "slides/sources-notes.html#thevenin-equivalent-sources",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Thevenin Equivalent Sources",
+    "text": "Thevenin Equivalent Sources\n\n\n\n\n\n\nThevenin Theorem\n\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal voltage source (\\(V_T\\)), in series with\nAn equivalent resistance (\\(R_T\\)).\n\n\n\n\n\n\n\n\nHow do we solve for \\(V_T\\) and \\(R_T\\)?\n\nStep 1: Find the equivalent resistance\nFind the equivalent resistance as “seen” by the terminals of that source block.\n\nRemove the load from the terminals of the block.\nEliminate all independent voltage and current sources.\n\n\n\n\n\n\n\nNote\n\n\n\nTo date, we have only dealth with independent voltage and current sources (i.e., their source voltage or current values are not dependent on other voltages/currents in the circuit).\n\n\n\nCompute the equivalent resistance with the load removed.\n\n\n\nStep 1: Example\n\n\n\n\n\n\n\nStep 2: Find the equivalent source voltage\nSolve for the equivalent Thevenin source voltage, which is equal to the terminal voltage when the terminals are “open” (i.e., no load is attached to them).\n\nRemove the load from the terminals (create an “open” load condition).\nKeep all sources.\nSolve for \\(V_T = V_{{ab}_{OC}}\\)\n\n\n\nBack to our example…\n\n\n\n\n\n\\[\nV_T = V_{ab} = V_B = v_s \\left(\\frac{R_2}{R_1+R_2}\\right)\n\\]\n\n\nThevenin Equivalent Circuit\n\n\n\n\n\n\n\n\n\n\n\nAre these equivalent?\n\n\n\nLet’s convince ourselves that \\(i_L\\) is the same for both circuits…\n\n\n\n\nOh wait…\nI’m not going to show you this; you are going to do it!\n\n\nWhy use a Thevenin Equivalent Circuit?\n\n\n\n\n\n\nImportant\n\n\n\nA major benefit of using an equivalent source is that if we have an unknown or changing load (\\(R_L\\)), we can easily solve for \\(i_L\\) as a simple voltage division with known \\(V_T\\) and \\(R_T\\).\nExtremely useful for instrument design!\n\nCurrent draw as a function of load (e.g., make sure to not exceed \\(I_{max}\\) of a supply).\nPower consumption as a function of load.\n\n\n\n\n\nAnother example…",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#norton-equivalent-sources",
+    "href": "slides/sources-notes.html#norton-equivalent-sources",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Norton Equivalent Sources",
+    "text": "Norton Equivalent Sources\n\n\n\n\n\n\nNorton Theorem\n\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal current source (\\(V_T\\)), in parallel with\nAn equivalent resistance (\\(R_N = R_T\\)).\n\n\n\n\n\n\n\n\n\nStep 1: Calculate \\(R_N\\)\n\n\n\n\n\n\nImportant\n\n\n\nThis is the same process as calculating the Thevenin equivalent resistance (\\(R_T\\))!\n\n\n\n\nStep 2: Calculate the Norton Equivalent Source\n\n\n\nSimilar to calculating the Thevenin equivalent source, but instead of solving for the open-circuit voltage at the terminals, solve for the short circuit current at the terminals.\nThis short circuit current is the Norton source current (\\(I_N\\)).",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
+    "href": "slides/sources-notes.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Proof that Thevening & Norton Equivalents Circuits are Equivalent",
+    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics.\n\n\nThevenin\n\\[\n\\begin{gather}\nV_L = V_T \\frac{R_L}{R_T+R_L} \\\\\ni_L = \\frac{v_L}{R_L} = \\frac{V_T}{R_T+R_L}\n\\end{gather}\n\\]\nNorton \\[\n\\begin{gather}\ni_L = i_N \\frac{R_T}{R_N+R_L} \\\\\nV_L = i_L R_L = I_N R_N \\frac{R_L}{R_N+R_L} \\\\\ni_N = \\frac{V_T}{R_T} \\\\\nV_L = V_T \\frac{R_L}{R_T+R_L}\n\\end{gather}\n\\]\nThey are the same!",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#source-transformation",
+    "href": "slides/sources-notes.html#source-transformation",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Source Transformation",
+    "text": "Source Transformation\n\n\n\n\n\n\nNote\n\n\n\nWe can use these equivalent circuits to transform between voltage and current sources using Ohm’s law:\n\\[\nV_T = I_N R_T\n\\]\n\n\n\n\n\n\n\n\nTip\n\n\n\nUse source transformations to change a circuit into a voltage or current division problem that is easier to solve!\n\n\n\nSource Transformation Example\nNext time…",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#maximum-power-transfer",
+    "href": "slides/sources-notes.html#maximum-power-transfer",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Maximum Power Transfer",
+    "text": "Maximum Power Transfer\nComing soon…",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
     ]
   },
   {
