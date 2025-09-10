@@ -1,0 +1,14 @@
+---
+title: "Problem Set 03"
+date: 2025-0912-
+format:
+  html: default
+  pdf: default
+---
+
+Please complete the following problems and tasks, and upload your solutions to
+Gradescope, using the [formatting guidelines](_formatting_guidelines.qmd) below.
+
+
+
+{{< include _formatting_guidelines.qmd >}}
