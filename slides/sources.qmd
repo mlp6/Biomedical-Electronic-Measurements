@@ -143,9 +143,11 @@ source** equivalent.
 ## Thevenin Equivalent Sources
 
 ::: {.callout-note title="Thevenin Theorem"}
-When a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm's law), can be replaced by an equivalent circuit with:
+When a circuit is viewed from the perspective of the load, any source network
+composed of ideal voltage/current sources and linear resistors (i.e., defined by
+Ohm's law), can be replaced by an equivalent circuit with:
 
-1. An ideal voltage source ($V_T$), and
+1. An ideal voltage source ($V_T$), in series with
 
 2. An equivalent resistance ($R_T$).
 :::
@@ -181,7 +183,7 @@ a. Remove the load from the terminals (create an "open" load condition).
 
 b. Keep all sources.
 
-c. Solve for $V_T = $V_{{ab}_{Open Circuit}}$ 
+c. Solve for $V_T = V_{{ab}_{OC}}$ 
 
 ### Back to our example...
 
@@ -221,3 +223,85 @@ Extremely useful for instrument design!
 
  
 ## Norton Equivalent Sources
+
+::: {.callout-note title="Norton Theorem"}
+When a circuit is viewed from the perspective of the load, any source network
+composed of ideal voltage/current sources and linear resistors (i.e., defined by
+Ohm's law), can be replaced by an equivalent circuit with:
+
+1. An ideal current source ($V_T$), in parallel with
+
+2. An equivalent resistance ($R_N = R_T$).
+:::
+
+![](images/norton.png){fig-align="center"}
+
+### Step 1: Calculate $R_N$
+
+::: callout-important
+This is the same process as calculating the Thevenin equivalent resistance ($R_T$)!
+:::
+
+### Step 2: Calculate the Norton Equivalent Source
+
+:::: {.columns}
+::: {.column width=60%}
+1. Similar to calculating the Thevenin equivalent source, but instead of solving
+for the open-circuit voltage at the terminals, solve for the short circuit
+current at the terminals.  
+
+2. This short circuit current is the Norton source current ($I_N$).
+:::
+::: {.column width=40%}
+![](images/norton_I_N.png){fig-align="center"}
+:::
+::::
+
+## Proof that Thevening & Norton Equivalents Circuits are Equivalent
+
+::: callout-note
+The circuits are equivalent if they have the same $i-v$ characteristics.
+:::
+
+**Thevenin**
+
+$$
+\begin{gather}
+V_L = V_T \frac{R_L}{R_T+R_L} \\
+i_L = \frac{v_L}{R_L} = \frac{V_T}{R_T+R_L}
+\end{gather}
+$$
+
+**Norton**
+$$
+\begin{gather}
+i_L = i_N \frac{R_T}{R_N+R_L} \\
+V_L = i_L R_L = I_N R_N \frac{R_L}{R_N+R_L} \\
+i_N = \frac{V_T}{R_T} \\
+V_L = V_T \frac{R_L}{R_T+R_L} 
+\end{gather}
+$$
+
+They are the same!
+
+## Source Transformation
+
+::: callout-note
+We can use these equivalent circuits to transform between voltage and current sources using Ohm's law:
+
+$$
+V_T = I_N R_T
+$$
+:::
+
+::: callout-tip
+Use source transformations to change a circuit into a voltage or current division problem that is easier to solve!
+:::
+
+### Source Transformation Example
+
+Next time...
+
+## Maximum Power Transfer
+
+Coming soon...
