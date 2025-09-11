@@ -32,7 +32,9 @@ plot.
 
     a. What is the power supplied by the source to the circuit as a function of the load resistance ($R_L$)?
 
-    a. Plot the voltage across the load $V_L$ and the power delivered to the load ($P_L$) as a function of current $I_L: 0-30 A$.  (Like the previous problem, include code and plot.)
+    a. Plot the voltage across the load $V_L$ and the power delivered to the
+    load ($P_L$) as a function of current $I_L: 0-30 A$, assuming $V_S = 12\,V$
+    and $R_S = 0.3\,\Omega$.  (Like the previous problem, include code and plot.)
 
     ![](images/ps2/source_resistance.png)
 
