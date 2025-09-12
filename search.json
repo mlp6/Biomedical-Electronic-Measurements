@@ -422,49 +422,77 @@
     "href": "problem_sets/ps3.html",
     "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
     "section": "",
-    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below."
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
   },
   {
     "objectID": "problem_sets/ps3.html#node-voltage-analysis",
     "href": "problem_sets/ps3.html#node-voltage-analysis",
     "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
     "section": "Node Voltage Analysis",
-    "text": "Node Voltage Analysis\nSolve the following problems in this section using Node Voltage Analysis.\n\n\nFind voltage (\\(v\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nFind the current (\\(i\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nFind the currents, \\(i_1\\) and \\(i_3\\), as specified in the circuit below, given \\(R_1 = 3 \\Omega\\), \\(R_2 = 1 \\Omega\\) and \\(R_3 = 6 \\Omega\\)."
+    "text": "Node Voltage Analysis\nSolve the following problems in this section using Node Voltage Analysis.\n\n\nFind voltage (\\(v\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nFind the current (\\(i\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nFind the currents, \\(i_1\\) and \\(i_3\\), as specified in the circuit below, given \\(R_1 = 3 \\Omega\\), \\(R_2 = 1 \\Omega\\) and \\(R_3 = 6 \\Omega\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
   },
   {
     "objectID": "problem_sets/ps3.html#mesh-current-analysis",
     "href": "problem_sets/ps3.html#mesh-current-analysis",
     "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
     "section": "Mesh Current Analysis",
-    "text": "Mesh Current Analysis\nSolve the following problems in this section using Mesh Current Analysis.\n\n\nFind the currents, \\(i_1\\) and \\(i_3\\), as specified in the circuit below, given \\(R_1 = 3 \\Omega\\), \\(R_2 = 1 \\Omega\\) and \\(R_3 = 6 \\Omega\\). (This is the same circuit analysis in problem 3 above, but solved using a different method.)\n\n\n\n\n\n\n\n\nFind the voltage (\\(v\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nSolve for the mesh currents \\(i_A\\), \\(i_B\\), and \\(i_C\\) as shown in the circuit below."
+    "text": "Mesh Current Analysis\nSolve the following problems in this section using Mesh Current Analysis.\n\n\nFind the currents, \\(i_1\\) and \\(i_3\\), as specified in the circuit below, given \\(R_1 = 3 \\Omega\\), \\(R_2 = 1 \\Omega\\) and \\(R_3 = 6 \\Omega\\). (This is the same circuit analysis in problem 3 above, but solved using a different method.)\n\n\n\n\n\n\n\n\nFind the voltage (\\(v\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nSolve for the mesh currents \\(i_A\\), \\(i_B\\), and \\(i_C\\) as shown in the circuit below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
   },
   {
     "objectID": "problem_sets/ps3.html#superposition",
     "href": "problem_sets/ps3.html#superposition",
     "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
     "section": "Superposition",
-    "text": "Superposition\n\n\nUsing superposition, solve for \\(i_{R_3}\\), and determine what fraction of that current comes from \\(V_{S1}\\) and \\(V_{S2}\\)."
+    "text": "Superposition\n\n\nUsing superposition, solve for \\(i_{R_3}\\), and determine what fraction of that current comes from \\(V_{S1}\\) and \\(V_{S2}\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
   },
   {
     "objectID": "problem_sets/ps3.html#thevenin-norton-equivalent-circuits",
     "href": "problem_sets/ps3.html#thevenin-norton-equivalent-circuits",
     "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
     "section": "Thevenin & Norton Equivalent Circuits",
-    "text": "Thevenin & Norton Equivalent Circuits\n\n\nFind the Thevenin equivalent circuit as seen by the 3 \\(\\Omega\\) resistor in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind \\(v_{R_3}\\) in the circuit below by replacing the rest of the circuit with its Thevenin equivalent.\n\n\n\n\n\n\n\n\nFind the Norton equivalent circuit as seen by the 2 \\(\\Omega\\) resistor in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind the Norton equivalent circuit to the left of terminals \\(a\\) and \\(b\\) in the circuit below.\n\n\n\n\n\n\n\n\nFind the Thevenin equivalent circuit as seen by the load resistor \\(R_L\\) in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind the Thevenin equivalent resistance (\\(R_{TH}\\)) as seen by the load resistor \\(R_L\\) in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\))."
+    "text": "Thevenin & Norton Equivalent Circuits\n\n\nFind the Thevenin equivalent circuit as seen by the 3 \\(\\Omega\\) resistor in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind \\(v_{R_3}\\) in the circuit below by replacing the rest of the circuit with its Thevenin equivalent.\n\n\n\n\n\n\n\n\nFind the Norton equivalent circuit as seen by the 2 \\(\\Omega\\) resistor in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind the Norton equivalent circuit to the left of terminals \\(a\\) and \\(b\\) in the circuit below.\n\n\n\n\n\n\n\n\nFind the Thevenin equivalent circuit as seen by the load resistor \\(R_L\\) in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind the Thevenin equivalent resistance (\\(R_{TH}\\)) as seen by the load resistor \\(R_L\\) in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
   },
   {
     "objectID": "problem_sets/ps3.html#maximum-power-transfer",
     "href": "problem_sets/ps3.html#maximum-power-transfer",
     "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
     "section": "Maximum Power Transfer",
-    "text": "Maximum Power Transfer\n\n\nIf the conditions for maximum power transfer between the source and the load exist, determine the following:\n\n\nThe value of the load resistance, \\(R_L\\).\nThe power dissipated by \\(R_L\\).\nThe efficiency of the circuit (i.e., the ratio of the power dissipated by \\(R_L\\) to the total power supplied by the source (\\(V_T\\))).\n\n\n\n\n\n\n\n\nRemember that a non-ideal voltage source can be modeled as an ideal voltage source (\\(V_S\\))in series with a resistor (\\(R_S\\)). For the resistive load (\\(R_L\\)) shown in the circuit below:\n\n\n\n\n\n\n\nPlot the power dissipated in the load as a function of \\(R_L\\) for a reasonable range of \\(R_L\\) values.\nWhat can you conclude from you plot in part (a) regarding the value of \\(R_L\\) that maximizes the power dissipated in the load and how that tapers off for lower/higher load resistances?\nProve, mathematically, that your conclusion is valid for all values of \\(R_L\\) and \\(R_S\\)."
+    "text": "Maximum Power Transfer\n\n\nIf the conditions for maximum power transfer between the source and the load exist, determine the following:\n\n\nThe value of the load resistance, \\(R_L\\).\nThe power dissipated by \\(R_L\\).\nThe efficiency of the circuit (i.e., the ratio of the power dissipated by \\(R_L\\) to the total power supplied by the source (\\(V_T\\))).\n\n\n\n\n\n\n\n\nRemember that a non-ideal voltage source can be modeled as an ideal voltage source (\\(V_S\\))in series with a resistor (\\(R_S\\)). For the resistive load (\\(R_L\\)) shown in the circuit below:\n\n\n\n\n\n\n\nPlot the power dissipated in the load as a function of \\(R_L\\) for a reasonable range of \\(R_L\\) values.\nWhat can you conclude from you plot in part (a) regarding the value of \\(R_L\\) that maximizes the power dissipated in the load and how that tapers off for lower/higher load resistances?\nProve, mathematically, that your conclusion is valid for all values of \\(R_L\\) and \\(R_S\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
   },
   {
     "objectID": "problem_sets/ps3.html#problem-set-format-guidelines",
     "href": "problem_sets/ps3.html#problem-set-format-guidelines",
     "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
     "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question."
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
   },
   {
     "objectID": "problem_sets/ps1.html",
@@ -526,7 +554,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
   },
   {
     "objectID": "course-syllabus.html",
@@ -610,7 +638,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 08, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 08, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
