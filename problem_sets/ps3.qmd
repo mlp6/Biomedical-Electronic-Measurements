@@ -1,14 +1,145 @@
 ---
-title: "Problem Set 03"
-date: 2025-0912-
+title: "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer"
+date: 2025-09-12
 format:
   html: default
   pdf: default
+toc: false
 ---
 
 Please complete the following problems and tasks, and upload your solutions to
 Gradescope, using the [formatting guidelines](_formatting_guidelines.qmd) below.
 
+## Node Voltage Analysis
 
+Solve the following problems in this section using **Node Voltage Analysis**.
+
+<!-- P3.3 -->
+1. Find voltage ($v$) as specified in the circuit below.
+
+![](images/ps3/nva_3_3.png){fig-align="center"}
+
+\newpage
+
+<!-- P3.4 -->
+2. Find the current ($i$) as specified in the circuit below.
+
+![](images/ps3/nva_3_4.png){fig-align="center"}
+
+\newpage
+
+<!-- 3.7 -->
+3. Find the currents, $i_1$ and $i_3$, as specified in the circuit below, given $R_1 = 3 \Omega$, $R_2 = 1 \Omega$ and $R_3 = 6 \Omega$.
+
+![](images/ps3/nva_3_7.png){fig-align="center"}
+
+\newpage 
+
+## Mesh Current Analysis
+
+Solve the following problems in this section using **Mesh Current Analysis**.
+
+<!-- P3.8 -->
+4. Find the currents, $i_1$ and $i_3$, as specified in the circuit below, given $R_1 = 3 \Omega$, $R_2 = 1 \Omega$ and $R_3 = 6 \Omega$.  *(This is the same circuit analysis in problem 3 above, but solved using a different method.)*
+
+![](images/ps3/nva_3_7.png){fig-align="center"}
+
+\newpage
+
+<!-- P3.16 -->
+5. Find the voltage ($v$) as specified in the circuit below.
+
+![](images/ps3/mca_3_16.png){fig-align="center"}
+
+\newpage
+
+<!-- P3.17 -->
+6. Solve for the mesh currents $i_A$, $i_B$, and $i_C$ as shown in the circuit below.
+
+![](images/ps3/mca_3_17.png){fig-align="center"}
+
+\newpage
+
+## Superposition
+
+<!-- P3.43 -->
+7. Using superposition, solve for $i_{R_3}$, and determine what fraction of that current comes from $V_{S1}$ and $V_{S2}$.
+
+![](images/ps3/superposition_3_43.png){fig-align="center"}
+
+\newpage
+
+## Thevenin & Norton Equivalent Circuits
+
+<!-- P3.51 -->
+8. Find the Thevenin equivalent circuit as seen by the 3 $\Omega$ resistor in the circuit below (i.e., from the perspective of terminals $a$ and $b$).
+
+![](images/ps3/thevenin_3_51.png){fig-align="center"}
+
+\newpage
+
+<!-- P3.52 -->
+9. Find $v_{R_3}$ in the circuit below by replacing the rest of the circuit with its Thevenin equivalent.
+
+![](images/ps3/thevenin_3_52.png){fig-align="center"}
+
+\newpage
+
+<!-- P3.53 -->
+10. Find the Norton equivalent circuit as seen by the 2 $\Omega$ resistor in the circuit below (i.e., from the perspective of terminals $a$ and $b$).
+
+![](images/ps3/norton_3_53.png){fig-align="center"}
+
+\newpage
+
+<!-- P3.54 -->
+11. Find the Norton equivalent circuit to the left of terminals $a$ and $b$ in the circuit below.
+
+![](images/ps3/norton_3_54.png){fig-align="center"}
+
+\newpage
+
+<!-- P3.55 -->
+12. Find the Thevenin equivalent circuit as seen by the load resistor $R_L$ in the circuit below (i.e., from the perspective of terminals $a$ and $b$).
+
+![](images/ps3/thevenin_3_55.png){fig-align="center"}
+
+\newpage
+
+<!-- P3.56 -->
+13. Find the Thevenin equivalent resistance ($R_{TH}$) as seen by the load resistor $R_L$ in the circuit below (i.e., from the perspective of terminals $a$ and $b$).
+
+![](images/ps3/thevenin_3_56.png){fig-align="center"}
+
+\newpage 
+## Maximum Power Transfer
+
+<!-- P3.73 -->
+14.  If the conditions for maximum power transfer between the source and the load exist, determine the following:
+
+a. The value of the load resistance, $R_L$.
+
+b. The power dissipated by $R_L$.
+
+c. The efficiency of the circuit (i.e., the ratio of the power dissipated by $R_L$ to the total power supplied by the source ($V_T$)).
+
+![](images/ps3/max_power_3_73.png){fig-align="center"}
+
+\newpage
+
+<!-- P3.75 -->
+15. Remember that a non-ideal voltage source can be modeled as an ideal voltage source ($V_S$)in series with a resistor ($R_S$).  For the resistive load ($R_L$) shown in the circuit below:
+
+![](images/ps3/max_power_3_75.png){fig-align="center"}
+
+a. Plot the power dissipated in the load as a function of $R_L$ for a reasonable range of $R_L$ values.
+
+b. What can you conclude from you plot in part (a) regarding the value of $R_L$
+that maximizes the power dissipated in the load and how that tapers off for
+lower/higher load resistances?
+
+c. Prove, mathematically, that your conclusion is valid for all values of $R_L$ and $R_S$.
+
+\newpage
 
 {{< include _formatting_guidelines.qmd >}}
