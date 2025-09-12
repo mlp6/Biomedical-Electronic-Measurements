@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+
+\draw (0,0) to[I, l=$\SI{1}{\ampere}$] (0,3);
+\draw (0,3) -- (3,3);
+\draw (3,3) to[R, l=$R_1$, f=$i_1$] (3,0);
+\draw (3,3) to[R, l=$R_2$] (6,3);
+\draw (6,3) to[R, l=$R_3$, f=$i_3$] (6,0);
+\draw (9,3) to[I, l=$\SI{2}{\ampere}$] (9,0);
+\draw (6,3) -- (9,3);
+\draw (0,0) -- (9,0);
+
+\end{circuitikz}
+\end{document}

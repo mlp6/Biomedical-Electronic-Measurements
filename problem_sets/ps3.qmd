@@ -23,7 +23,10 @@ Solve the following problems in this section using **Node Voltage Analysis**.
 
 ![](images/ps3/nva_3_4.png)
 
-### 3.7
+<!-- 3.7 -->
+3. Find the currents, $i_1$ and $i_3$, as specified in the circuit below, given $R_1 = 3 \Omega$, $R_2 = 1 \Omega$ and $R_3 = 6 \Omega$.
+
+![](images/ps3/nva_3_7.png)
 
 ## Mesh Current Analysis
 
