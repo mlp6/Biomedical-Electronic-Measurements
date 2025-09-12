@@ -1,0 +1,109 @@
+---
+title: "ECAD using KiCad: Schematic Capture"
+date: "2025-09-15"
+format:
+    live-html: 
+        output-file: ecad_kicad_schematic-notes.html
+    live-revealjs: 
+        output-file: ecad_kicad_schematic-slides.html
+---
+
+## Why EDA?
+
+- **Formally capture circuit schematics**
+- **Validate circuit behavior (Electrical Rules Check)**
+- **SPICE (Simulation Program with Integrated Circuit Emphasis) simulations**
+- *Convert circuit to printed circuit board (more space efficient and permanent than a breadboard).*
+- *Capture design history and facilitate rapid iteration.*
+- *Generate 3D "parts" to integrate with CAD.*
+
+### KiCad
+
+<img src="images/kicad_logo_small.png" width="20%">
+
+- [https://kicad.org](https://kicad.org)
+- A completely open-source alternative to Eagle.
+- Just as capable as Altium Designer (to a point); similar workflow.
+
+## Schematic Capture
+
+<img src="images/schematic.png" width="70%">
+
+
+### UI/UX
+
+<img src="images/commands_overview.png" alt="commands" width="600"/>
+
+### Creating a Schematic
+
+KiCad Documentation: [Schematic Editing Operations](https://docs.kicad.org/9.0/en/eeschema/eeschema.html#schematic-creation-and-editing)
+
+- Create a `New Project`, which creates a schematic file.
+- **DO NOT CHANGE THE GRID SPACING!!**
+- Setup `Page Settings...`
+- Configure `Schematic Setup...`
+- Place component / part (`Place Symbol`) using default library. If component doesn't exist, then you either need to:
+  - [Import Parts into Libraries](https://docs.kicad.org/8.0/en/getting_started_in_kicad/getting_started_in_kicad.html#library_and_library_table_basics)
+  - Download the part from an online database (e.g., [SnapEDA](https://www.snapeda.com/))
+  - Create part using the `Library Editor`.
+
+### Assigning Properties to Components
+
+- Annotate components togive each component a unique label (e.g., $R_1$, $R_2$)  
+
+::: callout-tip
+This is now done automatically in KiCad 8.x, but you may want to manually override some of the annotation defaults.
+:::
+
+- Assign component values (SI units)
+- Label nets with meaningful names
+  - Nets are like nodes; common voltage connections.
+  - Use **net labels** to avoid connection chaos.
+
+### In-Class Exercise: Part I
+
+Let's create a simple voltage divider circuit...
+
+### Power Ports
+
+- Power ports, including ground references, are also global net labels.
+- Component pins can be explicitly designated power in/out (in contrast to signal).
+- Power, ideally, cascades top-to-bottom (`+` $\rightarrow$ `GND` \[$\rightarrow$ `-`\]) on the schematic.
+
+### In-Class Exercise: Part II
+
+Let's add power ports...
+
+## Electrical Rules Check (ERC)
+
+- Check the validity of the schematic
+- Common error message:
+
+> "Input Power pin not driven by any Output Power pins"
+
+- KiCad checks to make sure that power can "drive" components that demand that input.
+- You can explicitly indicate this in the schematic using the `PWR_FLAG` symbol attached to the net in question.
+- Might need to re-map pin types (`Properties:Edit Symbol:Pin Table`).
+
+---
+
+<img src="images/symbols-pwr-flag.png" alt="symbols_pwr_flag" width="800"/>
+
+### Best Practices
+
+- Signal, ideally, flows left-to-right (input $\rightarrow$ output).
+- Outline and label functional blocks.  Use `Heirarchical Sheets` to organize more clearly-defined sub-circuits.
+- Can include non-electrical items, like `Mounting Holes`.
+- Add Test Pins/Pads to nets you will want to verify during testing.
+  - Power nets
+  - Signal I/O
+- Use `No-Connection` flags for pins that are intentionally not connected to other components.
+
+---
+
+![schematic_annotated](images/schematic_annotated.png)
+
+## Resources
+
+- [KiCad Documentation](https://docs.kicad.org/8.0/en/getting_started_in_kicad/getting_started_in_kicad.html)
+- [Schematic Review Checklist](https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md)
