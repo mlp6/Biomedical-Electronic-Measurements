@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+
+\draw (0,0) to[V, v=$\SI{36}{\volt}$] (0,3);
+\draw (0,3) to[R, l=$\SI{5}{\ohm}$] (3,3) to[R, l=$\SI{1}{\ohm}$] (6,3);
+\draw (3,3) to[R, l=$\SI{4}{\ohm}$] (3,0);
+
+\draw (6,3) node[circle, fill, inner sep=1pt, label=above:$a$] (a) {};
+\draw (6,0) node[circle, fill, inner sep=1pt, label=below:$b$] (b) {};
+
+\draw (a) -- (7,3) to[R, l=$\SI{3}{\ohm}$] (7,0) -- (b);
+\draw (b) -- (0,0);
+
+
+\end{circuitikz}
+\end{document}

@@ -58,10 +58,14 @@ Solve the following problems in this section using **Mesh Current Analysis**.
 ## Thevenin & Norton Equivalent Circuits
 
 <!-- P3.51 -->
-8.
+8. Find the Thevenin equivalent circuit as seen by the 3 $\Omega$ resistor in the circuit below (i.e., from the perspective of terminals $a$ and $b$).
+
+![](images/ps3/thevenin_3_51.png)
 
 <!-- P3.52 -->
-9.
+9. Find $v_{R_3}$ in the circuit below by replacing the rest of the circuit with its Thevenin equivalent.
+
+![](images/ps3/thevenin_3_52.png)
 
 <!-- P3.53 -->
 10.
