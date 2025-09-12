@@ -2,118 +2,138 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/bme-lab-policies.html</loc>
-    <lastmod>2025-09-12T21:53:00.391Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.827Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/r_eq-notes.html</loc>
-    <lastmod>2025-09-12T21:53:00.422Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.861Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/r_eq-slides.html</loc>
-    <lastmod>2025-09-12T21:53:00.422Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.861Z</lastmod>
   </url>
   <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/intro-circuits-notes.html</loc>
-    <lastmod>2025-09-12T21:53:00.422Z</lastmod>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/ecad_kicad_spice-notes.html</loc>
+    <lastmod>2025-09-12T23:31:01.847Z</lastmod>
   </url>
   <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/intro-circuits-slides.html</loc>
-    <lastmod>2025-09-12T21:53:00.422Z</lastmod>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/ecad_kicad_spice-slides.html</loc>
+    <lastmod>2025-09-12T23:31:01.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/ecad_kicad_schematic-notes.html</loc>
+    <lastmod>2025-09-12T23:31:01.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/ecad_kicad_schematic-slides.html</loc>
+    <lastmod>2025-09-12T23:31:01.847Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/opamps.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/introduction.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/transformers_diodes.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/transient_resp.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/impedance.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/resources/teaching_assistant_expectations.html</loc>
-    <lastmod>2025-09-12T21:53:00.411Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/TODO.html</loc>
-    <lastmod>2025-09-12T21:53:00.387Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/problem_sets/ps3.html</loc>
-    <lastmod>2025-09-12T21:53:00.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/problem_sets/ps1.html</loc>
-    <lastmod>2025-09-12T21:53:00.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/faq.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/problem_sets/ps2.html</loc>
-    <lastmod>2025-09-12T21:53:00.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/index.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mlp6.github.io/Embedded-Medical-Devices/course-syllabus.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/software-install-tutorials.html</loc>
-    <lastmod>2025-09-12T21:53:00.422Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.861Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/course-syllabus.html</loc>
+    <lastmod>2025-09-12T23:31:01.827Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/index.html</loc>
+    <lastmod>2025-09-12T23:31:01.827Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/problem_sets/ps2.html</loc>
+    <lastmod>2025-09-12T23:31:01.831Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/faq.html</loc>
+    <lastmod>2025-09-12T23:31:01.827Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/problem_sets/ps1.html</loc>
+    <lastmod>2025-09-12T23:31:01.831Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/problem_sets/ps3.html</loc>
+    <lastmod>2025-09-12T23:31:01.831Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/TODO.html</loc>
+    <lastmod>2025-09-12T23:31:01.823Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/resources/teaching_assistant_expectations.html</loc>
+    <lastmod>2025-09-12T23:31:01.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/kicad.html</loc>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/caps_inductors_scopes.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/wheatstone_temperature.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/ohms_power.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/labs/filters.html</loc>
-    <lastmod>2025-09-12T21:53:00.392Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.828Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/sources-slides.html</loc>
-    <lastmod>2025-09-12T21:53:00.422Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.861Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/sources-notes.html</loc>
-    <lastmod>2025-09-12T21:53:00.422Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.861Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/intro-circuits-slides.html</loc>
+    <lastmod>2025-09-12T23:31:01.860Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/intro-circuits-notes.html</loc>
+    <lastmod>2025-09-12T23:31:01.860Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/circuit-analysis-slides.html</loc>
-    <lastmod>2025-09-12T21:53:00.411Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.847Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/circuit-analysis-notes.html</loc>
-    <lastmod>2025-09-12T21:53:00.411Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.847Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/ohm-kcl-kvl-slides.html</loc>
-    <lastmod>2025-09-12T21:53:00.422Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.861Z</lastmod>
   </url>
   <url>
     <loc>https://mlp6.github.io/Embedded-Medical-Devices/slides/ohm-kcl-kvl-notes.html</loc>
-    <lastmod>2025-09-12T21:53:00.422Z</lastmod>
+    <lastmod>2025-09-12T23:31:01.861Z</lastmod>
   </url>
 </urlset>

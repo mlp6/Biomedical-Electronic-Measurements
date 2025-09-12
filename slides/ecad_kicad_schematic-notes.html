@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
+<meta name="dcterms.date" content="2025-09-15">
 
-<title>BME Lab Procedures and Safety Expectations – Biomedical Electronic Measurements</title>
+<title>ECAD using KiCad: Schematic Capture – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-fced259a1985fd972ecb57c7cd45153f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-996cf6f23eb4eafe8d88ce9e7f038e2f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-fced259a1985fd972ecb57c7cd45153f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e89caad7b8eed9b4925a1559a1d81c73.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -66,7 +70,38 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -80,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-syllabus.html">Course Information</a></li><li class="breadcrumb-item"><a href="./bme-lab-policies.html">BME Lab Policies</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/ecad_kicad_schematic-notes.html">ECAD using KiCad: Schematic Capture</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -92,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Biomedical Electronic Measurements</a> 
+      <a href="../">Biomedical Electronic Measurements</a> 
     </div>
       </div>
     <div class="sidebar-menu-container"> 
@@ -108,13 +143,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bme-lab-policies.html" class="sidebar-item-text sidebar-link active">
+  <a href="../bme-lab-policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BME Lab Policies</span></a>
   </div>
 </li>
@@ -138,13 +173,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software-install-tutorials.html" class="sidebar-item-text sidebar-link">
+  <a href="../software-install-tutorials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software Installation &amp; Tutorials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./faq.html" class="sidebar-item-text sidebar-link">
+  <a href="../faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
@@ -161,43 +196,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/intro-circuits-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/intro-circuits-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Circuits</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/ohm-kcl-kvl-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/ohm-kcl-kvl-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ohm’s Law, KCL, and KVL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/r_eq-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/r_eq-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Series and Parallel Resistance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/circuit-analysis-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/circuit-analysis-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Circuit Analysis Techniques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/sources-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/sources-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Source Transformations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/ecad_kicad_schematic-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/ecad_kicad_schematic-notes.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">ECAD using KiCad: Schematic Capture</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/ecad_kicad_spice-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/ecad_kicad_spice-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ECAD using KiCad: SPICE Modeling</span></a>
   </div>
 </li>
@@ -214,55 +249,55 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/ohms_power.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/ohms_power.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ohm’s Law and Power</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/caps_inductors_scopes.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/caps_inductors_scopes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Capacitors, Inductors, and Oscilloscopes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/impedance.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/impedance.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Impedance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/filters.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/filters.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Filters</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/transient_resp.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/transient_resp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transient Response</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/opamps.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/opamps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Operational Amplifiers</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/transformers_diodes.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/transformers_diodes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transformers and Diodes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/wheatstone_temperature.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/wheatstone_temperature.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wheatstone Bridge: Temperature Measurement</span></a>
   </div>
 </li>
@@ -279,13 +314,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources/XYZs_of_Oscopes_Tektronix.pdf" class="sidebar-item-text sidebar-link">
+  <a href="../resources/XYZs_of_Oscopes_Tektronix.pdf" class="sidebar-item-text sidebar-link">
  <span class="menu-text">XYZ of Oscilloscopes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources/teaching_assistant_expectations.html" class="sidebar-item-text sidebar-link">
+  <a href="../resources/teaching_assistant_expectations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching Assistant Expectations</span></a>
   </div>
 </li>
@@ -302,25 +337,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_sets/_formatting_guidelines.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../problem_sets/_formatting_guidelines.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Formatting Guidelines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_sets/ps1.html" class="sidebar-item-text sidebar-link">
+  <a href="../problem_sets/ps1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 01</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_sets/ps2.html" class="sidebar-item-text sidebar-link">
+  <a href="../problem_sets/ps2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 02</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./problem_sets/ps3.html" class="sidebar-item-text sidebar-link">
+  <a href="../problem_sets/ps3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 03</span></a>
   </div>
 </li>
@@ -332,22 +367,64 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="bme-lab-policies.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-eda" id="toc-why-eda" class="nav-link active" data-scroll-target="#why-eda">Why EDA?</a>
+  <ul class="collapse">
+  <li><a href="#kicad" id="toc-kicad" class="nav-link" data-scroll-target="#kicad">KiCad</a></li>
+  </ul></li>
+  <li><a href="#schematic-capture" id="toc-schematic-capture" class="nav-link" data-scroll-target="#schematic-capture">Schematic Capture</a>
+  <ul class="collapse">
+  <li><a href="#uiux" id="toc-uiux" class="nav-link" data-scroll-target="#uiux">UI/UX</a></li>
+  <li><a href="#creating-a-schematic" id="toc-creating-a-schematic" class="nav-link" data-scroll-target="#creating-a-schematic">Creating a Schematic</a></li>
+  <li><a href="#assigning-properties-to-components" id="toc-assigning-properties-to-components" class="nav-link" data-scroll-target="#assigning-properties-to-components">Assigning Properties to Components</a></li>
+  <li><a href="#in-class-exercise-part-i" id="toc-in-class-exercise-part-i" class="nav-link" data-scroll-target="#in-class-exercise-part-i">In-Class Exercise: Part I</a></li>
+  <li><a href="#power-ports" id="toc-power-ports" class="nav-link" data-scroll-target="#power-ports">Power Ports</a></li>
+  <li><a href="#in-class-exercise-part-ii" id="toc-in-class-exercise-part-ii" class="nav-link" data-scroll-target="#in-class-exercise-part-ii">In-Class Exercise: Part II</a></li>
+  </ul></li>
+  <li><a href="#electrical-rules-check-erc" id="toc-electrical-rules-check-erc" class="nav-link" data-scroll-target="#electrical-rules-check-erc">Electrical Rules Check (ERC)</a>
+  <ul class="collapse">
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  </ul></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ecad_kicad_schematic-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-syllabus.html">Course Information</a></li><li class="breadcrumb-item"><a href="./bme-lab-policies.html">BME Lab Policies</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/ecad_kicad_schematic-notes.html">ECAD using KiCad: Schematic Capture</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">BME Lab Procedures and Safety Expectations</h1>
-<p class="subtitle lead">BME554L (Fall 2025)</p>
+<h1 class="title">ECAD using KiCad: Schematic Capture</h1>
+<p class="subtitle lead">BME253L - Fall 2025</p>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Dr.&nbsp;Mark Palmeri, M.D., Ph.D. </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Duke University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 15, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -357,100 +434,167 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Safety is Always First, Cleanliness a close second</p>
-</div>
-</div>
-<p>Safety always comes first in lab. To that end, you are expected to follow the rules in this document. Failure to do so may result in revocation of laboratory privileges, reduction of your course grade, and possible withdrawal from your course. Understanding risks and learning to work safely in the laboratory are an important part of your education.</p>
-<p>Before entering lab, your safety training must be current. You need Duke’s Occupational and Environmental Safety Office’s:</p>
+<section id="why-eda" class="level2">
+<h2 class="anchored" data-anchor-id="why-eda">Why EDA?</h2>
 <ul>
-<li><a href="https://sms.duhs.duke.edu/OnlineTraining/FS200W/">Fire/Life Safety</a>, and</li>
-<li><a href="https://sms.duhs.duke.edu/OnlineTraining/LABS/">Laboratory Safety-General</a></li>
+<li><strong>Formally capture circuit schematics</strong></li>
+<li><strong>Validate circuit behavior (Electrical Rules Check)</strong></li>
+<li><strong>SPICE (Simulation Program with Integrated Circuit Emphasis) simulations</strong></li>
+<li><em>Convert circuit to printed circuit board (more space efficient and permanent than a breadboard).</em></li>
+<li><em>Capture design history and facilitate rapid iteration.</em></li>
+<li><em>Generate 3D “parts” to integrate with CAD.</em></li>
 </ul>
-<p>training modules. We know that you may have done this training before, but it expires in one year, and you must be current through the end of the semester.</p>
-<p>Most accidents are the result of a series of failures. That said, most accidents are preventable. You are responsible for your safety and the safety of those around you. The vast majority of accidents involve some combination of inattention, carelessness, horseplay, impairment, broken tools, and lack of knowledge. All of these factors can be mitigated and it’s your job to do so.</p>
-<p>You are responsible for keeping the lab clean.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Failure to keep a clean workspace can result in a lower grade for you and your team.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you or someone else in lab needs immediate medical attention, call 911.</p>
-</div>
-</div>
-<p>In case you need to report your location, you are in CIEMAS B209. Non-emergent problems, call 681-WELL (681-9355). If you are injured in lab, you must let an instructor/TA/lab staff member know as soon as possible. Lab staff after-hours phone number is on the contact cards posted outside every lab door.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Keep these points in mind… - In an emergency, call 911. Location: CIEMAS B209</p>
+<section id="kicad" class="level3">
+<h3 class="anchored" data-anchor-id="kicad">KiCad</h3>
+<p><img src="images/kicad_logo_small.png" width="20%"></p>
 <ul>
-<li><p>In the event of a non-emergent injury, seek medical attention and let an instructor/TA/lab staff know within 12 hours.</p></li>
-<li><p>Find the emergency exits.</p></li>
-<li><p>Never work alone. Two or more people must be present and able to see and hear each other.</p></li>
-<li><p>Inspect every tool before use. Remove broken tools from service, place them on the broken tools shelf at the back of the room, and notify lab staff.</p></li>
-<li><p>Wear safety glasses when appropriate. This includes, but is not limited to, activities such as soldering, sanding, filing, hammering, cutting, and drilling.</p></li>
-<li><p>Wear hearing protection when using noisy tools such as drills and the Dremel tool. Ear buds or music headphones are not sufficient hearing protection.</p></li>
-<li><p>Never work impaired. If you are tired, stressed, in a rush, or impaired in any other way then do not work in lab. Go home and recuperate.</p></li>
-<li><p>Tie back long hair to keep it away from tools.</p></li>
-<li><p>Closed-toe shoes must be worn in the lab. Long trousers are preferred.</p></li>
-<li><p>Properly secure materials. Clamps, vises and portable worktables are available.</p></li>
-<li><p>Don’t force anything. If the job requires significant force, you’re doing it wrong.</p></li>
-<li><p>Keep food and drink out of the lab!</p></li>
-<li><p>Power down equipment when finished with it.</p></li>
-<li><p>A fire extinguisher is outside the door.</p></li>
-<li><p>Wash your hands before leaving lab.</p></li>
-<li><p>Bits of unused solder, wire and lead trimmings all go in a “Solder Scrap” container.</p></li>
-<li><p>Anything contaminated with solder paste (wipes, boards, applicators) goes in a “Solder Scrap” container.</p></li>
-<li><p>Other hazardous waste dealt with on a case by case basis; ask lab staff for help.</p></li>
-<li><p>Put tools away, in the right place. Tool drawers are labeled, but if you’re unsure where to put a tool, ask your TA/lab staff.</p></li>
-<li><p>Do not hoard parts or tools.</p></li>
-<li><p>This bears repeating: Take the parts you need, but only the parts you need. Do not hoard parts. If you see a part becoming scarce, let lab staff know so they can re-order.</p></li>
-<li><p>Benches are for temporary use only. Leave no trace that you were at the bench when you leave for the day. Rarely, with approval, a bench can be claimed for the semester.</p></li>
-<li><p>Any and all paint must be pre-approved by an instructor/TA/lab staff. Unapproved paint on projects will result in a lower grade. (Spray paint indoors is never approved.)</p></li>
-<li><p>A representative from your group is expected to participate in weekly cleaning. Your instructor will give you the schedule.</p></li>
-<li><p>Place a cover on the bench for messy work. Chucks and Ram Board are available for this.</p></li>
-<li><p>Lab staff have a collection of good soldering tips and fine tools (e.g. tweezers). If you have need for something better than you can find in lab, ask lab staff.</p></li>
+<li><a href="https://kicad.org">https://kicad.org</a></li>
+<li>A completely open-source alternative to Eagle.</li>
+<li>Just as capable as Altium Designer (to a point); similar workflow.</li>
 </ul>
+</section>
+</section>
+<section id="schematic-capture" class="level2">
+<h2 class="anchored" data-anchor-id="schematic-capture">Schematic Capture</h2>
+<p><img src="images/schematic.png" width="70%"></p>
+<section id="uiux" class="level3">
+<h3 class="anchored" data-anchor-id="uiux">UI/UX</h3>
+<p><img src="images/commands_overview.png" alt="commands" width="600"></p>
+</section>
+<section id="creating-a-schematic" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-schematic">Creating a Schematic</h3>
+<p>KiCad Documentation: <a href="https://docs.kicad.org/9.0/en/eeschema/eeschema.html#schematic-creation-and-editing">Schematic Editing Operations</a></p>
+<ul>
+<li>Create a <code>New Project</code>, which creates a schematic file.</li>
+<li><strong>DO NOT CHANGE THE GRID SPACING!!</strong></li>
+<li>Setup <code>Page Settings...</code></li>
+<li>Configure <code>Schematic Setup...</code></li>
+<li>Place component / part (<code>Place Symbol</code>) using default library. If component doesn’t exist, then you either need to:
+<ul>
+<li><a href="https://docs.kicad.org/8.0/en/getting_started_in_kicad/getting_started_in_kicad.html#library_and_library_table_basics">Import Parts into Libraries</a></li>
+<li>Download the part from an online database (e.g., <a href="https://www.snapeda.com/">SnapEDA</a>)</li>
+<li>Create part using the <code>Library Editor</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="assigning-properties-to-components" class="level3">
+<h3 class="anchored" data-anchor-id="assigning-properties-to-components">Assigning Properties to Components</h3>
+<ul>
+<li>Annotate components togive each component a unique label (e.g., <span class="math inline">\(R_1\)</span>, <span class="math inline">\(R_2\)</span>)</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>This is now done automatically in KiCad 8.x, but you may want to manually override some of the annotation defaults.</p>
+</div>
+</div>
+<ul>
+<li>Assign component values (SI units)</li>
+<li>Label nets with meaningful names
+<ul>
+<li>Nets are like nodes; common voltage connections.</li>
+<li>Use <strong>net labels</strong> to avoid connection chaos.</li>
+</ul></li>
+</ul>
+</section>
+<section id="in-class-exercise-part-i" class="level3">
+<h3 class="anchored" data-anchor-id="in-class-exercise-part-i">In-Class Exercise: Part I</h3>
+<p>Let’s create a simple voltage divider circuit…</p>
+</section>
+<section id="power-ports" class="level3">
+<h3 class="anchored" data-anchor-id="power-ports">Power Ports</h3>
+<ul>
+<li>Power ports, including ground references, are also global net labels.</li>
+<li>Component pins can be explicitly designated power in/out (in contrast to signal).</li>
+<li>Power, ideally, cascades top-to-bottom (<code>+</code> <span class="math inline">\(\rightarrow\)</span> <code>GND</code> [<span class="math inline">\(\rightarrow\)</span> <code>-</code>]) on the schematic.</li>
+</ul>
+</section>
+<section id="in-class-exercise-part-ii" class="level3">
+<h3 class="anchored" data-anchor-id="in-class-exercise-part-ii">In-Class Exercise: Part II</h3>
+<p>Let’s add power ports…</p>
+</section>
+</section>
+<section id="electrical-rules-check-erc" class="level2">
+<h2 class="anchored" data-anchor-id="electrical-rules-check-erc">Electrical Rules Check (ERC)</h2>
+<ul>
+<li>Check the validity of the schematic</li>
+<li>Common error message:</li>
+</ul>
+<blockquote class="blockquote">
+<p>“Input Power pin not driven by any Output Power pins”</p>
+</blockquote>
+<ul>
+<li>KiCad checks to make sure that power can “drive” components that demand that input.</li>
+<li>You can explicitly indicate this in the schematic using the <code>PWR_FLAG</code> symbol attached to the net in question.</li>
+<li>Might need to re-map pin types (<code>Properties:Edit Symbol:Pin Table</code>).</li>
+</ul>
+<hr>
+<p><img src="images/symbols-pwr-flag.png" alt="symbols_pwr_flag" width="800"></p>
+<section id="best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices">Best Practices</h3>
+<ul>
+<li>Signal, ideally, flows left-to-right (input <span class="math inline">\(\rightarrow\)</span> output).</li>
+<li>Outline and label functional blocks. Use <code>Heirarchical Sheets</code> to organize more clearly-defined sub-circuits.</li>
+<li>Can include non-electrical items, like <code>Mounting Holes</code>.</li>
+<li>Add Test Pins/Pads to nets you will want to verify during testing.
+<ul>
+<li>Power nets</li>
+<li>Signal I/O</li>
+</ul></li>
+<li>Use <code>No-Connection</code> flags for pins that are intentionally not connected to other components.</li>
+</ul>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/schematic_annotated.png" class="img-fluid figure-img"></p>
+<figcaption>schematic_annotated</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.kicad.org/8.0/en/getting_started_in_kicad/getting_started_in_kicad.html">KiCad Documentation</a></li>
+<li><a href="https://github.com/azonenberg/pcb-checklist/blob/master/schematic-checklist.md">Schematic Review Checklist</a></li>
+</ul>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../slides";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -855,4 +999,4 @@ Note
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
