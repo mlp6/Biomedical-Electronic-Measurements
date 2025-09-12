@@ -47,45 +47,40 @@ Solve the following problems in this section using **Mesh Current Analysis**.
 
 ![](images/ps3/mca_3_17.png)
 
-## Any Circuit Analysis Method
-
-<!-- P3.24 -->
-7.
-
-<!-- P3.31 -->
-8.
 
 ## Superposition
 
 <!-- P3.43 -->
-9.
+7. Using superposition, solve for $i_{R_3}$, and determine what fraction of that current comes from $V_{S1}$ and $V_{S2}$.
+
+![](images/ps3/superposition_3_43.png)
 
 ## Thevenin & Norton Equivalent Circuits
 
 <!-- P3.51 -->
-10.
+8.
 
 <!-- P3.52 -->
-11.
+9.
 
 <!-- P3.53 -->
-12.
+10.
 
 <!-- P3.54 -->
-13.
+11.
 
 <!-- P3.55 -->
-14.
+12.
 
 <!-- P3.56 -->
-15.
+13.
 
 ## Maximum Power Transfer
 
 <!-- P3.73 -->
-16.
+14.
 
 <!-- P3.75 -->
-17.
+15.
 
 {{< include _formatting_guidelines.qmd >}}
