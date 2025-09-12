@@ -68,10 +68,14 @@ Solve the following problems in this section using **Mesh Current Analysis**.
 ![](images/ps3/thevenin_3_52.png)
 
 <!-- P3.53 -->
-10.
+10. Find the Norton equivalent circuit as seen by the 2 $\Omega$ resistor in the circuit below (i.e., from the perspective of terminals $a$ and $b$).
+
+![](images/ps3/norton_3_53.png)
 
 <!-- P3.54 -->
-11.
+11. Find the Norton equivalent circuit to the left of terminals $a$ and $b$ in the circuit below.
+
+![](images/ps3/norton_3_54.png)
 
 <!-- P3.55 -->
 12.
