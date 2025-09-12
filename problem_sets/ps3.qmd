@@ -11,9 +11,17 @@ Gradescope, using the [formatting guidelines](_formatting_guidelines.qmd) below.
 
 ## Node Voltage Analaysis
 
-### 3.3
+Solve the following problems in this section using **Node Voltage Analysis**.
 
-### 3.4
+<!-- P3.3 -->
+1. Find voltage ($v$) as specified in the circuit below.
+
+![](images/ps3/nva_3_3.png)
+
+<!-- P3.4 -->
+2. Find the current ($i$) as specified in the circuit below.
+
+![](images/ps3/nva_3_4.png)
 
 ### 3.7
 
