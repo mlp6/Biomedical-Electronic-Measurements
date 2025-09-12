@@ -1,6 +1,6 @@
 ---
-title: "Problem Set 03"
-date: 2025-0912-
+title: "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer"
+date: 2025-09-12
 format:
   html: default
   pdf: default
@@ -90,9 +90,27 @@ Solve the following problems in this section using **Mesh Current Analysis**.
 ## Maximum Power Transfer
 
 <!-- P3.73 -->
-14.
+14.  If the conditions for maximum power transfer between the source and the load exist, determine the following:
+
+a. The value of the load resistance, $R_L$.
+
+b. The power dissipated by $R_L$.
+
+c. The efficiency of the circuit (i.e., the ratio of the power dissipated by $R_L$ to the total power supplied by the source ($V_T$)).
+
+![](images/ps3/max_power_3_73.png)
 
 <!-- P3.75 -->
-15.
+15. Remember that a non-ideal voltage source can be modeled as an ideal voltage source ($V_S$)in series with a resistor ($R_S$).  For the resistive load ($R_L$) shown in the circuit below:
+
+![](images/ps3/max_power_3_75.png)
+
+a. Plot the power dissipated in the load as a function of $R_L$ for a reasonable range of $R_L$ values.
+
+b. What can you conclude from you plot in part (a) regarding the value of $R_L$
+that maximizes the power dissipated in the load and how that tapers off for
+lower/higher load resistances?
+
+c. Prove, mathematically, that your conclusion is valid for all values of $R_L$ and $R_S$.
 
 {{< include _formatting_guidelines.qmd >}}

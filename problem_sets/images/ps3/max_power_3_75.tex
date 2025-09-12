@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+
+\draw (0,0) to[V, v=$V_S{=}\SI{12}{\volt}$] (0,3);
+
+\draw (0,3) to[R, l=$R_{S}{=}\SI{300}{m\ohm}$] (3,3) to[R, l=$R_L$] (3,0);
+
+\draw (3,0) -- (0,0);
+
+\end{circuitikz}
+\end{document}
