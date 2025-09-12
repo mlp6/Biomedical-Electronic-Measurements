@@ -1,6 +1,6 @@
 | Module | Materials | Assessment | Lab Exercise |
 | --- | --- | --- | --- |
-| Resistive Circuit Analysis | [-> Introduction to Circuits](slides/intro-circuits.qmd) <br> [-> Ohm's Law, KCL & KVL, Resistive Loads, Meters](slides/ohm-kcl-kvl.qmd) <br> [-> Equivalent Resistance](slides/r_eq.qmd) <br> [-> Circuit Analysis Approaches](slides/circuit-analysis.qmd) [-> Source Equivalents](slides/sources.qmd) | [-> Software Installation & Tutorials](software-install-tutorials.qmd) <br> [-> Problem Set 01](problem_sets/ps1.qmd) <br> [-> Problem Set 02](problem_sets/ps2.qmd) | [-> Introduction](labs/introduction.qmd) <br> [-> Ohm's Law & Power](labs/ohms_power.qmd) |
+| Resistive Circuit Analysis | [-> Introduction to Circuits](slides/intro-circuits.qmd) <br> [-> Ohm's Law, KCL & KVL, Resistive Loads, Meters](slides/ohm-kcl-kvl.qmd) <br> [-> Equivalent Resistance](slides/r_eq.qmd) <br> [-> Circuit Analysis Approaches](slides/circuit-analysis.qmd) [-> Source Equivalents](slides/sources.qmd) | [-> Software Installation & Tutorials](software-install-tutorials.qmd) <br> [-> Problem Set 01](problem_sets/ps1.qmd) <br> [-> Problem Set 02](problem_sets/ps2.qmd) <br> [-> Problem Set 03](problem_sets/ps3.qmd) | [-> Introduction](labs/introduction.qmd) <br> [-> Ohm's Law & Power](labs/ohms_power.qmd) |
 | Midterm I (Sep 22, 2025) | | |
 | Capacitors & Inductors <br> DC RC/RL Circuit Analysis | | | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |
 | Complex Impedance, AC Signals, Phasors | | | [Impedance](labs/impedance.qmd) |

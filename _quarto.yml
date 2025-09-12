@@ -80,6 +80,8 @@ website:
           text: "Problem Set 01"
         - href: problem_sets/ps2.qmd
           text: "Problem Set 02"
+        - href: problem_sets/ps3.qmd
+          text: "Problem Set 03"
 
     page-footer:
       right: 'This page is built with [Quarto](https://quarto.org/).'
