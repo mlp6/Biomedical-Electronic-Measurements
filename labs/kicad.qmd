@@ -1,0 +1,9 @@
+---
+title: "KiCad: Schematic Capture & SPICE Simulation"
+date: "2025-09-17"
+format:
+  html: default
+  pdf: default
+---
+
+Coming soon...

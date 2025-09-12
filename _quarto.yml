@@ -46,6 +46,10 @@ website:
           text: "Circuit Analysis Techniques"
         - href: slides/sources.qmd
           text: "Source Transformations"
+        - href: slides/ecad_kicad_schematic.qmd
+          text: "ECAD using KiCad: Schematic Capture"
+        - href: slides/ecad_kicad_spice.qmd
+          text: "ECAD using KiCad: SPICE Modeling"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
