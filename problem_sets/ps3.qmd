@@ -78,10 +78,14 @@ Solve the following problems in this section using **Mesh Current Analysis**.
 ![](images/ps3/norton_3_54.png)
 
 <!-- P3.55 -->
-12.
+12. Find the Thevenin equivalent circuit as seen by the load resistor $R_L$ in the circuit below (i.e., from the perspective of terminals $a$ and $b$).
+
+![](images/ps3/thevenin_3_55.png)
 
 <!-- P3.56 -->
-13.
+13. Find the Thevenin equivalent resistance ($R_{TH}$) as seen by the load resistor $R_L$ in the circuit below (i.e., from the perspective of terminals $a$ and $b$).
+
+![](images/ps3/thevenin_3_56.png)
 
 ## Maximum Power Transfer
 
