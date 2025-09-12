@@ -9,6 +9,47 @@ format:
 Please complete the following problems and tasks, and upload your solutions to
 Gradescope, using the [formatting guidelines](_formatting_guidelines.qmd) below.
 
+## Node Voltage Analaysis
+
+### 3.3
+
+### 3.4
+
+### 3.7
+
+## Mesh Current Analysis
+
+### 3.8
+
+### 3.16
+
+### 3.17
+
+## Any Circuit Analysis Method
+
+### 3.24
+
+### 3.31
+
+## Superposition
+
+### 3.43
+
+## Thevenin & Norton Equivalent Circuits
+
+### 3.51
+
+### 3.52
+
+### 3.53
+
+### 3.54
+
+### 3.55
+
+### 3.56
+
+## Maximum Power Transfer
 
 
 {{< include _formatting_guidelines.qmd >}}
