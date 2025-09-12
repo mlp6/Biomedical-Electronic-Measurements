@@ -30,37 +30,62 @@ Solve the following problems in this section using **Node Voltage Analysis**.
 
 ## Mesh Current Analysis
 
-### 3.8
+Solve the following problems in this section using **Mesh Current Analysis**.
 
-### 3.16
+<!-- P3.8 -->
+4. Find the currents, $i_1$ and $i_3$, as specified in the circuit below, given $R_1 = 3 \Omega$, $R_2 = 1 \Omega$ and $R_3 = 6 \Omega$.  *(This is the same circuit analysis in problem 3 above, but solved using a different method.)*
 
-### 3.17
+![](images/ps3/nva_3_7.png)
+
+<!-- P3.16 -->
+5. Find the voltage ($v$) as specified in the circuit below.
+
+![](images/ps3/mca_3_16.png)
+
+<!-- P3.17 -->
+6. Solve for the mesh currents $i_A$, $i_B$, and $i_C$ as shown in the circuit below.
+
+![](images/ps3/mca_3_17.png)
 
 ## Any Circuit Analysis Method
 
-### 3.24
+<!-- P3.24 -->
+7.
 
-### 3.31
+<!-- P3.31 -->
+8.
 
 ## Superposition
 
-### 3.43
+<!-- P3.43 -->
+9.
 
 ## Thevenin & Norton Equivalent Circuits
 
-### 3.51
+<!-- P3.51 -->
+10.
 
-### 3.52
+<!-- P3.52 -->
+11.
 
-### 3.53
+<!-- P3.53 -->
+12.
 
-### 3.54
+<!-- P3.54 -->
+13.
 
-### 3.55
+<!-- P3.55 -->
+14.
 
-### 3.56
+<!-- P3.56 -->
+15.
 
 ## Maximum Power Transfer
 
+<!-- P3.73 -->
+16.
+
+<!-- P3.75 -->
+17.
 
 {{< include _formatting_guidelines.qmd >}}
