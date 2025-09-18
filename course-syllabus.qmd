@@ -117,7 +117,7 @@ Gradescope and linked below.
 * Labor Day - No Class (Sep 01, 2025)
 * Fall Break - No Class (Oct 11-14, 2025)
 * Midterm I (Mon, Sep 22, 2025)
-* Midterm II (Wed, Oct 08, 2025)
+* Midterm II (Wed, Oct 27, 2025)
 * Midterm III (Wed, Dec 03, 2025)
 * Final Lab Practical (Dec 10, 2025, 09:00-12:00)
 
