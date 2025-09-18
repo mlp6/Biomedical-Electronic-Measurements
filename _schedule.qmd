@@ -7,7 +7,7 @@
 | Complex Impedance, AC Signals, Phasors | | | [Impedance](labs/impedance.qmd) |
 | AC RLC Circuit Analysis <br> Passive Filters <br> Transfer Functions & Bode Plots (Frequency Domain) | | | [Filters](labs/filters.qmd) |
 | Transient Response (Time Domain) | | | [Transient Response](labs/transient_resp.qmd) |
-| Midterm II (Oct 08, 2025) | | |
+| Midterm II (Oct 27, 2025) | | |
 | Operational Amplifiers & Active Filters | | | [Opamps](labs/opamps.qmd) |
 | Transformers & Diodes | | | [Transformers & Diodes](labs/transformers_diodes.qmd )|
 | Midterm III (Dec 03, 2025) | | |
