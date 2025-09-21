@@ -666,37 +666,116 @@
     "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
   },
   {
-    "objectID": "problem_sets/ps2.html",
-    "href": "problem_sets/ps2.html",
-    "title": "Problem Set 02",
+    "objectID": "problem_sets/ps3_sltns.html",
+    "href": "problem_sets/ps3_sltns.html",
+    "title": "Problem Set 03: Solutions",
     "section": "",
-    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 02"
-    ]
+    "text": "Warning\n\n\n\nThese solutions have been adapted from previous years, but I haven’t had the chance to 100% guarentee their accuracy. If anything seems off, please don’t hesitate to ask questions on Ed!"
   },
   {
-    "objectID": "problem_sets/ps2.html#problem-set-format-guidelines",
-    "href": "problem_sets/ps2.html#problem-set-format-guidelines",
-    "title": "Problem Set 02",
-    "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 02"
-    ]
+    "objectID": "problem_sets/ps3_sltns.html#problem-1",
+    "href": "problem_sets/ps3_sltns.html#problem-1",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 1",
+    "text": "Problem 1"
   },
   {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Frequently Asked Questions",
-    "section": "",
-    "text": "Coming soon…",
-    "crumbs": [
-      "Course Information",
-      "FAQ"
-    ]
+    "objectID": "problem_sets/ps3_sltns.html#problem-2",
+    "href": "problem_sets/ps3_sltns.html#problem-2",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 2",
+    "text": "Problem 2"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-3",
+    "href": "problem_sets/ps3_sltns.html#problem-3",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 3",
+    "text": "Problem 3"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-4",
+    "href": "problem_sets/ps3_sltns.html#problem-4",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 4",
+    "text": "Problem 4"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-5",
+    "href": "problem_sets/ps3_sltns.html#problem-5",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 5",
+    "text": "Problem 5"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-6",
+    "href": "problem_sets/ps3_sltns.html#problem-6",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 6",
+    "text": "Problem 6"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-7",
+    "href": "problem_sets/ps3_sltns.html#problem-7",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 7",
+    "text": "Problem 7"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-8",
+    "href": "problem_sets/ps3_sltns.html#problem-8",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 8",
+    "text": "Problem 8"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-9",
+    "href": "problem_sets/ps3_sltns.html#problem-9",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 9",
+    "text": "Problem 9"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-10",
+    "href": "problem_sets/ps3_sltns.html#problem-10",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 10",
+    "text": "Problem 10"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-11",
+    "href": "problem_sets/ps3_sltns.html#problem-11",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 11",
+    "text": "Problem 11"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-12",
+    "href": "problem_sets/ps3_sltns.html#problem-12",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 12",
+    "text": "Problem 12"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-13",
+    "href": "problem_sets/ps3_sltns.html#problem-13",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 13",
+    "text": "Problem 13"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-14",
+    "href": "problem_sets/ps3_sltns.html#problem-14",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 14",
+    "text": "Problem 14"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-15",
+    "href": "problem_sets/ps3_sltns.html#problem-15",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 15",
+    "text": "Problem 15"
   },
   {
     "objectID": "problem_sets/ps1.html",
@@ -718,6 +797,39 @@
     "crumbs": [
       "Problem Sets",
       "Problem Set 01"
+    ]
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Coming soon…",
+    "crumbs": [
+      "Course Information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps2.html",
+    "href": "problem_sets/ps2.html",
+    "title": "Problem Set 02",
+    "section": "",
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 02"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps2.html#problem-set-format-guidelines",
+    "href": "problem_sets/ps2.html#problem-set-format-guidelines",
+    "title": "Problem Set 02",
+    "section": "Problem Set Format Guidelines",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 02"
     ]
   },
   {
