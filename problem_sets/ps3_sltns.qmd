@@ -1,0 +1,94 @@
+---
+title: "Problem Set 03: Solutions"
+date: 2025-09-21
+format:
+  html: default
+  pdf: default
+toc: false
+---
+
+::: callout-warning
+These solutions have been adapted from previous years, but I haven't had the
+chance to 100% guarentee their accuracy.  If anything seems off, please don't
+hesitate to ask questions on Ed!
+:::
+
+<!-- P3.3 -->
+## Problem 1
+
+![](images/ps3/3_3_sltn.png){fig-align="center"}
+
+<!-- P3.4 -->
+## Problem 2
+
+![](images/ps3/3_4_sltn.png){fig-align="center"}
+
+<!-- 3.7 -->
+## Problem 3
+
+![](images/ps3/3_7_sltn.png){fig-align="center"}
+
+<!-- P3.8 -->
+## Problem 4
+
+![](images/ps3/3_8_sltn.png){fig-align="center"}
+
+<!-- P3.16 -->
+## Problem 5
+
+![](images/ps3/3_16_sltn.png){fig-align="center"}
+
+
+## Problem 6
+<!-- P3.17 -->
+
+![](images/ps3/3_17_sltn.png){fig-align="center"}
+
+
+<!-- P3.43 -->
+## Problem 7
+
+![](images/ps3/3_43_sltn.png){fig-align="center"}
+
+
+<!-- P3.51 -->
+## Problem 8
+
+![](images/ps3/3_51_sltn.png){fig-align="center"}
+
+
+<!-- P3.52 -->
+## Problem 9
+
+![](images/ps3/3_52_sltn.png){fig-align="center"}
+
+<!-- P3.53 -->
+## Problem 10
+
+![](images/ps3/3_53_sltn.png){fig-align="center"}
+
+<!-- P3.54 -->
+## Problem 11
+
+![](images/ps3/3_54_sltn.png){fig-align="center"}
+
+<!-- P3.55 -->
+## Problem 12
+
+![](images/ps3/3_55_sltn.png){fig-align="center"}
+
+<!-- P3.56 -->
+## Problem 13
+
+![](images/ps3/3_56_sltn.png){fig-align="center"}
+
+<!-- P3.73 -->
+## Problem 14
+
+![](images/ps3/3_73_sltn.png){fig-align="center"}
+
+
+<!-- P3.75 -->
+## Problem 15
+
+![](images/ps3/3_75_sltn.png){fig-align="center"}
