@@ -1,6 +1,6 @@
 ---
 title: "ECAD using KiCad: SPICE Modeling"
-date: "2025-09-15"
+date: "2025-09-24"
 format:
     live-html: 
         output-file: ecad_kicad_spice-notes.html
@@ -73,7 +73,7 @@ downloaded and added to some libraries.
 
 ### Voltage Divider with Potentiometer (DC Sweep)
 
-[Voltage Divider Example](https://gitlab.oit.duke.edu/MedTechPrototyping/eda-kicad-schematic-pcb/-/tree/main/kicad/voltage_divider)
+![](images/KiCad_SPICE_Voltage_Divider.png){fig-align="center"}
 
 ### RC Filter (AC Sweep)
 

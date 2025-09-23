@@ -1,6 +1,6 @@
 ---
 title: "ECAD using KiCad: Schematic Capture"
-date: "2025-09-15"
+date: "2025-09-24"
 format:
     live-html: 
         output-file: ecad_kicad_schematic-notes.html
