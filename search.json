@@ -301,7 +301,7 @@
     "href": "slides/ecad_kicad_spice-notes.html#examples",
     "title": "ECAD using KiCad: SPICE Modeling",
     "section": "Examples",
-    "text": "Examples\n\nVoltage Divider with Potentiometer (DC Sweep)\nVoltage Divider Example\n\n\nRC Filter (AC Sweep)",
+    "text": "Examples\n\nVoltage Divider with Potentiometer (DC Sweep)\n\n\n\n\n\n\n\nRC Filter (AC Sweep)",
     "crumbs": [
       "Learning Modules",
       "ECAD using KiCad: SPICE Modeling"
@@ -939,7 +939,28 @@
     "href": "labs/kicad.html",
     "title": "KiCad: Schematic Capture & SPICE Simulation",
     "section": "",
-    "text": "Coming soon…"
+    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results"
+  },
+  {
+    "objectID": "labs/kicad.html#learning-objectives",
+    "href": "labs/kicad.html#learning-objectives",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "",
+    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results"
+  },
+  {
+    "objectID": "labs/kicad.html#voltage-divider-circuit",
+    "href": "labs/kicad.html#voltage-divider-circuit",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "Voltage Divider Circuit",
+    "text": "Voltage Divider Circuit\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate Maximum Power Transfer\nIn a recent problem set, you analytically solved for the load resistance that maximizes power transfer in a voltage divider circuit. In this section, you will simulate the same circuit in KiCad and verify your results.\n\nSweep the value of \\(R_2\\) (representing the load resistance) from 0.1 to 10k\\(\\Omega\\) in increments of 100\\(\\Omega\\), for a fixed \\(R_1\\) of 1k\\(\\Omega\\) (representing the source resistance).\nPlot the power dissipated in \\(R_2\\) as a function of \\(R_2\\) and identify the value that maximizes power transfer.\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your swept resistance plot demonstrating maximum power transfer to Gradescope."
+  },
+  {
+    "objectID": "labs/kicad.html#multi-source-circuit",
+    "href": "labs/kicad.html#multi-source-circuit",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "Multi-Source Circuit",
+    "text": "Multi-Source Circuit\nThe circuit shown below was one of the problems in your recent exam.\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate the Operating Point (OP) Analysis\n\nOperating Point simulations are appropriate for circuits that have DC sources and single-valued element current / voltage values.\nRun an OP simulation for this circuit and verify your results, as shown annoted in the circuit above and summarized below.\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your operating point (OP) simulation results to Gradescope.\n\n\n\n\nSimulate DC Sweeps\n\nPerform a new analysis that sweeps several components over a range of values:\n\nSweep \\(V_1\\) from 1 to 10 V in increments of 0.2 V\nSweep \\(I_1\\) from 1 to 5 A in increments of 0.2 A\n\nPlot:\n\n\\(I_{R_2}\\)\n\\(P_{V_1}\\)\n\\(P_{I_1}\\)\n\n\nYou should see results similar to those shown below.\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your DC sweep simulation results to Gradescope."
   },
   {
     "objectID": "slides/sources-slides.html#summary-of-analysis-approaches-so-far",
