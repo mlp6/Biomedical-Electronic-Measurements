@@ -56,6 +56,8 @@ website:
           text: "Introduction"
         - href: labs/ohms_power.qmd
           text: "Ohm's Law and Power"
+        - href: labs/kicad.qmd
+          text: "KiCad: Schematic Capture & SPICE Simulation"
         - href: labs/caps_inductors_scopes.qmd
           text: "Capacitors, Inductors, and Oscilloscopes"
         - href: labs/impedance.qmd
