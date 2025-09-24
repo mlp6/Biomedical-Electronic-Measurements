@@ -14,7 +14,7 @@ Dr. Mark Palmeri (`mlp6`)
 
 * Email: [mark.palmeri@duke.edu](mailto:mark.palmeri@duke.edu)
 * [Ed Discussion](https://edstem.org/us/courses/81250)
-* Office Hours: Tues, 13:00-15:00 (258 Hudson Hall Annex)
+* Office Hours: Tues & Thurs, 14:30-15:30 (258 Hudson Hall Annex)
 
 ### Teaching Assistants
 
@@ -156,13 +156,14 @@ pre-lab exercises and post-lab submissions of data collection and analysis from
 the lab exercises.
 
 There will be three midterm exams and a final lab practical will be held during
-the final exam period in the lab.
+the final exam period in the lab.  For the exams, your best 2 midterm scores
+will be counted towards your final grade.
 
 | Grade Category   | Relative Percentage   |
 |:----------------|:---------------------|
 | Problem Sets & Quizzes    | 20%                  |
 | Labs            | 15% (pre-lab) + 15% (post-lab) = 30%         |
-| Midterms        | 3 × 10% = 30%        |
+| Midterms        | 2 × 15% = 30%        |
 | Lab Practical   | 20%                  |
 
 : Grade Distribution
