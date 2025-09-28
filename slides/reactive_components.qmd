@@ -25,8 +25,6 @@ Practical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:
 
 - Chapter 3.6 (Caps in Circuits)
 
-```
-
 ## Reactive Components
 
 - To date, we have only considered resistors, which dissipate energy as heat, to
@@ -103,26 +101,73 @@ $$
 
   - $t_0$ is the time when the capacitor was last charged or discharged and this new change in current is being evaluated.
 
-  ## Capacitor Internals
+## Capacitor Internals
 
-  ![](images/cap.jpg){fig-align="center"}
+![](images/cap.jpg){fig-align="center"}
 
-  ## Power in a Capacitor
+## Power in a Capacitor
 
-  $$
-  P_c(t) = V_c(t) i_c(t) = V_c(t) C \frac{dV_c(t)}{dt} = \frac{1}{2} C \frac{d}{dt} (V_c(t))^2
-  $$
+$$
+P_c(t) = V_c(t) i_c(t) = V_c(t) C \frac{dV_c(t)}{dt} = \frac{1}{2} C \frac{d}{dt} (V_c(t))^2
+$$
 
-  - Power can be positive or negative, depending on the sign of $dV_c(t)/dt$.
+- Power can be positive or negative, depending on the sign of $dV_c(t)/dt$.
 
-    - Positive power means energy is being stored in the capacitor (i.e.,
-    charging).
+- Positive power means energy is being stored in the capacitor (i.e.,
+charging).
 
-    - Negative power means energy is being released from the capacitor (i.e.,
-    discharging).
+- Negative power means energy is being released from the capacitor (i.e.,
+discharging).
 
-  ## Energy in a Capacitor
+## Energy in a Capacitor
 
-  $$
-  E_c(t) = \int_{t_0}^{t} P_c(\tau) d\tau = \frac{1}{2} C \int_{t_0}^{t} \frac{d}{dt} V_c^2(t) dt =  \frac{1}{2} C (V_c(t))^2 - \frac{1}{2} C (V_c(t_0))^2
-  $$
+$$
+E_c(t) = \int_{t_0}^{t} P_c(\tau) d\tau = \frac{1}{2} C \int_{t_0}^{t} \frac{d}{dt} V_c^2(t) dt =  \frac{1}{2} C (V_c(t))^2 - \frac{1}{2} C (V_c(t_0))^2
+$$
+
+## Parallel Capacitors
+
+<!-- TODO: add circuit diagram -->
+
+- Let's draw a circuit with multiple capacitors in parallel.
+
+- Capacitors in parallel have the same voltage across them.
+
+- "Looks" like a single capacitor with larger capacitance (area):
+
+$$
+\begin{gather}
+v_{C_1}(t) = v_{C_2}(t) = v_{C_3}(t) = \ldots = v_{C_n}(t) \\
+i_n(t) = C_n \frac{dv_{C_n}(t)}{dt} \\
+i(t) = \sum_{n} i_n(t) = \sum_{n} C_n \frac{dv_{C_n}(t)}{dt} = \left( \sum_{n} C_n \right) \frac{dv(t)}{dt}
+\end{gather}
+$$
+
+$$
+C_{eq} = \sum_{i} C_i
+$$
+
+- Capacitors in parallel have a similar relationship to resistors in series.
+
+## Series Capacitors
+
+<!-- TODO: add circuit diagram -->
+- Let's draw a circuit with multiple capacitors in series.
+
+- Capacitors in series have the same current through them.
+
+- "Looks" like a single capacitor with smaller capacitance (distance):
+
+$$
+\begin{gather}
+i_{C_1}(t) = i_{C_2}(t) = i_{C_3}(t) = \ldots = i_{C_n}(t) \\
+v_n(t) = \frac{1}{C_n} \int i_{C_n}(\tau) d\tau \\
+v(t) = \sum_{n} v_n(t) = \sum_{n} \frac{1}{C_n} \int i(\tau) d\tau = \left( \sum_{n} \frac{1}{C_n} \right) \int i(\tau) d\tau
+\end{gather}
+$$
+
+$$
+\frac{1}{C_{eq}} = \sum_{i} \frac{1}{C_i}
+$$
+
+- Capacitors in series have a similar relationship to resistors in parallel.
