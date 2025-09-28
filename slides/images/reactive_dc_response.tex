@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+
+\draw (0,0) to[V, l=$V_S{=}10 V$] (0,3);
+\draw (0,3) to[L, l=$L_1{=}10mH$] (3,3);
+\draw (3,3) to[R, l=$R_1{=}10k\Omega$, f=$i_1$] (3,0);
+\draw (3,3) to[C, l=$C_1{=}12pF$] (6,3);
+\draw (6,3) to[L, l=$L_2{=}40mH$] (6,0);
+\draw (6,0) -- (0,0);
+
+\end{circuitikz}
+\end{document}
