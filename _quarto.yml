@@ -52,6 +52,8 @@ website:
           text: "ECAD using KiCad: SPICE Modeling"
         - href: slides/reactive_components.qmd
           text: "Reactive Components: Capacitors & Inductors"
+        - href: slides/complex_impedance.qmd
+          text: "Complex Impedance"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
