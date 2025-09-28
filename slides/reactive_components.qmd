@@ -106,3 +106,23 @@ $$
   ## Capacitor Internals
 
   ![](images/cap.jpg){fig-align="center"}
+
+  ## Power in a Capacitor
+
+  $$
+  P_c(t) = V_c(t) i_c(t) = V_c(t) C \frac{dV_c(t)}{dt} = \frac{1}{2} C \frac{d}{dt} (V_c(t))^2
+  $$
+
+  - Power can be positive or negative, depending on the sign of $dV_c(t)/dt$.
+
+    - Positive power means energy is being stored in the capacitor (i.e.,
+    charging).
+
+    - Negative power means energy is being released from the capacitor (i.e.,
+    discharging).
+
+  ## Energy in a Capacitor
+
+  $$
+  E_c(t) = \int_{t_0}^{t} P_c(\tau) d\tau = \frac{1}{2} C \int_{t_0}^{t} \frac{d}{dt} V_c^2(t) dt =  \frac{1}{2} C (V_c(t))^2 - \frac{1}{2} C (V_c(t_0))^2
+  $$
