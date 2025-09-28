@@ -1223,249 +1223,201 @@
     "text": "Summary\n\nSolving for \\(R_{eq}\\) can greatly simplify circuits to “simple” loops for circuit analysis.\nVoltage and current division are:\n\nReduce circuit analysis to “simple” circuit analysis rules.\nCan be used to design circuits where voltage and current need to be controlled in specific ways."
   },
   {
-    "objectID": "slides/intro-circuits-notes.html",
-    "href": "slides/intro-circuits-notes.html",
-    "title": "Introduction to Circuits",
+    "objectID": "slides/sources-notes.html",
+    "href": "slides/sources-notes.html",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
     "section": "",
-    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
+    "text": "Power Balance\nKCL & KVL\nOhm’s Law\nEquivalent Resistance\nVoltage & Current Division\nNVA & MCA",
     "crumbs": [
       "Learning Modules",
-      "Introduction to Circuits"
+      "Source Transformations"
     ]
   },
   {
-    "objectID": "slides/intro-circuits-notes.html#learning-objectives",
-    "href": "slides/intro-circuits-notes.html#learning-objectives",
-    "title": "Introduction to Circuits",
+    "objectID": "slides/sources-notes.html#summary-of-analysis-approaches-so-far",
+    "href": "slides/sources-notes.html#summary-of-analysis-approaches-so-far",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
     "section": "",
-    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
+    "text": "Power Balance\nKCL & KVL\nOhm’s Law\nEquivalent Resistance\nVoltage & Current Division\nNVA & MCA",
     "crumbs": [
       "Learning Modules",
-      "Introduction to Circuits"
+      "Source Transformations"
     ]
   },
   {
-    "objectID": "slides/intro-circuits-notes.html#circuit",
-    "href": "slides/intro-circuits-notes.html#circuit",
-    "title": "Introduction to Circuits",
-    "section": "Circuit",
-    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\nQuestion\n\n\n\nWhat are common sources and loads in electronic circuits?",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#sources",
-    "href": "slides/intro-circuits-notes.html#sources",
-    "title": "Introduction to Circuits",
-    "section": "Sources",
-    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored.",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
-    "href": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
-    "title": "Introduction to Circuits",
-    "section": "Biomedical Circuit Correlates",
-    "text": "Biomedical Circuit Correlates\n\nCardiovascular\n\nSource: Heart (pressure differential)\nLoad:\n\nCirculatory system\nOrgans\nResistance & elasticity (storage of energy)\n\nCurrent: Volumetric Flow Rate\n\n\n\nCardiovascular Analogy\n\n\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nHow does sympathetic and parasympathetic tone modulate systemic resistance and pressure?\n\n\n\n\nRespiratory\n\nSource: Diaphragm & Intercostal Muscles\nLoad: Airways / Lungs\nCurrent: Volumetric Airflow Rate",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-is-charge",
-    "href": "slides/intro-circuits-notes.html#what-is-charge",
-    "title": "Introduction to Circuits",
-    "section": "What is charge?",
-    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-is-current",
-    "href": "slides/intro-circuits-notes.html#what-is-current",
-    "title": "Introduction to Circuits",
-    "section": "What is current?",
-    "text": "What is current?\n\nCurrent\nCurrent is the time rate change of charge passing through a defined area.\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\n\n\nPolarity Conventions\n\n(+) direction of current flow represents flow of (+) charges (i.e., not electrons)\n\n\n\nSI Units\nCoulombs and amperes are SI units.\n\nCommon Unit Prefixes\n\n\nPower of 10\nPrefix\n\n\n\n\n\\(\\times 10^{12}\\)\nT (Tera)\n\n\n\\(\\times 10^9\\)\nG (Giga)\n\n\n\\(\\times 10^6\\)\nM (Mega)\n\n\n\\(\\times 10^3\\)\nk (kilo)\n\n\n\\(\\times 10^{-3}\\)\nm (milli)\n\n\n\\(\\times 10^{-6}\\)\n\\(\\mu\\) (micro)\n\n\n\\(\\times 10^{-9}\\)\nn (nano)\n\n\n\\(\\times 10^{-12}\\)\np (pico)\n\n\n\n\n\nCommon Current Magnitudes\n\nCommon Current Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nCircuit breaker limits / house electrical wires max\n10-20 A\n\n\nHome circuit breaker total\n200-300 A\n\n\nHairdryer\n&lt; 10 A\n\n\nCar Battery Max\n100s A\n\n\nLaptop Battery\n&lt; 1 A\n\n\nCellphone Battery\n10 mA (idle)  3 A (cell, camera)\n\n\nNerve Membrane Current\npA",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-is-voltage",
-    "href": "slides/intro-circuits-notes.html#what-is-voltage",
-    "title": "Introduction to Circuits",
-    "section": "What is voltage?",
-    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\n\nCommon Voltage Magnitudes\n\nCommon Voltage Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nWall Outlet\n110-240 V (AC)\n\n\nTransmission Line\nkV-MV\n\n\nLightning\n~100 MV\n\n\nAlkaline Battery Cell\n~1.5 V\n\n\nNerve Action Potential\n~75 mV\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nVoltage is a relative quantity; absolute voltage does not exist!",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-is-power",
-    "href": "slides/intro-circuits-notes.html#what-is-power",
-    "title": "Introduction to Circuits",
-    "section": "What is power?",
-    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]\n\nWhat do the units look like?\n\\[\n\\left[\\frac{J}{C} \\frac{C}{s}\\right] = \\left[\\frac{J}{s}\\right] = [W] (Watt)\n\\]",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-happens-to-power",
-    "href": "slides/intro-circuits-notes.html#what-happens-to-power",
-    "title": "Introduction to Circuits",
-    "section": "What happens to power?",
-    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power.\n\nSign Conventions\n\\(P &lt; 0\\): energy is provided to the circuit (source) \\(P &gt; 0\\): energy is dissipated / stored (load)\nPower dissipated by a circuit element (load) is (+) when (+) current (\\(I\\)) flows from a (+) -&gt; (-) voltage (V).",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#learning-objectives",
-    "href": "slides/intro-circuits-slides.html#learning-objectives",
-    "title": "Introduction to Circuits",
+    "objectID": "slides/sources-notes.html#learning-objectives",
+    "href": "slides/sources-notes.html#learning-objectives",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nWhat are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#circuit",
-    "href": "slides/intro-circuits-slides.html#circuit",
-    "title": "Introduction to Circuits",
-    "section": "Circuit",
-    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\n\nQuestion\n\n\nWhat are common sources and loads in electronic circuits?"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#sources",
-    "href": "slides/intro-circuits-slides.html#sources",
-    "title": "Introduction to Circuits",
-    "section": "Sources",
-    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored."
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
-    "href": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
-    "title": "Introduction to Circuits",
-    "section": "Biomedical Circuit Correlates",
-    "text": "Biomedical Circuit Correlates"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-charge",
-    "href": "slides/intro-circuits-slides.html#what-is-charge",
-    "title": "Introduction to Circuits",
-    "section": "What is charge?",
-    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-current",
-    "href": "slides/intro-circuits-slides.html#what-is-current",
-    "title": "Introduction to Circuits",
-    "section": "What is current?",
-    "text": "What is current?"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-voltage",
-    "href": "slides/intro-circuits-slides.html#what-is-voltage",
-    "title": "Introduction to Circuits",
-    "section": "What is voltage?",
-    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-power",
-    "href": "slides/intro-circuits-slides.html#what-is-power",
-    "title": "Introduction to Circuits",
-    "section": "What is power?",
-    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-happens-to-power",
-    "href": "slides/intro-circuits-slides.html#what-happens-to-power",
-    "title": "Introduction to Circuits",
-    "section": "What happens to power?",
-    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power."
-  },
-  {
-    "objectID": "resources/teaching_assistant_expectations.html",
-    "href": "resources/teaching_assistant_expectations.html",
-    "title": "Teaching Assistant Expectations",
-    "section": "",
-    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
+    "text": "Learning Objectives\n\nSuperposition (Linear Circuits)\nThevenin Equivalent Sources (Voltage)\nNorton Equivalents Sources (Current)",
     "crumbs": [
-      "Resources",
-      "Teaching Assistant Expectations"
+      "Learning Modules",
+      "Source Transformations"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Biomedical Electronic Measurements",
-    "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
-  },
-  {
-    "objectID": "labs/kicad.html",
-    "href": "labs/kicad.html",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
-    "section": "",
-    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
+    "objectID": "slides/sources-notes.html#superposition",
+    "href": "slides/sources-notes.html#superposition",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Superposition",
+    "text": "Superposition\n\n\n\n\n\n\nSuperposition Statement\n\n\n\n\nIn a linear circuit containing \\(N\\) sources, each branch voltage and current is the linear sum of \\(N\\) voltages and currents (i.e., each source contributes to part of the total element current and voltage).\nEach source’s contribution can be calculated by “eliminating” the contribution of the other sources and solving for element currents/voltages.\n\n\n\n\n“Eliminating” Sources\n\n“Eliminating” a source means removing its voltage or current contribution to the circuit.\nA voltage sourse can be eliminated by replacing it with a short circuit.\n\nBranch current can still be conducted.\nForcing no \\(\\Delta\\) V related to the voltage source.\n\nA current source can be eliminated by replacing it with an open circuit.\n\nVoltage difference allowed between two nodes.\nBlocking current from flowing from other sources because the eliminated current source exclusively dictactes that branch current.\n\n\n\n\nSuperposition Example\n\n\n\n\n\n\nNote\n\n\n\nSolve for \\(i_3\\) using source superposition.\n\n\n\n\n\n\n\n\\(V_S = 10 V\\)\n\\(R_1 = 200 \\Omega\\)\n\\(R_2 = 200 \\Omega\\)\n\\(R_3 = 100 \\Omega\\)\n\\(I_S = 0.1 A\\)\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\\[\ni_3 = i_{3_{V_S}} + i_{3_{I_S}}\n\\]\n\n\n\n\nStep 1: Eliminate \\(I_S\\); Solve for \\(i_{3_{V_S}}\\)\n\n\n\n\n\n\\[\ni_{3_{V_S}} = \\frac{V_S}{R_1+R_2+R_3} = 0.2 A\n\\]\n\n\n\n\n\n\nNote\n\n\n\n\\(i_{3_{V_S}}\\) is the contribution to total \\(i_3\\) from \\(V_S\\).\n\n\n\n\nStep 2: Eliminate \\(V_S\\); Solve for \\(i_{3_{I_S}}\\)\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nWhile any circuit analysis techinque we have used to date is fair game, current division resonates with me…\n\n\n\\[\nI_{3_{I_S}} = \\frac{v_A}{R_2+R_3} = -I_S\\left(\\frac{R_1}{R_1+R_2+R_3}\\right) = -0.04 A\n\\]\n\n\nStep 3: Sum Contributions from \\(I_S\\) and \\(V_S\\)\n\n\n\n\n\n\\[\ni_3 = i_{3_{V_S}} + i_{3_{I_S}} = 0.02 A + (-0.04 A) = -0.02 A\n\\]\n\n\nLet’s revisit the “super mesh” circuit…\n\n\n\n\n\n\nSolve for \\(i_4\\) using source superposition.\nLet’s walk through the approach together…",
     "crumbs": [
-      "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
+      "Learning Modules",
+      "Source Transformations"
     ]
   },
   {
-    "objectID": "labs/kicad.html#learning-objectives",
-    "href": "labs/kicad.html#learning-objectives",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "objectID": "slides/sources-notes.html#equivalent-circuits",
+    "href": "slides/sources-notes.html#equivalent-circuits",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Equivalent Circuits",
+    "text": "Equivalent Circuits\n\n\n\n\n\n\nImportant\n\n\n\nEach “block” (physical or functional) of a circuit can be represented by a 2-terminal equivalent circuit, composed of a single source and resistance that completely captures the \\(i-v\\) characteristics of that block.\n\nIf that single source is a voltage source, then it is known as a Thevenin source equivalent.\nIf that single source is a current source, then it is known as a Norton source equivalent.",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#thevenin-equivalent-sources",
+    "href": "slides/sources-notes.html#thevenin-equivalent-sources",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Thevenin Equivalent Sources",
+    "text": "Thevenin Equivalent Sources\n\n\n\n\n\n\nThevenin Theorem\n\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal voltage source (\\(V_T\\)), in series with\nAn equivalent resistance (\\(R_T\\)).\n\n\n\n\n\n\n\n\nHow do we solve for \\(V_T\\) and \\(R_T\\)?\n\nStep 1: Find the equivalent resistance\nFind the equivalent resistance as “seen” by the terminals of that source block.\n\nRemove the load from the terminals of the block.\nEliminate all independent voltage and current sources.\n\n\n\n\n\n\n\nNote\n\n\n\nTo date, we have only dealth with independent voltage and current sources (i.e., their source voltage or current values are not dependent on other voltages/currents in the circuit).\n\n\n\nCompute the equivalent resistance with the load removed.\n\n\n\nStep 1: Example\n\n\n\n\n\n\n\nStep 2: Find the equivalent source voltage\nSolve for the equivalent Thevenin source voltage, which is equal to the terminal voltage when the terminals are “open” (i.e., no load is attached to them).\n\nRemove the load from the terminals (create an “open” load condition).\nKeep all sources.\nSolve for \\(V_T = V_{{ab}_{OC}}\\)\n\n\n\nBack to our example…\n\n\n\n\n\n\\[\nV_T = V_{ab} = V_B = v_s \\left(\\frac{R_2}{R_1+R_2}\\right)\n\\]\n\n\nThevenin Equivalent Circuit\n\n\n\n\n\n\n\n\n\n\n\nAre these equivalent?\n\n\n\nLet’s convince ourselves that \\(i_L\\) is the same for both circuits…\n\n\n\n\nOh wait…\nI’m not going to show you this; you are going to do it!\n\n\nWhy use a Thevenin Equivalent Circuit?\n\n\n\n\n\n\nImportant\n\n\n\nA major benefit of using an equivalent source is that if we have an unknown or changing load (\\(R_L\\)), we can easily solve for \\(i_L\\) as a simple voltage division with known \\(V_T\\) and \\(R_T\\).\nExtremely useful for instrument design!\n\nCurrent draw as a function of load (e.g., make sure to not exceed \\(I_{max}\\) of a supply).\nPower consumption as a function of load.\n\n\n\n\n\nAnother example…",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#norton-equivalent-sources",
+    "href": "slides/sources-notes.html#norton-equivalent-sources",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Norton Equivalent Sources",
+    "text": "Norton Equivalent Sources\n\n\n\n\n\n\nNorton Theorem\n\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal current source (\\(V_T\\)), in parallel with\nAn equivalent resistance (\\(R_N = R_T\\)).\n\n\n\n\n\n\n\n\n\nStep 1: Calculate \\(R_N\\)\n\n\n\n\n\n\nImportant\n\n\n\nThis is the same process as calculating the Thevenin equivalent resistance (\\(R_T\\))!\n\n\n\n\nStep 2: Calculate the Norton Equivalent Source\n\n\n\nSimilar to calculating the Thevenin equivalent source, but instead of solving for the open-circuit voltage at the terminals, solve for the short circuit current at the terminals.\nThis short circuit current is the Norton source current (\\(I_N\\)).",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
+    "href": "slides/sources-notes.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Proof that Thevening & Norton Equivalents Circuits are Equivalent",
+    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics.\n\n\n\nThevenin\n\\[\n\\begin{gather}\nV_L = V_T \\frac{R_L}{R_T+R_L} \\\\\ni_L = \\frac{v_L}{R_L} = \\frac{V_T}{R_T+R_L}\n\\end{gather}\n\\]\n\n\nNorton\n\\[\n\\begin{gather}\ni_L = i_N \\frac{R_T}{R_N+R_L} \\\\\nV_L = i_L R_L = I_N R_N \\frac{R_L}{R_N+R_L} \\\\\ni_N = \\frac{V_T}{R_T} \\\\\nV_L = V_T \\frac{R_L}{R_T+R_L}\n\\end{gather}\n\\]\nThey are the same!",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#source-transformation",
+    "href": "slides/sources-notes.html#source-transformation",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Source Transformation",
+    "text": "Source Transformation\n\n\n\n\n\n\nNote\n\n\n\nWe can use these equivalent circuits to transform between voltage and current sources using Ohm’s law:\n\\[\nV_T = I_N R_T\n\\]\n\n\n\n\n\n\n\n\nTip\n\n\n\nUse source transformations to change a circuit into a voltage or current division problem that is easier to solve!\n\n\n\nSource Transformation Example\n\n\n\n\n\nNow a simple current divider!\n\\[\ni_4 = \\left( \\frac{v_1}{R_1} - I_S - \\frac{v_s}{R_3} \\right) \\left[ \\frac{\\frac{1}{R_4}}{\\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3} + \\frac{1}{R_4}}\\right]\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-notes.html#maximum-power-transfer",
+    "href": "slides/sources-notes.html#maximum-power-transfer",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Maximum Power Transfer",
+    "text": "Maximum Power Transfer\nWe can use our “simple” Thevenin equivalent circuit to now represent any source:load combination.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPower Maximum Transfer Condition\n\n\n\nWhat load resistance allows us to deliver the most power to the load?\n\n\n\nSolve for Maximum Power Transfer\n\\[\n\\begin{gather}\nP_L = V_L I_L = I_L^2 R_L \\\\\nI_L = \\frac{V_T}{R_T + R_L} \\\\\nP_L = \\left( \\frac{V_T}{R_T+R_L}\\right)^2 R_L \\\\\nP_L = \\frac{V_T^2 R_L}{(R_T + R_L)^2}\n\\end{gather}\n\\]\n\n\nHow to Match Load and Source Resistance\nIf we can only adjust \\(R_L\\) (i.e., the source conditions are fixed), then power is maximized when:\n\\[\n\\frac{dP_L}{dR_L} = 0\n\\]\n\n\n\n\n\n\nImportant\n\n\n\nMaximum power is delivered to the load when \\(R_T = R_L\\)!!",
+    "crumbs": [
+      "Learning Modules",
+      "Source Transformations"
+    ]
+  },
+  {
+    "objectID": "slides/sources-slides.html#summary-of-analysis-approaches-so-far",
+    "href": "slides/sources-slides.html#summary-of-analysis-approaches-so-far",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Summary of Analysis Approaches (So Far)",
+    "text": "Summary of Analysis Approaches (So Far)\n\nPower Balance\nKCL & KVL\nOhm’s Law\nEquivalent Resistance\nVoltage & Current Division\nNVA & MCA"
+  },
+  {
+    "objectID": "slides/sources-slides.html#learning-objectives",
+    "href": "slides/sources-slides.html#learning-objectives",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nSuperposition (Linear Circuits)\nThevenin Equivalent Sources (Voltage)\nNorton Equivalents Sources (Current)"
+  },
+  {
+    "objectID": "slides/sources-slides.html#superposition",
+    "href": "slides/sources-slides.html#superposition",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Superposition",
+    "text": "Superposition\n\n\n\n\n\n\n\nSuperposition Statement\n\n\n\nIn a linear circuit containing \\(N\\) sources, each branch voltage and current is the linear sum of \\(N\\) voltages and currents (i.e., each source contributes to part of the total element current and voltage).\nEach source’s contribution can be calculated by “eliminating” the contribution of the other sources and solving for element currents/voltages."
+  },
+  {
+    "objectID": "slides/sources-slides.html#equivalent-circuits",
+    "href": "slides/sources-slides.html#equivalent-circuits",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Equivalent Circuits",
+    "text": "Equivalent Circuits\n\n\n\n\n\n\nImportant\n\n\nEach “block” (physical or functional) of a circuit can be represented by a 2-terminal equivalent circuit, composed of a single source and resistance that completely captures the \\(i-v\\) characteristics of that block.\n\nIf that single source is a voltage source, then it is known as a Thevenin source equivalent.\nIf that single source is a current source, then it is known as a Norton source equivalent."
+  },
+  {
+    "objectID": "slides/sources-slides.html#thevenin-equivalent-sources",
+    "href": "slides/sources-slides.html#thevenin-equivalent-sources",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Thevenin Equivalent Sources",
+    "text": "Thevenin Equivalent Sources\n\n\n\n\n\n\n\nThevenin Theorem\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal voltage source (\\(V_T\\)), in series with\nAn equivalent resistance (\\(R_T\\)).\n\n\n\n\n\n\nHow do we solve for \\(V_T\\) and \\(R_T\\)?"
+  },
+  {
+    "objectID": "slides/sources-slides.html#norton-equivalent-sources",
+    "href": "slides/sources-slides.html#norton-equivalent-sources",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Norton Equivalent Sources",
+    "text": "Norton Equivalent Sources\n\n\n\n\n\n\n\nNorton Theorem\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal current source (\\(V_T\\)), in parallel with\nAn equivalent resistance (\\(R_N = R_T\\))."
+  },
+  {
+    "objectID": "slides/sources-slides.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
+    "href": "slides/sources-slides.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Proof that Thevening & Norton Equivalents Circuits are Equivalent",
+    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics."
+  },
+  {
+    "objectID": "slides/sources-slides.html#source-transformation",
+    "href": "slides/sources-slides.html#source-transformation",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Source Transformation",
+    "text": "Source Transformation\n\n\n\n\n\n\nNote\n\n\nWe can use these equivalent circuits to transform between voltage and current sources using Ohm’s law:\n\\[\nV_T = I_N R_T\n\\]\n\n\n\n\n\n\n\n\n\nTip\n\n\nUse source transformations to change a circuit into a voltage or current division problem that is easier to solve!"
+  },
+  {
+    "objectID": "slides/sources-slides.html#maximum-power-transfer",
+    "href": "slides/sources-slides.html#maximum-power-transfer",
+    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "section": "Maximum Power Transfer",
+    "text": "Maximum Power Transfer\nWe can use our “simple” Thevenin equivalent circuit to now represent any source:load combination.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPower Maximum Transfer Condition\n\n\nWhat load resistance allows us to deliver the most power to the load?"
+  },
+  {
+    "objectID": "TODO.html",
+    "href": "TODO.html",
+    "title": "TODO",
     "section": "",
-    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
-    "crumbs": [
-      "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
-    ]
+    "text": "[ ] Update the Makefile to compile all of the circuitikz images and clean things up.\n\n\n[ ] Organize slide images by lecture (not monolithic directory)"
   },
   {
-    "objectID": "labs/kicad.html#voltage-divider-circuit",
-    "href": "labs/kicad.html#voltage-divider-circuit",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
-    "section": "Voltage Divider Circuit",
-    "text": "Voltage Divider Circuit\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate Maximum Power Transfer\nIn a recent problem set, you analytically solved for the load resistance that maximizes power transfer in a voltage divider circuit. In this section, you will simulate the same circuit in KiCad and verify your results.\n\nSweep the value of \\(R_2\\) (representing the load resistance) from 0.1 to 10k\\(\\Omega\\) in increments of 100\\(\\Omega\\), for a fixed \\(R_1\\) of 1k\\(\\Omega\\) (representing the source resistance).\nPlot the power dissipated in \\(R_2\\) as a function of \\(R_2\\) and identify the value that maximizes power transfer.\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your swept resistance plot demonstrating maximum power transfer to Gradescope.",
-    "crumbs": [
-      "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
-    ]
-  },
-  {
-    "objectID": "labs/kicad.html#multi-source-circuit",
-    "href": "labs/kicad.html#multi-source-circuit",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
-    "section": "Multi-Source Circuit",
-    "text": "Multi-Source Circuit\nThe circuit shown below was one of the problems in your recent exam.\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate the Operating Point (OP) Analysis\n\nOperating Point simulations are appropriate for circuits that have DC sources and single-valued element current / voltage values.\nRun an OP simulation for this circuit and verify your results, as shown annoted in the circuit above and summarized below.\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your operating point (OP) simulation results to Gradescope.\n\n\n\n\nSimulate DC Sweeps\n\nPerform a new analysis that sweeps several components over a range of values:\n\nSweep \\(V_1\\) from 1 to 10 V in increments of 0.2 V\nSweep \\(I_1\\) from 1 to 5 A in increments of 0.2 A\n\nPlot:\n\n\\(I_{R_2}\\)\n\\(P_{V_1}\\)\n\\(P_{I_1}\\)\n\n\nYou should see results similar to those shown below.\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your DC sweep simulation results to Gradescope.",
-    "crumbs": [
-      "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
-    ]
-  },
-  {
-    "objectID": "bme-lab-policies.html",
-    "href": "bme-lab-policies.html",
-    "title": "BME Lab Procedures and Safety Expectations",
+    "objectID": "TODO.html#slides",
+    "href": "TODO.html#slides",
+    "title": "TODO",
     "section": "",
-    "text": "Important\n\n\n\nSafety is Always First, Cleanliness a close second\n\n\nSafety always comes first in lab. To that end, you are expected to follow the rules in this document. Failure to do so may result in revocation of laboratory privileges, reduction of your course grade, and possible withdrawal from your course. Understanding risks and learning to work safely in the laboratory are an important part of your education.\nBefore entering lab, your safety training must be current. You need Duke’s Occupational and Environmental Safety Office’s:\n\nFire/Life Safety, and\nLaboratory Safety-General\n\ntraining modules. We know that you may have done this training before, but it expires in one year, and you must be current through the end of the semester.\nMost accidents are the result of a series of failures. That said, most accidents are preventable. You are responsible for your safety and the safety of those around you. The vast majority of accidents involve some combination of inattention, carelessness, horseplay, impairment, broken tools, and lack of knowledge. All of these factors can be mitigated and it’s your job to do so.\nYou are responsible for keeping the lab clean.\n\n\n\n\n\n\nWarning\n\n\n\nFailure to keep a clean workspace can result in a lower grade for you and your team.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you or someone else in lab needs immediate medical attention, call 911.\n\n\nIn case you need to report your location, you are in CIEMAS B209. Non-emergent problems, call 681-WELL (681-9355). If you are injured in lab, you must let an instructor/TA/lab staff member know as soon as possible. Lab staff after-hours phone number is on the contact cards posted outside every lab door.\n\n\n\n\n\n\nNote\n\n\n\nKeep these points in mind… - In an emergency, call 911. Location: CIEMAS B209\n\nIn the event of a non-emergent injury, seek medical attention and let an instructor/TA/lab staff know within 12 hours.\nFind the emergency exits.\nNever work alone. Two or more people must be present and able to see and hear each other.\nInspect every tool before use. Remove broken tools from service, place them on the broken tools shelf at the back of the room, and notify lab staff.\nWear safety glasses when appropriate. This includes, but is not limited to, activities such as soldering, sanding, filing, hammering, cutting, and drilling.\nWear hearing protection when using noisy tools such as drills and the Dremel tool. Ear buds or music headphones are not sufficient hearing protection.\nNever work impaired. If you are tired, stressed, in a rush, or impaired in any other way then do not work in lab. Go home and recuperate.\nTie back long hair to keep it away from tools.\nClosed-toe shoes must be worn in the lab. Long trousers are preferred.\nProperly secure materials. Clamps, vises and portable worktables are available.\nDon’t force anything. If the job requires significant force, you’re doing it wrong.\nKeep food and drink out of the lab!\nPower down equipment when finished with it.\nA fire extinguisher is outside the door.\nWash your hands before leaving lab.\nBits of unused solder, wire and lead trimmings all go in a “Solder Scrap” container.\nAnything contaminated with solder paste (wipes, boards, applicators) goes in a “Solder Scrap” container.\nOther hazardous waste dealt with on a case by case basis; ask lab staff for help.\nPut tools away, in the right place. Tool drawers are labeled, but if you’re unsure where to put a tool, ask your TA/lab staff.\nDo not hoard parts or tools.\nThis bears repeating: Take the parts you need, but only the parts you need. Do not hoard parts. If you see a part becoming scarce, let lab staff know so they can re-order.\nBenches are for temporary use only. Leave no trace that you were at the bench when you leave for the day. Rarely, with approval, a bench can be claimed for the semester.\nAny and all paint must be pre-approved by an instructor/TA/lab staff. Unapproved paint on projects will result in a lower grade. (Spray paint indoors is never approved.)\nA representative from your group is expected to participate in weekly cleaning. Your instructor will give you the schedule.\nPlace a cover on the bench for messy work. Chucks and Ram Board are available for this.\nLab staff have a collection of good soldering tips and fine tools (e.g. tweezers). If you have need for something better than you can find in lab, ask lab staff.",
+    "text": "[ ] Organize slide images by lecture (not monolithic directory)"
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Coming soon…",
     "crumbs": [
       "Course Information",
-      "BME Lab Policies"
+      "FAQ"
     ]
   },
   {
@@ -1601,202 +1553,299 @@
     ]
   },
   {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Frequently Asked Questions",
+    "objectID": "bme-lab-policies.html",
+    "href": "bme-lab-policies.html",
+    "title": "BME Lab Procedures and Safety Expectations",
     "section": "",
-    "text": "Coming soon…",
+    "text": "Important\n\n\n\nSafety is Always First, Cleanliness a close second\n\n\nSafety always comes first in lab. To that end, you are expected to follow the rules in this document. Failure to do so may result in revocation of laboratory privileges, reduction of your course grade, and possible withdrawal from your course. Understanding risks and learning to work safely in the laboratory are an important part of your education.\nBefore entering lab, your safety training must be current. You need Duke’s Occupational and Environmental Safety Office’s:\n\nFire/Life Safety, and\nLaboratory Safety-General\n\ntraining modules. We know that you may have done this training before, but it expires in one year, and you must be current through the end of the semester.\nMost accidents are the result of a series of failures. That said, most accidents are preventable. You are responsible for your safety and the safety of those around you. The vast majority of accidents involve some combination of inattention, carelessness, horseplay, impairment, broken tools, and lack of knowledge. All of these factors can be mitigated and it’s your job to do so.\nYou are responsible for keeping the lab clean.\n\n\n\n\n\n\nWarning\n\n\n\nFailure to keep a clean workspace can result in a lower grade for you and your team.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you or someone else in lab needs immediate medical attention, call 911.\n\n\nIn case you need to report your location, you are in CIEMAS B209. Non-emergent problems, call 681-WELL (681-9355). If you are injured in lab, you must let an instructor/TA/lab staff member know as soon as possible. Lab staff after-hours phone number is on the contact cards posted outside every lab door.\n\n\n\n\n\n\nNote\n\n\n\nKeep these points in mind… - In an emergency, call 911. Location: CIEMAS B209\n\nIn the event of a non-emergent injury, seek medical attention and let an instructor/TA/lab staff know within 12 hours.\nFind the emergency exits.\nNever work alone. Two or more people must be present and able to see and hear each other.\nInspect every tool before use. Remove broken tools from service, place them on the broken tools shelf at the back of the room, and notify lab staff.\nWear safety glasses when appropriate. This includes, but is not limited to, activities such as soldering, sanding, filing, hammering, cutting, and drilling.\nWear hearing protection when using noisy tools such as drills and the Dremel tool. Ear buds or music headphones are not sufficient hearing protection.\nNever work impaired. If you are tired, stressed, in a rush, or impaired in any other way then do not work in lab. Go home and recuperate.\nTie back long hair to keep it away from tools.\nClosed-toe shoes must be worn in the lab. Long trousers are preferred.\nProperly secure materials. Clamps, vises and portable worktables are available.\nDon’t force anything. If the job requires significant force, you’re doing it wrong.\nKeep food and drink out of the lab!\nPower down equipment when finished with it.\nA fire extinguisher is outside the door.\nWash your hands before leaving lab.\nBits of unused solder, wire and lead trimmings all go in a “Solder Scrap” container.\nAnything contaminated with solder paste (wipes, boards, applicators) goes in a “Solder Scrap” container.\nOther hazardous waste dealt with on a case by case basis; ask lab staff for help.\nPut tools away, in the right place. Tool drawers are labeled, but if you’re unsure where to put a tool, ask your TA/lab staff.\nDo not hoard parts or tools.\nThis bears repeating: Take the parts you need, but only the parts you need. Do not hoard parts. If you see a part becoming scarce, let lab staff know so they can re-order.\nBenches are for temporary use only. Leave no trace that you were at the bench when you leave for the day. Rarely, with approval, a bench can be claimed for the semester.\nAny and all paint must be pre-approved by an instructor/TA/lab staff. Unapproved paint on projects will result in a lower grade. (Spray paint indoors is never approved.)\nA representative from your group is expected to participate in weekly cleaning. Your instructor will give you the schedule.\nPlace a cover on the bench for messy work. Chucks and Ram Board are available for this.\nLab staff have a collection of good soldering tips and fine tools (e.g. tweezers). If you have need for something better than you can find in lab, ask lab staff.",
     "crumbs": [
       "Course Information",
-      "FAQ"
+      "BME Lab Policies"
     ]
   },
   {
-    "objectID": "TODO.html",
-    "href": "TODO.html",
-    "title": "TODO",
+    "objectID": "labs/kicad.html",
+    "href": "labs/kicad.html",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
     "section": "",
-    "text": "[ ] Update the Makefile to compile all of the circuitikz images and clean things up.\n\n\n[ ] Organize slide images by lecture (not monolithic directory)"
+    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
+    "crumbs": [
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
+    ]
   },
   {
-    "objectID": "TODO.html#slides",
-    "href": "TODO.html#slides",
-    "title": "TODO",
+    "objectID": "labs/kicad.html#learning-objectives",
+    "href": "labs/kicad.html#learning-objectives",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
     "section": "",
-    "text": "[ ] Organize slide images by lecture (not monolithic directory)"
+    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
+    "crumbs": [
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
+    ]
   },
   {
-    "objectID": "slides/sources-slides.html#summary-of-analysis-approaches-so-far",
-    "href": "slides/sources-slides.html#summary-of-analysis-approaches-so-far",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Summary of Analysis Approaches (So Far)",
-    "text": "Summary of Analysis Approaches (So Far)\n\nPower Balance\nKCL & KVL\nOhm’s Law\nEquivalent Resistance\nVoltage & Current Division\nNVA & MCA"
+    "objectID": "labs/kicad.html#voltage-divider-circuit",
+    "href": "labs/kicad.html#voltage-divider-circuit",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "Voltage Divider Circuit",
+    "text": "Voltage Divider Circuit\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate Maximum Power Transfer\nIn a recent problem set, you analytically solved for the load resistance that maximizes power transfer in a voltage divider circuit. In this section, you will simulate the same circuit in KiCad and verify your results.\n\nSweep the value of \\(R_2\\) (representing the load resistance) from 0.1 to 10k\\(\\Omega\\) in increments of 100\\(\\Omega\\), for a fixed \\(R_1\\) of 1k\\(\\Omega\\) (representing the source resistance).\nPlot the power dissipated in \\(R_2\\) as a function of \\(R_2\\) and identify the value that maximizes power transfer.\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your swept resistance plot demonstrating maximum power transfer to Gradescope.",
+    "crumbs": [
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
+    ]
   },
   {
-    "objectID": "slides/sources-slides.html#learning-objectives",
-    "href": "slides/sources-slides.html#learning-objectives",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "objectID": "labs/kicad.html#multi-source-circuit",
+    "href": "labs/kicad.html#multi-source-circuit",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "Multi-Source Circuit",
+    "text": "Multi-Source Circuit\nThe circuit shown below was one of the problems in your recent exam.\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate the Operating Point (OP) Analysis\n\nOperating Point simulations are appropriate for circuits that have DC sources and single-valued element current / voltage values.\nRun an OP simulation for this circuit and verify your results, as shown annoted in the circuit above and summarized below.\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your operating point (OP) simulation results to Gradescope.\n\n\n\n\nSimulate DC Sweeps\n\nPerform a new analysis that sweeps several components over a range of values:\n\nSweep \\(V_1\\) from 1 to 10 V in increments of 0.2 V\nSweep \\(I_1\\) from 1 to 5 A in increments of 0.2 A\n\nPlot:\n\n\\(I_{R_2}\\)\n\\(P_{V_1}\\)\n\\(P_{I_1}\\)\n\n\nYou should see results similar to those shown below.\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your DC sweep simulation results to Gradescope.",
+    "crumbs": [
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Biomedical Electronic Measurements",
+    "section": "",
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+  },
+  {
+    "objectID": "resources/teaching_assistant_expectations.html",
+    "href": "resources/teaching_assistant_expectations.html",
+    "title": "Teaching Assistant Expectations",
+    "section": "",
+    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
+    "crumbs": [
+      "Resources",
+      "Teaching Assistant Expectations"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#learning-objectives",
+    "href": "slides/intro-circuits-slides.html#learning-objectives",
+    "title": "Introduction to Circuits",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nSuperposition (Linear Circuits)\nThevenin Equivalent Sources (Voltage)\nNorton Equivalents Sources (Current)"
+    "text": "Learning Objectives\n\nWhat are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions"
   },
   {
-    "objectID": "slides/sources-slides.html#superposition",
-    "href": "slides/sources-slides.html#superposition",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Superposition",
-    "text": "Superposition\n\n\n\n\n\n\n\nSuperposition Statement\n\n\n\nIn a linear circuit containing \\(N\\) sources, each branch voltage and current is the linear sum of \\(N\\) voltages and currents (i.e., each source contributes to part of the total element current and voltage).\nEach source’s contribution can be calculated by “eliminating” the contribution of the other sources and solving for element currents/voltages."
+    "objectID": "slides/intro-circuits-slides.html#circuit",
+    "href": "slides/intro-circuits-slides.html#circuit",
+    "title": "Introduction to Circuits",
+    "section": "Circuit",
+    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\n\nQuestion\n\n\nWhat are common sources and loads in electronic circuits?"
   },
   {
-    "objectID": "slides/sources-slides.html#equivalent-circuits",
-    "href": "slides/sources-slides.html#equivalent-circuits",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Equivalent Circuits",
-    "text": "Equivalent Circuits\n\n\n\n\n\n\nImportant\n\n\nEach “block” (physical or functional) of a circuit can be represented by a 2-terminal equivalent circuit, composed of a single source and resistance that completely captures the \\(i-v\\) characteristics of that block.\n\nIf that single source is a voltage source, then it is known as a Thevenin source equivalent.\nIf that single source is a current source, then it is known as a Norton source equivalent."
+    "objectID": "slides/intro-circuits-slides.html#sources",
+    "href": "slides/intro-circuits-slides.html#sources",
+    "title": "Introduction to Circuits",
+    "section": "Sources",
+    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored."
   },
   {
-    "objectID": "slides/sources-slides.html#thevenin-equivalent-sources",
-    "href": "slides/sources-slides.html#thevenin-equivalent-sources",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Thevenin Equivalent Sources",
-    "text": "Thevenin Equivalent Sources\n\n\n\n\n\n\n\nThevenin Theorem\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal voltage source (\\(V_T\\)), in series with\nAn equivalent resistance (\\(R_T\\)).\n\n\n\n\n\n\nHow do we solve for \\(V_T\\) and \\(R_T\\)?"
+    "objectID": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
+    "href": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
+    "title": "Introduction to Circuits",
+    "section": "Biomedical Circuit Correlates",
+    "text": "Biomedical Circuit Correlates"
   },
   {
-    "objectID": "slides/sources-slides.html#norton-equivalent-sources",
-    "href": "slides/sources-slides.html#norton-equivalent-sources",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Norton Equivalent Sources",
-    "text": "Norton Equivalent Sources\n\n\n\n\n\n\n\nNorton Theorem\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal current source (\\(V_T\\)), in parallel with\nAn equivalent resistance (\\(R_N = R_T\\))."
+    "objectID": "slides/intro-circuits-slides.html#what-is-charge",
+    "href": "slides/intro-circuits-slides.html#what-is-charge",
+    "title": "Introduction to Circuits",
+    "section": "What is charge?",
+    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]"
   },
   {
-    "objectID": "slides/sources-slides.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
-    "href": "slides/sources-slides.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Proof that Thevening & Norton Equivalents Circuits are Equivalent",
-    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics."
+    "objectID": "slides/intro-circuits-slides.html#what-is-current",
+    "href": "slides/intro-circuits-slides.html#what-is-current",
+    "title": "Introduction to Circuits",
+    "section": "What is current?",
+    "text": "What is current?"
   },
   {
-    "objectID": "slides/sources-slides.html#source-transformation",
-    "href": "slides/sources-slides.html#source-transformation",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Source Transformation",
-    "text": "Source Transformation\n\n\n\n\n\n\nNote\n\n\nWe can use these equivalent circuits to transform between voltage and current sources using Ohm’s law:\n\\[\nV_T = I_N R_T\n\\]\n\n\n\n\n\n\n\n\n\nTip\n\n\nUse source transformations to change a circuit into a voltage or current division problem that is easier to solve!"
+    "objectID": "slides/intro-circuits-slides.html#what-is-voltage",
+    "href": "slides/intro-circuits-slides.html#what-is-voltage",
+    "title": "Introduction to Circuits",
+    "section": "What is voltage?",
+    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]"
   },
   {
-    "objectID": "slides/sources-slides.html#maximum-power-transfer",
-    "href": "slides/sources-slides.html#maximum-power-transfer",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Maximum Power Transfer",
-    "text": "Maximum Power Transfer\nWe can use our “simple” Thevenin equivalent circuit to now represent any source:load combination.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPower Maximum Transfer Condition\n\n\nWhat load resistance allows us to deliver the most power to the load?"
+    "objectID": "slides/intro-circuits-slides.html#what-is-power",
+    "href": "slides/intro-circuits-slides.html#what-is-power",
+    "title": "Introduction to Circuits",
+    "section": "What is power?",
+    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]"
   },
   {
-    "objectID": "slides/sources-notes.html",
-    "href": "slides/sources-notes.html",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "objectID": "slides/intro-circuits-slides.html#what-happens-to-power",
+    "href": "slides/intro-circuits-slides.html#what-happens-to-power",
+    "title": "Introduction to Circuits",
+    "section": "What happens to power?",
+    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power."
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html",
+    "href": "slides/intro-circuits-notes.html",
+    "title": "Introduction to Circuits",
     "section": "",
-    "text": "Power Balance\nKCL & KVL\nOhm’s Law\nEquivalent Resistance\nVoltage & Current Division\nNVA & MCA",
+    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
     "crumbs": [
       "Learning Modules",
-      "Source Transformations"
+      "Introduction to Circuits"
     ]
   },
   {
-    "objectID": "slides/sources-notes.html#summary-of-analysis-approaches-so-far",
-    "href": "slides/sources-notes.html#summary-of-analysis-approaches-so-far",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "objectID": "slides/intro-circuits-notes.html#learning-objectives",
+    "href": "slides/intro-circuits-notes.html#learning-objectives",
+    "title": "Introduction to Circuits",
     "section": "",
-    "text": "Power Balance\nKCL & KVL\nOhm’s Law\nEquivalent Resistance\nVoltage & Current Division\nNVA & MCA",
+    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
     "crumbs": [
       "Learning Modules",
-      "Source Transformations"
+      "Introduction to Circuits"
     ]
   },
   {
-    "objectID": "slides/sources-notes.html#learning-objectives",
-    "href": "slides/sources-notes.html#learning-objectives",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
+    "objectID": "slides/intro-circuits-notes.html#circuit",
+    "href": "slides/intro-circuits-notes.html#circuit",
+    "title": "Introduction to Circuits",
+    "section": "Circuit",
+    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\nQuestion\n\n\n\nWhat are common sources and loads in electronic circuits?",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#sources",
+    "href": "slides/intro-circuits-notes.html#sources",
+    "title": "Introduction to Circuits",
+    "section": "Sources",
+    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored.",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
+    "href": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
+    "title": "Introduction to Circuits",
+    "section": "Biomedical Circuit Correlates",
+    "text": "Biomedical Circuit Correlates\n\nCardiovascular\n\nSource: Heart (pressure differential)\nLoad:\n\nCirculatory system\nOrgans\nResistance & elasticity (storage of energy)\n\nCurrent: Volumetric Flow Rate\n\n\n\nCardiovascular Analogy\n\n\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nHow does sympathetic and parasympathetic tone modulate systemic resistance and pressure?\n\n\n\n\nRespiratory\n\nSource: Diaphragm & Intercostal Muscles\nLoad: Airways / Lungs\nCurrent: Volumetric Airflow Rate",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-is-charge",
+    "href": "slides/intro-circuits-notes.html#what-is-charge",
+    "title": "Introduction to Circuits",
+    "section": "What is charge?",
+    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-is-current",
+    "href": "slides/intro-circuits-notes.html#what-is-current",
+    "title": "Introduction to Circuits",
+    "section": "What is current?",
+    "text": "What is current?\n\nCurrent\nCurrent is the time rate change of charge passing through a defined area.\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\n\n\nPolarity Conventions\n\n(+) direction of current flow represents flow of (+) charges (i.e., not electrons)\n\n\n\nSI Units\nCoulombs and amperes are SI units.\n\nCommon Unit Prefixes\n\n\nPower of 10\nPrefix\n\n\n\n\n\\(\\times 10^{12}\\)\nT (Tera)\n\n\n\\(\\times 10^9\\)\nG (Giga)\n\n\n\\(\\times 10^6\\)\nM (Mega)\n\n\n\\(\\times 10^3\\)\nk (kilo)\n\n\n\\(\\times 10^{-3}\\)\nm (milli)\n\n\n\\(\\times 10^{-6}\\)\n\\(\\mu\\) (micro)\n\n\n\\(\\times 10^{-9}\\)\nn (nano)\n\n\n\\(\\times 10^{-12}\\)\np (pico)\n\n\n\n\n\nCommon Current Magnitudes\n\nCommon Current Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nCircuit breaker limits / house electrical wires max\n10-20 A\n\n\nHome circuit breaker total\n200-300 A\n\n\nHairdryer\n&lt; 10 A\n\n\nCar Battery Max\n100s A\n\n\nLaptop Battery\n&lt; 1 A\n\n\nCellphone Battery\n10 mA (idle)  3 A (cell, camera)\n\n\nNerve Membrane Current\npA",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-is-voltage",
+    "href": "slides/intro-circuits-notes.html#what-is-voltage",
+    "title": "Introduction to Circuits",
+    "section": "What is voltage?",
+    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\n\nCommon Voltage Magnitudes\n\nCommon Voltage Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nWall Outlet\n110-240 V (AC)\n\n\nTransmission Line\nkV-MV\n\n\nLightning\n~100 MV\n\n\nAlkaline Battery Cell\n~1.5 V\n\n\nNerve Action Potential\n~75 mV\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nVoltage is a relative quantity; absolute voltage does not exist!",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-is-power",
+    "href": "slides/intro-circuits-notes.html#what-is-power",
+    "title": "Introduction to Circuits",
+    "section": "What is power?",
+    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]\n\nWhat do the units look like?\n\\[\n\\left[\\frac{J}{C} \\frac{C}{s}\\right] = \\left[\\frac{J}{s}\\right] = [W] (Watt)\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-notes.html#what-happens-to-power",
+    "href": "slides/intro-circuits-notes.html#what-happens-to-power",
+    "title": "Introduction to Circuits",
+    "section": "What happens to power?",
+    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power.\n\nSign Conventions\n\\(P &lt; 0\\): energy is provided to the circuit (source) \\(P &gt; 0\\): energy is dissipated / stored (load)\nPower dissipated by a circuit element (load) is (+) when (+) current (\\(I\\)) flows from a (+) -&gt; (-) voltage (V).",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#learning-objectives",
+    "href": "slides/complex-impedance-slides.html#learning-objectives",
+    "title": "Complex Impedance",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nSuperposition (Linear Circuits)\nThevenin Equivalent Sources (Voltage)\nNorton Equivalents Sources (Current)",
-    "crumbs": [
-      "Learning Modules",
-      "Source Transformations"
-    ]
+    "text": "Learning Objectives\n\nUnderstand the concept of complex impedance and how it extends the idea of impedance to AC circuits with capacitors and inductors.\nAnalyze AC circuits using complex impedance and phasor techniques.\nApply complex impedance to solve for voltages and currents in circuits with resistors, capacitors, and inductors."
   },
   {
-    "objectID": "slides/sources-notes.html#superposition",
-    "href": "slides/sources-notes.html#superposition",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Superposition",
-    "text": "Superposition\n\n\n\n\n\n\nSuperposition Statement\n\n\n\n\nIn a linear circuit containing \\(N\\) sources, each branch voltage and current is the linear sum of \\(N\\) voltages and currents (i.e., each source contributes to part of the total element current and voltage).\nEach source’s contribution can be calculated by “eliminating” the contribution of the other sources and solving for element currents/voltages.\n\n\n\n\n“Eliminating” Sources\n\n“Eliminating” a source means removing its voltage or current contribution to the circuit.\nA voltage sourse can be eliminated by replacing it with a short circuit.\n\nBranch current can still be conducted.\nForcing no \\(\\Delta\\) V related to the voltage source.\n\nA current source can be eliminated by replacing it with an open circuit.\n\nVoltage difference allowed between two nodes.\nBlocking current from flowing from other sources because the eliminated current source exclusively dictactes that branch current.\n\n\n\n\nSuperposition Example\n\n\n\n\n\n\nNote\n\n\n\nSolve for \\(i_3\\) using source superposition.\n\n\n\n\n\n\n\n\\(V_S = 10 V\\)\n\\(R_1 = 200 \\Omega\\)\n\\(R_2 = 200 \\Omega\\)\n\\(R_3 = 100 \\Omega\\)\n\\(I_S = 0.1 A\\)\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\\[\ni_3 = i_{3_{V_S}} + i_{3_{I_S}}\n\\]\n\n\n\n\nStep 1: Eliminate \\(I_S\\); Solve for \\(i_{3_{V_S}}\\)\n\n\n\n\n\n\\[\ni_{3_{V_S}} = \\frac{V_S}{R_1+R_2+R_3} = 0.2 A\n\\]\n\n\n\n\n\n\nNote\n\n\n\n\\(i_{3_{V_S}}\\) is the contribution to total \\(i_3\\) from \\(V_S\\).\n\n\n\n\nStep 2: Eliminate \\(V_S\\); Solve for \\(i_{3_{I_S}}\\)\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nWhile any circuit analysis techinque we have used to date is fair game, current division resonates with me…\n\n\n\\[\nI_{3_{I_S}} = \\frac{v_A}{R_2+R_3} = -I_S\\left(\\frac{R_1}{R_1+R_2+R_3}\\right) = -0.04 A\n\\]\n\n\nStep 3: Sum Contributions from \\(I_S\\) and \\(V_S\\)\n\n\n\n\n\n\\[\ni_3 = i_{3_{V_S}} + i_{3_{I_S}} = 0.02 A + (-0.04 A) = -0.02 A\n\\]\n\n\nLet’s revisit the “super mesh” circuit…\n\n\n\n\n\n\nSolve for \\(i_4\\) using source superposition.\nLet’s walk through the approach together…",
-    "crumbs": [
-      "Learning Modules",
-      "Source Transformations"
-    ]
+    "objectID": "slides/complex-impedance-slides.html#phasors-and-complex-numbers",
+    "href": "slides/complex-impedance-slides.html#phasors-and-complex-numbers",
+    "title": "Complex Impedance",
+    "section": "Phasors and Complex Numbers",
+    "text": "Phasors and Complex Numbers\n\nPhasors are a way to represent sinusoidal functions as complex numbers in the frequency domain.\nA phasor is a complex number that encodes the amplitude and phase of a sinusoidal signal.\nA sinusoidal voltage or current at a given, single frequency can be represented as: \\[\n\\begin{gather}\nV_c(t) = V_A \\cos(\\omega t + \\phi)  \\\\\nV_c(t) = V_A \\text{Re} \\left\\{ e^{j\\omega t + \\phi} \\right\\} \\\\\nV_c(t) = \\text{Re} \\left\\{ V_A e^{j\\phi} e^{j\\omega t} \\right\\} \\\\\n\\bar{V} = V_A e^{j\\phi} = V_A \\angle \\phi \\\\\n\\end{gather}\n\\]\nwhere \\(V_A\\) is the amplitude, \\(\\omega\\) is the angular frequency, and \\(\\phi\\) is the phase angle. The phasor \\(\\tilde{V}\\) is a complex number.\nThe time dependence \\(e^{j\\omega t}\\) is often omitted in phasor notation, as it is understood to be present.\nPhasors allow us to use complex algebra to analyze AC circuits, simplifying the calculation of voltages and currents."
   },
   {
-    "objectID": "slides/sources-notes.html#equivalent-circuits",
-    "href": "slides/sources-notes.html#equivalent-circuits",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Equivalent Circuits",
-    "text": "Equivalent Circuits\n\n\n\n\n\n\nImportant\n\n\n\nEach “block” (physical or functional) of a circuit can be represented by a 2-terminal equivalent circuit, composed of a single source and resistance that completely captures the \\(i-v\\) characteristics of that block.\n\nIf that single source is a voltage source, then it is known as a Thevenin source equivalent.\nIf that single source is a current source, then it is known as a Norton source equivalent.",
-    "crumbs": [
-      "Learning Modules",
-      "Source Transformations"
-    ]
+    "objectID": "slides/complex-impedance-slides.html#complex-impedance-of-a-capacitor",
+    "href": "slides/complex-impedance-slides.html#complex-impedance-of-a-capacitor",
+    "title": "Complex Impedance",
+    "section": "Complex Impedance of a Capacitor",
+    "text": "Complex Impedance of a Capacitor\nThe complex impedance \\(Z_c\\) of a capacitor is defined as the ratio of the phasor voltage to the phasor current:\n\\[\nZ_c = \\frac{\\bar{V}_c}{\\bar{I}_c} = \\frac{1}{j \\omega C}\n\\]"
   },
   {
-    "objectID": "slides/sources-notes.html#thevenin-equivalent-sources",
-    "href": "slides/sources-notes.html#thevenin-equivalent-sources",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Thevenin Equivalent Sources",
-    "text": "Thevenin Equivalent Sources\n\n\n\n\n\n\nThevenin Theorem\n\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal voltage source (\\(V_T\\)), in series with\nAn equivalent resistance (\\(R_T\\)).\n\n\n\n\n\n\n\n\nHow do we solve for \\(V_T\\) and \\(R_T\\)?\n\nStep 1: Find the equivalent resistance\nFind the equivalent resistance as “seen” by the terminals of that source block.\n\nRemove the load from the terminals of the block.\nEliminate all independent voltage and current sources.\n\n\n\n\n\n\n\nNote\n\n\n\nTo date, we have only dealth with independent voltage and current sources (i.e., their source voltage or current values are not dependent on other voltages/currents in the circuit).\n\n\n\nCompute the equivalent resistance with the load removed.\n\n\n\nStep 1: Example\n\n\n\n\n\n\n\nStep 2: Find the equivalent source voltage\nSolve for the equivalent Thevenin source voltage, which is equal to the terminal voltage when the terminals are “open” (i.e., no load is attached to them).\n\nRemove the load from the terminals (create an “open” load condition).\nKeep all sources.\nSolve for \\(V_T = V_{{ab}_{OC}}\\)\n\n\n\nBack to our example…\n\n\n\n\n\n\\[\nV_T = V_{ab} = V_B = v_s \\left(\\frac{R_2}{R_1+R_2}\\right)\n\\]\n\n\nThevenin Equivalent Circuit\n\n\n\n\n\n\n\n\n\n\n\nAre these equivalent?\n\n\n\nLet’s convince ourselves that \\(i_L\\) is the same for both circuits…\n\n\n\n\nOh wait…\nI’m not going to show you this; you are going to do it!\n\n\nWhy use a Thevenin Equivalent Circuit?\n\n\n\n\n\n\nImportant\n\n\n\nA major benefit of using an equivalent source is that if we have an unknown or changing load (\\(R_L\\)), we can easily solve for \\(i_L\\) as a simple voltage division with known \\(V_T\\) and \\(R_T\\).\nExtremely useful for instrument design!\n\nCurrent draw as a function of load (e.g., make sure to not exceed \\(I_{max}\\) of a supply).\nPower consumption as a function of load.\n\n\n\n\n\nAnother example…",
-    "crumbs": [
-      "Learning Modules",
-      "Source Transformations"
-    ]
+    "objectID": "slides/complex-impedance-notes.html",
+    "href": "slides/complex-impedance-notes.html",
+    "title": "Complex Impedance",
+    "section": "",
+    "text": "Understand the concept of complex impedance and how it extends the idea of impedance to AC circuits with capacitors and inductors.\nAnalyze AC circuits using complex impedance and phasor techniques.\nApply complex impedance to solve for voltages and currents in circuits with resistors, capacitors, and inductors."
   },
   {
-    "objectID": "slides/sources-notes.html#norton-equivalent-sources",
-    "href": "slides/sources-notes.html#norton-equivalent-sources",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Norton Equivalent Sources",
-    "text": "Norton Equivalent Sources\n\n\n\n\n\n\nNorton Theorem\n\n\n\nWhen a circuit is viewed from the perspective of the load, any source network composed of ideal voltage/current sources and linear resistors (i.e., defined by Ohm’s law), can be replaced by an equivalent circuit with:\n\nAn ideal current source (\\(V_T\\)), in parallel with\nAn equivalent resistance (\\(R_N = R_T\\)).\n\n\n\n\n\n\n\n\n\nStep 1: Calculate \\(R_N\\)\n\n\n\n\n\n\nImportant\n\n\n\nThis is the same process as calculating the Thevenin equivalent resistance (\\(R_T\\))!\n\n\n\n\nStep 2: Calculate the Norton Equivalent Source\n\n\n\nSimilar to calculating the Thevenin equivalent source, but instead of solving for the open-circuit voltage at the terminals, solve for the short circuit current at the terminals.\nThis short circuit current is the Norton source current (\\(I_N\\)).",
-    "crumbs": [
-      "Learning Modules",
-      "Source Transformations"
-    ]
+    "objectID": "slides/complex-impedance-notes.html#learning-objectives",
+    "href": "slides/complex-impedance-notes.html#learning-objectives",
+    "title": "Complex Impedance",
+    "section": "",
+    "text": "Understand the concept of complex impedance and how it extends the idea of impedance to AC circuits with capacitors and inductors.\nAnalyze AC circuits using complex impedance and phasor techniques.\nApply complex impedance to solve for voltages and currents in circuits with resistors, capacitors, and inductors."
   },
   {
-    "objectID": "slides/sources-notes.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
-    "href": "slides/sources-notes.html#proof-that-thevening-norton-equivalents-circuits-are-equivalent",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Proof that Thevening & Norton Equivalents Circuits are Equivalent",
-    "text": "Proof that Thevening & Norton Equivalents Circuits are Equivalent\n\n\n\n\n\n\nNote\n\n\n\nThe circuits are equivalent if they have the same \\(i-v\\) characteristics.\n\n\n\nThevenin\n\\[\n\\begin{gather}\nV_L = V_T \\frac{R_L}{R_T+R_L} \\\\\ni_L = \\frac{v_L}{R_L} = \\frac{V_T}{R_T+R_L}\n\\end{gather}\n\\]\n\n\nNorton\n\\[\n\\begin{gather}\ni_L = i_N \\frac{R_T}{R_N+R_L} \\\\\nV_L = i_L R_L = I_N R_N \\frac{R_L}{R_N+R_L} \\\\\ni_N = \\frac{V_T}{R_T} \\\\\nV_L = V_T \\frac{R_L}{R_T+R_L}\n\\end{gather}\n\\]\nThey are the same!",
-    "crumbs": [
-      "Learning Modules",
-      "Source Transformations"
-    ]
+    "objectID": "slides/complex-impedance-notes.html#phasors-and-complex-numbers",
+    "href": "slides/complex-impedance-notes.html#phasors-and-complex-numbers",
+    "title": "Complex Impedance",
+    "section": "Phasors and Complex Numbers",
+    "text": "Phasors and Complex Numbers\n\nPhasors are a way to represent sinusoidal functions as complex numbers in the frequency domain.\nA phasor is a complex number that encodes the amplitude and phase of a sinusoidal signal.\nA sinusoidal voltage or current at a given, single frequency can be represented as: \\[\n\\begin{gather}\nV_c(t) = V_A \\cos(\\omega t + \\phi)  \\\\\nV_c(t) = V_A \\text{Re} \\left\\{ e^{j\\omega t + \\phi} \\right\\} \\\\\nV_c(t) = \\text{Re} \\left\\{ V_A e^{j\\phi} e^{j\\omega t} \\right\\} \\\\\n\\bar{V} = V_A e^{j\\phi} = V_A \\angle \\phi \\\\\n\\end{gather}\n\\]\nwhere \\(V_A\\) is the amplitude, \\(\\omega\\) is the angular frequency, and \\(\\phi\\) is the phase angle. The phasor \\(\\tilde{V}\\) is a complex number.\nThe time dependence \\(e^{j\\omega t}\\) is often omitted in phasor notation, as it is understood to be present.\nPhasors allow us to use complex algebra to analyze AC circuits, simplifying the calculation of voltages and currents.\n\n\n\\[\n\\begin{align}\nI_c & = C \\frac{d V_c}{dt} = C \\frac{d}{dt} \\left( V_A \\cos(\\omega t + \\phi) \\right) \\\\\n& = -\\omega C V_A \\sin(\\omega t + \\phi) = \\omega C V_A \\cos\\left(\\omega t + \\phi + \\frac{\\pi}{2}\\right)\n\\end{align}\n\\] The phasor representation of the current is: \\[\n\\bar{I}_c = j \\omega C \\bar{V}_c\n\\]\n\nThe phase difference between the voltage and current in a capacitor is \\(\\frac{\\pi}{2}\\) radians (90\\(\\degree\\)), with the current leading the voltage, which is represented with the imaginary unit \\(j\\) in the phasor equation.\n\n\n\n\n\n\n\nQuestion?\n\n\n\nWhat does this look like in the complex plane?"
   },
   {
-    "objectID": "slides/sources-notes.html#source-transformation",
-    "href": "slides/sources-notes.html#source-transformation",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Source Transformation",
-    "text": "Source Transformation\n\n\n\n\n\n\nNote\n\n\n\nWe can use these equivalent circuits to transform between voltage and current sources using Ohm’s law:\n\\[\nV_T = I_N R_T\n\\]\n\n\n\n\n\n\n\n\nTip\n\n\n\nUse source transformations to change a circuit into a voltage or current division problem that is easier to solve!\n\n\n\nSource Transformation Example\n\n\n\n\n\nNow a simple current divider!\n\\[\ni_4 = \\left( \\frac{v_1}{R_1} - I_S - \\frac{v_s}{R_3} \\right) \\left[ \\frac{\\frac{1}{R_4}}{\\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3} + \\frac{1}{R_4}}\\right]\n\\]",
-    "crumbs": [
-      "Learning Modules",
-      "Source Transformations"
-    ]
-  },
-  {
-    "objectID": "slides/sources-notes.html#maximum-power-transfer",
-    "href": "slides/sources-notes.html#maximum-power-transfer",
-    "title": "Source Superposition & Thevenin/Norton Equivalents",
-    "section": "Maximum Power Transfer",
-    "text": "Maximum Power Transfer\nWe can use our “simple” Thevenin equivalent circuit to now represent any source:load combination.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPower Maximum Transfer Condition\n\n\n\nWhat load resistance allows us to deliver the most power to the load?\n\n\n\nSolve for Maximum Power Transfer\n\\[\n\\begin{gather}\nP_L = V_L I_L = I_L^2 R_L \\\\\nI_L = \\frac{V_T}{R_T + R_L} \\\\\nP_L = \\left( \\frac{V_T}{R_T+R_L}\\right)^2 R_L \\\\\nP_L = \\frac{V_T^2 R_L}{(R_T + R_L)^2}\n\\end{gather}\n\\]\n\n\nHow to Match Load and Source Resistance\nIf we can only adjust \\(R_L\\) (i.e., the source conditions are fixed), then power is maximized when:\n\\[\n\\frac{dP_L}{dR_L} = 0\n\\]\n\n\n\n\n\n\nImportant\n\n\n\nMaximum power is delivered to the load when \\(R_T = R_L\\)!!",
-    "crumbs": [
-      "Learning Modules",
-      "Source Transformations"
-    ]
+    "objectID": "slides/complex-impedance-notes.html#complex-impedance-of-a-capacitor",
+    "href": "slides/complex-impedance-notes.html#complex-impedance-of-a-capacitor",
+    "title": "Complex Impedance",
+    "section": "Complex Impedance of a Capacitor",
+    "text": "Complex Impedance of a Capacitor\nThe complex impedance \\(Z_c\\) of a capacitor is defined as the ratio of the phasor voltage to the phasor current:\n\\[\nZ_c = \\frac{\\bar{V}_c}{\\bar{I}_c} = \\frac{1}{j \\omega C}\n\\]"
   },
   {
     "objectID": "slides/circuit-analysis-slides.html#learning-objectives",
