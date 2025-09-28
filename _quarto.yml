@@ -78,6 +78,8 @@ website:
         contents:
         - href: resources/XYZs_of_Oscopes_Tektronix.pdf
           text: "XYZ of Oscilloscopes"
+        - href: slides/sinusoidal_signals.qmd
+          text: "Sinusoidal Signals"
         - href: resources/teaching_assistant_expectations.qmd
           text: "Teaching Assistant Expectations"
       - section: "Problem Sets"

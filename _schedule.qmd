@@ -4,7 +4,7 @@
 | ECAD (KiCad) | [-> ECAD using KiCad: Schematic Capture](slides/ecad_kicad_schematic.qmd) <br> [-> ECAD using KiCad: SPICE Modeling](slides/ecad_kicad_spice.qmd) | | [-> Schematic Capture & SPICE Simulation](labs/kicad.qmd) |
 | Midterm I (Sep 22, 2025) | | |
 | Capacitors & Inductors <br> DC RC/RL Circuit Analysis | [-> Reactive Components: Capacitors & Inductors](slides/reactive_components.qmd) | | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |
-| Complex Impedance, AC Signals, Phasors | | | [Impedance](labs/impedance.qmd) |
+| Complex Impedance, AC Signals, Phasors | [-> Sinusoidal Signals](slides/sinusoidal_signals.qmd) | | [Impedance](labs/impedance.qmd) |
 | AC RLC Circuit Analysis <br> Passive Filters <br> Transfer Functions & Bode Plots (Frequency Domain) | | | [Filters](labs/filters.qmd) |
 | Transient Response (Time Domain) | | | [Transient Response](labs/transient_resp.qmd) |
 | Midterm II (Oct 27, 2025) | | |

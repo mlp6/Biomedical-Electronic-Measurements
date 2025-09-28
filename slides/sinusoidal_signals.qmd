@@ -1,0 +1,137 @@
+---
+title: "Sinusoidal Signals"
+date: "2025-09-29"
+format:
+  live-html: 
+    output-file: sinusoidal-signals-notes.html
+  live-revealjs: 
+    output-file: sinusoidal-signals-slides.html
+---
+
+## Learning Objectives
+
+- Review sinusoidal signals and their properties.
+
+- Root mean square (RMS) values of sinusoidal signals.
+
+- Complex numbers and Euler's formula.
+
+- Phasor representation of sinusoidal signals.
+
+## Sinusoidal Source Signal
+
+- A sinusoidal voltage source can be represented as:
+
+$$ 
+v(t) = V_{A} \sin(2 \pi f t + \phi) = V_{A} \sin(\omega t + \phi) = V_{A} \sin(2 \pi (t/T) + \phi)
+$$
+
+- Where:
+  - $V_{A}$ is the amplitude (peak value) of the signal.
+  - $f$ is the frequency in Hertz (Hz).
+  - $\omega = 2 \pi f$ is the angular frequency in radians per second (rad/s).
+  - $T = 1/f$ is the period of the signal in seconds (s).
+  - $\phi$ is the phase angle in radians.
+
+- Lets draw this...
+
+## Complex Plane Representation
+
+- We can represent a fixed frequency sinusoidal signal as a rotating vector in
+the complex plane.
+  - The horizontal axis represents the real part (cosine component).
+  - The vertical axis represents the imaginary part (sine component).
+  - The length of the vector represents the amplitude $V_{A}$.
+  - The angle of the vector with respect to the horizontal axis represents the
+  phase angle $\phi$.
+  - As time progresses, the vector rotates counterclockwise at an angular
+  velocity $\omega$.
+  - One full rotation corresponds to one period $T$ of the sinusoidal signal.
+
+- Lets draw this...
+
+## Euler's Formula and Complex Exponentials
+
+- Euler's formula: 
+
+$$
+e^{j\theta} = \cos(\theta) + j \sin(\theta)
+$$ 
+
+- We can express the sinusoidal signal as the imaginary part of a complex exponential:
+
+$$
+v(t) = \text{Im} \{ V_{A} e^{j(\omega t + \phi)} \}
+$$
+
+- We can also express the (cos)sinusoidal signal as the real part of a complex exponential:
+
+$$
+v(t) = \text{Re} \{ V_{A} e^{j(\omega t + \phi - \pi/2)} \}
+$$
+
+- What does this look like on the complex plane?
+
+## Power in Sinusoidal Signals
+
+- Why not just use average value?
+
+  - The average value of a sinusoidal signal over one period is zero, regardless of frequency or amplitude.
+
+  - This is because the positive and negative halves cancel out.
+
+  - Therefore, average value is not a good measure of the signal's power.
+
+- Does this make sense?
+
+- Instead, we use the root mean square (RMS) value.
+
+## Calculating RMS Value
+
+$$
+V_{RMS} = \sqrt{\frac{1}{T} \int_0^T [V_A \sin(\omega t + \phi)]^2 dt} 
+$$
+
+$$
+P_R(t) = i_R v_R = \frac{v_R^2}{R} = \frac{V_A^2 \sin^2(\omega t + \phi)}{R}
+$$
+
+Let's calculate the average power over one period:
+
+$$
+P_{avg} = \frac{1}{T} \int_0^T P_R(t) dt = \frac{1}{T} \int_0^T \frac{V_A^2 \sin^2(\omega t + \phi)}{R} dt = \frac{V_A^2}{R} \cdot \frac{1}{T} \int_0^T \sin^2(\omega t + \phi) dt
+$$
+
+Since the integral of $\sin^2$ over one period is $T/2$, we have:
+
+$$
+P_{avg} = \frac{V_A^2}{R} \cdot \frac{1}{T} \cdot \frac{T}{2} = \frac{V_A^2}{2R}
+$$
+
+## RMS Value and Power
+
+$$P_{avg} = \frac{V_{RMS}^2}{R}$$
+
+::: callout-important
+$V_{RMS}$ is the equivalent DC voltage that would deliver the same average power to a resistive load as the AC voltage.
+:::
+
+## How does $V_{RMS}$ relate to $V_A$?
+
+$$
+\begin{gather}
+V(t) = V_A \cos(\omega t + \phi) \\
+V_{RMS} = \sqrt{\frac{1}{T} \int_0^T V_A^2 \cos^2(\omega t + \phi) dt} \\
+= V_A \sqrt{\frac{1}{T} \int_0^T \cos^2(\omega t + \phi) dt} \\
+\textrm{Remember that:} \cos^2(x) = \frac{1 + \cos(2x)}{2} \\
+= V_A \sqrt{\frac{1}{T} \int_0^T \frac{1 + \cos(2(\omega t + \phi))}{2} dt} \\
+= V_A \sqrt{\frac{1}{T} \cdot \frac{T}{2}} \\
+= \frac{V_A}{\sqrt{2}}
+\end{gather}
+$$
+
+$$
+V_{RMS} = \frac{V_A}{\sqrt{2}} \approx 0.707 V_A
+$$
+
+What does this "look like"?
