@@ -1410,7 +1410,7 @@
     "href": "slides/reactive-components-slides.html#relevant-reading",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Relevant Reading",
-    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Theory)\nChapter 3.6 (Caps in Circuits)"
+    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Cap Theory)\nChapter 2.24 (Inductor Theory)\nChapter 3.6 (Caps in Circuits)\nChapter 3.7 (Inductors in Circuits)"
   },
   {
     "objectID": "slides/reactive-components-slides.html#reactive-components",
@@ -1476,6 +1476,48 @@
     "text": "Series Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in series.\nCapacitors in series have the same current through them.\n“Looks” like a single capacitor with smaller capacitance (distance):\n\n\\[\n\\begin{gather}\ni_{C_1}(t) = i_{C_2}(t) = i_{C_3}(t) = \\ldots = i_{C_n}(t) \\\\\nv_n(t) = \\frac{1}{C_n} \\int i_{C_n}(\\tau) d\\tau \\\\\nv(t) = \\sum_{n} v_n(t) = \\sum_{n} \\frac{1}{C_n} \\int i(\\tau) d\\tau = \\left( \\sum_{n} \\frac{1}{C_n} \\right) \\int i(\\tau) d\\tau\n\\end{gather}\n\\]\n\\[\n\\frac{1}{C_{eq}} = \\sum_{i} \\frac{1}{C_i}\n\\]\n\nCapacitors in series have a similar relationship to resistors in parallel."
   },
   {
+    "objectID": "slides/reactive-components-slides.html#ideal-inductors",
+    "href": "slides/reactive-components-slides.html#ideal-inductors",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Ideal Inductors",
+    "text": "Ideal Inductors\n\nAn inductor is a device that stores energy in a magnetic field.\nWound coil of wire around a core (air or ferromagnetic material).\nTime-varying current through the coil generates a magnetic field that induces a voltage (electromotive force, emf) that opposes changes in current (according to Lenz’s Law).\nMagnetic Flux, Φ, is the measure of the strength of the magnetic field\n\n\\[\n\\Phi(t) = k N i_L(t) \\quad \\text{(Tesla)}\n\\]\n\nInductance, L, is the ratio of magnetic flux to current:\n\\[\nL = \\frac{N \\Phi}{i_L} = \\frac{k N^2 A}{l} \\quad \\text{(Henrys, H)}\n\\]\nwhere \\(k\\) is a constant (permeability) that depends on the core material and geometry."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#faradays-law-of-induction",
+    "href": "slides/reactive-components-slides.html#faradays-law-of-induction",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Faraday’s Law of Induction",
+    "text": "Faraday’s Law of Induction\n\n\n\n\n\n\n\nFaraday’s Law of Induction\n\n\nA time-varying magnetic flux through a coil induces an electromotive force (emf) (voltage) in the coil proportional to the rate of change of the flux.\n\n\n\n\n\\[\nv_L(t) = \\frac{d\\Phi(t)}{dt} = L \\frac{di_L(t)}{dt}\n\\]\n\n\n\n\n\n\nNote\n\n\nNote that the voltage across an inductor is proportional to the rate of change of current through it, while the voltage across a capacitor is proportional to the rate of change of voltage across it."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#inductor-voltage-current-relationship",
+    "href": "slides/reactive-components-slides.html#inductor-voltage-current-relationship",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Inductor Voltage-Current Relationship",
+    "text": "Inductor Voltage-Current Relationship\n\nInductors have a “memory” since \\(v_L(t)\\) depends on the rate of change of the current through the inductor (i.e., how much magnetic flux has accumulated for storage over time).\nInductors are linear elements since differentiation is a linear operation.\nInductors act like short circuits in steady-state DC since \\(di_L/dt = 0\\) for constant current.\nInductors oppose changes in current, and transiently act like open circuits at the instant the current changes."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#inductor-voltage-current-temporal-relationship",
+    "href": "slides/reactive-components-slides.html#inductor-voltage-current-temporal-relationship",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Inductor Voltage-Current Temporal Relationship",
+    "text": "Inductor Voltage-Current Temporal Relationship\n\\[\n\\int v_L(t) dt = L \\int \\frac{di_L(t)}{dt} dt \\quad \\Rightarrow \\quad i_L(t) = i_L(t_0) + \\frac{1}{L} \\int_{t_0}^{t} v_L(\\tau) d\\tau\n\\]"
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#power-in-an-inductor",
+    "href": "slides/reactive-components-slides.html#power-in-an-inductor",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Power in an Inductor",
+    "text": "Power in an Inductor\n\\[\nP_L(t) = V_L(t) i_L(t) = L \\frac{di_L(t)}{dt} i_L(t) = \\frac{1}{2} L \\frac{d}{dt} (i_L(t))^2\n\\]\n\n\n\n\n\n\nTip\n\n\nPower can be positive or negative, depending on the sign of \\(di_L(t)/dt\\)."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#energy-in-an-inductor",
+    "href": "slides/reactive-components-slides.html#energy-in-an-inductor",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Energy in an Inductor",
+    "text": "Energy in an Inductor\n\\[\nE_L(t) = \\int_{t_0}^{t} P_L(\\tau) d\\tau = \\frac{1}{2} L (i_L(t))^2 - \\frac{1}{2} L (i_L(t_0))^2\n\\]\n\n\n\n\n\n\nTip\n\n\nThe energy stored in an inductor is always positive."
+  },
+  {
     "objectID": "slides/reactive-components-notes.html",
     "href": "slides/reactive-components-notes.html",
     "title": "Reactive Components: Capacitors & Inductors",
@@ -1494,7 +1536,7 @@
     "href": "slides/reactive-components-notes.html#relevant-reading",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Relevant Reading",
-    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Theory)\nChapter 3.6 (Caps in Circuits)"
+    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Cap Theory)\nChapter 2.24 (Inductor Theory)\nChapter 3.6 (Caps in Circuits)\nChapter 3.7 (Inductors in Circuits)"
   },
   {
     "objectID": "slides/reactive-components-notes.html#reactive-components",
@@ -1558,6 +1600,48 @@
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Series Capacitors",
     "text": "Series Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in series.\nCapacitors in series have the same current through them.\n“Looks” like a single capacitor with smaller capacitance (distance):\n\n\\[\n\\begin{gather}\ni_{C_1}(t) = i_{C_2}(t) = i_{C_3}(t) = \\ldots = i_{C_n}(t) \\\\\nv_n(t) = \\frac{1}{C_n} \\int i_{C_n}(\\tau) d\\tau \\\\\nv(t) = \\sum_{n} v_n(t) = \\sum_{n} \\frac{1}{C_n} \\int i(\\tau) d\\tau = \\left( \\sum_{n} \\frac{1}{C_n} \\right) \\int i(\\tau) d\\tau\n\\end{gather}\n\\]\n\\[\n\\frac{1}{C_{eq}} = \\sum_{i} \\frac{1}{C_i}\n\\]\n\nCapacitors in series have a similar relationship to resistors in parallel."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#ideal-inductors",
+    "href": "slides/reactive-components-notes.html#ideal-inductors",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Ideal Inductors",
+    "text": "Ideal Inductors\n\nAn inductor is a device that stores energy in a magnetic field.\nWound coil of wire around a core (air or ferromagnetic material).\nTime-varying current through the coil generates a magnetic field that induces a voltage (electromotive force, emf) that opposes changes in current (according to Lenz’s Law).\nMagnetic Flux, Φ, is the measure of the strength of the magnetic field\n\n\\[\n\\Phi(t) = k N i_L(t) \\quad \\text{(Tesla)}\n\\]\n\nInductance, L, is the ratio of magnetic flux to current:\n\\[\nL = \\frac{N \\Phi}{i_L} = \\frac{k N^2 A}{l} \\quad \\text{(Henrys, H)}\n\\]\nwhere \\(k\\) is a constant (permeability) that depends on the core material and geometry."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#faradays-law-of-induction",
+    "href": "slides/reactive-components-notes.html#faradays-law-of-induction",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Faraday’s Law of Induction",
+    "text": "Faraday’s Law of Induction\n\n\n\n\n\n\nFaraday’s Law of Induction\n\n\n\nA time-varying magnetic flux through a coil induces an electromotive force (emf) (voltage) in the coil proportional to the rate of change of the flux.\n\n\n\\[\nv_L(t) = \\frac{d\\Phi(t)}{dt} = L \\frac{di_L(t)}{dt}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nNote that the voltage across an inductor is proportional to the rate of change of current through it, while the voltage across a capacitor is proportional to the rate of change of voltage across it."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#inductor-voltage-current-relationship",
+    "href": "slides/reactive-components-notes.html#inductor-voltage-current-relationship",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Inductor Voltage-Current Relationship",
+    "text": "Inductor Voltage-Current Relationship\n\nInductors have a “memory” since \\(v_L(t)\\) depends on the rate of change of the current through the inductor (i.e., how much magnetic flux has accumulated for storage over time).\nInductors are linear elements since differentiation is a linear operation.\nInductors act like short circuits in steady-state DC since \\(di_L/dt = 0\\) for constant current.\nInductors oppose changes in current, and transiently act like open circuits at the instant the current changes."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#inductor-voltage-current-temporal-relationship",
+    "href": "slides/reactive-components-notes.html#inductor-voltage-current-temporal-relationship",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Inductor Voltage-Current Temporal Relationship",
+    "text": "Inductor Voltage-Current Temporal Relationship\n\\[\n\\int v_L(t) dt = L \\int \\frac{di_L(t)}{dt} dt \\quad \\Rightarrow \\quad i_L(t) = i_L(t_0) + \\frac{1}{L} \\int_{t_0}^{t} v_L(\\tau) d\\tau\n\\]"
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#power-in-an-inductor",
+    "href": "slides/reactive-components-notes.html#power-in-an-inductor",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Power in an Inductor",
+    "text": "Power in an Inductor\n\\[\nP_L(t) = V_L(t) i_L(t) = L \\frac{di_L(t)}{dt} i_L(t) = \\frac{1}{2} L \\frac{d}{dt} (i_L(t))^2\n\\]\n\n\n\n\n\n\nTip\n\n\n\nPower can be positive or negative, depending on the sign of \\(di_L(t)/dt\\)."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#energy-in-an-inductor",
+    "href": "slides/reactive-components-notes.html#energy-in-an-inductor",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Energy in an Inductor",
+    "text": "Energy in an Inductor\n\\[\nE_L(t) = \\int_{t_0}^{t} P_L(\\tau) d\\tau = \\frac{1}{2} L (i_L(t))^2 - \\frac{1}{2} L (i_L(t_0))^2\n\\]\n\n\n\n\n\n\nTip\n\n\n\nThe energy stored in an inductor is always positive."
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#learning-objectives",
