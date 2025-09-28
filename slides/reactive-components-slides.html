@@ -250,7 +250,22 @@ Q = CV \quad \Rightarrow \quad I = \frac{dQ}{dt} = C\frac{dV}{dt}
 <figure>
 <p><img data-src="images/cap.jpg" class="quarto-figure quarto-figure-center"></p>
 </figure>
-</div></li>
+</div>
+<h2 id="power-in-a-capacitor">Power in a Capacitor</h2>
+<p><span class="math display">\[
+P_c(t) = V_c(t) i_c(t) = V_c(t) C \frac{dV_c(t)}{dt} = \frac{1}{2} C \frac{d}{dt} (V_c(t))^2
+\]</span></p>
+<ul>
+<li><p>Power can be positive or negative, depending on the sign of <span class="math inline">\(dV_c(t)/dt\)</span>.</p>
+<ul>
+<li><p>Positive power means energy is being stored in the capacitor (i.e., charging).</p></li>
+<li><p>Negative power means energy is being released from the capacitor (i.e., discharging).</p></li>
+</ul></li>
+</ul>
+<h2 id="energy-in-a-capacitor">Energy in a Capacitor</h2>
+<p><span class="math display">\[
+E_c(t) = \int_{t_0}^{t} P_c(\tau) d\tau = \frac{1}{2} C \int_{t_0}^{t} \frac{d}{dt} V_c^2(t) dt =  \frac{1}{2} C (V_c(t))^2 - \frac{1}{2} C (V_c(t_0))^2
+\]</span></p></li>
 </ul>
 
 
