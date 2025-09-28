@@ -325,7 +325,8 @@ $$
 
 ### Example 
 
-Find $i_1$ at steady-state DC (long after the switch is closed).
+Find $i_1$ at steady-state DC (long time after the source is turned on).
+
 
 ![](images/reactive_dc_response.png){fig-align="center"}
 
