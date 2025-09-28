@@ -1,5 +1,5 @@
 ---
-title: "Problem Set 04: AC Network Analysis"
+title: "Problem Set 04: Reactive Energy Analysis"
 date: 2025-09-29
 format:
   html: default
