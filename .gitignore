@@ -7,3 +7,5 @@ _site/
 *.synctex.gz
 *.html
 *_files/
+
+**/*.quarto_ipynb
