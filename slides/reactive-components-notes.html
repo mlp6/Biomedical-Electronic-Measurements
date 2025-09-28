@@ -385,6 +385,11 @@ window.Quarto = {
   <li><a href="#ideal-capacitors" id="toc-ideal-capacitors" class="nav-link" data-scroll-target="#ideal-capacitors">Ideal Capacitors</a></li>
   <li><a href="#capacitor-voltage-current-relationship" id="toc-capacitor-voltage-current-relationship" class="nav-link" data-scroll-target="#capacitor-voltage-current-relationship">Capacitor Voltage-Current Relationship</a></li>
   <li><a href="#capacitor-voltage-current-temporal-relationship" id="toc-capacitor-voltage-current-temporal-relationship" class="nav-link" data-scroll-target="#capacitor-voltage-current-temporal-relationship">Capacitor Voltage-Current Temporal Relationship</a></li>
+  <li><a href="#capacitor-internals" id="toc-capacitor-internals" class="nav-link" data-scroll-target="#capacitor-internals">Capacitor Internals</a></li>
+  <li><a href="#power-in-a-capacitor" id="toc-power-in-a-capacitor" class="nav-link" data-scroll-target="#power-in-a-capacitor">Power in a Capacitor</a></li>
+  <li><a href="#energy-in-a-capacitor" id="toc-energy-in-a-capacitor" class="nav-link" data-scroll-target="#energy-in-a-capacitor">Energy in a Capacitor</a></li>
+  <li><a href="#parallel-capacitors" id="toc-parallel-capacitors" class="nav-link" data-scroll-target="#parallel-capacitors">Parallel Capacitors</a></li>
+  <li><a href="#series-capacitors" id="toc-series-capacitors" class="nav-link" data-scroll-target="#series-capacitors">Series Capacitors</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="reactive-components-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -445,7 +450,6 @@ window.Quarto = {
 <li><p>Chapter 2.23 (Theory)</p></li>
 <li><p>Chapter 3.6 (Caps in Circuits)</p></li>
 </ul>
-<p>```</p>
 </section>
 <section id="reactive-components" class="level2">
 <h2 class="anchored" data-anchor-id="reactive-components">Reactive Components</h2>
@@ -521,28 +525,76 @@ Tip
 <li><p>The initial voltage <span class="math inline">\(V_c(t_0)\)</span>, and</p></li>
 <li><p>The integral of the current over time.</p></li>
 <li><p><span class="math inline">\(t_0\)</span> is the time when the capacitor was last charged or discharged and this new change in current is being evaluated.</p></li>
+</ul></li>
 </ul>
-<h2 id="capacitor-internals" class="anchored">Capacitor Internals</h2>
+</section>
+<section id="capacitor-internals" class="level2">
+<h2 class="anchored" data-anchor-id="capacitor-internals">Capacitor Internals</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/cap.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<h2 id="power-in-a-capacitor" class="anchored">Power in a Capacitor</h2>
+</section>
+<section id="power-in-a-capacitor" class="level2">
+<h2 class="anchored" data-anchor-id="power-in-a-capacitor">Power in a Capacitor</h2>
 <p><span class="math display">\[
 P_c(t) = V_c(t) i_c(t) = V_c(t) C \frac{dV_c(t)}{dt} = \frac{1}{2} C \frac{d}{dt} (V_c(t))^2
 \]</span></p>
 <ul>
-<li><p>Power can be positive or negative, depending on the sign of <span class="math inline">\(dV_c(t)/dt\)</span>.</p>
-<ul>
+<li><p>Power can be positive or negative, depending on the sign of <span class="math inline">\(dV_c(t)/dt\)</span>.</p></li>
 <li><p>Positive power means energy is being stored in the capacitor (i.e., charging).</p></li>
 <li><p>Negative power means energy is being released from the capacitor (i.e., discharging).</p></li>
-</ul></li>
 </ul>
-<h2 id="energy-in-a-capacitor" class="anchored">Energy in a Capacitor</h2>
+</section>
+<section id="energy-in-a-capacitor" class="level2">
+<h2 class="anchored" data-anchor-id="energy-in-a-capacitor">Energy in a Capacitor</h2>
 <p><span class="math display">\[
 E_c(t) = \int_{t_0}^{t} P_c(\tau) d\tau = \frac{1}{2} C \int_{t_0}^{t} \frac{d}{dt} V_c^2(t) dt =  \frac{1}{2} C (V_c(t))^2 - \frac{1}{2} C (V_c(t_0))^2
-\]</span></p></li>
+\]</span></p>
+</section>
+<section id="parallel-capacitors" class="level2">
+<h2 class="anchored" data-anchor-id="parallel-capacitors">Parallel Capacitors</h2>
+<!-- TODO: add circuit diagram -->
+<ul>
+<li><p>Let’s draw a circuit with multiple capacitors in parallel.</p></li>
+<li><p>Capacitors in parallel have the same voltage across them.</p></li>
+<li><p>“Looks” like a single capacitor with larger capacitance (area):</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+v_{C_1}(t) = v_{C_2}(t) = v_{C_3}(t) = \ldots = v_{C_n}(t) \\
+i_n(t) = C_n \frac{dv_{C_n}(t)}{dt} \\
+i(t) = \sum_{n} i_n(t) = \sum_{n} C_n \frac{dv_{C_n}(t)}{dt} = \left( \sum_{n} C_n \right) \frac{dv(t)}{dt}
+\end{gather}
+\]</span></p>
+<p><span class="math display">\[
+C_{eq} = \sum_{i} C_i
+\]</span></p>
+<ul>
+<li>Capacitors in parallel have a similar relationship to resistors in series.</li>
+</ul>
+</section>
+<section id="series-capacitors" class="level2">
+<h2 class="anchored" data-anchor-id="series-capacitors">Series Capacitors</h2>
+<!-- TODO: add circuit diagram -->
+<ul>
+<li><p>Let’s draw a circuit with multiple capacitors in series.</p></li>
+<li><p>Capacitors in series have the same current through them.</p></li>
+<li><p>“Looks” like a single capacitor with smaller capacitance (distance):</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+i_{C_1}(t) = i_{C_2}(t) = i_{C_3}(t) = \ldots = i_{C_n}(t) \\
+v_n(t) = \frac{1}{C_n} \int i_{C_n}(\tau) d\tau \\
+v(t) = \sum_{n} v_n(t) = \sum_{n} \frac{1}{C_n} \int i(\tau) d\tau = \left( \sum_{n} \frac{1}{C_n} \right) \int i(\tau) d\tau
+\end{gather}
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{C_{eq}} = \sum_{i} \frac{1}{C_i}
+\]</span></p>
+<ul>
+<li>Capacitors in series have a similar relationship to resistors in parallel.</li>
 </ul>
 
 

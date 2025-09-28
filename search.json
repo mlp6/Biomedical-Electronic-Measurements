@@ -1410,7 +1410,7 @@
     "href": "slides/reactive-components-slides.html#relevant-reading",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Relevant Reading",
-    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Theory)\nChapter 3.6 (Caps in Circuits)\n\n```"
+    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Theory)\nChapter 3.6 (Caps in Circuits)"
   },
   {
     "objectID": "slides/reactive-components-slides.html#reactive-components",
@@ -1438,7 +1438,42 @@
     "href": "slides/reactive-components-slides.html#capacitor-voltage-current-temporal-relationship",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Capacitor Voltage-Current Temporal Relationship",
-    "text": "Capacitor Voltage-Current Temporal Relationship\n\\[\n\\int i_c(t) dt = C \\int \\frac{dV_c(t)}{dt} dt \\quad \\Rightarrow \\quad V_c(t) = V_c(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_c(\\tau) d\\tau\n\\]\n\nThe voltage across a capacitor at time \\(t\\) depends on:\n\nThe initial voltage \\(V_c(t_0)\\), and\nThe integral of the current over time.\n\\(t_0\\) is the time when the capacitor was last charged or discharged and this new change in current is being evaluated.\n\nCapacitor Internals\n\n\n\n\n\nPower in a Capacitor\n\\[\nP_c(t) = V_c(t) i_c(t) = V_c(t) C \\frac{dV_c(t)}{dt} = \\frac{1}{2} C \\frac{d}{dt} (V_c(t))^2\n\\]\n\nPower can be positive or negative, depending on the sign of \\(dV_c(t)/dt\\).\n\nPositive power means energy is being stored in the capacitor (i.e., charging).\nNegative power means energy is being released from the capacitor (i.e., discharging).\n\n\nEnergy in a Capacitor\n\\[\nE_c(t) = \\int_{t_0}^{t} P_c(\\tau) d\\tau = \\frac{1}{2} C \\int_{t_0}^{t} \\frac{d}{dt} V_c^2(t) dt =  \\frac{1}{2} C (V_c(t))^2 - \\frac{1}{2} C (V_c(t_0))^2\n\\]"
+    "text": "Capacitor Voltage-Current Temporal Relationship\n\\[\n\\int i_c(t) dt = C \\int \\frac{dV_c(t)}{dt} dt \\quad \\Rightarrow \\quad V_c(t) = V_c(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_c(\\tau) d\\tau\n\\]\n\nThe voltage across a capacitor at time \\(t\\) depends on:\n\nThe initial voltage \\(V_c(t_0)\\), and\nThe integral of the current over time.\n\\(t_0\\) is the time when the capacitor was last charged or discharged and this new change in current is being evaluated."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#capacitor-internals",
+    "href": "slides/reactive-components-slides.html#capacitor-internals",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Capacitor Internals",
+    "text": "Capacitor Internals"
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#power-in-a-capacitor",
+    "href": "slides/reactive-components-slides.html#power-in-a-capacitor",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Power in a Capacitor",
+    "text": "Power in a Capacitor\n\\[\nP_c(t) = V_c(t) i_c(t) = V_c(t) C \\frac{dV_c(t)}{dt} = \\frac{1}{2} C \\frac{d}{dt} (V_c(t))^2\n\\]\n\nPower can be positive or negative, depending on the sign of \\(dV_c(t)/dt\\).\nPositive power means energy is being stored in the capacitor (i.e., charging).\nNegative power means energy is being released from the capacitor (i.e., discharging)."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#energy-in-a-capacitor",
+    "href": "slides/reactive-components-slides.html#energy-in-a-capacitor",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Energy in a Capacitor",
+    "text": "Energy in a Capacitor\n\\[\nE_c(t) = \\int_{t_0}^{t} P_c(\\tau) d\\tau = \\frac{1}{2} C \\int_{t_0}^{t} \\frac{d}{dt} V_c^2(t) dt =  \\frac{1}{2} C (V_c(t))^2 - \\frac{1}{2} C (V_c(t_0))^2\n\\]"
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#parallel-capacitors",
+    "href": "slides/reactive-components-slides.html#parallel-capacitors",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Parallel Capacitors",
+    "text": "Parallel Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in parallel.\nCapacitors in parallel have the same voltage across them.\n“Looks” like a single capacitor with larger capacitance (area):\n\n\\[\n\\begin{gather}\nv_{C_1}(t) = v_{C_2}(t) = v_{C_3}(t) = \\ldots = v_{C_n}(t) \\\\\ni_n(t) = C_n \\frac{dv_{C_n}(t)}{dt} \\\\\ni(t) = \\sum_{n} i_n(t) = \\sum_{n} C_n \\frac{dv_{C_n}(t)}{dt} = \\left( \\sum_{n} C_n \\right) \\frac{dv(t)}{dt}\n\\end{gather}\n\\]\n\\[\nC_{eq} = \\sum_{i} C_i\n\\]\n\nCapacitors in parallel have a similar relationship to resistors in series."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#series-capacitors",
+    "href": "slides/reactive-components-slides.html#series-capacitors",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Series Capacitors",
+    "text": "Series Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in series.\nCapacitors in series have the same current through them.\n“Looks” like a single capacitor with smaller capacitance (distance):\n\n\\[\n\\begin{gather}\ni_{C_1}(t) = i_{C_2}(t) = i_{C_3}(t) = \\ldots = i_{C_n}(t) \\\\\nv_n(t) = \\frac{1}{C_n} \\int i_{C_n}(\\tau) d\\tau \\\\\nv(t) = \\sum_{n} v_n(t) = \\sum_{n} \\frac{1}{C_n} \\int i(\\tau) d\\tau = \\left( \\sum_{n} \\frac{1}{C_n} \\right) \\int i(\\tau) d\\tau\n\\end{gather}\n\\]\n\\[\n\\frac{1}{C_{eq}} = \\sum_{i} \\frac{1}{C_i}\n\\]\n\nCapacitors in series have a similar relationship to resistors in parallel."
   },
   {
     "objectID": "slides/reactive-components-notes.html",
@@ -1459,7 +1494,7 @@
     "href": "slides/reactive-components-notes.html#relevant-reading",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Relevant Reading",
-    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Theory)\nChapter 3.6 (Caps in Circuits)\n\n```"
+    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Theory)\nChapter 3.6 (Caps in Circuits)"
   },
   {
     "objectID": "slides/reactive-components-notes.html#reactive-components",
@@ -1487,7 +1522,42 @@
     "href": "slides/reactive-components-notes.html#capacitor-voltage-current-temporal-relationship",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Capacitor Voltage-Current Temporal Relationship",
-    "text": "Capacitor Voltage-Current Temporal Relationship\n\\[\n\\int i_c(t) dt = C \\int \\frac{dV_c(t)}{dt} dt \\quad \\Rightarrow \\quad V_c(t) = V_c(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_c(\\tau) d\\tau\n\\]\n\nThe voltage across a capacitor at time \\(t\\) depends on:\n\nThe initial voltage \\(V_c(t_0)\\), and\nThe integral of the current over time.\n\\(t_0\\) is the time when the capacitor was last charged or discharged and this new change in current is being evaluated.\n\nCapacitor Internals\n\n\n\n\n\nPower in a Capacitor\n\\[\nP_c(t) = V_c(t) i_c(t) = V_c(t) C \\frac{dV_c(t)}{dt} = \\frac{1}{2} C \\frac{d}{dt} (V_c(t))^2\n\\]\n\nPower can be positive or negative, depending on the sign of \\(dV_c(t)/dt\\).\n\nPositive power means energy is being stored in the capacitor (i.e., charging).\nNegative power means energy is being released from the capacitor (i.e., discharging).\n\n\nEnergy in a Capacitor\n\\[\nE_c(t) = \\int_{t_0}^{t} P_c(\\tau) d\\tau = \\frac{1}{2} C \\int_{t_0}^{t} \\frac{d}{dt} V_c^2(t) dt =  \\frac{1}{2} C (V_c(t))^2 - \\frac{1}{2} C (V_c(t_0))^2\n\\]"
+    "text": "Capacitor Voltage-Current Temporal Relationship\n\\[\n\\int i_c(t) dt = C \\int \\frac{dV_c(t)}{dt} dt \\quad \\Rightarrow \\quad V_c(t) = V_c(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_c(\\tau) d\\tau\n\\]\n\nThe voltage across a capacitor at time \\(t\\) depends on:\n\nThe initial voltage \\(V_c(t_0)\\), and\nThe integral of the current over time.\n\\(t_0\\) is the time when the capacitor was last charged or discharged and this new change in current is being evaluated."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#capacitor-internals",
+    "href": "slides/reactive-components-notes.html#capacitor-internals",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Capacitor Internals",
+    "text": "Capacitor Internals"
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#power-in-a-capacitor",
+    "href": "slides/reactive-components-notes.html#power-in-a-capacitor",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Power in a Capacitor",
+    "text": "Power in a Capacitor\n\\[\nP_c(t) = V_c(t) i_c(t) = V_c(t) C \\frac{dV_c(t)}{dt} = \\frac{1}{2} C \\frac{d}{dt} (V_c(t))^2\n\\]\n\nPower can be positive or negative, depending on the sign of \\(dV_c(t)/dt\\).\nPositive power means energy is being stored in the capacitor (i.e., charging).\nNegative power means energy is being released from the capacitor (i.e., discharging)."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#energy-in-a-capacitor",
+    "href": "slides/reactive-components-notes.html#energy-in-a-capacitor",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Energy in a Capacitor",
+    "text": "Energy in a Capacitor\n\\[\nE_c(t) = \\int_{t_0}^{t} P_c(\\tau) d\\tau = \\frac{1}{2} C \\int_{t_0}^{t} \\frac{d}{dt} V_c^2(t) dt =  \\frac{1}{2} C (V_c(t))^2 - \\frac{1}{2} C (V_c(t_0))^2\n\\]"
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#parallel-capacitors",
+    "href": "slides/reactive-components-notes.html#parallel-capacitors",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Parallel Capacitors",
+    "text": "Parallel Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in parallel.\nCapacitors in parallel have the same voltage across them.\n“Looks” like a single capacitor with larger capacitance (area):\n\n\\[\n\\begin{gather}\nv_{C_1}(t) = v_{C_2}(t) = v_{C_3}(t) = \\ldots = v_{C_n}(t) \\\\\ni_n(t) = C_n \\frac{dv_{C_n}(t)}{dt} \\\\\ni(t) = \\sum_{n} i_n(t) = \\sum_{n} C_n \\frac{dv_{C_n}(t)}{dt} = \\left( \\sum_{n} C_n \\right) \\frac{dv(t)}{dt}\n\\end{gather}\n\\]\n\\[\nC_{eq} = \\sum_{i} C_i\n\\]\n\nCapacitors in parallel have a similar relationship to resistors in series."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#series-capacitors",
+    "href": "slides/reactive-components-notes.html#series-capacitors",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Series Capacitors",
+    "text": "Series Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in series.\nCapacitors in series have the same current through them.\n“Looks” like a single capacitor with smaller capacitance (distance):\n\n\\[\n\\begin{gather}\ni_{C_1}(t) = i_{C_2}(t) = i_{C_3}(t) = \\ldots = i_{C_n}(t) \\\\\nv_n(t) = \\frac{1}{C_n} \\int i_{C_n}(\\tau) d\\tau \\\\\nv(t) = \\sum_{n} v_n(t) = \\sum_{n} \\frac{1}{C_n} \\int i(\\tau) d\\tau = \\left( \\sum_{n} \\frac{1}{C_n} \\right) \\int i(\\tau) d\\tau\n\\end{gather}\n\\]\n\\[\n\\frac{1}{C_{eq}} = \\sum_{i} \\frac{1}{C_i}\n\\]\n\nCapacitors in series have a similar relationship to resistors in parallel."
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#learning-objectives",
