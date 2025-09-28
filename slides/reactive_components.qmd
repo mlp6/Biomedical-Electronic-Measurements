@@ -1,0 +1,80 @@
+---
+title: "Reactive Components: Capacitors & Inductors"
+date: "2025-09-29"
+format:
+  live-html: 
+    output-file: reactive-components-notes.html
+  live-revealjs: 
+    output-file: reactive-components-slides.html
+---
+
+## Learning Objectives
+
+- Define and describe the behavior of capacitors and inductors in DC and AC
+circuits.
+
+- Analyze circuits with capacitors and inductors in series and parallel.
+
+- Understand the concept of reactance and impedance.
+
+## Reactive Components
+
+- To date, we have only considered resistors, which dissipate energy as heat, to
+consume source power.
+
+- Resistive components respond "instantaneously" to changes in voltage and
+current, as defined by Ohm's Law.
+
+- Reactive components, such as capacitors and inductors, **store** energy in
+electric and magnetic fields, respectively.
+
+- This storage of energy takes time, so reactive components do not respond
+instantaneously to changes in voltage and current.  This means that circuits
+with reactive components have **transient** and **steady-state** responses to
+time-varying sources.
+
+## Ideal Capacitors
+
+- A capacitor is a device that stores energy in an electric field.
+
+- Composed of two conductive plates separated by an insulating material
+(dielectric) that contains dipoles that become polarized in the presence of an
+electric field.
+
+- Permititivity, ε, is a measure of how easily a material can become polarized.
+($\epsilon_{air} = 8.85 \times 10^{-12} \text{ F/m}$)
+
+- Charge, Q, is stored on the plates of a capacitor:
+
+  - Take a finite amount of time to charge/discharge.
+
+  - Finite capacity to store charge.
+
+- Capacitance, C, is the ratio of charge to voltage:
+  
+  $$
+  C = \frac{Q}{V} = \frac{\epsilon A}{d} \quad \text{(Farads, F)}
+  $$
+
+## Capacitor Voltage-Current Relationship
+
+$$
+Q = CV \quad \Rightarrow \quad I = \frac{dQ}{dt} = C\frac{dV}{dt}
+$$
+
+- Capacitors have a "memory" since $i_c(t)$ depends on the rate of change of
+the voltage across the capacitor (i.e., how much charge has accumulated for
+storage over time).
+
+- Capacitors are linear elements since differentiation is a linear operation.
+
+- Capacitors block DC current in steady-state since $dV/dt = 0$ for constant voltage.
+
+::: callout-tip
+For a steady-state DC voltage, a capacitor acts like an open circuit.
+:::
+
+::: callout-tip
+For a time-varying voltage, an uncharged capacitor acts like a short circuit at the instant
+the voltage changes.
+:::
