@@ -838,7 +838,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
   },
   {
     "objectID": "labs/kicad.html",
@@ -977,7 +977,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 27, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 27, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
@@ -1543,147 +1543,231 @@
     "href": "slides/reactive-components-notes.html",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "",
-    "text": "Define and describe the behavior of capacitors and inductors in DC and AC circuits.\nAnalyze circuits with capacitors and inductors in series and parallel.\nUnderstand the concept of reactance and impedance."
+    "text": "Define and describe the behavior of capacitors and inductors in DC and AC circuits.\nAnalyze circuits with capacitors and inductors in series and parallel.\nUnderstand the concept of reactance and impedance.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#learning-objectives",
     "href": "slides/reactive-components-notes.html#learning-objectives",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "",
-    "text": "Define and describe the behavior of capacitors and inductors in DC and AC circuits.\nAnalyze circuits with capacitors and inductors in series and parallel.\nUnderstand the concept of reactance and impedance."
+    "text": "Define and describe the behavior of capacitors and inductors in DC and AC circuits.\nAnalyze circuits with capacitors and inductors in series and parallel.\nUnderstand the concept of reactance and impedance.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#relevant-reading",
     "href": "slides/reactive-components-notes.html#relevant-reading",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Relevant Reading",
-    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Cap Theory)\nChapter 2.24 (Inductor Theory)\nChapter 3.6 (Caps in Circuits)\nChapter 3.7 (Inductors in Circuits)"
+    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Cap Theory)\nChapter 2.24 (Inductor Theory)\nChapter 3.6 (Caps in Circuits)\nChapter 3.7 (Inductors in Circuits)",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#reactive-components",
     "href": "slides/reactive-components-notes.html#reactive-components",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Reactive Components",
-    "text": "Reactive Components\n\nTo date, we have only considered resistors, which dissipate energy as heat, to consume source power.\nResistive components respond “instantaneously” to changes in voltage and current, as defined by Ohm’s Law.\nReactive components, such as capacitors and inductors, store energy in electric and magnetic fields, respectively.\nThis storage of energy takes time, so reactive components do not respond instantaneously to changes in voltage and current. This means that circuits with reactive components have transient and steady-state responses to time-varying sources."
+    "text": "Reactive Components\n\nTo date, we have only considered resistors, which dissipate energy as heat, to consume source power.\nResistive components respond “instantaneously” to changes in voltage and current, as defined by Ohm’s Law.\nReactive components, such as capacitors and inductors, store energy in electric and magnetic fields, respectively.\nThis storage of energy takes time, so reactive components do not respond instantaneously to changes in voltage and current. This means that circuits with reactive components have transient and steady-state responses to time-varying sources.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#ideal-capacitors",
     "href": "slides/reactive-components-notes.html#ideal-capacitors",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Ideal Capacitors",
-    "text": "Ideal Capacitors\n\nA capacitor is a device that stores energy in an electric field.\nComposed of two conductive plates separated by an insulating material (dielectric) that contains dipoles that become polarized in the presence of an electric field.\nPermititivity, ε, is a measure of how easily a material can become polarized. (\\(\\epsilon_{air} = 8.85 \\times 10^{-12} \\text{ F/m}\\))\nCharge, Q, is stored on the plates of a capacitor:\n\nTake a finite amount of time to charge/discharge.\nFinite capacity to store charge.\n\nCapacitance, C, is the ratio of charge to voltage:\n\\[\nC = \\frac{Q}{V} = \\frac{\\epsilon A}{d} \\quad \\text{(Farads, F)}\n\\]"
+    "text": "Ideal Capacitors\n\nA capacitor is a device that stores energy in an electric field.\nComposed of two conductive plates separated by an insulating material (dielectric) that contains dipoles that become polarized in the presence of an electric field.\nPermititivity, ε, is a measure of how easily a material can become polarized. (\\(\\epsilon_{air} = 8.85 \\times 10^{-12} \\text{ F/m}\\))\nCharge, Q, is stored on the plates of a capacitor:\n\nTake a finite amount of time to charge/discharge.\nFinite capacity to store charge.\n\nCapacitance, C, is the ratio of charge to voltage:\n\\[\nC = \\frac{Q}{V} = \\frac{\\epsilon A}{d} \\quad \\text{(Farads, F)}\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#capacitor-voltage-current-relationship",
     "href": "slides/reactive-components-notes.html#capacitor-voltage-current-relationship",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Capacitor Voltage-Current Relationship",
-    "text": "Capacitor Voltage-Current Relationship\n\\[\nQ = CV \\quad \\Rightarrow \\quad I = \\frac{dQ}{dt} = C\\frac{dV}{dt}\n\\]\n\nCapacitors have a “memory” since \\(i_c(t)\\) depends on the rate of change of the voltage across the capacitor (i.e., how much charge has accumulated for storage over time).\nCapacitors are linear elements since differentiation is a linear operation.\nCapacitors block DC current in steady-state since \\(dV/dt = 0\\) for constant voltage.\n\n\n\n\n\n\n\nTip\n\n\n\nFor a steady-state DC voltage, a capacitor acts like an open circuit.\n\n\n\n\n\n\n\n\nTip\n\n\n\nFor a time-varying voltage, an uncharged capacitor acts like a short circuit at the instant the voltage changes."
+    "text": "Capacitor Voltage-Current Relationship\n\\[\nQ = CV \\quad \\Rightarrow \\quad I = \\frac{dQ}{dt} = C\\frac{dV}{dt}\n\\]\n\nCapacitors have a “memory” since \\(i_c(t)\\) depends on the rate of change of the voltage across the capacitor (i.e., how much charge has accumulated for storage over time).\nCapacitors are linear elements since differentiation is a linear operation.\nCapacitors block DC current in steady-state since \\(dV/dt = 0\\) for constant voltage.\n\n\n\n\n\n\n\nTip\n\n\n\nFor a steady-state DC voltage, a capacitor acts like an open circuit.\n\n\n\n\n\n\n\n\nTip\n\n\n\nFor a time-varying voltage, an uncharged capacitor acts like a short circuit at the instant the voltage changes.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#capacitor-voltage-current-temporal-relationship",
     "href": "slides/reactive-components-notes.html#capacitor-voltage-current-temporal-relationship",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Capacitor Voltage-Current Temporal Relationship",
-    "text": "Capacitor Voltage-Current Temporal Relationship\n\\[\n\\int i_c(t) dt = C \\int \\frac{dV_c(t)}{dt} dt \\quad \\Rightarrow \\quad V_c(t) = V_c(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_c(\\tau) d\\tau\n\\]\n\nThe voltage across a capacitor at time \\(t\\) depends on:\n\nThe initial voltage \\(V_c(t_0)\\), and\nThe integral of the current over time.\n\\(t_0\\) is the time when the capacitor was last charged or discharged and this new change in current is being evaluated."
+    "text": "Capacitor Voltage-Current Temporal Relationship\n\\[\n\\int i_c(t) dt = C \\int \\frac{dV_c(t)}{dt} dt \\quad \\Rightarrow \\quad V_c(t) = V_c(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_c(\\tau) d\\tau\n\\]\n\nThe voltage across a capacitor at time \\(t\\) depends on:\n\nThe initial voltage \\(V_c(t_0)\\), and\nThe integral of the current over time.\n\\(t_0\\) is the time when the capacitor was last charged or discharged and this new change in current is being evaluated.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#capacitor-internals",
     "href": "slides/reactive-components-notes.html#capacitor-internals",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Capacitor Internals",
-    "text": "Capacitor Internals"
+    "text": "Capacitor Internals",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#power-in-a-capacitor",
     "href": "slides/reactive-components-notes.html#power-in-a-capacitor",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Power in a Capacitor",
-    "text": "Power in a Capacitor\n\\[\nP_c(t) = V_c(t) i_c(t) = V_c(t) C \\frac{dV_c(t)}{dt} = \\frac{1}{2} C \\frac{d}{dt} (V_c(t))^2\n\\]\n\nPower can be positive or negative, depending on the sign of \\(dV_c(t)/dt\\).\nPositive power means energy is being stored in the capacitor (i.e., charging).\nNegative power means energy is being released from the capacitor (i.e., discharging)."
+    "text": "Power in a Capacitor\n\\[\nP_c(t) = V_c(t) i_c(t) = V_c(t) C \\frac{dV_c(t)}{dt} = \\frac{1}{2} C \\frac{d}{dt} (V_c(t))^2\n\\]\n\nPower can be positive or negative, depending on the sign of \\(dV_c(t)/dt\\).\nPositive power means energy is being stored in the capacitor (i.e., charging).\nNegative power means energy is being released from the capacitor (i.e., discharging).",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#energy-in-a-capacitor",
     "href": "slides/reactive-components-notes.html#energy-in-a-capacitor",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Energy in a Capacitor",
-    "text": "Energy in a Capacitor\n\\[\nE_c(t) = \\int_{t_0}^{t} P_c(\\tau) d\\tau = \\frac{1}{2} C \\int_{t_0}^{t} \\frac{d}{dt} V_c^2(t) dt =  \\frac{1}{2} C (V_c(t))^2 - \\frac{1}{2} C (V_c(t_0))^2\n\\]"
+    "text": "Energy in a Capacitor\n\\[\nE_c(t) = \\int_{t_0}^{t} P_c(\\tau) d\\tau = \\frac{1}{2} C \\int_{t_0}^{t} \\frac{d}{dt} V_c^2(t) dt =  \\frac{1}{2} C (V_c(t))^2 - \\frac{1}{2} C (V_c(t_0))^2\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#parallel-capacitors",
     "href": "slides/reactive-components-notes.html#parallel-capacitors",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Parallel Capacitors",
-    "text": "Parallel Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in parallel.\nCapacitors in parallel have the same voltage across them.\n“Looks” like a single capacitor with larger capacitance (area):\n\n\\[\n\\begin{gather}\nv_{C_1}(t) = v_{C_2}(t) = v_{C_3}(t) = \\ldots = v_{C_n}(t) \\\\\ni_n(t) = C_n \\frac{dv_{C_n}(t)}{dt} \\\\\ni(t) = \\sum_{n} i_n(t) = \\sum_{n} C_n \\frac{dv_{C_n}(t)}{dt} = \\left( \\sum_{n} C_n \\right) \\frac{dv(t)}{dt}\n\\end{gather}\n\\]\n\\[\nC_{eq} = \\sum_{i} C_i\n\\]\n\nCapacitors in parallel have a similar relationship to resistors in series."
+    "text": "Parallel Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in parallel.\nCapacitors in parallel have the same voltage across them.\n“Looks” like a single capacitor with larger capacitance (area):\n\n\\[\n\\begin{gather}\nv_{C_1}(t) = v_{C_2}(t) = v_{C_3}(t) = \\ldots = v_{C_n}(t) \\\\\ni_n(t) = C_n \\frac{dv_{C_n}(t)}{dt} \\\\\ni(t) = \\sum_{n} i_n(t) = \\sum_{n} C_n \\frac{dv_{C_n}(t)}{dt} = \\left( \\sum_{n} C_n \\right) \\frac{dv(t)}{dt}\n\\end{gather}\n\\]\n\\[\nC_{eq} = \\sum_{i} C_i\n\\]\n\nCapacitors in parallel have a similar relationship to resistors in series.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#series-capacitors",
     "href": "slides/reactive-components-notes.html#series-capacitors",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Series Capacitors",
-    "text": "Series Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in series.\nCapacitors in series have the same current through them.\n“Looks” like a single capacitor with smaller capacitance (distance):\n\n\\[\n\\begin{gather}\ni_{C_1}(t) = i_{C_2}(t) = i_{C_3}(t) = \\ldots = i_{C_n}(t) \\\\\nv_n(t) = \\frac{1}{C_n} \\int i_{C_n}(\\tau) d\\tau \\\\\nv(t) = \\sum_{n} v_n(t) = \\sum_{n} \\frac{1}{C_n} \\int i(\\tau) d\\tau = \\left( \\sum_{n} \\frac{1}{C_n} \\right) \\int i(\\tau) d\\tau\n\\end{gather}\n\\]\n\\[\n\\frac{1}{C_{eq}} = \\sum_{i} \\frac{1}{C_i}\n\\]\n\nCapacitors in series have a similar relationship to resistors in parallel."
+    "text": "Series Capacitors\n\n\nLet’s draw a circuit with multiple capacitors in series.\nCapacitors in series have the same current through them.\n“Looks” like a single capacitor with smaller capacitance (distance):\n\n\\[\n\\begin{gather}\ni_{C_1}(t) = i_{C_2}(t) = i_{C_3}(t) = \\ldots = i_{C_n}(t) \\\\\nv_n(t) = \\frac{1}{C_n} \\int i_{C_n}(\\tau) d\\tau \\\\\nv(t) = \\sum_{n} v_n(t) = \\sum_{n} \\frac{1}{C_n} \\int i(\\tau) d\\tau = \\left( \\sum_{n} \\frac{1}{C_n} \\right) \\int i(\\tau) d\\tau\n\\end{gather}\n\\]\n\\[\n\\frac{1}{C_{eq}} = \\sum_{i} \\frac{1}{C_i}\n\\]\n\nCapacitors in series have a similar relationship to resistors in parallel.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#ideal-inductors",
     "href": "slides/reactive-components-notes.html#ideal-inductors",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Ideal Inductors",
-    "text": "Ideal Inductors\n\nAn inductor is a device that stores energy in a magnetic field.\nWound coil of wire around a core (air or ferromagnetic material).\nTime-varying current through the coil generates a magnetic field that induces a voltage (electromotive force, emf) that opposes changes in current (according to Lenz’s Law).\nMagnetic Flux, Φ, is the measure of the strength of the magnetic field\n\n\\[\n\\Phi(t) = k N i_L(t) \\quad \\text{(Tesla)}\n\\]\n\nInductance, L, is the ratio of magnetic flux to current:\n\\[\nL = \\frac{N \\Phi}{i_L} = \\frac{k N^2 A}{l} \\quad \\text{(Henrys, H)}\n\\]\nwhere \\(k\\) is a constant (permeability) that depends on the core material and geometry."
+    "text": "Ideal Inductors\n\nAn inductor is a device that stores energy in a magnetic field.\nWound coil of wire around a core (air or ferromagnetic material).\nTime-varying current through the coil generates a magnetic field that induces a voltage (electromotive force, emf) that opposes changes in current (according to Lenz’s Law).\nMagnetic Flux, Φ, is the measure of the strength of the magnetic field\n\n\\[\n\\Phi(t) = k N i_L(t) \\quad \\text{(Tesla)}\n\\]\n\nInductance, L, is the ratio of magnetic flux to current:\n\\[\nL = \\frac{N \\Phi}{i_L} = \\frac{k N^2 A}{l} \\quad \\text{(Henrys, H)}\n\\]\nwhere \\(k\\) is a constant (permeability) that depends on the core material and geometry.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#faradays-law-of-induction",
     "href": "slides/reactive-components-notes.html#faradays-law-of-induction",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Faraday’s Law of Induction",
-    "text": "Faraday’s Law of Induction\n\n\n\n\n\n\nFaraday’s Law of Induction\n\n\n\nA time-varying magnetic flux through a coil induces an electromotive force (emf) (voltage) in the coil proportional to the rate of change of the flux.\n\n\n\\[\nv_L(t) = \\frac{d\\Phi(t)}{dt} = L \\frac{di_L(t)}{dt}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nNote that the voltage across an inductor is proportional to the rate of change of current through it, while the voltage across a capacitor is proportional to the rate of change of voltage across it."
+    "text": "Faraday’s Law of Induction\n\n\n\n\n\n\nFaraday’s Law of Induction\n\n\n\nA time-varying magnetic flux through a coil induces an electromotive force (emf) (voltage) in the coil proportional to the rate of change of the flux.\n\n\n\\[\nv_L(t) = \\frac{d\\Phi(t)}{dt} = L \\frac{di_L(t)}{dt}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nNote that the voltage across an inductor is proportional to the rate of change of current through it, while the voltage across a capacitor is proportional to the rate of change of voltage across it.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#inductor-voltage-current-relationship",
     "href": "slides/reactive-components-notes.html#inductor-voltage-current-relationship",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Inductor Voltage-Current Relationship",
-    "text": "Inductor Voltage-Current Relationship\n\nInductors have a “memory” since \\(v_L(t)\\) depends on the rate of change of the current through the inductor (i.e., how much magnetic flux has accumulated for storage over time).\nInductors are linear elements since differentiation is a linear operation.\nInductors act like short circuits in steady-state DC since \\(di_L/dt = 0\\) for constant current.\nInductors oppose changes in current, and transiently act like open circuits at the instant the current changes."
+    "text": "Inductor Voltage-Current Relationship\n\nInductors have a “memory” since \\(v_L(t)\\) depends on the rate of change of the current through the inductor (i.e., how much magnetic flux has accumulated for storage over time).\nInductors are linear elements since differentiation is a linear operation.\nInductors act like short circuits in steady-state DC since \\(di_L/dt = 0\\) for constant current.\nInductors oppose changes in current, and transiently act like open circuits at the instant the current changes.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#inductor-voltage-current-temporal-relationship",
     "href": "slides/reactive-components-notes.html#inductor-voltage-current-temporal-relationship",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Inductor Voltage-Current Temporal Relationship",
-    "text": "Inductor Voltage-Current Temporal Relationship\n\\[\n\\int v_L(t) dt = L \\int \\frac{di_L(t)}{dt} dt \\quad \\Rightarrow \\quad i_L(t) = i_L(t_0) + \\frac{1}{L} \\int_{t_0}^{t} v_L(\\tau) d\\tau\n\\]"
+    "text": "Inductor Voltage-Current Temporal Relationship\n\\[\n\\int v_L(t) dt = L \\int \\frac{di_L(t)}{dt} dt \\quad \\Rightarrow \\quad i_L(t) = i_L(t_0) + \\frac{1}{L} \\int_{t_0}^{t} v_L(\\tau) d\\tau\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#power-in-an-inductor",
     "href": "slides/reactive-components-notes.html#power-in-an-inductor",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Power in an Inductor",
-    "text": "Power in an Inductor\n\\[\nP_L(t) = V_L(t) i_L(t) = L \\frac{di_L(t)}{dt} i_L(t) = \\frac{1}{2} L \\frac{d}{dt} (i_L(t))^2\n\\]\n\n\n\n\n\n\nTip\n\n\n\nPower can be positive or negative, depending on the sign of \\(di_L(t)/dt\\)."
+    "text": "Power in an Inductor\n\\[\nP_L(t) = V_L(t) i_L(t) = L \\frac{di_L(t)}{dt} i_L(t) = \\frac{1}{2} L \\frac{d}{dt} (i_L(t))^2\n\\]\n\n\n\n\n\n\nTip\n\n\n\nPower can be positive or negative, depending on the sign of \\(di_L(t)/dt\\).",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#energy-in-an-inductor",
     "href": "slides/reactive-components-notes.html#energy-in-an-inductor",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Energy in an Inductor",
-    "text": "Energy in an Inductor\n\\[\nE_L(t) = \\int_{t_0}^{t} P_L(\\tau) d\\tau = \\frac{1}{2} L (i_L(t))^2 - \\frac{1}{2} L (i_L(t_0))^2\n\\]\n\n\n\n\n\n\nTip\n\n\n\nThe energy stored in an inductor is always positive."
+    "text": "Energy in an Inductor\n\\[\nE_L(t) = \\int_{t_0}^{t} P_L(\\tau) d\\tau = \\frac{1}{2} L (i_L(t))^2 - \\frac{1}{2} L (i_L(t_0))^2\n\\]\n\n\n\n\n\n\nTip\n\n\n\nThe energy stored in an inductor is always positive.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#parallel-inductors",
     "href": "slides/reactive-components-notes.html#parallel-inductors",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Parallel Inductors",
-    "text": "Parallel Inductors\n\nLet’s draw a circuit with multiple inductors in parallel.\nInductors in parallel have the same voltage across them.\n“Looks” like a single inductor with smaller inductance (area):\n\n\\[\n\\begin{gather}\nv_{L_1}(t) = v_{L_2}(t) = v_{L_3}(t) = \\ldots = v_{L_n}(t) \\\\\ni_n(t) = \\frac{1}{L_n} \\int v_{L_n}(\\tau) d\\tau \\\\\n\\textrm{Using KCL...} \\\\\ni(t) = \\sum_{n} i_n(t) = \\sum_{n} \\frac{1}{L_n} \\int v(\\tau) d\\tau = \\left( \\sum_{n} \\frac{1}{L_n} \\right) \\int v(t) dt\n\\end{gather}\n\\]\n\\[\n\\frac{1}{L_{eq}} = \\sum_{i} \\frac{1}{L_i}\n\\]\n\nInductors in parallel have a similar relationship to resistors in parallel."
+    "text": "Parallel Inductors\n\nLet’s draw a circuit with multiple inductors in parallel.\nInductors in parallel have the same voltage across them.\n“Looks” like a single inductor with smaller inductance (area):\n\n\\[\n\\begin{gather}\nv_{L_1}(t) = v_{L_2}(t) = v_{L_3}(t) = \\ldots = v_{L_n}(t) \\\\\ni_n(t) = \\frac{1}{L_n} \\int v_{L_n}(\\tau) d\\tau \\\\\n\\textrm{Using KCL...} \\\\\ni(t) = \\sum_{n} i_n(t) = \\sum_{n} \\frac{1}{L_n} \\int v(\\tau) d\\tau = \\left( \\sum_{n} \\frac{1}{L_n} \\right) \\int v(t) dt\n\\end{gather}\n\\]\n\\[\n\\frac{1}{L_{eq}} = \\sum_{i} \\frac{1}{L_i}\n\\]\n\nInductors in parallel have a similar relationship to resistors in parallel.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#series-inductors",
     "href": "slides/reactive-components-notes.html#series-inductors",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Series Inductors",
-    "text": "Series Inductors\n\nLet’s draw a circuit with multiple inductors in series.\nInductors in series have the same current through them.\n“Looks” like a single inductor with larger inductance (length):\n\n\\[\n\\begin{gather}\ni_{L_1}(t) = i_{L_2}(t) = i_{L_3}(t) = \\ldots = i_{L_n}(t) \\\\\nv_n(t) = L_n \\frac{di_n(t)}{dt} \\\\\nv(t) = \\sum_{n} v_n(t) = \\sum_{n} L_n \\frac{di(t)}{dt} = \\left( \\sum_{n} L_n \\right) \\frac{di(t)}{dt}\n\\end{gather}\n\\]\n\\[\nL_{eq} = \\sum_{i} L_i\n\\]\n\nInductors in series have a similar relationship to resistors in series."
+    "text": "Series Inductors\n\nLet’s draw a circuit with multiple inductors in series.\nInductors in series have the same current through them.\n“Looks” like a single inductor with larger inductance (length):\n\n\\[\n\\begin{gather}\ni_{L_1}(t) = i_{L_2}(t) = i_{L_3}(t) = \\ldots = i_{L_n}(t) \\\\\nv_n(t) = L_n \\frac{di_n(t)}{dt} \\\\\nv(t) = \\sum_{n} v_n(t) = \\sum_{n} L_n \\frac{di(t)}{dt} = \\left( \\sum_{n} L_n \\right) \\frac{di(t)}{dt}\n\\end{gather}\n\\]\n\\[\nL_{eq} = \\sum_{i} L_i\n\\]\n\nInductors in series have a similar relationship to resistors in series.",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/reactive-components-notes.html#steady-state-dc-response-of-reactive-components",
     "href": "slides/reactive-components-notes.html#steady-state-dc-response-of-reactive-components",
     "title": "Reactive Components: Capacitors & Inductors",
     "section": "Steady-State DC Response of Reactive Components",
-    "text": "Steady-State DC Response of Reactive Components\n\nCapacitors act like open circuits in steady-state DC.\n\n\\[\n\\begin{gather}\ni_c(t) = C \\frac{dV_c(t)}{dt} = 0 \\quad \\text{for constant } V_c(t) \\\\\n\\Rightarrow \\quad V_c(t) = \\text{constant} \\\\\n\\Rightarrow \\quad I_c(t) = 0\n\\end{gather}\n\\]\n\nInductors act like short circuits in steady-state DC.\n\n\\[\n\\begin{gather}\nv_L(t) = L \\frac{di_L(t)}{dt} = 0 \\quad \\text{for constant } i_L(t) \\\\\n\\Rightarrow \\quad i_L(t) = \\text{constant} \\\\\n\\Rightarrow \\quad V_L(t) = 0\n\\end{gather}\n\\]\n\nExample\nFind \\(i_1\\) at steady-state DC (long after the switch is closed).\n\n\n\n\n\n\\[\ni_1 = \\frac{V_s}{R_1} = \\frac{10V}{10k\\Omega} = 1 mA\n\\]\nHow do we do this?"
+    "text": "Steady-State DC Response of Reactive Components\n\nCapacitors act like open circuits in steady-state DC.\n\n\\[\n\\begin{gather}\ni_c(t) = C \\frac{dV_c(t)}{dt} = 0 \\quad \\text{for constant } V_c(t) \\\\\n\\Rightarrow \\quad V_c(t) = \\text{constant} \\\\\n\\Rightarrow \\quad I_c(t) = 0\n\\end{gather}\n\\]\n\nInductors act like short circuits in steady-state DC.\n\n\\[\n\\begin{gather}\nv_L(t) = L \\frac{di_L(t)}{dt} = 0 \\quad \\text{for constant } i_L(t) \\\\\n\\Rightarrow \\quad i_L(t) = \\text{constant} \\\\\n\\Rightarrow \\quad V_L(t) = 0\n\\end{gather}\n\\]\n\nExample\nFind \\(i_1\\) at steady-state DC (long time after the source is turned on).\n\n\n\n\n\n\\[\ni_1 = \\frac{V_s}{R_1} = \\frac{10V}{10k\\Omega} = 1 mA\n\\]\nHow do we do this?",
+    "crumbs": [
+      "Learning Modules",
+      "Reactive Components: Capacitors & Inductors"
+    ]
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#learning-objectives",

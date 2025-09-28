@@ -115,9 +115,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Biomedical Electronic Measurements
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/reactive-components-notes.html">Reactive Components: Capacitors &amp; Inductors</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -236,6 +234,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../slides/ecad_kicad_spice-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ECAD using KiCad: SPICE Modeling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/reactive-components-notes.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Reactive Components: Capacitors &amp; Inductors</span></a>
   </div>
 </li>
       </ul>
@@ -408,7 +412,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/reactive-components-notes.html">Reactive Components: Capacitors &amp; Inductors</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Reactive Components: Capacitors &amp; Inductors</h1>
 <p class="subtitle lead">BME253L - Fall 2025</p>
@@ -782,7 +786,7 @@ v_L(t) = L \frac{di_L(t)}{dt} = 0 \quad \text{for constant } i_L(t) \\
 \]</span></p>
 <section id="example" class="level3">
 <h3 class="anchored" data-anchor-id="example">Example</h3>
-<p>Find <span class="math inline">\(i_1\)</span> at steady-state DC (long after the switch is closed).</p>
+<p>Find <span class="math inline">\(i_1\)</span> at steady-state DC (long time after the source is turned on).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/reactive_dc_response.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
