@@ -1,0 +1,75 @@
+---
+title: "Complex Impedance"
+date: "2025-10-01"
+format:
+  live-html: 
+    output-file: complex-impedance-notes.html
+  live-revealjs: 
+    output-file: complex-impedance-slides.html
+---
+
+## Learning Objectives
+
+- Understand the concept of complex impedance and how it extends the idea of
+impedance to AC circuits with capacitors and inductors.
+
+- Analyze AC circuits using complex impedance and phasor techniques.
+
+- Apply complex impedance to solve for voltages and currents in circuits with
+resistors, capacitors, and inductors.
+
+## Phasors and Complex Numbers
+
+- Phasors are a way to represent sinusoidal functions as complex numbers in the
+frequency domain.
+
+- A phasor is a complex number that encodes the amplitude and phase of a
+sinusoidal signal.
+
+- A sinusoidal voltage or current at a given, single frequency can be represented as:
+$$
+\begin{gather}
+V_c(t) = V_A \cos(\omega t + \phi)  \\
+V_c(t) = V_A \text{Re} \left\{ e^{j\omega t + \phi} \right\} \\
+V_c(t) = \text{Re} \left\{ V_A e^{j\phi} e^{j\omega t} \right\} \\
+\bar{V} = V_A e^{j\phi} = V_A \angle \phi \\
+\end{gather}
+$$    
+where $V_A$ is the amplitude, $\omega$ is the angular frequency, and
+$\phi$ is the phase angle.  The phasor $\tilde{V}$ is a complex number.
+
+- The time dependence $e^{j\omega t}$ is often omitted in phasor notation, as it is
+understood to be present.
+
+- Phasors allow us to use complex algebra to analyze AC circuits, simplifying the
+calculation of voltages and currents.
+
+---
+
+$$
+\begin{align}
+I_c & = C \frac{d V_c}{dt} = C \frac{d}{dt} \left( V_A \cos(\omega t + \phi) \right) \\
+ & = -\omega C V_A \sin(\omega t + \phi) = \omega C V_A \cos\left(\omega t + \phi + \frac{\pi}{2}\right)
+\end{align}
+$$
+The phasor representation of the current is:
+$$
+\bar{I}_c = j \omega C \bar{V}_c
+$$
+
+- The phase difference between the voltage and current in a capacitor is
+$\frac{\pi}{2}$ radians (90$\degree$), with the current leading the voltage,
+which is represented with the imaginary unit $j$ in the phasor equation.
+
+::: {.callout-note title="Question?"}
+What does this look like in the complex plane?
+:::
+
+## Complex Impedance of a Capacitor
+
+The complex impedance $Z_c$ of a capacitor is defined as the ratio of the phasor
+voltage to the phasor current:
+
+$$
+Z_c = \frac{\bar{V}_c}{\bar{I}_c} = \frac{1}{j \omega C}
+$$
