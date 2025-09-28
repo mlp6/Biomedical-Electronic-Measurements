@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+
+\draw (0,0) to[I, l=$i(t)$] (0,3);
+\draw (0,3) to[R, l=$1\Omega$] (3,3);
+\draw (3,3) to[L, l=$2 H$] (3,0);
+\draw (3,0) -- (0,0);
+
+\end{circuitikz}
+\end{document}

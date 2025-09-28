@@ -1,0 +1,61 @@
+---
+title: "Problem Set 04: AC Network Analysis"
+date: 2025-09-29
+format:
+  html: default
+  pdf: default
+toc: false
+---
+
+Please complete the following problems and tasks, and upload your solutions to
+Gradescope, using the [formatting guidelines](_formatting_guidelines.qmd) below.
+
+<!-- P4.4 & P4.5 -->
+1. In the circuit shown below, let:
+
+$$
+i(t)=
+\begin{cases}
+0, & t < 0 \\
+t, & 0 \leq t < 10 s \\
+10, & t \geq 10 s
+\end{cases}
+$$
+
+![](images/ps4/p4_4.png){fig-align="center"}
+
+  a. Plot the energy stored in the inductor for all time.
+
+  b. On the same plot, plot the energy delivered by the source for all time.
+
+<!-- P4.7 & 4.8 -->
+2. In the circuit shown below, let:
+
+$$
+v(t)=
+\begin{cases}
+0, & t < 0 \\
+t, & 0 \leq t < 10 s \\
+10, & t \geq 10 s
+\end{cases}
+$$
+
+![](images/ps4/p4_7.png){fig-align="center"}
+
+a. Plot the energy stored in the capacitor for all time.
+
+b. On the same plot, plot the energy delivered by the source for all time.
+
+<!-- P4.10 -->
+3. Find the energy stored in each capacitor and inductor in the circuit below, under steady-state DC conditions.
+
+![](images/ps4/p4_10.png){fig-align="center"}
+
+<!-- P4.11 -->
+4. Find the energy stored in each capacitor and inductor in the circuit below, under steady-state DC conditions.
+
+![](images/ps4/p4_11.png){fig-align="center"}
+
+\newpage
+
+{{< include _formatting_guidelines.qmd >}}

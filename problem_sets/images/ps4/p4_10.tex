@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+
+\draw (0,0) to[V, l=$6\,V$] (0,3);
+\draw (0,3) to[R, l=$2\,\Omega$] (3,3);
+\draw (3,3) to[C, l=$2\,F$] (3,0);
+\draw (6,3) to[R, l=$4\,\Omega$] (6,0);
+\draw (3,3) -- (6,3);
+\draw (6,3) to[L, l=$2\,H$] (9,3);
+\draw (9,3) to[C, l=$3\,F$] (9,1.75) to[R, l=$6\,\Omega$] (9,0);
+\draw (12,3) to[R, l=$8\,\Omega$] (12,0);
+
+\draw (6,3) -- (6,4.5) to[C, l=$1\,F$] (9,4.5) -- (9,3);
+
+\draw (9,3) -- (12,3);
+\draw (12,0) -- (0,0);
+
+\end{circuitikz}
+\end{document}
