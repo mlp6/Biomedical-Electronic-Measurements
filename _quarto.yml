@@ -50,6 +50,8 @@ website:
           text: "ECAD using KiCad: Schematic Capture"
         - href: slides/ecad_kicad_spice.qmd
           text: "ECAD using KiCad: SPICE Modeling"
+        - href: slides/reactive_components.qmd
+          text: "Reactive Components: Capacitors & Inductors"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
