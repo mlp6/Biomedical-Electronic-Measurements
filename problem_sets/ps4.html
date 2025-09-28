@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Duke BME">
-<meta name="dcterms.date" content="2025-10-01">
+<meta name="dcterms.date" content="2025-09-29">
 
-<title>Transformers &amp; Diodes – Biomedical Electronic Measurements</title>
+<title>Problem Set 04: Reactive Energy Analysis – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,8 +68,38 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -82,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/transformers_diodes.html">Transformers and Diodes</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/_formatting_guidelines.qmd">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ps4.html">Problem Set 04</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -270,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/transformers_diodes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../labs/transformers_diodes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transformers and Diodes</span></a>
   </div>
 </li>
@@ -346,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problem_sets/ps4.html" class="sidebar-item-text sidebar-link">
+  <a href="../problem_sets/ps4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Problem Set 04</span></a>
   </div>
 </li>
@@ -357,18 +386,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/transformers_diodes.html">Transformers and Diodes</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/_formatting_guidelines.qmd">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ps4.html">Problem Set 04</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Transformers &amp; Diodes</h1>
-<p class="subtitle lead">BME253L - Fall 2025 - Palmeri</p>
+<h1 class="title">Problem Set 04: Reactive Energy Analysis</h1>
+<p class="subtitle lead">BME253L - Fall 2025</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Lab</div>
+    <div class="quarto-category">Problem Set</div>
   </div>
   </div>
 
@@ -376,17 +404,11 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Duke BME </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2025</p>
+      <p class="date">September 29, 2025</p>
     </div>
   </div>
   
@@ -398,10 +420,118 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_trans_hout.pdf" width="100%" height="800px" style="border:none;">
-</iframe>
+<p>Please complete the following problems and tasks, and upload your solutions to Gradescope, using the <a href="_formatting_guidelines.qmd">formatting guidelines</a> below.</p>
+<!-- P4.4 & P4.5 -->
+<ol type="1">
+<li>In the circuit shown below, let:</li>
+</ol>
+<p><span class="math display">\[
+i(t)=
+\begin{cases}
+0, &amp; t &lt; 0 \\
+t, &amp; 0 \leq t &lt; 10 s \\
+10, &amp; t \geq 10 s
+\end{cases}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ps4/p4_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ol type="a">
+<li><p>Plot the energy stored in the inductor for all time.</p></li>
+<li><p>On the same plot, plot the energy delivered by the source for all time.</p></li>
+</ol>
+<!-- P4.7 & 4.8 -->
+<ol start="2" type="1">
+<li>In the circuit shown below, let:</li>
+</ol>
+<p><span class="math display">\[
+v(t)=
+\begin{cases}
+0, &amp; t &lt; 0 \\
+t, &amp; 0 \leq t &lt; 10 s \\
+10, &amp; t \geq 10 s
+\end{cases}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ps4/p4_7.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ol type="a">
+<li><p>Plot the energy stored in the capacitor for all time.</p></li>
+<li><p>On the same plot, plot the energy delivered by the source for all time.</p></li>
+</ol>
+<!-- P4.10 -->
+<ol start="3" type="1">
+<li>Find the energy stored in each capacitor and inductor in the circuit below, under steady-state DC conditions.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ps4/p4_10.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<!-- P4.11 -->
+<ol start="4" type="1">
+<li>Find the energy stored in each capacitor and inductor in the circuit below, under steady-state DC conditions.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ps4/p4_11.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<section id="problem-set-format-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="problem-set-format-guidelines">Problem Set Format Guidelines</h2>
+<p>Please follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.</p>
+<ul>
+<li><p>Each problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).</p></li>
+<li><p>For problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.</p>
+<ul>
+<li><p>Label all circuit elements with symbols.</p></li>
+<li><p>Solve problems symbolically before substituting in numerical values.</p></li>
+</ul></li>
+<li><p>Please write legibly and include all relevant steps in arriving at your solution.</p></li>
+<li><p>Please place a box around all final solutions.</p></li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All answers must have units!! No units = no credit!</p>
+</div>
+</div>
+<ul>
+<li><p>Attach any computer code (e.g., Python code) used to solve problems and generate plots.</p>
+<ul>
+<li><p>This should be done with a Jupyter notebook.</p></li>
+<li><p>Ideally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.</p></li>
+</ul></li>
+<li><p>All plots must be appropriately labeled with units.</p></li>
+<li><p>Problem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.</p></li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Failure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
