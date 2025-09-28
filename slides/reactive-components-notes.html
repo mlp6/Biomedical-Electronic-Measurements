@@ -396,6 +396,12 @@ window.Quarto = {
   <li><a href="#inductor-voltage-current-temporal-relationship" id="toc-inductor-voltage-current-temporal-relationship" class="nav-link" data-scroll-target="#inductor-voltage-current-temporal-relationship">Inductor Voltage-Current Temporal Relationship</a></li>
   <li><a href="#power-in-an-inductor" id="toc-power-in-an-inductor" class="nav-link" data-scroll-target="#power-in-an-inductor">Power in an Inductor</a></li>
   <li><a href="#energy-in-an-inductor" id="toc-energy-in-an-inductor" class="nav-link" data-scroll-target="#energy-in-an-inductor">Energy in an Inductor</a></li>
+  <li><a href="#parallel-inductors" id="toc-parallel-inductors" class="nav-link" data-scroll-target="#parallel-inductors">Parallel Inductors</a></li>
+  <li><a href="#series-inductors" id="toc-series-inductors" class="nav-link" data-scroll-target="#series-inductors">Series Inductors</a></li>
+  <li><a href="#steady-state-dc-response-of-reactive-components" id="toc-steady-state-dc-response-of-reactive-components" class="nav-link" data-scroll-target="#steady-state-dc-response-of-reactive-components">Steady-State DC Response of Reactive Components</a>
+  <ul class="collapse">
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="reactive-components-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -708,6 +714,84 @@ Tip
 <p>The energy stored in an inductor is always positive.</p>
 </div>
 </div>
+</section>
+<section id="parallel-inductors" class="level2">
+<h2 class="anchored" data-anchor-id="parallel-inductors">Parallel Inductors</h2>
+<ul>
+<li><p>Let’s draw a circuit with multiple inductors in parallel.</p></li>
+<li><p>Inductors in parallel have the same voltage across them.</p></li>
+<li><p>“Looks” like a single inductor with smaller inductance (area):</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+v_{L_1}(t) = v_{L_2}(t) = v_{L_3}(t) = \ldots = v_{L_n}(t) \\
+i_n(t) = \frac{1}{L_n} \int v_{L_n}(\tau) d\tau \\
+\textrm{Using KCL...} \\
+i(t) = \sum_{n} i_n(t) = \sum_{n} \frac{1}{L_n} \int v(\tau) d\tau = \left( \sum_{n} \frac{1}{L_n} \right) \int v(t) dt
+\end{gather}
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{L_{eq}} = \sum_{i} \frac{1}{L_i}
+\]</span></p>
+<ul>
+<li>Inductors in parallel have a similar relationship to resistors in parallel.</li>
+</ul>
+</section>
+<section id="series-inductors" class="level2">
+<h2 class="anchored" data-anchor-id="series-inductors">Series Inductors</h2>
+<ul>
+<li><p>Let’s draw a circuit with multiple inductors in series.</p></li>
+<li><p>Inductors in series have the same current through them.</p></li>
+<li><p>“Looks” like a single inductor with larger inductance (length):</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+i_{L_1}(t) = i_{L_2}(t) = i_{L_3}(t) = \ldots = i_{L_n}(t) \\
+v_n(t) = L_n \frac{di_n(t)}{dt} \\
+v(t) = \sum_{n} v_n(t) = \sum_{n} L_n \frac{di(t)}{dt} = \left( \sum_{n} L_n \right) \frac{di(t)}{dt}
+\end{gather}
+\]</span></p>
+<p><span class="math display">\[
+L_{eq} = \sum_{i} L_i
+\]</span></p>
+<ul>
+<li>Inductors in series have a similar relationship to resistors in series.</li>
+</ul>
+</section>
+<section id="steady-state-dc-response-of-reactive-components" class="level2">
+<h2 class="anchored" data-anchor-id="steady-state-dc-response-of-reactive-components">Steady-State DC Response of Reactive Components</h2>
+<ul>
+<li>Capacitors act like open circuits in steady-state DC.</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+i_c(t) = C \frac{dV_c(t)}{dt} = 0 \quad \text{for constant } V_c(t) \\
+\Rightarrow \quad V_c(t) = \text{constant} \\
+\Rightarrow \quad I_c(t) = 0
+\end{gather}
+\]</span></p>
+<ul>
+<li>Inductors act like short circuits in steady-state DC.</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+v_L(t) = L \frac{di_L(t)}{dt} = 0 \quad \text{for constant } i_L(t) \\
+\Rightarrow \quad i_L(t) = \text{constant} \\
+\Rightarrow \quad V_L(t) = 0
+\end{gather}
+\]</span></p>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Find <span class="math inline">\(i_1\)</span> at steady-state DC (long after the switch is closed).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/reactive_dc_response.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+i_1 = \frac{V_s}{R_1} = \frac{10V}{10k\Omega} = 1 mA
+\]</span></p>
+<p>How do we do this?</p>
 
 
 <script type="ojs-module-contents">
@@ -724,6 +808,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+</section>
 </section>
 
 </main> <!-- /main -->
