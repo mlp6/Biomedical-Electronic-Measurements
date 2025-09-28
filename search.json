@@ -1,14 +1,444 @@
 [
   {
-    "objectID": "bme-lab-policies.html",
-    "href": "bme-lab-policies.html",
-    "title": "BME Lab Procedures and Safety Expectations",
+    "objectID": "problem_sets/ps3_sltns.html",
+    "href": "problem_sets/ps3_sltns.html",
+    "title": "Problem Set 03: Solutions",
     "section": "",
-    "text": "Important\n\n\n\nSafety is Always First, Cleanliness a close second\n\n\nSafety always comes first in lab. To that end, you are expected to follow the rules in this document. Failure to do so may result in revocation of laboratory privileges, reduction of your course grade, and possible withdrawal from your course. Understanding risks and learning to work safely in the laboratory are an important part of your education.\nBefore entering lab, your safety training must be current. You need Duke’s Occupational and Environmental Safety Office’s:\n\nFire/Life Safety, and\nLaboratory Safety-General\n\ntraining modules. We know that you may have done this training before, but it expires in one year, and you must be current through the end of the semester.\nMost accidents are the result of a series of failures. That said, most accidents are preventable. You are responsible for your safety and the safety of those around you. The vast majority of accidents involve some combination of inattention, carelessness, horseplay, impairment, broken tools, and lack of knowledge. All of these factors can be mitigated and it’s your job to do so.\nYou are responsible for keeping the lab clean.\n\n\n\n\n\n\nWarning\n\n\n\nFailure to keep a clean workspace can result in a lower grade for you and your team.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you or someone else in lab needs immediate medical attention, call 911.\n\n\nIn case you need to report your location, you are in CIEMAS B209. Non-emergent problems, call 681-WELL (681-9355). If you are injured in lab, you must let an instructor/TA/lab staff member know as soon as possible. Lab staff after-hours phone number is on the contact cards posted outside every lab door.\n\n\n\n\n\n\nNote\n\n\n\nKeep these points in mind… - In an emergency, call 911. Location: CIEMAS B209\n\nIn the event of a non-emergent injury, seek medical attention and let an instructor/TA/lab staff know within 12 hours.\nFind the emergency exits.\nNever work alone. Two or more people must be present and able to see and hear each other.\nInspect every tool before use. Remove broken tools from service, place them on the broken tools shelf at the back of the room, and notify lab staff.\nWear safety glasses when appropriate. This includes, but is not limited to, activities such as soldering, sanding, filing, hammering, cutting, and drilling.\nWear hearing protection when using noisy tools such as drills and the Dremel tool. Ear buds or music headphones are not sufficient hearing protection.\nNever work impaired. If you are tired, stressed, in a rush, or impaired in any other way then do not work in lab. Go home and recuperate.\nTie back long hair to keep it away from tools.\nClosed-toe shoes must be worn in the lab. Long trousers are preferred.\nProperly secure materials. Clamps, vises and portable worktables are available.\nDon’t force anything. If the job requires significant force, you’re doing it wrong.\nKeep food and drink out of the lab!\nPower down equipment when finished with it.\nA fire extinguisher is outside the door.\nWash your hands before leaving lab.\nBits of unused solder, wire and lead trimmings all go in a “Solder Scrap” container.\nAnything contaminated with solder paste (wipes, boards, applicators) goes in a “Solder Scrap” container.\nOther hazardous waste dealt with on a case by case basis; ask lab staff for help.\nPut tools away, in the right place. Tool drawers are labeled, but if you’re unsure where to put a tool, ask your TA/lab staff.\nDo not hoard parts or tools.\nThis bears repeating: Take the parts you need, but only the parts you need. Do not hoard parts. If you see a part becoming scarce, let lab staff know so they can re-order.\nBenches are for temporary use only. Leave no trace that you were at the bench when you leave for the day. Rarely, with approval, a bench can be claimed for the semester.\nAny and all paint must be pre-approved by an instructor/TA/lab staff. Unapproved paint on projects will result in a lower grade. (Spray paint indoors is never approved.)\nA representative from your group is expected to participate in weekly cleaning. Your instructor will give you the schedule.\nPlace a cover on the bench for messy work. Chucks and Ram Board are available for this.\nLab staff have a collection of good soldering tips and fine tools (e.g. tweezers). If you have need for something better than you can find in lab, ask lab staff.",
+    "text": "Warning\n\n\n\nThese solutions have been adapted from previous years, but I haven’t had the chance to 100% guarentee their accuracy. If anything seems off, please don’t hesitate to ask questions on Ed!"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-1",
+    "href": "problem_sets/ps3_sltns.html#problem-1",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 1",
+    "text": "Problem 1"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-2",
+    "href": "problem_sets/ps3_sltns.html#problem-2",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 2",
+    "text": "Problem 2"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-3",
+    "href": "problem_sets/ps3_sltns.html#problem-3",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 3",
+    "text": "Problem 3"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-4",
+    "href": "problem_sets/ps3_sltns.html#problem-4",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 4",
+    "text": "Problem 4"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-5",
+    "href": "problem_sets/ps3_sltns.html#problem-5",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 5",
+    "text": "Problem 5"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-6",
+    "href": "problem_sets/ps3_sltns.html#problem-6",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 6",
+    "text": "Problem 6"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-7",
+    "href": "problem_sets/ps3_sltns.html#problem-7",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 7",
+    "text": "Problem 7"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-8",
+    "href": "problem_sets/ps3_sltns.html#problem-8",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 8",
+    "text": "Problem 8"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-9",
+    "href": "problem_sets/ps3_sltns.html#problem-9",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 9",
+    "text": "Problem 9"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-10",
+    "href": "problem_sets/ps3_sltns.html#problem-10",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 10",
+    "text": "Problem 10"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-11",
+    "href": "problem_sets/ps3_sltns.html#problem-11",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 11",
+    "text": "Problem 11"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-12",
+    "href": "problem_sets/ps3_sltns.html#problem-12",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 12",
+    "text": "Problem 12"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-13",
+    "href": "problem_sets/ps3_sltns.html#problem-13",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 13",
+    "text": "Problem 13"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-14",
+    "href": "problem_sets/ps3_sltns.html#problem-14",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 14",
+    "text": "Problem 14"
+  },
+  {
+    "objectID": "problem_sets/ps3_sltns.html#problem-15",
+    "href": "problem_sets/ps3_sltns.html#problem-15",
+    "title": "Problem Set 03: Solutions",
+    "section": "Problem 15",
+    "text": "Problem 15"
+  },
+  {
+    "objectID": "problem_sets/ps1.html",
+    "href": "problem_sets/ps1.html",
+    "title": "Problem Set 01",
+    "section": "",
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 01"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps1.html#problem-set-format-guidelines",
+    "href": "problem_sets/ps1.html#problem-set-format-guidelines",
+    "title": "Problem Set 01",
+    "section": "Problem Set Format Guidelines",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 01"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html",
+    "href": "software-install-tutorials.html",
+    "title": "Software Installation and Tutorials",
+    "section": "",
+    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
     "crumbs": [
       "Course Information",
-      "BME Lab Policies"
+      "Software Installation & Tutorials"
     ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#kicad",
+    "href": "software-install-tutorials.html#kicad",
+    "title": "Software Installation and Tutorials",
+    "section": "",
+    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
+    "href": "software-install-tutorials.html#visual-studio-code-ide",
+    "title": "Software Installation and Tutorials",
+    "section": "Visual Studio Code (IDE)",
+    "text": "Visual Studio Code (IDE)\nI recommend using Visual Studio Code as the IDE for all projects in this class that require data analysis, plotting, etc.\nIn addition to installing the base program, please install the following Extensions:\n\nPython Extension Pack\nJupyter\nGitHub CoPilot (AI-assisted coding)\nSign up for free GitHub Education Student account to get “Pro” access to this extension: https://github.com/education/students\n\n\n\n\n\n\n\nTip\n\n\n\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
+    "href": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
+    "title": "Software Installation and Tutorials",
+    "section": "Technical Report Preparation (Jupyter Notebook)",
+    "text": "Technical Report Preparation (Jupyter Notebook)\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be converted to PDF files and uploaded to Gradescope.\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.\nYou can also choose to edit your Jupyter notebooks with a cloud-based tool, like Google CoLab, but that approach will not receive help / troubleshooting from Dr. Palmeri or the teaching team.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "software-install-tutorials.html#gradescope",
+    "href": "software-install-tutorials.html#gradescope",
+    "title": "Software Installation and Tutorials",
+    "section": "Gradescope",
+    "text": "Gradescope\nPlease complete the Gradescope quiz when you are done installing all of these tools.",
+    "crumbs": [
+      "Course Information",
+      "Software Installation & Tutorials"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_schematic-notes.html",
+    "href": "slides/ecad_kicad_schematic-notes.html",
+    "title": "ECAD using KiCad: Schematic Capture",
+    "section": "",
+    "text": "Formally capture circuit schematics\nValidate circuit behavior (Electrical Rules Check)\nSPICE (Simulation Program with Integrated Circuit Emphasis) simulations\nConvert circuit to printed circuit board (more space efficient and permanent than a breadboard).\nCapture design history and facilitate rapid iteration.\nGenerate 3D “parts” to integrate with CAD.\n\n\n\n\n\nhttps://kicad.org\nA completely open-source alternative to Eagle.\nJust as capable as Altium Designer (to a point); similar workflow.",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: Schematic Capture"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_schematic-notes.html#why-eda",
+    "href": "slides/ecad_kicad_schematic-notes.html#why-eda",
+    "title": "ECAD using KiCad: Schematic Capture",
+    "section": "",
+    "text": "Formally capture circuit schematics\nValidate circuit behavior (Electrical Rules Check)\nSPICE (Simulation Program with Integrated Circuit Emphasis) simulations\nConvert circuit to printed circuit board (more space efficient and permanent than a breadboard).\nCapture design history and facilitate rapid iteration.\nGenerate 3D “parts” to integrate with CAD.\n\n\n\n\n\nhttps://kicad.org\nA completely open-source alternative to Eagle.\nJust as capable as Altium Designer (to a point); similar workflow.",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: Schematic Capture"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_schematic-notes.html#schematic-capture",
+    "href": "slides/ecad_kicad_schematic-notes.html#schematic-capture",
+    "title": "ECAD using KiCad: Schematic Capture",
+    "section": "Schematic Capture",
+    "text": "Schematic Capture\n\n\nUI/UX\n\n\n\nCreating a Schematic\nKiCad Documentation: Schematic Editing Operations\n\nCreate a New Project, which creates a schematic file.\nDO NOT CHANGE THE GRID SPACING!!\nSetup Page Settings...\nConfigure Schematic Setup...\nPlace component / part (Place Symbol) using default library. If component doesn’t exist, then you either need to:\n\nImport Parts into Libraries\nDownload the part from an online database (e.g., SnapEDA)\nCreate part using the Library Editor.\n\n\n\n\nAssigning Properties to Components\n\nAnnotate components togive each component a unique label (e.g., \\(R_1\\), \\(R_2\\))\n\n\n\n\n\n\n\nTip\n\n\n\nThis is now done automatically in KiCad 8.x, but you may want to manually override some of the annotation defaults.\n\n\n\nAssign component values (SI units)\nLabel nets with meaningful names\n\nNets are like nodes; common voltage connections.\nUse net labels to avoid connection chaos.\n\n\n\n\nIn-Class Exercise: Part I\nLet’s create a simple voltage divider circuit…\n\n\nPower Ports\n\nPower ports, including ground references, are also global net labels.\nComponent pins can be explicitly designated power in/out (in contrast to signal).\nPower, ideally, cascades top-to-bottom (+ \\(\\rightarrow\\) GND [\\(\\rightarrow\\) -]) on the schematic.\n\n\n\nIn-Class Exercise: Part II\nLet’s add power ports…",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: Schematic Capture"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_schematic-notes.html#electrical-rules-check-erc",
+    "href": "slides/ecad_kicad_schematic-notes.html#electrical-rules-check-erc",
+    "title": "ECAD using KiCad: Schematic Capture",
+    "section": "Electrical Rules Check (ERC)",
+    "text": "Electrical Rules Check (ERC)\n\nCheck the validity of the schematic\nCommon error message:\n\n\n“Input Power pin not driven by any Output Power pins”\n\n\nKiCad checks to make sure that power can “drive” components that demand that input.\nYou can explicitly indicate this in the schematic using the PWR_FLAG symbol attached to the net in question.\nMight need to re-map pin types (Properties:Edit Symbol:Pin Table).\n\n\n\n\nBest Practices\n\nSignal, ideally, flows left-to-right (input \\(\\rightarrow\\) output).\nOutline and label functional blocks. Use Heirarchical Sheets to organize more clearly-defined sub-circuits.\nCan include non-electrical items, like Mounting Holes.\nAdd Test Pins/Pads to nets you will want to verify during testing.\n\nPower nets\nSignal I/O\n\nUse No-Connection flags for pins that are intentionally not connected to other components.\n\n\n\n\n\nschematic_annotated",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: Schematic Capture"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_schematic-notes.html#resources",
+    "href": "slides/ecad_kicad_schematic-notes.html#resources",
+    "title": "ECAD using KiCad: Schematic Capture",
+    "section": "Resources",
+    "text": "Resources\n\nKiCad Documentation\nSchematic Review Checklist",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: Schematic Capture"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_schematic-slides.html#why-eda",
+    "href": "slides/ecad_kicad_schematic-slides.html#why-eda",
+    "title": "ECAD using KiCad: Schematic Capture",
+    "section": "Why EDA?",
+    "text": "Why EDA?\n\nFormally capture circuit schematics\nValidate circuit behavior (Electrical Rules Check)\nSPICE (Simulation Program with Integrated Circuit Emphasis) simulations\nConvert circuit to printed circuit board (more space efficient and permanent than a breadboard).\nCapture design history and facilitate rapid iteration.\nGenerate 3D “parts” to integrate with CAD."
+  },
+  {
+    "objectID": "slides/ecad_kicad_schematic-slides.html#schematic-capture",
+    "href": "slides/ecad_kicad_schematic-slides.html#schematic-capture",
+    "title": "ECAD using KiCad: Schematic Capture",
+    "section": "Schematic Capture",
+    "text": "Schematic Capture"
+  },
+  {
+    "objectID": "slides/ecad_kicad_schematic-slides.html#electrical-rules-check-erc",
+    "href": "slides/ecad_kicad_schematic-slides.html#electrical-rules-check-erc",
+    "title": "ECAD using KiCad: Schematic Capture",
+    "section": "Electrical Rules Check (ERC)",
+    "text": "Electrical Rules Check (ERC)\n\nCheck the validity of the schematic\nCommon error message:\n\n\n“Input Power pin not driven by any Output Power pins”\n\n\nKiCad checks to make sure that power can “drive” components that demand that input.\nYou can explicitly indicate this in the schematic using the PWR_FLAG symbol attached to the net in question.\nMight need to re-map pin types (Properties:Edit Symbol:Pin Table)."
+  },
+  {
+    "objectID": "slides/ecad_kicad_schematic-slides.html#resources",
+    "href": "slides/ecad_kicad_schematic-slides.html#resources",
+    "title": "ECAD using KiCad: Schematic Capture",
+    "section": "Resources",
+    "text": "Resources\n\nKiCad Documentation\nSchematic Review Checklist"
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-notes.html#what-is-spice",
+    "href": "slides/ecad_kicad_spice-notes.html#what-is-spice",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "What is SPICE?",
+    "text": "What is SPICE?\n\nSimulation Program with Integrated Circuit Emphasis (SPICE)\nModel and analyze the behavior of electronic circuits before they are physically constructed.\nInput schematic representations of circuits (e.g., resistors, capacitors, transistors, diodes, etc.)\nSimulate circuit performance by computing current, voltage, and power, across these components under different conditions.",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: SPICE Modeling"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-notes.html#why-model-circuits",
+    "href": "slides/ecad_kicad_spice-notes.html#why-model-circuits",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Why model circuits?",
+    "text": "Why model circuits?\n\nReduce design costs.\nBreadboards / thru-hole prototyping is not realistic for complex circuits.\nMost components are now surface mount.\nModel \\(\\rightarrow\\) Breakout Boards \\(\\rightarrow\\) PCB",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: SPICE Modeling"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-notes.html#spice-vs.-non-spice-components",
+    "href": "slides/ecad_kicad_spice-notes.html#spice-vs.-non-spice-components",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "SPICE vs. Non-SPICE Components",
+    "text": "SPICE vs. Non-SPICE Components\n\nSPICE components are defined by their mathematical models.\nNon-SPICE components are defined by their physical characteristics.\nKiCad has a library of SPICE models for common components.\nSPICE models are not always available for all components, but can be downloaded and added to some libraries.\nSPICE models can be edited / created for custom components.",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: SPICE Modeling"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-notes.html#limiting-scope-of-spice-simulation",
+    "href": "slides/ecad_kicad_spice-notes.html#limiting-scope-of-spice-simulation",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Limiting Scope of SPICE Simulation",
+    "text": "Limiting Scope of SPICE Simulation\n\nWe usually want to simulate as simple of a circuit as possible.\nWe can limit the scope of the simulation by excluding components from the braoder schematic from the sub-circuit that we want to simulate:\n\nDrag select all of the components you want to exclude to highlight them.\nRight Click: Attributes -&gt; Exclude from Simulation\nRepeat this for other sheets / circuits in the schematic.\nIn the Simulation window, Confirm that your SPICE Netlist reflets what you actually want to simulate.",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: SPICE Modeling"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-notes.html#setting-component-simulation-parameters",
+    "href": "slides/ecad_kicad_spice-notes.html#setting-component-simulation-parameters",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Setting Component Simulation Parameters",
+    "text": "Setting Component Simulation Parameters\n\nThe SPICE model can be set in the component properties.\nThe component must have a SPICE model to be included in the simulation.\nOnly certain components allow certain simulation parameters to be varied (e.g., resistors vs. potentiometers).",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: SPICE Modeling"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-notes.html#setting-analysis-parameters",
+    "href": "slides/ecad_kicad_spice-notes.html#setting-analysis-parameters",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Setting Analysis Parameters",
+    "text": "Setting Analysis Parameters\n\nAC Sweep: frequency analysis\nDC Sweep: sweep voltage, current, resistance, capacitance\nOperating Point: analysis at a specific point in time\nTransient: time-domain analysis",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: SPICE Modeling"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-notes.html#run-simulation-and-probe-components",
+    "href": "slides/ecad_kicad_spice-notes.html#run-simulation-and-probe-components",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Run Simulation and Probe Components",
+    "text": "Run Simulation and Probe Components\n\nSimulations are Run (Blue Arrow in Simulation window).\nProbes can be added by parameter and component name or interactively.\nChoose a New Analysis and what components you want to sweep.\n\nAvoid setting any values to 0 as they can cause numerical instability!\n\nAfter you hit Ok, choose the parameters from the right side of the window that you would like to plot.\nIf you change your schematic, be sure to re-Run the simulation.\n\nYou may want to create a new analysis tab to make sure that the simulation reflects the latest changes.\n\nAll open analysis tabs must be valid for the running simulation to be successful!",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: SPICE Modeling"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-notes.html#examples",
+    "href": "slides/ecad_kicad_spice-notes.html#examples",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Examples",
+    "text": "Examples\n\nVoltage Divider with Potentiometer (DC Sweep)\n\n\n\n\n\n\n\nRC Filter (AC Sweep)",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: SPICE Modeling"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-notes.html#resources",
+    "href": "slides/ecad_kicad_spice-notes.html#resources",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Resources",
+    "text": "Resources\n\nKiCad SPICE Simulation\nngspice",
+    "crumbs": [
+      "Learning Modules",
+      "ECAD using KiCad: SPICE Modeling"
+    ]
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#spice-modeling",
+    "href": "slides/ecad_kicad_spice-slides.html#spice-modeling",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "SPICE Modeling",
+    "text": "SPICE Modeling"
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#what-is-spice",
+    "href": "slides/ecad_kicad_spice-slides.html#what-is-spice",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "What is SPICE?",
+    "text": "What is SPICE?\n\nSimulation Program with Integrated Circuit Emphasis (SPICE)\nModel and analyze the behavior of electronic circuits before they are physically constructed.\nInput schematic representations of circuits (e.g., resistors, capacitors, transistors, diodes, etc.)\nSimulate circuit performance by computing current, voltage, and power, across these components under different conditions."
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#why-model-circuits",
+    "href": "slides/ecad_kicad_spice-slides.html#why-model-circuits",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Why model circuits?",
+    "text": "Why model circuits?\n\nReduce design costs.\nBreadboards / thru-hole prototyping is not realistic for complex circuits.\nMost components are now surface mount.\nModel \\(\\rightarrow\\) Breakout Boards \\(\\rightarrow\\) PCB"
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#spice-vs.-non-spice-components",
+    "href": "slides/ecad_kicad_spice-slides.html#spice-vs.-non-spice-components",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "SPICE vs. Non-SPICE Components",
+    "text": "SPICE vs. Non-SPICE Components\n\nSPICE components are defined by their mathematical models.\nNon-SPICE components are defined by their physical characteristics.\nKiCad has a library of SPICE models for common components.\nSPICE models are not always available for all components, but can be downloaded and added to some libraries.\nSPICE models can be edited / created for custom components."
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#limiting-scope-of-spice-simulation",
+    "href": "slides/ecad_kicad_spice-slides.html#limiting-scope-of-spice-simulation",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Limiting Scope of SPICE Simulation",
+    "text": "Limiting Scope of SPICE Simulation\n\nWe usually want to simulate as simple of a circuit as possible.\nWe can limit the scope of the simulation by excluding components from the braoder schematic from the sub-circuit that we want to simulate:\n\nDrag select all of the components you want to exclude to highlight them.\nRight Click: Attributes -&gt; Exclude from Simulation\nRepeat this for other sheets / circuits in the schematic.\nIn the Simulation window, Confirm that your SPICE Netlist reflets what you actually want to simulate."
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#setting-component-simulation-parameters",
+    "href": "slides/ecad_kicad_spice-slides.html#setting-component-simulation-parameters",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Setting Component Simulation Parameters",
+    "text": "Setting Component Simulation Parameters\n\nThe SPICE model can be set in the component properties.\nThe component must have a SPICE model to be included in the simulation.\nOnly certain components allow certain simulation parameters to be varied (e.g., resistors vs. potentiometers)."
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#setting-analysis-parameters",
+    "href": "slides/ecad_kicad_spice-slides.html#setting-analysis-parameters",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Setting Analysis Parameters",
+    "text": "Setting Analysis Parameters\n\nAC Sweep: frequency analysis\nDC Sweep: sweep voltage, current, resistance, capacitance\nOperating Point: analysis at a specific point in time\nTransient: time-domain analysis"
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#run-simulation-and-probe-components",
+    "href": "slides/ecad_kicad_spice-slides.html#run-simulation-and-probe-components",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Run Simulation and Probe Components",
+    "text": "Run Simulation and Probe Components\n\nSimulations are Run (Blue Arrow in Simulation window).\nProbes can be added by parameter and component name or interactively.\nChoose a New Analysis and what components you want to sweep.\n\nAvoid setting any values to 0 as they can cause numerical instability!\n\nAfter you hit Ok, choose the parameters from the right side of the window that you would like to plot.\nIf you change your schematic, be sure to re-Run the simulation.\n\nYou may want to create a new analysis tab to make sure that the simulation reflects the latest changes.\n\nAll open analysis tabs must be valid for the running simulation to be successful!"
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#examples",
+    "href": "slides/ecad_kicad_spice-slides.html#examples",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Examples",
+    "text": "Examples"
+  },
+  {
+    "objectID": "slides/ecad_kicad_spice-slides.html#resources",
+    "href": "slides/ecad_kicad_spice-slides.html#resources",
+    "title": "ECAD using KiCad: SPICE Modeling",
+    "section": "Resources",
+    "text": "Resources\n\nKiCad SPICE Simulation\nngspice"
   },
   {
     "objectID": "slides/r_eq-notes.html",
@@ -220,310 +650,249 @@
     "text": "Summary\n\nSolving for \\(R_{eq}\\) can greatly simplify circuits to “simple” loops for circuit analysis.\nVoltage and current division are:\n\nReduce circuit analysis to “simple” circuit analysis rules.\nCan be used to design circuits where voltage and current need to be controlled in specific ways."
   },
   {
-    "objectID": "slides/ecad_kicad_spice-notes.html#what-is-spice",
-    "href": "slides/ecad_kicad_spice-notes.html#what-is-spice",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "What is SPICE?",
-    "text": "What is SPICE?\n\nSimulation Program with Integrated Circuit Emphasis (SPICE)\nModel and analyze the behavior of electronic circuits before they are physically constructed.\nInput schematic representations of circuits (e.g., resistors, capacitors, transistors, diodes, etc.)\nSimulate circuit performance by computing current, voltage, and power, across these components under different conditions.",
-    "crumbs": [
-      "Learning Modules",
-      "ECAD using KiCad: SPICE Modeling"
-    ]
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-notes.html#why-model-circuits",
-    "href": "slides/ecad_kicad_spice-notes.html#why-model-circuits",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Why model circuits?",
-    "text": "Why model circuits?\n\nReduce design costs.\nBreadboards / thru-hole prototyping is not realistic for complex circuits.\nMost components are now surface mount.\nModel \\(\\rightarrow\\) Breakout Boards \\(\\rightarrow\\) PCB",
-    "crumbs": [
-      "Learning Modules",
-      "ECAD using KiCad: SPICE Modeling"
-    ]
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-notes.html#spice-vs.-non-spice-components",
-    "href": "slides/ecad_kicad_spice-notes.html#spice-vs.-non-spice-components",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "SPICE vs. Non-SPICE Components",
-    "text": "SPICE vs. Non-SPICE Components\n\nSPICE components are defined by their mathematical models.\nNon-SPICE components are defined by their physical characteristics.\nKiCad has a library of SPICE models for common components.\nSPICE models are not always available for all components, but can be downloaded and added to some libraries.\nSPICE models can be edited / created for custom components.",
-    "crumbs": [
-      "Learning Modules",
-      "ECAD using KiCad: SPICE Modeling"
-    ]
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-notes.html#limiting-scope-of-spice-simulation",
-    "href": "slides/ecad_kicad_spice-notes.html#limiting-scope-of-spice-simulation",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Limiting Scope of SPICE Simulation",
-    "text": "Limiting Scope of SPICE Simulation\n\nWe usually want to simulate as simple of a circuit as possible.\nWe can limit the scope of the simulation by excluding components from the braoder schematic from the sub-circuit that we want to simulate:\n\nDrag select all of the components you want to exclude to highlight them.\nRight Click: Attributes -&gt; Exclude from Simulation\nRepeat this for other sheets / circuits in the schematic.\nIn the Simulation window, Confirm that your SPICE Netlist reflets what you actually want to simulate.",
-    "crumbs": [
-      "Learning Modules",
-      "ECAD using KiCad: SPICE Modeling"
-    ]
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-notes.html#setting-component-simulation-parameters",
-    "href": "slides/ecad_kicad_spice-notes.html#setting-component-simulation-parameters",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Setting Component Simulation Parameters",
-    "text": "Setting Component Simulation Parameters\n\nThe SPICE model can be set in the component properties.\nThe component must have a SPICE model to be included in the simulation.\nOnly certain components allow certain simulation parameters to be varied (e.g., resistors vs. potentiometers).",
-    "crumbs": [
-      "Learning Modules",
-      "ECAD using KiCad: SPICE Modeling"
-    ]
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-notes.html#setting-analysis-parameters",
-    "href": "slides/ecad_kicad_spice-notes.html#setting-analysis-parameters",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Setting Analysis Parameters",
-    "text": "Setting Analysis Parameters\n\nAC Sweep: frequency analysis\nDC Sweep: sweep voltage, current, resistance, capacitance\nOperating Point: analysis at a specific point in time\nTransient: time-domain analysis",
-    "crumbs": [
-      "Learning Modules",
-      "ECAD using KiCad: SPICE Modeling"
-    ]
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-notes.html#run-simulation-and-probe-components",
-    "href": "slides/ecad_kicad_spice-notes.html#run-simulation-and-probe-components",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Run Simulation and Probe Components",
-    "text": "Run Simulation and Probe Components\n\nSimulations are Run (Blue Arrow in Simulation window).\nProbes can be added by parameter and component name or interactively.\nChoose a New Analysis and what components you want to sweep.\n\nAvoid setting any values to 0 as they can cause numerical instability!\n\nAfter you hit Ok, choose the parameters from the right side of the window that you would like to plot.\nIf you change your schematic, be sure to re-Run the simulation.\n\nYou may want to create a new analysis tab to make sure that the simulation reflects the latest changes.\n\nAll open analysis tabs must be valid for the running simulation to be successful!",
-    "crumbs": [
-      "Learning Modules",
-      "ECAD using KiCad: SPICE Modeling"
-    ]
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-notes.html#examples",
-    "href": "slides/ecad_kicad_spice-notes.html#examples",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Examples",
-    "text": "Examples\n\nVoltage Divider with Potentiometer (DC Sweep)\n\n\n\n\n\n\n\nRC Filter (AC Sweep)",
-    "crumbs": [
-      "Learning Modules",
-      "ECAD using KiCad: SPICE Modeling"
-    ]
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-notes.html#resources",
-    "href": "slides/ecad_kicad_spice-notes.html#resources",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Resources",
-    "text": "Resources\n\nKiCad SPICE Simulation\nngspice",
-    "crumbs": [
-      "Learning Modules",
-      "ECAD using KiCad: SPICE Modeling"
-    ]
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#spice-modeling",
-    "href": "slides/ecad_kicad_spice-slides.html#spice-modeling",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "SPICE Modeling",
-    "text": "SPICE Modeling"
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#what-is-spice",
-    "href": "slides/ecad_kicad_spice-slides.html#what-is-spice",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "What is SPICE?",
-    "text": "What is SPICE?\n\nSimulation Program with Integrated Circuit Emphasis (SPICE)\nModel and analyze the behavior of electronic circuits before they are physically constructed.\nInput schematic representations of circuits (e.g., resistors, capacitors, transistors, diodes, etc.)\nSimulate circuit performance by computing current, voltage, and power, across these components under different conditions."
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#why-model-circuits",
-    "href": "slides/ecad_kicad_spice-slides.html#why-model-circuits",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Why model circuits?",
-    "text": "Why model circuits?\n\nReduce design costs.\nBreadboards / thru-hole prototyping is not realistic for complex circuits.\nMost components are now surface mount.\nModel \\(\\rightarrow\\) Breakout Boards \\(\\rightarrow\\) PCB"
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#spice-vs.-non-spice-components",
-    "href": "slides/ecad_kicad_spice-slides.html#spice-vs.-non-spice-components",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "SPICE vs. Non-SPICE Components",
-    "text": "SPICE vs. Non-SPICE Components\n\nSPICE components are defined by their mathematical models.\nNon-SPICE components are defined by their physical characteristics.\nKiCad has a library of SPICE models for common components.\nSPICE models are not always available for all components, but can be downloaded and added to some libraries.\nSPICE models can be edited / created for custom components."
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#limiting-scope-of-spice-simulation",
-    "href": "slides/ecad_kicad_spice-slides.html#limiting-scope-of-spice-simulation",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Limiting Scope of SPICE Simulation",
-    "text": "Limiting Scope of SPICE Simulation\n\nWe usually want to simulate as simple of a circuit as possible.\nWe can limit the scope of the simulation by excluding components from the braoder schematic from the sub-circuit that we want to simulate:\n\nDrag select all of the components you want to exclude to highlight them.\nRight Click: Attributes -&gt; Exclude from Simulation\nRepeat this for other sheets / circuits in the schematic.\nIn the Simulation window, Confirm that your SPICE Netlist reflets what you actually want to simulate."
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#setting-component-simulation-parameters",
-    "href": "slides/ecad_kicad_spice-slides.html#setting-component-simulation-parameters",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Setting Component Simulation Parameters",
-    "text": "Setting Component Simulation Parameters\n\nThe SPICE model can be set in the component properties.\nThe component must have a SPICE model to be included in the simulation.\nOnly certain components allow certain simulation parameters to be varied (e.g., resistors vs. potentiometers)."
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#setting-analysis-parameters",
-    "href": "slides/ecad_kicad_spice-slides.html#setting-analysis-parameters",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Setting Analysis Parameters",
-    "text": "Setting Analysis Parameters\n\nAC Sweep: frequency analysis\nDC Sweep: sweep voltage, current, resistance, capacitance\nOperating Point: analysis at a specific point in time\nTransient: time-domain analysis"
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#run-simulation-and-probe-components",
-    "href": "slides/ecad_kicad_spice-slides.html#run-simulation-and-probe-components",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Run Simulation and Probe Components",
-    "text": "Run Simulation and Probe Components\n\nSimulations are Run (Blue Arrow in Simulation window).\nProbes can be added by parameter and component name or interactively.\nChoose a New Analysis and what components you want to sweep.\n\nAvoid setting any values to 0 as they can cause numerical instability!\n\nAfter you hit Ok, choose the parameters from the right side of the window that you would like to plot.\nIf you change your schematic, be sure to re-Run the simulation.\n\nYou may want to create a new analysis tab to make sure that the simulation reflects the latest changes.\n\nAll open analysis tabs must be valid for the running simulation to be successful!"
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#examples",
-    "href": "slides/ecad_kicad_spice-slides.html#examples",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Examples",
-    "text": "Examples"
-  },
-  {
-    "objectID": "slides/ecad_kicad_spice-slides.html#resources",
-    "href": "slides/ecad_kicad_spice-slides.html#resources",
-    "title": "ECAD using KiCad: SPICE Modeling",
-    "section": "Resources",
-    "text": "Resources\n\nKiCad SPICE Simulation\nngspice"
-  },
-  {
-    "objectID": "slides/ecad_kicad_schematic-notes.html",
-    "href": "slides/ecad_kicad_schematic-notes.html",
-    "title": "ECAD using KiCad: Schematic Capture",
+    "objectID": "slides/intro-circuits-notes.html",
+    "href": "slides/intro-circuits-notes.html",
+    "title": "Introduction to Circuits",
     "section": "",
-    "text": "Formally capture circuit schematics\nValidate circuit behavior (Electrical Rules Check)\nSPICE (Simulation Program with Integrated Circuit Emphasis) simulations\nConvert circuit to printed circuit board (more space efficient and permanent than a breadboard).\nCapture design history and facilitate rapid iteration.\nGenerate 3D “parts” to integrate with CAD.\n\n\n\n\n\nhttps://kicad.org\nA completely open-source alternative to Eagle.\nJust as capable as Altium Designer (to a point); similar workflow.",
+    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
     "crumbs": [
       "Learning Modules",
-      "ECAD using KiCad: Schematic Capture"
+      "Introduction to Circuits"
     ]
   },
   {
-    "objectID": "slides/ecad_kicad_schematic-notes.html#why-eda",
-    "href": "slides/ecad_kicad_schematic-notes.html#why-eda",
-    "title": "ECAD using KiCad: Schematic Capture",
+    "objectID": "slides/intro-circuits-notes.html#learning-objectives",
+    "href": "slides/intro-circuits-notes.html#learning-objectives",
+    "title": "Introduction to Circuits",
     "section": "",
-    "text": "Formally capture circuit schematics\nValidate circuit behavior (Electrical Rules Check)\nSPICE (Simulation Program with Integrated Circuit Emphasis) simulations\nConvert circuit to printed circuit board (more space efficient and permanent than a breadboard).\nCapture design history and facilitate rapid iteration.\nGenerate 3D “parts” to integrate with CAD.\n\n\n\n\n\nhttps://kicad.org\nA completely open-source alternative to Eagle.\nJust as capable as Altium Designer (to a point); similar workflow.",
+    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
     "crumbs": [
       "Learning Modules",
-      "ECAD using KiCad: Schematic Capture"
+      "Introduction to Circuits"
     ]
   },
   {
-    "objectID": "slides/ecad_kicad_schematic-notes.html#schematic-capture",
-    "href": "slides/ecad_kicad_schematic-notes.html#schematic-capture",
-    "title": "ECAD using KiCad: Schematic Capture",
-    "section": "Schematic Capture",
-    "text": "Schematic Capture\n\n\nUI/UX\n\n\n\nCreating a Schematic\nKiCad Documentation: Schematic Editing Operations\n\nCreate a New Project, which creates a schematic file.\nDO NOT CHANGE THE GRID SPACING!!\nSetup Page Settings...\nConfigure Schematic Setup...\nPlace component / part (Place Symbol) using default library. If component doesn’t exist, then you either need to:\n\nImport Parts into Libraries\nDownload the part from an online database (e.g., SnapEDA)\nCreate part using the Library Editor.\n\n\n\n\nAssigning Properties to Components\n\nAnnotate components togive each component a unique label (e.g., \\(R_1\\), \\(R_2\\))\n\n\n\n\n\n\n\nTip\n\n\n\nThis is now done automatically in KiCad 8.x, but you may want to manually override some of the annotation defaults.\n\n\n\nAssign component values (SI units)\nLabel nets with meaningful names\n\nNets are like nodes; common voltage connections.\nUse net labels to avoid connection chaos.\n\n\n\n\nIn-Class Exercise: Part I\nLet’s create a simple voltage divider circuit…\n\n\nPower Ports\n\nPower ports, including ground references, are also global net labels.\nComponent pins can be explicitly designated power in/out (in contrast to signal).\nPower, ideally, cascades top-to-bottom (+ \\(\\rightarrow\\) GND [\\(\\rightarrow\\) -]) on the schematic.\n\n\n\nIn-Class Exercise: Part II\nLet’s add power ports…",
+    "objectID": "slides/intro-circuits-notes.html#circuit",
+    "href": "slides/intro-circuits-notes.html#circuit",
+    "title": "Introduction to Circuits",
+    "section": "Circuit",
+    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\nQuestion\n\n\n\nWhat are common sources and loads in electronic circuits?",
     "crumbs": [
       "Learning Modules",
-      "ECAD using KiCad: Schematic Capture"
+      "Introduction to Circuits"
     ]
   },
   {
-    "objectID": "slides/ecad_kicad_schematic-notes.html#electrical-rules-check-erc",
-    "href": "slides/ecad_kicad_schematic-notes.html#electrical-rules-check-erc",
-    "title": "ECAD using KiCad: Schematic Capture",
-    "section": "Electrical Rules Check (ERC)",
-    "text": "Electrical Rules Check (ERC)\n\nCheck the validity of the schematic\nCommon error message:\n\n\n“Input Power pin not driven by any Output Power pins”\n\n\nKiCad checks to make sure that power can “drive” components that demand that input.\nYou can explicitly indicate this in the schematic using the PWR_FLAG symbol attached to the net in question.\nMight need to re-map pin types (Properties:Edit Symbol:Pin Table).\n\n\n\n\nBest Practices\n\nSignal, ideally, flows left-to-right (input \\(\\rightarrow\\) output).\nOutline and label functional blocks. Use Heirarchical Sheets to organize more clearly-defined sub-circuits.\nCan include non-electrical items, like Mounting Holes.\nAdd Test Pins/Pads to nets you will want to verify during testing.\n\nPower nets\nSignal I/O\n\nUse No-Connection flags for pins that are intentionally not connected to other components.\n\n\n\n\n\nschematic_annotated",
+    "objectID": "slides/intro-circuits-notes.html#sources",
+    "href": "slides/intro-circuits-notes.html#sources",
+    "title": "Introduction to Circuits",
+    "section": "Sources",
+    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored.",
     "crumbs": [
       "Learning Modules",
-      "ECAD using KiCad: Schematic Capture"
+      "Introduction to Circuits"
     ]
   },
   {
-    "objectID": "slides/ecad_kicad_schematic-notes.html#resources",
-    "href": "slides/ecad_kicad_schematic-notes.html#resources",
-    "title": "ECAD using KiCad: Schematic Capture",
-    "section": "Resources",
-    "text": "Resources\n\nKiCad Documentation\nSchematic Review Checklist",
+    "objectID": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
+    "href": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
+    "title": "Introduction to Circuits",
+    "section": "Biomedical Circuit Correlates",
+    "text": "Biomedical Circuit Correlates\n\nCardiovascular\n\nSource: Heart (pressure differential)\nLoad:\n\nCirculatory system\nOrgans\nResistance & elasticity (storage of energy)\n\nCurrent: Volumetric Flow Rate\n\n\n\nCardiovascular Analogy\n\n\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nHow does sympathetic and parasympathetic tone modulate systemic resistance and pressure?\n\n\n\n\nRespiratory\n\nSource: Diaphragm & Intercostal Muscles\nLoad: Airways / Lungs\nCurrent: Volumetric Airflow Rate",
     "crumbs": [
       "Learning Modules",
-      "ECAD using KiCad: Schematic Capture"
+      "Introduction to Circuits"
     ]
   },
   {
-    "objectID": "slides/ecad_kicad_schematic-slides.html#why-eda",
-    "href": "slides/ecad_kicad_schematic-slides.html#why-eda",
-    "title": "ECAD using KiCad: Schematic Capture",
-    "section": "Why EDA?",
-    "text": "Why EDA?\n\nFormally capture circuit schematics\nValidate circuit behavior (Electrical Rules Check)\nSPICE (Simulation Program with Integrated Circuit Emphasis) simulations\nConvert circuit to printed circuit board (more space efficient and permanent than a breadboard).\nCapture design history and facilitate rapid iteration.\nGenerate 3D “parts” to integrate with CAD."
+    "objectID": "slides/intro-circuits-notes.html#what-is-charge",
+    "href": "slides/intro-circuits-notes.html#what-is-charge",
+    "title": "Introduction to Circuits",
+    "section": "What is charge?",
+    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
   },
   {
-    "objectID": "slides/ecad_kicad_schematic-slides.html#schematic-capture",
-    "href": "slides/ecad_kicad_schematic-slides.html#schematic-capture",
-    "title": "ECAD using KiCad: Schematic Capture",
-    "section": "Schematic Capture",
-    "text": "Schematic Capture"
+    "objectID": "slides/intro-circuits-notes.html#what-is-current",
+    "href": "slides/intro-circuits-notes.html#what-is-current",
+    "title": "Introduction to Circuits",
+    "section": "What is current?",
+    "text": "What is current?\n\nCurrent\nCurrent is the time rate change of charge passing through a defined area.\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\n\n\nPolarity Conventions\n\n(+) direction of current flow represents flow of (+) charges (i.e., not electrons)\n\n\n\nSI Units\nCoulombs and amperes are SI units.\n\nCommon Unit Prefixes\n\n\nPower of 10\nPrefix\n\n\n\n\n\\(\\times 10^{12}\\)\nT (Tera)\n\n\n\\(\\times 10^9\\)\nG (Giga)\n\n\n\\(\\times 10^6\\)\nM (Mega)\n\n\n\\(\\times 10^3\\)\nk (kilo)\n\n\n\\(\\times 10^{-3}\\)\nm (milli)\n\n\n\\(\\times 10^{-6}\\)\n\\(\\mu\\) (micro)\n\n\n\\(\\times 10^{-9}\\)\nn (nano)\n\n\n\\(\\times 10^{-12}\\)\np (pico)\n\n\n\n\n\nCommon Current Magnitudes\n\nCommon Current Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nCircuit breaker limits / house electrical wires max\n10-20 A\n\n\nHome circuit breaker total\n200-300 A\n\n\nHairdryer\n&lt; 10 A\n\n\nCar Battery Max\n100s A\n\n\nLaptop Battery\n&lt; 1 A\n\n\nCellphone Battery\n10 mA (idle)  3 A (cell, camera)\n\n\nNerve Membrane Current\npA",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
   },
   {
-    "objectID": "slides/ecad_kicad_schematic-slides.html#electrical-rules-check-erc",
-    "href": "slides/ecad_kicad_schematic-slides.html#electrical-rules-check-erc",
-    "title": "ECAD using KiCad: Schematic Capture",
-    "section": "Electrical Rules Check (ERC)",
-    "text": "Electrical Rules Check (ERC)\n\nCheck the validity of the schematic\nCommon error message:\n\n\n“Input Power pin not driven by any Output Power pins”\n\n\nKiCad checks to make sure that power can “drive” components that demand that input.\nYou can explicitly indicate this in the schematic using the PWR_FLAG symbol attached to the net in question.\nMight need to re-map pin types (Properties:Edit Symbol:Pin Table)."
+    "objectID": "slides/intro-circuits-notes.html#what-is-voltage",
+    "href": "slides/intro-circuits-notes.html#what-is-voltage",
+    "title": "Introduction to Circuits",
+    "section": "What is voltage?",
+    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\n\nCommon Voltage Magnitudes\n\nCommon Voltage Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nWall Outlet\n110-240 V (AC)\n\n\nTransmission Line\nkV-MV\n\n\nLightning\n~100 MV\n\n\nAlkaline Battery Cell\n~1.5 V\n\n\nNerve Action Potential\n~75 mV\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nVoltage is a relative quantity; absolute voltage does not exist!",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
   },
   {
-    "objectID": "slides/ecad_kicad_schematic-slides.html#resources",
-    "href": "slides/ecad_kicad_schematic-slides.html#resources",
-    "title": "ECAD using KiCad: Schematic Capture",
-    "section": "Resources",
-    "text": "Resources\n\nKiCad Documentation\nSchematic Review Checklist"
+    "objectID": "slides/intro-circuits-notes.html#what-is-power",
+    "href": "slides/intro-circuits-notes.html#what-is-power",
+    "title": "Introduction to Circuits",
+    "section": "What is power?",
+    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]\n\nWhat do the units look like?\n\\[\n\\left[\\frac{J}{C} \\frac{C}{s}\\right] = \\left[\\frac{J}{s}\\right] = [W] (Watt)\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
   },
   {
-    "objectID": "software-install-tutorials.html",
-    "href": "software-install-tutorials.html",
-    "title": "Software Installation and Tutorials",
+    "objectID": "slides/intro-circuits-notes.html#what-happens-to-power",
+    "href": "slides/intro-circuits-notes.html#what-happens-to-power",
+    "title": "Introduction to Circuits",
+    "section": "What happens to power?",
+    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power.\n\nSign Conventions\n\\(P &lt; 0\\): energy is provided to the circuit (source) \\(P &gt; 0\\): energy is dissipated / stored (load)\nPower dissipated by a circuit element (load) is (+) when (+) current (\\(I\\)) flows from a (+) -&gt; (-) voltage (V).",
+    "crumbs": [
+      "Learning Modules",
+      "Introduction to Circuits"
+    ]
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#learning-objectives",
+    "href": "slides/intro-circuits-slides.html#learning-objectives",
+    "title": "Introduction to Circuits",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nWhat are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#circuit",
+    "href": "slides/intro-circuits-slides.html#circuit",
+    "title": "Introduction to Circuits",
+    "section": "Circuit",
+    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\n\nQuestion\n\n\nWhat are common sources and loads in electronic circuits?"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#sources",
+    "href": "slides/intro-circuits-slides.html#sources",
+    "title": "Introduction to Circuits",
+    "section": "Sources",
+    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored."
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
+    "href": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
+    "title": "Introduction to Circuits",
+    "section": "Biomedical Circuit Correlates",
+    "text": "Biomedical Circuit Correlates"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-charge",
+    "href": "slides/intro-circuits-slides.html#what-is-charge",
+    "title": "Introduction to Circuits",
+    "section": "What is charge?",
+    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-current",
+    "href": "slides/intro-circuits-slides.html#what-is-current",
+    "title": "Introduction to Circuits",
+    "section": "What is current?",
+    "text": "What is current?"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-voltage",
+    "href": "slides/intro-circuits-slides.html#what-is-voltage",
+    "title": "Introduction to Circuits",
+    "section": "What is voltage?",
+    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-is-power",
+    "href": "slides/intro-circuits-slides.html#what-is-power",
+    "title": "Introduction to Circuits",
+    "section": "What is power?",
+    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]"
+  },
+  {
+    "objectID": "slides/intro-circuits-slides.html#what-happens-to-power",
+    "href": "slides/intro-circuits-slides.html#what-happens-to-power",
+    "title": "Introduction to Circuits",
+    "section": "What happens to power?",
+    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power."
+  },
+  {
+    "objectID": "resources/teaching_assistant_expectations.html",
+    "href": "resources/teaching_assistant_expectations.html",
+    "title": "Teaching Assistant Expectations",
     "section": "",
-    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
+    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
     "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
+      "Resources",
+      "Teaching Assistant Expectations"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#kicad",
-    "href": "software-install-tutorials.html#kicad",
-    "title": "Software Installation and Tutorials",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "We will be using KiCad for electronic computer aided design (ECAD), including schematic capture and Simulation Program with Integrated Circuit Emphasis (SPICE) simulations.\nInstall KiCad on your laptop: https://www.kicad.org/",
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+  },
+  {
+    "objectID": "labs/kicad.html",
+    "href": "labs/kicad.html",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "",
+    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
     "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#visual-studio-code-ide",
-    "href": "software-install-tutorials.html#visual-studio-code-ide",
-    "title": "Software Installation and Tutorials",
-    "section": "Visual Studio Code (IDE)",
-    "text": "Visual Studio Code (IDE)\nI recommend using Visual Studio Code as the IDE for all projects in this class that require data analysis, plotting, etc.\nIn addition to installing the base program, please install the following Extensions:\n\nPython Extension Pack\nJupyter\nGitHub CoPilot (AI-assisted coding)\nSign up for free GitHub Education Student account to get “Pro” access to this extension: https://github.com/education/students\n\n\n\n\n\n\n\nTip\n\n\n\nYou will need a document to verify your student status that includes your dates of enrollment, which your DukeCard does not contain. Instead, you can get an Enrollment Verification document through DukeHub (Academics Tab) and convert the downloaded PDF to a JPG or PNG file to upload to GitHub.",
+    "objectID": "labs/kicad.html#learning-objectives",
+    "href": "labs/kicad.html#learning-objectives",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "",
+    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
     "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
-    "href": "software-install-tutorials.html#technical-report-preparation-jupyter-notebook",
-    "title": "Software Installation and Tutorials",
-    "section": "Technical Report Preparation (Jupyter Notebook)",
-    "text": "Technical Report Preparation (Jupyter Notebook)\nEach lab exercise will have an associated technical report submitted. These reports will be prepared and submitted using Python-based Jupyter notebooks that will be converted to PDF files and uploaded to Gradescope.\nIf you need to install a Python environment on your laptop, then this is a good starting point: Getting Started with Python in VS Code.\nThis is a good tutorial on getting started with Jupyter notebooks in VS Code: Jupyter Notebooks in Visual Studio Code.\nYou can also choose to edit your Jupyter notebooks with a cloud-based tool, like Google CoLab, but that approach will not receive help / troubleshooting from Dr. Palmeri or the teaching team.",
+    "objectID": "labs/kicad.html#voltage-divider-circuit",
+    "href": "labs/kicad.html#voltage-divider-circuit",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "Voltage Divider Circuit",
+    "text": "Voltage Divider Circuit\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate Maximum Power Transfer\nIn a recent problem set, you analytically solved for the load resistance that maximizes power transfer in a voltage divider circuit. In this section, you will simulate the same circuit in KiCad and verify your results.\n\nSweep the value of \\(R_2\\) (representing the load resistance) from 0.1 to 10k\\(\\Omega\\) in increments of 100\\(\\Omega\\), for a fixed \\(R_1\\) of 1k\\(\\Omega\\) (representing the source resistance).\nPlot the power dissipated in \\(R_2\\) as a function of \\(R_2\\) and identify the value that maximizes power transfer.\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your swept resistance plot demonstrating maximum power transfer to Gradescope.",
     "crumbs": [
-      "Course Information",
-      "Software Installation & Tutorials"
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
     ]
   },
   {
-    "objectID": "software-install-tutorials.html#gradescope",
-    "href": "software-install-tutorials.html#gradescope",
-    "title": "Software Installation and Tutorials",
-    "section": "Gradescope",
-    "text": "Gradescope\nPlease complete the Gradescope quiz when you are done installing all of these tools.",
+    "objectID": "labs/kicad.html#multi-source-circuit",
+    "href": "labs/kicad.html#multi-source-circuit",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "Multi-Source Circuit",
+    "text": "Multi-Source Circuit\nThe circuit shown below was one of the problems in your recent exam.\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate the Operating Point (OP) Analysis\n\nOperating Point simulations are appropriate for circuits that have DC sources and single-valued element current / voltage values.\nRun an OP simulation for this circuit and verify your results, as shown annoted in the circuit above and summarized below.\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your operating point (OP) simulation results to Gradescope.\n\n\n\n\nSimulate DC Sweeps\n\nPerform a new analysis that sweeps several components over a range of values:\n\nSweep \\(V_1\\) from 1 to 10 V in increments of 0.2 V\nSweep \\(I_1\\) from 1 to 5 A in increments of 0.2 A\n\nPlot:\n\n\\(I_{R_2}\\)\n\\(P_{V_1}\\)\n\\(P_{I_1}\\)\n\n\nYou should see results similar to those shown below.\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your DC sweep simulation results to Gradescope.",
+    "crumbs": [
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
+    ]
+  },
+  {
+    "objectID": "bme-lab-policies.html",
+    "href": "bme-lab-policies.html",
+    "title": "BME Lab Procedures and Safety Expectations",
+    "section": "",
+    "text": "Important\n\n\n\nSafety is Always First, Cleanliness a close second\n\n\nSafety always comes first in lab. To that end, you are expected to follow the rules in this document. Failure to do so may result in revocation of laboratory privileges, reduction of your course grade, and possible withdrawal from your course. Understanding risks and learning to work safely in the laboratory are an important part of your education.\nBefore entering lab, your safety training must be current. You need Duke’s Occupational and Environmental Safety Office’s:\n\nFire/Life Safety, and\nLaboratory Safety-General\n\ntraining modules. We know that you may have done this training before, but it expires in one year, and you must be current through the end of the semester.\nMost accidents are the result of a series of failures. That said, most accidents are preventable. You are responsible for your safety and the safety of those around you. The vast majority of accidents involve some combination of inattention, carelessness, horseplay, impairment, broken tools, and lack of knowledge. All of these factors can be mitigated and it’s your job to do so.\nYou are responsible for keeping the lab clean.\n\n\n\n\n\n\nWarning\n\n\n\nFailure to keep a clean workspace can result in a lower grade for you and your team.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you or someone else in lab needs immediate medical attention, call 911.\n\n\nIn case you need to report your location, you are in CIEMAS B209. Non-emergent problems, call 681-WELL (681-9355). If you are injured in lab, you must let an instructor/TA/lab staff member know as soon as possible. Lab staff after-hours phone number is on the contact cards posted outside every lab door.\n\n\n\n\n\n\nNote\n\n\n\nKeep these points in mind… - In an emergency, call 911. Location: CIEMAS B209\n\nIn the event of a non-emergent injury, seek medical attention and let an instructor/TA/lab staff know within 12 hours.\nFind the emergency exits.\nNever work alone. Two or more people must be present and able to see and hear each other.\nInspect every tool before use. Remove broken tools from service, place them on the broken tools shelf at the back of the room, and notify lab staff.\nWear safety glasses when appropriate. This includes, but is not limited to, activities such as soldering, sanding, filing, hammering, cutting, and drilling.\nWear hearing protection when using noisy tools such as drills and the Dremel tool. Ear buds or music headphones are not sufficient hearing protection.\nNever work impaired. If you are tired, stressed, in a rush, or impaired in any other way then do not work in lab. Go home and recuperate.\nTie back long hair to keep it away from tools.\nClosed-toe shoes must be worn in the lab. Long trousers are preferred.\nProperly secure materials. Clamps, vises and portable worktables are available.\nDon’t force anything. If the job requires significant force, you’re doing it wrong.\nKeep food and drink out of the lab!\nPower down equipment when finished with it.\nA fire extinguisher is outside the door.\nWash your hands before leaving lab.\nBits of unused solder, wire and lead trimmings all go in a “Solder Scrap” container.\nAnything contaminated with solder paste (wipes, boards, applicators) goes in a “Solder Scrap” container.\nOther hazardous waste dealt with on a case by case basis; ask lab staff for help.\nPut tools away, in the right place. Tool drawers are labeled, but if you’re unsure where to put a tool, ask your TA/lab staff.\nDo not hoard parts or tools.\nThis bears repeating: Take the parts you need, but only the parts you need. Do not hoard parts. If you see a part becoming scarce, let lab staff know so they can re-order.\nBenches are for temporary use only. Leave no trace that you were at the bench when you leave for the day. Rarely, with approval, a bench can be claimed for the semester.\nAny and all paint must be pre-approved by an instructor/TA/lab staff. Unapproved paint on projects will result in a lower grade. (Spray paint indoors is never approved.)\nA representative from your group is expected to participate in weekly cleaning. Your instructor will give you the schedule.\nPlace a cover on the bench for messy work. Chucks and Ram Board are available for this.\nLab staff have a collection of good soldering tips and fine tools (e.g. tweezers). If you have need for something better than you can find in lab, ask lab staff.",
     "crumbs": [
       "Course Information",
-      "Software Installation & Tutorials"
+      "BME Lab Policies"
     ]
   },
   {
@@ -659,147 +1028,6 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Biomedical Electronic Measurements",
-    "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n\n\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html",
-    "href": "problem_sets/ps3_sltns.html",
-    "title": "Problem Set 03: Solutions",
-    "section": "",
-    "text": "Warning\n\n\n\nThese solutions have been adapted from previous years, but I haven’t had the chance to 100% guarentee their accuracy. If anything seems off, please don’t hesitate to ask questions on Ed!"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-1",
-    "href": "problem_sets/ps3_sltns.html#problem-1",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 1",
-    "text": "Problem 1"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-2",
-    "href": "problem_sets/ps3_sltns.html#problem-2",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 2",
-    "text": "Problem 2"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-3",
-    "href": "problem_sets/ps3_sltns.html#problem-3",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 3",
-    "text": "Problem 3"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-4",
-    "href": "problem_sets/ps3_sltns.html#problem-4",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 4",
-    "text": "Problem 4"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-5",
-    "href": "problem_sets/ps3_sltns.html#problem-5",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 5",
-    "text": "Problem 5"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-6",
-    "href": "problem_sets/ps3_sltns.html#problem-6",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 6",
-    "text": "Problem 6"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-7",
-    "href": "problem_sets/ps3_sltns.html#problem-7",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 7",
-    "text": "Problem 7"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-8",
-    "href": "problem_sets/ps3_sltns.html#problem-8",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 8",
-    "text": "Problem 8"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-9",
-    "href": "problem_sets/ps3_sltns.html#problem-9",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 9",
-    "text": "Problem 9"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-10",
-    "href": "problem_sets/ps3_sltns.html#problem-10",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 10",
-    "text": "Problem 10"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-11",
-    "href": "problem_sets/ps3_sltns.html#problem-11",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 11",
-    "text": "Problem 11"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-12",
-    "href": "problem_sets/ps3_sltns.html#problem-12",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 12",
-    "text": "Problem 12"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-13",
-    "href": "problem_sets/ps3_sltns.html#problem-13",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 13",
-    "text": "Problem 13"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-14",
-    "href": "problem_sets/ps3_sltns.html#problem-14",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 14",
-    "text": "Problem 14"
-  },
-  {
-    "objectID": "problem_sets/ps3_sltns.html#problem-15",
-    "href": "problem_sets/ps3_sltns.html#problem-15",
-    "title": "Problem Set 03: Solutions",
-    "section": "Problem 15",
-    "text": "Problem 15"
-  },
-  {
-    "objectID": "problem_sets/ps1.html",
-    "href": "problem_sets/ps1.html",
-    "title": "Problem Set 01",
-    "section": "",
-    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 01"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps1.html#problem-set-format-guidelines",
-    "href": "problem_sets/ps1.html#problem-set-format-guidelines",
-    "title": "Problem Set 01",
-    "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 01"
-    ]
-  },
-  {
     "objectID": "faq.html",
     "href": "faq.html",
     "title": "Frequently Asked Questions",
@@ -808,105 +1036,6 @@
     "crumbs": [
       "Course Information",
       "FAQ"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps2.html",
-    "href": "problem_sets/ps2.html",
-    "title": "Problem Set 02",
-    "section": "",
-    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 02"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps2.html#problem-set-format-guidelines",
-    "href": "problem_sets/ps2.html#problem-set-format-guidelines",
-    "title": "Problem Set 02",
-    "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 02"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps3.html",
-    "href": "problem_sets/ps3.html",
-    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
-    "section": "",
-    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 03"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps3.html#node-voltage-analysis",
-    "href": "problem_sets/ps3.html#node-voltage-analysis",
-    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
-    "section": "Node Voltage Analysis",
-    "text": "Node Voltage Analysis\nSolve the following problems in this section using Node Voltage Analysis.\n\n\nFind voltage (\\(v\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nFind the current (\\(i\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nFind the currents, \\(i_1\\) and \\(i_3\\), as specified in the circuit below, given \\(R_1 = 3 \\Omega\\), \\(R_2 = 1 \\Omega\\) and \\(R_3 = 6 \\Omega\\).",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 03"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps3.html#mesh-current-analysis",
-    "href": "problem_sets/ps3.html#mesh-current-analysis",
-    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
-    "section": "Mesh Current Analysis",
-    "text": "Mesh Current Analysis\nSolve the following problems in this section using Mesh Current Analysis.\n\n\nFind the currents, \\(i_1\\) and \\(i_3\\), as specified in the circuit below, given \\(R_1 = 3 \\Omega\\), \\(R_2 = 1 \\Omega\\) and \\(R_3 = 6 \\Omega\\). (This is the same circuit analysis in problem 3 above, but solved using a different method.)\n\n\n\n\n\n\n\n\nFind the voltage (\\(v\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nSolve for the mesh currents \\(i_A\\), \\(i_B\\), and \\(i_C\\) as shown in the circuit below.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 03"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps3.html#superposition",
-    "href": "problem_sets/ps3.html#superposition",
-    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
-    "section": "Superposition",
-    "text": "Superposition\n\n\nUsing superposition, solve for \\(i_{R_3}\\), and determine what fraction of that current comes from \\(V_{S1}\\) and \\(V_{S2}\\).",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 03"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps3.html#thevenin-norton-equivalent-circuits",
-    "href": "problem_sets/ps3.html#thevenin-norton-equivalent-circuits",
-    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
-    "section": "Thevenin & Norton Equivalent Circuits",
-    "text": "Thevenin & Norton Equivalent Circuits\n\n\nFind the Thevenin equivalent circuit as seen by the 3 \\(\\Omega\\) resistor in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind \\(v_{R_3}\\) in the circuit below by replacing the rest of the circuit with its Thevenin equivalent.\n\n\n\n\n\n\n\n\nFind the Norton equivalent circuit as seen by the 2 \\(\\Omega\\) resistor in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind the Norton equivalent circuit to the left of terminals \\(a\\) and \\(b\\) in the circuit below.\n\n\n\n\n\n\n\n\nFind the Thevenin equivalent circuit as seen by the load resistor \\(R_L\\) in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind the Thevenin equivalent resistance (\\(R_{TH}\\)) as seen by the load resistor \\(R_L\\) in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 03"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps3.html#maximum-power-transfer",
-    "href": "problem_sets/ps3.html#maximum-power-transfer",
-    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
-    "section": "Maximum Power Transfer",
-    "text": "Maximum Power Transfer\n\n\nIf the conditions for maximum power transfer between the source and the load exist, determine the following:\n\n\nThe value of the load resistance, \\(R_L\\).\nThe power dissipated by \\(R_L\\).\nThe efficiency of the circuit (i.e., the ratio of the power dissipated by \\(R_L\\) to the total power supplied by the source (\\(V_T\\))).\n\n\n\n\n\n\n\n\nRemember that a non-ideal voltage source can be modeled as an ideal voltage source (\\(V_S\\))in series with a resistor (\\(R_S\\)). For the resistive load (\\(R_L\\)) shown in the circuit below:\n\n\n\n\n\n\n\nPlot the power dissipated in the load as a function of \\(R_L\\) for a reasonable range of \\(R_L\\) values.\nWhat can you conclude from you plot in part (a) regarding the value of \\(R_L\\) that maximizes the power dissipated in the load and how that tapers off for lower/higher load resistances?\nProve, mathematically, that your conclusion is valid for all values of \\(R_L\\) and \\(R_S\\).",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 03"
-    ]
-  },
-  {
-    "objectID": "problem_sets/ps3.html#problem-set-format-guidelines",
-    "href": "problem_sets/ps3.html#problem-set-format-guidelines",
-    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
-    "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 03"
     ]
   },
   {
@@ -922,61 +1051,6 @@
     "title": "TODO",
     "section": "",
     "text": "[ ] Organize slide images by lecture (not monolithic directory)"
-  },
-  {
-    "objectID": "resources/teaching_assistant_expectations.html",
-    "href": "resources/teaching_assistant_expectations.html",
-    "title": "Teaching Assistant Expectations",
-    "section": "",
-    "text": "A teaching assistant for this class is expected to:\n\nCheck Ed Discussion for questions at least once daily.\nTriage student GitLab Issues at least once daily.\nStaff 3 lab hours each week, communicating these hours via Ed Discusison and Canvas announcements.\nHelp provide timely assignment feedback via GitLab Merge Request code reviews and Gradescope.\n\nThese responsibilities are expected to take up to 10 hours / week.\nDr. Palmeri will have a group Teams chat for “realtime” communication with all TAs and the department lab staff. A Todoist project for the course will also be shared with the teaching team to track pending tasks.\nStudents who are paid hourly must submit timecards by 5 PM on Mondays when timecards are due so that Dr. Palmeri can approve your hours in a timely manner.",
-    "crumbs": [
-      "Resources",
-      "Teaching Assistant Expectations"
-    ]
-  },
-  {
-    "objectID": "labs/kicad.html",
-    "href": "labs/kicad.html",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
-    "section": "",
-    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
-    "crumbs": [
-      "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
-    ]
-  },
-  {
-    "objectID": "labs/kicad.html#learning-objectives",
-    "href": "labs/kicad.html#learning-objectives",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
-    "section": "",
-    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
-    "crumbs": [
-      "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
-    ]
-  },
-  {
-    "objectID": "labs/kicad.html#voltage-divider-circuit",
-    "href": "labs/kicad.html#voltage-divider-circuit",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
-    "section": "Voltage Divider Circuit",
-    "text": "Voltage Divider Circuit\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate Maximum Power Transfer\nIn a recent problem set, you analytically solved for the load resistance that maximizes power transfer in a voltage divider circuit. In this section, you will simulate the same circuit in KiCad and verify your results.\n\nSweep the value of \\(R_2\\) (representing the load resistance) from 0.1 to 10k\\(\\Omega\\) in increments of 100\\(\\Omega\\), for a fixed \\(R_1\\) of 1k\\(\\Omega\\) (representing the source resistance).\nPlot the power dissipated in \\(R_2\\) as a function of \\(R_2\\) and identify the value that maximizes power transfer.\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your swept resistance plot demonstrating maximum power transfer to Gradescope.",
-    "crumbs": [
-      "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
-    ]
-  },
-  {
-    "objectID": "labs/kicad.html#multi-source-circuit",
-    "href": "labs/kicad.html#multi-source-circuit",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
-    "section": "Multi-Source Circuit",
-    "text": "Multi-Source Circuit\nThe circuit shown below was one of the problems in your recent exam.\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate the Operating Point (OP) Analysis\n\nOperating Point simulations are appropriate for circuits that have DC sources and single-valued element current / voltage values.\nRun an OP simulation for this circuit and verify your results, as shown annoted in the circuit above and summarized below.\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your operating point (OP) simulation results to Gradescope.\n\n\n\n\nSimulate DC Sweeps\n\nPerform a new analysis that sweeps several components over a range of values:\n\nSweep \\(V_1\\) from 1 to 10 V in increments of 0.2 V\nSweep \\(I_1\\) from 1 to 5 A in increments of 0.2 A\n\nPlot:\n\n\\(I_{R_2}\\)\n\\(P_{V_1}\\)\n\\(P_{I_1}\\)\n\n\nYou should see results similar to those shown below.\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your DC sweep simulation results to Gradescope.",
-    "crumbs": [
-      "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
-    ]
   },
   {
     "objectID": "slides/sources-slides.html#summary-of-analysis-approaches-so-far",
@@ -1152,179 +1226,6 @@
     ]
   },
   {
-    "objectID": "slides/intro-circuits-slides.html#learning-objectives",
-    "href": "slides/intro-circuits-slides.html#learning-objectives",
-    "title": "Introduction to Circuits",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nWhat are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#circuit",
-    "href": "slides/intro-circuits-slides.html#circuit",
-    "title": "Introduction to Circuits",
-    "section": "Circuit",
-    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\n\nQuestion\n\n\nWhat are common sources and loads in electronic circuits?"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#sources",
-    "href": "slides/intro-circuits-slides.html#sources",
-    "title": "Introduction to Circuits",
-    "section": "Sources",
-    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored."
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
-    "href": "slides/intro-circuits-slides.html#biomedical-circuit-correlates",
-    "title": "Introduction to Circuits",
-    "section": "Biomedical Circuit Correlates",
-    "text": "Biomedical Circuit Correlates"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-charge",
-    "href": "slides/intro-circuits-slides.html#what-is-charge",
-    "title": "Introduction to Circuits",
-    "section": "What is charge?",
-    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-current",
-    "href": "slides/intro-circuits-slides.html#what-is-current",
-    "title": "Introduction to Circuits",
-    "section": "What is current?",
-    "text": "What is current?"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-voltage",
-    "href": "slides/intro-circuits-slides.html#what-is-voltage",
-    "title": "Introduction to Circuits",
-    "section": "What is voltage?",
-    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-is-power",
-    "href": "slides/intro-circuits-slides.html#what-is-power",
-    "title": "Introduction to Circuits",
-    "section": "What is power?",
-    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]"
-  },
-  {
-    "objectID": "slides/intro-circuits-slides.html#what-happens-to-power",
-    "href": "slides/intro-circuits-slides.html#what-happens-to-power",
-    "title": "Introduction to Circuits",
-    "section": "What happens to power?",
-    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power."
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html",
-    "href": "slides/intro-circuits-notes.html",
-    "title": "Introduction to Circuits",
-    "section": "",
-    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#learning-objectives",
-    "href": "slides/intro-circuits-notes.html#learning-objectives",
-    "title": "Introduction to Circuits",
-    "section": "",
-    "text": "What are circuits?\nHow does electric circuit analysis apply to other biomedical systems?\nCircuit analysis conventions",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#circuit",
-    "href": "slides/intro-circuits-notes.html#circuit",
-    "title": "Introduction to Circuits",
-    "section": "Circuit",
-    "text": "Circuit\nCircuits are interconnection of elements (sources and loads).\n\n\n\n\n\n\n\nQuestion\n\n\n\nWhat are common sources and loads in electronic circuits?",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#sources",
-    "href": "slides/intro-circuits-notes.html#sources",
-    "title": "Introduction to Circuits",
-    "section": "Sources",
-    "text": "Sources\n\nVoltage differentials -&gt; EMF -&gt; electric current (moving electrons) to flow through “closed circuit” paths.\nThe potential energy in the source to move electrons to the load, where that energy is either dissipated or stored.",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
-    "href": "slides/intro-circuits-notes.html#biomedical-circuit-correlates",
-    "title": "Introduction to Circuits",
-    "section": "Biomedical Circuit Correlates",
-    "text": "Biomedical Circuit Correlates\n\nCardiovascular\n\nSource: Heart (pressure differential)\nLoad:\n\nCirculatory system\nOrgans\nResistance & elasticity (storage of energy)\n\nCurrent: Volumetric Flow Rate\n\n\n\nCardiovascular Analogy\n\n\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nHow does sympathetic and parasympathetic tone modulate systemic resistance and pressure?\n\n\n\n\nRespiratory\n\nSource: Diaphragm & Intercostal Muscles\nLoad: Airways / Lungs\nCurrent: Volumetric Airflow Rate",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-is-charge",
-    "href": "slides/intro-circuits-notes.html#what-is-charge",
-    "title": "Introduction to Circuits",
-    "section": "What is charge?",
-    "text": "What is charge?\n\\[\n\\begin{gather}\nq_e = -1.602 \\times 10^{-19} C (Coulomb)\\\\\nq_p = -q_e\n\\end{gather}\n\\]",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-is-current",
-    "href": "slides/intro-circuits-notes.html#what-is-current",
-    "title": "Introduction to Circuits",
-    "section": "What is current?",
-    "text": "What is current?\n\nCurrent\nCurrent is the time rate change of charge passing through a defined area.\n\\[\ni = \\frac{dq}{dt} \\left[\\frac{C}{s}\\right] = [A] (Ampere)\n\\]\n\n\nPolarity Conventions\n\n(+) direction of current flow represents flow of (+) charges (i.e., not electrons)\n\n\n\nSI Units\nCoulombs and amperes are SI units.\n\nCommon Unit Prefixes\n\n\nPower of 10\nPrefix\n\n\n\n\n\\(\\times 10^{12}\\)\nT (Tera)\n\n\n\\(\\times 10^9\\)\nG (Giga)\n\n\n\\(\\times 10^6\\)\nM (Mega)\n\n\n\\(\\times 10^3\\)\nk (kilo)\n\n\n\\(\\times 10^{-3}\\)\nm (milli)\n\n\n\\(\\times 10^{-6}\\)\n\\(\\mu\\) (micro)\n\n\n\\(\\times 10^{-9}\\)\nn (nano)\n\n\n\\(\\times 10^{-12}\\)\np (pico)\n\n\n\n\n\nCommon Current Magnitudes\n\nCommon Current Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nCircuit breaker limits / house electrical wires max\n10-20 A\n\n\nHome circuit breaker total\n200-300 A\n\n\nHairdryer\n&lt; 10 A\n\n\nCar Battery Max\n100s A\n\n\nLaptop Battery\n&lt; 1 A\n\n\nCellphone Battery\n10 mA (idle)  3 A (cell, camera)\n\n\nNerve Membrane Current\npA",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-is-voltage",
-    "href": "slides/intro-circuits-notes.html#what-is-voltage",
-    "title": "Introduction to Circuits",
-    "section": "What is voltage?",
-    "text": "What is voltage?\nA voltage differential represents the energy (\\(dW\\)) available in flowing charge (\\(dq\\)), avialalbe as stored potential energy in a source.\n\\[\nV = \\frac{dW}{dq} \\left[\\frac{J}{C}\\right] = [V] (Volt)\n\\]\n\nCommon Voltage Magnitudes\n\nCommon Voltage Magnitudes\n\n\nDescription\nApprox. Magnitude\n\n\n\n\nWall Outlet\n110-240 V (AC)\n\n\nTransmission Line\nkV-MV\n\n\nLightning\n~100 MV\n\n\nAlkaline Battery Cell\n~1.5 V\n\n\nNerve Action Potential\n~75 mV\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nVoltage is a relative quantity; absolute voltage does not exist!",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-is-power",
-    "href": "slides/intro-circuits-notes.html#what-is-power",
-    "title": "Introduction to Circuits",
-    "section": "What is power?",
-    "text": "What is power?\nPower represents the rate at which work can be done (i.e., energy / unit time).\n\\[\nP = \\frac{dw}{dt} = \\frac{dW}{dq} \\frac{dq}{dt} = VI\n\\]\n\nWhat do the units look like?\n\\[\n\\left[\\frac{J}{C} \\frac{C}{s}\\right] = \\left[\\frac{J}{s}\\right] = [W] (Watt)\n\\]",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
-    "objectID": "slides/intro-circuits-notes.html#what-happens-to-power",
-    "href": "slides/intro-circuits-notes.html#what-happens-to-power",
-    "title": "Introduction to Circuits",
-    "section": "What happens to power?",
-    "text": "What happens to power?\nCircuit elements my absorb (dissipate or store) [load] or provide [source] power.\n\nSign Conventions\n\\(P &lt; 0\\): energy is provided to the circuit (source) \\(P &gt; 0\\): energy is dissipated / stored (load)\nPower dissipated by a circuit element (load) is (+) when (+) current (\\(I\\)) flows from a (+) -&gt; (-) voltage (V).",
-    "crumbs": [
-      "Learning Modules",
-      "Introduction to Circuits"
-    ]
-  },
-  {
     "objectID": "slides/circuit-analysis-slides.html#learning-objectives",
     "href": "slides/circuit-analysis-slides.html#learning-objectives",
     "title": "Node Voltage & Mesh Current Analysis",
@@ -1496,6 +1397,97 @@
       "Learning Modules",
       "Circuit Analysis Techniques"
     ]
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#learning-objectives",
+    "href": "slides/reactive-components-slides.html#learning-objectives",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nDefine and describe the behavior of capacitors and inductors in DC and AC circuits.\nAnalyze circuits with capacitors and inductors in series and parallel.\nUnderstand the concept of reactance and impedance."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#relevant-reading",
+    "href": "slides/reactive-components-slides.html#relevant-reading",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Relevant Reading",
+    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Theory)\nChapter 3.6 (Caps in Circuits)\n\n```"
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#reactive-components",
+    "href": "slides/reactive-components-slides.html#reactive-components",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Reactive Components",
+    "text": "Reactive Components\n\nTo date, we have only considered resistors, which dissipate energy as heat, to consume source power.\nResistive components respond “instantaneously” to changes in voltage and current, as defined by Ohm’s Law.\nReactive components, such as capacitors and inductors, store energy in electric and magnetic fields, respectively.\nThis storage of energy takes time, so reactive components do not respond instantaneously to changes in voltage and current. This means that circuits with reactive components have transient and steady-state responses to time-varying sources."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#ideal-capacitors",
+    "href": "slides/reactive-components-slides.html#ideal-capacitors",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Ideal Capacitors",
+    "text": "Ideal Capacitors\n\nA capacitor is a device that stores energy in an electric field.\nComposed of two conductive plates separated by an insulating material (dielectric) that contains dipoles that become polarized in the presence of an electric field.\nPermititivity, ε, is a measure of how easily a material can become polarized. (\\(\\epsilon_{air} = 8.85 \\times 10^{-12} \\text{ F/m}\\))\nCharge, Q, is stored on the plates of a capacitor:\n\nTake a finite amount of time to charge/discharge.\nFinite capacity to store charge.\n\nCapacitance, C, is the ratio of charge to voltage:\n\\[\nC = \\frac{Q}{V} = \\frac{\\epsilon A}{d} \\quad \\text{(Farads, F)}\n\\]"
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#capacitor-voltage-current-relationship",
+    "href": "slides/reactive-components-slides.html#capacitor-voltage-current-relationship",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Capacitor Voltage-Current Relationship",
+    "text": "Capacitor Voltage-Current Relationship\n\\[\nQ = CV \\quad \\Rightarrow \\quad I = \\frac{dQ}{dt} = C\\frac{dV}{dt}\n\\]\n\nCapacitors have a “memory” since \\(i_c(t)\\) depends on the rate of change of the voltage across the capacitor (i.e., how much charge has accumulated for storage over time).\nCapacitors are linear elements since differentiation is a linear operation.\nCapacitors block DC current in steady-state since \\(dV/dt = 0\\) for constant voltage.\n\n\n\n\n\n\n\nTip\n\n\nFor a steady-state DC voltage, a capacitor acts like an open circuit.\n\n\n\n\n\n\n\n\n\nTip\n\n\nFor a time-varying voltage, an uncharged capacitor acts like a short circuit at the instant the voltage changes."
+  },
+  {
+    "objectID": "slides/reactive-components-slides.html#capacitor-voltage-current-temporal-relationship",
+    "href": "slides/reactive-components-slides.html#capacitor-voltage-current-temporal-relationship",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Capacitor Voltage-Current Temporal Relationship",
+    "text": "Capacitor Voltage-Current Temporal Relationship\n\\[\n\\int i_c(t) dt = C \\int \\frac{dV_c(t)}{dt} dt \\quad \\Rightarrow \\quad V_c(t) = V_c(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_c(\\tau) d\\tau\n\\]\n\nThe voltage across a capacitor at time \\(t\\) depends on:\n\nThe initial voltage \\(V_c(t_0)\\), and\nThe integral of the current over time.\n\\(t_0\\) is the time when the capacitor was last charged or discharged and this new change in current is being evaluated.\n\nCapacitor Internals"
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html",
+    "href": "slides/reactive-components-notes.html",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "",
+    "text": "Define and describe the behavior of capacitors and inductors in DC and AC circuits.\nAnalyze circuits with capacitors and inductors in series and parallel.\nUnderstand the concept of reactance and impedance."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#learning-objectives",
+    "href": "slides/reactive-components-notes.html#learning-objectives",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "",
+    "text": "Define and describe the behavior of capacitors and inductors in DC and AC circuits.\nAnalyze circuits with capacitors and inductors in series and parallel.\nUnderstand the concept of reactance and impedance."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#relevant-reading",
+    "href": "slides/reactive-components-notes.html#relevant-reading",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Relevant Reading",
+    "text": "Relevant Reading\nPractical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:\n\nChapter 2.23 (Theory)\nChapter 3.6 (Caps in Circuits)\n\n```"
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#reactive-components",
+    "href": "slides/reactive-components-notes.html#reactive-components",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Reactive Components",
+    "text": "Reactive Components\n\nTo date, we have only considered resistors, which dissipate energy as heat, to consume source power.\nResistive components respond “instantaneously” to changes in voltage and current, as defined by Ohm’s Law.\nReactive components, such as capacitors and inductors, store energy in electric and magnetic fields, respectively.\nThis storage of energy takes time, so reactive components do not respond instantaneously to changes in voltage and current. This means that circuits with reactive components have transient and steady-state responses to time-varying sources."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#ideal-capacitors",
+    "href": "slides/reactive-components-notes.html#ideal-capacitors",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Ideal Capacitors",
+    "text": "Ideal Capacitors\n\nA capacitor is a device that stores energy in an electric field.\nComposed of two conductive plates separated by an insulating material (dielectric) that contains dipoles that become polarized in the presence of an electric field.\nPermititivity, ε, is a measure of how easily a material can become polarized. (\\(\\epsilon_{air} = 8.85 \\times 10^{-12} \\text{ F/m}\\))\nCharge, Q, is stored on the plates of a capacitor:\n\nTake a finite amount of time to charge/discharge.\nFinite capacity to store charge.\n\nCapacitance, C, is the ratio of charge to voltage:\n\\[\nC = \\frac{Q}{V} = \\frac{\\epsilon A}{d} \\quad \\text{(Farads, F)}\n\\]"
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#capacitor-voltage-current-relationship",
+    "href": "slides/reactive-components-notes.html#capacitor-voltage-current-relationship",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Capacitor Voltage-Current Relationship",
+    "text": "Capacitor Voltage-Current Relationship\n\\[\nQ = CV \\quad \\Rightarrow \\quad I = \\frac{dQ}{dt} = C\\frac{dV}{dt}\n\\]\n\nCapacitors have a “memory” since \\(i_c(t)\\) depends on the rate of change of the voltage across the capacitor (i.e., how much charge has accumulated for storage over time).\nCapacitors are linear elements since differentiation is a linear operation.\nCapacitors block DC current in steady-state since \\(dV/dt = 0\\) for constant voltage.\n\n\n\n\n\n\n\nTip\n\n\n\nFor a steady-state DC voltage, a capacitor acts like an open circuit.\n\n\n\n\n\n\n\n\nTip\n\n\n\nFor a time-varying voltage, an uncharged capacitor acts like a short circuit at the instant the voltage changes."
+  },
+  {
+    "objectID": "slides/reactive-components-notes.html#capacitor-voltage-current-temporal-relationship",
+    "href": "slides/reactive-components-notes.html#capacitor-voltage-current-temporal-relationship",
+    "title": "Reactive Components: Capacitors & Inductors",
+    "section": "Capacitor Voltage-Current Temporal Relationship",
+    "text": "Capacitor Voltage-Current Temporal Relationship\n\\[\n\\int i_c(t) dt = C \\int \\frac{dV_c(t)}{dt} dt \\quad \\Rightarrow \\quad V_c(t) = V_c(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_c(\\tau) d\\tau\n\\]\n\nThe voltage across a capacitor at time \\(t\\) depends on:\n\nThe initial voltage \\(V_c(t_0)\\), and\nThe integral of the current over time.\n\\(t_0\\) is the time when the capacitor was last charged or discharged and this new change in current is being evaluated.\n\nCapacitor Internals"
   },
   {
     "objectID": "slides/ohm-kcl-kvl-slides.html#learning-objectives",
@@ -1758,6 +1750,105 @@
     "crumbs": [
       "Learning Modules",
       "Ohm's Law, KCL, and KVL"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps3.html",
+    "href": "problem_sets/ps3.html",
+    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
+    "section": "",
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps3.html#node-voltage-analysis",
+    "href": "problem_sets/ps3.html#node-voltage-analysis",
+    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
+    "section": "Node Voltage Analysis",
+    "text": "Node Voltage Analysis\nSolve the following problems in this section using Node Voltage Analysis.\n\n\nFind voltage (\\(v\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nFind the current (\\(i\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nFind the currents, \\(i_1\\) and \\(i_3\\), as specified in the circuit below, given \\(R_1 = 3 \\Omega\\), \\(R_2 = 1 \\Omega\\) and \\(R_3 = 6 \\Omega\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps3.html#mesh-current-analysis",
+    "href": "problem_sets/ps3.html#mesh-current-analysis",
+    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
+    "section": "Mesh Current Analysis",
+    "text": "Mesh Current Analysis\nSolve the following problems in this section using Mesh Current Analysis.\n\n\nFind the currents, \\(i_1\\) and \\(i_3\\), as specified in the circuit below, given \\(R_1 = 3 \\Omega\\), \\(R_2 = 1 \\Omega\\) and \\(R_3 = 6 \\Omega\\). (This is the same circuit analysis in problem 3 above, but solved using a different method.)\n\n\n\n\n\n\n\n\nFind the voltage (\\(v\\)) as specified in the circuit below.\n\n\n\n\n\n\n\n\nSolve for the mesh currents \\(i_A\\), \\(i_B\\), and \\(i_C\\) as shown in the circuit below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps3.html#superposition",
+    "href": "problem_sets/ps3.html#superposition",
+    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
+    "section": "Superposition",
+    "text": "Superposition\n\n\nUsing superposition, solve for \\(i_{R_3}\\), and determine what fraction of that current comes from \\(V_{S1}\\) and \\(V_{S2}\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps3.html#thevenin-norton-equivalent-circuits",
+    "href": "problem_sets/ps3.html#thevenin-norton-equivalent-circuits",
+    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
+    "section": "Thevenin & Norton Equivalent Circuits",
+    "text": "Thevenin & Norton Equivalent Circuits\n\n\nFind the Thevenin equivalent circuit as seen by the 3 \\(\\Omega\\) resistor in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind \\(v_{R_3}\\) in the circuit below by replacing the rest of the circuit with its Thevenin equivalent.\n\n\n\n\n\n\n\n\nFind the Norton equivalent circuit as seen by the 2 \\(\\Omega\\) resistor in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind the Norton equivalent circuit to the left of terminals \\(a\\) and \\(b\\) in the circuit below.\n\n\n\n\n\n\n\n\nFind the Thevenin equivalent circuit as seen by the load resistor \\(R_L\\) in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).\n\n\n\n\n\n\n\n\nFind the Thevenin equivalent resistance (\\(R_{TH}\\)) as seen by the load resistor \\(R_L\\) in the circuit below (i.e., from the perspective of terminals \\(a\\) and \\(b\\)).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps3.html#maximum-power-transfer",
+    "href": "problem_sets/ps3.html#maximum-power-transfer",
+    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
+    "section": "Maximum Power Transfer",
+    "text": "Maximum Power Transfer\n\n\nIf the conditions for maximum power transfer between the source and the load exist, determine the following:\n\n\nThe value of the load resistance, \\(R_L\\).\nThe power dissipated by \\(R_L\\).\nThe efficiency of the circuit (i.e., the ratio of the power dissipated by \\(R_L\\) to the total power supplied by the source (\\(V_T\\))).\n\n\n\n\n\n\n\n\nRemember that a non-ideal voltage source can be modeled as an ideal voltage source (\\(V_S\\))in series with a resistor (\\(R_S\\)). For the resistive load (\\(R_L\\)) shown in the circuit below:\n\n\n\n\n\n\n\nPlot the power dissipated in the load as a function of \\(R_L\\) for a reasonable range of \\(R_L\\) values.\nWhat can you conclude from you plot in part (a) regarding the value of \\(R_L\\) that maximizes the power dissipated in the load and how that tapers off for lower/higher load resistances?\nProve, mathematically, that your conclusion is valid for all values of \\(R_L\\) and \\(R_S\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps3.html#problem-set-format-guidelines",
+    "href": "problem_sets/ps3.html#problem-set-format-guidelines",
+    "title": "Problem Set 03: Source Superposition, Thevenin & Norton Equivalent Circuits, Maximum Power Transfer",
+    "section": "Problem Set Format Guidelines",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 03"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps2.html",
+    "href": "problem_sets/ps2.html",
+    "title": "Problem Set 02",
+    "section": "",
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 02"
+    ]
+  },
+  {
+    "objectID": "problem_sets/ps2.html#problem-set-format-guidelines",
+    "href": "problem_sets/ps2.html#problem-set-format-guidelines",
+    "title": "Problem Set 02",
+    "section": "Problem Set Format Guidelines",
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 02"
     ]
   }
 ]

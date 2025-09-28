@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Duke BME">
-<meta name="dcterms.date" content="2025-10-01">
+<meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
+<meta name="dcterms.date" content="2025-09-29">
 
-<title>Transformers &amp; Diodes – Biomedical Electronic Measurements</title>
+<title>Reactive Components: Capacitors &amp; Inductors – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-fced259a1985fd972ecb57c7cd45153f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-13f007c1943c6d3711256cc1d3aa22a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-89abcb12e8852b82dab2915b19c79ac0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,9 +70,40 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -82,7 +115,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/transformers_diodes.html">Transformers and Diodes</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Biomedical Electronic Measurements
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -264,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/transformers_diodes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../labs/transformers_diodes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transformers and Diodes</span></a>
   </div>
 </li>
@@ -339,36 +374,51 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#relevant-reading" id="toc-relevant-reading" class="nav-link" data-scroll-target="#relevant-reading">Relevant Reading</a></li>
+  <li><a href="#reactive-components" id="toc-reactive-components" class="nav-link" data-scroll-target="#reactive-components">Reactive Components</a></li>
+  <li><a href="#ideal-capacitors" id="toc-ideal-capacitors" class="nav-link" data-scroll-target="#ideal-capacitors">Ideal Capacitors</a></li>
+  <li><a href="#capacitor-voltage-current-relationship" id="toc-capacitor-voltage-current-relationship" class="nav-link" data-scroll-target="#capacitor-voltage-current-relationship">Capacitor Voltage-Current Relationship</a></li>
+  <li><a href="#capacitor-voltage-current-temporal-relationship" id="toc-capacitor-voltage-current-temporal-relationship" class="nav-link" data-scroll-target="#capacitor-voltage-current-temporal-relationship">Capacitor Voltage-Current Temporal Relationship</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="reactive-components-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/transformers_diodes.html">Transformers and Diodes</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Transformers &amp; Diodes</h1>
-<p class="subtitle lead">BME253L - Fall 2025 - Palmeri</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Lab</div>
-  </div>
-  </div>
+<h1 class="title">Reactive Components: Capacitors &amp; Inductors</h1>
+<p class="subtitle lead">BME253L - Fall 2025</p>
+</div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Dr.&nbsp;Mark Palmeri, M.D., Ph.D. </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Duke University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Duke BME </p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2025</p>
+      <p class="date">September 29, 2025</p>
     </div>
   </div>
   
@@ -380,12 +430,135 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_trans_hout.pdf" width="100%" height="800px" style="border:none;">
-</iframe>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li><p>Define and describe the behavior of capacitors and inductors in DC and AC circuits.</p></li>
+<li><p>Analyze circuits with capacitors and inductors in series and parallel.</p></li>
+<li><p>Understand the concept of reactance and impedance.</p></li>
+</ul>
+</section>
+<section id="relevant-reading" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading</h2>
+<p>Practical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:</p>
+<ul>
+<li><p>Chapter 2.23 (Theory)</p></li>
+<li><p>Chapter 3.6 (Caps in Circuits)</p></li>
+</ul>
+<p>```</p>
+</section>
+<section id="reactive-components" class="level2">
+<h2 class="anchored" data-anchor-id="reactive-components">Reactive Components</h2>
+<ul>
+<li><p>To date, we have only considered resistors, which dissipate energy as heat, to consume source power.</p></li>
+<li><p>Resistive components respond “instantaneously” to changes in voltage and current, as defined by Ohm’s Law.</p></li>
+<li><p>Reactive components, such as capacitors and inductors, <strong>store</strong> energy in electric and magnetic fields, respectively.</p></li>
+<li><p>This storage of energy takes time, so reactive components do not respond instantaneously to changes in voltage and current. This means that circuits with reactive components have <strong>transient</strong> and <strong>steady-state</strong> responses to time-varying sources.</p></li>
+</ul>
+</section>
+<section id="ideal-capacitors" class="level2">
+<h2 class="anchored" data-anchor-id="ideal-capacitors">Ideal Capacitors</h2>
+<ul>
+<li><p>A capacitor is a device that stores energy in an electric field.</p></li>
+<li><p>Composed of two conductive plates separated by an insulating material (dielectric) that contains dipoles that become polarized in the presence of an electric field.</p></li>
+<li><p>Permititivity, ε, is a measure of how easily a material can become polarized. (<span class="math inline">\(\epsilon_{air} = 8.85 \times 10^{-12} \text{ F/m}\)</span>)</p></li>
+<li><p>Charge, Q, is stored on the plates of a capacitor:</p>
+<ul>
+<li><p>Take a finite amount of time to charge/discharge.</p></li>
+<li><p>Finite capacity to store charge.</p></li>
+</ul></li>
+<li><p>Capacitance, C, is the ratio of charge to voltage:</p>
+<p><span class="math display">\[
+C = \frac{Q}{V} = \frac{\epsilon A}{d} \quad \text{(Farads, F)}
+\]</span></p></li>
+</ul>
+</section>
+<section id="capacitor-voltage-current-relationship" class="level2">
+<h2 class="anchored" data-anchor-id="capacitor-voltage-current-relationship">Capacitor Voltage-Current Relationship</h2>
+<p><span class="math display">\[
+Q = CV \quad \Rightarrow \quad I = \frac{dQ}{dt} = C\frac{dV}{dt}
+\]</span></p>
+<ul>
+<li><p>Capacitors have a “memory” since <span class="math inline">\(i_c(t)\)</span> depends on the rate of change of the voltage across the capacitor (i.e., how much charge has accumulated for storage over time).</p></li>
+<li><p>Capacitors are linear elements since differentiation is a linear operation.</p></li>
+<li><p>Capacitors block DC current in steady-state since <span class="math inline">\(dV/dt = 0\)</span> for constant voltage.</p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For a steady-state DC voltage, a capacitor acts like an open circuit.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For a time-varying voltage, an uncharged capacitor acts like a short circuit at the instant the voltage changes.</p>
+</div>
+</div>
+</section>
+<section id="capacitor-voltage-current-temporal-relationship" class="level2">
+<h2 class="anchored" data-anchor-id="capacitor-voltage-current-temporal-relationship">Capacitor Voltage-Current Temporal Relationship</h2>
+<p><span class="math display">\[
+\int i_c(t) dt = C \int \frac{dV_c(t)}{dt} dt \quad \Rightarrow \quad V_c(t) = V_c(t_0) + \frac{1}{C} \int_{t_0}^{t} i_c(\tau) d\tau
+\]</span></p>
+<ul>
+<li><p>The voltage across a capacitor at time <span class="math inline">\(t\)</span> depends on:</p>
+<ul>
+<li><p>The initial voltage <span class="math inline">\(V_c(t_0)\)</span>, and</p></li>
+<li><p>The integral of the current over time.</p></li>
+<li><p><span class="math inline">\(t_0\)</span> is the time when the capacitor was last charged or discharged and this new change in current is being evaluated.</p></li>
+</ul>
+<h2 id="capacitor-internals" class="anchored">Capacitor Internals</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cap.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div></li>
+</ul>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../slides";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -790,4 +963,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
