@@ -17,6 +17,16 @@ circuits.
 
 - Understand the concept of reactance and impedance.
 
+## Relevant Reading
+
+Practical Electronics for Inventors, 4th Edition by Paul Scherz and Simon Monk:
+
+- Chapter 2.23 (Theory)
+
+- Chapter 3.6 (Caps in Circuits)
+
+```
+
 ## Reactive Components
 
 - To date, we have only considered resistors, which dissipate energy as heat, to
@@ -78,3 +88,21 @@ For a steady-state DC voltage, a capacitor acts like an open circuit.
 For a time-varying voltage, an uncharged capacitor acts like a short circuit at the instant
 the voltage changes.
 :::
+
+## Capacitor Voltage-Current Temporal Relationship
+
+$$
+\int i_c(t) dt = C \int \frac{dV_c(t)}{dt} dt \quad \Rightarrow \quad V_c(t) = V_c(t_0) + \frac{1}{C} \int_{t_0}^{t} i_c(\tau) d\tau
+$$
+
+- The voltage across a capacitor at time $t$ depends on:
+
+  - The initial voltage $V_c(t_0)$, and
+  
+  - The integral of the current over time.
+
+  - $t_0$ is the time when the capacitor was last charged or discharged and this new change in current is being evaluated.
+
+  ## Capacitor Internals
+
+  ![](images/cap.jpg){fig-align="center"}
