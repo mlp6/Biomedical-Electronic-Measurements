@@ -136,3 +136,79 @@ $$
 - Capacitor voltage **lags** current by $\frac{\pi}{2}$ (90 deg).
 
 ![](images/complex_C.png){fig-align="center"}
+
+## Example: RC Circuit with a Switch
+
+![](images/switch_RC.png){fig-align="center"}
+
+- The switch is closed at $t=0$, connecting the voltage source to the series RC circuit.
+
+$$
+\begin{gather}
+v_C|_{t=0} = 0 \\
+i_C = \frac{V_S}{R} \\
+\end{gather}
+$$
+
+- The capacitor voltage cannot change instantaneously, so it starts at 0 V and
+behaves like a short circuit for an instant until it starts to accumulate
+charge.
+
+- As time evolves, the capacitor charges, and its voltage increases, reducing the
+current through the circuit.
+
+## Complex Impedance of an Inductor
+
+$$
+\begin{gather}
+v_L(t) = L \frac{d i_L(t)}{dt} \\
+v_L(t) = L \frac{d}{dt} Re\left\{ \bar{I}_L e^{j\omega t} \right\} \\
+v_L(t) = L Re\left\{ j \omega \bar{I}_L e^{j\omega t} \right\} \\
+v_L(t) = Re\left\{ j \omega L \bar{I}_L e^{j\omega t} \right\} \\
+\bar{V}_L = j \omega L \bar{I}_L \\
+\bar{I}_L = \frac{1}{j \omega L} \bar{V}_L \\
+\end{gather}
+$$  
+
+---
+
+::: {.callout-note title="Complex Impedance of an Inductor"}
+The complex impedance ($Z_L$) of an inductor is defined as the ratio of the phasor
+voltage to the phasor current:
+
+$$
+Z_L = j \omega L = \frac{\bar{V}_L}{\bar{I}_L}
+$$
+:::
+
+- Larger inductance ($L$) means more opposition to changes in current.
+
+- Higher frequency ($\omega$) means that transient voltage changes occur more
+rapidly, leading to greater opposition to current flow.
+
+---
+
+$$
+\begin{align}
+\bar{V}_L & = j \omega L \bar{I}_L = j \omega L (I_L e^{j\phi}) \\
+& = \omega L I_L e^{\frac{\pi}{2}} e^{j\phi} \\
+& = \omega L I_L e^{j(\phi + \frac{\pi}{2})} \\
+\end{align}
+$$
+
+- The $j$ indicates a phase shift of +90 degrees (voltage leads current).   
+
+- The impedance is purely imaginary, indicating that the inductor does not
+dissipate energy but rather stores it in the magnetic field.
+
+![](images/complex_L.png){fig-align="center"}
+
+## Example: RL Circuit with a Switch
+
+![](images/switch_RL.png){fig-align="center"}
+
+When the switch closes at $t=0$:
+
+- $v_L$ = $V_S$ (initially behaves like an open circuit)
+
+- $i_L$ = 0 A (initially no current through the inductor)

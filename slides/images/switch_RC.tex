@@ -1,0 +1,9 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+
+\draw (0,0) to[V, l=$V_S$] (0,3) to[switch] (3,3) to[C, l=$C$, v=$v_C$, f=$i_C$] (3,0) to[R, l=$R$] (0,0);
+
+\end{circuitikz}
+\end{document}
