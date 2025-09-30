@@ -87,9 +87,52 @@ $$
 
 ## Complex Impedance of a Capacitor
 
-The complex impedance $Z_c$ of a capacitor is defined as the ratio of the phasor
+$$
+\begin{gather}
+v_c(t) = Re\left\{ \bar{V}_c e^{j\omega t} \right\} \\
+i_c(t) = C \frac{d v_c(t)}{dt} \\
+i_c(t) = C Re\left\{ \frac{d}{dt} \left( \bar{V}_c e^{j\omega t} \right) \right\} \\
+i_c(t) = C Re\left\{ j \omega \bar{V}_c e^{j\omega t} \right\} \\
+i_c(t) = Re\left\{ j \omega C \bar{V}_c e^{j\omega t} \right\} \\
+\bar{I}_c = j \omega C \bar{V}_c \\
+\bar{V}_c = \frac{1}{j \omega C} \bar{I}_c
+\end{gather}
+$$
+
+---
+
+::: {.callout-note title="Complex Impedance of a Capacitor"}
+The complex impedance ($Z_c$) of a capacitor is defined as the ratio of the phasor
 voltage to the phasor current:
 
 $$
 Z_c = \frac{\bar{V}_c}{\bar{I}_c} = \frac{1}{j \omega C}
 $$
+:::
+
+- Larger capacitance ($C$) leads to longer charging times.
+
+- Higher frequency ($\omega$) represents more rapid changes in voltage, meaning
+less time to charge in each phase of a cycle, so lower impedance to current
+flow.
+
+- The $j$ in the denominator indicates a phase shift of -90 degrees (current
+leads voltage).
+
+- The impedance is purely imaginary, indicating that the capacitor does not
+dissipate energy but rather stores it in the electric field.
+
+- This frequency-dependent behavior will be the foundation for designing filters.
+
+## $Z_c$ in the Time Domain
+
+$$
+\begin{gather}
+\bar{V}_c = \frac{\bar{I}_c}{j \omega C}  = -j \frac{\bar{I}_c}{\omega C} = \frac{1}{\omega C} e^{-j \frac{\pi}{2}} (\bar{I}_c e^{j \phi}) \\
+\bar{V}_c = \frac{I_c}{\omega C} e^{j(\phi - \frac{\pi}{2})} \\
+\end{gather}
+$$
+
+- Capacitor voltage **lags** current by $\frac{\pi}{2}$ (90 deg).
+
+![](images/complex_C.png){fig-align="center"}

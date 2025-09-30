@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+
+\begin{document}
+\begin{circuitikz}
+    % Axes
+    \draw[->] (-0.5,0) -- (4,0) node[right] {$\Re$};
+    \draw[->] (0,-3) -- (0,3) node[above] {$\Im$};
+
+
+    \draw[->, thick, blue] (0,0) -- (2,-2);
+    \node[below right] at (2,-2) {$V_C$};
+
+    \draw[->, thick, red] (0,0) -- (2,2);
+    \node[below right] at (2,2) {$I_C$};
+
+    % Add arrow arc with phi annotation
+    \draw[->] (1,-1) arc[start angle=-45, end angle={45}, radius=1.25] node[midway, right] {$\phi$};
+
+\end{circuitikz}
+\end{document}
