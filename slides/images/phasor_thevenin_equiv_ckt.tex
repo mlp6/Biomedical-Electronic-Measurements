@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+
+\draw (0,0) to[sV, l=$\bar{V}_S(j \omega)$] (0,3) to[twoport, l=$Z_T$] (3,3);
+
+\draw (3,3) node[circle, fill, inner sep=1pt] (A) {};
+\draw (3,0) node[circle, fill, inner sep=1pt] (B) {};
+
+\draw (A) -- (4,3) to[twoport, l=$Z_L$] (4,0) -- (0,0);
+
+\end{circuitikz}
+\end{document}

@@ -305,7 +305,7 @@ Z_C = \frac{1}{j \omega C} \\
 \end{gather}
 $$
 
-### Solve in Polar Form
+### Solve in Polar Form (Mag & Phase)
 
 $$
 \begin{gather}
@@ -314,3 +314,33 @@ $$
 \angle \bar{I} = 90^\circ - \tan^{-1}(\omega C R) \\
 \end{gather}
 $$
+
+## Complex Impedance Applied to Equiv. Circuits
+
+![](images/phasor_thevenin.png){fig-align="center"}
+
+1. Solve for Thevenin impedance ($Z_{T}$).
+
+$$
+\begin{align}
+Z_T & = Z_{R_S} + Z_L || Z_C \\
+    & = R_S + \left( \frac{1}{j \omega L} + \frac{1}{\frac{1}{j \omega C}} \right)^{-1} \\
+    & = R_S + \left( \frac{1}{j \omega L} + j \omega C \right)^{-1} \\
+Z_T & = R_S + \frac{j \omega L}{1 - \omega^2 LC} \\
+\end{align}
+$$
+
+---
+
+2. Solve for Thevenin equivalent voltage ($\bar{V}_{T}$).
+
+No current flows in the open-circuit load circuit, so:
+$$
+v_{OC} = \bar{V}_S(j \omega)
+$$
+
+The equivalent circuit is:
+
+![](images/phasor_thevenin_equiv_ckt.png){fig-align="center"}
+
+## Input/Output Impedance
