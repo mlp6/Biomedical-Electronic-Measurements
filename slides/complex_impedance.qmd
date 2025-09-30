@@ -212,3 +212,105 @@ When the switch closes at $t=0$:
 - $v_L$ = $V_S$ (initially behaves like an open circuit)
 
 - $i_L$ = 0 A (initially no current through the inductor)
+
+## Impedance Summary
+
+- "Ohm's Law" for capacitors and inductors in the phasor domain:
+$$
+\bar{V} = Z \bar{I}
+$$
+
+- Resistor: $Z_R = R$ (purely real)
+
+- Capacitor: $Z_C = \frac{1}{j \omega C}$
+
+  - Purely imaginary, negative
+
+  - Voltage lags current by 90 degrees
+
+- Inductor: $Z_L = j \omega L$
+
+  - Purely imaginary, positive
+
+  - Voltage leads current by 90 degrees
+
+## Solutions with Phasors
+
+- Assume signals are sinusoidal and at a single frequency.
+
+- Time-domain differential equations become algebraic equations in the phasor domain.
+
+$$
+\frac{d}{dt} e^{j \omega t} = j \omega e^{j \omega t}
+$$
+
+- All of our resistive circuit analysis techniques can now be applied to circuits with capacitors and inductors using complex impedances.
+
+- More complex signals can be represented as a sum of sinusoids of different frequencies, each with their own amplitide and phase (Fourier series).
+
+## Example: RC Circuit AC Circuit Analysis
+
+![](images/AC_RC.png){fig-align="center"}
+
+Solve for $i_R(t)$ in the time domain (more painful).
+
+$$
+\begin{gather}
+i_R(t) = \frac{v_s(t) - v_C(t)}{R} \\
+i_C(t) = C \frac{d v_C(t)}{dt}
+\end{gather}
+$$
+
+### Setup the Diff Eq to Solve
+
+Using KCL:
+
+$$
+\begin{gather}
+\frac{v_s(t) - v_C(t)}{R} = C \frac{d v_C(t)}{dt} \\
+\frac{d v_C(t)}{dt} + \frac{1}{RC} v_C(t) = \frac{1}{RC} v_s(t) \\
+\end{gather}
+$$
+
+- First-order linear differential equation.
+
+- We are not assuming solving this equation is in scope for this class.
+
+### Phasor-based Solution
+
+If $v_s(t)$ is sinusoidal, we can use phasors and complex impedance to solve
+the problem more easily.
+
+1. Identify AC sources and note their frequenc(ies).
+
+2. Convert all sources to phasors.
+
+3. Represent all circuit elements with their complex impedances.
+
+4. Solve for unknown quatities using circuit analysis techniques.
+
+5. Convert phasor results back to time domain, paying attention to the **real part**.
+
+6. Repeat this for other frequencies if needed, then sum the results (superposition).
+
+### Example with Numbers
+
+$$
+\begin{gather}
+v_s(t) = A \cos(\omega t) \\
+\bar{V}_s = A \angle 0 \\
+Z_R = R \\
+Z_C = \frac{1}{j \omega C} \\
+\bar{I} = \frac{\bar{V}_s}{Z_R + Z_C} = \frac{\bar{V}_s}{R + \frac{1}{j \omega C}} = \frac{\bar{V}_s j \omega C}{1 + j \omega C R} \\
+\end{gather}
+$$
+
+### Solve in Polar Form
+
+$$
+\begin{gather}
+\bar{I} = \frac{\bar{V}_s j \omega C}{1 + j \omega C R} \\
+|\bar{I}| = \frac{|\bar{V}_s| \omega C}{\sqrt{1 + (\omega C R)^2}} \\
+\angle \bar{I} = 90^\circ - \tan^{-1}(\omega C R) \\
+\end{gather}
+$$
