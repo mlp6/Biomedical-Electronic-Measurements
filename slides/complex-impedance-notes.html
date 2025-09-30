@@ -403,7 +403,24 @@ window.Quarto = {
   <ul>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#phasors-and-complex-numbers" id="toc-phasors-and-complex-numbers" class="nav-link" data-scroll-target="#phasors-and-complex-numbers">Phasors and Complex Numbers</a></li>
+  <li><a href="#does-a-resistor-have-complex-impedance" id="toc-does-a-resistor-have-complex-impedance" class="nav-link" data-scroll-target="#does-a-resistor-have-complex-impedance">Does a Resistor Have Complex Impedance?</a></li>
+  <li><a href="#what-does-this-look-like-on-the-complex-plane" id="toc-what-does-this-look-like-on-the-complex-plane" class="nav-link" data-scroll-target="#what-does-this-look-like-on-the-complex-plane">What does this look like on the complex plane?</a></li>
   <li><a href="#complex-impedance-of-a-capacitor" id="toc-complex-impedance-of-a-capacitor" class="nav-link" data-scroll-target="#complex-impedance-of-a-capacitor">Complex Impedance of a Capacitor</a></li>
+  <li><a href="#z_c-in-the-time-domain" id="toc-z_c-in-the-time-domain" class="nav-link" data-scroll-target="#z_c-in-the-time-domain"><span class="math inline">\(Z_c\)</span> in the Time Domain</a></li>
+  <li><a href="#example-rc-circuit-with-a-switch" id="toc-example-rc-circuit-with-a-switch" class="nav-link" data-scroll-target="#example-rc-circuit-with-a-switch">Example: RC Circuit with a Switch</a></li>
+  <li><a href="#complex-impedance-of-an-inductor" id="toc-complex-impedance-of-an-inductor" class="nav-link" data-scroll-target="#complex-impedance-of-an-inductor">Complex Impedance of an Inductor</a></li>
+  <li><a href="#example-rl-circuit-with-a-switch" id="toc-example-rl-circuit-with-a-switch" class="nav-link" data-scroll-target="#example-rl-circuit-with-a-switch">Example: RL Circuit with a Switch</a></li>
+  <li><a href="#impedance-summary" id="toc-impedance-summary" class="nav-link" data-scroll-target="#impedance-summary">Impedance Summary</a></li>
+  <li><a href="#solutions-with-phasors" id="toc-solutions-with-phasors" class="nav-link" data-scroll-target="#solutions-with-phasors">Solutions with Phasors</a></li>
+  <li><a href="#example-rc-circuit-ac-circuit-analysis" id="toc-example-rc-circuit-ac-circuit-analysis" class="nav-link" data-scroll-target="#example-rc-circuit-ac-circuit-analysis">Example: RC Circuit AC Circuit Analysis</a>
+  <ul class="collapse">
+  <li><a href="#setup-the-diff-eq-to-solve" id="toc-setup-the-diff-eq-to-solve" class="nav-link" data-scroll-target="#setup-the-diff-eq-to-solve">Setup the Diff Eq to Solve</a></li>
+  <li><a href="#phasor-based-solution" id="toc-phasor-based-solution" class="nav-link" data-scroll-target="#phasor-based-solution">Phasor-based Solution</a></li>
+  <li><a href="#example-with-numbers" id="toc-example-with-numbers" class="nav-link" data-scroll-target="#example-with-numbers">Example with Numbers</a></li>
+  <li><a href="#solve-in-polar-form-mag-phase" id="toc-solve-in-polar-form-mag-phase" class="nav-link" data-scroll-target="#solve-in-polar-form-mag-phase">Solve in Polar Form (Mag &amp; Phase)</a></li>
+  </ul></li>
+  <li><a href="#complex-impedance-applied-to-equiv.-circuits" id="toc-complex-impedance-applied-to-equiv.-circuits" class="nav-link" data-scroll-target="#complex-impedance-applied-to-equiv.-circuits">Complex Impedance Applied to Equiv. Circuits</a></li>
+  <li><a href="#inputoutput-impedance" id="toc-inputoutput-impedance" class="nav-link" data-scroll-target="#inputoutput-impedance">Input/Output Impedance</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="complex-impedance-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -460,8 +477,7 @@ window.Quarto = {
 <section id="phasors-and-complex-numbers" class="level2">
 <h2 class="anchored" data-anchor-id="phasors-and-complex-numbers">Phasors and Complex Numbers</h2>
 <ul>
-<li><p>Phasors are a way to represent sinusoidal functions as complex numbers in the frequency domain.</p></li>
-<li><p>A phasor is a complex number that encodes the amplitude and phase of a sinusoidal signal.</p></li>
+<li><p>Phasors are a way to represent sinusoidal functions as complex numbers of <strong>amplitude</strong> and <strong>phase</strong> in the frequency domain.</p></li>
 <li><p>A sinusoidal voltage or current at a given, single frequency can be represented as: <span class="math display">\[
 \begin{gather}
 V_c(t) = V_A \cos(\omega t + \phi)  \\
@@ -471,6 +487,9 @@ V_c(t) = \text{Re} \left\{ V_A e^{j\phi} e^{j\omega t} \right\} \\
 \end{gather}
 \]</span><br>
 where <span class="math inline">\(V_A\)</span> is the amplitude, <span class="math inline">\(\omega\)</span> is the angular frequency, and <span class="math inline">\(\phi\)</span> is the phase angle. The phasor <span class="math inline">\(\tilde{V}\)</span> is a complex number.</p></li>
+</ul>
+<hr>
+<ul>
 <li><p>The time dependence <span class="math inline">\(e^{j\omega t}\)</span> is often omitted in phasor notation, as it is understood to be present.</p></li>
 <li><p>Phasors allow us to use complex algebra to analyze AC circuits, simplifying the calculation of voltages and currents.</p></li>
 </ul>
@@ -484,7 +503,7 @@ I_c &amp; = C \frac{d V_c}{dt} = C \frac{d}{dt} \left( V_A \cos(\omega t + \phi)
 \bar{I}_c = j \omega C \bar{V}_c
 \]</span></p>
 <ul>
-<li>The phase difference between the voltage and current in a capacitor is <span class="math inline">\(\frac{\pi}{2}\)</span> radians (90<span class="math inline">\(\degree\)</span>), with the current leading the voltage, which is represented with the imaginary unit <span class="math inline">\(j\)</span> in the phasor equation.</li>
+<li>The phase difference between the voltage and current in a capacitor is <span class="math inline">\(\frac{\pi}{2}\)</span> radians (90 deg), with the current leading the voltage, which is represented with the imaginary unit <span class="math inline">\(j\)</span> in the phasor equation.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Question?">
 <div class="callout-header d-flex align-content-center">
@@ -500,12 +519,303 @@ Question?
 </div>
 </div>
 </section>
+<section id="does-a-resistor-have-complex-impedance" class="level2">
+<h2 class="anchored" data-anchor-id="does-a-resistor-have-complex-impedance">Does a Resistor Have Complex Impedance?</h2>
+<ul>
+<li>Short answer: No.</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+v_R(t) = R i_R(t) \\
+v_R(t) = Re\left\{ \bar{V}_R e^{j\omega t} \right\} \\
+\bar{V}_R = V_A e^{j\phi} \\
+i_R(t) = Re\left\{ \bar{I}_R e^{j\omega t} \right\} \\
+\bar{I}_R = \frac{V_A}{R} e^{j\phi} \\
+\end{gather}
+\]</span></p>
+</section>
+<section id="what-does-this-look-like-on-the-complex-plane" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-this-look-like-on-the-complex-plane">What does this look like on the complex plane?</h2>
+<ul>
+<li><p><span class="math inline">\(\bar{V}_R\)</span> and <span class="math inline">\(\bar{I}_R\)</span> are in phase.</p></li>
+<li><p>Amplitude is governed by Ohm’s law: <span class="math inline">\(V_A = R I_A\)</span>.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/complex_R.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
 <section id="complex-impedance-of-a-capacitor" class="level2">
 <h2 class="anchored" data-anchor-id="complex-impedance-of-a-capacitor">Complex Impedance of a Capacitor</h2>
-<p>The complex impedance <span class="math inline">\(Z_c\)</span> of a capacitor is defined as the ratio of the phasor voltage to the phasor current:</p>
+<p><span class="math display">\[
+\begin{gather}
+v_c(t) = Re\left\{ \bar{V}_c e^{j\omega t} \right\} \\
+i_c(t) = C \frac{d v_c(t)}{dt} \\
+i_c(t) = C Re\left\{ \frac{d}{dt} \left( \bar{V}_c e^{j\omega t} \right) \right\} \\
+i_c(t) = C Re\left\{ j \omega \bar{V}_c e^{j\omega t} \right\} \\
+i_c(t) = Re\left\{ j \omega C \bar{V}_c e^{j\omega t} \right\} \\
+\bar{I}_c = j \omega C \bar{V}_c \\
+\bar{V}_c = \frac{1}{j \omega C} \bar{I}_c
+\end{gather}
+\]</span></p>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Complex Impedance of a Capacitor">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Complex Impedance of a Capacitor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The complex impedance (<span class="math inline">\(Z_c\)</span>) of a capacitor is defined as the ratio of the phasor voltage to the phasor current:</p>
 <p><span class="math display">\[
 Z_c = \frac{\bar{V}_c}{\bar{I}_c} = \frac{1}{j \omega C}
 \]</span></p>
+</div>
+</div>
+<ul>
+<li><p>Larger capacitance (<span class="math inline">\(C\)</span>) leads to longer charging times.</p></li>
+<li><p>Higher frequency (<span class="math inline">\(\omega\)</span>) represents more rapid changes in voltage, meaning less time to charge in each phase of a cycle, so lower impedance to current flow.</p></li>
+<li><p>The <span class="math inline">\(j\)</span> in the denominator indicates a phase shift of -90 degrees (current leads voltage).</p></li>
+<li><p>The impedance is purely imaginary, indicating that the capacitor does not dissipate energy but rather stores it in the electric field.</p></li>
+<li><p>This frequency-dependent behavior will be the foundation for designing filters.</p></li>
+</ul>
+</section>
+<section id="z_c-in-the-time-domain" class="level2">
+<h2 class="anchored" data-anchor-id="z_c-in-the-time-domain"><span class="math inline">\(Z_c\)</span> in the Time Domain</h2>
+<p><span class="math display">\[
+\begin{gather}
+\bar{V}_c = \frac{\bar{I}_c}{j \omega C}  = -j \frac{\bar{I}_c}{\omega C} = \frac{1}{\omega C} e^{-j \frac{\pi}{2}} (\bar{I}_c e^{j \phi}) \\
+\bar{V}_c = \frac{I_c}{\omega C} e^{j(\phi - \frac{\pi}{2})} \\
+\end{gather}
+\]</span></p>
+<ul>
+<li>Capacitor voltage <strong>lags</strong> current by <span class="math inline">\(\frac{\pi}{2}\)</span> (90 deg).</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/complex_C.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="example-rc-circuit-with-a-switch" class="level2">
+<h2 class="anchored" data-anchor-id="example-rc-circuit-with-a-switch">Example: RC Circuit with a Switch</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/switch_RC.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li>The switch is closed at <span class="math inline">\(t=0\)</span>, connecting the voltage source to the series RC circuit.</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+v_C|_{t=0} = 0 \\
+i_C = \frac{V_S}{R} \\
+\end{gather}
+\]</span></p>
+<ul>
+<li><p>The capacitor voltage cannot change instantaneously, so it starts at 0 V and behaves like a short circuit for an instant until it starts to accumulate charge.</p></li>
+<li><p>As time evolves, the capacitor charges, and its voltage increases, reducing the current through the circuit.</p></li>
+</ul>
+</section>
+<section id="complex-impedance-of-an-inductor" class="level2">
+<h2 class="anchored" data-anchor-id="complex-impedance-of-an-inductor">Complex Impedance of an Inductor</h2>
+<p><span class="math display">\[
+\begin{gather}
+v_L(t) = L \frac{d i_L(t)}{dt} \\
+v_L(t) = L \frac{d}{dt} Re\left\{ \bar{I}_L e^{j\omega t} \right\} \\
+v_L(t) = L Re\left\{ j \omega \bar{I}_L e^{j\omega t} \right\} \\
+v_L(t) = Re\left\{ j \omega L \bar{I}_L e^{j\omega t} \right\} \\
+\bar{V}_L = j \omega L \bar{I}_L \\
+\bar{I}_L = \frac{1}{j \omega L} \bar{V}_L \\
+\end{gather}
+\]</span></p>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled" title="Complex Impedance of an Inductor">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Complex Impedance of an Inductor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The complex impedance (<span class="math inline">\(Z_L\)</span>) of an inductor is defined as the ratio of the phasor voltage to the phasor current:</p>
+<p><span class="math display">\[
+Z_L = j \omega L = \frac{\bar{V}_L}{\bar{I}_L}
+\]</span></p>
+</div>
+</div>
+<ul>
+<li><p>Larger inductance (<span class="math inline">\(L\)</span>) means more opposition to changes in current.</p></li>
+<li><p>Higher frequency (<span class="math inline">\(\omega\)</span>) means that transient voltage changes occur more rapidly, leading to greater opposition to current flow.</p></li>
+</ul>
+<hr>
+<p><span class="math display">\[
+\begin{align}
+\bar{V}_L &amp; = j \omega L \bar{I}_L = j \omega L (I_L e^{j\phi}) \\
+&amp; = \omega L I_L e^{\frac{\pi}{2}} e^{j\phi} \\
+&amp; = \omega L I_L e^{j(\phi + \frac{\pi}{2})} \\
+\end{align}
+\]</span></p>
+<ul>
+<li><p>The <span class="math inline">\(j\)</span> indicates a phase shift of +90 degrees (voltage leads current).</p></li>
+<li><p>The impedance is purely imaginary, indicating that the inductor does not dissipate energy but rather stores it in the magnetic field.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/complex_L.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="example-rl-circuit-with-a-switch" class="level2">
+<h2 class="anchored" data-anchor-id="example-rl-circuit-with-a-switch">Example: RL Circuit with a Switch</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/switch_RL.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>When the switch closes at <span class="math inline">\(t=0\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(v_L\)</span> = <span class="math inline">\(V_S\)</span> (initially behaves like an open circuit)</p></li>
+<li><p><span class="math inline">\(i_L\)</span> = 0 A (initially no current through the inductor)</p></li>
+</ul>
+</section>
+<section id="impedance-summary" class="level2">
+<h2 class="anchored" data-anchor-id="impedance-summary">Impedance Summary</h2>
+<ul>
+<li><p>“Ohm’s Law” for capacitors and inductors in the phasor domain: <span class="math display">\[
+\bar{V} = Z \bar{I}
+\]</span></p></li>
+<li><p>Resistor: <span class="math inline">\(Z_R = R\)</span> (purely real)</p></li>
+<li><p>Capacitor: <span class="math inline">\(Z_C = \frac{1}{j \omega C}\)</span></p>
+<ul>
+<li><p>Purely imaginary, negative</p></li>
+<li><p>Voltage lags current by 90 degrees</p></li>
+</ul></li>
+<li><p>Inductor: <span class="math inline">\(Z_L = j \omega L\)</span></p>
+<ul>
+<li><p>Purely imaginary, positive</p></li>
+<li><p>Voltage leads current by 90 degrees</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="solutions-with-phasors" class="level2">
+<h2 class="anchored" data-anchor-id="solutions-with-phasors">Solutions with Phasors</h2>
+<ul>
+<li><p>Assume signals are sinusoidal and at a single frequency.</p></li>
+<li><p>Time-domain differential equations become algebraic equations in the phasor domain.</p></li>
+</ul>
+<p><span class="math display">\[
+\frac{d}{dt} e^{j \omega t} = j \omega e^{j \omega t}
+\]</span></p>
+<ul>
+<li><p>All of our resistive circuit analysis techniques can now be applied to circuits with capacitors and inductors using complex impedances.</p></li>
+<li><p>More complex signals can be represented as a sum of sinusoids of different frequencies, each with their own amplitide and phase (Fourier series).</p></li>
+</ul>
+</section>
+<section id="example-rc-circuit-ac-circuit-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="example-rc-circuit-ac-circuit-analysis">Example: RC Circuit AC Circuit Analysis</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/AC_RC.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Solve for <span class="math inline">\(i_R(t)\)</span> in the time domain (more painful).</p>
+<p><span class="math display">\[
+\begin{gather}
+i_R(t) = \frac{v_s(t) - v_C(t)}{R} \\
+i_C(t) = C \frac{d v_C(t)}{dt}
+\end{gather}
+\]</span></p>
+<section id="setup-the-diff-eq-to-solve" class="level3">
+<h3 class="anchored" data-anchor-id="setup-the-diff-eq-to-solve">Setup the Diff Eq to Solve</h3>
+<p>Using KCL:</p>
+<p><span class="math display">\[
+\begin{gather}
+\frac{v_s(t) - v_C(t)}{R} = C \frac{d v_C(t)}{dt} \\
+\frac{d v_C(t)}{dt} + \frac{1}{RC} v_C(t) = \frac{1}{RC} v_s(t) \\
+\end{gather}
+\]</span></p>
+<ul>
+<li><p>First-order linear differential equation.</p></li>
+<li><p>We are not assuming solving this equation is in scope for this class.</p></li>
+</ul>
+</section>
+<section id="phasor-based-solution" class="level3">
+<h3 class="anchored" data-anchor-id="phasor-based-solution">Phasor-based Solution</h3>
+<p>If <span class="math inline">\(v_s(t)\)</span> is sinusoidal, we can use phasors and complex impedance to solve the problem more easily.</p>
+<ol type="1">
+<li><p>Identify AC sources and note their frequenc(ies).</p></li>
+<li><p>Convert all sources to phasors.</p></li>
+<li><p>Represent all circuit elements with their complex impedances.</p></li>
+<li><p>Solve for unknown quatities using circuit analysis techniques.</p></li>
+<li><p>Convert phasor results back to time domain, paying attention to the <strong>real part</strong>.</p></li>
+<li><p>Repeat this for other frequencies if needed, then sum the results (superposition).</p></li>
+</ol>
+</section>
+<section id="example-with-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="example-with-numbers">Example with Numbers</h3>
+<p><span class="math display">\[
+\begin{gather}
+v_s(t) = A \cos(\omega t) \\
+\bar{V}_s = A \angle 0 \\
+Z_R = R \\
+Z_C = \frac{1}{j \omega C} \\
+\bar{I} = \frac{\bar{V}_s}{Z_R + Z_C} = \frac{\bar{V}_s}{R + \frac{1}{j \omega C}} = \frac{\bar{V}_s j \omega C}{1 + j \omega C R} \\
+\end{gather}
+\]</span></p>
+</section>
+<section id="solve-in-polar-form-mag-phase" class="level3">
+<h3 class="anchored" data-anchor-id="solve-in-polar-form-mag-phase">Solve in Polar Form (Mag &amp; Phase)</h3>
+<p><span class="math display">\[
+\begin{gather}
+\bar{I} = \frac{\bar{V}_s j \omega C}{1 + j \omega C R} \\
+|\bar{I}| = \frac{|\bar{V}_s| \omega C}{\sqrt{1 + (\omega C R)^2}} \\
+\angle \bar{I} = 90^\circ - \tan^{-1}(\omega C R) \\
+\end{gather}
+\]</span></p>
+</section>
+</section>
+<section id="complex-impedance-applied-to-equiv.-circuits" class="level2">
+<h2 class="anchored" data-anchor-id="complex-impedance-applied-to-equiv.-circuits">Complex Impedance Applied to Equiv. Circuits</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/phasor_thevenin.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ol type="1">
+<li>Solve for Thevenin impedance (<span class="math inline">\(Z_{T}\)</span>).</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+Z_T &amp; = Z_{R_S} + Z_L || Z_C \\
+    &amp; = R_S + \left( \frac{1}{j \omega L} + \frac{1}{\frac{1}{j \omega C}} \right)^{-1} \\
+    &amp; = R_S + \left( \frac{1}{j \omega L} + j \omega C \right)^{-1} \\
+Z_T &amp; = R_S + \frac{j \omega L}{1 - \omega^2 LC} \\
+\end{align}
+\]</span></p>
+<hr>
+<ol start="2" type="1">
+<li>Solve for Thevenin equivalent voltage (<span class="math inline">\(\bar{V}_{T}\)</span>).</li>
+</ol>
+<p>No current flows in the open-circuit load circuit, so: <span class="math display">\[
+v_{OC} = \bar{V}_S(j \omega)
+\]</span></p>
+<p>The equivalent circuit is:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/phasor_thevenin_equiv_ckt.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="inputoutput-impedance" class="level2">
+<h2 class="anchored" data-anchor-id="inputoutput-impedance">Input/Output Impedance</h2>
 
 
 <script type="ojs-module-contents">

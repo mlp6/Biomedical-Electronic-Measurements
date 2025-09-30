@@ -1810,14 +1810,91 @@
     "href": "slides/complex-impedance-slides.html#phasors-and-complex-numbers",
     "title": "Complex Impedance",
     "section": "Phasors and Complex Numbers",
-    "text": "Phasors and Complex Numbers\n\nPhasors are a way to represent sinusoidal functions as complex numbers in the frequency domain.\nA phasor is a complex number that encodes the amplitude and phase of a sinusoidal signal.\nA sinusoidal voltage or current at a given, single frequency can be represented as: \\[\n\\begin{gather}\nV_c(t) = V_A \\cos(\\omega t + \\phi)  \\\\\nV_c(t) = V_A \\text{Re} \\left\\{ e^{j\\omega t + \\phi} \\right\\} \\\\\nV_c(t) = \\text{Re} \\left\\{ V_A e^{j\\phi} e^{j\\omega t} \\right\\} \\\\\n\\bar{V} = V_A e^{j\\phi} = V_A \\angle \\phi \\\\\n\\end{gather}\n\\]\nwhere \\(V_A\\) is the amplitude, \\(\\omega\\) is the angular frequency, and \\(\\phi\\) is the phase angle. The phasor \\(\\tilde{V}\\) is a complex number.\nThe time dependence \\(e^{j\\omega t}\\) is often omitted in phasor notation, as it is understood to be present.\nPhasors allow us to use complex algebra to analyze AC circuits, simplifying the calculation of voltages and currents."
+    "text": "Phasors and Complex Numbers\n\nPhasors are a way to represent sinusoidal functions as complex numbers of amplitude and phase in the frequency domain.\nA sinusoidal voltage or current at a given, single frequency can be represented as: \\[\n\\begin{gather}\nV_c(t) = V_A \\cos(\\omega t + \\phi)  \\\\\nV_c(t) = V_A \\text{Re} \\left\\{ e^{j\\omega t + \\phi} \\right\\} \\\\\nV_c(t) = \\text{Re} \\left\\{ V_A e^{j\\phi} e^{j\\omega t} \\right\\} \\\\\n\\bar{V} = V_A e^{j\\phi} = V_A \\angle \\phi \\\\\n\\end{gather}\n\\]\nwhere \\(V_A\\) is the amplitude, \\(\\omega\\) is the angular frequency, and \\(\\phi\\) is the phase angle. The phasor \\(\\tilde{V}\\) is a complex number."
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#does-a-resistor-have-complex-impedance",
+    "href": "slides/complex-impedance-slides.html#does-a-resistor-have-complex-impedance",
+    "title": "Complex Impedance",
+    "section": "Does a Resistor Have Complex Impedance?",
+    "text": "Does a Resistor Have Complex Impedance?\n\nShort answer: No.\n\n\\[\n\\begin{gather}\nv_R(t) = R i_R(t) \\\\\nv_R(t) = Re\\left\\{ \\bar{V}_R e^{j\\omega t} \\right\\} \\\\\n\\bar{V}_R = V_A e^{j\\phi} \\\\\ni_R(t) = Re\\left\\{ \\bar{I}_R e^{j\\omega t} \\right\\} \\\\\n\\bar{I}_R = \\frac{V_A}{R} e^{j\\phi} \\\\\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#what-does-this-look-like-on-the-complex-plane",
+    "href": "slides/complex-impedance-slides.html#what-does-this-look-like-on-the-complex-plane",
+    "title": "Complex Impedance",
+    "section": "What does this look like on the complex plane?",
+    "text": "What does this look like on the complex plane?\n\n\\(\\bar{V}_R\\) and \\(\\bar{I}_R\\) are in phase.\nAmplitude is governed by Ohm’s law: \\(V_A = R I_A\\)."
   },
   {
     "objectID": "slides/complex-impedance-slides.html#complex-impedance-of-a-capacitor",
     "href": "slides/complex-impedance-slides.html#complex-impedance-of-a-capacitor",
     "title": "Complex Impedance",
     "section": "Complex Impedance of a Capacitor",
-    "text": "Complex Impedance of a Capacitor\nThe complex impedance \\(Z_c\\) of a capacitor is defined as the ratio of the phasor voltage to the phasor current:\n\\[\nZ_c = \\frac{\\bar{V}_c}{\\bar{I}_c} = \\frac{1}{j \\omega C}\n\\]"
+    "text": "Complex Impedance of a Capacitor\n\\[\n\\begin{gather}\nv_c(t) = Re\\left\\{ \\bar{V}_c e^{j\\omega t} \\right\\} \\\\\ni_c(t) = C \\frac{d v_c(t)}{dt} \\\\\ni_c(t) = C Re\\left\\{ \\frac{d}{dt} \\left( \\bar{V}_c e^{j\\omega t} \\right) \\right\\} \\\\\ni_c(t) = C Re\\left\\{ j \\omega \\bar{V}_c e^{j\\omega t} \\right\\} \\\\\ni_c(t) = Re\\left\\{ j \\omega C \\bar{V}_c e^{j\\omega t} \\right\\} \\\\\n\\bar{I}_c = j \\omega C \\bar{V}_c \\\\\n\\bar{V}_c = \\frac{1}{j \\omega C} \\bar{I}_c\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#z_c-in-the-time-domain",
+    "href": "slides/complex-impedance-slides.html#z_c-in-the-time-domain",
+    "title": "Complex Impedance",
+    "section": "\\(Z_c\\) in the Time Domain",
+    "text": "\\(Z_c\\) in the Time Domain\n\\[\n\\begin{gather}\n\\bar{V}_c = \\frac{\\bar{I}_c}{j \\omega C}  = -j \\frac{\\bar{I}_c}{\\omega C} = \\frac{1}{\\omega C} e^{-j \\frac{\\pi}{2}} (\\bar{I}_c e^{j \\phi}) \\\\\n\\bar{V}_c = \\frac{I_c}{\\omega C} e^{j(\\phi - \\frac{\\pi}{2})} \\\\\n\\end{gather}\n\\]\n\nCapacitor voltage lags current by \\(\\frac{\\pi}{2}\\) (90 deg)."
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#example-rc-circuit-with-a-switch",
+    "href": "slides/complex-impedance-slides.html#example-rc-circuit-with-a-switch",
+    "title": "Complex Impedance",
+    "section": "Example: RC Circuit with a Switch",
+    "text": "Example: RC Circuit with a Switch\n\n\nThe switch is closed at \\(t=0\\), connecting the voltage source to the series RC circuit.\n\n\\[\n\\begin{gather}\nv_C|_{t=0} = 0 \\\\\ni_C = \\frac{V_S}{R} \\\\\n\\end{gather}\n\\]\n\nThe capacitor voltage cannot change instantaneously, so it starts at 0 V and behaves like a short circuit for an instant until it starts to accumulate charge.\nAs time evolves, the capacitor charges, and its voltage increases, reducing the current through the circuit."
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#complex-impedance-of-an-inductor",
+    "href": "slides/complex-impedance-slides.html#complex-impedance-of-an-inductor",
+    "title": "Complex Impedance",
+    "section": "Complex Impedance of an Inductor",
+    "text": "Complex Impedance of an Inductor\n\\[\n\\begin{gather}\nv_L(t) = L \\frac{d i_L(t)}{dt} \\\\\nv_L(t) = L \\frac{d}{dt} Re\\left\\{ \\bar{I}_L e^{j\\omega t} \\right\\} \\\\\nv_L(t) = L Re\\left\\{ j \\omega \\bar{I}_L e^{j\\omega t} \\right\\} \\\\\nv_L(t) = Re\\left\\{ j \\omega L \\bar{I}_L e^{j\\omega t} \\right\\} \\\\\n\\bar{V}_L = j \\omega L \\bar{I}_L \\\\\n\\bar{I}_L = \\frac{1}{j \\omega L} \\bar{V}_L \\\\\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#example-rl-circuit-with-a-switch",
+    "href": "slides/complex-impedance-slides.html#example-rl-circuit-with-a-switch",
+    "title": "Complex Impedance",
+    "section": "Example: RL Circuit with a Switch",
+    "text": "Example: RL Circuit with a Switch\n\nWhen the switch closes at \\(t=0\\):\n\n\\(v_L\\) = \\(V_S\\) (initially behaves like an open circuit)\n\\(i_L\\) = 0 A (initially no current through the inductor)"
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#impedance-summary",
+    "href": "slides/complex-impedance-slides.html#impedance-summary",
+    "title": "Complex Impedance",
+    "section": "Impedance Summary",
+    "text": "Impedance Summary\n\n“Ohm’s Law” for capacitors and inductors in the phasor domain: \\[\n\\bar{V} = Z \\bar{I}\n\\]\nResistor: \\(Z_R = R\\) (purely real)\nCapacitor: \\(Z_C = \\frac{1}{j \\omega C}\\)\n\nPurely imaginary, negative\nVoltage lags current by 90 degrees\n\nInductor: \\(Z_L = j \\omega L\\)\n\nPurely imaginary, positive\nVoltage leads current by 90 degrees"
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#solutions-with-phasors",
+    "href": "slides/complex-impedance-slides.html#solutions-with-phasors",
+    "title": "Complex Impedance",
+    "section": "Solutions with Phasors",
+    "text": "Solutions with Phasors\n\nAssume signals are sinusoidal and at a single frequency.\nTime-domain differential equations become algebraic equations in the phasor domain.\n\n\\[\n\\frac{d}{dt} e^{j \\omega t} = j \\omega e^{j \\omega t}\n\\]\n\nAll of our resistive circuit analysis techniques can now be applied to circuits with capacitors and inductors using complex impedances.\nMore complex signals can be represented as a sum of sinusoids of different frequencies, each with their own amplitide and phase (Fourier series)."
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#example-rc-circuit-ac-circuit-analysis",
+    "href": "slides/complex-impedance-slides.html#example-rc-circuit-ac-circuit-analysis",
+    "title": "Complex Impedance",
+    "section": "Example: RC Circuit AC Circuit Analysis",
+    "text": "Example: RC Circuit AC Circuit Analysis\n\nSolve for \\(i_R(t)\\) in the time domain (more painful).\n\\[\n\\begin{gather}\ni_R(t) = \\frac{v_s(t) - v_C(t)}{R} \\\\\ni_C(t) = C \\frac{d v_C(t)}{dt}\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#complex-impedance-applied-to-equiv.-circuits",
+    "href": "slides/complex-impedance-slides.html#complex-impedance-applied-to-equiv.-circuits",
+    "title": "Complex Impedance",
+    "section": "Complex Impedance Applied to Equiv. Circuits",
+    "text": "Complex Impedance Applied to Equiv. Circuits\n\n\nSolve for Thevenin impedance (\\(Z_{T}\\)).\n\n\\[\n\\begin{align}\nZ_T & = Z_{R_S} + Z_L || Z_C \\\\\n    & = R_S + \\left( \\frac{1}{j \\omega L} + \\frac{1}{\\frac{1}{j \\omega C}} \\right)^{-1} \\\\\n    & = R_S + \\left( \\frac{1}{j \\omega L} + j \\omega C \\right)^{-1} \\\\\nZ_T & = R_S + \\frac{j \\omega L}{1 - \\omega^2 LC} \\\\\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "slides/complex-impedance-slides.html#inputoutput-impedance",
+    "href": "slides/complex-impedance-slides.html#inputoutput-impedance",
+    "title": "Complex Impedance",
+    "section": "Input/Output Impedance",
+    "text": "Input/Output Impedance"
   },
   {
     "objectID": "slides/complex-impedance-notes.html",
@@ -1846,7 +1923,29 @@
     "href": "slides/complex-impedance-notes.html#phasors-and-complex-numbers",
     "title": "Complex Impedance",
     "section": "Phasors and Complex Numbers",
-    "text": "Phasors and Complex Numbers\n\nPhasors are a way to represent sinusoidal functions as complex numbers in the frequency domain.\nA phasor is a complex number that encodes the amplitude and phase of a sinusoidal signal.\nA sinusoidal voltage or current at a given, single frequency can be represented as: \\[\n\\begin{gather}\nV_c(t) = V_A \\cos(\\omega t + \\phi)  \\\\\nV_c(t) = V_A \\text{Re} \\left\\{ e^{j\\omega t + \\phi} \\right\\} \\\\\nV_c(t) = \\text{Re} \\left\\{ V_A e^{j\\phi} e^{j\\omega t} \\right\\} \\\\\n\\bar{V} = V_A e^{j\\phi} = V_A \\angle \\phi \\\\\n\\end{gather}\n\\]\nwhere \\(V_A\\) is the amplitude, \\(\\omega\\) is the angular frequency, and \\(\\phi\\) is the phase angle. The phasor \\(\\tilde{V}\\) is a complex number.\nThe time dependence \\(e^{j\\omega t}\\) is often omitted in phasor notation, as it is understood to be present.\nPhasors allow us to use complex algebra to analyze AC circuits, simplifying the calculation of voltages and currents.\n\n\n\\[\n\\begin{align}\nI_c & = C \\frac{d V_c}{dt} = C \\frac{d}{dt} \\left( V_A \\cos(\\omega t + \\phi) \\right) \\\\\n& = -\\omega C V_A \\sin(\\omega t + \\phi) = \\omega C V_A \\cos\\left(\\omega t + \\phi + \\frac{\\pi}{2}\\right)\n\\end{align}\n\\] The phasor representation of the current is: \\[\n\\bar{I}_c = j \\omega C \\bar{V}_c\n\\]\n\nThe phase difference between the voltage and current in a capacitor is \\(\\frac{\\pi}{2}\\) radians (90\\(\\degree\\)), with the current leading the voltage, which is represented with the imaginary unit \\(j\\) in the phasor equation.\n\n\n\n\n\n\n\nQuestion?\n\n\n\nWhat does this look like in the complex plane?",
+    "text": "Phasors and Complex Numbers\n\nPhasors are a way to represent sinusoidal functions as complex numbers of amplitude and phase in the frequency domain.\nA sinusoidal voltage or current at a given, single frequency can be represented as: \\[\n\\begin{gather}\nV_c(t) = V_A \\cos(\\omega t + \\phi)  \\\\\nV_c(t) = V_A \\text{Re} \\left\\{ e^{j\\omega t + \\phi} \\right\\} \\\\\nV_c(t) = \\text{Re} \\left\\{ V_A e^{j\\phi} e^{j\\omega t} \\right\\} \\\\\n\\bar{V} = V_A e^{j\\phi} = V_A \\angle \\phi \\\\\n\\end{gather}\n\\]\nwhere \\(V_A\\) is the amplitude, \\(\\omega\\) is the angular frequency, and \\(\\phi\\) is the phase angle. The phasor \\(\\tilde{V}\\) is a complex number.\n\n\n\nThe time dependence \\(e^{j\\omega t}\\) is often omitted in phasor notation, as it is understood to be present.\nPhasors allow us to use complex algebra to analyze AC circuits, simplifying the calculation of voltages and currents.\n\n\n\\[\n\\begin{align}\nI_c & = C \\frac{d V_c}{dt} = C \\frac{d}{dt} \\left( V_A \\cos(\\omega t + \\phi) \\right) \\\\\n& = -\\omega C V_A \\sin(\\omega t + \\phi) = \\omega C V_A \\cos\\left(\\omega t + \\phi + \\frac{\\pi}{2}\\right)\n\\end{align}\n\\] The phasor representation of the current is: \\[\n\\bar{I}_c = j \\omega C \\bar{V}_c\n\\]\n\nThe phase difference between the voltage and current in a capacitor is \\(\\frac{\\pi}{2}\\) radians (90 deg), with the current leading the voltage, which is represented with the imaginary unit \\(j\\) in the phasor equation.\n\n\n\n\n\n\n\nQuestion?\n\n\n\nWhat does this look like in the complex plane?",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#does-a-resistor-have-complex-impedance",
+    "href": "slides/complex-impedance-notes.html#does-a-resistor-have-complex-impedance",
+    "title": "Complex Impedance",
+    "section": "Does a Resistor Have Complex Impedance?",
+    "text": "Does a Resistor Have Complex Impedance?\n\nShort answer: No.\n\n\\[\n\\begin{gather}\nv_R(t) = R i_R(t) \\\\\nv_R(t) = Re\\left\\{ \\bar{V}_R e^{j\\omega t} \\right\\} \\\\\n\\bar{V}_R = V_A e^{j\\phi} \\\\\ni_R(t) = Re\\left\\{ \\bar{I}_R e^{j\\omega t} \\right\\} \\\\\n\\bar{I}_R = \\frac{V_A}{R} e^{j\\phi} \\\\\n\\end{gather}\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#what-does-this-look-like-on-the-complex-plane",
+    "href": "slides/complex-impedance-notes.html#what-does-this-look-like-on-the-complex-plane",
+    "title": "Complex Impedance",
+    "section": "What does this look like on the complex plane?",
+    "text": "What does this look like on the complex plane?\n\n\\(\\bar{V}_R\\) and \\(\\bar{I}_R\\) are in phase.\nAmplitude is governed by Ohm’s law: \\(V_A = R I_A\\).",
     "crumbs": [
       "Learning Modules",
       "Complex Impedance"
@@ -1857,7 +1956,106 @@
     "href": "slides/complex-impedance-notes.html#complex-impedance-of-a-capacitor",
     "title": "Complex Impedance",
     "section": "Complex Impedance of a Capacitor",
-    "text": "Complex Impedance of a Capacitor\nThe complex impedance \\(Z_c\\) of a capacitor is defined as the ratio of the phasor voltage to the phasor current:\n\\[\nZ_c = \\frac{\\bar{V}_c}{\\bar{I}_c} = \\frac{1}{j \\omega C}\n\\]",
+    "text": "Complex Impedance of a Capacitor\n\\[\n\\begin{gather}\nv_c(t) = Re\\left\\{ \\bar{V}_c e^{j\\omega t} \\right\\} \\\\\ni_c(t) = C \\frac{d v_c(t)}{dt} \\\\\ni_c(t) = C Re\\left\\{ \\frac{d}{dt} \\left( \\bar{V}_c e^{j\\omega t} \\right) \\right\\} \\\\\ni_c(t) = C Re\\left\\{ j \\omega \\bar{V}_c e^{j\\omega t} \\right\\} \\\\\ni_c(t) = Re\\left\\{ j \\omega C \\bar{V}_c e^{j\\omega t} \\right\\} \\\\\n\\bar{I}_c = j \\omega C \\bar{V}_c \\\\\n\\bar{V}_c = \\frac{1}{j \\omega C} \\bar{I}_c\n\\end{gather}\n\\]\n\n\n\n\n\n\n\nComplex Impedance of a Capacitor\n\n\n\nThe complex impedance (\\(Z_c\\)) of a capacitor is defined as the ratio of the phasor voltage to the phasor current:\n\\[\nZ_c = \\frac{\\bar{V}_c}{\\bar{I}_c} = \\frac{1}{j \\omega C}\n\\]\n\n\n\nLarger capacitance (\\(C\\)) leads to longer charging times.\nHigher frequency (\\(\\omega\\)) represents more rapid changes in voltage, meaning less time to charge in each phase of a cycle, so lower impedance to current flow.\nThe \\(j\\) in the denominator indicates a phase shift of -90 degrees (current leads voltage).\nThe impedance is purely imaginary, indicating that the capacitor does not dissipate energy but rather stores it in the electric field.\nThis frequency-dependent behavior will be the foundation for designing filters.",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#z_c-in-the-time-domain",
+    "href": "slides/complex-impedance-notes.html#z_c-in-the-time-domain",
+    "title": "Complex Impedance",
+    "section": "\\(Z_c\\) in the Time Domain",
+    "text": "\\(Z_c\\) in the Time Domain\n\\[\n\\begin{gather}\n\\bar{V}_c = \\frac{\\bar{I}_c}{j \\omega C}  = -j \\frac{\\bar{I}_c}{\\omega C} = \\frac{1}{\\omega C} e^{-j \\frac{\\pi}{2}} (\\bar{I}_c e^{j \\phi}) \\\\\n\\bar{V}_c = \\frac{I_c}{\\omega C} e^{j(\\phi - \\frac{\\pi}{2})} \\\\\n\\end{gather}\n\\]\n\nCapacitor voltage lags current by \\(\\frac{\\pi}{2}\\) (90 deg).",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#example-rc-circuit-with-a-switch",
+    "href": "slides/complex-impedance-notes.html#example-rc-circuit-with-a-switch",
+    "title": "Complex Impedance",
+    "section": "Example: RC Circuit with a Switch",
+    "text": "Example: RC Circuit with a Switch\n\n\n\n\n\n\nThe switch is closed at \\(t=0\\), connecting the voltage source to the series RC circuit.\n\n\\[\n\\begin{gather}\nv_C|_{t=0} = 0 \\\\\ni_C = \\frac{V_S}{R} \\\\\n\\end{gather}\n\\]\n\nThe capacitor voltage cannot change instantaneously, so it starts at 0 V and behaves like a short circuit for an instant until it starts to accumulate charge.\nAs time evolves, the capacitor charges, and its voltage increases, reducing the current through the circuit.",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#complex-impedance-of-an-inductor",
+    "href": "slides/complex-impedance-notes.html#complex-impedance-of-an-inductor",
+    "title": "Complex Impedance",
+    "section": "Complex Impedance of an Inductor",
+    "text": "Complex Impedance of an Inductor\n\\[\n\\begin{gather}\nv_L(t) = L \\frac{d i_L(t)}{dt} \\\\\nv_L(t) = L \\frac{d}{dt} Re\\left\\{ \\bar{I}_L e^{j\\omega t} \\right\\} \\\\\nv_L(t) = L Re\\left\\{ j \\omega \\bar{I}_L e^{j\\omega t} \\right\\} \\\\\nv_L(t) = Re\\left\\{ j \\omega L \\bar{I}_L e^{j\\omega t} \\right\\} \\\\\n\\bar{V}_L = j \\omega L \\bar{I}_L \\\\\n\\bar{I}_L = \\frac{1}{j \\omega L} \\bar{V}_L \\\\\n\\end{gather}\n\\]\n\n\n\n\n\n\n\nComplex Impedance of an Inductor\n\n\n\nThe complex impedance (\\(Z_L\\)) of an inductor is defined as the ratio of the phasor voltage to the phasor current:\n\\[\nZ_L = j \\omega L = \\frac{\\bar{V}_L}{\\bar{I}_L}\n\\]\n\n\n\nLarger inductance (\\(L\\)) means more opposition to changes in current.\nHigher frequency (\\(\\omega\\)) means that transient voltage changes occur more rapidly, leading to greater opposition to current flow.\n\n\n\\[\n\\begin{align}\n\\bar{V}_L & = j \\omega L \\bar{I}_L = j \\omega L (I_L e^{j\\phi}) \\\\\n& = \\omega L I_L e^{\\frac{\\pi}{2}} e^{j\\phi} \\\\\n& = \\omega L I_L e^{j(\\phi + \\frac{\\pi}{2})} \\\\\n\\end{align}\n\\]\n\nThe \\(j\\) indicates a phase shift of +90 degrees (voltage leads current).\nThe impedance is purely imaginary, indicating that the inductor does not dissipate energy but rather stores it in the magnetic field.",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#example-rl-circuit-with-a-switch",
+    "href": "slides/complex-impedance-notes.html#example-rl-circuit-with-a-switch",
+    "title": "Complex Impedance",
+    "section": "Example: RL Circuit with a Switch",
+    "text": "Example: RL Circuit with a Switch\n\n\n\n\n\nWhen the switch closes at \\(t=0\\):\n\n\\(v_L\\) = \\(V_S\\) (initially behaves like an open circuit)\n\\(i_L\\) = 0 A (initially no current through the inductor)",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#impedance-summary",
+    "href": "slides/complex-impedance-notes.html#impedance-summary",
+    "title": "Complex Impedance",
+    "section": "Impedance Summary",
+    "text": "Impedance Summary\n\n“Ohm’s Law” for capacitors and inductors in the phasor domain: \\[\n\\bar{V} = Z \\bar{I}\n\\]\nResistor: \\(Z_R = R\\) (purely real)\nCapacitor: \\(Z_C = \\frac{1}{j \\omega C}\\)\n\nPurely imaginary, negative\nVoltage lags current by 90 degrees\n\nInductor: \\(Z_L = j \\omega L\\)\n\nPurely imaginary, positive\nVoltage leads current by 90 degrees",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#solutions-with-phasors",
+    "href": "slides/complex-impedance-notes.html#solutions-with-phasors",
+    "title": "Complex Impedance",
+    "section": "Solutions with Phasors",
+    "text": "Solutions with Phasors\n\nAssume signals are sinusoidal and at a single frequency.\nTime-domain differential equations become algebraic equations in the phasor domain.\n\n\\[\n\\frac{d}{dt} e^{j \\omega t} = j \\omega e^{j \\omega t}\n\\]\n\nAll of our resistive circuit analysis techniques can now be applied to circuits with capacitors and inductors using complex impedances.\nMore complex signals can be represented as a sum of sinusoids of different frequencies, each with their own amplitide and phase (Fourier series).",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#example-rc-circuit-ac-circuit-analysis",
+    "href": "slides/complex-impedance-notes.html#example-rc-circuit-ac-circuit-analysis",
+    "title": "Complex Impedance",
+    "section": "Example: RC Circuit AC Circuit Analysis",
+    "text": "Example: RC Circuit AC Circuit Analysis\n\n\n\n\n\nSolve for \\(i_R(t)\\) in the time domain (more painful).\n\\[\n\\begin{gather}\ni_R(t) = \\frac{v_s(t) - v_C(t)}{R} \\\\\ni_C(t) = C \\frac{d v_C(t)}{dt}\n\\end{gather}\n\\]\n\nSetup the Diff Eq to Solve\nUsing KCL:\n\\[\n\\begin{gather}\n\\frac{v_s(t) - v_C(t)}{R} = C \\frac{d v_C(t)}{dt} \\\\\n\\frac{d v_C(t)}{dt} + \\frac{1}{RC} v_C(t) = \\frac{1}{RC} v_s(t) \\\\\n\\end{gather}\n\\]\n\nFirst-order linear differential equation.\nWe are not assuming solving this equation is in scope for this class.\n\n\n\nPhasor-based Solution\nIf \\(v_s(t)\\) is sinusoidal, we can use phasors and complex impedance to solve the problem more easily.\n\nIdentify AC sources and note their frequenc(ies).\nConvert all sources to phasors.\nRepresent all circuit elements with their complex impedances.\nSolve for unknown quatities using circuit analysis techniques.\nConvert phasor results back to time domain, paying attention to the real part.\nRepeat this for other frequencies if needed, then sum the results (superposition).\n\n\n\nExample with Numbers\n\\[\n\\begin{gather}\nv_s(t) = A \\cos(\\omega t) \\\\\n\\bar{V}_s = A \\angle 0 \\\\\nZ_R = R \\\\\nZ_C = \\frac{1}{j \\omega C} \\\\\n\\bar{I} = \\frac{\\bar{V}_s}{Z_R + Z_C} = \\frac{\\bar{V}_s}{R + \\frac{1}{j \\omega C}} = \\frac{\\bar{V}_s j \\omega C}{1 + j \\omega C R} \\\\\n\\end{gather}\n\\]\n\n\nSolve in Polar Form (Mag & Phase)\n\\[\n\\begin{gather}\n\\bar{I} = \\frac{\\bar{V}_s j \\omega C}{1 + j \\omega C R} \\\\\n|\\bar{I}| = \\frac{|\\bar{V}_s| \\omega C}{\\sqrt{1 + (\\omega C R)^2}} \\\\\n\\angle \\bar{I} = 90^\\circ - \\tan^{-1}(\\omega C R) \\\\\n\\end{gather}\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#complex-impedance-applied-to-equiv.-circuits",
+    "href": "slides/complex-impedance-notes.html#complex-impedance-applied-to-equiv.-circuits",
+    "title": "Complex Impedance",
+    "section": "Complex Impedance Applied to Equiv. Circuits",
+    "text": "Complex Impedance Applied to Equiv. Circuits\n\n\n\n\n\n\nSolve for Thevenin impedance (\\(Z_{T}\\)).\n\n\\[\n\\begin{align}\nZ_T & = Z_{R_S} + Z_L || Z_C \\\\\n    & = R_S + \\left( \\frac{1}{j \\omega L} + \\frac{1}{\\frac{1}{j \\omega C}} \\right)^{-1} \\\\\n    & = R_S + \\left( \\frac{1}{j \\omega L} + j \\omega C \\right)^{-1} \\\\\nZ_T & = R_S + \\frac{j \\omega L}{1 - \\omega^2 LC} \\\\\n\\end{align}\n\\]\n\n\nSolve for Thevenin equivalent voltage (\\(\\bar{V}_{T}\\)).\n\nNo current flows in the open-circuit load circuit, so: \\[\nv_{OC} = \\bar{V}_S(j \\omega)\n\\]\nThe equivalent circuit is:",
+    "crumbs": [
+      "Learning Modules",
+      "Complex Impedance"
+    ]
+  },
+  {
+    "objectID": "slides/complex-impedance-notes.html#inputoutput-impedance",
+    "href": "slides/complex-impedance-notes.html#inputoutput-impedance",
+    "title": "Complex Impedance",
+    "section": "Input/Output Impedance",
+    "text": "Input/Output Impedance",
     "crumbs": [
       "Learning Modules",
       "Complex Impedance"
