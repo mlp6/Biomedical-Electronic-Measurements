@@ -1,10 +1,12 @@
 # TODO
 
-[ ] Update the [Makefile](Makefile) to compile all of the `circuitikz` images and clean things up.
+* [ ] Update the [Makefile](Makefile) to compile all of the `circuitikz` images and clean things up.
+* [ ] Setup gradebook
+* [ ] Setup semester-long calendar
 
 ## Slides
 
-[ ] Organize slide images by lecture (not monolithic directory)
+* [ ] Organize slide images by lecture (not monolithic directory)
 
 ## Labs
 
