@@ -1,0 +1,84 @@
+---
+title: "Filters"
+date: "2025-10-06"
+format:
+  live-html: 
+    output-file: filters-notes.html
+  live-revealjs: 
+    output-file: filters-slides.html
+---
+
+## Overview
+
+The **frequency response** of a circuit is a measure of the variation of a
+load-related voltage/current signal as a function of the frequency content of
+the source signal.
+
+::: {.callout-note title="Goal"}
+Our goal is to evaluate the modulation of an input (voltage) signal by a circuit with
+frequency-dependent behavior leading to a frequency-dependent output (voltage) signal.
+:::
+
+## Circuit Block Diagram
+
+![](images/source-filter-load.png){fig-align="center"}
+
+Generalized circuit block diagram with a source (input signal), a filter (circuit with frequency-dependent behavior), and a load (output signal).
+
+## Transfer Function
+
+- A **transfer function** is a mathematical representation of the relationship
+between the input and output of a system as a function of frequency.  
+
+- It describes how a filter modifies the amplitude and phase of the input signal
+to produce the output signal.
+
+$$
+\bar{H}(j\omega) = \frac{\bar{V}_{out}(j\omega)}{\bar{V}_{in}(j\omega)}
+$$
+
+- Complex quantity
+
+- Dimensionless
+
+- Function of frequency ($\omega$)
+
+## Interpretting a Transfer Function
+
+- $\bar{V}_{L}(j\omega)$ will be an **amplitude-modulated** and **phase-modulated** version of $\bar{V}_{S}(j\omega)$.
+
+$$
+\begin{gather}
+V_{L} e^{j\phi_L} = |H|e^{j\angle H} V_{S} e^{j\phi_S} = |H| V_{S} e^{j(\phi_S + \angle H)} \\
+V_{L} = |H| V_{S} \\
+\phi_L = \angle H + \phi_S
+\end{gather}
+$$
+
+### Example: FM Radio
+
+- Input/Source: all the stations broadcast span a wide range of frequencies in the FM band (88-108 MHz).
+
+- Desired Output/Load: a single station (e.g., 101.1 MHz).
+
+- Draw:
+
+  - Input signal: multiple frequencies
+
+  - Output signal: single frequency
+
+  - Transfer function: band-pass filter centered at 101.1 MHz
+
+### Example: Audio Equalizer
+
+- Input/Source: music signal with a wide range of frequencies (bass, midrange, treble).
+
+- Desired Output/Load: enhanced bass and treble frequencies.
+
+- Draw:
+
+  - Input signal: full spectrum
+
+  - Output signal: enhanced bass and treble
+
+  - Transfer functions: low-pass and high-pass filters
