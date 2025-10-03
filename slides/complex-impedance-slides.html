@@ -167,6 +167,7 @@ Dr.&nbsp;Mark Palmeri, M.D., Ph.D.
 V_c(t) = V_A \cos(\omega t + \phi)  \\
 V_c(t) = V_A \text{Re} \left\{ e^{j\omega t + \phi} \right\} \\
 V_c(t) = \text{Re} \left\{ V_A e^{j\phi} e^{j\omega t} \right\} \\
+\textrm{Drop the sinusoidal time dependence for simplicity...} \\
 \bar{V} = V_A e^{j\phi} = V_A \angle \phi \\
 \end{gather}
 \]</span><br>
@@ -183,10 +184,11 @@ where <span class="math inline">\(V_A\)</span> is the amplitude, <span class="ma
 <section class="slide level3">
 
 <p><span class="math display">\[
-\begin{align}
-I_c &amp; = C \frac{d V_c}{dt} = C \frac{d}{dt} \left( V_A \cos(\omega t + \phi) \right) \\
-&amp; = -\omega C V_A \sin(\omega t + \phi) = \omega C V_A \cos\left(\omega t + \phi + \frac{\pi}{2}\right)
-\end{align}
+\begin{gather}
+I_c = C \frac{d V_c}{dt} = C \frac{d}{dt} \left( V_c \cos(\omega t + \phi) \right) \\
+\textrm{Remember: } \frac{d}{dt} \cos(\omega t) = -\omega \cdot \sin(\omega t) \\
+I_c = -\omega C V_c \sin(\omega t + \phi) = \omega C V_c \cos\left(\omega t + \phi + \frac{\pi}{2}\right)
+\end{gather}
 \]</span> The phasor representation of the current is: <span class="math display">\[
 \bar{I}_c = j \omega C \bar{V}_c
 \]</span></p>
@@ -217,10 +219,9 @@ I_c &amp; = C \frac{d V_c}{dt} = C \frac{d}{dt} \left( V_A \cos(\omega t + \phi)
 <p><span class="math display">\[
 \begin{gather}
 v_R(t) = R i_R(t) \\
-v_R(t) = Re\left\{ \bar{V}_R e^{j\omega t} \right\} \\
-\bar{V}_R = V_A e^{j\phi} \\
-i_R(t) = Re\left\{ \bar{I}_R e^{j\omega t} \right\} \\
-\bar{I}_R = \frac{V_A}{R} e^{j\phi} \\
+v_R(t) = Re\left\{ \bar{V}_R e^{(j\omega t + \phi)} \right\} \\
+i_R(t) = Re\left\{ \bar{I}_R e^{(j\omega t + \phi)} \right\} \\
+\bar{V}_R = \bar{I}_R \cdot R \\
 \end{gather}
 \]</span></p>
 </section>
@@ -245,7 +246,7 @@ i_c(t) = C Re\left\{ \frac{d}{dt} \left( \bar{V}_c e^{j\omega t} \right) \right\
 i_c(t) = C Re\left\{ j \omega \bar{V}_c e^{j\omega t} \right\} \\
 i_c(t) = Re\left\{ j \omega C \bar{V}_c e^{j\omega t} \right\} \\
 \bar{I}_c = j \omega C \bar{V}_c \\
-\bar{V}_c = \frac{1}{j \omega C} \bar{I}_c
+\bar{V}_c = \frac{1}{j \omega C} \bar{I}_c = \frac{-j}{\omega C} \bar{I}_c \\
 \end{gather}
 \]</span></p>
 </section>
@@ -263,7 +264,7 @@ i_c(t) = Re\left\{ j \omega C \bar{V}_c e^{j\omega t} \right\} \\
 <div class="callout-content">
 <p>The complex impedance (<span class="math inline">\(Z_c\)</span>) of a capacitor is defined as the ratio of the phasor voltage to the phasor current:</p>
 <p><span class="math display">\[
-Z_c = \frac{\bar{V}_c}{\bar{I}_c} = \frac{1}{j \omega C}
+Z_c = \frac{\bar{V}_c}{\bar{I}_c} = \frac{1}{j \omega C} = \frac{-j}{\omega C}
 \]</span></p>
 </div>
 </div>
