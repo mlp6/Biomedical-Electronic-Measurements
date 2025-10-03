@@ -343,5 +343,3 @@ $$
 The equivalent circuit is:
 
 ![](images/phasor_thevenin_equiv_ckt.png){fig-align="center"}
-
-## Input/Output Impedance
