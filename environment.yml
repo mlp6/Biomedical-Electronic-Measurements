@@ -1,0 +1,9 @@
+name: Biomedical-Electronic-Measurements
+dependencies:
+  - python=3.12
+  - jupyter
+  - numpy
+  - scipy
+  - matplotlib
+  - ipython
+  - pip

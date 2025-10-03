@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    % Draw x-axis
+    \draw[->] (0,0) -- (9,0) node[below] {$\omega$};
+    % Draw y-axis for phase (in radians, from 0 to -π/2)
+    \draw[->] (0,0) -- (0,-90) node[left] {$\angle H(\omega)$};
+    % Plot the phase curve: ∠H(ω) = -arctan(ω/ω_o) with ω_o=2
+    \draw[thick, red] plot[domain=0:6, samples=100] (\x, {-atan(\x/2)});
+    % Annotate cutoff frequency ω_o at ω=2 with phase -π/4
+    % \draw[dashed] (2, {-atan(2/2)}) -- (2,0) node[below] {$\omega_o$};
+    % \draw[dashed] (0, {-atan(2/2)}) -- (2, {-atan(2/2)}) node[left] {$-\frac{\pi}{4}$};
+    % Add y-axis ticks
+    % \draw (0, 0) -- (-0.1, 0) node[left] {0};
+    % \draw (0, {-pi/4}) -- (-0.1, {-pi/4}) node[left] {$-\frac{\pi}{4}$};
+    % \draw (0, {-pi/2}) -- (-0.1, {-pi/2}) node[left] {$-\frac{\pi}{2}$};
+    
+    % Extend bounding box
+    \path (0,-95.0);
+    \path (12,0);
+\end{tikzpicture}
+\end{document}

@@ -82,3 +82,115 @@ $$
   - Output signal: enhanced bass and treble
 
   - Transfer functions: low-pass and high-pass filters
+
+## How to Design a Low-Pass Filter (LPF)
+
+![](images/lpf.png){fig-align="center"}
+
+Let's inspect the frequency response (transfer function) of this circuit...
+
+$$
+V_o = V_i \frac{\frac{1}{j\omega C}}{R + \frac{1}{j \omega C}} \\
+$$
+
+How did I get this expression?
+
+### Solve for Transfer Function
+
+$$
+\frac{V_o}{V_i} = \frac{1}{1 + j\omega RC} \\
+$$
+
+Convert to polar form to get magnitude and phase:
+
+$$
+\begin{gather}
+|\bar{H}(j\omega)| = \frac{1}{\sqrt{1 + (\omega RC)^2}} \\
+\angle \bar{H}(j\omega) = -\tan^{-1}(\omega RC) \\
+\end{gather}
+$$
+
+### Does this make sense?
+
+Let's test some different frequencies to see what the transfer function tells us...
+
+- At $\omega = 0$ (DC):
+
+$$
+\begin{gather}
+|\bar{H}(j0)| = 1 \\
+\angle \bar{H}(j0) = 0^\circ \\
+\end{gather}
+$$
+
+That means that at DC, the output voltage is equal to the input voltage (no attenuation, no phase shift): $V_o = V_i$.  The capacitor is effectively an open circuit at DC.
+
+![](images/lpf-dc.png){fig-align="center"}
+
+---
+
+- At $\omega = \infty$:
+
+$$
+\begin{gather}
+|\bar{H}(j\infty)| = 0 \\
+\angle \bar{H}(j\infty) = -90^\circ \\
+\end{gather}
+$$
+
+That means that at high frequencies, the output voltage is zero (completely attenuated) and the phase shift is -90 degrees: $V_o = 0$. The capacitor is effectively a short circuit at high frequencies.
+
+![](images/lpf-high-freq.png){fig-align="center"}
+
+### Complete Transfer Function
+
+```{python}
+# Low-pass filter transfer function
+
+import numpy as np
+
+w = np.arange(1, 5000, 1) * 2 * np.pi
+R = 1e3
+C = 0.1e-6
+j = 1j
+H = 1/(1 + j*w*R*C)
+
+w_o = 1/(R*C)
+
+# Plot the magnitude and phase of the transfer function
+import matplotlib.pyplot as plt
+
+plt.figure()
+
+plt.subplot(2, 1, 1)
+plt.plot(w, np.abs(H))
+plt.title('Magnitude')
+plt.ylabel('|H|')
+plt.xticks([])
+
+# \omega_O is at the -3 dB point (1/sqrt(2) of the max)
+plt.plot([w_o, w_o], [0, 1/np.sqrt(2)], color='red', linestyle='--') 
+plt.text(w_o, 1/np.sqrt(2), r'$\omega_0$', color='red')
+plt.plot([0, w_o], [1/np.sqrt(2), 1/np.sqrt(2)], color='red', linestyle='--')
+
+plt.subplot(2, 1, 2)
+plt.plot(w, np.angle(H))
+plt.title('Phase')
+plt.ylabel(r'$\angle H$ (radians)')
+plt.xlabel('Frequency (rad/s)')
+
+# \omega_O is at the -45 degree point (-pi/4)
+plt.plot([w_o, w_o], [-np.pi/2, -np.pi/4], color='red', linestyle='--') 
+plt.text(w_o, -np.pi/4, r'$\omega_0$', color='red')
+plt.plot([0, w_o], [-np.pi/4, -np.pi/4], color='red', linestyle='--')
+
+plt.show()
+```
+
+- $\omega_o$ is a characterisitic "cutoff" frequency that conveys information about the frequency response of the circuit.
+
+- At $\omega = \omega_o$, the output voltage is attenuated to 70.7% of the input voltage ($|H| = 1/\sqrt{2}$) (**half power**) and the phase shift is -45 degrees (half of the total -90 degree shift).
+
+- Less-attenuated frequencies $< \omega_o$ are in the **passband**.
+
+- More-attenuated frequencies $> \omega_o$ are in the **stopband**.
