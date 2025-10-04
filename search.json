@@ -681,42 +681,66 @@
     "href": "slides/filters-notes.html",
     "title": "Filters",
     "section": "",
-    "text": "The frequency response of a circuit is a measure of the variation of a load-related voltage/current signal as a function of the frequency content of the source signal.\n\n\n\n\n\n\nGoal\n\n\n\nOur goal is to evaluate the modulation of an input (voltage) signal by a circuit with frequency-dependent behavior leading to a frequency-dependent output (voltage) signal."
+    "text": "The frequency response of a circuit is a measure of the variation of a load-related voltage/current signal as a function of the frequency content of the source signal.\n\n\n\n\n\n\nGoal\n\n\n\nOur goal is to evaluate the modulation of an input (voltage) signal by a circuit with frequency-dependent behavior leading to a frequency-dependent output (voltage) signal.",
+    "crumbs": [
+      "Learning Modules",
+      "Filters"
+    ]
   },
   {
     "objectID": "slides/filters-notes.html#overview",
     "href": "slides/filters-notes.html#overview",
     "title": "Filters",
     "section": "",
-    "text": "The frequency response of a circuit is a measure of the variation of a load-related voltage/current signal as a function of the frequency content of the source signal.\n\n\n\n\n\n\nGoal\n\n\n\nOur goal is to evaluate the modulation of an input (voltage) signal by a circuit with frequency-dependent behavior leading to a frequency-dependent output (voltage) signal."
+    "text": "The frequency response of a circuit is a measure of the variation of a load-related voltage/current signal as a function of the frequency content of the source signal.\n\n\n\n\n\n\nGoal\n\n\n\nOur goal is to evaluate the modulation of an input (voltage) signal by a circuit with frequency-dependent behavior leading to a frequency-dependent output (voltage) signal.",
+    "crumbs": [
+      "Learning Modules",
+      "Filters"
+    ]
   },
   {
     "objectID": "slides/filters-notes.html#circuit-block-diagram",
     "href": "slides/filters-notes.html#circuit-block-diagram",
     "title": "Filters",
     "section": "Circuit Block Diagram",
-    "text": "Circuit Block Diagram\n\n\n\n\n\nGeneralized circuit block diagram with a source (input signal), a filter (circuit with frequency-dependent behavior), and a load (output signal)."
+    "text": "Circuit Block Diagram\n\n\n\n\n\nGeneralized circuit block diagram with a source (input signal), a filter (circuit with frequency-dependent behavior), and a load (output signal).",
+    "crumbs": [
+      "Learning Modules",
+      "Filters"
+    ]
   },
   {
     "objectID": "slides/filters-notes.html#transfer-function",
     "href": "slides/filters-notes.html#transfer-function",
     "title": "Filters",
     "section": "Transfer Function",
-    "text": "Transfer Function\n\nA transfer function is a mathematical representation of the relationship between the input and output of a system as a function of frequency.\nIt describes how a filter modifies the amplitude and phase of the input signal to produce the output signal.\n\n\\[\n\\bar{H}(j\\omega) = \\frac{\\bar{V}_{out}(j\\omega)}{\\bar{V}_{in}(j\\omega)}\n\\]\n\nComplex quantity\nDimensionless\nFunction of frequency (\\(\\omega\\))"
+    "text": "Transfer Function\n\nA transfer function is a mathematical representation of the relationship between the input and output of a system as a function of frequency.\nIt describes how a filter modifies the amplitude and phase of the input signal to produce the output signal.\n\n\\[\n\\bar{H}(j\\omega) = \\frac{\\bar{V}_{out}(j\\omega)}{\\bar{V}_{in}(j\\omega)}\n\\]\n\nComplex quantity\nDimensionless\nFunction of frequency (\\(\\omega\\))",
+    "crumbs": [
+      "Learning Modules",
+      "Filters"
+    ]
   },
   {
     "objectID": "slides/filters-notes.html#interpretting-a-transfer-function",
     "href": "slides/filters-notes.html#interpretting-a-transfer-function",
     "title": "Filters",
     "section": "Interpretting a Transfer Function",
-    "text": "Interpretting a Transfer Function\n\n\\(\\bar{V}_{L}(j\\omega)\\) will be an amplitude-modulated and phase-modulated version of \\(\\bar{V}_{S}(j\\omega)\\).\n\n\\[\n\\begin{gather}\nV_{L} e^{j\\phi_L} = |H|e^{j\\angle H} V_{S} e^{j\\phi_S} = |H| V_{S} e^{j(\\phi_S + \\angle H)} \\\\\nV_{L} = |H| V_{S} \\\\\n\\phi_L = \\angle H + \\phi_S\n\\end{gather}\n\\]\n\nExample: FM Radio\n\nInput/Source: all the stations broadcast span a wide range of frequencies in the FM band (88-108 MHz).\nDesired Output/Load: a single station (e.g., 101.1 MHz).\nDraw:\n\nInput signal: multiple frequencies\nOutput signal: single frequency\nTransfer function: band-pass filter centered at 101.1 MHz\n\n\n\n\nExample: Audio Equalizer\n\nInput/Source: music signal with a wide range of frequencies (bass, midrange, treble).\nDesired Output/Load: enhanced bass and treble frequencies.\nDraw:\n\nInput signal: full spectrum\nOutput signal: enhanced bass and treble\nTransfer functions: low-pass and high-pass filters"
+    "text": "Interpretting a Transfer Function\n\n\\(\\bar{V}_{L}(j\\omega)\\) will be an amplitude-modulated and phase-modulated version of \\(\\bar{V}_{S}(j\\omega)\\).\n\n\\[\n\\begin{gather}\nV_{L} e^{j\\phi_L} = |H|e^{j\\angle H} V_{S} e^{j\\phi_S} = |H| V_{S} e^{j(\\phi_S + \\angle H)} \\\\\nV_{L} = |H| V_{S} \\\\\n\\phi_L = \\angle H + \\phi_S\n\\end{gather}\n\\]\n\nExample: FM Radio\n\nInput/Source: all the stations broadcast span a wide range of frequencies in the FM band (88-108 MHz).\nDesired Output/Load: a single station (e.g., 101.1 MHz).\nDraw:\n\nInput signal: multiple frequencies\nOutput signal: single frequency\nTransfer function: band-pass filter centered at 101.1 MHz\n\n\n\n\nExample: Audio Equalizer\n\nInput/Source: music signal with a wide range of frequencies (bass, midrange, treble).\nDesired Output/Load: enhanced bass and treble frequencies.\nDraw:\n\nInput signal: full spectrum\nOutput signal: enhanced bass and treble\nTransfer functions: low-pass and high-pass filters",
+    "crumbs": [
+      "Learning Modules",
+      "Filters"
+    ]
   },
   {
     "objectID": "slides/filters-notes.html#how-to-design-a-low-pass-filter-lpf",
     "href": "slides/filters-notes.html#how-to-design-a-low-pass-filter-lpf",
     "title": "Filters",
     "section": "How to Design a Low-Pass Filter (LPF)",
-    "text": "How to Design a Low-Pass Filter (LPF)\n\n\n\n\n\nLet’s inspect the frequency response (transfer function) of this circuit…\n\\[\nV_o = V_i \\frac{\\frac{1}{j\\omega C}}{R + \\frac{1}{j \\omega C}} \\\\\n\\]\nHow did I get this expression?\n\nSolve for Transfer Function\n\\[\n\\frac{V_o}{V_i} = \\frac{1}{1 + j\\omega RC} \\\\\n\\]\nConvert to polar form to get magnitude and phase:\n\\[\n\\begin{gather}\n|\\bar{H}(j\\omega)| = \\frac{1}{\\sqrt{1 + (\\omega RC)^2}} \\\\\n\\angle \\bar{H}(j\\omega) = -\\tan^{-1}(\\omega RC) \\\\\n\\end{gather}\n\\]\n\n\nDoes this make sense?\nLet’s test some different frequencies to see what the transfer function tells us…\n\nAt \\(\\omega = 0\\) (DC):\n\n\\[\n\\begin{gather}\n|\\bar{H}(j0)| = 1 \\\\\n\\angle \\bar{H}(j0) = 0^\\circ \\\\\n\\end{gather}\n\\]\nThat means that at DC, the output voltage is equal to the input voltage (no attenuation, no phase shift): \\(V_o = V_i\\). The capacitor is effectively an open circuit at DC.\n\n\n\n\n\n\n\nAt \\(\\omega = \\infty\\):\n\n\\[\n\\begin{gather}\n|\\bar{H}(j\\infty)| = 0 \\\\\n\\angle \\bar{H}(j\\infty) = -90^\\circ \\\\\n\\end{gather}\n\\]\nThat means that at high frequencies, the output voltage is zero (completely attenuated) and the phase shift is -90 degrees: \\(V_o = 0\\). The capacitor is effectively a short circuit at high frequencies.\n\n\n\n\n\n\n\nComplete Transfer Function\n\n\n\n\n\n\n\\(\\omega_o\\) is a characterisitic “cutoff” frequency that conveys information about the frequency response of the circuit.\n\n\\(V_o\\) is at half power of \\(V_i\\) (\\(|H| = 1/\\sqrt{2}\\)), which is attenuated by -3 dB (\\(20 \\log_{10}(1/\\sqrt{2}) \\approx -3\\) dB).\nThe phase shift is -45 degrees (half of the total -90 degree shift).\n\nLess-attenuated frequencies \\(&lt; \\omega_o\\) are in the passband.\nMore-attenuated frequencies \\(&gt; \\omega_o\\) are in the stopband."
+    "text": "How to Design a Low-Pass Filter (LPF)\n\n\n\n\n\nLet’s inspect the frequency response (transfer function) of this circuit…\n\\[\nV_o = V_i \\frac{\\frac{1}{j\\omega C}}{R + \\frac{1}{j \\omega C}} \\\\\n\\]\nHow did I get this expression?\n\nSolve for Transfer Function\n\\[\n\\frac{V_o}{V_i} = \\frac{1}{1 + j\\omega RC} \\\\\n\\]\nConvert to polar form to get magnitude and phase:\n\\[\n\\begin{gather}\n|\\bar{H}(j\\omega)| = \\frac{1}{\\sqrt{1 + (\\omega RC)^2}} \\\\\n\\angle \\bar{H}(j\\omega) = -\\tan^{-1}(\\omega RC) \\\\\n\\end{gather}\n\\]\n\n\nDoes this make sense?\nLet’s test some different frequencies to see what the transfer function tells us…\n\nAt \\(\\omega = 0\\) (DC):\n\n\\[\n\\begin{gather}\n|\\bar{H}(j0)| = 1 \\\\\n\\angle \\bar{H}(j0) = 0^\\circ \\\\\n\\end{gather}\n\\]\nThat means that at DC, the output voltage is equal to the input voltage (no attenuation, no phase shift): \\(V_o = V_i\\). The capacitor is effectively an open circuit at DC.\n\n\n\n\n\n\n\nAt \\(\\omega = \\infty\\):\n\n\\[\n\\begin{gather}\n|\\bar{H}(j\\infty)| = 0 \\\\\n\\angle \\bar{H}(j\\infty) = -90^\\circ \\\\\n\\end{gather}\n\\]\nThat means that at high frequencies, the output voltage is zero (completely attenuated) and the phase shift is -90 degrees: \\(V_o = 0\\). The capacitor is effectively a short circuit at high frequencies.\n\n\n\n\n\n\n\nComplete Transfer Function\n\n\n\n\n\n\n\\(\\omega_o\\) is a characterisitic “cutoff” frequency that conveys information about the frequency response of the circuit.\n\n\\(V_o\\) is at half power of \\(V_i\\) (\\(|H| = 1/\\sqrt{2}\\)), which is attenuated by -3 dB (\\(20 \\log_{10}(1/\\sqrt{2}) \\approx -3\\) dB).\nThe phase shift is -45 degrees (half of the total -90 degree shift).\n\nLess-attenuated frequencies \\(&lt; \\omega_o\\) are in the passband.\nMore-attenuated frequencies \\(&gt; \\omega_o\\) are in the stopband.",
+    "crumbs": [
+      "Learning Modules",
+      "Filters"
+    ]
   },
   {
     "objectID": "slides/filters-slides.html#overview",
@@ -1033,7 +1057,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals  -&gt; Complex Impedance\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 27, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals  -&gt; Complex Impedance\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n-&gt; Filters\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 27, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
@@ -1143,7 +1167,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals  -&gt; Complex Impedance\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals  -&gt; Complex Impedance\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n-&gt; Filters\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
   },
   {
     "objectID": "resources/teaching_assistant_expectations.html",
