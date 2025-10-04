@@ -293,11 +293,36 @@ V_o = V_i \frac{\frac{1}{j\omega C}}{R + \frac{1}{j \omega C}} \\
 </ul></li>
 <li><p>Less-attenuated frequencies <span class="math inline">\(&lt; \omega_o\)</span> are in the <strong>passband</strong>.</p></li>
 <li><p>More-attenuated frequencies <span class="math inline">\(&gt; \omega_o\)</span> are in the <strong>stopband</strong>.</p></li>
+<li><p><a href="../notebooks/rc_lpf.html">rc_lpf.ipynb</a></p></li>
 </ul>
 </section>
-<section id="plotting-the-transfer-function-jupyter-notebook" class="slide level3">
-<h3>Plotting the Transfer Function (Jupyter Notebook)</h3>
-<p><a href="../notebooks/rc_lpf.html">rc_lpf.ipynb</a></p>
+<section id="how-is-omega_o-related-to-r-and-c" class="slide level3">
+<h3>How is <span class="math inline">\(\omega_o\)</span> related to <span class="math inline">\(R\)</span> and <span class="math inline">\(C\)</span>?</h3>
+<ul>
+<li><span class="math inline">\(\omega_o\)</span> is defined as the half-power point of the transfer function magnitude:</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+|\bar{H}(j\omega_o)| = \frac{1}{\sqrt{2}} = \frac{1}{\sqrt{1 + (\omega_o RC)^2}} \\
+\omega_o = \frac{1}{RC}
+\end{gather}
+\]</span></p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>We can “tune” the frequency response of the filter by changing the values of <span class="math inline">\(R\)</span> and <span class="math inline">\(C\)</span>!</p>
+</div>
+</div>
+</div>
+<ul>
+<li>At <span class="math inline">\(\omega_o\)</span>, <span class="math inline">\(\angle \bar{H}(j\omega_o) = -\tan^{-1}(1) = -45^\circ\)</span> = -.</li>
+</ul>
 
 
 <script type="ojs-module-contents">

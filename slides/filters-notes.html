@@ -420,7 +420,7 @@ window.Quarto = {
   <li><a href="#solve-for-transfer-function" id="toc-solve-for-transfer-function" class="nav-link" data-scroll-target="#solve-for-transfer-function">Solve for Transfer Function</a></li>
   <li><a href="#does-this-make-sense" id="toc-does-this-make-sense" class="nav-link" data-scroll-target="#does-this-make-sense">Does this make sense?</a></li>
   <li><a href="#complete-transfer-function" id="toc-complete-transfer-function" class="nav-link" data-scroll-target="#complete-transfer-function">Complete Transfer Function</a></li>
-  <li><a href="#plotting-the-transfer-function-jupyter-notebook" id="toc-plotting-the-transfer-function-jupyter-notebook" class="nav-link" data-scroll-target="#plotting-the-transfer-function-jupyter-notebook">Plotting the Transfer Function (Jupyter Notebook)</a></li>
+  <li><a href="#how-is-omega_o-related-to-r-and-c" id="toc-how-is-omega_o-related-to-r-and-c" class="nav-link" data-scroll-target="#how-is-omega_o-related-to-r-and-c">How is <span class="math inline">\(\omega_o\)</span> related to <span class="math inline">\(R\)</span> and <span class="math inline">\(C\)</span>?</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="filters-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
@@ -622,11 +622,36 @@ V_o = V_i \frac{\frac{1}{j\omega C}}{R + \frac{1}{j \omega C}} \\
 </ul></li>
 <li><p>Less-attenuated frequencies <span class="math inline">\(&lt; \omega_o\)</span> are in the <strong>passband</strong>.</p></li>
 <li><p>More-attenuated frequencies <span class="math inline">\(&gt; \omega_o\)</span> are in the <strong>stopband</strong>.</p></li>
+<li><p><a href="../notebooks/rc_lpf.html">rc_lpf.ipynb</a></p></li>
 </ul>
 </section>
-<section id="plotting-the-transfer-function-jupyter-notebook" class="level3">
-<h3 class="anchored" data-anchor-id="plotting-the-transfer-function-jupyter-notebook">Plotting the Transfer Function (Jupyter Notebook)</h3>
-<p><a href="../notebooks/rc_lpf.html">rc_lpf.ipynb</a></p>
+<section id="how-is-omega_o-related-to-r-and-c" class="level3">
+<h3 class="anchored" data-anchor-id="how-is-omega_o-related-to-r-and-c">How is <span class="math inline">\(\omega_o\)</span> related to <span class="math inline">\(R\)</span> and <span class="math inline">\(C\)</span>?</h3>
+<ul>
+<li><span class="math inline">\(\omega_o\)</span> is defined as the half-power point of the transfer function magnitude:</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+|\bar{H}(j\omega_o)| = \frac{1}{\sqrt{2}} = \frac{1}{\sqrt{1 + (\omega_o RC)^2}} \\
+\omega_o = \frac{1}{RC}
+\end{gather}
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We can “tune” the frequency response of the filter by changing the values of <span class="math inline">\(R\)</span> and <span class="math inline">\(C\)</span>!</p>
+</div>
+</div>
+<ul>
+<li>At <span class="math inline">\(\omega_o\)</span>, <span class="math inline">\(\angle \bar{H}(j\omega_o) = -\tan^{-1}(1) = -45^\circ\)</span> = -.</li>
+</ul>
 
 
 <script type="ojs-module-contents">
