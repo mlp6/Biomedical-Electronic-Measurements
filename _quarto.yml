@@ -54,6 +54,8 @@ website:
           text: "Reactive Components: Capacitors & Inductors"
         - href: slides/complex_impedance.qmd
           text: "Complex Impedance"
+        - href: slides/filters.qmd
+          text: "Filters"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
