@@ -174,4 +174,4 @@ $$
 We can "tune" the frequency response of the filter by changing the values of $R$ and $C$!
 :::
 
-- At $\omega_o$,  $\angle \bar{H}(j\omega_o) = -\tan^{-1}(1) = -45^\circ$ = -\frac{\pi}{4}.
+- At $\omega_o$,  $\angle \bar{H}(j\omega_o) = -\tan^{-1}(1) = -45^\circ = -\frac{\pi}{4}$.
