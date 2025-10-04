@@ -1,0 +1,60 @@
+---
+title: "Problem Set 05: RCL Circuits"
+date: 2025-10-06
+format:
+  html: default
+  pdf: default
+toc: false
+---
+
+Please complete the following problems and tasks, and upload your solutions to
+Gradescope, using the [formatting guidelines](_formatting_guidelines.qmd) below.
+
+## KiCad/SPICE
+
+Simulate the circuit shown below.
+
+![](images/rc_ac_transient_kicad.png){fig-align="center"}
+
+### AC Frequency Analysis
+
+- Use `VSIN` for the voltage source.
+
+- Be sure to define the SPICE-specific `0` ground (reference) node, and add the $V_{out}$ net label.
+
+- Set all of the component values as shown in the schematic.
+
+- Run the `Simulator` to perform a `Small-signal Analysis (AC)` using the following parameters:
+
+    - Points per decade: 100
+    
+    - Start frequency: 10 Hz
+    
+    - Stop frequency: 1 MHz
+
+::: {.callout-note title="AC Frequency Analysis"}
+Plot the magnitude and phase of the output voltage $V_{out}$.
+:::
+
+### Transient Analysis
+
+Use the `Transient Analysis` to show the sinusoidal waveforms of both voltage
+and current through time through the capacitor.
+
+- Set the `VSIN` source to have an amplitude of 12 V and a frequency of 120 kHz.
+
+- Run the `Simulator` to perform a `Transient Analysis` using the following parameters:
+
+    - Start time: 0 s
+    
+    - Stop time: 50 $\mu$s
+
+    - Maximum step size: 1 $\mu$s
+
+::: {.callout-note title="Transient Analysis"}
+Plot the voltage across the capacitor $V_{out}$ and the current through the capacitor $I_{C_1}$.
+:::
+
+\newpage
+
+{{< include _formatting_guidelines.qmd >}}
