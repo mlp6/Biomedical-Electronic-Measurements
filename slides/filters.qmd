@@ -157,6 +157,21 @@ That means that at high frequencies, the output voltage is zero (completely atte
 
 - More-attenuated frequencies $> \omega_o$ are in the **stopband**.
 
-### Plotting the Transfer Function (Jupyter Notebook)
+- [rc_lpf.ipynb](../notebooks/rc_lpf.ipynb)
 
-[rc_lpf.ipynb](../notebooks/rc_lpf.ipynb)
+### How is $\omega_o$ related to $R$ and $C$?
+
+- $\omega_o$ is defined as the half-power point of the transfer function magnitude:
+
+$$
+\begin{gather}
+|\bar{H}(j\omega_o)| = \frac{1}{\sqrt{2}} = \frac{1}{\sqrt{1 + (\omega_o RC)^2}} \\
+\omega_o = \frac{1}{RC}
+\end{gather}
+$$
+
+::: callout-important
+We can "tune" the frequency response of the filter by changing the values of $R$ and $C$!
+:::
+
+- At $\omega_o$,  $\angle \bar{H}(j\omega_o) = -\tan^{-1}(1) = -45^\circ$ = -\frac{\pi}{4}.
