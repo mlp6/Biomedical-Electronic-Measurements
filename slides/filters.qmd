@@ -157,7 +157,7 @@ That means that at high frequencies, the output voltage is zero (completely atte
 
 - More-attenuated frequencies $> \omega_o$ are in the **stopband**.
 
-- [rc_lpf.ipynb](../notebooks/rc_lpf.ipynb)
+- [filters.ipynb](../notebooks/filters.ipynb)
 
 ### How is $\omega_o$ related to $R$ and $C$?
 
