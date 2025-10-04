@@ -156,3 +156,7 @@ That means that at high frequencies, the output voltage is zero (completely atte
 - Less-attenuated frequencies $< \omega_o$ are in the **passband**.
 
 - More-attenuated frequencies $> \omega_o$ are in the **stopband**.
+
+### Plotting the Transfer Function (Jupyter Notebook)
+
+[rc_lpf.ipynb](../notebooks/rc_lpf.ipynb)
