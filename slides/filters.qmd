@@ -144,52 +144,14 @@ That means that at high frequencies, the output voltage is zero (completely atte
 
 ### Complete Transfer Function
 
-```{python}
-# Low-pass filter transfer function
-
-import numpy as np
-
-w = np.arange(1, 5000, 1) * 2 * np.pi
-R = 1e3
-C = 0.1e-6
-j = 1j
-H = 1/(1 + j*w*R*C)
-
-w_o = 1/(R*C)
-
-# Plot the magnitude and phase of the transfer function
-import matplotlib.pyplot as plt
-
-plt.figure()
-
-plt.subplot(2, 1, 1)
-plt.plot(w, np.abs(H))
-plt.title('Magnitude')
-plt.ylabel('|H|')
-plt.xticks([])
-
-# \omega_O is at the -3 dB point (1/sqrt(2) of the max)
-plt.plot([w_o, w_o], [0, 1/np.sqrt(2)], color='red', linestyle='--') 
-plt.text(w_o, 1/np.sqrt(2), r'$\omega_0$', color='red')
-plt.plot([0, w_o], [1/np.sqrt(2), 1/np.sqrt(2)], color='red', linestyle='--')
-
-plt.subplot(2, 1, 2)
-plt.plot(w, np.angle(H))
-plt.title('Phase')
-plt.ylabel(r'$\angle H$ (radians)')
-plt.xlabel('Frequency (rad/s)')
-
-# \omega_O is at the -45 degree point (-pi/4)
-plt.plot([w_o, w_o], [-np.pi/2, -np.pi/4], color='red', linestyle='--') 
-plt.text(w_o, -np.pi/4, r'$\omega_0$', color='red')
-plt.plot([0, w_o], [-np.pi/4, -np.pi/4], color='red', linestyle='--')
-
-plt.show()
-```
+![](images/rc_lpf_xfer_func.png){fig-align="center"}
 
 - $\omega_o$ is a characterisitic "cutoff" frequency that conveys information about the frequency response of the circuit.
 
-- At $\omega = \omega_o$, the output voltage is attenuated to 70.7% of the input voltage ($|H| = 1/\sqrt{2}$) (**half power**) and the phase shift is -45 degrees (half of the total -90 degree shift).
+    - $V_o$ is at **half power** of $V_i$ ($|H| = 1/\sqrt{2}$), which is
+    attenuated by -3 dB ($20 \log_{10}(1/\sqrt{2}) \approx -3$ dB).
+
+    - The phase shift is -45 degrees (half of the total -90 degree shift).
 
 - Less-attenuated frequencies $< \omega_o$ are in the **passband**.
 
