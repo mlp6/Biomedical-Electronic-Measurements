@@ -1954,6 +1954,13 @@
     "text": "How to Design a Low-Pass Filter (LPF)\n\nLet’s inspect the frequency response (transfer function) of this circuit…\n\\[\nV_o = V_i \\frac{\\frac{1}{j\\omega C}}{R + \\frac{1}{j \\omega C}} \\\\\n\\]\nHow did I get this expression?"
   },
   {
+    "objectID": "slides/filters-slides.html#spice-simulation-of-filters",
+    "href": "slides/filters-slides.html#spice-simulation-of-filters",
+    "title": "Filters",
+    "section": "SPICE Simulation of Filters",
+    "text": "SPICE Simulation of Filters\nIn class demo…"
+  },
+  {
     "objectID": "slides/filters-slides.html#input-output-impedance",
     "href": "slides/filters-slides.html#input-output-impedance",
     "title": "Filters",
@@ -2021,6 +2028,17 @@
     "title": "Filters",
     "section": "How to Design a Low-Pass Filter (LPF)",
     "text": "How to Design a Low-Pass Filter (LPF)\n\n\n\n\n\nLet’s inspect the frequency response (transfer function) of this circuit…\n\\[\nV_o = V_i \\frac{\\frac{1}{j\\omega C}}{R + \\frac{1}{j \\omega C}} \\\\\n\\]\nHow did I get this expression?\n\nSolve for Transfer Function\n\\[\n\\frac{V_o}{V_i} = \\frac{1}{1 + j\\omega RC} \\\\\n\\]\nConvert to polar form to get magnitude and phase:\n\\[\n\\begin{gather}\n|\\bar{H}(j\\omega)| = \\frac{1}{\\sqrt{1 + (\\omega RC)^2}} \\\\\n\\angle \\bar{H}(j\\omega) = -\\tan^{-1}(\\omega RC) \\\\\n\\end{gather}\n\\]\n\n\nDoes this make sense?\nLet’s test some different frequencies to see what the transfer function tells us…\n\nAt \\(\\omega = 0\\) (DC):\n\n\\[\n\\begin{gather}\n|\\bar{H}(j0)| = 1 \\\\\n\\angle \\bar{H}(j0) = 0^\\circ \\\\\n\\end{gather}\n\\]\nThat means that at DC, the output voltage is equal to the input voltage (no attenuation, no phase shift): \\(V_o = V_i\\). The capacitor is effectively an open circuit at DC.\n\n\n\n\n\n\n\nAt \\(\\omega = \\infty\\):\n\n\\[\n\\begin{gather}\n|\\bar{H}(j\\infty)| = 0 \\\\\n\\angle \\bar{H}(j\\infty) = -90^\\circ \\\\\n\\end{gather}\n\\]\nThat means that at high frequencies, the output voltage is zero (completely attenuated) and the phase shift is -90 degrees: \\(V_o = 0\\). The capacitor is effectively a short circuit at high frequencies.\n\n\n\n\n\n\n\nComplete Transfer Function\n\n\n\n\n\n\n\\(\\omega_o\\) is a characterisitic “cutoff” frequency that conveys information about the frequency response of the circuit.\n\n\\(V_o\\) is at half power of \\(V_i\\) (\\(|H| = 1/\\sqrt{2}\\)), which is attenuated by -3 dB (\\(20 \\log_{10}(1/\\sqrt{2}) \\approx -3\\) dB).\nThe phase shift is -45 degrees (half of the total -90 degree shift).\n\nLess-attenuated frequencies \\(&lt; \\omega_o\\) are in the passband.\nMore-attenuated frequencies \\(&gt; \\omega_o\\) are in the stopband.\nfilters.ipynb\n\n\n\nHow is \\(\\omega_o\\) related to \\(R\\) and \\(C\\)?\n\n\\(\\omega_o\\) is defined as the half-power point of the transfer function magnitude:\n\n\\[\n\\begin{gather}\n|\\bar{H}(j\\omega_o)| = \\frac{1}{\\sqrt{2}} = \\frac{1}{\\sqrt{1 + (\\omega_o RC)^2}} \\\\\n\\omega_o = \\frac{1}{RC}\n\\end{gather}\n\\]\n\n\n\n\n\n\nImportant\n\n\n\nWe can “tune” the frequency response of the filter by changing the values of \\(R\\) and \\(C\\)!\n\n\n\nAt \\(\\omega_o\\), \\(\\angle \\bar{H}(j\\omega_o) = -\\tan^{-1}(1) = -45^\\circ = -\\frac{\\pi}{4}\\).\n\n\n\nHow to Design a High-Pass Filter (HPF)\n\n\n\n\n\n\nFor \\(\\omega = 0\\) (DC), the capacitor is an open circuit, so \\(V_o = 0\\).\nFor \\(\\omega = \\infty\\), the capacitor is a short circuit, so \\(V_o = V_i\\).\nHigher frequency voltages are passed to the output, while lower frequency voltages are attenuated (taken up by the capacitor).\n\n\n\nHPF Transfer Function\n\\[\n\\begin{gather}\nV_o(j\\omega) = V_i(j\\omega) \\frac{R}{R + \\frac{1}{j\\omega C}} \\\\\nH(j\\omega) = \\frac{j\\omega RC}{1 + j\\omega RC} \\\\\nH(j\\omega) = \\frac{\\omega RC}{\\sqrt{1 + (\\omega RC)^2}} \\frac{\\angle \\frac{\\pi}{2}}{\\angle \\tan^{-1}(\\omega RC)} \\\\\n|H(j\\omega)| = \\frac{\\omega RC}{\\sqrt{1 + (\\omega RC)^2}} \\\\\n\\angle H(j\\omega) = \\frac{\\pi}{2} - \\tan^{-1}(\\omega RC) \\\\\n\\end{gather}\n\\]\n\n\nWhat is the cutoff frequency?\nAssume \\(|H(j\\omega)|_{max} = 1\\) at \\(\\omega = \\infty\\).\n\\[\n\\begin{gather}\n|H(j\\omega)| = \\frac{|H(j\\omega)|_{max}}{\\sqrt{2}} \\\\\n\\frac{1}{\\sqrt{2}} = \\frac{\\omega_o RC}{\\sqrt{1 + (\\omega_o RC)^2}} \\\\\n\\end{gather}\n\\]\n\n\n\n\n\n\nImportant\n\n\n\n\\[\n\\omega_o = \\frac{1}{RC} \\\\\n\\]\n\n\n\n\nHPF Transfer Function Plot\n\n\n\n\n\n\nThe passband is now frequencies \\(&gt;\\omega_o\\).\nThe stopband is now frequencies \\(&lt;\\omega_o\\).",
+    "crumbs": [
+      "Learning Modules",
+      "Filters"
+    ]
+  },
+  {
+    "objectID": "slides/filters-notes.html#spice-simulation-of-filters",
+    "href": "slides/filters-notes.html#spice-simulation-of-filters",
+    "title": "Filters",
+    "section": "SPICE Simulation of Filters",
+    "text": "SPICE Simulation of Filters\nIn class demo…",
     "crumbs": [
       "Learning Modules",
       "Filters"
