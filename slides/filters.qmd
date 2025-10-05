@@ -223,6 +223,10 @@ $$
 
 - The stopband is now frequencies $<\omega_o$.
 
+## SPICE Simulation of Filters
+
+In class demo...
+
 ## Input & Output Impedance
 
 - Now that we are developing filters to modulate source signals to deliver to an attached load, we need to consider the impedances of the source, filter, and load.
