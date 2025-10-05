@@ -222,3 +222,69 @@ $$
 - The passband is now frequencies $>\omega_o$.
 
 - The stopband is now frequencies $<\omega_o$.
+
+## Input & Output Impedance
+
+- Now that we are developing filters to modulate source signals to deliver to an attached load, we need to consider the impedances of the source, filter, and load.
+
+- The input impedance of the filter is the impedance "seen" by the source.
+
+- The output impedance of the filter is the impedance "seen" by the load.
+
+### Example Circuit
+
+![](images/Z_in_out_example.png){fig-align="center"}
+
+This can be considered a 3-stage circuit:
+
+1. Source with internal impedance $Z_S$.
+
+2. Filter with input impedance $Z_{in}$ and output impedance $Z_{out}$.
+
+3. Load with impedance $Z_L$.
+
+### What does the impedance of the filter look like to the source?
+
+- Remove the impedance of the load by replacing it with an open circuit.
+
+- Calculate the equivalent impedance of the filter that affects the current from the source.
+
+![](images/Z_in.png){fig-align="center"}
+
+This is the **input impedance** of the filter, $Z_{in}$.
+
+- $Z_{in} = Z_f = Z_{C_f} + Z_{R_f}$ (as "seen" by the source)
+
+- $Z_{in} = \frac{V_{in}}{I_{in}}$
+
+### Input Impedance Considerations
+
+::: callout-important
+If $Z_{in} >> Z_L$, then the attached load will not affect the operation of the
+filter.
+
+This means that we can cascade multiple filter stages without the load of one stage affecting the operation of the previous stage.
+:::
+
+### What does the impedance of the filter look like to the load?
+
+- The **output impedance** of the filter, $Z_{out}$, is defined as:
+
+$$
+Z_{out} = \frac{V_{oc}}{I_{sc}} 
+$$
+
+This is the Thevenin/Norton equivalent impedance "seen" by the load (which includes the source):
+
+$$
+\begin{gather}
+Z_{out} = {Z_{in}}_T \\
+Z_{out} = Z_{R_f} || (Z_{R_S} + Z_{C_f}) \\
+\end{gather}
+$$
+
+::: callout-important
+Note that $Z_{in} \neq Z_{out}$!
+:::
+
+We can measure input and output impedance experimentally in the lab too.

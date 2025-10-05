@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}
+
+\draw (0,0) to[sV=$V_S(t)$] (0,3);
+\draw (0,3) to[R=$R_S$] (3,3); 
+\draw (3,3) node[circle, fill, inner sep=2pt] (a) {};
+\draw (3,0) node[circle, fill, inner sep=2pt] (b) {};
+\draw (0,0) to (b);
+
+
+\draw (7,3) node[circle, fill, inner sep=2pt] (c) {};
+\draw (7,0) node[circle, fill, inner sep=2pt] (d) {};
+
+\draw (a) to[C, l=$C_f$] (6,3) -- (c);
+\draw (6,3) to[R=$R_f$] (6,0);
+
+\draw (c) -- (8,3) to[R, l=$R_L$] (8,0) -- (0,0);
+
+\end{circuitikz}
+\end{document}
