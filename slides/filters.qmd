@@ -175,3 +175,42 @@ We can "tune" the frequency response of the filter by changing the values of $R$
 :::
 
 - At $\omega_o$,  $\angle \bar{H}(j\omega_o) = -\tan^{-1}(1) = -45^\circ = -\frac{\pi}{4}$.
+
+### How to Design a High-Pass Filter (HPF)
+
+![](images/hpf.png){fig-align="center"}
+
+- For $\omega = 0$ (DC), the capacitor is an open circuit, so $V_o = 0$.
+
+- For $\omega = \infty$, the capacitor is a short circuit, so $V_o = V_i$.
+
+- Higher frequency voltages are passed to the output, while lower frequency voltages are attenuated (taken up by the capacitor).
+
+### HPF Transfer Function
+
+$$
+\begin{gather}
+V_o(j\omega) = V_i(j\omega) \frac{R}{R + \frac{1}{j\omega C}} \\
+H(j\omega) = \frac{j\omega RC}{1 + j\omega RC} \\
+H(j\omega) = \frac{\omega RC}{\sqrt{1 + (\omega RC)^2}} \frac{\angle \frac{\pi}{2}}{\angle \tan^{-1}(\omega RC)} \\
+|H(j\omega)| = \frac{\omega RC}{\sqrt{1 + (\omega RC)^2}} \\
+\angle H(j\omega) = \frac{\pi}{2} - \tan^{-1}(\omega RC) \\
+\end{gather}
+$$
+
+### What is the cutoff frequency?
+
+Assume $|H(j\omega)|_{max} = 1$ at $\omega = \infty$.
+
+$$
+\begin{gather}
+|H(j\omega)| = \frac{|H(j\omega)|_{max}}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} = \frac{\omega_o RC}{\sqrt{1 + (\omega_o RC)^2}} \\
+\end{gather}
+$$
+
+::: callout-important
+$$
+\omega_o = \frac{1}{RC} \\
+$$
+:::
