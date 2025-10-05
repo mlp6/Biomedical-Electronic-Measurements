@@ -421,6 +421,17 @@ window.Quarto = {
   <li><a href="#does-this-make-sense" id="toc-does-this-make-sense" class="nav-link" data-scroll-target="#does-this-make-sense">Does this make sense?</a></li>
   <li><a href="#complete-transfer-function" id="toc-complete-transfer-function" class="nav-link" data-scroll-target="#complete-transfer-function">Complete Transfer Function</a></li>
   <li><a href="#how-is-omega_o-related-to-r-and-c" id="toc-how-is-omega_o-related-to-r-and-c" class="nav-link" data-scroll-target="#how-is-omega_o-related-to-r-and-c">How is <span class="math inline">\(\omega_o\)</span> related to <span class="math inline">\(R\)</span> and <span class="math inline">\(C\)</span>?</a></li>
+  <li><a href="#how-to-design-a-high-pass-filter-hpf" id="toc-how-to-design-a-high-pass-filter-hpf" class="nav-link" data-scroll-target="#how-to-design-a-high-pass-filter-hpf">How to Design a High-Pass Filter (HPF)</a></li>
+  <li><a href="#hpf-transfer-function" id="toc-hpf-transfer-function" class="nav-link" data-scroll-target="#hpf-transfer-function">HPF Transfer Function</a></li>
+  <li><a href="#what-is-the-cutoff-frequency" id="toc-what-is-the-cutoff-frequency" class="nav-link" data-scroll-target="#what-is-the-cutoff-frequency">What is the cutoff frequency?</a></li>
+  <li><a href="#hpf-transfer-function-plot" id="toc-hpf-transfer-function-plot" class="nav-link" data-scroll-target="#hpf-transfer-function-plot">HPF Transfer Function Plot</a></li>
+  </ul></li>
+  <li><a href="#input-output-impedance" id="toc-input-output-impedance" class="nav-link" data-scroll-target="#input-output-impedance">Input &amp; Output Impedance</a>
+  <ul class="collapse">
+  <li><a href="#example-circuit" id="toc-example-circuit" class="nav-link" data-scroll-target="#example-circuit">Example Circuit</a></li>
+  <li><a href="#what-does-the-impedance-of-the-filter-look-like-to-the-source" id="toc-what-does-the-impedance-of-the-filter-look-like-to-the-source" class="nav-link" data-scroll-target="#what-does-the-impedance-of-the-filter-look-like-to-the-source">What does the impedance of the filter look like to the source?</a></li>
+  <li><a href="#input-impedance-considerations" id="toc-input-impedance-considerations" class="nav-link" data-scroll-target="#input-impedance-considerations">Input Impedance Considerations</a></li>
+  <li><a href="#what-does-the-impedance-of-the-filter-look-like-to-the-load" id="toc-what-does-the-impedance-of-the-filter-look-like-to-the-load" class="nav-link" data-scroll-target="#what-does-the-impedance-of-the-filter-look-like-to-the-load">What does the impedance of the filter look like to the load?</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="filters-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
@@ -652,6 +663,154 @@ Important
 <ul>
 <li>At <span class="math inline">\(\omega_o\)</span>, <span class="math inline">\(\angle \bar{H}(j\omega_o) = -\tan^{-1}(1) = -45^\circ = -\frac{\pi}{4}\)</span>.</li>
 </ul>
+</section>
+<section id="how-to-design-a-high-pass-filter-hpf" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-design-a-high-pass-filter-hpf">How to Design a High-Pass Filter (HPF)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hpf.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p>For <span class="math inline">\(\omega = 0\)</span> (DC), the capacitor is an open circuit, so <span class="math inline">\(V_o = 0\)</span>.</p></li>
+<li><p>For <span class="math inline">\(\omega = \infty\)</span>, the capacitor is a short circuit, so <span class="math inline">\(V_o = V_i\)</span>.</p></li>
+<li><p>Higher frequency voltages are passed to the output, while lower frequency voltages are attenuated (taken up by the capacitor).</p></li>
+</ul>
+</section>
+<section id="hpf-transfer-function" class="level3">
+<h3 class="anchored" data-anchor-id="hpf-transfer-function">HPF Transfer Function</h3>
+<p><span class="math display">\[
+\begin{gather}
+V_o(j\omega) = V_i(j\omega) \frac{R}{R + \frac{1}{j\omega C}} \\
+H(j\omega) = \frac{j\omega RC}{1 + j\omega RC} \\
+H(j\omega) = \frac{\omega RC}{\sqrt{1 + (\omega RC)^2}} \frac{\angle \frac{\pi}{2}}{\angle \tan^{-1}(\omega RC)} \\
+|H(j\omega)| = \frac{\omega RC}{\sqrt{1 + (\omega RC)^2}} \\
+\angle H(j\omega) = \frac{\pi}{2} - \tan^{-1}(\omega RC) \\
+\end{gather}
+\]</span></p>
+</section>
+<section id="what-is-the-cutoff-frequency" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-cutoff-frequency">What is the cutoff frequency?</h3>
+<p>Assume <span class="math inline">\(|H(j\omega)|_{max} = 1\)</span> at <span class="math inline">\(\omega = \infty\)</span>.</p>
+<p><span class="math display">\[
+\begin{gather}
+|H(j\omega)| = \frac{|H(j\omega)|_{max}}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} = \frac{\omega_o RC}{\sqrt{1 + (\omega_o RC)^2}} \\
+\end{gather}
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\omega_o = \frac{1}{RC} \\
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="hpf-transfer-function-plot" class="level3">
+<h3 class="anchored" data-anchor-id="hpf-transfer-function-plot">HPF Transfer Function Plot</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rc_hpf_xfer_func.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p>The passband is now frequencies <span class="math inline">\(&gt;\omega_o\)</span>.</p></li>
+<li><p>The stopband is now frequencies <span class="math inline">\(&lt;\omega_o\)</span>.</p></li>
+</ul>
+</section>
+</section>
+<section id="input-output-impedance" class="level2">
+<h2 class="anchored" data-anchor-id="input-output-impedance">Input &amp; Output Impedance</h2>
+<ul>
+<li><p>Now that we are developing filters to modulate source signals to deliver to an attached load, we need to consider the impedances of the source, filter, and load.</p></li>
+<li><p>The input impedance of the filter is the impedance “seen” by the source.</p></li>
+<li><p>The output impedance of the filter is the impedance “seen” by the load.</p></li>
+</ul>
+<section id="example-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="example-circuit">Example Circuit</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Z_in_out_example.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>This can be considered a 3-stage circuit:</p>
+<ol type="1">
+<li><p>Source with internal impedance <span class="math inline">\(Z_S\)</span>.</p></li>
+<li><p>Filter with input impedance <span class="math inline">\(Z_{in}\)</span> and output impedance <span class="math inline">\(Z_{out}\)</span>.</p></li>
+<li><p>Load with impedance <span class="math inline">\(Z_L\)</span>.</p></li>
+</ol>
+</section>
+<section id="what-does-the-impedance-of-the-filter-look-like-to-the-source" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-the-impedance-of-the-filter-look-like-to-the-source">What does the impedance of the filter look like to the source?</h3>
+<ul>
+<li><p>Remove the impedance of the load by replacing it with an open circuit.</p></li>
+<li><p>Calculate the equivalent impedance of the filter that affects the current from the source.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Z_in.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>This is the <strong>input impedance</strong> of the filter, <span class="math inline">\(Z_{in}\)</span>.</p>
+<ul>
+<li><p><span class="math inline">\(Z_{in} = Z_f = Z_{C_f} + Z_{R_f}\)</span> (as “seen” by the source)</p></li>
+<li><p><span class="math inline">\(Z_{in} = \frac{V_{in}}{I_{in}}\)</span></p></li>
+</ul>
+</section>
+<section id="input-impedance-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="input-impedance-considerations">Input Impedance Considerations</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If <span class="math inline">\(Z_{in} &gt;&gt; Z_L\)</span>, then the attached load will not affect the operation of the filter.</p>
+<p>This means that we can cascade multiple filter stages without the load of one stage affecting the operation of the previous stage.</p>
+</div>
+</div>
+</section>
+<section id="what-does-the-impedance-of-the-filter-look-like-to-the-load" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-the-impedance-of-the-filter-look-like-to-the-load">What does the impedance of the filter look like to the load?</h3>
+<ul>
+<li>The <strong>output impedance</strong> of the filter, <span class="math inline">\(Z_{out}\)</span>, is defined as:</li>
+</ul>
+<p><span class="math display">\[
+Z_{out} = \frac{V_{oc}}{I_{sc}}
+\]</span></p>
+<p>This is the Thevenin/Norton equivalent impedance “seen” by the load (which includes the source):</p>
+<p><span class="math display">\[
+\begin{gather}
+Z_{out} = {Z_{in}}_T \\
+Z_{out} = Z_{R_f} || (Z_{R_S} + Z_{C_f}) \\
+\end{gather}
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that <span class="math inline">\(Z_{in} \neq Z_{out}\)</span>!</p>
+</div>
+</div>
+<p>We can measure input and output impedance experimentally in the lab too.</p>
 
 
 <script type="ojs-module-contents">
