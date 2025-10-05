@@ -214,3 +214,11 @@ $$
 \omega_o = \frac{1}{RC} \\
 $$
 :::
+
+### HPF Transfer Function Plot
+
+![](images/rc_hpf_xfer_func.png){fig-align="center"}
+
+- The passband is now frequencies $>\omega_o$.
+
+- The stopband is now frequencies $<\omega_o$.
