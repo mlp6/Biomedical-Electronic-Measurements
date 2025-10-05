@@ -10,13 +10,72 @@ toc: false
 Please complete the following problems and tasks, and upload your solutions to
 Gradescope, using the [formatting guidelines](_formatting_guidelines.qmd) below.
 
+## Time-Dependent Signal Sources
+
+<!-- 4.29 -->
+1. Find the average and RMS values of $x(t) = 2 \cos(\omega t) + 2.5$.
+
+## Phasors and Complex Numbers
+
+<!-- 4.37 -->
+2. Find the phasor form of the following functions:
+
+    a. $v(t) = 155 \cos(377t - 25^\circ)$ V
+
+    b. $v(t) = 5 \sin(1,000t - 40^\circ)$ V
+
+    c. $i(t) = 10 \cos(10t + 630^\circ) + 15 \cos(10t - 420^\circ)$ A
+
+    d. $i(t) = 460 \cos(500 \pi t - 250^\circ) - 220 \sin(500 \pi t + 15^\circ)$ A
+
+<!-- 4.38 -->
+3. Convert the following complex numbers to polar form:
+
+    a. $4 + j4$
+
+    b. $-3 + j4$
+
+    c. $j + 2 -j4 -3$
+
+<!-- 4.42 -->
+4. Given $v_1(t) = 10 \cos(\omega t + 30^\circ)$ V and $v_2(t) = 20 \cos(\omega t + 60^\circ)$ V, find $v(t) = v_1(t) + v_2(t)$ using:
+
+    a. Time-domain analysis / trigonometric identities
+
+    b. Phasor-domain analysis
+
+## Phasor Circuit Analysis
+
+<!-- 4.43 -->
+5. If the current and voltage across a component are given by $i(t) = 17 \cos(\omega t - \pi / 12)$ A and $v(t) = 3.5 \cos(\omega t + 1.309)$ V, where $\omega = 628.3$ rad/s, determine:
+
+    a. Is the component a resistor, inductor, or capacitor?
+
+    b. The value of the component in its appropriate units.
+
+<!-- 4.48 -->
+6. Determine the equivalent impedance of the circuit shown below, where $v_s(t) = 636 (3,000 t + \pi / 12)$ V.
+
+![](images/ps5/p4_47.png){fig-align="center"}
+
+<!-- 4.49 -->
+7. In the circuit below, $i_s(t) = I_o \cos(\omega t + \pi/6)$, where $\omega = 1,000$ rad/s and $I_o = 13$ mA.
+
+    a. State, using phasor notation, the source current.
+
+    b. Determine the impedance of the capacitor.
+
+    c. Using only phasor notation, determine the voltage across the capacitor, including its polarity.
+
+![](images/ps5/p4_49.png){fig-align="center"}
+
 ## KiCad/SPICE
 
-Simulate the circuit shown below.
+8. Simulate the circuit shown below.
 
 ![](images/rc_ac_transient_kicad.png){fig-align="center"}
 
-### AC Frequency Analysis
+### a. AC Frequency Analysis
 
 - Use `VSIN` for the voltage source.
 
@@ -36,7 +95,7 @@ Simulate the circuit shown below.
 Plot the magnitude and phase of the output voltage $V_{out}$.
 :::
 
-### Transient Analysis
+### b. Transient Analysis
 
 Use the `Transient Analysis` to show the sinusoidal waveforms of both voltage
 and current through time through the capacitor.
