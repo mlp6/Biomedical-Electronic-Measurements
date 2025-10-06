@@ -2,44 +2,68 @@
   {
     "objectID": "problem_sets/ps5.html",
     "href": "problem_sets/ps5.html",
-    "title": "Problem Set 05: RCL Circuits",
+    "title": "Problem Set 05: Phasors & RCL Circuits",
     "section": "",
-    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below."
+    "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 05"
+    ]
   },
   {
     "objectID": "problem_sets/ps5.html#time-dependent-signal-sources",
     "href": "problem_sets/ps5.html#time-dependent-signal-sources",
-    "title": "Problem Set 05: RCL Circuits",
+    "title": "Problem Set 05: Phasors & RCL Circuits",
     "section": "Time-Dependent Signal Sources",
-    "text": "Time-Dependent Signal Sources\n\n\nFind the average and RMS values of \\(x(t) = 2 \\cos(\\omega t) + 2.5\\)."
+    "text": "Time-Dependent Signal Sources\n\n\nFind the average and RMS values of \\(x(t) = 2 \\cos(\\omega t) + 2.5\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 05"
+    ]
   },
   {
     "objectID": "problem_sets/ps5.html#phasors-and-complex-numbers",
     "href": "problem_sets/ps5.html#phasors-and-complex-numbers",
-    "title": "Problem Set 05: RCL Circuits",
+    "title": "Problem Set 05: Phasors & RCL Circuits",
     "section": "Phasors and Complex Numbers",
-    "text": "Phasors and Complex Numbers\n\n\nFind the phasor form of the following functions:\n\n\\(v(t) = 155 \\cos(377t - 25^\\circ)\\) V\n\\(v(t) = 5 \\sin(1,000t - 40^\\circ)\\) V\n\\(i(t) = 10 \\cos(10t + 630^\\circ) + 15 \\cos(10t - 420^\\circ)\\) A\n\\(i(t) = 460 \\cos(500 \\pi t - 250^\\circ) - 220 \\sin(500 \\pi t + 15^\\circ)\\) A\n\n\n\n\nConvert the following complex numbers to polar form:\n\n\\(4 + j4\\)\n\\(-3 + j4\\)\n\\(j + 2 -j4 -3\\)\n\n\n\n\nGiven \\(v_1(t) = 10 \\cos(\\omega t + 30^\\circ)\\) V and \\(v_2(t) = 20 \\cos(\\omega t + 60^\\circ)\\) V, find \\(v(t) = v_1(t) + v_2(t)\\) using:\n\nTime-domain analysis / trigonometric identities\nPhasor-domain analysis"
+    "text": "Phasors and Complex Numbers\n\n\nFind the phasor form of the following functions:\n\n\\(v(t) = 155 \\cos(377t - 25^\\circ)\\) V\n\\(v(t) = 5 \\sin(1,000t - 40^\\circ)\\) V\n\\(i(t) = 10 \\cos(10t + 630^\\circ) + 15 \\cos(10t - 420^\\circ)\\) A\n\\(i(t) = 460 \\cos(500 \\pi t - 250^\\circ) - 220 \\sin(500 \\pi t + 15^\\circ)\\) A\n\n\n\n\nConvert the following complex numbers to polar form:\n\n\\(4 + j4\\)\n\\(-3 + j4\\)\n\\(j + 2 -j4 -3\\)\n\n\n\n\nGiven \\(v_1(t) = 10 \\cos(\\omega t + 30^\\circ)\\) V and \\(v_2(t) = 20 \\cos(\\omega t + 60^\\circ)\\) V, find \\(v(t) = v_1(t) + v_2(t)\\) using:\n\nTime-domain analysis / trigonometric identities\nPhasor-domain analysis",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 05"
+    ]
   },
   {
     "objectID": "problem_sets/ps5.html#phasor-circuit-analysis",
     "href": "problem_sets/ps5.html#phasor-circuit-analysis",
-    "title": "Problem Set 05: RCL Circuits",
+    "title": "Problem Set 05: Phasors & RCL Circuits",
     "section": "Phasor Circuit Analysis",
-    "text": "Phasor Circuit Analysis\n\n\nIf the current and voltage across a component are given by \\(i(t) = 17 \\cos(\\omega t - \\pi / 12)\\) A and \\(v(t) = 3.5 \\cos(\\omega t + 1.309)\\) V, where \\(\\omega = 628.3\\) rad/s, determine:\n\nIs the component a resistor, inductor, or capacitor?\nThe value of the component in its appropriate units.\n\n\n\n\nDetermine the equivalent impedance of the circuit shown below, where \\(v_s(t) = 636 (3,000 t + \\pi / 12)\\) V.\n\n\n\n\n\n\n\n\nIn the circuit below, \\(i_s(t) = I_o \\cos(\\omega t + \\pi/6)\\), where \\(\\omega = 1,000\\) rad/s and \\(I_o = 13\\) mA.\n\nState, using phasor notation, the source current.\nDetermine the impedance of the capacitor.\nUsing only phasor notation, determine the voltage across the capacitor, including its polarity."
+    "text": "Phasor Circuit Analysis\n\n\nIf the current and voltage across a component are given by \\(i(t) = 17 \\cos(\\omega t - \\pi / 12)\\) A and \\(v(t) = 3.5 \\cos(\\omega t + 1.309)\\) V, where \\(\\omega = 628.3\\) rad/s, determine:\n\nIs the component a resistor, inductor, or capacitor?\nThe value of the component in its appropriate units.\n\n\n\n\nDetermine the equivalent impedance of the circuit shown below, where \\(v_s(t) = 636 (3,000 t + \\pi / 12)\\) V.\n\n\n\n\n\n\n\n\nIn the circuit below, \\(i_s(t) = I_o \\cos(\\omega t + \\pi/6)\\), where \\(\\omega = 1,000\\) rad/s and \\(I_o = 13\\) mA.\n\nState, using phasor notation, the source current.\nDetermine the impedance of the capacitor.\nUsing only phasor notation, determine the voltage across the capacitor, including its polarity.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 05"
+    ]
   },
   {
     "objectID": "problem_sets/ps5.html#kicadspice",
     "href": "problem_sets/ps5.html#kicadspice",
-    "title": "Problem Set 05: RCL Circuits",
+    "title": "Problem Set 05: Phasors & RCL Circuits",
     "section": "KiCad/SPICE",
-    "text": "KiCad/SPICE\n\nSimulate the circuit shown below.\n\n\n\n\n\n\n\na. AC Frequency Analysis\n\nUse VSIN for the voltage source.\nBe sure to define the SPICE-specific 0 ground (reference) node, and add the \\(V_{out}\\) net label.\nSet all of the component values as shown in the schematic.\nRun the Simulator to perform a Small-signal Analysis (AC) using the following parameters:\n\nPoints per decade: 100\nStart frequency: 10 Hz\nStop frequency: 1 MHz\n\n\n\n\n\n\n\n\nAC Frequency Analysis\n\n\n\nPlot the magnitude and phase of the output voltage \\(V_{out}\\).\n\n\n\n\nb. Transient Analysis\nUse the Transient Analysis to show the sinusoidal waveforms of both voltage and current through time through the capacitor.\n\nSet the VSIN source to have an amplitude of 12 V and a frequency of 120 kHz.\nRun the Simulator to perform a Transient Analysis using the following parameters:\n\nStart time: 0 s\nStop time: 50 \\(\\mu\\)s\nMaximum step size: 1 \\(\\mu\\)s\n\n\n\n\n\n\n\n\nTransient Analysis\n\n\n\nPlot the voltage across the capacitor \\(V_{out}\\) and the current through the capacitor \\(I_{C_1}\\)."
+    "text": "KiCad/SPICE\n\nSimulate the circuit shown below.\n\n\n\n\n\n\n\na. AC Frequency Analysis\n\nUse VSIN for the voltage source.\nBe sure to define the SPICE-specific 0 ground (reference) node, and add the \\(V_{out}\\) net label.\nSet all of the component values as shown in the schematic.\nRun the Simulator to perform a Small-signal Analysis (AC) using the following parameters:\n\nPoints per decade: 100\nStart frequency: 10 Hz\nStop frequency: 1 MHz\n\n\n\n\n\n\n\n\nAC Frequency Analysis\n\n\n\nPlot the magnitude and phase of the output voltage \\(V_{out}\\).\n\n\n\n\nb. Transient Analysis\nUse the Transient Analysis to show the sinusoidal waveforms of both voltage and current through time through the capacitor.\n\nSet the VSIN source to have an amplitude of 12 V and a frequency of 120 kHz.\nRun the Simulator to perform a Transient Analysis using the following parameters:\n\nStart time: 0 s\nStop time: 50 \\(\\mu\\)s\nMaximum step size: 1 \\(\\mu\\)s\n\n\n\n\n\n\n\n\nTransient Analysis\n\n\n\nPlot the voltage across the capacitor \\(V_{out}\\) and the current through the capacitor \\(I_{C_1}\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 05"
+    ]
   },
   {
     "objectID": "problem_sets/ps5.html#problem-set-format-guidelines",
     "href": "problem_sets/ps5.html#problem-set-format-guidelines",
-    "title": "Problem Set 05: RCL Circuits",
+    "title": "Problem Set 05: Phasors & RCL Circuits",
     "section": "Problem Set Format Guidelines",
-    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question."
+    "text": "Problem Set Format Guidelines\nPlease follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.\n\nEach problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).\nFor problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.\n\nLabel all circuit elements with symbols.\nSolve problems symbolically before substituting in numerical values.\n\nPlease write legibly and include all relevant steps in arriving at your solution.\nPlease place a box around all final solutions.\n\n\n\n\n\n\n\nImportant\n\n\n\nAll answers must have units!! No units = no credit!\n\n\n\nAttach any computer code (e.g., Python code) used to solve problems and generate plots.\n\nThis should be done with a Jupyter notebook.\nIdeally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.\n\nAll plots must be appropriately labeled with units.\nProblem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.\n\n\n\n\n\n\n\nWarning\n\n\n\nFailure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 05"
+    ]
   },
   {
     "objectID": "problem_sets/ps2.html",
@@ -1552,7 +1576,7 @@
     "href": "index.html",
     "title": "Biomedical Electronic Measurements",
     "section": "",
-    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals  -&gt; Complex Impedance\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n-&gt; Filters\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
+    "text": "Module\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals  -&gt; Complex Impedance\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n-&gt; Filters\n-&gt; Problem Set 05\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)"
   },
   {
     "objectID": "labs/kicad.html",
@@ -1691,7 +1715,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals  -&gt; Complex Impedance\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n-&gt; Filters\n\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 27, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be posted to Gradescope and linked below.\n\nLearning Module Schedule\n\n\n\nModule\nMaterials\nAssessment\nLab Exercise\n\n\n\n\nResistive Circuit Analysis\n-&gt; Introduction to Circuits  -&gt; Ohm’s Law, KCL & KVL, Resistive Loads, Meters  -&gt; Equivalent Resistance  -&gt; Circuit Analysis Approaches -&gt; Source Equivalents\n-&gt; Software Installation & Tutorials  -&gt; Problem Set 01  -&gt; Problem Set 02  -&gt; Problem Set 03\n-&gt; Introduction  -&gt; Ohm’s Law & Power\n\n\nECAD (KiCad)\n-&gt; ECAD using KiCad: Schematic Capture  -&gt; ECAD using KiCad: SPICE Modeling\n\n-&gt; Schematic Capture & SPICE Simulation\n\n\nMidterm I (Sep 22, 2025)\n\n\n\n\n\nCapacitors & Inductors  DC RC/RL Circuit Analysis\n-&gt; Reactive Components: Capacitors & Inductors\n-&gt; Problem Set 04\nCapacitors, Inductors & Oscilloscopes\n\n\nComplex Impedance, AC Signals, Phasors\n-&gt; Sinusoidal Signals  -&gt; Complex Impedance\n\nImpedance\n\n\nAC RLC Circuit Analysis  Passive Filters  Transfer Functions & Bode Plots (Frequency Domain)\n-&gt; Filters\n-&gt; Problem Set 05\nFilters\n\n\nTransient Response (Time Domain)\n\n\nTransient Response\n\n\nMidterm II (Oct 27, 2025)\n\n\n\n\n\nOperational Amplifiers & Active Filters\n\n\nOpamps\n\n\nTransformers & Diodes\n\n\nTransformers & Diodes\n\n\nMidterm III (Dec 03, 2025)\n\n\n\n\n\nWheatstone Bridge\n\n\nWheatstone Bridge: Temperature Measurement\n\n\nFinal Lab Practical (Dec 10, 2025)\n\n\n\n\n\n\n\n\nSpecial Dates\n\nLabor Day - No Class (Sep 01, 2025)\nFall Break - No Class (Oct 11-14, 2025)\nMidterm I (Mon, Sep 22, 2025)\nMidterm II (Wed, Oct 27, 2025)\nMidterm III (Wed, Dec 03, 2025)\nFinal Lab Practical (Dec 10, 2025, 09:00-12:00)\n\n\n\n\n\n\n\nImportant\n\n\n\nUnless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
