@@ -1,5 +1,5 @@
 ---
-title: "Problem Set 05: RCL Circuits"
+title: "Problem Set 05: Phasors & RCL Circuits"
 date: 2025-10-06
 format:
   html: default
