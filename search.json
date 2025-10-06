@@ -7,11 +7,32 @@
     "text": "Please complete the following problems and tasks, and upload your solutions to Gradescope, using the formatting guidelines below."
   },
   {
+    "objectID": "problem_sets/ps5.html#time-dependent-signal-sources",
+    "href": "problem_sets/ps5.html#time-dependent-signal-sources",
+    "title": "Problem Set 05: RCL Circuits",
+    "section": "Time-Dependent Signal Sources",
+    "text": "Time-Dependent Signal Sources\n\n\nFind the average and RMS values of \\(x(t) = 2 \\cos(\\omega t) + 2.5\\)."
+  },
+  {
+    "objectID": "problem_sets/ps5.html#phasors-and-complex-numbers",
+    "href": "problem_sets/ps5.html#phasors-and-complex-numbers",
+    "title": "Problem Set 05: RCL Circuits",
+    "section": "Phasors and Complex Numbers",
+    "text": "Phasors and Complex Numbers\n\n\nFind the phasor form of the following functions:\n\n\\(v(t) = 155 \\cos(377t - 25^\\circ)\\) V\n\\(v(t) = 5 \\sin(1,000t - 40^\\circ)\\) V\n\\(i(t) = 10 \\cos(10t + 630^\\circ) + 15 \\cos(10t - 420^\\circ)\\) A\n\\(i(t) = 460 \\cos(500 \\pi t - 250^\\circ) - 220 \\sin(500 \\pi t + 15^\\circ)\\) A\n\n\n\n\nConvert the following complex numbers to polar form:\n\n\\(4 + j4\\)\n\\(-3 + j4\\)\n\\(j + 2 -j4 -3\\)\n\n\n\n\nGiven \\(v_1(t) = 10 \\cos(\\omega t + 30^\\circ)\\) V and \\(v_2(t) = 20 \\cos(\\omega t + 60^\\circ)\\) V, find \\(v(t) = v_1(t) + v_2(t)\\) using:\n\nTime-domain analysis / trigonometric identities\nPhasor-domain analysis"
+  },
+  {
+    "objectID": "problem_sets/ps5.html#phasor-circuit-analysis",
+    "href": "problem_sets/ps5.html#phasor-circuit-analysis",
+    "title": "Problem Set 05: RCL Circuits",
+    "section": "Phasor Circuit Analysis",
+    "text": "Phasor Circuit Analysis\n\n\nIf the current and voltage across a component are given by \\(i(t) = 17 \\cos(\\omega t - \\pi / 12)\\) A and \\(v(t) = 3.5 \\cos(\\omega t + 1.309)\\) V, where \\(\\omega = 628.3\\) rad/s, determine:\n\nIs the component a resistor, inductor, or capacitor?\nThe value of the component in its appropriate units.\n\n\n\n\nDetermine the equivalent impedance of the circuit shown below, where \\(v_s(t) = 636 (3,000 t + \\pi / 12)\\) V.\n\n\n\n\n\n\n\n\nIn the circuit below, \\(i_s(t) = I_o \\cos(\\omega t + \\pi/6)\\), where \\(\\omega = 1,000\\) rad/s and \\(I_o = 13\\) mA.\n\nState, using phasor notation, the source current.\nDetermine the impedance of the capacitor.\nUsing only phasor notation, determine the voltage across the capacitor, including its polarity."
+  },
+  {
     "objectID": "problem_sets/ps5.html#kicadspice",
     "href": "problem_sets/ps5.html#kicadspice",
     "title": "Problem Set 05: RCL Circuits",
     "section": "KiCad/SPICE",
-    "text": "KiCad/SPICE\nSimulate the circuit shown below.\n\n\n\n\n\n\nAC Frequency Analysis\n\nUse VSIN for the voltage source.\nBe sure to define the SPICE-specific 0 ground (reference) node, and add the \\(V_{out}\\) net label.\nSet all of the component values as shown in the schematic.\nRun the Simulator to perform a Small-signal Analysis (AC) using the following parameters:\n\nPoints per decade: 100\nStart frequency: 10 Hz\nStop frequency: 1 MHz\n\n\n\n\n\n\n\n\nAC Frequency Analysis\n\n\n\nPlot the magnitude and phase of the output voltage \\(V_{out}\\).\n\n\n\n\nTransient Analysis\nUse the Transient Analysis to show the sinusoidal waveforms of both voltage and current through time through the capacitor.\n\nSet the VSIN source to have an amplitude of 12 V and a frequency of 120 kHz.\nRun the Simulator to perform a Transient Analysis using the following parameters:\n\nStart time: 0 s\nStop time: 50 \\(\\mu\\)s\nMaximum step size: 1 \\(\\mu\\)s\n\n\n\n\n\n\n\n\nTransient Analysis\n\n\n\nPlot the voltage across the capacitor \\(V_{out}\\) and the current through the capacitor \\(I_{C_1}\\)."
+    "text": "KiCad/SPICE\n\nSimulate the circuit shown below.\n\n\n\n\n\n\n\na. AC Frequency Analysis\n\nUse VSIN for the voltage source.\nBe sure to define the SPICE-specific 0 ground (reference) node, and add the \\(V_{out}\\) net label.\nSet all of the component values as shown in the schematic.\nRun the Simulator to perform a Small-signal Analysis (AC) using the following parameters:\n\nPoints per decade: 100\nStart frequency: 10 Hz\nStop frequency: 1 MHz\n\n\n\n\n\n\n\n\nAC Frequency Analysis\n\n\n\nPlot the magnitude and phase of the output voltage \\(V_{out}\\).\n\n\n\n\nb. Transient Analysis\nUse the Transient Analysis to show the sinusoidal waveforms of both voltage and current through time through the capacitor.\n\nSet the VSIN source to have an amplitude of 12 V and a frequency of 120 kHz.\nRun the Simulator to perform a Transient Analysis using the following parameters:\n\nStart time: 0 s\nStop time: 50 \\(\\mu\\)s\nMaximum step size: 1 \\(\\mu\\)s\n\n\n\n\n\n\n\n\nTransient Analysis\n\n\n\nPlot the voltage across the capacitor \\(V_{out}\\) and the current through the capacitor \\(I_{C_1}\\)."
   },
   {
     "objectID": "problem_sets/ps5.html#problem-set-format-guidelines",
