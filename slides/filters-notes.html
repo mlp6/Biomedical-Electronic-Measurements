@@ -440,6 +440,14 @@ window.Quarto = {
   <li><a href="#input-impedance-considerations" id="toc-input-impedance-considerations" class="nav-link" data-scroll-target="#input-impedance-considerations">Input Impedance Considerations</a></li>
   <li><a href="#what-does-the-impedance-of-the-filter-look-like-to-the-load" id="toc-what-does-the-impedance-of-the-filter-look-like-to-the-load" class="nav-link" data-scroll-target="#what-does-the-impedance-of-the-filter-look-like-to-the-load">What does the impedance of the filter look like to the load?</a></li>
   </ul></li>
+  <li><a href="#bandpass-filter-second-order-rlc" id="toc-bandpass-filter-second-order-rlc" class="nav-link" data-scroll-target="#bandpass-filter-second-order-rlc">Bandpass Filter (Second-Order, RLC)</a>
+  <ul class="collapse">
+  <li><a href="#cutoff-frequencies" id="toc-cutoff-frequencies" class="nav-link" data-scroll-target="#cutoff-frequencies">Cutoff Frequencies</a></li>
+  <li><a href="#characteristic-frequencies" id="toc-characteristic-frequencies" class="nav-link" data-scroll-target="#characteristic-frequencies">Characteristic Frequencies</a></li>
+  <li><a href="#calculating-cutoff-frequencies" id="toc-calculating-cutoff-frequencies" class="nav-link" data-scroll-target="#calculating-cutoff-frequencies">Calculating Cutoff Frequencies</a></li>
+  <li><a href="#quality-factor" id="toc-quality-factor" class="nav-link" data-scroll-target="#quality-factor">Quality Factor</a></li>
+  <li><a href="#damping-factor" id="toc-damping-factor" class="nav-link" data-scroll-target="#damping-factor">Damping Factor</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="filters-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -633,6 +641,7 @@ V_o = V_i \frac{\frac{1}{j\omega C}}{R + \frac{1}{j \omega C}} \\
 </figure>
 </div>
 <ul>
+<li><p>Note the logarithmic scale on the x-axis (frequency).</p></li>
 <li><p><span class="math inline">\(\omega_o\)</span> is a characterisitic “cutoff” frequency that conveys information about the frequency response of the circuit.</p>
 <ul>
 <li><p><span class="math inline">\(V_o\)</span> is at <strong>half power</strong> of <span class="math inline">\(V_i\)</span> (<span class="math inline">\(|H| = 1/\sqrt{2}\)</span>), which is attenuated by -3 dB (<span class="math inline">\(20 \log_{10}(1/\sqrt{2}) \approx -3\)</span> dB).</p></li>
@@ -822,6 +831,93 @@ Important
 </div>
 </div>
 <p>We can measure input and output impedance experimentally in the lab too.</p>
+</section>
+</section>
+<section id="bandpass-filter-second-order-rlc" class="level2">
+<h2 class="anchored" data-anchor-id="bandpass-filter-second-order-rlc">Bandpass Filter (Second-Order, RLC)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bpf.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This, again, just looks like a voltage divider!</p>
+</div>
+</div>
+<section id="cutoff-frequencies" class="level3">
+<h3 class="anchored" data-anchor-id="cutoff-frequencies">Cutoff Frequencies</h3>
+<p>This is a second-order filter (two energy storage elements: <span class="math inline">\(L\)</span> and <span class="math inline">\(C\)</span>), so it has two cutoff frequencies: <span class="math inline">\(\omega_H\)</span> and <span class="math inline">\(\omega_L\)</span>.</p>
+<p><span class="math display">\[
+\begin{gather}
+H(j\omega) = \frac{V_o(j\omega)}{V_i(j\omega)} = \frac{R}{R + \frac{1}{j\omega C} + j\omega L} \\
+H(j\omega) = \frac{j\omega RC}{1 + j\omega RC - \omega^2 LC} \\
+\end{gather}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rc_bpf_xfer_func.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="characteristic-frequencies" class="level3">
+<h3 class="anchored" data-anchor-id="characteristic-frequencies">Characteristic Frequencies</h3>
+<ul>
+<li><p>The <strong>bandwidth</strong> <span class="math inline">\(\Delta \omega\)</span> is the difference between the upper and lower cutoff frequencies: <span class="math inline">\(\Delta \omega = \omega_H - \omega_L\)</span>.</p></li>
+<li><p>The <strong>resonant frequency</strong> <span class="math inline">\(\omega_0\)</span> is the frequency at which the inductive and capacitive reactances are equal in magnitude:</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+\omega_0 = \frac{1}{\sqrt{LC}} \\
+\end{gather}
+\]</span></p>
+<ul>
+<li>The resonant frequency is the <strong>geometric mean</strong> of the cutoff frequencies.</li>
+</ul>
+</section>
+<section id="calculating-cutoff-frequencies" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-cutoff-frequencies">Calculating Cutoff Frequencies</h3>
+<p>There are two points at which the power is half of the maximum power (or <span class="math inline">\(|H| = 1/\sqrt{2}\)</span>):</p>
+<p><span class="math display">\[
+\omega_{L,H} = \pm \frac{R}{2L} + \sqrt{\left(\frac{R}{2L}\right)^2 + \frac{1}{LC}} \\
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that you can view the bandpass filter as a cascade of a high-pass filter (formed by <span class="math inline">\(C\)</span> and <span class="math inline">\(R\)</span>) and a low-pass filter (formed by <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span>), leading to a high- and low-frequency cutoff.</p>
+</div>
+</div>
+</section>
+<section id="quality-factor" class="level3">
+<h3 class="anchored" data-anchor-id="quality-factor">Quality Factor</h3>
+<p>How “sharp” is the peak of the bandpass filter?</p>
+<p>The quality factor <span class="math inline">\(Q\)</span> is defined as:</p>
+<p><span class="math display">\[
+Q = \frac{\omega_0}{\Delta \omega} = \frac{\omega_0}{\omega_H - \omega_L} = \frac{1}{R} \sqrt{\frac{L}{C}} \\
+\]</span></p>
+<p>A higher <span class="math inline">\(Q\)</span> indicates a sharper peak and a narrower bandwidth.</p>
+</section>
+<section id="damping-factor" class="level3">
+<h3 class="anchored" data-anchor-id="damping-factor">Damping Factor</h3>
+<p>The damping factor <span class="math inline">\(\zeta\)</span> is defined as:</p>
+<p><span class="math display">\[
+\zeta = \frac{1}{2Q} = \frac{R}{2} \sqrt{\frac{C}{L}} \\
+\]</span> It is a measure of how quickly oscillations in the system decay outside the passband.</p>
 
 
 <script type="ojs-module-contents">
