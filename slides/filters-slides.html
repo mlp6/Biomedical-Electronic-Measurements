@@ -542,6 +542,116 @@ Q = \frac{\omega_0}{\Delta \omega} = \frac{\omega_0}{\omega_H - \omega_L} = \fra
 <p><span class="math display">\[
 \zeta = \frac{1}{2Q} = \frac{R}{2} \sqrt{\frac{C}{L}} \\
 \]</span> It is a measure of how quickly oscillations in the system decay outside the passband.</p>
+</section></section>
+<section>
+<section id="bode-plots" class="title-slide slide level2 center">
+<h2>Bode Plots</h2>
+<p>Can we sketch transfer functions quickly without having to plot the exact function?</p>
+<p>Yes! Bode plots provide a way to visualize the frequency response of a system using logarithmic scales for frequency and gain.</p>
+</section>
+<section id="key-features-of-bode-plots" class="slide level3">
+<h3>Key Features of Bode Plots</h3>
+<ol type="1">
+<li><strong>Magnitude Plot</strong>: Shows the gain (in dB) versus frequency (in log scale).</li>
+<li><strong>Phase Plot</strong>: Shows the phase shift (in radians or degrees) versus frequency (in log scale).</li>
+</ol>
+</section>
+<section id="steps-to-create-a-bode-plot" class="slide level3">
+<h3>Steps to Create a Bode Plot</h3>
+<ol type="1">
+<li><strong>Identify Key Frequencies</strong>: Find the cutoff frequencies and any resonant frequencies.</li>
+<li><strong>Determine Asymptotic Behavior</strong>: Sketch the magnitude and phase plots using straight lines that approximate the behavior of the transfer function.</li>
+<li><strong>Add Details</strong>: Include any peaking or notches in the response.</li>
+</ol>
+</section>
+<section id="decibel-db-scale" class="slide level3">
+<h3>Decibel (dB) Scale</h3>
+<p>Decibel is a logarithmic unit used to express the ratio of two values, commonly power or intensity.</p>
+<p>The formula to convert a power ratio to decibels is:</p>
+<p><span class="math display">\[
+L_{dB} = 10 \log_{10} \left( \frac{P}{P_0} \right)
+\]</span></p>
+<p>where: - <span class="math inline">\(L_{dB}\)</span> is the level in decibels, - <span class="math inline">\(P\)</span> is the power being measured, - <span class="math inline">\(P_0\)</span> is a reference power level.</p>
+</section>
+<section id="decibel-voltage-gain" class="slide level3">
+<h3>Decibel Voltage Gain</h3>
+<p>For voltage gain, the formula is: <span class="math display">\[
+\left|\frac{V_{out}}{V_{in}}\right|_{dB} = 20 \log_{10} \left( \frac{V_{out}}{V_{in}} \right)
+\]</span></p>
+<p>Why 20 and not 10?</p>
+<p>Because power is proportional to the square of voltage (P ∝ V²), the factor of 20 accounts for this relationship when converting voltage ratios to decibels.</p>
+</section>
+<section id="why-decibels" class="slide level3">
+<h3>Why decibels?</h3>
+<p>Allows a large dynamic range of signal levels to be represented in a “reasonable” linear range.</p>
+<p>Example: hearing/sound intensity</p>
+<ul>
+<li><p>Whisper: 0.00001 W/m² = -50 dB</p></li>
+<li><p>Explosion: 100 W/m² = 100 dB</p></li>
+</ul>
+<p>Exponential changes in power correspond to linear changes in dB, which is how our filters behave. We experience logarithmic changes in voltage as a function of decades of frequency change.</p>
+</section>
+<section id="example-first-order-low-pass-filter" class="slide level3">
+<h3>Example: First-Order Low-Pass Filter</h3>
+<p>For a first-order low-pass filter, the Bode plot would show:</p>
+<p><span class="math display">\[
+\begin{align}
+\left|\frac{V_{out}}{V_{in}}\right|_{dB} &amp; = -20 \log_{10} \left( \frac{1}{\sqrt{1 + \left( \frac{\omega}{\omega_c} \right)^2}} \right) \\
+&amp; = 20 \log_{10}(1) - 10 \log_{10}\left(1 + \left(\frac{\omega}{\omega_c}\right)^2\right) \\
+&amp; = -10 \log_{10}\left(1 + \left(\frac{\omega}{\omega_c}\right)^2\right) \\
+\end{align}
+\]</span></p>
+</section>
+<section class="slide level3">
+
+<ul>
+<li><p>For <span class="math inline">\(\frac{\omega}{\omega_c} &lt;&lt; 1\)</span>, the gain is approximately <span class="math inline">\(-10 \log_{10}(1)\)</span> = 0 dB (no attenuation).</p></li>
+<li><p>For <span class="math inline">\(\frac{\omega}{\omega_c} &gt;&gt; 1\)</span>, the gain is approximately <span class="math inline">\(-10 \log_{10}((\frac{\omega}{\omega_c})^2)\)</span> = -20 log₁₀(ω/ω_c) dB (attenuation increases with frequency).</p>
+<ul>
+<li><p>A -20 dB/decade slope after the cutoff frequency.</p></li>
+<li><p>A phase shift that approaches -<span class="math inline">\(\frac{\pi}{2}\)</span> at high frequencies.</p></li>
+</ul></li>
+<li><p>At the cutoff frequency (<span class="math inline">\(\omega = \omega_c\)</span>):</p>
+<ul>
+<li><p>The gain is -3 dB, and</p></li>
+<li><p>The phase shift is -<span class="math inline">\(\frac{\pi}{4}\)</span>.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="drawing-a-bode-plot-magnitude" class="slide level3">
+<h3>Drawing a Bode Plot (Magnitude)</h3>
+<ul>
+<li><p>We simplify the transfer function into segments that are easy to plot, which intersect at the cutoff frequency.</p></li>
+<li><p>The slope of the magnitude plot changes at the cutoff frequency.</p></li>
+</ul>
+
+<img data-src="images/bode_plot_rc_lowpass.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="drawing-a-bode-plot-phase" class="slide level3">
+<h3>Drawing a Bode Plot (Phase)</h3>
+<ul>
+<li><p><span class="math inline">\(\frac{\omega}{\omega_c} &lt;&lt; 1\)</span>: phase is approximately 0.</p></li>
+<li><p><span class="math inline">\(\frac{\omega}{\omega_c} &gt;&gt; 1\)</span>: phase is approximately -<span class="math inline">\(\frac{\pi}{2}\)</span>.</p></li>
+<li><p><span class="math inline">\(\omega = \omega_c\)</span>: phase is -<span class="math inline">\(\frac{\pi}{4}\)</span>.</p></li>
+<li><p>Approximate the phase transition as linear over two decades centered at the cutoff frequency.</p></li>
+</ul>
+
+<img data-src="images/bode_plot_rc_lowpass.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="what-does-the-bode-plot-of-a-first-order-high-pass-filter-look-like" class="slide level3">
+<h3>What does the Bode Plot of a First-Order High-Pass Filter Look Like?</h3>
+<p>You tell me!</p>
+</section></section>
+<section id="summary-for-generating-bode-plots" class="title-slide slide level2 center">
+<h2>Summary for Generating Bode Plots</h2>
+<ol type="1">
+<li><p>Solve for <span class="math inline">\(|H(j\omega)|\)</span> and <span class="math inline">\(\angle H(j\omega)\)</span>.</p></li>
+<li><p>Determine the cutoff frequency <span class="math inline">\(\omega_c\)</span>.</p></li>
+<li><p>Evaluate <span class="math inline">\(|H(j\omega)|\)</span> and <span class="math inline">\(\angle H(j\omega)\)</span> at “extreme” frequencies (<span class="math inline">\(\omega &lt;&lt; \omega_c\)</span> and <span class="math inline">\(\omega &gt;&gt; \omega_c\)</span>).</p></li>
+<li><p>Sketch the magnitude and phase plots using straight lines that approximate the behavior of the transfer function, intersecting at <span class="math inline">\(\omega_c\)</span>.</p>
+<ol type="a">
+<li><p>For first-order filters, the slope of the magnitude plot changes by ±20 dB/decade at the cutoff frequency.</p></li>
+<li><p>For first-order filters, the phase plot transitions from 0 to ±<span class="math inline">\(\frac{\pi}{2}\)</span> degrees over two decades centered at the cutoff frequency.</p></li>
+</ol></li>
+</ol>
 
 
 <script type="ojs-module-contents">
@@ -558,7 +668,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
