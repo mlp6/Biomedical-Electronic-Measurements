@@ -362,3 +362,129 @@ $$
 \zeta = \frac{1}{2Q} = \frac{R}{2} \sqrt{\frac{C}{L}} \\
 $$
 It is a measure of how quickly oscillations in the system decay outside the passband.
+
+## Bode Plots
+
+Can we sketch transfer functions quickly without having to plot the exact function?
+
+Yes! Bode plots provide a way to visualize the frequency response of a system using logarithmic scales for frequency and gain.
+
+### Key Features of Bode Plots
+
+1. **Magnitude Plot**: Shows the gain (in dB) versus frequency (in log scale).
+2. **Phase Plot**: Shows the phase shift (in radians or degrees) versus frequency (in log scale).
+
+### Steps to Create a Bode Plot
+
+1. **Identify Key Frequencies**: Find the cutoff frequencies and any resonant frequencies.
+2. **Determine Asymptotic Behavior**: Sketch the magnitude and phase plots using straight lines that approximate the behavior of the transfer function.
+3. **Add Details**: Include any peaking or notches in the response.
+
+### Decibel (dB) Scale
+
+Decibel is a logarithmic unit used to express the ratio of two values, commonly power or intensity.
+
+The formula to convert a power ratio to decibels is:
+
+$$
+L_{dB} = 10 \log_{10} \left( \frac{P}{P_0} \right)
+$$
+
+where:
+- $L_{dB}$ is the level in decibels,
+- $P$ is the power being measured,
+- $P_0$ is a reference power level.
+
+### Decibel Voltage Gain
+
+For voltage gain, the formula is:
+$$
+\left|\frac{V_{out}}{V_{in}}\right|_{dB} = 20 \log_{10} \left( \frac{V_{out}}{V_{in}} \right)
+$$  
+
+Why 20 and not 10?
+
+Because power is proportional to the square of voltage (P ∝ V²), the factor of
+20 accounts for this relationship when converting voltage ratios to decibels.
+
+### Why decibels?
+
+Allows a large dynamic range of signal levels to be represented in a "reasonable" linear range.
+
+Example: hearing/sound intensity
+
+- Whisper: 0.00001 W/m² = -50 dB
+
+- Explosion: 100 W/m² = 100 dB
+
+Exponential changes in power correspond to linear changes in dB, which is how
+our filters behave.  We experience logarithmic changes in voltage as a function
+of decades of frequency change.
+
+### Example: First-Order Low-Pass Filter
+
+For a first-order low-pass filter, the Bode plot would show:
+
+$$
+\begin{align}
+\left|\frac{V_{out}}{V_{in}}\right|_{dB} & = -20 \log_{10} \left( \frac{1}{\sqrt{1 + \left( \frac{\omega}{\omega_c} \right)^2}} \right) \\
+ & = 20 \log_{10}(1) - 10 \log_{10}\left(1 + \left(\frac{\omega}{\omega_c}\right)^2\right) \\
+ & = -10 \log_{10}\left(1 + \left(\frac{\omega}{\omega_c}\right)^2\right) \\
+\end{align}
+$$
+
+
+---
+
+- For $\frac{\omega}{\omega_c} << 1$, the gain is approximately $-10 \log_{10}(1)$ = 0 dB (no attenuation).
+
+- For $\frac{\omega}{\omega_c} >> 1$, the gain is approximately $-10 \log_{10}((\frac{\omega}{\omega_c})^2)$ = -20 log₁₀(ω/ω_c) dB (attenuation increases with frequency).
+
+    - A -20 dB/decade slope after the cutoff frequency.
+
+    - A phase shift that approaches -$\frac{\pi}{2}$ at high frequencies.
+
+- At the cutoff frequency ($\omega = \omega_c$):
+
+    - The gain is -3 dB, and 
+    
+    - The phase shift is -$\frac{\pi}{4}$.
+
+### Drawing a Bode Plot (Magnitude)
+
+- We simplify the transfer function into segments that are easy to plot, which intersect at the cutoff frequency.
+
+- The slope of the magnitude plot changes at the cutoff frequency.
+
+![](images/bode_plot_rc_lowpass.png){fig-align="center"}
+
+### Drawing a Bode Plot (Phase)
+
+- $\frac{\omega}{\omega_c} << 1$: phase is approximately 0.
+
+- $\frac{\omega}{\omega_c} >> 1$: phase is approximately -$\frac{\pi}{2}$.
+
+- $\omega = \omega_c$: phase is -$\frac{\pi}{4}$.
+
+- Approximate the phase transition as linear over two decades centered at the
+cutoff frequency.
+
+![](images/bode_plot_rc_lowpass.png){fig-align="center"}
+
+### What does the Bode Plot of a First-Order High-Pass Filter Look Like?
+
+You tell me!
+
+## Summary for Generating Bode Plots
+
+1. Solve for $|H(j\omega)|$ and $\angle H(j\omega)$.
+
+2. Determine the cutoff frequency $\omega_c$.
+
+3. Evaluate $|H(j\omega)|$ and $\angle H(j\omega)$ at "extreme" frequencies ($\omega << \omega_c$ and $\omega >> \omega_c$).
+
+4. Sketch the magnitude and phase plots using straight lines that approximate the behavior of the transfer function, intersecting at $\omega_c$.
+
+    a. For first-order filters, the slope of the magnitude plot changes by ±20 dB/decade at the cutoff frequency.
+
+    b. For first-order filters, the phase plot transitions from 0 to ±$\frac{\pi}{2}$ degrees over two decades centered at the cutoff frequency.

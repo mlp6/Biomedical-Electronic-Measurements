@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+
+\draw (0,0) node[circle, fill, inner sep=1pt] (A) {};
+\draw (0,3) node[circle, fill, inner sep=1pt] (B) {};
+\draw (6,0) node[circle, fill, inner sep=1pt] (C) {};
+\draw (6,3) node[circle, fill, inner sep=1pt] (D) {};
+
+\draw (B) to[C, l=$C$] (2,3) to[L, l=$L$] (4,3) -- (D);
+\draw (4,3) to[R, l=$R$] (4,0);
+\draw (C) -- (A);
+
+\draw (B) to[open, v=$V_i$] (A);
+\draw (D) to[open, v=$V_o$] (C);
+
+\end{circuitikz}
+\end{document}
