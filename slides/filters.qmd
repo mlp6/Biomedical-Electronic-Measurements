@@ -146,6 +146,8 @@ That means that at high frequencies, the output voltage is zero (completely atte
 
 ![](images/rc_lpf_xfer_func.png){fig-align="center"}
 
+- Note the logarithmic scale on the x-axis (frequency).
+
 - $\omega_o$ is a characterisitic "cutoff" frequency that conveys information about the frequency response of the circuit.
 
     - $V_o$ is at **half power** of $V_i$ ($|H| = 1/\sqrt{2}$), which is
@@ -292,3 +294,71 @@ Note that $Z_{in} \neq Z_{out}$!
 :::
 
 We can measure input and output impedance experimentally in the lab too.
+
+## Bandpass Filter (Second-Order, RLC)
+
+![](images/bpf.png){fig-align="center"}
+
+::: callout-tip
+This, again, just looks like a voltage divider!
+:::
+
+### Cutoff Frequencies
+
+This is a second-order filter (two energy storage elements: $L$ and $C$), so it has two cutoff frequencies: $\omega_H$ and $\omega_L$.
+
+$$
+\begin{gather}
+H(j\omega) = \frac{V_o(j\omega)}{V_i(j\omega)} = \frac{R}{R + \frac{1}{j\omega C} + j\omega L} \\
+H(j\omega) = \frac{j\omega RC}{1 + j\omega RC - \omega^2 LC} \\
+\end{gather}
+$$
+
+![](images/rc_bpf_xfer_func.png){fig-align="center"}
+
+### Characteristic Frequencies
+
+- The **bandwidth** $\Delta \omega$ is the difference between the upper and lower cutoff frequencies: $\Delta \omega = \omega_H - \omega_L$.
+
+- The **resonant frequency** $\omega_0$ is the frequency at which the inductive and capacitive reactances are equal in magnitude:
+
+$$
+\begin{gather}
+\omega_0 = \frac{1}{\sqrt{LC}} \\
+\end{gather}
+$$
+
+- The resonant frequency is the **geometric mean** of the cutoff frequencies.
+
+### Calculating Cutoff Frequencies
+
+There are two points at which the power is half of the maximum power (or $|H| = 1/\sqrt{2}$):
+
+$$
+\omega_{L,H} = \pm \frac{R}{2L} + \sqrt{\left(\frac{R}{2L}\right)^2 + \frac{1}{LC}} \\
+$$  
+
+::: callout-note
+Note that you can view the bandpass filter as a cascade of a high-pass filter (formed by $C$ and $R$) and a low-pass filter (formed by $L$ and $R$), leading to a high- and low-frequency cutoff.
+:::
+
+### Quality Factor
+
+How "sharp" is the peak of the bandpass filter?
+
+The quality factor $Q$ is defined as:
+
+$$
+Q = \frac{\omega_0}{\Delta \omega} = \frac{\omega_0}{\omega_H - \omega_L} = \frac{1}{R} \sqrt{\frac{L}{C}} \\
+$$
+
+A higher $Q$ indicates a sharper peak and a narrower bandwidth.
+
+### Damping Factor
+
+The damping factor $\zeta$ is defined as:
+
+$$
+\zeta = \frac{1}{2Q} = \frac{R}{2} \sqrt{\frac{C}{L}} \\
+$$
+It is a measure of how quickly oscillations in the system decay outside the passband.
