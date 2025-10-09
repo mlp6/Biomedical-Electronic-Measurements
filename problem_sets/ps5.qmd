@@ -104,11 +104,12 @@ and current through time through the capacitor.
 
 - Run the `Simulator` to perform a `Transient Analysis` using the following parameters:
 
-    - Start time: 0 s
-    
-    - Stop time: 50 $\mu$s
+    - Time Step: 1 $\mu$s
 
-    - Maximum step size: 1 $\mu$s
+    - Start Time: 0 s
+    
+    - Stop Time: 50 $\mu$s
+
 
 ::: {.callout-note title="Transient Analysis"}
 Plot the voltage across the capacitor $V_{out}$ and the current through the capacitor $I_{C_1}$.
