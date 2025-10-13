@@ -958,14 +958,14 @@
     "href": "TODO.html",
     "title": "TODO",
     "section": "",
-    "text": "Update the Makefile to compile all of the circuitikz images and clean things up.\nSetup gradebook\nSetup semester-long calendar\n\n\n\n\nOrganize slide images by lecture (not monolithic directory)"
+    "text": "Update the Makefile to compile all of the circuitikz images and clean things up.\nSetup semester-long calendar\n\n\n\n\nOrganize slide images by lecture (not monolithic directory)\nAdd input/output impedance to resistive loading, for example, real source resistance and designed voltage divider."
   },
   {
     "objectID": "TODO.html#slides",
     "href": "TODO.html#slides",
     "title": "TODO",
     "section": "",
-    "text": "Organize slide images by lecture (not monolithic directory)"
+    "text": "Organize slide images by lecture (not monolithic directory)\nAdd input/output impedance to resistive loading, for example, real source resistance and designed voltage divider."
   },
   {
     "objectID": "faq.html",
