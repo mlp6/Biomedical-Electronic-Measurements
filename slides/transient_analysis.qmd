@@ -1,0 +1,14 @@
+---
+title: "Transient Analysis"
+date: "2025-10-15"
+format:
+  live-html: 
+    output-file: transient-analysis-notes.html
+  live-revealjs: 
+    output-file: transient-analysis-slides.html
+---
+
+## Overview
+
+## Learning Objectives
+
