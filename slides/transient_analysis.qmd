@@ -10,5 +10,196 @@ format:
 
 ## Overview
 
+Unlike our filter analysis, which focused on steady-state sinusoidal inputs,
+transient analysis examines how circuits respond to time-varying signals,
+especially during switching events. This is crucial for understanding real-world
+circuit behavior, as many applications involve non-sinusoidal waveforms.
+
 ## Learning Objectives
+
+- Understand how voltage and current change over time in response to switched DC
+sources in first-order, passive reactive circuits.
+
+- Evaluate transient response, analytically, using differential equations and
+initial conditions.
+
+- Numerically simulate transient response using SPICE.
+
+## Switched RC Circuit
+
+![](images/switch_RC.png){fig-align="center"}
+
+- Close the switch at $t = t_0$.
+
+- Evaluate the voltage across the capacitor $v_C(t)$ for $t \geq t_0$.
+
+## How can we model a closing switch mathematically?
+
+- Unit step function $u(t) = \begin{cases} 0, & t < 0 \\ 1, & t \geq 0 \end{cases}$o
+
+- Can scale and shift the unit step function to model a closing switch at $t = t_0$:
+
+$$
+V_A u(t - t_0) = \begin{cases} 0, & t < t_0 \\ V_A, & t \geq t_0 \end{cases}
+$$
+
+- In our example circuit:
+
+    - Closing the switch at $t = t_0$ can be modeled as $V_S\,u(t - t_0)$.
+
+    - Opening the switch at $t = t_1$ can be modeled as $V_S\,u(t - t_0) - V_S\,u(t - t_1)$.
+
+## Solving the Switched RC Circuit
+
+- We cannot use phasors here because the input is not steady-state sinusoidal.
+
+- Instead, we will use the IV relationships for resistors, capacitors and inductors to setup differential equations.
+
+    - KCL & KVL will be used to setup the equations.
+
+    - Initial conditions will be used to solve for the constants of integration.
+
+- These differential equations will have **general forms** with known solutions that can be used to simplify the analsis, and we will leverage numerical solution using SPICE and `scipy` in your Jupyter notebooks.
+
+## Reminder: IV Relationships for Reactive Elements
+
+- Capacitor
+
+$$
+\begin{gather}
+i_C(t) = C \frac{d v_C(t)}{d t} \\
+v_C(t) = v_C(t_0) + \frac{1}{C} \int_{t_0}^{t} i_C(t) dt \\
+\end{gather}
+$$
+
+- Inductor
+
+$$
+\begin{gather}
+v_L(t) = L \frac{d i_L(t)}{d t} \\
+i_L(t) = i_L(t_0) + \frac{1}{L} \int_{t_0}^{t} v_L(t) dt \\
+\end{gather}
+$$
+
+
+## Back to our Switched RC Circuit
+
+![](images/switch_RC.png){fig-align="center"}
+
+KVL around the loop for $t \geq t_0$:
+
+$$
+\begin{gather}
+-V_S(t) + v_R(t) + v_C(t) = 0 \\
+v_R(t) = i(t) R \\
+i(t) = C \frac{d v_C(t)}{d t} \\
+v_R(t) = R C \frac{d v_C(t)}{d t} \\
+-v_S(t) + R C \frac{d v_C(t)}{d t} + v_C(t) = 0 \\
+\Rightarrow R C \frac{d v_C(t)}{d t} + v_C(t) = V_S(t)
+\end{gather}
+$$
+
+## RC General Form Differential Equation
+
+The general form of the first-order linear differential equation for an RC circuit is:
+
+$$
+\tau \frac{d v_o(t)}{d t} + v_o(t) = \kappa\,v_i(t)
+$$
+
+- $\tau = R C$ is the time constant of the circuit
+
+- $\kappa$ is the steady-state gain of the circuit 
+
+    - $\kappa = 1$ for a passive series RC circuit
+
+## RC General Form Solution
+
+The solution to the general form differential equation for an RC circuit is:
+
+$$
+v_o(t) = v_n(t) + v_f(t)
+$$
+
+- $v_n(t)$ is the natural response (homogeneous solution)
+
+    - $\tau \frac{d v_n(t)}{d t} + v_n(t) = 0$
+
+    - "Homogeneous" part of the solution (means the input is zero (circuit is not driven))
+
+    - Solution Form: $v_n(t) = A e^{-\frac{t - t_0}{\tau}}$
+
+    - $A$ is a constant determined by initial conditions
+
+- $v_f(t)$ is the forced response (particular solution)
+
+    - $\tau \frac{d v_f(t)}{d t} + v_f(t) = \kappa\,v_i(t)$
+
+    - $v_f(t)$ depends on the form of $v_i(t)$ (how the circuit is driven)
+
+## Lets solve for the natural response...
+
+$$
+\begin{gather}
+\textrm{Remove the forced response:} v_i(t) = 0 \\
+R C \frac{d v_n(t)}{d t} + v_n(t) = 0 \\
+v_n(t) = A e^{st} \textrm{($s$ is a constant)}\\
+R C A s e^{st} + A e^{st} = 0 \\
+(R C s + 1) A e^{st} = 0 \\
+\end{gather}
+$$
+
+- $A e^{st} \neq 0$ for all $t$
+
+- Characteristic Equation: $R C s + 1 = 0 \Rightarrow s = -\frac{1}{R C} = -\frac{1}{\tau}$
+
+- Natural Response: $v_n(t) = A e^{-\frac{t}{\tau}} = A e^{-\frac{t - t_0}{\tau}}$
+
+- $A$ is determined by the initial condition $v_n(t_0)$
+
+## Now onto the forced response solution...
+
+If $v_i(t)$ is a DC source that is switched on at $t = t_0$:
+
+$$
+v_i(t) = V_A u(t - t_0) = \begin{cases} 0, & t < t_0 \\ V_A, & t \geq t_0 \end{cases}
+$$
+
+$$
+\begin{gather}
+R C \frac{d v_f(t)}{d t} + v_f(t) = V_A \\
+v_f(t) = V_A \textrm{(constant!)} \\
+\frac{d v_f(t)}{d t} = 0 \\
+R C (0) + V_A = V_A \\
+V_A = V_A \\
+\end{gather}
+$$
+
+## Lets put our complete solution together...
+
+$$
+\begin{gather}
+v_o(t) = v_n(t) + v_f(t) \\
+v_o(t) = A e^{-\frac{t - t_0}{\tau}} + V_A \\
+\end{gather}
+$$
+
+- $A$ is determined by the initial condition $v_o(t_0)$ (right before the switch is closed).
+
+- Since the capacitor voltage cannot change instantaneously:
+
+$$
+\begin{gather}
+v_C(t_0^-) = v_C(t_0^+) \Rightarrow v_C(t_0) = v_C(t_0^-) \\
+A e^{-\frac{t_0 - t_0}{\tau}} + V_A = v_C(t_0^-) \\
+A = v_C(t_0^-) - V_A \\
+\end{gather}
+$$
+
+::: {.callout-important title="Complete Solution"}
+$$
+v_C(t) = \left(v_C(t_0^-) - V_A\right) e^{-\frac{t - t_0}{\tau}} + V_A, \quad t \geq t_0
+$$
+:::
+
 
