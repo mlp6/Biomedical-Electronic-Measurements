@@ -150,11 +150,205 @@ Dr.&nbsp;Mark Palmeri, M.D., Ph.D.
 </section>
 <section id="overview" class="title-slide slide level2 center">
 <h2>Overview</h2>
-
+<p>Unlike our filter analysis, which focused on steady-state sinusoidal inputs, transient analysis examines how circuits respond to time-varying signals, especially during switching events. This is crucial for understanding real-world circuit behavior, as many applications involve non-sinusoidal waveforms.</p>
 </section>
 
 <section id="learning-objectives" class="title-slide slide level2 center">
 <h2>Learning Objectives</h2>
+<ul>
+<li><p>Understand how voltage and current change over time in response to switched DC sources in first-order, passive reactive circuits.</p></li>
+<li><p>Evaluate transient response, analytically, using differential equations and initial conditions.</p></li>
+<li><p>Numerically simulate transient response using SPICE.</p></li>
+</ul>
+</section>
+
+<section id="switched-rc-circuit" class="title-slide slide level2 center">
+<h2>Switched RC Circuit</h2>
+
+<img data-src="images/switch_RC.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><p>Close the switch at <span class="math inline">\(t = t_0\)</span>.</p></li>
+<li><p>Evaluate the voltage across the capacitor <span class="math inline">\(v_C(t)\)</span> for <span class="math inline">\(t \geq t_0\)</span>.</p></li>
+</ul>
+</section>
+
+<section id="how-can-we-model-a-closing-switch-mathematically" class="title-slide slide level2 center">
+<h2>How can we model a closing switch mathematically?</h2>
+<ul>
+<li><p>Unit step function <span class="math inline">\(u(t) = \begin{cases} 0, &amp; t &lt; 0 \\ 1, &amp; t \geq 0 \end{cases}\)</span>o</p></li>
+<li><p>Can scale and shift the unit step function to model a closing switch at <span class="math inline">\(t = t_0\)</span>:</p></li>
+</ul>
+<p><span class="math display">\[
+V_A u(t - t_0) = \begin{cases} 0, &amp; t &lt; t_0 \\ V_A, &amp; t \geq t_0 \end{cases}
+\]</span></p>
+<ul>
+<li><p>In our example circuit:</p>
+<ul>
+<li><p>Closing the switch at <span class="math inline">\(t = t_0\)</span> can be modeled as <span class="math inline">\(V_S\,u(t - t_0)\)</span>.</p></li>
+<li><p>Opening the switch at <span class="math inline">\(t = t_1\)</span> can be modeled as <span class="math inline">\(V_S\,u(t - t_0) - V_S\,u(t - t_1)\)</span>.</p></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="solving-the-switched-rc-circuit" class="title-slide slide level2 center">
+<h2>Solving the Switched RC Circuit</h2>
+<ul>
+<li><p>We cannot use phasors here because the input is not steady-state sinusoidal.</p></li>
+<li><p>Instead, we will use the IV relationships for resistors, capacitors and inductors to setup differential equations.</p>
+<ul>
+<li><p>KCL &amp; KVL will be used to setup the equations.</p></li>
+<li><p>Initial conditions will be used to solve for the constants of integration.</p></li>
+</ul></li>
+<li><p>These differential equations will have <strong>general forms</strong> with known solutions that can be used to simplify the analsis, and we will leverage numerical solution using SPICE and <code>scipy</code> in your Jupyter notebooks.</p></li>
+</ul>
+</section>
+
+<section id="reminder-iv-relationships-for-reactive-elements" class="title-slide slide level2 center">
+<h2>Reminder: IV Relationships for Reactive Elements</h2>
+<ul>
+<li>Capacitor</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+i_C(t) = C \frac{d v_C(t)}{d t} \\
+v_C(t) = v_C(t_0) + \frac{1}{C} \int_{t_0}^{t} i_C(t) dt \\
+\end{gather}
+\]</span></p>
+<ul>
+<li>Inductor</li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+v_L(t) = L \frac{d i_L(t)}{d t} \\
+i_L(t) = i_L(t_0) + \frac{1}{L} \int_{t_0}^{t} v_L(t) dt \\
+\end{gather}
+\]</span></p>
+</section>
+
+<section id="back-to-our-switched-rc-circuit" class="title-slide slide level2 center">
+<h2>Back to our Switched RC Circuit</h2>
+
+<img data-src="images/switch_RC.png" class="quarto-figure quarto-figure-center r-stretch"><p>KVL around the loop for <span class="math inline">\(t \geq t_0\)</span>:</p>
+<p><span class="math display">\[
+\begin{gather}
+-V_S(t) + v_R(t) + v_C(t) = 0 \\
+v_R(t) = i(t) R \\
+i(t) = C \frac{d v_C(t)}{d t} \\
+v_R(t) = R C \frac{d v_C(t)}{d t} \\
+-v_S(t) + R C \frac{d v_C(t)}{d t} + v_C(t) = 0 \\
+\Rightarrow R C \frac{d v_C(t)}{d t} + v_C(t) = V_S(t)
+\end{gather}
+\]</span></p>
+</section>
+
+<section id="rc-general-form-differential-equation" class="title-slide slide level2 center">
+<h2>RC General Form Differential Equation</h2>
+<p>The general form of the first-order linear differential equation for an RC circuit is:</p>
+<p><span class="math display">\[
+\tau \frac{d v_o(t)}{d t} + v_o(t) = \kappa\,v_i(t)
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(\tau = R C\)</span> is the time constant of the circuit</p></li>
+<li><p><span class="math inline">\(\kappa\)</span> is the steady-state gain of the circuit</p>
+<ul>
+<li><span class="math inline">\(\kappa = 1\)</span> for a passive series RC circuit</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="rc-general-form-solution" class="title-slide slide level2 center">
+<h2>RC General Form Solution</h2>
+<p>The solution to the general form differential equation for an RC circuit is:</p>
+<p><span class="math display">\[
+v_o(t) = v_n(t) + v_f(t)
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(v_n(t)\)</span> is the natural response (homogeneous solution)</p>
+<ul>
+<li><p><span class="math inline">\(\tau \frac{d v_n(t)}{d t} + v_n(t) = 0\)</span></p></li>
+<li><p>“Homogeneous” part of the solution (means the input is zero (circuit is not driven))</p></li>
+<li><p>Solution Form: <span class="math inline">\(v_n(t) = A e^{-\frac{t - t_0}{\tau}}\)</span></p></li>
+<li><p><span class="math inline">\(A\)</span> is a constant determined by initial conditions</p></li>
+</ul></li>
+<li><p><span class="math inline">\(v_f(t)\)</span> is the forced response (particular solution)</p>
+<ul>
+<li><p><span class="math inline">\(\tau \frac{d v_f(t)}{d t} + v_f(t) = \kappa\,v_i(t)\)</span></p></li>
+<li><p><span class="math inline">\(v_f(t)\)</span> depends on the form of <span class="math inline">\(v_i(t)\)</span> (how the circuit is driven)</p></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="lets-solve-for-the-natural-response" class="title-slide slide level2 center">
+<h2>Lets solve for the natural response…</h2>
+<p><span class="math display">\[
+\begin{gather}
+\textrm{Remove the forced response:} v_i(t) = 0 \\
+R C \frac{d v_n(t)}{d t} + v_n(t) = 0 \\
+v_n(t) = A e^{st} \textrm{($s$ is a constant)}\\
+R C A s e^{st} + A e^{st} = 0 \\
+(R C s + 1) A e^{st} = 0 \\
+\end{gather}
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(A e^{st} \neq 0\)</span> for all <span class="math inline">\(t\)</span></p></li>
+<li><p>Characteristic Equation: <span class="math inline">\(R C s + 1 = 0 \Rightarrow s = -\frac{1}{R C} = -\frac{1}{\tau}\)</span></p></li>
+<li><p>Natural Response: <span class="math inline">\(v_n(t) = A e^{-\frac{t}{\tau}} = A e^{-\frac{t - t_0}{\tau}}\)</span></p></li>
+<li><p><span class="math inline">\(A\)</span> is determined by the initial condition <span class="math inline">\(v_n(t_0)\)</span></p></li>
+</ul>
+</section>
+
+<section id="now-onto-the-forced-response-solution" class="title-slide slide level2 center">
+<h2>Now onto the forced response solution…</h2>
+<p>If <span class="math inline">\(v_i(t)\)</span> is a DC source that is switched on at <span class="math inline">\(t = t_0\)</span>:</p>
+<p><span class="math display">\[
+v_i(t) = V_A u(t - t_0) = \begin{cases} 0, &amp; t &lt; t_0 \\ V_A, &amp; t \geq t_0 \end{cases}
+\]</span></p>
+<p><span class="math display">\[
+\begin{gather}
+R C \frac{d v_f(t)}{d t} + v_f(t) = V_A \\
+v_f(t) = V_A \textrm{(constant!)} \\
+\frac{d v_f(t)}{d t} = 0 \\
+R C (0) + V_A = V_A \\
+V_A = V_A \\
+\end{gather}
+\]</span></p>
+</section>
+
+<section id="lets-put-our-complete-solution-together" class="title-slide slide level2 center">
+<h2>Lets put our complete solution together…</h2>
+<p><span class="math display">\[
+\begin{gather}
+v_o(t) = v_n(t) + v_f(t) \\
+v_o(t) = A e^{-\frac{t - t_0}{\tau}} + V_A \\
+\end{gather}
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(A\)</span> is determined by the initial condition <span class="math inline">\(v_o(t_0)\)</span> (right before the switch is closed).</p></li>
+<li><p>Since the capacitor voltage cannot change instantaneously:</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{gather}
+v_C(t_0^-) = v_C(t_0^+) \Rightarrow v_C(t_0) = v_C(t_0^-) \\
+A e^{-\frac{t_0 - t_0}{\tau}} + V_A = v_C(t_0^-) \\
+A = v_C(t_0^-) - V_A \\
+\end{gather}
+\]</span></p>
+<div title="Complete Solution">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Complete Solution</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math display">\[
+v_C(t) = \left(v_C(t_0^-) - V_A\right) e^{-\frac{t - t_0}{\tau}} + V_A, \quad t \geq t_0
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
 
 
 <script type="ojs-module-contents">

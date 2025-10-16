@@ -179,25 +179,179 @@
     ]
   },
   {
+    "objectID": "slides/transient-analysis-notes.html",
+    "href": "slides/transient-analysis-notes.html",
+    "title": "Transient Analysis",
+    "section": "",
+    "text": "Unlike our filter analysis, which focused on steady-state sinusoidal inputs, transient analysis examines how circuits respond to time-varying signals, especially during switching events. This is crucial for understanding real-world circuit behavior, as many applications involve non-sinusoidal waveforms."
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#overview",
+    "href": "slides/transient-analysis-notes.html#overview",
+    "title": "Transient Analysis",
+    "section": "",
+    "text": "Unlike our filter analysis, which focused on steady-state sinusoidal inputs, transient analysis examines how circuits respond to time-varying signals, especially during switching events. This is crucial for understanding real-world circuit behavior, as many applications involve non-sinusoidal waveforms."
+  },
+  {
     "objectID": "slides/transient-analysis-notes.html#learning-objectives",
     "href": "slides/transient-analysis-notes.html#learning-objectives",
     "title": "Transient Analysis",
     "section": "Learning Objectives",
-    "text": "Learning Objectives"
+    "text": "Learning Objectives\n\nUnderstand how voltage and current change over time in response to switched DC sources in first-order, passive reactive circuits.\nEvaluate transient response, analytically, using differential equations and initial conditions.\nNumerically simulate transient response using SPICE."
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#switched-rc-circuit",
+    "href": "slides/transient-analysis-notes.html#switched-rc-circuit",
+    "title": "Transient Analysis",
+    "section": "Switched RC Circuit",
+    "text": "Switched RC Circuit\n\n\n\n\n\n\nClose the switch at \\(t = t_0\\).\nEvaluate the voltage across the capacitor \\(v_C(t)\\) for \\(t \\geq t_0\\)."
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#how-can-we-model-a-closing-switch-mathematically",
+    "href": "slides/transient-analysis-notes.html#how-can-we-model-a-closing-switch-mathematically",
+    "title": "Transient Analysis",
+    "section": "How can we model a closing switch mathematically?",
+    "text": "How can we model a closing switch mathematically?\n\nUnit step function \\(u(t) = \\begin{cases} 0, & t &lt; 0 \\\\ 1, & t \\geq 0 \\end{cases}\\)o\nCan scale and shift the unit step function to model a closing switch at \\(t = t_0\\):\n\n\\[\nV_A u(t - t_0) = \\begin{cases} 0, & t &lt; t_0 \\\\ V_A, & t \\geq t_0 \\end{cases}\n\\]\n\nIn our example circuit:\n\nClosing the switch at \\(t = t_0\\) can be modeled as \\(V_S\\,u(t - t_0)\\).\nOpening the switch at \\(t = t_1\\) can be modeled as \\(V_S\\,u(t - t_0) - V_S\\,u(t - t_1)\\)."
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#solving-the-switched-rc-circuit",
+    "href": "slides/transient-analysis-notes.html#solving-the-switched-rc-circuit",
+    "title": "Transient Analysis",
+    "section": "Solving the Switched RC Circuit",
+    "text": "Solving the Switched RC Circuit\n\nWe cannot use phasors here because the input is not steady-state sinusoidal.\nInstead, we will use the IV relationships for resistors, capacitors and inductors to setup differential equations.\n\nKCL & KVL will be used to setup the equations.\nInitial conditions will be used to solve for the constants of integration.\n\nThese differential equations will have general forms with known solutions that can be used to simplify the analsis, and we will leverage numerical solution using SPICE and scipy in your Jupyter notebooks."
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#reminder-iv-relationships-for-reactive-elements",
+    "href": "slides/transient-analysis-notes.html#reminder-iv-relationships-for-reactive-elements",
+    "title": "Transient Analysis",
+    "section": "Reminder: IV Relationships for Reactive Elements",
+    "text": "Reminder: IV Relationships for Reactive Elements\n\nCapacitor\n\n\\[\n\\begin{gather}\ni_C(t) = C \\frac{d v_C(t)}{d t} \\\\\nv_C(t) = v_C(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_C(t) dt \\\\\n\\end{gather}\n\\]\n\nInductor\n\n\\[\n\\begin{gather}\nv_L(t) = L \\frac{d i_L(t)}{d t} \\\\\ni_L(t) = i_L(t_0) + \\frac{1}{L} \\int_{t_0}^{t} v_L(t) dt \\\\\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#back-to-our-switched-rc-circuit",
+    "href": "slides/transient-analysis-notes.html#back-to-our-switched-rc-circuit",
+    "title": "Transient Analysis",
+    "section": "Back to our Switched RC Circuit",
+    "text": "Back to our Switched RC Circuit\n\n\n\n\n\nKVL around the loop for \\(t \\geq t_0\\):\n\\[\n\\begin{gather}\n-V_S(t) + v_R(t) + v_C(t) = 0 \\\\\nv_R(t) = i(t) R \\\\\ni(t) = C \\frac{d v_C(t)}{d t} \\\\\nv_R(t) = R C \\frac{d v_C(t)}{d t} \\\\\n-v_S(t) + R C \\frac{d v_C(t)}{d t} + v_C(t) = 0 \\\\\n\\Rightarrow R C \\frac{d v_C(t)}{d t} + v_C(t) = V_S(t)\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#rc-general-form-differential-equation",
+    "href": "slides/transient-analysis-notes.html#rc-general-form-differential-equation",
+    "title": "Transient Analysis",
+    "section": "RC General Form Differential Equation",
+    "text": "RC General Form Differential Equation\nThe general form of the first-order linear differential equation for an RC circuit is:\n\\[\n\\tau \\frac{d v_o(t)}{d t} + v_o(t) = \\kappa\\,v_i(t)\n\\]\n\n\\(\\tau = R C\\) is the time constant of the circuit\n\\(\\kappa\\) is the steady-state gain of the circuit\n\n\\(\\kappa = 1\\) for a passive series RC circuit"
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#rc-general-form-solution",
+    "href": "slides/transient-analysis-notes.html#rc-general-form-solution",
+    "title": "Transient Analysis",
+    "section": "RC General Form Solution",
+    "text": "RC General Form Solution\nThe solution to the general form differential equation for an RC circuit is:\n\\[\nv_o(t) = v_n(t) + v_f(t)\n\\]\n\n\\(v_n(t)\\) is the natural response (homogeneous solution)\n\n\\(\\tau \\frac{d v_n(t)}{d t} + v_n(t) = 0\\)\n“Homogeneous” part of the solution (means the input is zero (circuit is not driven))\nSolution Form: \\(v_n(t) = A e^{-\\frac{t - t_0}{\\tau}}\\)\n\\(A\\) is a constant determined by initial conditions\n\n\\(v_f(t)\\) is the forced response (particular solution)\n\n\\(\\tau \\frac{d v_f(t)}{d t} + v_f(t) = \\kappa\\,v_i(t)\\)\n\\(v_f(t)\\) depends on the form of \\(v_i(t)\\) (how the circuit is driven)"
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#lets-solve-for-the-natural-response",
+    "href": "slides/transient-analysis-notes.html#lets-solve-for-the-natural-response",
+    "title": "Transient Analysis",
+    "section": "Lets solve for the natural response…",
+    "text": "Lets solve for the natural response…\n\\[\n\\begin{gather}\n\\textrm{Remove the forced response:} v_i(t) = 0 \\\\\nR C \\frac{d v_n(t)}{d t} + v_n(t) = 0 \\\\\nv_n(t) = A e^{st} \\textrm{($s$ is a constant)}\\\\\nR C A s e^{st} + A e^{st} = 0 \\\\\n(R C s + 1) A e^{st} = 0 \\\\\n\\end{gather}\n\\]\n\n\\(A e^{st} \\neq 0\\) for all \\(t\\)\nCharacteristic Equation: \\(R C s + 1 = 0 \\Rightarrow s = -\\frac{1}{R C} = -\\frac{1}{\\tau}\\)\nNatural Response: \\(v_n(t) = A e^{-\\frac{t}{\\tau}} = A e^{-\\frac{t - t_0}{\\tau}}\\)\n\\(A\\) is determined by the initial condition \\(v_n(t_0)\\)"
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#now-onto-the-forced-response-solution",
+    "href": "slides/transient-analysis-notes.html#now-onto-the-forced-response-solution",
+    "title": "Transient Analysis",
+    "section": "Now onto the forced response solution…",
+    "text": "Now onto the forced response solution…\nIf \\(v_i(t)\\) is a DC source that is switched on at \\(t = t_0\\):\n\\[\nv_i(t) = V_A u(t - t_0) = \\begin{cases} 0, & t &lt; t_0 \\\\ V_A, & t \\geq t_0 \\end{cases}\n\\]\n\\[\n\\begin{gather}\nR C \\frac{d v_f(t)}{d t} + v_f(t) = V_A \\\\\nv_f(t) = V_A \\textrm{(constant!)} \\\\\n\\frac{d v_f(t)}{d t} = 0 \\\\\nR C (0) + V_A = V_A \\\\\nV_A = V_A \\\\\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#lets-put-our-complete-solution-together",
+    "href": "slides/transient-analysis-notes.html#lets-put-our-complete-solution-together",
+    "title": "Transient Analysis",
+    "section": "Lets put our complete solution together…",
+    "text": "Lets put our complete solution together…\n\\[\n\\begin{gather}\nv_o(t) = v_n(t) + v_f(t) \\\\\nv_o(t) = A e^{-\\frac{t - t_0}{\\tau}} + V_A \\\\\n\\end{gather}\n\\]\n\n\\(A\\) is determined by the initial condition \\(v_o(t_0)\\) (right before the switch is closed).\nSince the capacitor voltage cannot change instantaneously:\n\n\\[\n\\begin{gather}\nv_C(t_0^-) = v_C(t_0^+) \\Rightarrow v_C(t_0) = v_C(t_0^-) \\\\\nA e^{-\\frac{t_0 - t_0}{\\tau}} + V_A = v_C(t_0^-) \\\\\nA = v_C(t_0^-) - V_A \\\\\n\\end{gather}\n\\]\n\n\n\n\n\n\nComplete Solution\n\n\n\n\\[\nv_C(t) = \\left(v_C(t_0^-) - V_A\\right) e^{-\\frac{t - t_0}{\\tau}} + V_A, \\quad t \\geq t_0\n\\]"
   },
   {
     "objectID": "slides/transient-analysis-slides.html#overview",
     "href": "slides/transient-analysis-slides.html#overview",
     "title": "Transient Analysis",
     "section": "Overview",
-    "text": "Overview"
+    "text": "Overview\nUnlike our filter analysis, which focused on steady-state sinusoidal inputs, transient analysis examines how circuits respond to time-varying signals, especially during switching events. This is crucial for understanding real-world circuit behavior, as many applications involve non-sinusoidal waveforms."
   },
   {
     "objectID": "slides/transient-analysis-slides.html#learning-objectives",
     "href": "slides/transient-analysis-slides.html#learning-objectives",
     "title": "Transient Analysis",
     "section": "Learning Objectives",
-    "text": "Learning Objectives"
+    "text": "Learning Objectives\n\nUnderstand how voltage and current change over time in response to switched DC sources in first-order, passive reactive circuits.\nEvaluate transient response, analytically, using differential equations and initial conditions.\nNumerically simulate transient response using SPICE."
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#switched-rc-circuit",
+    "href": "slides/transient-analysis-slides.html#switched-rc-circuit",
+    "title": "Transient Analysis",
+    "section": "Switched RC Circuit",
+    "text": "Switched RC Circuit\n\n\nClose the switch at \\(t = t_0\\).\nEvaluate the voltage across the capacitor \\(v_C(t)\\) for \\(t \\geq t_0\\)."
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#how-can-we-model-a-closing-switch-mathematically",
+    "href": "slides/transient-analysis-slides.html#how-can-we-model-a-closing-switch-mathematically",
+    "title": "Transient Analysis",
+    "section": "How can we model a closing switch mathematically?",
+    "text": "How can we model a closing switch mathematically?\n\nUnit step function \\(u(t) = \\begin{cases} 0, & t &lt; 0 \\\\ 1, & t \\geq 0 \\end{cases}\\)o\nCan scale and shift the unit step function to model a closing switch at \\(t = t_0\\):\n\n\\[\nV_A u(t - t_0) = \\begin{cases} 0, & t &lt; t_0 \\\\ V_A, & t \\geq t_0 \\end{cases}\n\\]\n\nIn our example circuit:\n\nClosing the switch at \\(t = t_0\\) can be modeled as \\(V_S\\,u(t - t_0)\\).\nOpening the switch at \\(t = t_1\\) can be modeled as \\(V_S\\,u(t - t_0) - V_S\\,u(t - t_1)\\)."
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#solving-the-switched-rc-circuit",
+    "href": "slides/transient-analysis-slides.html#solving-the-switched-rc-circuit",
+    "title": "Transient Analysis",
+    "section": "Solving the Switched RC Circuit",
+    "text": "Solving the Switched RC Circuit\n\nWe cannot use phasors here because the input is not steady-state sinusoidal.\nInstead, we will use the IV relationships for resistors, capacitors and inductors to setup differential equations.\n\nKCL & KVL will be used to setup the equations.\nInitial conditions will be used to solve for the constants of integration.\n\nThese differential equations will have general forms with known solutions that can be used to simplify the analsis, and we will leverage numerical solution using SPICE and scipy in your Jupyter notebooks."
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#reminder-iv-relationships-for-reactive-elements",
+    "href": "slides/transient-analysis-slides.html#reminder-iv-relationships-for-reactive-elements",
+    "title": "Transient Analysis",
+    "section": "Reminder: IV Relationships for Reactive Elements",
+    "text": "Reminder: IV Relationships for Reactive Elements\n\nCapacitor\n\n\\[\n\\begin{gather}\ni_C(t) = C \\frac{d v_C(t)}{d t} \\\\\nv_C(t) = v_C(t_0) + \\frac{1}{C} \\int_{t_0}^{t} i_C(t) dt \\\\\n\\end{gather}\n\\]\n\nInductor\n\n\\[\n\\begin{gather}\nv_L(t) = L \\frac{d i_L(t)}{d t} \\\\\ni_L(t) = i_L(t_0) + \\frac{1}{L} \\int_{t_0}^{t} v_L(t) dt \\\\\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#back-to-our-switched-rc-circuit",
+    "href": "slides/transient-analysis-slides.html#back-to-our-switched-rc-circuit",
+    "title": "Transient Analysis",
+    "section": "Back to our Switched RC Circuit",
+    "text": "Back to our Switched RC Circuit\n\nKVL around the loop for \\(t \\geq t_0\\):\n\\[\n\\begin{gather}\n-V_S(t) + v_R(t) + v_C(t) = 0 \\\\\nv_R(t) = i(t) R \\\\\ni(t) = C \\frac{d v_C(t)}{d t} \\\\\nv_R(t) = R C \\frac{d v_C(t)}{d t} \\\\\n-v_S(t) + R C \\frac{d v_C(t)}{d t} + v_C(t) = 0 \\\\\n\\Rightarrow R C \\frac{d v_C(t)}{d t} + v_C(t) = V_S(t)\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#rc-general-form-differential-equation",
+    "href": "slides/transient-analysis-slides.html#rc-general-form-differential-equation",
+    "title": "Transient Analysis",
+    "section": "RC General Form Differential Equation",
+    "text": "RC General Form Differential Equation\nThe general form of the first-order linear differential equation for an RC circuit is:\n\\[\n\\tau \\frac{d v_o(t)}{d t} + v_o(t) = \\kappa\\,v_i(t)\n\\]\n\n\\(\\tau = R C\\) is the time constant of the circuit\n\\(\\kappa\\) is the steady-state gain of the circuit\n\n\\(\\kappa = 1\\) for a passive series RC circuit"
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#rc-general-form-solution",
+    "href": "slides/transient-analysis-slides.html#rc-general-form-solution",
+    "title": "Transient Analysis",
+    "section": "RC General Form Solution",
+    "text": "RC General Form Solution\nThe solution to the general form differential equation for an RC circuit is:\n\\[\nv_o(t) = v_n(t) + v_f(t)\n\\]\n\n\\(v_n(t)\\) is the natural response (homogeneous solution)\n\n\\(\\tau \\frac{d v_n(t)}{d t} + v_n(t) = 0\\)\n“Homogeneous” part of the solution (means the input is zero (circuit is not driven))\nSolution Form: \\(v_n(t) = A e^{-\\frac{t - t_0}{\\tau}}\\)\n\\(A\\) is a constant determined by initial conditions\n\n\\(v_f(t)\\) is the forced response (particular solution)\n\n\\(\\tau \\frac{d v_f(t)}{d t} + v_f(t) = \\kappa\\,v_i(t)\\)\n\\(v_f(t)\\) depends on the form of \\(v_i(t)\\) (how the circuit is driven)"
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#lets-solve-for-the-natural-response",
+    "href": "slides/transient-analysis-slides.html#lets-solve-for-the-natural-response",
+    "title": "Transient Analysis",
+    "section": "Lets solve for the natural response…",
+    "text": "Lets solve for the natural response…\n\\[\n\\begin{gather}\n\\textrm{Remove the forced response:} v_i(t) = 0 \\\\\nR C \\frac{d v_n(t)}{d t} + v_n(t) = 0 \\\\\nv_n(t) = A e^{st} \\textrm{($s$ is a constant)}\\\\\nR C A s e^{st} + A e^{st} = 0 \\\\\n(R C s + 1) A e^{st} = 0 \\\\\n\\end{gather}\n\\]\n\n\\(A e^{st} \\neq 0\\) for all \\(t\\)\nCharacteristic Equation: \\(R C s + 1 = 0 \\Rightarrow s = -\\frac{1}{R C} = -\\frac{1}{\\tau}\\)\nNatural Response: \\(v_n(t) = A e^{-\\frac{t}{\\tau}} = A e^{-\\frac{t - t_0}{\\tau}}\\)\n\\(A\\) is determined by the initial condition \\(v_n(t_0)\\)"
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#now-onto-the-forced-response-solution",
+    "href": "slides/transient-analysis-slides.html#now-onto-the-forced-response-solution",
+    "title": "Transient Analysis",
+    "section": "Now onto the forced response solution…",
+    "text": "Now onto the forced response solution…\nIf \\(v_i(t)\\) is a DC source that is switched on at \\(t = t_0\\):\n\\[\nv_i(t) = V_A u(t - t_0) = \\begin{cases} 0, & t &lt; t_0 \\\\ V_A, & t \\geq t_0 \\end{cases}\n\\]\n\\[\n\\begin{gather}\nR C \\frac{d v_f(t)}{d t} + v_f(t) = V_A \\\\\nv_f(t) = V_A \\textrm{(constant!)} \\\\\n\\frac{d v_f(t)}{d t} = 0 \\\\\nR C (0) + V_A = V_A \\\\\nV_A = V_A \\\\\n\\end{gather}\n\\]"
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#lets-put-our-complete-solution-together",
+    "href": "slides/transient-analysis-slides.html#lets-put-our-complete-solution-together",
+    "title": "Transient Analysis",
+    "section": "Lets put our complete solution together…",
+    "text": "Lets put our complete solution together…\n\\[\n\\begin{gather}\nv_o(t) = v_n(t) + v_f(t) \\\\\nv_o(t) = A e^{-\\frac{t - t_0}{\\tau}} + V_A \\\\\n\\end{gather}\n\\]\n\n\\(A\\) is determined by the initial condition \\(v_o(t_0)\\) (right before the switch is closed).\nSince the capacitor voltage cannot change instantaneously:\n\n\\[\n\\begin{gather}\nv_C(t_0^-) = v_C(t_0^+) \\Rightarrow v_C(t_0) = v_C(t_0^-) \\\\\nA e^{-\\frac{t_0 - t_0}{\\tau}} + V_A = v_C(t_0^-) \\\\\nA = v_C(t_0^-) - V_A \\\\\n\\end{gather}\n\\]\n\n\n\n\n\n\n\nComplete Solution\n\n\n\\[\nv_C(t) = \\left(v_C(t_0^-) - V_A\\right) e^{-\\frac{t - t_0}{\\tau}} + V_A, \\quad t \\geq t_0\n\\]"
   },
   {
     "objectID": "slides/reactive-components-notes.html",
