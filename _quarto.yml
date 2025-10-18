@@ -56,8 +56,8 @@ website:
           text: "Complex Impedance"
         - href: slides/filters.qmd
           text: "Filters"
-        - href: slides/transient_response.qmd
-          text: "Transient Response"
+        - href: slides/transient_analysis.qmd
+          text: "Transient Analysis"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
