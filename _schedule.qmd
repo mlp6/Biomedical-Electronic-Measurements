@@ -6,7 +6,7 @@
 | Capacitors & Inductors <br> DC RC/RL Circuit Analysis | [-> Reactive Components: Capacitors & Inductors](slides/reactive_components.qmd) | [-> Problem Set 04](problem_sets/ps4.qmd) | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |
 | Complex Impedance, AC Signals, Phasors | [-> Sinusoidal Signals](slides/sinusoidal_signals.qmd) <br> [-> Complex Impedance](slides/complex_impedance.qmd) | | [Impedance](labs/impedance.qmd) |
 | AC RLC Circuit Analysis <br> Passive Filters <br> Transfer Functions & Bode Plots (Frequency Domain) | [-> Filters](slides/filters.qmd) | [-> Problem Set 05](problem_sets/ps5.qmd) | [Filters](labs/filters.qmd) |
-| Transient Response (Time Domain) | | | [Transient Response](labs/transient_resp.qmd) |
+| Transient Response (Time Domain) | [-> Transient Response](slides/transient_response.qmd) | | [Transient Response](labs/transient_resp.qmd) |
 | Midterm II (Oct 27, 2025) | | |
 | Operational Amplifiers & Active Filters | | | [Opamps](labs/opamps.qmd) |
 | Transformers & Diodes | | | [Transformers & Diodes](labs/transformers_diodes.qmd )|
