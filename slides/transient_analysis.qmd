@@ -1,6 +1,6 @@
 ---
 title: "Transient Analysis"
-date: "2025-10-15"
+date: "2025-10-20"
 format:
   live-html: 
     output-file: transient-analysis-notes.html
@@ -201,5 +201,3 @@ $$
 v_C(t) = \left(v_C(t_0^-) - V_A\right) e^{-\frac{t - t_0}{\tau}} + V_A, \quad t \geq t_0
 $$
 :::
-
-
