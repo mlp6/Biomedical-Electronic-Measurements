@@ -102,6 +102,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -445,6 +474,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#charging-rc-circuit" id="toc-charging-rc-circuit" class="nav-link active" data-scroll-target="#charging-rc-circuit">Charging RC Circuit</a></li>
+  <li><a href="#charging-rc-circuit-current" id="toc-charging-rc-circuit-current" class="nav-link" data-scroll-target="#charging-rc-circuit-current">Charging RC Circuit (Current)</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -470,14 +500,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="ab899c91" class="cell" data-execution_count="6">
+<div id="ab899c91" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="charging-rc-circuit" class="level2">
 <h2 class="anchored" data-anchor-id="charging-rc-circuit">Charging RC Circuit</h2>
-<div id="f253af46" class="cell" data-execution_count="7">
+<div id="f253af46" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Parameters ---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">1e3</span>       <span class="co"># resistance in ohms</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="fl">100e-6</span>    <span class="co"># capacitance in farads</span></span>
@@ -500,8 +530,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Plot ---</span></span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">5</span>))</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>plt.plot(solution.t, solution.y[<span class="dv">0</span>], <span class="st">'b'</span>, label<span class="op">=</span><span class="st">'Numerical Solution'</span>)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>plt.plot(solution.t, Vc_analytical, <span class="st">'r--'</span>, label<span class="op">=</span><span class="st">'Analytical Solution'</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>plt.plot(solution.t, solution.y[<span class="dv">0</span>], <span class="st">'yx'</span>, label<span class="op">=</span><span class="st">'Numerical Solution'</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>plt.plot(solution.t, Vc_analytical, <span class="st">'c'</span>, label<span class="op">=</span><span class="st">'Analytical Solution'</span>)</span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'RC Circuit: Capacitor Charging Over Time'</span>)</span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Time [s]'</span>)</span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Capacitor Voltage [V]'</span>)</span>
@@ -516,6 +546,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+</section>
+<section id="charging-rc-circuit-current" class="level2">
+<h2 class="anchored" data-anchor-id="charging-rc-circuit-current">Charging RC Circuit (Current)</h2>
+<p>What does the current through <span class="math inline">\(C\)</span> look like during this charging process?</p>
+<p><span class="math display">\[
+i_C(t) = C \frac{dV_C(t)}{dt} = \frac{V_0}{R} e^{-\frac{t}{RC}}\left(v_C(\infty)-v_C(0)\right)
+\]</span></p>
+<div id="616e87c9" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Ic_analytical <span class="op">=</span> (Vs <span class="op">/</span> R) <span class="op">*</span> np.exp(<span class="op">-</span>solution.t <span class="op">/</span> (R <span class="op">*</span> C))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Plot ---</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">5</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(solution.t, solution.y[0], 'b', label='Numerical Solution')</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.plot(solution.t, Ic_analytical, <span class="st">'c'</span>, label<span class="op">=</span><span class="st">'Analytical Solution'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'RC Circuit: Capacitor Charging Over Time'</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Time [s]'</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Capacitor Current [A]'</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="transient_analysis_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Note the discontinuity at time t=0. This is because the capacitor initially behaves like a short circuit, allowing maximum current to flow. As the capacitor charges, the voltage across it increases, reducing the current until it eventually reaches zero when the capacitor is fully charged.</p>
 
 
 </section>
