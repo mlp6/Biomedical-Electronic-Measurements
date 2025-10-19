@@ -3117,5 +3117,12 @@
     "title": "Transient Analysis",
     "section": "Charging RC Circuit (Current)",
     "text": "Charging RC Circuit (Current)\nWhat does the current through \\(C\\) look like during this charging process?\n\\[\ni_C(t) = C \\frac{dV_C(t)}{dt} = \\frac{V_0}{R} e^{-\\frac{t}{RC}}\\left(v_C(\\infty)-v_C(0)\\right)\n\\]\n\nIc_analytical = (Vs / R) * np.exp(-solution.t / (R * C))\n\n# --- Plot ---\nplt.figure(figsize=(8,5))\n# plt.plot(solution.t, solution.y[0], 'b', label='Numerical Solution')\nplt.plot(solution.t, Ic_analytical, 'c', label='Analytical Solution')\nplt.title('RC Circuit: Capacitor Charging Over Time')\nplt.xlabel('Time [s]')\nplt.ylabel('Capacitor Current [A]')\nplt.grid(True)\nplt.legend()\nplt.show()\n\n\n\n\n\n\n\n\nNote the discontinuity at time t=0. This is because the capacitor initially behaves like a short circuit, allowing maximum current to flow. As the capacitor charges, the voltage across it increases, reducing the current until it eventually reaches zero when the capacitor is fully charged."
+  },
+  {
+    "objectID": "notebooks/transient_analysis.html#discharging-rc-circuit",
+    "href": "notebooks/transient_analysis.html#discharging-rc-circuit",
+    "title": "Transient Analysis",
+    "section": "Discharging RC Circuit",
+    "text": "Discharging RC Circuit\nDraw a circuit that allows a capacitor to discharge through a resistor when a switch is moved to position 2 at time t=0.\n\nVc_analytical = Vs * np.exp(-solution.t / (R * C))\n\n# --- Plot ---\nplt.figure(figsize=(8,5))\nplt.plot(solution.t, Vc_analytical, 'c', label='Analytical Solution')\nplt.title('RC Circuit: Capacitor Discharging Over Time')\nplt.xlabel('Time [s]')\nplt.ylabel('Capacitor Voltage [V]')\nplt.grid(True)\nplt.legend()\nplt.show()\n\n\n\n\n\n\n\n\nWhat is \\(V_c(t &lt; 0)\\)?\nWhen the switch is moved to position 2 at time t=0, the capacitor begins to discharge through the resistor. Prior to that, it is at the steady-state voltage from being charge."
   }
 ]
