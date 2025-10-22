@@ -102,7 +102,9 @@ website:
           text: "Problem Set 04"
         - href: problem_sets/ps5.qmd
           text: "Problem Set 05"
-      - section: "Old Exams"
+        - href: problem_sets/BME253_PSET5_SOLUTION.pdf
+          text: "Problem Set 05: Solutions"
+      - section: "Exams"
         contents:
         - href: "exams/BME153_S09_TEST1_SOLUTIONS.pdf"
           text: "Exam 1 (Spring 2009)"
