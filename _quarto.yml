@@ -100,6 +100,8 @@ website:
           text: "Problem Set 03"
         - href: problem_sets/ps4.qmd
           text: "Problem Set 04"
+        - href: problem_sets/ps4_solutions.pdf
+          text: "Problem Set 04: Solutions"
         - href: problem_sets/ps5.qmd
           text: "Problem Set 05"
         - href: problem_sets/BME253_PSET5_SOLUTION.pdf
