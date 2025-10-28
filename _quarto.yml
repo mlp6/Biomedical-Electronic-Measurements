@@ -86,6 +86,8 @@ website:
           text: "XYZ of Oscilloscopes"
         - href: slides/sinusoidal_signals.qmd
           text: "Sinusoidal Signals"
+        - href: "https://connectorbook.com/identification.html?N=&n=lo_prof_w2b_conn&f=tYuE;OA"
+          text: "Connector Identification Utility"
         - href: resources/teaching_assistant_expectations.qmd
           text: "Teaching Assistant Expectations"
       - section: "Problem Sets"
