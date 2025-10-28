@@ -226,11 +226,7 @@ constant? Explain any discrepancy.
 ![LC circuit](images/transient_resp/LC.png){fig-align="center"}
 
 1. Remove the resistor and modify the circuit as shown above. Set the input to
-be a sinusoid at the resonant frequency, and measure the output of the circuit.
+be a sinusoid at the resonant frequency and measure the output of the circuit.
 
-2. Compare the measured output voltage and phase at resonance to the theoretical
-value. Why might these values be different? (Hint: think about source
-impedance.)
-
-3. How can the amplitude of the output voltage exceed the amplitude of the input
+2. Can the amplitude of the output voltage exceed the amplitude of the input
 voltage?
