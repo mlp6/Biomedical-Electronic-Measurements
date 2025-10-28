@@ -1215,6 +1215,83 @@
     ]
   },
   {
+    "objectID": "labs/transient_resp.html",
+    "href": "labs/transient_resp.html",
+    "title": "Transient Response",
+    "section": "",
+    "text": "Time constant for first-order circuits.\nResonant and natural frequencies of an RLC circuit.\nExplore the behavior of an LC resonant circuit.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#objectives",
+    "href": "labs/transient_resp.html#objectives",
+    "title": "Transient Response",
+    "section": "",
+    "text": "Time constant for first-order circuits.\nResonant and natural frequencies of an RLC circuit.\nExplore the behavior of an LC resonant circuit.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#background",
+    "href": "labs/transient_resp.html#background",
+    "title": "Transient Response",
+    "section": "Background",
+    "text": "Background\nA time constant is the amount of time required for an exponential decay (or rise) to reach approximately 63.2% of its final value.\nFor first-order circuits, the time constant, \\(\\tau\\), is \\(RC\\) for RC series circuits, or \\(\\frac{L}{R}\\) for RL series circuits.\nIn addition to RC/RL first-order systems, RLC circuits are second-order systems that are described using additional parameters. The governing equations for any linear second-order system:\n\\[\na_2 \\frac{d^2x(t)}{dt^2} + a_1 \\frac{dx(t)}{dt} + a_0x(t) = b_0f(t)\n\\]\n\\[\n\\frac{1}{\\omega^{2}_{n}} \\frac{d^2x(t)}{dt^2} + \\frac{2\\zeta}{\\omega_n} \\frac{dx(t)}{dt} + x(t) = K_Sf(t)\n\\]\nThe function \\(x(t)\\) is a general, time-varying function that can be used to model any time-varying parameter measured in the system.\nThe following constants can be determined which hold true for all linear, second-order systems:\n\nResonant Frequency (radians/seconds)\n\\[\n\\omega_n = \\sqrt{\\frac{a_0}{a_2}}\n\\]\n\n\nDamping Ratio\n\\[\n\\zeta = \\left(\\frac{a_1}{2} \\right)\\sqrt{\\frac{1}{a_0a_2}}\n\\]\n\n\nStatic Sensitivity\n\\[\nK_S = \\frac{b_0}{a_0}\n\\]\nFor the purposes of this experiment, we are concerned with the following constants and parameters which pertain specifically to series RLC circuits.\n\n\n\n\n\n\nNote\n\n\n\nNote that the resonant frequency is the same for both a series and parallel RLC circuit, but the damping ratio is different. One should always derive the governing differential equations to evaluate these parameters.\n\n\n\n\nResonant Frequency (radians/second)\n\\[\n\\omega_n = \\frac{1}{\\sqrt{LC}}\n\\]\n\n\nDamping Ratio\n\\[\n\\zeta = RC\\frac{\\omega_n}{2} = \\frac{R}{2}\\sqrt{\\frac{C}{L}}\n\\]\n\n\nQuality Factor\n\\[\nQ = \\frac{1}{2\\zeta}\n\\]\n\n\nBandwidth (radians/second)\n\\[\nB = \\frac{\\omega_n}{Q} = \\omega_n 2 \\zeta\n\\]\n\n\nDamped Responses\nThree different types of responses from an RLC circuit are possible depending on the relationship between R, L, and C and can be characterized by a system’s damping ratio:\n\n\n\nResponse Type\nDamping Ratio\n\n\n\n\nUnderdamped or Oscillatory\n\\(\\zeta &lt; 1\\)\n\n\nCritically Damped\n\\(\\zeta = 1\\)\n\n\nOverdamped\n\\(\\zeta &gt; 1\\)\n\n\n\nThe frequency of the oscillation is known as the damped natural frequency and is given by:\n\\[\n\\omega_d = \\omega_n \\sqrt{1 - \\zeta ^2}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nUnlike the previous labs, please prepare a Jupyter notebook and render a final PDF for all of the parts of this lab and submit that PDF to the associated Gradescope assignment.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#the-rc-low-pass-filter",
+    "href": "labs/transient_resp.html#the-rc-low-pass-filter",
+    "title": "Transient Response",
+    "section": "The RC Low Pass Filter",
+    "text": "The RC Low Pass Filter\n\n\n\nRC circuit\n\n\n\nFor the circuit above, calculate the time constant if\n\nR = 100 Ω and C = 100 nF and\nR = 3.3 kΩ and C = 470 nF.\n\nHow does this circuit filter signals at frequencies of 100 Hz, 10 kHz, 100 kHz?\nCreate a KiCad SPICE simulation of the circuit above with R = 1.0 kΩ and C = 220 nF. Apply a 10 \\(V_{pp}\\) square wave at a frequency acceptable for measuring the time constant of the circuit.\n\n\n\n\n\n\n\nNote\n\n\n\nAt an “acceptable frequency”, the top and bottom of the output wave will reach steady state. Remember that after five time constants, a signal will have decayed by over 99%.\n\n\n\nEstimate the time constant for this combination of R and C from your SPICE simulation.\nHow closely does does the measured time constant match the theoretical time constant? Explain any discrepancy.\nDiscuss how the circuit filters signals at different frequencies and the difference between the input and output waveforms for frequencies clearly in the passband and the stopband. Support your discussion with representative waveforms from your SPICE simulation.\nRepeat (a-c) with R = 33 kΩ and C = 470 nF.\n\n\nCreate a modified KiCad SPICE simulation using a sinusoidal input, and generate plots of input and output waveforms at 1 kHz, 10 kHz, and 20 kHz for each set of R and C, with each input/output pair on the same axes.\n\n\n\n\n\n\n\nNote\n\n\n\nThis will yield six separate graphs. Note the relationship between the circuit’s frequency response and its time constant.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#the-rl-high-pass-filter",
+    "href": "labs/transient_resp.html#the-rl-high-pass-filter",
+    "title": "Transient Response",
+    "section": "The RL High Pass Filter",
+    "text": "The RL High Pass Filter\n\n\n\nRL circuit\n\n\n\nFor the circuit above, find the time constant if R = 10 kΩ and L = 47 mH.\nHow does this circuit filter signals at 100 Hz, 10 kHz, 100 kHz?\nCreate a KiCad SPICE simulation for the circuit above with R = 10 kΩ and L = 10 mH. Apply a 10 \\(V_{pp}\\) square wave at a frequency appropriate for measuring the time constant of the circuit.\n\n\nEstimate the time constant for this combination of R and L from your SPICE simulation.\nHow closely does the measured time constant match the theoretical time constant? Explain any discrepancy.\nDiscuss how the circuit filters signals at different frequencies and the difference between the input and output waveforms for frequencies clearly in the passband and the stopband. Support your discussion with representative waveforms from your SPICE simulation.\n\n\nCreate a modified KiCad SPICE simulation for sinusoidal inputs at 1 kHz and 10 kHz and show the resultant output signals.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#the-series-rlc-circuit",
+    "href": "labs/transient_resp.html#the-series-rlc-circuit",
+    "title": "Transient Response",
+    "section": "The Series RLC circuit",
+    "text": "The Series RLC circuit\n\n\n\nRLC circuit\n\n\n\nFor the circuit above, if R = 330 Ω, C = 22 nF and L = 10 mH, what is:\n\nthe resonant frequency,\nthe damping constant, and\nthe quality factor if ?\nIs the circuit damped or underdamped?\nFind the value of R that will give a critically damped response.\n\nSimulate the circuit with a 2 \\(V_{pp}\\) sinusoidal wave.\n\nSweep the input frequency to find the resonant frequency and capture this response.\nSwitch the input to a square wave and determine the damped natural frequency. Compare the measured damped natural frequency to its theoretical value. Compare the damped natural frequency to the resonant frequency.\nLeave the input a square wave. Replace the 330 Ω resistor with one that gives a critically-damped response. (Hint - you might do with by sweeping a component value.) Show the simulation output capturing the input and output waveforms for this critically-damped response for this optimized resistor value.\nReplace the resistor in your simulation with one that gives an over-damped response. Record the resistor value used and generate a simulation output image showing the input and output waveforms.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#the-lc-circuit",
+    "href": "labs/transient_resp.html#the-lc-circuit",
+    "title": "Transient Response",
+    "section": "The LC Circuit",
+    "text": "The LC Circuit\n\n\n\nLC circuit\n\n\n\nRemove the resistor and modify the circuit as shown above. Set the input to be a sinusoid at the resonant frequency, and measure the output of the circuit.\nCompare the measured output voltage and phase at resonance to the theoretical value. Why might these values be different? (Hint: think about source impedance.)\nHow can the amplitude of the output voltage exceed the amplitude of the input voltage?",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
     "objectID": "course-syllabus.html",
     "href": "course-syllabus.html",
     "title": "Biomedical Electronic Measurements",

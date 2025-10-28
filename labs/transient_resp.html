@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Duke BME">
-<meta name="dcterms.date" content="2025-10-01">
+<meta name="author" content="Duke Biomedical Engineering">
+<meta name="dcterms.date" content="2025-10-29">
 
 <title>Transient Response – Biomedical Electronic Measurements</title>
 <style>
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -422,8 +451,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a>
+  <ul class="collapse">
+  <li><a href="#resonant-frequency-radiansseconds" id="toc-resonant-frequency-radiansseconds" class="nav-link" data-scroll-target="#resonant-frequency-radiansseconds">Resonant Frequency (radians/seconds)</a></li>
+  <li><a href="#damping-ratio" id="toc-damping-ratio" class="nav-link" data-scroll-target="#damping-ratio">Damping Ratio</a></li>
+  <li><a href="#static-sensitivity" id="toc-static-sensitivity" class="nav-link" data-scroll-target="#static-sensitivity">Static Sensitivity</a></li>
+  <li><a href="#resonant-frequency-radianssecond" id="toc-resonant-frequency-radianssecond" class="nav-link" data-scroll-target="#resonant-frequency-radianssecond">Resonant Frequency (radians/second)</a></li>
+  <li><a href="#damping-ratio-1" id="toc-damping-ratio-1" class="nav-link" data-scroll-target="#damping-ratio-1">Damping Ratio</a></li>
+  <li><a href="#quality-factor" id="toc-quality-factor" class="nav-link" data-scroll-target="#quality-factor">Quality Factor</a></li>
+  <li><a href="#bandwidth-radianssecond" id="toc-bandwidth-radianssecond" class="nav-link" data-scroll-target="#bandwidth-radianssecond">Bandwidth (radians/second)</a></li>
+  <li><a href="#damped-responses" id="toc-damped-responses" class="nav-link" data-scroll-target="#damped-responses">Damped Responses</a></li>
+  </ul></li>
+  <li><a href="#the-rc-low-pass-filter" id="toc-the-rc-low-pass-filter" class="nav-link" data-scroll-target="#the-rc-low-pass-filter">The RC Low Pass Filter</a></li>
+  <li><a href="#the-rl-high-pass-filter" id="toc-the-rl-high-pass-filter" class="nav-link" data-scroll-target="#the-rl-high-pass-filter">The RL High Pass Filter</a></li>
+  <li><a href="#the-series-rlc-circuit" id="toc-the-series-rlc-circuit" class="nav-link" data-scroll-target="#the-series-rlc-circuit">The Series RLC circuit</a></li>
+  <li><a href="#the-lc-circuit" id="toc-the-lc-circuit" class="nav-link" data-scroll-target="#the-lc-circuit">The LC Circuit</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="transient_resp.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -444,14 +494,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Duke BME </p>
+             <p>Duke Biomedical Engineering </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2025</p>
+      <p class="date">October 29, 2025</p>
     </div>
   </div>
   
@@ -463,10 +513,244 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_transient_hout.pdf" width="100%" height="800px" style="border:none;">
-</iframe>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<ul>
+<li><p>Time constant for first-order circuits.</p></li>
+<li><p>Resonant and natural frequencies of an RLC circuit.</p></li>
+<li><p>Explore the behavior of an LC resonant circuit.</p></li>
+</ul>
+</section>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>A time constant is the amount of time required for an exponential decay (or rise) to reach approximately 63.2% of its final value.</p>
+<p>For first-order circuits, the time constant, <span class="math inline">\(\tau\)</span>, is <span class="math inline">\(RC\)</span> for RC series circuits, or <span class="math inline">\(\frac{L}{R}\)</span> for RL series circuits.</p>
+<p>In addition to RC/RL first-order systems, RLC circuits are second-order systems that are described using additional parameters. The governing equations for any linear second-order system:</p>
+<p><span class="math display">\[
+a_2 \frac{d^2x(t)}{dt^2} + a_1 \frac{dx(t)}{dt} + a_0x(t) = b_0f(t)
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{\omega^{2}_{n}} \frac{d^2x(t)}{dt^2} + \frac{2\zeta}{\omega_n} \frac{dx(t)}{dt} + x(t) = K_Sf(t)
+\]</span></p>
+<p>The function <span class="math inline">\(x(t)\)</span> is a general, time-varying function that can be used to model any time-varying parameter measured in the system.</p>
+<p>The following constants can be determined which hold true for all linear, second-order systems:</p>
+<section id="resonant-frequency-radiansseconds" class="level3">
+<h3 class="anchored" data-anchor-id="resonant-frequency-radiansseconds">Resonant Frequency (radians/seconds)</h3>
+<p><span class="math display">\[
+\omega_n = \sqrt{\frac{a_0}{a_2}}
+\]</span></p>
+</section>
+<section id="damping-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="damping-ratio">Damping Ratio</h3>
+<p><span class="math display">\[
+\zeta = \left(\frac{a_1}{2} \right)\sqrt{\frac{1}{a_0a_2}}
+\]</span></p>
+</section>
+<section id="static-sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="static-sensitivity">Static Sensitivity</h3>
+<p><span class="math display">\[
+K_S = \frac{b_0}{a_0}
+\]</span></p>
+<p>For the purposes of this experiment, we are concerned with the following constants and parameters which pertain specifically to series RLC circuits.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that the resonant frequency is the same for both a series and parallel RLC circuit, but the damping ratio is different. One should always derive the governing differential equations to evaluate these parameters.</p>
+</div>
+</div>
+</section>
+<section id="resonant-frequency-radianssecond" class="level3">
+<h3 class="anchored" data-anchor-id="resonant-frequency-radianssecond">Resonant Frequency (radians/second)</h3>
+<p><span class="math display">\[
+\omega_n = \frac{1}{\sqrt{LC}}
+\]</span></p>
+</section>
+<section id="damping-ratio-1" class="level3">
+<h3 class="anchored" data-anchor-id="damping-ratio-1">Damping Ratio</h3>
+<p><span class="math display">\[
+\zeta = RC\frac{\omega_n}{2} = \frac{R}{2}\sqrt{\frac{C}{L}}
+\]</span></p>
+</section>
+<section id="quality-factor" class="level3">
+<h3 class="anchored" data-anchor-id="quality-factor">Quality Factor</h3>
+<p><span class="math display">\[
+Q = \frac{1}{2\zeta}
+\]</span></p>
+</section>
+<section id="bandwidth-radianssecond" class="level3">
+<h3 class="anchored" data-anchor-id="bandwidth-radianssecond">Bandwidth (radians/second)</h3>
+<p><span class="math display">\[
+B = \frac{\omega_n}{Q} = \omega_n 2 \zeta
+\]</span></p>
+</section>
+<section id="damped-responses" class="level3">
+<h3 class="anchored" data-anchor-id="damped-responses">Damped Responses</h3>
+<p>Three different types of responses from an RLC circuit are possible depending on the relationship between R, L, and C and can be characterized by a system’s damping ratio:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Response Type</th>
+<th>Damping Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Underdamped or Oscillatory</td>
+<td><span class="math inline">\(\zeta &lt; 1\)</span></td>
+</tr>
+<tr class="even">
+<td>Critically Damped</td>
+<td><span class="math inline">\(\zeta = 1\)</span></td>
+</tr>
+<tr class="odd">
+<td>Overdamped</td>
+<td><span class="math inline">\(\zeta &gt; 1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The frequency of the oscillation is known as the <strong>damped natural frequency</strong> and is given by:</p>
+<p><span class="math display">\[
+\omega_d = \omega_n \sqrt{1 - \zeta ^2}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Unlike the previous labs, please prepare a Jupyter notebook and render a final PDF for all of the parts of this lab and submit that PDF to the associated Gradescope assignment.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="the-rc-low-pass-filter" class="level2">
+<h2 class="anchored" data-anchor-id="the-rc-low-pass-filter">The RC Low Pass Filter</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/transient_resp/RC.png" class="img-fluid figure-img"></p>
+<figcaption>RC circuit</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li><p>For the circuit above, calculate the time constant if</p>
+<ol type="a">
+<li>R = 100 Ω and C = 100 nF and</li>
+<li>R = 3.3 kΩ and C = 470 nF.</li>
+</ol></li>
+<li><p>How does this circuit filter signals at frequencies of 100 Hz, 10 kHz, 100 kHz?</p></li>
+<li><p>Create a KiCad SPICE simulation of the circuit above with R = 1.0 kΩ and C = 220 nF. Apply a 10 <span class="math inline">\(V_{pp}\)</span> square wave at a frequency acceptable for measuring the time constant of the circuit.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At an “acceptable frequency”, the top and bottom of the output wave will reach steady state. Remember that after five time constants, a signal will have decayed by over 99%.</p>
+</div>
+</div>
+<ol type="a">
+<li><p>Estimate the time constant for this combination of R and C from your SPICE simulation.</p></li>
+<li><p>How closely does does the measured time constant match the theoretical time constant? Explain any discrepancy.</p></li>
+<li><p>Discuss how the circuit filters signals at different frequencies and the difference between the input and output waveforms for frequencies clearly in the passband and the stopband. Support your discussion with representative waveforms from your SPICE simulation.</p></li>
+<li><p>Repeat (a-c) with R = 33 kΩ and C = 470 nF.</p></li>
+</ol>
+<ol start="4" type="1">
+<li>Create a modified KiCad SPICE simulation using a sinusoidal input, and generate plots of input and output waveforms at 1 kHz, 10 kHz, and 20 kHz for each set of R and C, with each input/output pair on the same axes.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This will yield six separate graphs. Note the relationship between the circuit’s frequency response and its time constant.</p>
+</div>
+</div>
+</section>
+<section id="the-rl-high-pass-filter" class="level2">
+<h2 class="anchored" data-anchor-id="the-rl-high-pass-filter">The RL High Pass Filter</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/transient_resp/RL.png" class="img-fluid figure-img"></p>
+<figcaption>RL circuit</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li><p>For the circuit above, find the time constant if R = 10 kΩ and L = 47 mH.</p></li>
+<li><p>How does this circuit filter signals at 100 Hz, 10 kHz, 100 kHz?</p></li>
+<li><p>Create a KiCad SPICE simulation for the circuit above with R = 10 kΩ and L = 10 mH. Apply a 10 <span class="math inline">\(V_{pp}\)</span> square wave at a frequency appropriate for measuring the time constant of the circuit.</p></li>
+</ol>
+<ol type="a">
+<li><p>Estimate the time constant for this combination of R and L from your SPICE simulation.</p></li>
+<li><p>How closely does the measured time constant match the theoretical time constant? Explain any discrepancy.</p></li>
+<li><p>Discuss how the circuit filters signals at different frequencies and the difference between the input and output waveforms for frequencies clearly in the passband and the stopband. Support your discussion with representative waveforms from your SPICE simulation.</p></li>
+</ol>
+<ol start="4" type="1">
+<li>Create a modified KiCad SPICE simulation for sinusoidal inputs at 1 kHz and 10 kHz and show the resultant output signals.</li>
+</ol>
+</section>
+<section id="the-series-rlc-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="the-series-rlc-circuit">The Series RLC circuit</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/transient_resp/RLC.png" class="img-fluid figure-img"></p>
+<figcaption>RLC circuit</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li><p>For the circuit above, if R = 330 Ω, C = 22 nF and L = 10 mH, what is:</p>
+<ol type="a">
+<li><p>the resonant frequency,</p></li>
+<li><p>the damping constant, and</p></li>
+<li><p>the quality factor if ?</p></li>
+<li><p>Is the circuit damped or underdamped?</p></li>
+<li><p>Find the value of R that will give a critically damped response.</p></li>
+</ol></li>
+<li><p>Simulate the circuit with a 2 <span class="math inline">\(V_{pp}\)</span> sinusoidal wave.</p>
+<ol type="a">
+<li><p>Sweep the input frequency to find the resonant frequency and capture this response.</p></li>
+<li><p>Switch the input to a square wave and determine the damped natural frequency. Compare the measured damped natural frequency to its theoretical value. Compare the damped natural frequency to the resonant frequency.</p></li>
+<li><p>Leave the input a square wave. Replace the 330 Ω resistor with one that gives a critically-damped response. (Hint - you might do with by sweeping a component value.) Show the simulation output capturing the input and output waveforms for this critically-damped response for this optimized resistor value.</p></li>
+<li><p>Replace the resistor in your simulation with one that gives an over-damped response. Record the resistor value used and generate a simulation output image showing the input and output waveforms.</p></li>
+</ol></li>
+</ol>
+</section>
+<section id="the-lc-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="the-lc-circuit">The LC Circuit</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/transient_resp/LC.png" class="img-fluid figure-img"></p>
+<figcaption>LC circuit</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li><p>Remove the resistor and modify the circuit as shown above. Set the input to be a sinusoid at the resonant frequency, and measure the output of the circuit.</p></li>
+<li><p>Compare the measured output voltage and phase at resonance to the theoretical value. Why might these values be different? (Hint: think about source impedance.)</p></li>
+<li><p>How can the amplitude of the output voltage exceed the amplitude of the input voltage?</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -873,4 +1157,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
