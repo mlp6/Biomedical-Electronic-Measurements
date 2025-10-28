@@ -1285,7 +1285,7 @@
     "href": "labs/transient_resp.html#the-lc-circuit",
     "title": "Transient Response",
     "section": "The LC Circuit",
-    "text": "The LC Circuit\n\n\n\nLC circuit\n\n\n\nRemove the resistor and modify the circuit as shown above. Set the input to be a sinusoid at the resonant frequency, and measure the output of the circuit.\nCompare the measured output voltage and phase at resonance to the theoretical value. Why might these values be different? (Hint: think about source impedance.)\nHow can the amplitude of the output voltage exceed the amplitude of the input voltage?",
+    "text": "The LC Circuit\n\n\n\nLC circuit\n\n\n\nRemove the resistor and modify the circuit as shown above. Set the input to be a sinusoid at the resonant frequency and measure the output of the circuit.\nCan the amplitude of the output voltage exceed the amplitude of the input voltage?",
     "crumbs": [
       "Labs",
       "Transient Response"
