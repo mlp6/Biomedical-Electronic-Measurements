@@ -18,7 +18,7 @@ circuit behavior, as many applications involve non-sinusoidal waveforms.
 ## Learning Objectives
 
 - Understand how voltage and current change over time in response to switched DC
-sources in first-order, passive reactive circuits.
+sources in first-order and second-order, passive reactive circuits.
 
 - Evaluate transient response, analytically, using differential equations and
 initial conditions.
@@ -203,5 +203,119 @@ $$
 :::
 
 ## Numerical Solution
+
+[Transient Analysis Jupyter Notebook](../notebooks/transient_analysis.ipynb){.btn .btn-primary}
+
+## Piecewise Linear (PWL) Sources 
+
+In-class demo.  Take home points:
+
+1. Identify initial and steady-state conditions.
+2. Apply knowledge of the natural solution (exponential decay) between switching events.
+3. Apply forced response based on the new input after each switching event.
+
+## KiCad SPICE Simulation with Pulse Source
+
+[Pulse-Source Simulation](../kicad/RC_Switched/)
+
+<!-- NOT INCLUDED: Switched Sinusoidal Source -->
+
+## Second-Order Circuits
+
+- RLC circuits are second-order circuits because their governing differential
+equations are second-order.
+
+- Second-order differential equations have the general form:
+
+$$
+a_2 \frac{d^2x(t)}{dt^2} + a_1 \frac{dx(t)}{dt} + a_0x(t) = b_0f(t)
+$$  
+
+- How do we derive this...
+
+## Switched RLC Circuit
+
+![](images/second_order_RLC.png){fig-align="center"}
+
+Apply KVL around the loop for $t \geq 0$:
+
+$$
+\begin{gather}
+V_S - v_C(t) - v_L(t) - v_R(t) = 0 \\
+v_R(t) = i(t) R \\
+v_C(t) = \frac{1}{C} \int_{0}^{t} + v_C(0)\\
+i(t) = C \frac{d v_C(t)}{d t} \\
+v_L(t) = L \frac{d i(t)}{d t} \\
+\end{gather}
+$$
+
+This yields:
+
+$$
+V_S(t) = i(t) R + L \frac{d i(t)}{d t} + \frac{1}{C} \int_{0}^{t} i(t) dt + v_C(0) \\
+$$
+
+But this is a mess to work with, so lets represent $i(t)$ in terms of $v_C(t)$:
+
+$$
+\begin{gather}
+v_R = i(t) R = R C \frac{d v_C(t)}{d t} \\
+v_L = L \frac{d i(t)}{d t} = L \frac{d}{d t} \left( C \frac{d v_C(t)}{d t} \right) = L C \frac{d^2 v_C(t)}{d t^2} \\
+\end{gather}
+$$
+
+So we now have a second-order differential equation in terms of $v_C(t)$:
+
+$$
+V_S(t) = L C \frac{d^2 v_C(t)}{d t^2} + R C \frac{d v_C(t)}{d t} + v_C(t)
+$$
+
+## How do we solve this second-order differential equation?
+
+- We now need **two** initial conditions to solve this second-order differential equation.
+
+    - $v_C(0)$: initial voltage across the capacitor
+
+    - $i(0)$: initial current through the inductor
+
+$$
+i_L(0) = i_C(0) = C \frac{d v_C(0)}{d t} \\
+$$
+
+### General Solution Form 
+
+$$
+a_2 \frac{d^2v(t)}{dt^2} + a_1 \frac{dv(t)}{dt} + a_0v(t) = b_0f(t)
+$$
+
+The coefficients for the terms above have "physical" meaning to how our circuit response:
+
+$$
+\frac{1}{\omega^{2}_{n}} \frac{d^2v(t)}{dt^2} + \frac{2\zeta}{\omega_n} \frac{dv(t)}{dt} + v(t) = K_Sf(t)
+$$
+
+| Parameter | Meaning |
+|-----------|---------|
+| $\omega_n$ | Natural/Resonant Frequency (radians/second) |
+| $\zeta$ | Damping Ratio (unitless) |
+| $K_S$ | Static Sensitivity ("DC" Gain, unitless) |   
+
+### Natural/Resonant Frequency
+
+- $\omega_n$ determines how fast the circuit responds to changes in the input.
+
+- $\omega_n = \frac{1}{\sqrt{L C}}$ for a series RLC circuit.
+
+### Damping Ratio
+
+$\zeta = \frac{R}{2} \sqrt{\frac{C}{L}}$ for a series RLC circuit.
+
+### DC Gain
+
+- Independent of time
+
+- Represents the steady-state gain of the circuit
+
+### What do these solutions look like?
 
 [Transient Analysis Jupyter Notebook](../notebooks/transient_analysis.ipynb){.btn .btn-primary}
