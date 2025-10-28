@@ -494,6 +494,11 @@ window.Quarto = {
   <li><a href="#charging-rc-circuit" id="toc-charging-rc-circuit" class="nav-link active" data-scroll-target="#charging-rc-circuit">Charging RC Circuit</a></li>
   <li><a href="#charging-rc-circuit-current" id="toc-charging-rc-circuit-current" class="nav-link" data-scroll-target="#charging-rc-circuit-current">Charging RC Circuit (Current)</a></li>
   <li><a href="#discharging-rc-circuit" id="toc-discharging-rc-circuit" class="nav-link" data-scroll-target="#discharging-rc-circuit">Discharging RC Circuit</a></li>
+  <li><a href="#secord-order-rlc-transient-response" id="toc-secord-order-rlc-transient-response" class="nav-link" data-scroll-target="#secord-order-rlc-transient-response">Secord-Order (RLC) Transient Response</a>
+  <ul class="collapse">
+  <li><a href="#how-to-interpret-this-response" id="toc-how-to-interpret-this-response" class="nav-link" data-scroll-target="#how-to-interpret-this-response">How to interpret this response</a></li>
+  <li><a href="#physical-analogy-car-suspension-system" id="toc-physical-analogy-car-suspension-system" class="nav-link" data-scroll-target="#physical-analogy-car-suspension-system">Physical Analogy: Car Suspension System</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -620,8 +625,119 @@ i_C(t) = C \frac{dV_C(t)}{dt} = \frac{V_0}{R} e^{-\frac{t}{RC}}\left(v_C(\infty)
 </div>
 <p>What is <span class="math inline">\(V_c(t &lt; 0)\)</span>?</p>
 <p>When the switch is moved to position 2 at time t=0, the capacitor begins to discharge through the resistor. Prior to that, it is at the steady-state voltage from being charge.</p>
+</section>
+<section id="secord-order-rlc-transient-response" class="level2">
+<h2 class="anchored" data-anchor-id="secord-order-rlc-transient-response">Secord-Order (RLC) Transient Response</h2>
+<p><span class="math inline">\(\frac{1}{\omega^{2}_{n}} \frac{d^2v(t)}{dt^2} + \frac{2\zeta}{\omega_n} \frac{dv(t)}{dt} + v(t) = K_Sf(t)\)</span></p>
+<p>Where: - <span class="math inline">\(\omega_n = \frac{1}{\sqrt{LC}}\)</span> is the undamped natural frequency (rad/s) - <span class="math inline">\(\zeta = \frac{R}{2} \sqrt{\frac{C}{L}}\)</span> is the damping ratio (unitless) - <span class="math inline">\(K_S = \frac{1}{L}\)</span> is the system gain (1/Ohms)</p>
+<div id="3c0457d5" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Parameters ---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>omega_n <span class="op">=</span> <span class="fl">1.0</span>    <span class="co"># undamped natural frequency (rad/s)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>zeta <span class="op">=</span> <span class="fl">0.2</span>       <span class="co"># damping ratio (underdamped)</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>K_S <span class="op">=</span> <span class="fl">1.0</span>        <span class="co"># system gain</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># For this example, let's use a step input: f(t) = 1 for t &gt;= 0</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The differential equation becomes:</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># (1/omega_n^2) * d2v/dt2 + (2*zeta/omega_n) * dv/dt + v = K_S</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to state-space form: let x1 = v, x2 = dv/dt</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># dx1/dt = x2</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># dx2/dt = omega_n^2 * (K_S - x1 - (2*zeta/omega_n)*x2)</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rlc_system(t, x):</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> x[<span class="dv">0</span>]      <span class="co"># voltage</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    dvdt <span class="op">=</span> x[<span class="dv">1</span>]   <span class="co"># first derivative</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Second derivative from the differential equation</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    d2vdt2 <span class="op">=</span> omega_n<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> (K_S <span class="op">-</span> v <span class="op">-</span> (<span class="dv">2</span><span class="op">*</span>zeta<span class="op">/</span>omega_n)<span class="op">*</span>dvdt)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [dvdt, d2vdt2]</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Initial conditions ---</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>v0 <span class="op">=</span> <span class="dv">0</span>       <span class="co"># initial voltage</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>dvdt0 <span class="op">=</span> <span class="dv">0</span>    <span class="co"># initial rate of change</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Time span ---</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>t_span <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">20</span>)  <span class="co"># simulate for 20 seconds (about 3-4 periods for this omega_n)</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>t_eval <span class="op">=</span> np.linspace(<span class="op">*</span>t_span, <span class="dv">1000</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Solve the ODE ---</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>solution <span class="op">=</span> solve_ivp(rlc_system, t_span, [v0, dvdt0], t_eval<span class="op">=</span>t_eval, method<span class="op">=</span><span class="st">'RK45'</span>)</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Calculate analytical solution for underdamped case ---</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>omega_d <span class="op">=</span> omega_n <span class="op">*</span> np.sqrt(<span class="dv">1</span> <span class="op">-</span> zeta<span class="op">**</span><span class="dv">2</span>)  <span class="co"># damped natural frequency</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> K_S</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> (zeta <span class="op">*</span> omega_n) <span class="op">/</span> omega_d</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>v_analytical <span class="op">=</span> A <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> np.exp(<span class="op">-</span>zeta <span class="op">*</span> omega_n <span class="op">*</span> solution.t) <span class="op">*</span> </span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>                    (np.cos(omega_d <span class="op">*</span> solution.t) <span class="op">+</span> B <span class="op">*</span> np.sin(omega_d <span class="op">*</span> solution.t)))</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Plot ---</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>plt.plot(solution.t, solution.y[<span class="dv">0</span>], <span class="st">'b-'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Numerical Solution'</span>)</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>plt.plot(solution.t, v_analytical, <span class="st">'r--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="st">'Analytical Solution'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span>K_S, color<span class="op">=</span><span class="st">'g'</span>, linestyle<span class="op">=</span><span class="st">':'</span>, label<span class="op">=</span><span class="ss">f'Steady State = </span><span class="sc">{</span>K_S<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="vs">rf'Second-Order RLC Transient Response</span><span class="ch">\n</span><span class="kw">(</span><span class="dv">$</span><span class="er">\</span><span class="vs">omega_n</span><span class="dv">$</span><span class="vs"> = </span><span class="sc">{</span>omega_n<span class="sc">}</span><span class="vs">, </span><span class="dv">$</span><span class="er">\</span><span class="vs">zeta</span><span class="dv">$</span><span class="vs"> = </span><span class="sc">{</span>zeta<span class="sc">}</span><span class="vs">, </span><span class="dv">$</span><span class="vs">K_S</span><span class="dv">$</span><span class="vs"> = </span><span class="sc">{</span>K_S<span class="sc">}</span><span class="kw">)</span><span class="vs">'</span>)</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Time [s]'</span>)</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Voltage v(t)'</span>)</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Print damped frequency and period</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Damped natural frequency: ω_d = </span><span class="sc">{</span>omega_d<span class="sc">:.3f}</span><span class="ss"> rad/s"</span>)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Damped period: T_d = </span><span class="sc">{</span><span class="dv">2</span><span class="op">*</span>np<span class="sc">.</span>pi<span class="op">/</span>omega_d<span class="sc">:.3f}</span><span class="ss"> s"</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Overshoot: </span><span class="sc">{</span>(np.<span class="bu">max</span>(solution.y[<span class="dv">0</span>]) <span class="op">-</span> K_S)<span class="op">/</span>K_S <span class="op">*</span> <span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="transient_analysis_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Damped natural frequency: ω_d = 0.980 rad/s
+Damped period: T_d = 6.413 s
+Overshoot: 52.6%</code></pre>
+</div>
+</div>
+<section id="how-to-interpret-this-response" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-interpret-this-response">How to interpret this response</h3>
+<ul>
+<li>The natural frequency <span class="math inline">\(\omega_n\)</span> indicates how quickly the system oscillates in the absence of damping.</li>
+<li><span class="math inline">\(K_S\)</span> indicates the steady-state gain of the system in response to a step input.</li>
+<li>The damping ratio <span class="math inline">\(\zeta\)</span> determines the nature of the transient response:
+<ul>
+<li>If <span class="math inline">\(\zeta &lt; 1\)</span>, the system is underdamped and will exhibit oscillatory behavior before settling to the steady-state value.</li>
+<li>If <span class="math inline">\(\zeta = 1\)</span>, the system is critically damped and will return to steady-state as quickly as possible without oscillating.</li>
+<li>If <span class="math inline">\(\zeta &gt; 1\)</span>, the system is overdamped and will return to steady-state slowly without oscillating.</li>
+</ul></li>
+<li><span class="math inline">\(\zeta\)</span> affects the speed of response and the amount of overshoot in the transient response, and it can be modulated by changing the resistance <span class="math inline">\(R\)</span> in the circuit.</li>
+</ul>
+</section>
+<section id="physical-analogy-car-suspension-system" class="level3">
+<h3 class="anchored" data-anchor-id="physical-analogy-car-suspension-system">Physical Analogy: Car Suspension System</h3>
+<ul>
+<li><span class="math inline">\(\omega_n\)</span> represents how quickly the car can respond to bumps in the road.
+<ul>
+<li>A higher <span class="math inline">\(\omega_n\)</span> means the car can react quickly.</li>
+<li>A lower <span class="math inline">\(\omega_n\)</span> means a slower response.</li>
+</ul></li>
+<li><span class="math inline">\(\zeta\)</span> represents the damping effect of the shock absorbers.
+<ul>
+<li>A higher <span class="math inline">\(\zeta\)</span> means the car will settle down quickly after a bump.</li>
+<li>A lower <span class="math inline">\(\zeta\)</span> means it will oscillate more before settling.</li>
+</ul></li>
+<li><span class="math inline">\(K_S\)</span> represents how much the car’s body moves in response to a bump.
+<ul>
+<li>A higher <span class="math inline">\(K_S\)</span> means more movement.</li>
+<li>A lower <span class="math inline">\(K_S\)</span> means less movement.</li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
