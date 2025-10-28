@@ -2675,7 +2675,7 @@
     "href": "slides/transient-analysis-slides.html#learning-objectives",
     "title": "Transient Analysis",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nUnderstand how voltage and current change over time in response to switched DC sources in first-order, passive reactive circuits.\nEvaluate transient response, analytically, using differential equations and initial conditions.\nNumerically simulate transient response using SPICE."
+    "text": "Learning Objectives\n\nUnderstand how voltage and current change over time in response to switched DC sources in first-order and second-order, passive reactive circuits.\nEvaluate transient response, analytically, using differential equations and initial conditions.\nNumerically simulate transient response using SPICE."
   },
   {
     "objectID": "slides/transient-analysis-slides.html#switched-rc-circuit",
@@ -2755,6 +2755,41 @@
     "text": "Numerical Solution\nTransient Analysis Jupyter Notebook"
   },
   {
+    "objectID": "slides/transient-analysis-slides.html#piecewise-linear-pwl-sources",
+    "href": "slides/transient-analysis-slides.html#piecewise-linear-pwl-sources",
+    "title": "Transient Analysis",
+    "section": "Piecewise Linear (PWL) Sources",
+    "text": "Piecewise Linear (PWL) Sources\nIn-class demo. Take home points:\n\nIdentify initial and steady-state conditions.\nApply knowledge of the natural solution (exponential decay) between switching events.\nApply forced response based on the new input after each switching event."
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#kicad-spice-simulation-with-pulse-source",
+    "href": "slides/transient-analysis-slides.html#kicad-spice-simulation-with-pulse-source",
+    "title": "Transient Analysis",
+    "section": "KiCad SPICE Simulation with Pulse Source",
+    "text": "KiCad SPICE Simulation with Pulse Source\nPulse-Source Simulation"
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#second-order-circuits",
+    "href": "slides/transient-analysis-slides.html#second-order-circuits",
+    "title": "Transient Analysis",
+    "section": "Second-Order Circuits",
+    "text": "Second-Order Circuits\n\nRLC circuits are second-order circuits because their governing differential equations are second-order.\nSecond-order differential equations have the general form:\n\n\\[\na_2 \\frac{d^2x(t)}{dt^2} + a_1 \\frac{dx(t)}{dt} + a_0x(t) = b_0f(t)\n\\]\n\nHow do we derive this…"
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#switched-rlc-circuit",
+    "href": "slides/transient-analysis-slides.html#switched-rlc-circuit",
+    "title": "Transient Analysis",
+    "section": "Switched RLC Circuit",
+    "text": "Switched RLC Circuit\n\nApply KVL around the loop for \\(t \\geq 0\\):\n\\[\n\\begin{gather}\nV_S - v_C(t) - v_L(t) - v_R(t) = 0 \\\\\nv_R(t) = i(t) R \\\\\nv_C(t) = \\frac{1}{C} \\int_{0}^{t} + v_C(0)\\\\\ni(t) = C \\frac{d v_C(t)}{d t} \\\\\nv_L(t) = L \\frac{d i(t)}{d t} \\\\\n\\end{gather}\n\\]\nThis yields:\n\\[\nV_S(t) = i(t) R + L \\frac{d i(t)}{d t} + \\frac{1}{C} \\int_{0}^{t} i(t) dt + v_C(0) \\\\\n\\]\nBut this is a mess to work with, so lets represent \\(i(t)\\) in terms of \\(v_C(t)\\):\n\\[\n\\begin{gather}\nv_R = i(t) R = R C \\frac{d v_C(t)}{d t} \\\\\nv_L = L \\frac{d i(t)}{d t} = L \\frac{d}{d t} \\left( C \\frac{d v_C(t)}{d t} \\right) = L C \\frac{d^2 v_C(t)}{d t^2} \\\\\n\\end{gather}\n\\]\nSo we now have a second-order differential equation in terms of \\(v_C(t)\\):\n\\[\nV_S(t) = L C \\frac{d^2 v_C(t)}{d t^2} + R C \\frac{d v_C(t)}{d t} + v_C(t)\n\\]"
+  },
+  {
+    "objectID": "slides/transient-analysis-slides.html#how-do-we-solve-this-second-order-differential-equation",
+    "href": "slides/transient-analysis-slides.html#how-do-we-solve-this-second-order-differential-equation",
+    "title": "Transient Analysis",
+    "section": "How do we solve this second-order differential equation?",
+    "text": "How do we solve this second-order differential equation?\n\nWe now need two initial conditions to solve this second-order differential equation.\n\n\\(v_C(0)\\): initial voltage across the capacitor\n\\(i(0)\\): initial current through the inductor\n\n\n\\[\ni_L(0) = i_C(0) = C \\frac{d v_C(0)}{d t} \\\\\n\\]"
+  },
+  {
     "objectID": "slides/transient-analysis-notes.html",
     "href": "slides/transient-analysis-notes.html",
     "title": "Transient Analysis",
@@ -2781,7 +2816,7 @@
     "href": "slides/transient-analysis-notes.html#learning-objectives",
     "title": "Transient Analysis",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nUnderstand how voltage and current change over time in response to switched DC sources in first-order, passive reactive circuits.\nEvaluate transient response, analytically, using differential equations and initial conditions.\nNumerically simulate transient response using SPICE.",
+    "text": "Learning Objectives\n\nUnderstand how voltage and current change over time in response to switched DC sources in first-order and second-order, passive reactive circuits.\nEvaluate transient response, analytically, using differential equations and initial conditions.\nNumerically simulate transient response using SPICE.",
     "crumbs": [
       "Learning Modules",
       "Transient Analysis"
@@ -2903,6 +2938,61 @@
     "title": "Transient Analysis",
     "section": "Numerical Solution",
     "text": "Numerical Solution\nTransient Analysis Jupyter Notebook",
+    "crumbs": [
+      "Learning Modules",
+      "Transient Analysis"
+    ]
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#piecewise-linear-pwl-sources",
+    "href": "slides/transient-analysis-notes.html#piecewise-linear-pwl-sources",
+    "title": "Transient Analysis",
+    "section": "Piecewise Linear (PWL) Sources",
+    "text": "Piecewise Linear (PWL) Sources\nIn-class demo. Take home points:\n\nIdentify initial and steady-state conditions.\nApply knowledge of the natural solution (exponential decay) between switching events.\nApply forced response based on the new input after each switching event.",
+    "crumbs": [
+      "Learning Modules",
+      "Transient Analysis"
+    ]
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#kicad-spice-simulation-with-pulse-source",
+    "href": "slides/transient-analysis-notes.html#kicad-spice-simulation-with-pulse-source",
+    "title": "Transient Analysis",
+    "section": "KiCad SPICE Simulation with Pulse Source",
+    "text": "KiCad SPICE Simulation with Pulse Source\nPulse-Source Simulation",
+    "crumbs": [
+      "Learning Modules",
+      "Transient Analysis"
+    ]
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#second-order-circuits",
+    "href": "slides/transient-analysis-notes.html#second-order-circuits",
+    "title": "Transient Analysis",
+    "section": "Second-Order Circuits",
+    "text": "Second-Order Circuits\n\nRLC circuits are second-order circuits because their governing differential equations are second-order.\nSecond-order differential equations have the general form:\n\n\\[\na_2 \\frac{d^2x(t)}{dt^2} + a_1 \\frac{dx(t)}{dt} + a_0x(t) = b_0f(t)\n\\]\n\nHow do we derive this…",
+    "crumbs": [
+      "Learning Modules",
+      "Transient Analysis"
+    ]
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#switched-rlc-circuit",
+    "href": "slides/transient-analysis-notes.html#switched-rlc-circuit",
+    "title": "Transient Analysis",
+    "section": "Switched RLC Circuit",
+    "text": "Switched RLC Circuit\n\n\n\n\n\nApply KVL around the loop for \\(t \\geq 0\\):\n\\[\n\\begin{gather}\nV_S - v_C(t) - v_L(t) - v_R(t) = 0 \\\\\nv_R(t) = i(t) R \\\\\nv_C(t) = \\frac{1}{C} \\int_{0}^{t} + v_C(0)\\\\\ni(t) = C \\frac{d v_C(t)}{d t} \\\\\nv_L(t) = L \\frac{d i(t)}{d t} \\\\\n\\end{gather}\n\\]\nThis yields:\n\\[\nV_S(t) = i(t) R + L \\frac{d i(t)}{d t} + \\frac{1}{C} \\int_{0}^{t} i(t) dt + v_C(0) \\\\\n\\]\nBut this is a mess to work with, so lets represent \\(i(t)\\) in terms of \\(v_C(t)\\):\n\\[\n\\begin{gather}\nv_R = i(t) R = R C \\frac{d v_C(t)}{d t} \\\\\nv_L = L \\frac{d i(t)}{d t} = L \\frac{d}{d t} \\left( C \\frac{d v_C(t)}{d t} \\right) = L C \\frac{d^2 v_C(t)}{d t^2} \\\\\n\\end{gather}\n\\]\nSo we now have a second-order differential equation in terms of \\(v_C(t)\\):\n\\[\nV_S(t) = L C \\frac{d^2 v_C(t)}{d t^2} + R C \\frac{d v_C(t)}{d t} + v_C(t)\n\\]",
+    "crumbs": [
+      "Learning Modules",
+      "Transient Analysis"
+    ]
+  },
+  {
+    "objectID": "slides/transient-analysis-notes.html#how-do-we-solve-this-second-order-differential-equation",
+    "href": "slides/transient-analysis-notes.html#how-do-we-solve-this-second-order-differential-equation",
+    "title": "Transient Analysis",
+    "section": "How do we solve this second-order differential equation?",
+    "text": "How do we solve this second-order differential equation?\n\nWe now need two initial conditions to solve this second-order differential equation.\n\n\\(v_C(0)\\): initial voltage across the capacitor\n\\(i(0)\\): initial current through the inductor\n\n\n\\[\ni_L(0) = i_C(0) = C \\frac{d v_C(0)}{d t} \\\\\n\\]\n\nGeneral Solution Form\n\\[\na_2 \\frac{d^2v(t)}{dt^2} + a_1 \\frac{dv(t)}{dt} + a_0v(t) = b_0f(t)\n\\]\nThe coefficients for the terms above have “physical” meaning to how our circuit response:\n\\[\n\\frac{1}{\\omega^{2}_{n}} \\frac{d^2v(t)}{dt^2} + \\frac{2\\zeta}{\\omega_n} \\frac{dv(t)}{dt} + v(t) = K_Sf(t)\n\\]\n\n\n\nParameter\nMeaning\n\n\n\n\n\\(\\omega_n\\)\nNatural/Resonant Frequency (radians/second)\n\n\n\\(\\zeta\\)\nDamping Ratio (unitless)\n\n\n\\(K_S\\)\nStatic Sensitivity (“DC” Gain, unitless)\n\n\n\n\n\nNatural/Resonant Frequency\n\n\\(\\omega_n\\) determines how fast the circuit responds to changes in the input.\n\\(\\omega_n = \\frac{1}{\\sqrt{L C}}\\) for a series RLC circuit.\n\n\n\nDamping Ratio\n\\(\\zeta = \\frac{R}{2} \\sqrt{\\frac{C}{L}}\\) for a series RLC circuit.\n\n\nDC Gain\n\nIndependent of time\nRepresents the steady-state gain of the circuit\n\n\n\nWhat do these solutions look like?\nTransient Analysis Jupyter Notebook",
     "crumbs": [
       "Learning Modules",
       "Transient Analysis"

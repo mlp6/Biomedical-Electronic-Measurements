@@ -473,6 +473,18 @@ window.Quarto = {
   <li><a href="#now-onto-the-forced-response-solution" id="toc-now-onto-the-forced-response-solution" class="nav-link" data-scroll-target="#now-onto-the-forced-response-solution">Now onto the forced response solution…</a></li>
   <li><a href="#lets-put-our-complete-solution-together" id="toc-lets-put-our-complete-solution-together" class="nav-link" data-scroll-target="#lets-put-our-complete-solution-together">Lets put our complete solution together…</a></li>
   <li><a href="#numerical-solution" id="toc-numerical-solution" class="nav-link" data-scroll-target="#numerical-solution">Numerical Solution</a></li>
+  <li><a href="#piecewise-linear-pwl-sources" id="toc-piecewise-linear-pwl-sources" class="nav-link" data-scroll-target="#piecewise-linear-pwl-sources">Piecewise Linear (PWL) Sources</a></li>
+  <li><a href="#kicad-spice-simulation-with-pulse-source" id="toc-kicad-spice-simulation-with-pulse-source" class="nav-link" data-scroll-target="#kicad-spice-simulation-with-pulse-source">KiCad SPICE Simulation with Pulse Source</a></li>
+  <li><a href="#second-order-circuits" id="toc-second-order-circuits" class="nav-link" data-scroll-target="#second-order-circuits">Second-Order Circuits</a></li>
+  <li><a href="#switched-rlc-circuit" id="toc-switched-rlc-circuit" class="nav-link" data-scroll-target="#switched-rlc-circuit">Switched RLC Circuit</a></li>
+  <li><a href="#how-do-we-solve-this-second-order-differential-equation" id="toc-how-do-we-solve-this-second-order-differential-equation" class="nav-link" data-scroll-target="#how-do-we-solve-this-second-order-differential-equation">How do we solve this second-order differential equation?</a>
+  <ul class="collapse">
+  <li><a href="#general-solution-form" id="toc-general-solution-form" class="nav-link" data-scroll-target="#general-solution-form">General Solution Form</a></li>
+  <li><a href="#naturalresonant-frequency" id="toc-naturalresonant-frequency" class="nav-link" data-scroll-target="#naturalresonant-frequency">Natural/Resonant Frequency</a></li>
+  <li><a href="#damping-ratio" id="toc-damping-ratio" class="nav-link" data-scroll-target="#damping-ratio">Damping Ratio</a></li>
+  <li><a href="#dc-gain" id="toc-dc-gain" class="nav-link" data-scroll-target="#dc-gain">DC Gain</a></li>
+  <li><a href="#what-do-these-solutions-look-like" id="toc-what-do-these-solutions-look-like" class="nav-link" data-scroll-target="#what-do-these-solutions-look-like">What do these solutions look like?</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="transient-analysis-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -525,7 +537,7 @@ window.Quarto = {
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <ul>
-<li><p>Understand how voltage and current change over time in response to switched DC sources in first-order, passive reactive circuits.</p></li>
+<li><p>Understand how voltage and current change over time in response to switched DC sources in first-order and second-order, passive reactive circuits.</p></li>
 <li><p>Evaluate transient response, analytically, using differential equations and initial conditions.</p></li>
 <li><p>Numerically simulate transient response using SPICE.</p></li>
 </ul>
@@ -718,6 +730,132 @@ v_C(t) = \left(v_C(t_0^-) - V_A\right) e^{-\frac{t - t_0}{\tau}} + V_A, \quad t 
 <section id="numerical-solution" class="level2">
 <h2 class="anchored" data-anchor-id="numerical-solution">Numerical Solution</h2>
 <p><a href="../notebooks/transient_analysis.html" class="btn btn-primary">Transient Analysis Jupyter Notebook</a></p>
+</section>
+<section id="piecewise-linear-pwl-sources" class="level2">
+<h2 class="anchored" data-anchor-id="piecewise-linear-pwl-sources">Piecewise Linear (PWL) Sources</h2>
+<p>In-class demo. Take home points:</p>
+<ol type="1">
+<li>Identify initial and steady-state conditions.</li>
+<li>Apply knowledge of the natural solution (exponential decay) between switching events.</li>
+<li>Apply forced response based on the new input after each switching event.</li>
+</ol>
+</section>
+<section id="kicad-spice-simulation-with-pulse-source" class="level2">
+<h2 class="anchored" data-anchor-id="kicad-spice-simulation-with-pulse-source">KiCad SPICE Simulation with Pulse Source</h2>
+<p><a href="../kicad/RC_Switched/">Pulse-Source Simulation</a></p>
+<!-- NOT INCLUDED: Switched Sinusoidal Source -->
+</section>
+<section id="second-order-circuits" class="level2">
+<h2 class="anchored" data-anchor-id="second-order-circuits">Second-Order Circuits</h2>
+<ul>
+<li><p>RLC circuits are second-order circuits because their governing differential equations are second-order.</p></li>
+<li><p>Second-order differential equations have the general form:</p></li>
+</ul>
+<p><span class="math display">\[
+a_2 \frac{d^2x(t)}{dt^2} + a_1 \frac{dx(t)}{dt} + a_0x(t) = b_0f(t)
+\]</span></p>
+<ul>
+<li>How do we derive this…</li>
+</ul>
+</section>
+<section id="switched-rlc-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="switched-rlc-circuit">Switched RLC Circuit</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/second_order_RLC.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Apply KVL around the loop for <span class="math inline">\(t \geq 0\)</span>:</p>
+<p><span class="math display">\[
+\begin{gather}
+V_S - v_C(t) - v_L(t) - v_R(t) = 0 \\
+v_R(t) = i(t) R \\
+v_C(t) = \frac{1}{C} \int_{0}^{t} + v_C(0)\\
+i(t) = C \frac{d v_C(t)}{d t} \\
+v_L(t) = L \frac{d i(t)}{d t} \\
+\end{gather}
+\]</span></p>
+<p>This yields:</p>
+<p><span class="math display">\[
+V_S(t) = i(t) R + L \frac{d i(t)}{d t} + \frac{1}{C} \int_{0}^{t} i(t) dt + v_C(0) \\
+\]</span></p>
+<p>But this is a mess to work with, so lets represent <span class="math inline">\(i(t)\)</span> in terms of <span class="math inline">\(v_C(t)\)</span>:</p>
+<p><span class="math display">\[
+\begin{gather}
+v_R = i(t) R = R C \frac{d v_C(t)}{d t} \\
+v_L = L \frac{d i(t)}{d t} = L \frac{d}{d t} \left( C \frac{d v_C(t)}{d t} \right) = L C \frac{d^2 v_C(t)}{d t^2} \\
+\end{gather}
+\]</span></p>
+<p>So we now have a second-order differential equation in terms of <span class="math inline">\(v_C(t)\)</span>:</p>
+<p><span class="math display">\[
+V_S(t) = L C \frac{d^2 v_C(t)}{d t^2} + R C \frac{d v_C(t)}{d t} + v_C(t)
+\]</span></p>
+</section>
+<section id="how-do-we-solve-this-second-order-differential-equation" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-solve-this-second-order-differential-equation">How do we solve this second-order differential equation?</h2>
+<ul>
+<li><p>We now need <strong>two</strong> initial conditions to solve this second-order differential equation.</p>
+<ul>
+<li><p><span class="math inline">\(v_C(0)\)</span>: initial voltage across the capacitor</p></li>
+<li><p><span class="math inline">\(i(0)\)</span>: initial current through the inductor</p></li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+i_L(0) = i_C(0) = C \frac{d v_C(0)}{d t} \\
+\]</span></p>
+<section id="general-solution-form" class="level3">
+<h3 class="anchored" data-anchor-id="general-solution-form">General Solution Form</h3>
+<p><span class="math display">\[
+a_2 \frac{d^2v(t)}{dt^2} + a_1 \frac{dv(t)}{dt} + a_0v(t) = b_0f(t)
+\]</span></p>
+<p>The coefficients for the terms above have “physical” meaning to how our circuit response:</p>
+<p><span class="math display">\[
+\frac{1}{\omega^{2}_{n}} \frac{d^2v(t)}{dt^2} + \frac{2\zeta}{\omega_n} \frac{dv(t)}{dt} + v(t) = K_Sf(t)
+\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\omega_n\)</span></td>
+<td>Natural/Resonant Frequency (radians/second)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\zeta\)</span></td>
+<td>Damping Ratio (unitless)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(K_S\)</span></td>
+<td>Static Sensitivity (“DC” Gain, unitless)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="naturalresonant-frequency" class="level3">
+<h3 class="anchored" data-anchor-id="naturalresonant-frequency">Natural/Resonant Frequency</h3>
+<ul>
+<li><p><span class="math inline">\(\omega_n\)</span> determines how fast the circuit responds to changes in the input.</p></li>
+<li><p><span class="math inline">\(\omega_n = \frac{1}{\sqrt{L C}}\)</span> for a series RLC circuit.</p></li>
+</ul>
+</section>
+<section id="damping-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="damping-ratio">Damping Ratio</h3>
+<p><span class="math inline">\(\zeta = \frac{R}{2} \sqrt{\frac{C}{L}}\)</span> for a series RLC circuit.</p>
+</section>
+<section id="dc-gain" class="level3">
+<h3 class="anchored" data-anchor-id="dc-gain">DC Gain</h3>
+<ul>
+<li><p>Independent of time</p></li>
+<li><p>Represents the steady-state gain of the circuit</p></li>
+</ul>
+</section>
+<section id="what-do-these-solutions-look-like" class="level3">
+<h3 class="anchored" data-anchor-id="what-do-these-solutions-look-like">What do these solutions look like?</h3>
+<p><a href="../notebooks/transient_analysis.html" class="btn btn-primary">Transient Analysis Jupyter Notebook</a></p>
 
 
 <script type="ojs-module-contents">
@@ -734,6 +872,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+</section>
 </section>
 
 </main> <!-- /main -->
