@@ -319,3 +319,37 @@ $\zeta = \frac{R}{2} \sqrt{\frac{C}{L}}$ for a series RLC circuit.
 ### What do these solutions look like?
 
 [Transient Analysis Jupyter Notebook](../notebooks/transient_analysis.ipynb){.btn .btn-primary}
+
+### Underdamped Solution ($\zeta < 1$)
+
+$$
+\begin{gather}
+v_C(t) = K e^{-\zeta \omega_n t} \cos(\omega_d t - \phi) \\
+\omega_d = \omega_n \sqrt{1 - \zeta^2}
+\end{gather}
+$$
+
+### Critically Damped Solution ($\zeta = 1$)
+
+$$
+\begin{gather}
+v_C(t) = (A + B t) e^{-\omega_n t} \\
+\end{gather}
+$$
+
+### Overdamped Solution ($\zeta > 1$)
+
+$$
+\begin{gather}
+v_C(t) = A e^{s_1 t} + B e^{s_2 t} \\
+s_{1,2} = -\zeta \omega_n \pm \omega_n \sqrt{\zeta^2 - 1} \\
+\end{gather}
+$$
+
+### Total Response
+
+Sum of **steady-state** response and **transient** response (where the transient response is governed by one of the three cases above).
+
+$$
+v_C(t) = v_{steady-state}(t) + v_{transient}(t)
+$$  
