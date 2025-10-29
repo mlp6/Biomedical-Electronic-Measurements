@@ -483,6 +483,39 @@ a_2 \frac{d^2v(t)}{dt^2} + a_1 \frac{dv(t)}{dt} + a_0v(t) = b_0f(t)
 <section id="what-do-these-solutions-look-like" class="slide level3">
 <h3>What do these solutions look like?</h3>
 <p><a href="../notebooks/transient_analysis.html" class="btn btn-primary">Transient Analysis Jupyter Notebook</a></p>
+</section>
+<section id="underdamped-solution-zeta-1" class="slide level3">
+<h3>Underdamped Solution (<span class="math inline">\(\zeta &lt; 1\)</span>)</h3>
+<p><span class="math display">\[
+\begin{gather}
+v_C(t) = K e^{-\zeta \omega_n t} \cos(\omega_d t - \phi) \\
+\omega_d = \omega_n \sqrt{1 - \zeta^2}
+\end{gather}
+\]</span></p>
+</section>
+<section id="critically-damped-solution-zeta-1" class="slide level3">
+<h3>Critically Damped Solution (<span class="math inline">\(\zeta = 1\)</span>)</h3>
+<p><span class="math display">\[
+\begin{gather}
+v_C(t) = (A + B t) e^{-\omega_n t} \\
+\end{gather}
+\]</span></p>
+</section>
+<section id="overdamped-solution-zeta-1" class="slide level3">
+<h3>Overdamped Solution (<span class="math inline">\(\zeta &gt; 1\)</span>)</h3>
+<p><span class="math display">\[
+\begin{gather}
+v_C(t) = A e^{s_1 t} + B e^{s_2 t} \\
+s_{1,2} = -\zeta \omega_n \pm \omega_n \sqrt{\zeta^2 - 1} \\
+\end{gather}
+\]</span></p>
+</section>
+<section id="total-response" class="slide level3">
+<h3>Total Response</h3>
+<p>Sum of <strong>steady-state</strong> response and <strong>transient</strong> response (where the transient response is governed by one of the three cases above).</p>
+<p><span class="math display">\[
+v_C(t) = v_{steady-state}(t) + v_{transient}(t)
+\]</span></p>
 
 
 <script type="ojs-module-contents">

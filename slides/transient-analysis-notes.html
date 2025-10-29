@@ -484,6 +484,10 @@ window.Quarto = {
   <li><a href="#damping-ratio" id="toc-damping-ratio" class="nav-link" data-scroll-target="#damping-ratio">Damping Ratio</a></li>
   <li><a href="#dc-gain" id="toc-dc-gain" class="nav-link" data-scroll-target="#dc-gain">DC Gain</a></li>
   <li><a href="#what-do-these-solutions-look-like" id="toc-what-do-these-solutions-look-like" class="nav-link" data-scroll-target="#what-do-these-solutions-look-like">What do these solutions look like?</a></li>
+  <li><a href="#underdamped-solution-zeta-1" id="toc-underdamped-solution-zeta-1" class="nav-link" data-scroll-target="#underdamped-solution-zeta-1">Underdamped Solution (<span class="math inline">\(\zeta &lt; 1\)</span>)</a></li>
+  <li><a href="#critically-damped-solution-zeta-1" id="toc-critically-damped-solution-zeta-1" class="nav-link" data-scroll-target="#critically-damped-solution-zeta-1">Critically Damped Solution (<span class="math inline">\(\zeta = 1\)</span>)</a></li>
+  <li><a href="#overdamped-solution-zeta-1" id="toc-overdamped-solution-zeta-1" class="nav-link" data-scroll-target="#overdamped-solution-zeta-1">Overdamped Solution (<span class="math inline">\(\zeta &gt; 1\)</span>)</a></li>
+  <li><a href="#total-response" id="toc-total-response" class="nav-link" data-scroll-target="#total-response">Total Response</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="transient-analysis-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
@@ -856,6 +860,39 @@ a_2 \frac{d^2v(t)}{dt^2} + a_1 \frac{dv(t)}{dt} + a_0v(t) = b_0f(t)
 <section id="what-do-these-solutions-look-like" class="level3">
 <h3 class="anchored" data-anchor-id="what-do-these-solutions-look-like">What do these solutions look like?</h3>
 <p><a href="../notebooks/transient_analysis.html" class="btn btn-primary">Transient Analysis Jupyter Notebook</a></p>
+</section>
+<section id="underdamped-solution-zeta-1" class="level3">
+<h3 class="anchored" data-anchor-id="underdamped-solution-zeta-1">Underdamped Solution (<span class="math inline">\(\zeta &lt; 1\)</span>)</h3>
+<p><span class="math display">\[
+\begin{gather}
+v_C(t) = K e^{-\zeta \omega_n t} \cos(\omega_d t - \phi) \\
+\omega_d = \omega_n \sqrt{1 - \zeta^2}
+\end{gather}
+\]</span></p>
+</section>
+<section id="critically-damped-solution-zeta-1" class="level3">
+<h3 class="anchored" data-anchor-id="critically-damped-solution-zeta-1">Critically Damped Solution (<span class="math inline">\(\zeta = 1\)</span>)</h3>
+<p><span class="math display">\[
+\begin{gather}
+v_C(t) = (A + B t) e^{-\omega_n t} \\
+\end{gather}
+\]</span></p>
+</section>
+<section id="overdamped-solution-zeta-1" class="level3">
+<h3 class="anchored" data-anchor-id="overdamped-solution-zeta-1">Overdamped Solution (<span class="math inline">\(\zeta &gt; 1\)</span>)</h3>
+<p><span class="math display">\[
+\begin{gather}
+v_C(t) = A e^{s_1 t} + B e^{s_2 t} \\
+s_{1,2} = -\zeta \omega_n \pm \omega_n \sqrt{\zeta^2 - 1} \\
+\end{gather}
+\]</span></p>
+</section>
+<section id="total-response" class="level3">
+<h3 class="anchored" data-anchor-id="total-response">Total Response</h3>
+<p>Sum of <strong>steady-state</strong> response and <strong>transient</strong> response (where the transient response is governed by one of the three cases above).</p>
+<p><span class="math display">\[
+v_C(t) = v_{steady-state}(t) + v_{transient}(t)
+\]</span></p>
 
 
 <script type="ojs-module-contents">
