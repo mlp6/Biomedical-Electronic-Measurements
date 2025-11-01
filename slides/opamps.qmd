@@ -122,7 +122,7 @@ $$
     \end{gather}
     $$
 
-  - Gain is controlled by the ratio of resistors.
+  - Gain is controlled by the ratio of resistors (until saturation).
 
   - The negative sign indicates a 180-degree phase shift between input and output.
 
@@ -149,6 +149,6 @@ $$
     \end{gather}
     $$
 
-  - Gain is controlled by the ratio of resistors plus one.
+  - Gain is controlled by the ratio of resistors plus one (until saturation).
 
   - The output is in phase with the input.
