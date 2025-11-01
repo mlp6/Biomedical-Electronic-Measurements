@@ -8,8 +8,8 @@
 | AC RLC Circuit Analysis <br> Passive Filters <br> Transfer Functions & Bode Plots (Frequency Domain) | [-> Filters](slides/filters.qmd) | [-> Problem Set 05](problem_sets/ps5.qmd) | [Filters](labs/filters.qmd) |
 | Midterm II (Oct 27, 2025) | | |
 | Transient Analysis (Time Domain) | [-> Transient Analysis](slides/transient_analysis.qmd) | | [Transient Response](labs/transient_resp.qmd) |
-| Operational Amplifiers & Active Filters | | | [Opamps](labs/opamps.qmd) |
-| Transformers & Diodes | | | [Transformers & Diodes](labs/transformers_diodes.qmd )|
+| Operational Amplifiers & Active Filters | [-> Operational Amplifiers (Op-Amps)](slides/opamps.qmd) | | Coming Soon |
+| Transformers & Diodes | | | Coming Soon |
 | Midterm III (Dec 03, 2025) | | |
-| Wheatstone Bridge | | | [Wheatstone Bridge: Temperature Measurement](labs/wheatstone_temperature.qmd) |
+| Wheatstone Bridge | | | Coming Soon |
 | Final Lab Practical (Dec 10, 2025) | | |

@@ -58,6 +58,8 @@ website:
           text: "Filters"
         - href: slides/transient_analysis.qmd
           text: "Transient Analysis"
+        - href: slides/opamps.qmd
+          text: "Operational Amplifiers (Op-Amps)"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
