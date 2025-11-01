@@ -472,7 +472,10 @@ window.Quarto = {
   <li><a href="#voltage-saturation" id="toc-voltage-saturation" class="nav-link" data-scroll-target="#voltage-saturation">Voltage Saturation</a></li>
   <li><a href="#buffer-voltage-follower" id="toc-buffer-voltage-follower" class="nav-link" data-scroll-target="#buffer-voltage-follower">Buffer / Voltage Follower</a></li>
   <li><a href="#negative-feedback" id="toc-negative-feedback" class="nav-link" data-scroll-target="#negative-feedback">Negative Feedback</a></li>
+  <li><a href="#buffer-operation" id="toc-buffer-operation" class="nav-link" data-scroll-target="#buffer-operation">Buffer Operation</a></li>
   <li><a href="#op-amp-chip-pinout" id="toc-op-amp-chip-pinout" class="nav-link" data-scroll-target="#op-amp-chip-pinout">Op-Amp Chip Pinout</a></li>
+  <li><a href="#inverting-amplifier" id="toc-inverting-amplifier" class="nav-link" data-scroll-target="#inverting-amplifier">Inverting Amplifier</a></li>
+  <li><a href="#non-inverting-amplifier" id="toc-non-inverting-amplifier" class="nav-link" data-scroll-target="#non-inverting-amplifier">Non-Inverting Amplifier</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="opamps-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -606,6 +609,14 @@ v_+ = v_-
 </div>
 </div>
 </section>
+<section id="buffer-operation" class="level2">
+<h2 class="anchored" data-anchor-id="buffer-operation">Buffer Operation</h2>
+<ul>
+<li><p><span class="math inline">\(V_-\)</span> is connected to <span class="math inline">\(V_{out}\)</span>, so the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
+<li><p><span class="math inline">\(V_{out} = V_{in}\)</span>.</p></li>
+<li><p><span class="math inline">\(I_{in} = 0\)</span> (ideal op-amp input current).</p></li>
+</ul>
+</section>
 <section id="op-amp-chip-pinout" class="level2">
 <h2 class="anchored" data-anchor-id="op-amp-chip-pinout">Op-Amp Chip Pinout</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -613,6 +624,58 @@ v_+ = v_-
 <p><img src="images/opamp_chip_pinout.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
+</section>
+<section id="inverting-amplifier" class="level2">
+<h2 class="anchored" data-anchor-id="inverting-amplifier">Inverting Amplifier</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/inverting_amp.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
+<li><p>Since <span class="math inline">\(V_+ = 0V\)</span> (grounded), <span class="math inline">\(V_- = 0V\)</span>.</p></li>
+<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
+<ul>
+<li><p><span class="math inline">\(I_{in} = \frac{V_{in} - V_-}{R_{in}} = \frac{V_{in}}{R_{in}}\)</span></p></li>
+<li><p><span class="math inline">\(I_{f} = \frac{V_- - V_{out}}{R_f} = \frac{-V_{out}}{R_f}\)</span></p></li>
+<li><p>Since <span class="math inline">\(I_{in} = I_{f}\)</span> (no current into op-amp input):</p>
+<p><span class="math display">\[
+\begin{gather}
+\frac{V_{in}}{R_{in}} = \frac{-V_{out}}{R_f} \\
+\frac{V_{out}}{V_{in}} = -\frac{R_f}{R_{in}}
+\end{gather}
+\]</span></p></li>
+<li><p>Gain is controlled by the ratio of resistors.</p></li>
+<li><p>The negative sign indicates a 180-degree phase shift between input and output.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="non-inverting-amplifier" class="level2">
+<h2 class="anchored" data-anchor-id="non-inverting-amplifier">Non-Inverting Amplifier</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/noninverting_amp.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
+<li><p>Since <span class="math inline">\(V_+ = V_{in}\)</span>, <span class="math inline">\(V_- = V_{in}\)</span>.</p></li>
+<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
+<ul>
+<li><p><span class="math inline">\(I_{f} = \frac{V_- - V_{out}}{R_f} = \frac{V_{in} - V_{out}}{R_f}\)</span></p></li>
+<li><p><span class="math inline">\(I_{g} = \frac{V_{-} - 0V}{R_g} = \frac{V_{in}}{R_g}\)</span></p></li>
+<li><p>Since <span class="math inline">\(I_{f} = I_{g}\)</span> (no current into op-amp input):</p>
+<p><span class="math display">\[
+\begin{gather}
+\frac{V_{in} - V_{out}}{R_f} = \frac{V_{in}}{R_g} \\
+\frac{V_{out}}{V_{in}} = 1 + \frac{R_f}{R_g}
+\end{gather}
+\]</span></p></li>
+<li><p>Gain is controlled by the ratio of resistors plus one.</p></li>
+<li><p>The output is in phase with the input.</p></li>
+</ul></li>
+</ul>
 
 
 <script type="ojs-module-contents">

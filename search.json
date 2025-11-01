@@ -730,11 +730,44 @@
     ]
   },
   {
+    "objectID": "slides/opamps-notes.html#buffer-operation",
+    "href": "slides/opamps-notes.html#buffer-operation",
+    "title": "Operational Amplifiers (Op-Amps)",
+    "section": "Buffer Operation",
+    "text": "Buffer Operation\n\n\\(V_-\\) is connected to \\(V_{out}\\), so the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\n\\(V_{out} = V_{in}\\).\n\\(I_{in} = 0\\) (ideal op-amp input current).",
+    "crumbs": [
+      "Learning Modules",
+      "Operational Amplifiers (Op-Amps)"
+    ]
+  },
+  {
     "objectID": "slides/opamps-notes.html#op-amp-chip-pinout",
     "href": "slides/opamps-notes.html#op-amp-chip-pinout",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Op-Amp Chip Pinout",
     "text": "Op-Amp Chip Pinout",
+    "crumbs": [
+      "Learning Modules",
+      "Operational Amplifiers (Op-Amps)"
+    ]
+  },
+  {
+    "objectID": "slides/opamps-notes.html#inverting-amplifier",
+    "href": "slides/opamps-notes.html#inverting-amplifier",
+    "title": "Operational Amplifiers (Op-Amps)",
+    "section": "Inverting Amplifier",
+    "text": "Inverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{in} = \\frac{V_{in} - V_-}{R_{in}} = \\frac{V_{in}}{R_{in}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{in} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in}}{R_{in}} = \\frac{-V_{out}}{R_f} \\\\\n\\frac{V_{out}}{V_{in}} = -\\frac{R_f}{R_{in}}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors.\nThe negative sign indicates a 180-degree phase shift between input and output.",
+    "crumbs": [
+      "Learning Modules",
+      "Operational Amplifiers (Op-Amps)"
+    ]
+  },
+  {
+    "objectID": "slides/opamps-notes.html#non-inverting-amplifier",
+    "href": "slides/opamps-notes.html#non-inverting-amplifier",
+    "title": "Operational Amplifiers (Op-Amps)",
+    "section": "Non-Inverting Amplifier",
+    "text": "Non-Inverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = V_{in}\\), \\(V_- = V_{in}\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{V_{in} - V_{out}}{R_f}\\)\n\\(I_{g} = \\frac{V_{-} - 0V}{R_g} = \\frac{V_{in}}{R_g}\\)\nSince \\(I_{f} = I_{g}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in} - V_{out}}{R_f} = \\frac{V_{in}}{R_g} \\\\\n\\frac{V_{out}}{V_{in}} = 1 + \\frac{R_f}{R_g}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors plus one.\nThe output is in phase with the input.",
     "crumbs": [
       "Learning Modules",
       "Operational Amplifiers (Op-Amps)"
@@ -783,11 +816,32 @@
     "text": "Negative Feedback\n\nNegative feedback occurs when a portion of the output signal is fed back to the inverting input of the op-amp.\nThis configuration stabilizes the gain and improves linearity.\nIt can also reduce distortion and increase bandwidth.\n\n\n\n\n\n\n\nImportant\n\n\nNegative feedback means that the op-amp will adjust its output to minimize the difference between the inverting and non-inverting inputs.\n\\[\nv_+ = v_-\n\\]"
   },
   {
+    "objectID": "slides/opamps-slides.html#buffer-operation",
+    "href": "slides/opamps-slides.html#buffer-operation",
+    "title": "Operational Amplifiers (Op-Amps)",
+    "section": "Buffer Operation",
+    "text": "Buffer Operation\n\n\\(V_-\\) is connected to \\(V_{out}\\), so the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\n\\(V_{out} = V_{in}\\).\n\\(I_{in} = 0\\) (ideal op-amp input current)."
+  },
+  {
     "objectID": "slides/opamps-slides.html#op-amp-chip-pinout",
     "href": "slides/opamps-slides.html#op-amp-chip-pinout",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Op-Amp Chip Pinout",
     "text": "Op-Amp Chip Pinout"
+  },
+  {
+    "objectID": "slides/opamps-slides.html#inverting-amplifier",
+    "href": "slides/opamps-slides.html#inverting-amplifier",
+    "title": "Operational Amplifiers (Op-Amps)",
+    "section": "Inverting Amplifier",
+    "text": "Inverting Amplifier\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{in} = \\frac{V_{in} - V_-}{R_{in}} = \\frac{V_{in}}{R_{in}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{in} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in}}{R_{in}} = \\frac{-V_{out}}{R_f} \\\\\n\\frac{V_{out}}{V_{in}} = -\\frac{R_f}{R_{in}}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors.\nThe negative sign indicates a 180-degree phase shift between input and output."
+  },
+  {
+    "objectID": "slides/opamps-slides.html#non-inverting-amplifier",
+    "href": "slides/opamps-slides.html#non-inverting-amplifier",
+    "title": "Operational Amplifiers (Op-Amps)",
+    "section": "Non-Inverting Amplifier",
+    "text": "Non-Inverting Amplifier\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = V_{in}\\), \\(V_- = V_{in}\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{V_{in} - V_{out}}{R_f}\\)\n\\(I_{g} = \\frac{V_{-} - 0V}{R_g} = \\frac{V_{in}}{R_g}\\)\nSince \\(I_{f} = I_{g}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in} - V_{out}}{R_f} = \\frac{V_{in}}{R_g} \\\\\n\\frac{V_{out}}{V_{in}} = 1 + \\frac{R_f}{R_g}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors plus one.\nThe output is in phase with the input."
   },
   {
     "objectID": "slides/r_eq-notes.html",

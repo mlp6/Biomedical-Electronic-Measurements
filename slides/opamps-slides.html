@@ -234,12 +234,67 @@ v_+ = v_-
 </div>
 </section>
 
+<section id="buffer-operation" class="title-slide slide level2 center">
+<h2>Buffer Operation</h2>
+<ul>
+<li><p><span class="math inline">\(V_-\)</span> is connected to <span class="math inline">\(V_{out}\)</span>, so the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
+<li><p><span class="math inline">\(V_{out} = V_{in}\)</span>.</p></li>
+<li><p><span class="math inline">\(I_{in} = 0\)</span> (ideal op-amp input current).</p></li>
+</ul>
+</section>
+
 <section id="op-amp-chip-pinout" class="title-slide slide level2 center">
 <h2>Op-Amp Chip Pinout</h2>
 
+<img data-src="images/opamp_chip_pinout.webp" class="quarto-figure quarto-figure-center r-stretch"></section>
+
+<section id="inverting-amplifier" class="title-slide slide level2 center">
+<h2>Inverting Amplifier</h2>
+
+<img data-src="images/inverting_amp.webp" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
+<li><p>Since <span class="math inline">\(V_+ = 0V\)</span> (grounded), <span class="math inline">\(V_- = 0V\)</span>.</p></li>
+<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
+<ul>
+<li><p><span class="math inline">\(I_{in} = \frac{V_{in} - V_-}{R_{in}} = \frac{V_{in}}{R_{in}}\)</span></p></li>
+<li><p><span class="math inline">\(I_{f} = \frac{V_- - V_{out}}{R_f} = \frac{-V_{out}}{R_f}\)</span></p></li>
+<li><p>Since <span class="math inline">\(I_{in} = I_{f}\)</span> (no current into op-amp input):</p>
+<p><span class="math display">\[
+\begin{gather}
+\frac{V_{in}}{R_{in}} = \frac{-V_{out}}{R_f} \\
+\frac{V_{out}}{V_{in}} = -\frac{R_f}{R_{in}}
+\end{gather}
+\]</span></p></li>
+<li><p>Gain is controlled by the ratio of resistors.</p></li>
+<li><p>The negative sign indicates a 180-degree phase shift between input and output.</p></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="non-inverting-amplifier" class="title-slide slide level2 center">
+<h2>Non-Inverting Amplifier</h2>
+
+<img data-src="images/noninverting_amp.webp" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
+<li><p>Since <span class="math inline">\(V_+ = V_{in}\)</span>, <span class="math inline">\(V_- = V_{in}\)</span>.</p></li>
+<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
+<ul>
+<li><p><span class="math inline">\(I_{f} = \frac{V_- - V_{out}}{R_f} = \frac{V_{in} - V_{out}}{R_f}\)</span></p></li>
+<li><p><span class="math inline">\(I_{g} = \frac{V_{-} - 0V}{R_g} = \frac{V_{in}}{R_g}\)</span></p></li>
+<li><p>Since <span class="math inline">\(I_{f} = I_{g}\)</span> (no current into op-amp input):</p>
+<p><span class="math display">\[
+\begin{gather}
+\frac{V_{in} - V_{out}}{R_f} = \frac{V_{in}}{R_g} \\
+\frac{V_{out}}{V_{in}} = 1 + \frac{R_f}{R_g}
+\end{gather}
+\]</span></p></li>
+<li><p>Gain is controlled by the ratio of resistors plus one.</p></li>
+<li><p>The output is in phase with the input.</p></li>
+</ul></li>
+</ul>
 
 
-<img data-src="images/opamp_chip_pinout.webp" class="quarto-figure quarto-figure-center r-stretch"><script type="ojs-module-contents">
+<script type="ojs-module-contents">
 eyJjb250ZW50cyI6W119
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
