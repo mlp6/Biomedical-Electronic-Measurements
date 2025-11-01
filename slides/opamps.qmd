@@ -38,9 +38,9 @@ format:
 
   - Infinite open-loop gain (A → ∞)
 
-  - Infinite input impedance (Z_in → ∞)
+  - Infinite input impedance ($Z_{in}$ → ∞)
 
-  - Zero output impedance (Z_out = 0)
+  - Zero output impedance ($Z_{out}$ = 0)
 
   - Infinite bandwidth (no frequency dependence)
 
