@@ -690,7 +690,7 @@
     "href": "slides/opamps-notes.html#ideal-op-amp-model",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Ideal Op-Amp Model",
-    "text": "Ideal Op-Amp Model\n\nAn ideal op-amp has the following characteristics:\n\nInfinite open-loop gain (A → ∞)\nInfinite input impedance (Z_in → ∞)\nZero output impedance (Z_out = 0)\nInfinite bandwidth (no frequency dependence)\nZero offset voltage (output is zero when inputs are equal)\n\n\n\n\n\n\n\n\nIn practical applications, real op-amps deviate from these ideal characteristics, but the ideal model provides a useful approximation for analysis.",
+    "text": "Ideal Op-Amp Model\n\nAn ideal op-amp has the following characteristics:\n\nInfinite open-loop gain (A → ∞)\nInfinite input impedance (\\(Z_{in}\\) → ∞)\nZero output impedance (\\(Z_{out}\\) = 0)\nInfinite bandwidth (no frequency dependence)\nZero offset voltage (output is zero when inputs are equal)\n\n\n\n\n\n\n\n\nIn practical applications, real op-amps deviate from these ideal characteristics, but the ideal model provides a useful approximation for analysis.",
     "crumbs": [
       "Learning Modules",
       "Operational Amplifiers (Op-Amps)"
@@ -759,7 +759,7 @@
     "href": "slides/opamps-slides.html#ideal-op-amp-model",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Ideal Op-Amp Model",
-    "text": "Ideal Op-Amp Model\n\nAn ideal op-amp has the following characteristics:\n\nInfinite open-loop gain (A → ∞)\nInfinite input impedance (Z_in → ∞)\nZero output impedance (Z_out = 0)\nInfinite bandwidth (no frequency dependence)\nZero offset voltage (output is zero when inputs are equal)\n\n\n\n\nIn practical applications, real op-amps deviate from these ideal characteristics, but the ideal model provides a useful approximation for analysis."
+    "text": "Ideal Op-Amp Model\n\nAn ideal op-amp has the following characteristics:\n\nInfinite open-loop gain (A → ∞)\nInfinite input impedance (\\(Z_{in}\\) → ∞)\nZero output impedance (\\(Z_{out}\\) = 0)\nInfinite bandwidth (no frequency dependence)\nZero offset voltage (output is zero when inputs are equal)\n\n\n\n\nIn practical applications, real op-amps deviate from these ideal characteristics, but the ideal model provides a useful approximation for analysis."
   },
   {
     "objectID": "slides/opamps-slides.html#voltage-saturation",
