@@ -756,7 +756,7 @@
     "href": "slides/opamps-notes.html#inverting-amplifier",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Inverting Amplifier",
-    "text": "Inverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{in} = \\frac{V_{in} - V_-}{R_{in}} = \\frac{V_{in}}{R_{in}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{in} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in}}{R_{in}} = \\frac{-V_{out}}{R_f} \\\\\n\\frac{V_{out}}{V_{in}} = -\\frac{R_f}{R_{in}}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors.\nThe negative sign indicates a 180-degree phase shift between input and output.",
+    "text": "Inverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{in} = \\frac{V_{in} - V_-}{R_{in}} = \\frac{V_{in}}{R_{in}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{in} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in}}{R_{in}} = \\frac{-V_{out}}{R_f} \\\\\n\\frac{V_{out}}{V_{in}} = -\\frac{R_f}{R_{in}}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors (until saturation).\nThe negative sign indicates a 180-degree phase shift between input and output.",
     "crumbs": [
       "Learning Modules",
       "Operational Amplifiers (Op-Amps)"
@@ -767,7 +767,7 @@
     "href": "slides/opamps-notes.html#non-inverting-amplifier",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Non-Inverting Amplifier",
-    "text": "Non-Inverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = V_{in}\\), \\(V_- = V_{in}\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{V_{in} - V_{out}}{R_f}\\)\n\\(I_{g} = \\frac{V_{-} - 0V}{R_g} = \\frac{V_{in}}{R_g}\\)\nSince \\(I_{f} = I_{g}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in} - V_{out}}{R_f} = \\frac{V_{in}}{R_g} \\\\\n\\frac{V_{out}}{V_{in}} = 1 + \\frac{R_f}{R_g}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors plus one.\nThe output is in phase with the input.",
+    "text": "Non-Inverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = V_{in}\\), \\(V_- = V_{in}\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{V_{in} - V_{out}}{R_f}\\)\n\\(I_{g} = \\frac{V_{-} - 0V}{R_g} = \\frac{V_{in}}{R_g}\\)\nSince \\(I_{f} = I_{g}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in} - V_{out}}{R_f} = \\frac{V_{in}}{R_g} \\\\\n\\frac{V_{out}}{V_{in}} = 1 + \\frac{R_f}{R_g}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors plus one (until saturation).\nThe output is in phase with the input.",
     "crumbs": [
       "Learning Modules",
       "Operational Amplifiers (Op-Amps)"
@@ -834,14 +834,14 @@
     "href": "slides/opamps-slides.html#inverting-amplifier",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Inverting Amplifier",
-    "text": "Inverting Amplifier\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{in} = \\frac{V_{in} - V_-}{R_{in}} = \\frac{V_{in}}{R_{in}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{in} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in}}{R_{in}} = \\frac{-V_{out}}{R_f} \\\\\n\\frac{V_{out}}{V_{in}} = -\\frac{R_f}{R_{in}}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors.\nThe negative sign indicates a 180-degree phase shift between input and output."
+    "text": "Inverting Amplifier\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{in} = \\frac{V_{in} - V_-}{R_{in}} = \\frac{V_{in}}{R_{in}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{in} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in}}{R_{in}} = \\frac{-V_{out}}{R_f} \\\\\n\\frac{V_{out}}{V_{in}} = -\\frac{R_f}{R_{in}}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors (until saturation).\nThe negative sign indicates a 180-degree phase shift between input and output."
   },
   {
     "objectID": "slides/opamps-slides.html#non-inverting-amplifier",
     "href": "slides/opamps-slides.html#non-inverting-amplifier",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Non-Inverting Amplifier",
-    "text": "Non-Inverting Amplifier\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = V_{in}\\), \\(V_- = V_{in}\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{V_{in} - V_{out}}{R_f}\\)\n\\(I_{g} = \\frac{V_{-} - 0V}{R_g} = \\frac{V_{in}}{R_g}\\)\nSince \\(I_{f} = I_{g}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in} - V_{out}}{R_f} = \\frac{V_{in}}{R_g} \\\\\n\\frac{V_{out}}{V_{in}} = 1 + \\frac{R_f}{R_g}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors plus one.\nThe output is in phase with the input."
+    "text": "Non-Inverting Amplifier\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = V_{in}\\), \\(V_- = V_{in}\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{V_{in} - V_{out}}{R_f}\\)\n\\(I_{g} = \\frac{V_{-} - 0V}{R_g} = \\frac{V_{in}}{R_g}\\)\nSince \\(I_{f} = I_{g}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in} - V_{out}}{R_f} = \\frac{V_{in}}{R_g} \\\\\n\\frac{V_{out}}{V_{in}} = 1 + \\frac{R_f}{R_g}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors plus one (until saturation).\nThe output is in phase with the input."
   },
   {
     "objectID": "slides/r_eq-notes.html",
