@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-09-03">
+<meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
+<meta name="dcterms.date" content="2025-11-03">
 
-<title>Problem Set 02 – Biomedical Electronic Measurements</title>
+<title>Operational Amplifiers (Op-Amps) – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,7 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-fced259a1985fd972ecb57c7cd45153f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-13f007c1943c6d3711256cc1d3aa22a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-89abcb12e8852b82dab2915b19c79ac0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,6 +70,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -98,7 +103,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -111,7 +115,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/_formatting_guidelines.qmd">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ps2.html">Problem Set 02</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/opamps-notes.html">Operational Amplifiers (Op-Amps)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -258,7 +262,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/opamps-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/opamps-notes.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Operational Amplifiers (Op-Amps)</span></a>
   </div>
 </li>
@@ -393,7 +397,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problem_sets/ps2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../problem_sets/ps2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 02</span></a>
   </div>
 </li>
@@ -462,31 +466,47 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-set-format-guidelines" id="toc-problem-set-format-guidelines" class="nav-link active" data-scroll-target="#problem-set-format-guidelines">Problem Set Format Guidelines</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#ideal-op-amp-model" id="toc-ideal-op-amp-model" class="nav-link" data-scroll-target="#ideal-op-amp-model">Ideal Op-Amp Model</a></li>
+  <li><a href="#voltage-saturation" id="toc-voltage-saturation" class="nav-link" data-scroll-target="#voltage-saturation">Voltage Saturation</a></li>
+  <li><a href="#buffer-voltage-follower" id="toc-buffer-voltage-follower" class="nav-link" data-scroll-target="#buffer-voltage-follower">Buffer / Voltage Follower</a></li>
+  <li><a href="#negative-feedback" id="toc-negative-feedback" class="nav-link" data-scroll-target="#negative-feedback">Negative Feedback</a></li>
+  <li><a href="#op-amp-chip-pinout" id="toc-op-amp-chip-pinout" class="nav-link" data-scroll-target="#op-amp-chip-pinout">Op-Amp Chip Pinout</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="opamps-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/_formatting_guidelines.qmd">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ps2.html">Problem Set 02</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/opamps-notes.html">Operational Amplifiers (Op-Amps)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Problem Set 02</h1>
+<h1 class="title">Operational Amplifiers (Op-Amps)</h1>
 <p class="subtitle lead">BME253L - Fall 2025</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Problem Set</div>
-  </div>
-  </div>
+</div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Dr.&nbsp;Mark Palmeri, M.D., Ph.D. </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Duke University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 3, 2025</p>
+      <p class="date">November 3, 2025</p>
     </div>
   </div>
   
@@ -498,95 +518,76 @@ window.Quarto = {
 </header>
 
 
-<p>Please complete the following problems and tasks, and upload your solutions to Gradescope, using the <a href="_formatting_guidelines.qmd">formatting guidelines</a> below.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You are asked to generate plots and include the code that you wrote to do so in some of the problems below. Presenting your code with your plot may be most easily done using a Jupyter notebook, where you can render your output as a PDF for upload to Gradescope. This is a good opportunity to make sure you know how to do this.</p>
-</div>
-</div>
-<ol type="1">
-<li><p><strong>Variable Resistor / Potentiometer:</strong> For the circuit below, determine the power absorbed by the variable resistor (<span class="math inline">\(R\)</span>), ranging from 0-20 <span class="math inline">\(\Omega\)</span>. Plot the power absorption as a function of <span class="math inline">\(R\)</span>. Your plot should be generated “formally” using Python (i.e., not hand-drawn). Include your code with your plot.</p>
-<p><img src="images/ps2/pot_power.png" class="img-fluid"></p></li>
-<li><p><strong>Internal Source Resistance:</strong> For the circuit below, solve for the following:</p>
-<ol type="a">
-<li><p>Find the total power supplied by the ideal source. (<em>Hint: that implies the value of <span class="math inline">\(R_S\)</span>.</em>)</p></li>
-<li><p>Find the power dissipated and lost in the nonideal source.</p></li>
-<li><p>What is the power supplied by the source to the circuit as a function of the load resistance (<span class="math inline">\(R_L\)</span>)?</p></li>
-<li><p>Plot the voltage across the load <span class="math inline">\(V_L\)</span> and the power delivered to the load (<span class="math inline">\(P_L\)</span>) as a function of current <span class="math inline">\(I_L: 0-30 A\)</span>, assuming <span class="math inline">\(V_S = 12\,V\)</span> and <span class="math inline">\(R_S = 0.3\,\Omega\)</span>. (Like the previous problem, include code and plot.)</p></li>
-</ol>
-<p><img src="images/ps2/source_resistance.png" class="img-fluid"></p></li>
-<li><p><strong>Series Resistance:</strong> An incandescent lightbult rated at 100 W will dissipate 100 W as heat and light when connected to a 100 V ideal voltage source. If 3 of these bulbs are connected in series across this same source, determine the power that each bulb will dissipate.</p></li>
-<li><p><strong>Circuit Analysis:</strong> For the circuit below, with <span class="math inline">\(R_1 = 25\,\Omega\)</span>, <span class="math inline">\(R_2 = 10\,\Omega\)</span>, <span class="math inline">\(R_3 = 5\,\Omega\)</span>, <span class="math inline">\(R_4 = 7\,\Omega\)</span>, find:</p>
-<ol type="a">
-<li><p>The currents <span class="math inline">\(i_2\)</span> and <span class="math inline">\(i_3\)</span>.</p></li>
-<li><p>The power delivered by the 3 A current soruce and by the 12 V voltage source.</p></li>
-<li><p>The total power dissipated by the circuit.</p></li>
-</ol>
-<p><img src="images/ps2/current_and_volt_sources.png" class="img-fluid"></p></li>
-<li><p><strong>Equivalent Resistance:</strong> Find the equivalent resistance seen by the source in the circuit below and use the result to solve for <span class="math inline">\(i_1\)</span>, <span class="math inline">\(i_2\)</span> and <span class="math inline">\(v_3\)</span>.</p>
-<p><img src="images/ps2/equiv_res.png" class="img-fluid"></p></li>
-<li><p><strong>Equivalent Resistance:</strong> For the circuit below, solve for the equivalent resistance seen by the source and solve for <span class="math inline">\(i\)</span>.</p>
-<p><img src="images/ps2/equiv_res2.png" class="img-fluid"></p></li>
-<li><p><strong>Voltage Division:</strong> The voltage divider shown below nominally provides <span class="math inline">\(v_{out} = 5\,V\)</span> for a source voltage of <span class="math inline">\(V = 10\,V\)</span>. The resistors are nominally each <span class="math inline">\(5\,k\Omega\)</span>, but their finite tolerances mean they might not be exactly the same.</p>
-<ol type="a">
-<li><p>If the resistors have <span class="math inline">\(\pm\)</span> 10% tolerance, find the “worst-case” output voltages (i.e., greatest deviations greater than and less than <span class="math inline">\(5\,V\)</span>).</p></li>
-<li><p>Repeat (a) for <span class="math inline">\(\pm\)</span> 5% tolerances.</p></li>
-</ol>
-<p><img src="images/ps2/voltage_divider.png" class="img-fluid"></p></li>
-<li><p><strong>Thermistor:</strong> A thermistor is a nonlinear device that changes resistance as a function of its temperature. The relationship between resistance and temperature is:</p>
-<p><span class="math display">\[
-R_{th}(T) = R_o e^{-\beta(T-To)},
-\]</span></p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <ul>
-<li><p><span class="math inline">\(R_{th}\)</span> = resistance at temperature <span class="math inline">\(T\)</span> (<span class="math inline">\(\Omega\)</span>)</p></li>
-<li><p><span class="math inline">\(R_o\)</span> = resistance at <span class="math inline">\(T_o\)</span> = 298 <span class="math inline">\(K\)</span></p></li>
-<li><p><span class="math inline">\(\beta\)</span> = material constant (<span class="math inline">\(K^{-1}\)</span>)</p></li>
-<li><p><span class="math inline">\(T\)</span> = absolute temperature (<span class="math inline">\(K\)</span>)</p></li>
-</ul>
-<ol type="a">
-<li><p>If <span class="math inline">\(R_o = 300 \Omega\)</span> and <span class="math inline">\(\beta = 0.01 K^{-1}\)</span>, plot <span class="math inline">\(R_{th}(T)\)</span> as a function of <span class="math inline">\(350 \leq T \leq 750\)</span>.</p></li>
-<li><p>If the thermistor is in parallel with a fixed value <span class="math inline">\(250 \Omega\)</span> resistor, find the expression for the equivalent resistance for this resistive network and add a new line to your plot from (a) representing the modified <span class="math inline">\(R_{th}(T)\)</span>. Be sure to plot this line in a new color and include a descriptive legend on your plot.</p></li>
-</ol></li>
-<li><p><strong>Material Conductance</strong> Copper and nickel-chromium (“nichrome”) are two common conductors you will find in your living space.</p>
-<ol type="a">
-<li><p>Where do you commonly find these two conductors in your living space, and what are the properties of these conductors that make them appropriate for their application(s)?</p></li>
-<li><p>Aluminum is another common conductor user in high voltage transmission lines and high power household appliance wires. Why would aluminum be considered over copper for these applications?</p></li>
-<li><p>Why isn’t aluminum wiring used instead of copper in wiring most building outlets and lighting circuits?</p></li>
-</ol></li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Material properties to keep in mind when answering these questions including resistivity, melting point, thermal expansion, and density.</p>
-</div>
-</div>
-<section id="problem-set-format-guidelines" class="level2">
-<h2 class="anchored" data-anchor-id="problem-set-format-guidelines">Problem Set Format Guidelines</h2>
-<p>Please follow these guidelines when completing your problem sets to insure accurate grading and to reduce time to troubleshoot problem solving.</p>
+<li><p>Operational Amplifiers (Op-Amps) are fundamental building blocks in analog electronics.</p></li>
+<li><p>They are used in various applications such as amplification, filtering, and mathematical operations, such as “comparison”.</p></li>
+<li><p>They are characterized by high gain, high input impedance, and low output impedance. Their application as a <strong>buffer</strong> is particularly important in preventing signal loading.</p></li>
+<li><p>They can be used in both open-loop and closed-loop configurations.</p>
 <ul>
-<li><p>Each problem should be on dedicated pages that will be able to be uniquely selected on Gradescope to associate with specific questions (i.e., do not have multiple problems on the same page).</p></li>
-<li><p>For problems that involve circuit analysis, make sure that you clearly present an annotated circuit to show what variables correspond to what quantities in the analysis.</p>
-<ul>
-<li><p>Label all circuit elements with symbols.</p></li>
-<li><p>Solve problems symbolically before substituting in numerical values.</p></li>
+<li><p>With negative feedback, they can achieve precise gain control and stability.</p></li>
+<li><p>With positive feedback, they can be used in applications like oscillators and comparators.</p></li>
 </ul></li>
-<li><p>Please write legibly and include all relevant steps in arriving at your solution.</p></li>
-<li><p>Please place a box around all final solutions.</p></li>
+<li><p>They can perform mathematical operations such as addition, subtraction, integration, and differentiation.</p></li>
+</ul>
+</section>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<ul>
+<li><p><a href="https://www.electronics-tutorials.ws/opamp">Electronics Tutorials: Operational Amplifiers</a></p></li>
+<li><p><a href="https://www.ti.com/lit/an/slaa068b/slaa068b.pdf">Texas Instruments: Understanding Basic Analog – Ideal Op Amps</a></p></li>
+</ul>
+<p><em>Credit: Many images from Electronics Tutorials website.</em></p>
+</section>
+<section id="ideal-op-amp-model" class="level2">
+<h2 class="anchored" data-anchor-id="ideal-op-amp-model">Ideal Op-Amp Model</h2>
+<ul>
+<li><p>An ideal op-amp has the following characteristics:</p>
+<ul>
+<li><p>Infinite open-loop gain (A → ∞)</p></li>
+<li><p>Infinite input impedance (Z_in → ∞)</p></li>
+<li><p>Zero output impedance (Z_out = 0)</p></li>
+<li><p>Infinite bandwidth (no frequency dependence)</p></li>
+<li><p>Zero offset voltage (output is zero when inputs are equal)</p></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ideal_opamp_model.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li>In practical applications, real op-amps deviate from these ideal characteristics, but the ideal model provides a useful approximation for analysis.</li>
+</ul>
+</section>
+<section id="voltage-saturation" class="level2">
+<h2 class="anchored" data-anchor-id="voltage-saturation">Voltage Saturation</h2>
+<ul>
+<li><p>Real op-amps have power supply limits that constrain the output voltage range.</p></li>
+<li><p>When the output voltage exceeds these limits, the op-amp saturates, resulting in distortion of the output signal.</p></li>
+<li><p>Saturation can be mitigated by ensuring that the input signals and feedback network are designed to keep the output within the linear operating range of the op-amp.</p></li>
+</ul>
+</section>
+<section id="buffer-voltage-follower" class="level2">
+<h2 class="anchored" data-anchor-id="buffer-voltage-follower">Buffer / Voltage Follower</h2>
+<ul>
+<li><p>A buffer, or voltage follower, is a configuration where the output voltage directly follows the input voltage.</p></li>
+<li><p>It is used to isolate different stages of a circuit, preventing loading effects and ensuring signal integrity.</p></li>
+<li><p>The voltage follower has a gain of 1 (unity gain) and provides high input impedance and low output impedance.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/buffer.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="negative-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="negative-feedback">Negative Feedback</h2>
+<ul>
+<li><p>Negative feedback occurs when a portion of the output signal is fed back to the inverting input of the op-amp.</p></li>
+<li><p>This configuration stabilizes the gain and improves linearity.</p></li>
+<li><p>It can also reduce distortion and increase bandwidth.</p></li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -598,36 +599,50 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>All answers must have units!! No units = no credit!</p>
+<p>Negative feedback means that the op-amp will adjust its output to minimize the difference between the inverting and non-inverting inputs.</p>
+<p><span class="math display">\[
+v_+ = v_-
+\]</span></p>
 </div>
 </div>
-<ul>
-<li><p>Attach any computer code (e.g., Python code) used to solve problems and generate plots.</p>
-<ul>
-<li><p>This should be done with a Jupyter notebook.</p></li>
-<li><p>Ideally your code should “self described” your thought process, but if unclear, add comments in the code where appropriate to indicate your thought process.</p></li>
-</ul></li>
-<li><p>All plots must be appropriately labeled with units.</p></li>
-<li><p>Problem sets must be scanned and converted to PDFs, uploaded to Gradescope, and have each problem associated with the specific question in Gradescope.</p></li>
-</ul>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Failure to associated pages of your PDF with specific problems in Gradescope will result in loss of credit for that question.</p>
-</div>
+</section>
+<section id="op-amp-chip-pinout" class="level2">
+<h2 class="anchored" data-anchor-id="op-amp-chip-pinout">Op-Amp Chip Pinout</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/opamp_chip_pinout.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
 </div>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../slides";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
