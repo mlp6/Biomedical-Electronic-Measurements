@@ -1,0 +1,91 @@
+---
+title: "Operational Amplifiers (Op-Amps)"
+date: "2025-11-03"
+format:
+  live-html: 
+    output-file: opamps-notes.html
+  live-revealjs: 
+    output-file: opamps-slides.html
+---
+
+## Overview
+
+- Operational Amplifiers (Op-Amps) are fundamental building blocks in analog electronics.
+
+- They are used in various applications such as amplification, filtering, and mathematical operations, such as "comparison".
+
+- They are characterized by high gain, high input impedance, and low output impedance.  Their application as a **buffer** is particularly important in preventing signal loading.
+
+- They can be used in both open-loop and closed-loop configurations.  
+
+  - With negative feedback, they can achieve precise gain control and stability.
+
+  - With positive feedback, they can be used in applications like oscillators and comparators.
+
+- They can perform mathematical operations such as addition, subtraction, integration, and differentiation.
+
+## Background
+
+- [Electronics Tutorials: Operational Amplifiers](https://www.electronics-tutorials.ws/opamp)
+
+- [Texas Instruments: Understanding Basic Analog – Ideal Op Amps](https://www.ti.com/lit/an/slaa068b/slaa068b.pdf)
+
+*Credit: Many images from Electronics Tutorials website.*
+
+## Ideal Op-Amp Model
+
+- An ideal op-amp has the following characteristics:
+
+  - Infinite open-loop gain (A → ∞)
+
+  - Infinite input impedance (Z_in → ∞)
+
+  - Zero output impedance (Z_out = 0)
+
+  - Infinite bandwidth (no frequency dependence)
+
+  - Zero offset voltage (output is zero when inputs are equal)
+
+![](images/ideal_opamp_model.webp){fig-align="center"}
+
+
+- In practical applications, real op-amps deviate from these ideal characteristics, but the ideal model provides a useful approximation for analysis.
+
+## Voltage Saturation
+
+- Real op-amps have power supply limits that constrain the output voltage range.
+
+- When the output voltage exceeds these limits, the op-amp saturates, resulting in distortion of the output signal.
+
+- Saturation can be mitigated by ensuring that the input signals and feedback network are designed to keep the output within the linear operating range of the op-amp.
+
+## Buffer / Voltage Follower
+
+- A buffer, or voltage follower, is a configuration where the output voltage directly follows the input voltage.
+
+- It is used to isolate different stages of a circuit, preventing loading effects and ensuring signal integrity.
+
+- The voltage follower has a gain of 1 (unity gain) and provides high input impedance and low output impedance.
+
+![](images/buffer.webp){fig-align="center"}
+
+## Negative Feedback
+
+- Negative feedback occurs when a portion of the output signal is fed back to the inverting input of the op-amp.
+
+- This configuration stabilizes the gain and improves linearity.
+
+- It can also reduce distortion and increase bandwidth.
+
+::: callout-important
+Negative feedback means that the op-amp will adjust its output to minimize the
+difference between the inverting and non-inverting inputs.
+
+$$
+v_+ = v_-
+$$
+:::
+
+## Op-Amp Chip Pinout
+
+![](images/opamp_chip_pinout.webp){fig-align="center"}
