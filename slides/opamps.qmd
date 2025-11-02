@@ -99,7 +99,19 @@ $$
 
 ![](images/opamp_chip_pinout.webp){fig-align="center"}
 
-## Inverting Amplifier
+## Amplifiers
+
+- Inverting Amplifier
+
+- Non-inverting Amplifier
+
+- Summing Amplifier
+
+- Differential Amplifier
+
+- Instrumentation Amplifier
+
+### Inverting Amplifier
 
 ![](images/inverting_amp.webp){fig-align="center"}
 
@@ -126,7 +138,7 @@ $$
 
   - The negative sign indicates a 180-degree phase shift between input and output.
 
-## Non-Inverting Amplifier
+### Non-Inverting Amplifier
 
 ![](images/noninverting_amp.webp){fig-align="center"}
 
@@ -152,3 +164,93 @@ $$
   - Gain is controlled by the ratio of resistors plus one (until saturation).
 
   - The output is in phase with the input.
+
+### Summing Amplifier
+
+![](images/summing_amp.webp){fig-align="center"}
+
+- Using negative feedback, the op-amp adjusts $V_{out}$ to make $V_+ = V_-$.
+
+- Since $V_+ = 0V$ (grounded), $V_- = 0V$.
+
+- Using Ohm's Law and Kirchhoff's Current Law (KCL):
+
+  - $I_{1} = \frac{V_{in1} - V_-}{R_{1}} = \frac{V_{in1}}{R_{1}}$
+
+  - $I_{2} = \frac{V_{in2} - V_-}{R_{2}} = \frac{V_{in2}}{R_{2}}$
+
+  - $I_{f} = \frac{V_- - V_{out}}{R_f} = \frac{-V_{out}}{R_f}$
+
+  - Since $I_{1} + I_{2} = I_{f}$ (no current into op-amp input):
+
+    $$
+    \begin{gather}
+    \frac{V_{in1}}{R_{1}} + \frac{V_{in2}}{R_{2}} = \frac{-V_{out}}{R_f} \\
+    V_{out} = -R_f \left( \frac{V_{in1}}{R_{1}} + \frac{V_{in2}}{R_{2}} \right)
+    \end{gather}
+    $$
+
+::: callout-note
+The output voltage is the **negative weighted sum** of the input voltages.
+:::
+
+### Differential Amplifier
+
+![](images/differential_amp.webp){fig-align="center"}
+
+- Using negative feedback, the op-amp adjusts $V_{out}$ to make $V_+ = V_-$.
+
+- Using Ohm's Law and Kirchhoff's Current Law (KCL):
+
+  - For the non-inverting input:
+
+    $$
+    V_+ = V_2 \frac{R_4}{R_2 + R_4}
+    $$
+
+  - For the inverting input:
+
+    $$
+    \begin{gather}
+    I_1 = I_f \\
+    \frac{V_1 - V_-}{R_1} = \frac{V_- - V_{out}}{R_3} \\
+    \end{gather}
+    $$
+
+  - If we set $R_1 = R_2$ and $R_3 = R_4$, solving for $V_{out}$:
+
+    $$
+    V_{out} = \frac{R_3}{R_1} (V_2 - V_1)
+    $$
+
+::: callout-note
+The output voltage is the **amplified difference** between the two input voltages.
+:::
+
+### Instrumentation Amplifier
+
+## Active Filters
+
+- Active Low-Pass Filter
+
+- Active High-Pass Filter
+
+- Active Band-Pass Filter
+
+### Active Low-Pass Filter
+
+### Active High-Pass Filter
+
+### Active Band-Pass Filter
+
+## Comparator
+
+- A comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.
+
+- It lacks negative feedback, resulting in a high gain that drives the output to saturation.
+
+<!-- TODO: Add image of comparator -->
+
+### Comparator with Hysteresis
+
+Topic for BME354L...
