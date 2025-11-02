@@ -146,7 +146,8 @@ capacitors after you build this circuit.
 1. Capture a screenshot of the circuit's sinusoidal input and output signals.
 
 1. Derive the expected output voltage expression based on the input voltages and
-resistor values to confirm your experimental results.
+resistor values to confirm your experimental results.  Note both amplitudes and
+phase.
 
 1. Without changing the input voltage signals, change the values of $R_a$, $R_b$, and/or $R_f$ to achieve an output signal of $V_{out} = 0.5 sin(2 \pi 1000 t) + 0.5 V$.  
 
