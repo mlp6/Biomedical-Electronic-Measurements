@@ -767,18 +767,7 @@
     "href": "slides/opamps-notes.html#active-filters",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Active Filters",
-    "text": "Active Filters\n\nActive Low-Pass Filter\nActive High-Pass Filter\nActive Band-Pass Filter\n\n\nActive Low-Pass Filter\n\n\nActive High-Pass Filter\n\n\nActive Band-Pass Filter",
-    "crumbs": [
-      "Learning Modules",
-      "Operational Amplifiers (Op-Amps)"
-    ]
-  },
-  {
-    "objectID": "slides/opamps-notes.html#comparator",
-    "href": "slides/opamps-notes.html#comparator",
-    "title": "Operational Amplifiers (Op-Amps)",
-    "section": "Comparator",
-    "text": "Comparator\n\nA comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.\nIt lacks negative feedback, resulting in a high gain that drives the output to saturation.\n\n\n\nComparator with Hysteresis\nTopic for BME354L…",
+    "text": "Active Filters\n\n“Active” filters use op-amps to provide the possibility for gain \\(&gt;\\) 0 dB, along with resistors and capacitors to achieve desired frequency response characteristics\nSame “rules” for analyzing op-amp circuits with negative feedback apply, along with those for first-order filters.\n\n\nActive Low-Pass Filter\n\n\n\n\n\n\nD.C. Gain: \\(\\frac{-R_2}{R_1}\\)\nA.C. Gain: \\(\\frac{-R_2}{R_1} \\frac{1}{1+\\omega R_2 C}\\)\nCutoff Frequency: \\(\\omega_c = \\frac{1}{R_2 C}\\)\n\n\n\nActive High-Pass Filter\n\n\n\n\n\n\n\n\nActive Band-Pass Filter\n\n\n\n\n\n\n\n\n\n\n\nD.C. Gain: \\(\\frac{-R_2}{R_1}\\)\n\\(\\omega_{HP} = \\frac{1}{R_1 C_1}\\)\n\\(\\omega_{LP} = \\frac{1}{R_2 C_2}\\)\n\n\n\nComparator\n\nA comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.\nIt lacks negative feedback, resulting in a high gain that drives the output to saturation.\n\n\n\n\n\n\n\n\nComparator with Hysteresis\nTopic for BME354L…",
     "crumbs": [
       "Learning Modules",
       "Operational Amplifiers (Op-Amps)"
@@ -852,14 +841,7 @@
     "href": "slides/opamps-slides.html#active-filters",
     "title": "Operational Amplifiers (Op-Amps)",
     "section": "Active Filters",
-    "text": "Active Filters\n\nActive Low-Pass Filter\nActive High-Pass Filter\nActive Band-Pass Filter"
-  },
-  {
-    "objectID": "slides/opamps-slides.html#comparator",
-    "href": "slides/opamps-slides.html#comparator",
-    "title": "Operational Amplifiers (Op-Amps)",
-    "section": "Comparator",
-    "text": "Comparator\n\nA comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.\nIt lacks negative feedback, resulting in a high gain that drives the output to saturation."
+    "text": "Active Filters\n\n“Active” filters use op-amps to provide the possibility for gain \\(&gt;\\) 0 dB, along with resistors and capacitors to achieve desired frequency response characteristics\nSame “rules” for analyzing op-amp circuits with negative feedback apply, along with those for first-order filters."
   },
   {
     "objectID": "slides/r_eq-notes.html",

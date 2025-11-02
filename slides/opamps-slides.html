@@ -382,29 +382,54 @@ V_{out} = \frac{R_3}{R_1} (V_2 - V_1)
 <section id="active-filters" class="title-slide slide level2 center">
 <h2>Active Filters</h2>
 <ul>
-<li><p>Active Low-Pass Filter</p></li>
-<li><p>Active High-Pass Filter</p></li>
-<li><p>Active Band-Pass Filter</p></li>
+<li><p>“Active” filters use op-amps to provide the possibility for gain <span class="math inline">\(&gt;\)</span> 0 dB, along with resistors and capacitors to achieve desired frequency response characteristics</p></li>
+<li><p>Same “rules” for analyzing op-amp circuits with negative feedback apply, along with those for first-order filters.</p></li>
 </ul>
 </section>
 <section id="active-low-pass-filter" class="slide level3">
 <h3>Active Low-Pass Filter</h3>
+
+<img data-src="images/active_lpf_.webp" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><p>D.C. Gain: <span class="math inline">\(\frac{-R_2}{R_1}\)</span></p></li>
+<li><p>A.C. Gain: <span class="math inline">\(\frac{-R_2}{R_1} \frac{1}{1+\omega R_2 C}\)</span></p></li>
+<li><p>Cutoff Frequency: <span class="math inline">\(\omega_c = \frac{1}{R_2 C}\)</span></p></li>
+</ul>
 </section>
 <section id="active-high-pass-filter" class="slide level3">
 <h3>Active High-Pass Filter</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/active_hpf.webp" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<p><img data-src="images/active_hpf_xfer_func.webp"></p>
 </section>
 <section id="active-band-pass-filter" class="slide level3">
 <h3>Active Band-Pass Filter</h3>
-</section></section>
-<section>
-<section id="comparator" class="title-slide slide level2 center">
-<h2>Comparator</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/active_bpf.gif" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/active_bpf_xfer_func.webp" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<ul>
+<li><p>D.C. Gain: <span class="math inline">\(\frac{-R_2}{R_1}\)</span></p></li>
+<li><p><span class="math inline">\(\omega_{HP} = \frac{1}{R_1 C_1}\)</span></p></li>
+<li><p><span class="math inline">\(\omega_{LP} = \frac{1}{R_2 C_2}\)</span></p></li>
+</ul>
+</section>
+<section id="comparator" class="slide level3">
+<h3>Comparator</h3>
 <ul>
 <li><p>A comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.</p></li>
 <li><p>It lacks negative feedback, resulting in a high gain that drives the output to saturation.</p></li>
 </ul>
-<!-- TODO: Add image of comparator -->
-</section>
+
+<img data-src="images/comparator.webp" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="comparator-with-hysteresis" class="slide level3">
 <h3>Comparator with Hysteresis</h3>
 <p>Topic for BME354L…</p>
