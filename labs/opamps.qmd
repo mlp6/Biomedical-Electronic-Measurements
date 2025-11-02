@@ -1,9 +1,66 @@
 ---
 title: "Op Amps: Amplifiers & Active Filers"
-date: "2025-10-01"
+date: "2025-11-05"
 format:
   html: default
+  pdf: default
 ---
 
-<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_opamps_hout.pdf" width="100%" height="800px" style="border:none;">
-</iframe>
+## Objectives
+
+- Build and analyze inverting and non-inverting amplifiers.
+
+  - Characterize gain, phase shift, and saturation.
+
+- Build and analyze active low-pass and high-pass filters.
+
+## Background
+
+Please review all of the lecture content on [operational amplifiers](../slides/opamps.qmd).
+
+## Procedure
+
+### 1. Inverting Amplifier
+
+![Inverting Amplifier Circuit](images/opamps/invert.png){fig-align="center"}
+
+Build the circuit above. Use $R_1$ = 2.7 kΩ, $R_f$ = 4.7 kΩ.  The input should
+be a 0.1 $V_{pp}$ sine wave at 1 kHz. The op-amp should be powered with ±12 V.
+
+::: callout-tip
+The pin-out for the DIP-8 package for this chip is available in the
+[datasheet](https://www.ti.com/lit/ds/symlink/lf353.pdf).
+:::
+
+::: callout-note
+Opamps are active devices and must always have a source of power.  Many
+schematics, including those that follow in this course, omit the power supply
+connections because they are assumed.
+:::
+
+::: callout-warning
+Opamps can be damaged by applying the wrong voltages to terminals. A good idea
+is to build the circuit with the power supply output turned off. When you turn
+on the power supply, check the supply voltages and currents. If they don't look
+correct, turn off the power supply output until you've corrected your problem.
+Each LF353 opamp should draw about 4 mA from each supply.
+:::
+
+1. Experimentally determine the voltage gain of this inverting circuit by
+capturing both the input and output signals on your oscilloscope and showing
+relevant measurements.
+
+1. What is the phase relationship between the input and output signals, and how
+does this compare to the nominal value?
+
+1. Compare the experimentally determined gain with the nominal values from the
+components in your circuit.  Discuss any differences.
+
+1. Replace $R_f ~= 100 k\Omega$ and calculate the nominal and
+experimentally-measured voltage gains.  Again, discuss any differences.
+
+1. For $R_f = 100 k\Omega$, what is the maximum input voltage amplitude you can apply
+before the output signal becomes saturated?  Explain why this happens.
+
+1. Demonstrate saturation on your oscilloscope by adjusting the input voltage
+amplitude to 10% greater than the threshold you specified in the previous step.
