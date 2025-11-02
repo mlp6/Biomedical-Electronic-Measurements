@@ -752,22 +752,33 @@
     ]
   },
   {
-    "objectID": "slides/opamps-notes.html#inverting-amplifier",
-    "href": "slides/opamps-notes.html#inverting-amplifier",
+    "objectID": "slides/opamps-notes.html#amplifiers",
+    "href": "slides/opamps-notes.html#amplifiers",
     "title": "Operational Amplifiers (Op-Amps)",
-    "section": "Inverting Amplifier",
-    "text": "Inverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{in} = \\frac{V_{in} - V_-}{R_{in}} = \\frac{V_{in}}{R_{in}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{in} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in}}{R_{in}} = \\frac{-V_{out}}{R_f} \\\\\n\\frac{V_{out}}{V_{in}} = -\\frac{R_f}{R_{in}}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors (until saturation).\nThe negative sign indicates a 180-degree phase shift between input and output.",
+    "section": "Amplifiers",
+    "text": "Amplifiers\n\nInverting Amplifier\nNon-inverting Amplifier\nSumming Amplifier\nDifferential Amplifier\nInstrumentation Amplifier\n\n\nInverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{in} = \\frac{V_{in} - V_-}{R_{in}} = \\frac{V_{in}}{R_{in}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{in} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in}}{R_{in}} = \\frac{-V_{out}}{R_f} \\\\\n\\frac{V_{out}}{V_{in}} = -\\frac{R_f}{R_{in}}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors (until saturation).\nThe negative sign indicates a 180-degree phase shift between input and output.\n\n\n\n\nNon-Inverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = V_{in}\\), \\(V_- = V_{in}\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{V_{in} - V_{out}}{R_f}\\)\n\\(I_{g} = \\frac{V_{-} - 0V}{R_g} = \\frac{V_{in}}{R_g}\\)\nSince \\(I_{f} = I_{g}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in} - V_{out}}{R_f} = \\frac{V_{in}}{R_g} \\\\\n\\frac{V_{out}}{V_{in}} = 1 + \\frac{R_f}{R_g}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors plus one (until saturation).\nThe output is in phase with the input.\n\n\n\n\nSumming Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{1} = \\frac{V_{in1} - V_-}{R_{1}} = \\frac{V_{in1}}{R_{1}}\\)\n\\(I_{2} = \\frac{V_{in2} - V_-}{R_{2}} = \\frac{V_{in2}}{R_{2}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{1} + I_{2} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in1}}{R_{1}} + \\frac{V_{in2}}{R_{2}} = \\frac{-V_{out}}{R_f} \\\\\nV_{out} = -R_f \\left( \\frac{V_{in1}}{R_{1}} + \\frac{V_{in2}}{R_{2}} \\right)\n\\end{gather}\n\\]\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe output voltage is the negative weighted sum of the input voltages.\n\n\n\n\nDifferential Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\nFor the non-inverting input:\n\\[\nV_+ = V_2 \\frac{R_4}{R_2 + R_4}\n\\]\nFor the inverting input:\n\\[\n\\begin{gather}\nI_1 = I_f \\\\\n\\frac{V_1 - V_-}{R_1} = \\frac{V_- - V_{out}}{R_3} \\\\\n\\end{gather}\n\\]\nIf we set \\(R_1 = R_2\\) and \\(R_3 = R_4\\), solving for \\(V_{out}\\):\n\\[\nV_{out} = \\frac{R_3}{R_1} (V_2 - V_1)\n\\]\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe output voltage is the amplified difference between the two input voltages.\n\n\n\n\nInstrumentation Amplifier",
     "crumbs": [
       "Learning Modules",
       "Operational Amplifiers (Op-Amps)"
     ]
   },
   {
-    "objectID": "slides/opamps-notes.html#non-inverting-amplifier",
-    "href": "slides/opamps-notes.html#non-inverting-amplifier",
+    "objectID": "slides/opamps-notes.html#active-filters",
+    "href": "slides/opamps-notes.html#active-filters",
     "title": "Operational Amplifiers (Op-Amps)",
-    "section": "Non-Inverting Amplifier",
-    "text": "Non-Inverting Amplifier\n\n\n\n\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = V_{in}\\), \\(V_- = V_{in}\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{V_{in} - V_{out}}{R_f}\\)\n\\(I_{g} = \\frac{V_{-} - 0V}{R_g} = \\frac{V_{in}}{R_g}\\)\nSince \\(I_{f} = I_{g}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in} - V_{out}}{R_f} = \\frac{V_{in}}{R_g} \\\\\n\\frac{V_{out}}{V_{in}} = 1 + \\frac{R_f}{R_g}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors plus one (until saturation).\nThe output is in phase with the input.",
+    "section": "Active Filters",
+    "text": "Active Filters\n\nActive Low-Pass Filter\nActive High-Pass Filter\nActive Band-Pass Filter\n\n\nActive Low-Pass Filter\n\n\nActive High-Pass Filter\n\n\nActive Band-Pass Filter",
+    "crumbs": [
+      "Learning Modules",
+      "Operational Amplifiers (Op-Amps)"
+    ]
+  },
+  {
+    "objectID": "slides/opamps-notes.html#comparator",
+    "href": "slides/opamps-notes.html#comparator",
+    "title": "Operational Amplifiers (Op-Amps)",
+    "section": "Comparator",
+    "text": "Comparator\n\nA comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.\nIt lacks negative feedback, resulting in a high gain that drives the output to saturation.\n\n\n\nComparator with Hysteresis\nTopic for BME354L…",
     "crumbs": [
       "Learning Modules",
       "Operational Amplifiers (Op-Amps)"
@@ -830,18 +841,25 @@
     "text": "Op-Amp Chip Pinout"
   },
   {
-    "objectID": "slides/opamps-slides.html#inverting-amplifier",
-    "href": "slides/opamps-slides.html#inverting-amplifier",
+    "objectID": "slides/opamps-slides.html#amplifiers",
+    "href": "slides/opamps-slides.html#amplifiers",
     "title": "Operational Amplifiers (Op-Amps)",
-    "section": "Inverting Amplifier",
-    "text": "Inverting Amplifier\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = 0V\\) (grounded), \\(V_- = 0V\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{in} = \\frac{V_{in} - V_-}{R_{in}} = \\frac{V_{in}}{R_{in}}\\)\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{-V_{out}}{R_f}\\)\nSince \\(I_{in} = I_{f}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in}}{R_{in}} = \\frac{-V_{out}}{R_f} \\\\\n\\frac{V_{out}}{V_{in}} = -\\frac{R_f}{R_{in}}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors (until saturation).\nThe negative sign indicates a 180-degree phase shift between input and output."
+    "section": "Amplifiers",
+    "text": "Amplifiers\n\nInverting Amplifier\nNon-inverting Amplifier\nSumming Amplifier\nDifferential Amplifier\nInstrumentation Amplifier"
   },
   {
-    "objectID": "slides/opamps-slides.html#non-inverting-amplifier",
-    "href": "slides/opamps-slides.html#non-inverting-amplifier",
+    "objectID": "slides/opamps-slides.html#active-filters",
+    "href": "slides/opamps-slides.html#active-filters",
     "title": "Operational Amplifiers (Op-Amps)",
-    "section": "Non-Inverting Amplifier",
-    "text": "Non-Inverting Amplifier\n\n\nUsing negative feedback, the op-amp adjusts \\(V_{out}\\) to make \\(V_+ = V_-\\).\nSince \\(V_+ = V_{in}\\), \\(V_- = V_{in}\\).\nUsing Ohm’s Law and Kirchhoff’s Current Law (KCL):\n\n\\(I_{f} = \\frac{V_- - V_{out}}{R_f} = \\frac{V_{in} - V_{out}}{R_f}\\)\n\\(I_{g} = \\frac{V_{-} - 0V}{R_g} = \\frac{V_{in}}{R_g}\\)\nSince \\(I_{f} = I_{g}\\) (no current into op-amp input):\n\\[\n\\begin{gather}\n\\frac{V_{in} - V_{out}}{R_f} = \\frac{V_{in}}{R_g} \\\\\n\\frac{V_{out}}{V_{in}} = 1 + \\frac{R_f}{R_g}\n\\end{gather}\n\\]\nGain is controlled by the ratio of resistors plus one (until saturation).\nThe output is in phase with the input."
+    "section": "Active Filters",
+    "text": "Active Filters\n\nActive Low-Pass Filter\nActive High-Pass Filter\nActive Band-Pass Filter"
+  },
+  {
+    "objectID": "slides/opamps-slides.html#comparator",
+    "href": "slides/opamps-slides.html#comparator",
+    "title": "Operational Amplifiers (Op-Amps)",
+    "section": "Comparator",
+    "text": "Comparator\n\nA comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.\nIt lacks negative feedback, resulting in a high gain that drives the output to saturation."
   },
   {
     "objectID": "slides/r_eq-notes.html",

@@ -474,8 +474,24 @@ window.Quarto = {
   <li><a href="#negative-feedback" id="toc-negative-feedback" class="nav-link" data-scroll-target="#negative-feedback">Negative Feedback</a></li>
   <li><a href="#buffer-operation" id="toc-buffer-operation" class="nav-link" data-scroll-target="#buffer-operation">Buffer Operation</a></li>
   <li><a href="#op-amp-chip-pinout" id="toc-op-amp-chip-pinout" class="nav-link" data-scroll-target="#op-amp-chip-pinout">Op-Amp Chip Pinout</a></li>
+  <li><a href="#amplifiers" id="toc-amplifiers" class="nav-link" data-scroll-target="#amplifiers">Amplifiers</a>
+  <ul class="collapse">
   <li><a href="#inverting-amplifier" id="toc-inverting-amplifier" class="nav-link" data-scroll-target="#inverting-amplifier">Inverting Amplifier</a></li>
   <li><a href="#non-inverting-amplifier" id="toc-non-inverting-amplifier" class="nav-link" data-scroll-target="#non-inverting-amplifier">Non-Inverting Amplifier</a></li>
+  <li><a href="#summing-amplifier" id="toc-summing-amplifier" class="nav-link" data-scroll-target="#summing-amplifier">Summing Amplifier</a></li>
+  <li><a href="#differential-amplifier" id="toc-differential-amplifier" class="nav-link" data-scroll-target="#differential-amplifier">Differential Amplifier</a></li>
+  <li><a href="#instrumentation-amplifier" id="toc-instrumentation-amplifier" class="nav-link" data-scroll-target="#instrumentation-amplifier">Instrumentation Amplifier</a></li>
+  </ul></li>
+  <li><a href="#active-filters" id="toc-active-filters" class="nav-link" data-scroll-target="#active-filters">Active Filters</a>
+  <ul class="collapse">
+  <li><a href="#active-low-pass-filter" id="toc-active-low-pass-filter" class="nav-link" data-scroll-target="#active-low-pass-filter">Active Low-Pass Filter</a></li>
+  <li><a href="#active-high-pass-filter" id="toc-active-high-pass-filter" class="nav-link" data-scroll-target="#active-high-pass-filter">Active High-Pass Filter</a></li>
+  <li><a href="#active-band-pass-filter" id="toc-active-band-pass-filter" class="nav-link" data-scroll-target="#active-band-pass-filter">Active Band-Pass Filter</a></li>
+  </ul></li>
+  <li><a href="#comparator" id="toc-comparator" class="nav-link" data-scroll-target="#comparator">Comparator</a>
+  <ul class="collapse">
+  <li><a href="#comparator-with-hysteresis" id="toc-comparator-with-hysteresis" class="nav-link" data-scroll-target="#comparator-with-hysteresis">Comparator with Hysteresis</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="opamps-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
@@ -625,8 +641,17 @@ v_+ = v_-
 </figure>
 </div>
 </section>
-<section id="inverting-amplifier" class="level2">
-<h2 class="anchored" data-anchor-id="inverting-amplifier">Inverting Amplifier</h2>
+<section id="amplifiers" class="level2">
+<h2 class="anchored" data-anchor-id="amplifiers">Amplifiers</h2>
+<ul>
+<li><p>Inverting Amplifier</p></li>
+<li><p>Non-inverting Amplifier</p></li>
+<li><p>Summing Amplifier</p></li>
+<li><p>Differential Amplifier</p></li>
+<li><p>Instrumentation Amplifier</p></li>
+</ul>
+<section id="inverting-amplifier" class="level3">
+<h3 class="anchored" data-anchor-id="inverting-amplifier">Inverting Amplifier</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/inverting_amp.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
@@ -651,8 +676,8 @@ v_+ = v_-
 </ul></li>
 </ul>
 </section>
-<section id="non-inverting-amplifier" class="level2">
-<h2 class="anchored" data-anchor-id="non-inverting-amplifier">Non-Inverting Amplifier</h2>
+<section id="non-inverting-amplifier" class="level3">
+<h3 class="anchored" data-anchor-id="non-inverting-amplifier">Non-Inverting Amplifier</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/noninverting_amp.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
@@ -676,6 +701,118 @@ v_+ = v_-
 <li><p>The output is in phase with the input.</p></li>
 </ul></li>
 </ul>
+</section>
+<section id="summing-amplifier" class="level3">
+<h3 class="anchored" data-anchor-id="summing-amplifier">Summing Amplifier</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/summing_amp.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
+<li><p>Since <span class="math inline">\(V_+ = 0V\)</span> (grounded), <span class="math inline">\(V_- = 0V\)</span>.</p></li>
+<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
+<ul>
+<li><p><span class="math inline">\(I_{1} = \frac{V_{in1} - V_-}{R_{1}} = \frac{V_{in1}}{R_{1}}\)</span></p></li>
+<li><p><span class="math inline">\(I_{2} = \frac{V_{in2} - V_-}{R_{2}} = \frac{V_{in2}}{R_{2}}\)</span></p></li>
+<li><p><span class="math inline">\(I_{f} = \frac{V_- - V_{out}}{R_f} = \frac{-V_{out}}{R_f}\)</span></p></li>
+<li><p>Since <span class="math inline">\(I_{1} + I_{2} = I_{f}\)</span> (no current into op-amp input):</p>
+<p><span class="math display">\[
+\begin{gather}
+\frac{V_{in1}}{R_{1}} + \frac{V_{in2}}{R_{2}} = \frac{-V_{out}}{R_f} \\
+V_{out} = -R_f \left( \frac{V_{in1}}{R_{1}} + \frac{V_{in2}}{R_{2}} \right)
+\end{gather}
+\]</span></p></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The output voltage is the <strong>negative weighted sum</strong> of the input voltages.</p>
+</div>
+</div>
+</section>
+<section id="differential-amplifier" class="level3">
+<h3 class="anchored" data-anchor-id="differential-amplifier">Differential Amplifier</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/differential_amp.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
+<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
+<ul>
+<li><p>For the non-inverting input:</p>
+<p><span class="math display">\[
+V_+ = V_2 \frac{R_4}{R_2 + R_4}
+\]</span></p></li>
+<li><p>For the inverting input:</p>
+<p><span class="math display">\[
+\begin{gather}
+I_1 = I_f \\
+\frac{V_1 - V_-}{R_1} = \frac{V_- - V_{out}}{R_3} \\
+\end{gather}
+\]</span></p></li>
+<li><p>If we set <span class="math inline">\(R_1 = R_2\)</span> and <span class="math inline">\(R_3 = R_4\)</span>, solving for <span class="math inline">\(V_{out}\)</span>:</p>
+<p><span class="math display">\[
+V_{out} = \frac{R_3}{R_1} (V_2 - V_1)
+\]</span></p></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The output voltage is the <strong>amplified difference</strong> between the two input voltages.</p>
+</div>
+</div>
+</section>
+<section id="instrumentation-amplifier" class="level3">
+<h3 class="anchored" data-anchor-id="instrumentation-amplifier">Instrumentation Amplifier</h3>
+</section>
+</section>
+<section id="active-filters" class="level2">
+<h2 class="anchored" data-anchor-id="active-filters">Active Filters</h2>
+<ul>
+<li><p>Active Low-Pass Filter</p></li>
+<li><p>Active High-Pass Filter</p></li>
+<li><p>Active Band-Pass Filter</p></li>
+</ul>
+<section id="active-low-pass-filter" class="level3">
+<h3 class="anchored" data-anchor-id="active-low-pass-filter">Active Low-Pass Filter</h3>
+</section>
+<section id="active-high-pass-filter" class="level3">
+<h3 class="anchored" data-anchor-id="active-high-pass-filter">Active High-Pass Filter</h3>
+</section>
+<section id="active-band-pass-filter" class="level3">
+<h3 class="anchored" data-anchor-id="active-band-pass-filter">Active Band-Pass Filter</h3>
+</section>
+</section>
+<section id="comparator" class="level2">
+<h2 class="anchored" data-anchor-id="comparator">Comparator</h2>
+<ul>
+<li><p>A comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.</p></li>
+<li><p>It lacks negative feedback, resulting in a high gain that drives the output to saturation.</p></li>
+</ul>
+<!-- TODO: Add image of comparator -->
+<section id="comparator-with-hysteresis" class="level3">
+<h3 class="anchored" data-anchor-id="comparator-with-hysteresis">Comparator with Hysteresis</h3>
+<p>Topic for BME354L…</p>
 
 
 <script type="ojs-module-contents">
@@ -692,6 +829,7 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
+</section>
 </section>
 
 </main> <!-- /main -->
