@@ -231,25 +231,49 @@ The output voltage is the **amplified difference** between the two input voltage
 
 ## Active Filters
 
-- Active Low-Pass Filter
+- "Active" filters use op-amps to provide the possibility for gain $>$ 0 dB, along
+with resistors and capacitors to achieve desired frequency response
+characteristics
 
-- Active High-Pass Filter
-
-- Active Band-Pass Filter
+- Same "rules" for analyzing op-amp circuits with negative feedback apply, along
+with those for first-order filters.
 
 ### Active Low-Pass Filter
 
+![](images/active_lpf_.webp){fig-align="center"}
+
+- D.C. Gain: $\frac{-R_2}{R_1}$
+
+- A.C. Gain: $\frac{-R_2}{R_1} \frac{1}{1+\omega R_2 C}$
+
+- Cutoff Frequency: $\omega_c = \frac{1}{R_2 C}$
+
 ### Active High-Pass Filter
+
+![](images/active_hpf.webp){fig-align="center"}
+
+![](images/active_hpf_xfer_func.webp)
 
 ### Active Band-Pass Filter
 
-## Comparator
+
+![](images/active_bpf.gif){fig-align="center"}
+
+![](images/active_bpf_xfer_func.webp){fig-align="center"}
+
+- D.C. Gain: $\frac{-R_2}{R_1}$
+
+- $\omega_{HP} = \frac{1}{R_1 C_1}$
+
+- $\omega_{LP} = \frac{1}{R_2 C_2}$
+
+### Comparator
 
 - A comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.
 
 - It lacks negative feedback, resulting in a high gain that drives the output to saturation.
 
-<!-- TODO: Add image of comparator -->
+![](images/comparator.webp){fig-align="center"}
 
 ### Comparator with Hysteresis
 
