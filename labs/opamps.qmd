@@ -8,11 +8,17 @@ format:
 
 ## Objectives
 
-- Build and analyze inverting and non-inverting amplifiers.
+- Build and analyze inverting and non-inverting amplifiers, characterizing:
 
-  - Characterize gain, phase shift, and saturation.
+  - Gain, 
+  
+  - Phase shift, and 
+  
+  - Saturation.
 
-- Build and analyze active low-pass and high-pass filters.
+- Build and analyze an active low-pass filter.
+
+- Build and analyze a summing amplifier.
 
 ## Background
 
@@ -24,8 +30,13 @@ Please review all of the lecture content on [operational amplifiers](../slides/o
 
 ![Inverting Amplifier Circuit](images/opamps/invert.png){fig-align="center"}
 
-Build the circuit above. Use $R_1$ = 2.7 kΩ, $R_f$ = 4.7 kΩ.  The input should
-be a 0.1 $V_{pp}$ sine wave at 1 kHz. The op-amp should be powered with ±12 V.
+- Build the circuit above. 
+
+  - Use $R_1$ = 2.7 kΩ, $R_f$ = 4.7 kΩ.  
+  
+  - The input should be a 0.1 $V_{pp}$ sine wave at 1 kHz. 
+  
+  - The op-amp should be powered with ±12 V.
 
 ::: callout-tip
 The pin-out for the DIP-8 package for this chip is available in the
@@ -56,11 +67,90 @@ does this compare to the nominal value?
 1. Compare the experimentally determined gain with the nominal values from the
 components in your circuit.  Discuss any differences.
 
-1. Replace $R_f ~= 100 k\Omega$ and calculate the nominal and
+1. Replace $R_f =100\,k\Omega$ and calculate the nominal and
 experimentally-measured voltage gains.  Again, discuss any differences.
 
-1. For $R_f = 100 k\Omega$, what is the maximum input voltage amplitude you can apply
+1. For $R_f = 100\,k\Omega$, what is the maximum input voltage amplitude you can apply
 before the output signal becomes saturated?  Explain why this happens.
 
 1. Demonstrate saturation on your oscilloscope by adjusting the input voltage
 amplitude to 10% greater than the threshold you specified in the previous step.
+
+### 2. Non-Inverting Amplifier
+
+![Non-Inverting Amplifier Circuit](images/opamps/non_invert.png){fig-align="center"}
+
+- Build the circuit above. 
+
+  - Apply a 0.1 $V_{pp}$, 1 kHz sine wave to the input. 
+  
+  - Let $R_1 = 560\,\Omega$ and $R_f = 150\,\Omega$. 
+
+1. Experimentally determine the voltage gain of this inverting circuit by
+capturing both the input and output signals on your oscilloscope and showing
+relevant measurements.
+
+1. What is the phase relationship between the input and output signals, and how
+does this compare to the nominal value?
+
+1. Compare the experimentally determined gain with the nominal values from the
+components in your circuit.  Discuss any differences.
+
+1. Replace $R_f =1\,k\Omega$ and calculate the nominal and
+experimentally-measured voltage gains.  Again, discuss any differences.
+
+1. For $R_f = 1\,k\Omega$, what is the maximum input voltage amplitude you can apply
+before the output signal becomes saturated?  Explain why this happens.
+
+1. Demonstrate saturation on your oscilloscope by adjusting the input voltage
+amplitude to 10% greater than the threshold you specified in the previous step.
+
+### 3. Active Low-Pass Filter
+
+![Active Low-Pass Filter Circuit](images/opamps/integrator.png){fig-align="center"}
+
+- Build the circuit above. 
+  - $R_f = R_1~= 3.3\,k\Omega$ and $C_f = 470\,nF$. 
+  
+  - Use the function generator to apply a 1 $V_{pp}$ sine wave at 1 kHz.
+  
+::: callout-tip
+This circuit sometimes misbehaves when it does not have proper decoupling
+capacitors. Have the lab staff check your circuit and tell you about decoupling
+capacitors after you build this circuit.
+:::
+
+1. Capture a screenshot of the circuit's input and output signals.
+	
+1. Change the input signal to a 1 $V_{pp}$ triangular wave at 1 kHz. Capture a screenshot of the circuit's input and output signals.
+    
+1. Hange the input signal to a 1 $V_{pp}$ square wave at 1 kHz. Capture a screenshot of the circuit's input and output signals.
+    
+1. Comment on the relationship between input and output voltages. Explain what you observe. 
+
+1. Sketch the magnitude and phase Bode plots for this circuit, annotating all important features and taking care to label the axes appropriately. 
+
+### 4. Summing Amplifier
+
+![Summing Amplifier Circuit](images/opamps/summing_amp.png){fig-align="center"}
+
+- Build the circuit above.
+
+  -  $R_a = R_b = R_f = 10\,k\Omega$.
+
+  - The op-amp should be powered with ±12 V.
+
+- Apply a 0.25 $V_{pp}$, 1 kHz sine wave to the input attached to $R_a$ and +0.25 V
+(DC) to the input attached to $R_b$.
+
+1. Capture a screenshot of the circuit's sinusoidal input and output signals.
+
+1. Derive the expected output voltage expression based on the input voltages and
+resistor values to confirm your experimental results.
+
+1. Without changing the input voltage signals, change the values of $R_a$, $R_b$, and/or $R_f$ to achieve an output signal of $V_{out} = 0.5 sin(2 \pi 1000 t) + 0.5 V$.  
+
+  a. Capture a screenshot of the output signal.
+
+  b. Show your calculations using these new resistor valuesto confirm your
+  experimental results.
