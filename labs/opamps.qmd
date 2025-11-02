@@ -124,7 +124,7 @@ capacitors after you build this circuit.
 	
 1. Change the input signal to a 1 $V_{pp}$ triangular wave at 1 kHz. Capture a screenshot of the circuit's input and output signals.
     
-1. Hange the input signal to a 1 $V_{pp}$ square wave at 1 kHz. Capture a screenshot of the circuit's input and output signals.
+1. Change the input signal to a 1 $V_{pp}$ square wave at 1 kHz. Capture a screenshot of the circuit's input and output signals.
     
 1. Comment on the relationship between input and output voltages. Explain what you observe. 
 
@@ -149,9 +149,10 @@ capacitors after you build this circuit.
 resistor values to confirm your experimental results.  Note both amplitudes and
 phase.
 
-1. Without changing the input voltage signals, change the values of $R_a$, $R_b$, and/or $R_f$ to achieve an output signal of $V_{out} = 0.5 sin(2 \pi 1000 t) + 0.5 V$.  
+1. Without changing the input voltage signals, change the values of $R_a$,
+$R_b$, and/or $R_f$ to achieve an output signal of $V_{out} = 0.5 \sin(2 \pi 1000 t + \pi) + 0.5 V$.  
 
-  a. Capture a screenshot of the output signal.
+    a. Capture a screenshot of the output signal.
 
-  b. Show your calculations using these new resistor valuesto confirm your
-  experimental results.
+    b. Show your calculations using these new resistor values to confirm your
+    experimental results.
