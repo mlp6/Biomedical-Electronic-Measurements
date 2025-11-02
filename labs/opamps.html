@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Duke Biomedical Engineering">
-<meta name="dcterms.date" content="2025-10-01">
+<meta name="dcterms.date" content="2025-11-05">
 
 <title>Op Amps: Amplifiers &amp; Active Filers – Biomedical Electronic Measurements</title>
 <style>
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -428,8 +457,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#procedure" id="toc-procedure" class="nav-link" data-scroll-target="#procedure">Procedure</a>
+  <ul class="collapse">
+  <li><a href="#inverting-amplifier" id="toc-inverting-amplifier" class="nav-link" data-scroll-target="#inverting-amplifier">1. Inverting Amplifier</a></li>
+  <li><a href="#non-inverting-amplifier" id="toc-non-inverting-amplifier" class="nav-link" data-scroll-target="#non-inverting-amplifier">2. Non-Inverting Amplifier</a></li>
+  <li><a href="#active-low-pass-filter" id="toc-active-low-pass-filter" class="nav-link" data-scroll-target="#active-low-pass-filter">3. Active Low-Pass Filter</a></li>
+  <li><a href="#summing-amplifier" id="toc-summing-amplifier" class="nav-link" data-scroll-target="#summing-amplifier">4. Summing Amplifier</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="opamps.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -457,7 +500,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2025</p>
+      <p class="date">November 5, 2025</p>
     </div>
   </div>
   
@@ -469,10 +512,181 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_opamps_hout.pdf" width="100%" height="800px" style="border:none;">
-</iframe>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<ul>
+<li><p>Build and analyze inverting and non-inverting amplifiers, characterizing:</p>
+<ul>
+<li><p>Gain,</p></li>
+<li><p>Phase shift, and</p></li>
+<li><p>Saturation.</p></li>
+</ul></li>
+<li><p>Build and analyze an active low-pass filter.</p></li>
+<li><p>Build and analyze a summing amplifier.</p></li>
+</ul>
+</section>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Please review all of the lecture content on <a href="../slides/opamps-notes.html">operational amplifiers</a>.</p>
+</section>
+<section id="procedure" class="level2">
+<h2 class="anchored" data-anchor-id="procedure">Procedure</h2>
+<section id="inverting-amplifier" class="level3">
+<h3 class="anchored" data-anchor-id="inverting-amplifier">1. Inverting Amplifier</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/opamps/invert.png" class="img-fluid figure-img"></p>
+<figcaption>Inverting Amplifier Circuit</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Build the circuit above.</p>
+<ul>
+<li><p>Use <span class="math inline">\(R_1\)</span> = 2.7 kΩ, <span class="math inline">\(R_f\)</span> = 4.7 kΩ.</p></li>
+<li><p>The input should be a 0.1 <span class="math inline">\(V_{pp}\)</span> sine wave at 1 kHz.</p></li>
+<li><p>The op-amp should be powered with ±12 V.</p></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The pin-out for the DIP-8 package for this chip is available in the <a href="https://www.ti.com/lit/ds/symlink/lf353.pdf">datasheet</a>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Opamps are active devices and must always have a source of power. Many schematics, including those that follow in this course, omit the power supply connections because they are assumed.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Opamps can be damaged by applying the wrong voltages to terminals. A good idea is to build the circuit with the power supply output turned off. When you turn on the power supply, check the supply voltages and currents. If they don’t look correct, turn off the power supply output until you’ve corrected your problem. Each LF353 opamp should draw about 4 mA from each supply.</p>
+</div>
+</div>
+<ol type="1">
+<li><p>Experimentally determine the voltage gain of this inverting circuit by capturing both the input and output signals on your oscilloscope and showing relevant measurements.</p></li>
+<li><p>What is the phase relationship between the input and output signals, and how does this compare to the nominal value?</p></li>
+<li><p>Compare the experimentally determined gain with the nominal values from the components in your circuit. Discuss any differences.</p></li>
+<li><p>Replace <span class="math inline">\(R_f =100\,k\Omega\)</span> and calculate the nominal and experimentally-measured voltage gains. Again, discuss any differences.</p></li>
+<li><p>For <span class="math inline">\(R_f = 100\,k\Omega\)</span>, what is the maximum input voltage amplitude you can apply before the output signal becomes saturated? Explain why this happens.</p></li>
+<li><p>Demonstrate saturation on your oscilloscope by adjusting the input voltage amplitude to 10% greater than the threshold you specified in the previous step.</p></li>
+</ol>
+</section>
+<section id="non-inverting-amplifier" class="level3">
+<h3 class="anchored" data-anchor-id="non-inverting-amplifier">2. Non-Inverting Amplifier</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/opamps/non_invert.png" class="img-fluid figure-img"></p>
+<figcaption>Non-Inverting Amplifier Circuit</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Build the circuit above.</p>
+<ul>
+<li><p>Apply a 0.1 <span class="math inline">\(V_{pp}\)</span>, 1 kHz sine wave to the input.</p></li>
+<li><p>Let <span class="math inline">\(R_1 = 560\,\Omega\)</span> and <span class="math inline">\(R_f = 150\,\Omega\)</span>.</p></li>
+</ul></li>
+</ul>
+<ol type="1">
+<li><p>Experimentally determine the voltage gain of this inverting circuit by capturing both the input and output signals on your oscilloscope and showing relevant measurements.</p></li>
+<li><p>What is the phase relationship between the input and output signals, and how does this compare to the nominal value?</p></li>
+<li><p>Compare the experimentally determined gain with the nominal values from the components in your circuit. Discuss any differences.</p></li>
+<li><p>Replace <span class="math inline">\(R_f =1\,k\Omega\)</span> and calculate the nominal and experimentally-measured voltage gains. Again, discuss any differences.</p></li>
+<li><p>For <span class="math inline">\(R_f = 1\,k\Omega\)</span>, what is the maximum input voltage amplitude you can apply before the output signal becomes saturated? Explain why this happens.</p></li>
+<li><p>Demonstrate saturation on your oscilloscope by adjusting the input voltage amplitude to 10% greater than the threshold you specified in the previous step.</p></li>
+</ol>
+</section>
+<section id="active-low-pass-filter" class="level3">
+<h3 class="anchored" data-anchor-id="active-low-pass-filter">3. Active Low-Pass Filter</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/opamps/integrator.png" class="img-fluid figure-img"></p>
+<figcaption>Active Low-Pass Filter Circuit</figcaption>
+</figure>
+</div>
+<ul>
+<li>Build the circuit above.
+<ul>
+<li><p><span class="math inline">\(R_f = R_1~= 3.3\,k\Omega\)</span> and <span class="math inline">\(C_f = 470\,nF\)</span>.</p></li>
+<li><p>Use the function generator to apply a 1 <span class="math inline">\(V_{pp}\)</span> sine wave at 1 kHz.</p></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This circuit sometimes misbehaves when it does not have proper decoupling capacitors. Have the lab staff check your circuit and tell you about decoupling capacitors after you build this circuit.</p>
+</div>
+</div>
+<ol type="1">
+<li><p>Capture a screenshot of the circuit’s input and output signals.</p></li>
+<li><p>Change the input signal to a 1 <span class="math inline">\(V_{pp}\)</span> triangular wave at 1 kHz. Capture a screenshot of the circuit’s input and output signals.</p></li>
+<li><p>Hange the input signal to a 1 <span class="math inline">\(V_{pp}\)</span> square wave at 1 kHz. Capture a screenshot of the circuit’s input and output signals.</p></li>
+<li><p>Comment on the relationship between input and output voltages. Explain what you observe.</p></li>
+<li><p>Sketch the magnitude and phase Bode plots for this circuit, annotating all important features and taking care to label the axes appropriately.</p></li>
+</ol>
+</section>
+<section id="summing-amplifier" class="level3">
+<h3 class="anchored" data-anchor-id="summing-amplifier">4. Summing Amplifier</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/opamps/summing_amp.png" class="img-fluid figure-img"></p>
+<figcaption>Summing Amplifier Circuit</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Build the circuit above.</p>
+<ul>
+<li><p><span class="math inline">\(R_a = R_b = R_f = 10\,k\Omega\)</span>.</p></li>
+<li><p>The op-amp should be powered with ±12 V.</p></li>
+</ul></li>
+<li><p>Apply a 0.25 <span class="math inline">\(V_{pp}\)</span>, 1 kHz sine wave to the input attached to <span class="math inline">\(R_a\)</span> and +0.25 V</p></li>
+</ul>
+<ol start="600" type="I">
+<li>to the input attached to <span class="math inline">\(R_b\)</span>.</li>
+</ol>
+<ol type="1">
+<li><p>Capture a screenshot of the circuit’s sinusoidal input and output signals.</p></li>
+<li><p>Derive the expected output voltage expression based on the input voltages and resistor values to confirm your experimental results. Note both amplitudes and phase.</p></li>
+<li><p>Without changing the input voltage signals, change the values of <span class="math inline">\(R_a\)</span>, <span class="math inline">\(R_b\)</span>, and/or <span class="math inline">\(R_f\)</span> to achieve an output signal of <span class="math inline">\(V_{out} = 0.5 sin(2 \pi 1000 t) + 0.5 V\)</span>.</p></li>
+</ol>
+<ol type="a">
+<li><p>Capture a screenshot of the output signal.</p></li>
+<li><p>Show your calculations using these new resistor valuesto confirm your experimental results.</p></li>
+</ol>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -879,4 +1093,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
