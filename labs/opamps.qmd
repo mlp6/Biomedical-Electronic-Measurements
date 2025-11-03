@@ -28,15 +28,20 @@ Please review all of the lecture content on [operational amplifiers](../slides/o
 
 ### 1. Inverting Amplifier
 
-![Inverting Amplifier Circuit](images/opamps/invert.png){fig-align="center"}
+![Inverting Amplifier Circuit](images/opamps/inverting_amp.png){fig-align="center"}
 
 - Build the circuit above. 
 
-  - Use $R_1$ = 2.7 kΩ, $R_f$ = 4.7 kΩ.  
+  - Use $R_i$ = 2.7 kΩ, $R_f$ = 4.7 kΩ.  
   
   - The input should be a 0.1 $V_{pp}$ sine wave at 1 kHz. 
   
-  - The op-amp should be powered with ±12 V.
+  - The op-amp should be powered with ±12 V.  
+  
+::: callout-note
+The $0.1 \mu F$ capacitors are for power supply decoupling, which helps
+stabalize the power supply lines to the chip.
+:::
 
 ::: callout-tip
 The pin-out for the DIP-8 package for this chip is available in the
