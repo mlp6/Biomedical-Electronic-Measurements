@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+    % Draw input resistor Ri
+    \draw (-1,2) node[above] {$V_{in}$} to[R, l=$R_i$, o-] (2,2);
+    % Draw op-amp
+    \draw (2,2) node[op amp, anchor=-] (opamp) {};
+    % Draw feedback resistor Rf
+    \draw (opamp.out) -- (4.4,3.5) to[R, l=$R_f$] (2,3.5) to[short] (opamp.-);
+    % Draw ground to non-inverting input
+    \draw (opamp.+) to[short] (2,0) node[ground] {};
+    % Draw output
+    \draw (opamp.out) to[short, -o] (opamp.out -| 5,0) node[above] {$V_{out}$};
+\end{circuitikz}
+\end{document}
