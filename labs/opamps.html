@@ -612,7 +612,7 @@ Warning
 <h3 class="anchored" data-anchor-id="non-inverting-amplifier">2. Non-Inverting Amplifier</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/opamps/non_invert.png" class="img-fluid figure-img"></p>
+<p><img src="images/opamps/noninverting_amp.png" class="img-fluid figure-img"></p>
 <figcaption>Non-Inverting Amplifier Circuit</figcaption>
 </figure>
 </div>
@@ -620,7 +620,7 @@ Warning
 <li><p>Build the circuit above.</p>
 <ul>
 <li><p>Apply a 0.1 <span class="math inline">\(V_{pp}\)</span>, 1 kHz sine wave to the input.</p></li>
-<li><p>Let <span class="math inline">\(R_1 = 560\,\Omega\)</span> and <span class="math inline">\(R_f = 150\,\Omega\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(R_i = 560\,\Omega\)</span> and <span class="math inline">\(R_f = 150\,\Omega\)</span>.</p></li>
 </ul></li>
 </ul>
 <ol type="1">
@@ -636,14 +636,14 @@ Warning
 <h3 class="anchored" data-anchor-id="active-low-pass-filter">3. Active Low-Pass Filter</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/opamps/integrator.png" class="img-fluid figure-img"></p>
+<p><img src="images/opamps/active_lpf.png" class="img-fluid figure-img"></p>
 <figcaption>Active Low-Pass Filter Circuit</figcaption>
 </figure>
 </div>
 <ul>
 <li>Build the circuit above.
 <ul>
-<li><p><span class="math inline">\(R_f = R_1~= 3.3\,k\Omega\)</span> and <span class="math inline">\(C_f = 470\,nF\)</span>.</p></li>
+<li><p><span class="math inline">\(R_f = R_i~= 3.3\,k\Omega\)</span> and <span class="math inline">\(C_f = 470\,nF\)</span>.</p></li>
 <li><p>Use the function generator to apply a 1 <span class="math inline">\(V_{pp}\)</span> sine wave at 1 kHz.</p></li>
 </ul></li>
 </ul>
@@ -661,11 +661,12 @@ Tip
 </div>
 </div>
 <ol type="1">
+<li><p>Sketch the magnitude and phase Bode plots for this circuit, annotating all important features and taking care to label the axes appropriately.</p></li>
 <li><p>Capture a screenshot of the circuit’s input and output signals.</p></li>
 <li><p>Change the input signal to a 1 <span class="math inline">\(V_{pp}\)</span> triangular wave at 1 kHz. Capture a screenshot of the circuit’s input and output signals.</p></li>
 <li><p>Change the input signal to a 1 <span class="math inline">\(V_{pp}\)</span> square wave at 1 kHz. Capture a screenshot of the circuit’s input and output signals.</p></li>
 <li><p>Comment on the relationship between input and output voltages. Explain what you observe.</p></li>
-<li><p>Sketch the magnitude and phase Bode plots for this circuit, annotating all important features and taking care to label the axes appropriately.</p></li>
+<li><p>Repeat all of the input waveforms (sine, triangle, square) at 100 Hz. Capture screenshots of the circuit’s input and output signals for each waveform and comment on the relationship between input and output voltages. Explain what you observe, and compare/contrast with the 1 kHz waveform and your insights in this circuit acting as an active low-pass filter.</p></li>
 </ol>
 </section>
 <section id="summing-amplifier" class="level3">
@@ -679,18 +680,15 @@ Tip
 <ul>
 <li><p>Build the circuit above.</p>
 <ul>
-<li><p><span class="math inline">\(R_a = R_b = R_f = 10\,k\Omega\)</span>.</p></li>
+<li><p><span class="math inline">\(R_1 = R_2 = R_f = 10\,k\Omega\)</span>.</p></li>
 <li><p>The op-amp should be powered with ±12 V.</p></li>
 </ul></li>
-<li><p>Apply a 0.25 <span class="math inline">\(V_{pp}\)</span>, 1 kHz sine wave to the input attached to <span class="math inline">\(R_a\)</span> and +0.25 V</p></li>
+<li><p>Apply a 0.25 <span class="math inline">\(V_{pp}\)</span>, 1 kHz sine wave to the input <span class="math inline">\(V_1\)</span> and +0.25 V (DC) to input <span class="math inline">\(V_2\)</span>.</p></li>
 </ul>
-<ol start="600" type="I">
-<li>to the input attached to <span class="math inline">\(R_b\)</span>.</li>
-</ol>
 <ol type="1">
 <li><p>Capture a screenshot of the circuit’s sinusoidal input and output signals.</p></li>
 <li><p>Derive the expected output voltage expression based on the input voltages and resistor values to confirm your experimental results. Note both amplitudes and phase.</p></li>
-<li><p>Without changing the input voltage signals, change the values of <span class="math inline">\(R_a\)</span>, <span class="math inline">\(R_b\)</span>, and/or <span class="math inline">\(R_f\)</span> to achieve an output signal of <span class="math inline">\(V_{out} = 0.5 \sin(2 \pi 1000 t + \pi) + 0.5 V\)</span>.</p>
+<li><p>Without changing the input voltage signals, change the values of <span class="math inline">\(R_1\)</span>, <span class="math inline">\(R_2\)</span>, and/or <span class="math inline">\(R_f\)</span> to achieve an output signal of <span class="math inline">\(V_{out} = 0.5 \sin(2 \pi 1000 t + \pi) + 0.5 V\)</span>.</p>
 <ol type="a">
 <li><p>Capture a screenshot of the output signal.</p></li>
 <li><p>Show your calculations using these new resistor values to confirm your experimental results.</p></li>
