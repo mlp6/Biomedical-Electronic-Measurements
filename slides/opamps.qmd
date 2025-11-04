@@ -248,6 +248,10 @@ with those for first-order filters.
 
 - Cutoff Frequency: $\omega_c = \frac{1}{R_2 C}$
 
+### KiCad SPICE: Active Low-Pass Filter
+
+In-class demo...
+
 ### Active High-Pass Filter
 
 ![](images/active_hpf.webp){fig-align="center"}
