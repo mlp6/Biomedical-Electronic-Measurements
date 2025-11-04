@@ -17,5 +17,13 @@
     \draw (opamp.+) to[short] (2,0) node[ground] {};
     % Draw output
     \draw (opamp.out) to[short, -o] ($(opamp.out)+(2,0)$) node[above] {$V_{out}$};
+    
+    % Add bypass capacitors
+    \draw (9,3) node[vcc] {+12 V} 
+        to[C, l_=$0.1\,\mu F$, -] (9,2)
+        to[C, l_=$0.1\,\mu F$, -] (9,1) 
+        to[short] (9,1) node[vee] {-12 V};
+    \draw (9,2) -- (10,2) -- (10,1.5) node[ground] {};
+
 \end{circuitikz}
 \end{document}

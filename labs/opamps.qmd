@@ -40,7 +40,9 @@ Please review all of the lecture content on [operational amplifiers](../slides/o
   
 ::: callout-note
 The $0.1 \mu F$ capacitors are for power supply decoupling, which helps
-stabalize the power supply lines to the chip.
+stabalize the power supply lines to the chip.  
+
+You should have these capacitors physically be as close to the op-amp power pins as possible.
 :::
 
 ::: callout-tip
