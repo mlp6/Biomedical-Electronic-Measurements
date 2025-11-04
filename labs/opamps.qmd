@@ -125,6 +125,8 @@ capacitors. Have the lab staff check your circuit and tell you about decoupling
 capacitors after you build this circuit.
 :::
 
+1. Sketch the magnitude and phase Bode plots for this circuit, annotating all important features and taking care to label the axes appropriately. 
+
 1. Capture a screenshot of the circuit's input and output signals.
 	
 1. Change the input signal to a 1 $V_{pp}$ triangular wave at 1 kHz. Capture a screenshot of the circuit's input and output signals.
@@ -133,7 +135,11 @@ capacitors after you build this circuit.
     
 1. Comment on the relationship between input and output voltages. Explain what you observe. 
 
-1. Sketch the magnitude and phase Bode plots for this circuit, annotating all important features and taking care to label the axes appropriately. 
+1. Repeat all of the input waveforms (sine, triangle, square) at 100 Hz. Capture
+screenshots of the circuit's input and output signals for each waveform and
+comment on the relationship between input and output voltages. Explain what you
+observe, and compare/contrast with the 1 kHz waveform and your insights in this
+circuit acting as an active low-pass filter.
 
 ### 4. Summing Amplifier
 
