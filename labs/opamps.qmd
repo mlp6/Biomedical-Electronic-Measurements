@@ -83,13 +83,13 @@ amplitude to 10% greater than the threshold you specified in the previous step.
 
 ### 2. Non-Inverting Amplifier
 
-![Non-Inverting Amplifier Circuit](images/opamps/non_invert.png){fig-align="center"}
+![Non-Inverting Amplifier Circuit](images/opamps/noninverting_amp.png){fig-align="center"}
 
 - Build the circuit above. 
 
   - Apply a 0.1 $V_{pp}$, 1 kHz sine wave to the input. 
   
-  - Let $R_1 = 560\,\Omega$ and $R_f = 150\,\Omega$. 
+  - Let $R_i = 560\,\Omega$ and $R_f = 150\,\Omega$. 
 
 1. Experimentally determine the voltage gain of this inverting circuit by
 capturing both the input and output signals on your oscilloscope and showing
@@ -112,10 +112,10 @@ amplitude to 10% greater than the threshold you specified in the previous step.
 
 ### 3. Active Low-Pass Filter
 
-![Active Low-Pass Filter Circuit](images/opamps/integrator.png){fig-align="center"}
+![Active Low-Pass Filter Circuit](images/opamps/active_lpf.png){fig-align="center"}
 
 - Build the circuit above. 
-  - $R_f = R_1~= 3.3\,k\Omega$ and $C_f = 470\,nF$. 
+  - $R_f = R_i~= 3.3\,k\Omega$ and $C_f = 470\,nF$. 
   
   - Use the function generator to apply a 1 $V_{pp}$ sine wave at 1 kHz.
   
@@ -141,12 +141,11 @@ capacitors after you build this circuit.
 
 - Build the circuit above.
 
-  -  $R_a = R_b = R_f = 10\,k\Omega$.
+  -  $R_1 = R_2 = R_f = 10\,k\Omega$.
 
   - The op-amp should be powered with ±12 V.
 
-- Apply a 0.25 $V_{pp}$, 1 kHz sine wave to the input attached to $R_a$ and +0.25 V
-(DC) to the input attached to $R_b$.
+- Apply a 0.25 $V_{pp}$, 1 kHz sine wave to the input $V_1$ and +0.25 V (DC) to input $V_2$.
 
 1. Capture a screenshot of the circuit's sinusoidal input and output signals.
 
@@ -154,8 +153,8 @@ capacitors after you build this circuit.
 resistor values to confirm your experimental results.  Note both amplitudes and
 phase.
 
-1. Without changing the input voltage signals, change the values of $R_a$,
-$R_b$, and/or $R_f$ to achieve an output signal of $V_{out} = 0.5 \sin(2 \pi 1000 t + \pi) + 0.5 V$.  
+1. Without changing the input voltage signals, change the values of $R_1$,
+$R_2$, and/or $R_f$ to achieve an output signal of $V_{out} = 0.5 \sin(2 \pi 1000 t + \pi) + 0.5 V$.  
 
     a. Capture a screenshot of the output signal.
 
