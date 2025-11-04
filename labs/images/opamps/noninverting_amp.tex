@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage[siunitx,american,RPvoltages]{circuitikz}
+\begin{document}
+\begin{circuitikz}
+    % Draw input directly to non-inverting input
+    % Draw op-amp
+    \draw (2,2) node[op amp, anchor=-] (opamp) {};
+    % Add power supplies
+    \draw (opamp.up) to[C, l_=$0.1 uF$] ($(opamp.up)+(0,2)$) -- ($(opamp.up)+(0,1.5)$) node[vcc] {+12 V};
+    \draw (opamp.down) to[C, l=$0.1 uF$] ($(opamp.down)+(0,-2)$) -- ($(opamp.down)+(0,-1.5)$) node[vee] {-12 V};
+    
+    % Draw feedback resistor Rf
+    \draw (opamp.out) to[short] ($(opamp.out)+(1.1,0)$) -- (5.5,5.5) to[R, l=$R_f$] (2,5.5) to[short] (opamp.-);
+    % Draw resistor Ri from inverting input to ground
+    \draw (2,5.5) to[R, l=$R_i$] (0,5.5) to[short] (0,4.5) node[ground] {};
+    % Draw input
+    \draw (opamp.+) to[short, -o] ($(opamp.+)+(-2,0)$) node[above] {$V_{in}$};
+    % Draw output
+    \draw (opamp.out) to[short, -o] ($(opamp.out)+(2,0)$) node[above] {$V_{out}$};
+\end{circuitikz}
+\end{document}
