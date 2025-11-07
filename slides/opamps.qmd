@@ -279,6 +279,8 @@ In-class demo...
 
 ![](images/comparator.webp){fig-align="center"}
 
-### Comparator with Hysteresis
+### Comparator with Hysteresis (Schmitt Trigger)
 
-Topic for BME354L...
+![](images/schmitt_trigger.webp){fig-align="center"}
+
+
