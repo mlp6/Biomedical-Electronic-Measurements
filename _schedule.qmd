@@ -9,7 +9,7 @@
 | Midterm II (Oct 27, 2025) | | |
 | Transient Analysis (Time Domain) | [-> Transient Analysis](slides/transient_analysis.qmd) | | [Transient Response](labs/transient_resp.qmd) |
 | Operational Amplifiers & Active Filters | [-> Operational Amplifiers (Op-Amps)](slides/opamps.qmd) | | [Operational Amplifiers](labs/opamps.qmd)|
-| Transformers & Diodes | | | Coming Soon |
+| Diodes & Rectifiers | [-> Diodes & Rectifiers](slides/diodes.qmd) | | [Diodes & Rectifiers](labs/diodes.qmd) |
+| Wheatstone Bridge & Sensors | [-> Wheatstone Bridge & Sensors](slides/wheatstone_bridge.qmd) | | Coming Soon |
 | Midterm III (Dec 03, 2025) | | |
-| Wheatstone Bridge | | | Coming Soon |
 | Final Lab Practical (Dec 10, 2025) | | |

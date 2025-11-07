@@ -60,6 +60,8 @@ website:
           text: "Transient Analysis"
         - href: slides/opamps.qmd
           text: "Operational Amplifiers (Op-Amps)"
+        - href: slides/diodes.qmd
+          text: "Diodes & Rectifiers"
       - section: Labs
         contents:
         - href: labs/introduction.qmd
@@ -78,8 +80,8 @@ website:
           text: "Transient Response"
         - href: labs/opamps.qmd
           text: "Operational Amplifiers"
-        - href: labs/transformers_diodes.qmd
-          text: "Transformers and Diodes"
+        - href: labs/diodes.qmd
+          text: "Diodes and Rectifiers"
         - href: labs/wheatstone_temperature.qmd
           text: "Wheatstone Bridge: Temperature Measurement"
       - section: Resources

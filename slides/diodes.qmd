@@ -1,0 +1,84 @@
+---
+title: "Diodes and Rectifiers"
+date: "2025-11-12"
+format:
+  live-html: 
+    output-file: diodes-notes.html
+  live-revealjs: 
+    output-file: diodes-slides.html
+---
+
+## Overview
+
+- Diodes: Basic operation and characteristics
+
+- Types of diodes: Zener, Schottky, LED, etc.
+
+- Rectifiers: Half-wave and full-wave
+
+## Diode Basics
+
+- [Electronics Tutorials: Diodes](https://www.electronics-tutorials.ws/diode)
+
+- A diode is a semiconductor device that allows current to flow in one direction only.
+
+![Diode Overview](images/diode_overview.webp)
+
+- **Forward Region**: Positive voltage on the anode allows current flow; exponentially increases with voltage.
+
+- **Reverse Region**: Positive voltage on the cathode blocks current flow; very small leakage current.
+
+- **Breakdown Region**: Sudden increase in current at high reverse voltage (Zener breakdown).
+
+## Types of Diodes
+
+- **Zener Diode**: Used for voltage regulation; operates in reverse breakdown region.
+
+- **Schottky Diode**: Known for low forward voltage drop and fast switching speeds.
+
+- **LED (Light Emitting Diode)**: Emits light when forward biased; used in displays and indicators.
+
+- **Photodiode**: Generates current when exposed to light; used in solar cells and light sensors.
+  
+## Modeling Diodes as Switches
+
+![](images/diodes_as_switches.webp){fig-align="center"}
+
+## Rectifiers
+
+### Half-Wave Rectifier
+
+**Half-Wave Rectifier**: Allows only one half of the AC waveform to pass; simple but inefficient.
+  
+![Half-Wave Rectifier](images/rectifier.webp){fig-align="center"}
+
+![Transformer and Rectifier Circuit](images/transformer_rectifier.webp){fig-align="center"}
+
+## How Much Power in Half-Wave Rectified Signal?
+
+![Half-Wave Rectified Power](images/half_rectified_power.webp){fig-align="center"}
+
+$$
+V_{DC} = \frac{V_{peak}}{\pi} \quad , \quad P_{DC} = \frac{V_{DC}^2}{R} = \frac{V_{peak}^2}{\pi^2 R}
+$$
+
+![Half-Wave Rectifier with Smoothing Capacitor](images/half_wave_rect_w_cap.webp){fig-align="center"}
+
+### Full-Wave Rectifier
+
+- **Full-Wave Rectifier**: Utilizes both halves of the AC waveform; more efficient and provides smoother output.
+
+![Full-Wave Rectifier](images/full_wave_rectifier.webp){fig-align="center"}
+
+![Full-Wave Rectifier with Transformer](images/full_wave_rectifier_transformer.webp){fig-align="center"}
+
+## Applications of Diodes
+- Voltage regulation (Zener diodes)
+- Signal demodulation
+- Power conversion (rectifiers)
+- Light emission (LEDs)
+- Photodetection (photodiodes)
+  
+### Light Emitting Diodes (LEDs)
+
+![LED](images/led.webp){fig-align="center"}
