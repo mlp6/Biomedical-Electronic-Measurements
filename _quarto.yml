@@ -112,6 +112,8 @@ website:
           text: "Problem Set 05"
         - href: problem_sets/BME253_PSET5_SOLUTION.pdf
           text: "Problem Set 05: Solutions"
+        - href: problem_sets/ps6.qmd
+          text: "Problem Set 06"
       - section: "Exams"
         contents:
         - href: "exams/BME153_S09_TEST1_SOLUTIONS.pdf"
