@@ -74,6 +74,6 @@ a. For your design, how much power does your $v_{in}(t)$ signal source deliver i
 
 For the differential amplifier circuit that was presented in [lecture](../slides/opamps.qmd), we make an assumption that $R_1 = R_2$ and $R_3 = R_4$.
 
-![Differential Amplifier Circuit](../slides/images/differential_amp.webp){fig-align="center"}
+![Differential Amplifier Circuit](images/differential_amp.png){fig-align="center"}
 
 If $R_2 = (1\pm0.1)R_1$ and $R_4 = (1\pm0.1)R_3$, meaning that the resistors can vary by as much as 10% from their nominal values, what is the maximum possible error in the output voltage $V_{out}$ when the input voltages are $V_1 = 2$ V and $V_2 = 1$ V?  Assume that $R_1 = R_3 = 10$ k$\Omega$.
