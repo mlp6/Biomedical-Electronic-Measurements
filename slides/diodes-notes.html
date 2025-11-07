@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Duke Biomedical Engineering">
-<meta name="dcterms.date" content="2025-10-01">
+<meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
+<meta name="dcterms.date" content="2025-11-12">
 
-<title>Filters – Biomedical Electronic Measurements</title>
+<title>Diodes and Rectifiers – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-fced259a1985fd972ecb57c7cd45153f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-13f007c1943c6d3711256cc1d3aa22a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-89abcb12e8852b82dab2915b19c79ac0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,9 +70,40 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -82,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/filters.html">Filters</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/diodes-notes.html">Diodes &amp; Rectifiers</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -235,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/diodes-notes.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/diodes-notes.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Diodes &amp; Rectifiers</span></a>
   </div>
 </li>
@@ -282,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/filters.html" class="sidebar-item-text sidebar-link active">
+  <a href="../labs/filters.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Filters</span></a>
   </div>
 </li>
@@ -434,36 +467,61 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#diode-basics" id="toc-diode-basics" class="nav-link" data-scroll-target="#diode-basics">Diode Basics</a></li>
+  <li><a href="#types-of-diodes" id="toc-types-of-diodes" class="nav-link" data-scroll-target="#types-of-diodes">Types of Diodes</a></li>
+  <li><a href="#modeling-diodes-as-switches" id="toc-modeling-diodes-as-switches" class="nav-link" data-scroll-target="#modeling-diodes-as-switches">Modeling Diodes as Switches</a></li>
+  <li><a href="#rectifiers" id="toc-rectifiers" class="nav-link" data-scroll-target="#rectifiers">Rectifiers</a>
+  <ul class="collapse">
+  <li><a href="#half-wave-rectifier" id="toc-half-wave-rectifier" class="nav-link" data-scroll-target="#half-wave-rectifier">Half-Wave Rectifier</a></li>
+  </ul></li>
+  <li><a href="#how-much-power-in-half-wave-rectified-signal" id="toc-how-much-power-in-half-wave-rectified-signal" class="nav-link" data-scroll-target="#how-much-power-in-half-wave-rectified-signal">How Much Power in Half-Wave Rectified Signal?</a>
+  <ul class="collapse">
+  <li><a href="#full-wave-rectifier" id="toc-full-wave-rectifier" class="nav-link" data-scroll-target="#full-wave-rectifier">Full-Wave Rectifier</a></li>
+  </ul></li>
+  <li><a href="#applications-of-diodes" id="toc-applications-of-diodes" class="nav-link" data-scroll-target="#applications-of-diodes">Applications of Diodes</a>
+  <ul class="collapse">
+  <li><a href="#light-emitting-diodes-leds" id="toc-light-emitting-diodes-leds" class="nav-link" data-scroll-target="#light-emitting-diodes-leds">Light Emitting Diodes (LEDs)</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="diodes-slides.html"><i class="bi bi-file-slides"></i>RevealJS (live)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/filters.html">Filters</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slides/intro-circuits-notes.html">Learning Modules</a></li><li class="breadcrumb-item"><a href="../slides/diodes-notes.html">Diodes &amp; Rectifiers</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Filters</h1>
-<p class="subtitle lead">BME253L - Fall 2025 - Palmeri</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Lab</div>
-  </div>
-  </div>
+<h1 class="title">Diodes and Rectifiers</h1>
+<p class="subtitle lead">BME253L - Fall 2025</p>
+</div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Dr.&nbsp;Mark Palmeri, M.D., Ph.D. </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Duke University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Duke Biomedical Engineering </p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2025</p>
+      <p class="date">November 12, 2025</p>
     </div>
   </div>
   
@@ -475,12 +533,152 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<iframe src="https://mlp6.pages.oit.duke.edu/bme253-labs/BME253_filters_hout.pdf" width="100%" height="800px" style="border:none;">
-</iframe>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<ul>
+<li><p>Diodes: Basic operation and characteristics</p></li>
+<li><p>Types of diodes: Zener, Schottky, LED, etc.</p></li>
+<li><p>Rectifiers: Half-wave and full-wave</p></li>
+</ul>
+</section>
+<section id="diode-basics" class="level2">
+<h2 class="anchored" data-anchor-id="diode-basics">Diode Basics</h2>
+<ul>
+<li><p><a href="https://www.electronics-tutorials.ws/diode">Electronics Tutorials: Diodes</a></p></li>
+<li><p>A diode is a semiconductor device that allows current to flow in one direction only.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/diode_overview.webp" class="img-fluid figure-img"></p>
+<figcaption>Diode Overview</figcaption>
+</figure>
+</div>
+<ul>
+<li><p><strong>Forward Region</strong>: Positive voltage on the anode allows current flow; exponentially increases with voltage.</p></li>
+<li><p><strong>Reverse Region</strong>: Positive voltage on the cathode blocks current flow; very small leakage current.</p></li>
+<li><p><strong>Breakdown Region</strong>: Sudden increase in current at high reverse voltage (Zener breakdown).</p></li>
+</ul>
+</section>
+<section id="types-of-diodes" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-diodes">Types of Diodes</h2>
+<ul>
+<li><p><strong>Zener Diode</strong>: Used for voltage regulation; operates in reverse breakdown region.</p></li>
+<li><p><strong>Schottky Diode</strong>: Known for low forward voltage drop and fast switching speeds.</p></li>
+<li><p><strong>LED (Light Emitting Diode)</strong>: Emits light when forward biased; used in displays and indicators.</p></li>
+<li><p><strong>Photodiode</strong>: Generates current when exposed to light; used in solar cells and light sensors.</p></li>
+</ul>
+</section>
+<section id="modeling-diodes-as-switches" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-diodes-as-switches">Modeling Diodes as Switches</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/diodes_as_switches.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="rectifiers" class="level2">
+<h2 class="anchored" data-anchor-id="rectifiers">Rectifiers</h2>
+<section id="half-wave-rectifier" class="level3">
+<h3 class="anchored" data-anchor-id="half-wave-rectifier">Half-Wave Rectifier</h3>
+<p><strong>Half-Wave Rectifier</strong>: Allows only one half of the AC waveform to pass; simple but inefficient.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rectifier.webp" class="img-fluid figure-img"></p>
+<figcaption>Half-Wave Rectifier</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/transformer_rectifier.webp" class="img-fluid figure-img"></p>
+<figcaption>Transformer and Rectifier Circuit</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="how-much-power-in-half-wave-rectified-signal" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-power-in-half-wave-rectified-signal">How Much Power in Half-Wave Rectified Signal?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/half_rectified_power.webp" class="img-fluid figure-img"></p>
+<figcaption>Half-Wave Rectified Power</figcaption>
+</figure>
+</div>
+<p><span class="math display">\[
+V_{DC} = \frac{V_{peak}}{\pi} \quad , \quad P_{DC} = \frac{V_{DC}^2}{R} = \frac{V_{peak}^2}{\pi^2 R}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/half_wave_rect_w_cap.webp" class="img-fluid figure-img"></p>
+<figcaption>Half-Wave Rectifier with Smoothing Capacitor</figcaption>
+</figure>
+</div>
+<section id="full-wave-rectifier" class="level3">
+<h3 class="anchored" data-anchor-id="full-wave-rectifier">Full-Wave Rectifier</h3>
+<ul>
+<li><strong>Full-Wave Rectifier</strong>: Utilizes both halves of the AC waveform; more efficient and provides smoother output.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/full_wave_rectifier.webp" class="img-fluid figure-img"></p>
+<figcaption>Full-Wave Rectifier</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/full_wave_rectifier_transformer.webp" class="img-fluid figure-img"></p>
+<figcaption>Full-Wave Rectifier with Transformer</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="applications-of-diodes" class="level2">
+<h2 class="anchored" data-anchor-id="applications-of-diodes">Applications of Diodes</h2>
+<ul>
+<li>Voltage regulation (Zener diodes)</li>
+<li>Signal demodulation</li>
+<li>Power conversion (rectifiers)</li>
+<li>Light emission (LEDs)</li>
+<li>Photodetection (photodiodes)</li>
+</ul>
+<section id="light-emitting-diodes-leds" class="level3">
+<h3 class="anchored" data-anchor-id="light-emitting-diodes-leds">Light Emitting Diodes (LEDs)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/led.webp" class="img-fluid figure-img"></p>
+<figcaption>LED</figcaption>
+</figure>
+</div>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+</section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../slides";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -885,4 +1083,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

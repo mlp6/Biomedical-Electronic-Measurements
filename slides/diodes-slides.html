@@ -12,8 +12,8 @@
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Dr.&nbsp;Mark Palmeri, M.D., Ph.D.">
-  <meta name="dcterms.date" content="2025-11-03">
-  <title>Biomedical Electronic Measurements – Operational Amplifiers (Op-Amps)</title>
+  <meta name="dcterms.date" content="2025-11-12">
+  <title>Biomedical Electronic Measurements – Diodes and Rectifiers</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -132,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Operational Amplifiers (Op-Amps)</h1>
+  <h1 class="title">Diodes and Rectifiers</h1>
   <p class="subtitle">BME253L - Fall 2025</p>
 
 <div class="quarto-title-authors">
@@ -146,300 +146,121 @@ Dr.&nbsp;Mark Palmeri, M.D., Ph.D.
     </div>
 </div>
 
-  <p class="date">November 3, 2025</p>
+  <p class="date">November 12, 2025</p>
 </section>
 <section id="overview" class="title-slide slide level2 center">
 <h2>Overview</h2>
 <ul>
-<li><p>Operational Amplifiers (Op-Amps) are fundamental building blocks in analog electronics.</p></li>
-<li><p>They are used in various applications such as amplification, filtering, and mathematical operations, such as “comparison”.</p></li>
-<li><p>They are characterized by high gain, high input impedance, and low output impedance. Their application as a <strong>buffer</strong> is particularly important in preventing signal loading.</p></li>
-<li><p>They can be used in both open-loop and closed-loop configurations.</p>
-<ul>
-<li><p>With negative feedback, they can achieve precise gain control and stability.</p></li>
-<li><p>With positive feedback, they can be used in applications like oscillators and comparators.</p></li>
-</ul></li>
-<li><p>They can perform mathematical operations such as addition, subtraction, integration, and differentiation.</p></li>
+<li><p>Diodes: Basic operation and characteristics</p></li>
+<li><p>Types of diodes: Zener, Schottky, LED, etc.</p></li>
+<li><p>Rectifiers: Half-wave and full-wave</p></li>
 </ul>
 </section>
 
-<section id="background" class="title-slide slide level2 center">
-<h2>Background</h2>
+<section id="diode-basics" class="title-slide slide level2 center">
+<h2>Diode Basics</h2>
 <ul>
-<li><p><a href="https://www.electronics-tutorials.ws/opamp">Electronics Tutorials: Operational Amplifiers</a></p></li>
-<li><p><a href="https://www.ti.com/lit/an/slaa068b/slaa068b.pdf">Texas Instruments: Understanding Basic Analog – Ideal Op Amps</a></p></li>
-</ul>
-<p><em>Credit: Many images from Electronics Tutorials website.</em></p>
-</section>
-
-<section id="ideal-op-amp-model" class="title-slide slide level2 center">
-<h2>Ideal Op-Amp Model</h2>
-<ul>
-<li><p>An ideal op-amp has the following characteristics:</p>
-<ul>
-<li><p>Infinite open-loop gain (A → ∞)</p></li>
-<li><p>Infinite input impedance (<span class="math inline">\(Z_{in}\)</span> → ∞)</p></li>
-<li><p>Zero output impedance (<span class="math inline">\(Z_{out}\)</span> = 0)</p></li>
-<li><p>Infinite bandwidth (no frequency dependence)</p></li>
-<li><p>Zero offset voltage (output is zero when inputs are equal)</p></li>
-</ul></li>
+<li><p><a href="https://www.electronics-tutorials.ws/diode">Electronics Tutorials: Diodes</a></p></li>
+<li><p>A diode is a semiconductor device that allows current to flow in one direction only.</p></li>
 </ul>
 
-<img data-src="images/ideal_opamp_model.webp" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li>In practical applications, real op-amps deviate from these ideal characteristics, but the ideal model provides a useful approximation for analysis.</li>
+<img data-src="images/diode_overview.webp" class="r-stretch quarto-figure-center"><p class="caption">Diode Overview</p><ul>
+<li><p><strong>Forward Region</strong>: Positive voltage on the anode allows current flow; exponentially increases with voltage.</p></li>
+<li><p><strong>Reverse Region</strong>: Positive voltage on the cathode blocks current flow; very small leakage current.</p></li>
+<li><p><strong>Breakdown Region</strong>: Sudden increase in current at high reverse voltage (Zener breakdown).</p></li>
 </ul>
 </section>
 
-<section id="voltage-saturation" class="title-slide slide level2 center">
-<h2>Voltage Saturation</h2>
+<section id="types-of-diodes" class="title-slide slide level2 center">
+<h2>Types of Diodes</h2>
 <ul>
-<li><p>Real op-amps have power supply limits that constrain the output voltage range.</p></li>
-<li><p>When the output voltage exceeds these limits, the op-amp saturates, resulting in distortion of the output signal.</p></li>
-<li><p>Saturation can be mitigated by ensuring that the input signals and feedback network are designed to keep the output within the linear operating range of the op-amp.</p></li>
+<li><p><strong>Zener Diode</strong>: Used for voltage regulation; operates in reverse breakdown region.</p></li>
+<li><p><strong>Schottky Diode</strong>: Known for low forward voltage drop and fast switching speeds.</p></li>
+<li><p><strong>LED (Light Emitting Diode)</strong>: Emits light when forward biased; used in displays and indicators.</p></li>
+<li><p><strong>Photodiode</strong>: Generates current when exposed to light; used in solar cells and light sensors.</p></li>
 </ul>
 </section>
 
-<section id="buffer-voltage-follower" class="title-slide slide level2 center">
-<h2>Buffer / Voltage Follower</h2>
-<ul>
-<li><p>A buffer, or voltage follower, is a configuration where the output voltage directly follows the input voltage.</p></li>
-<li><p>It is used to isolate different stages of a circuit, preventing loading effects and ensuring signal integrity.</p></li>
-<li><p>The voltage follower has a gain of 1 (unity gain) and provides high input impedance and low output impedance.</p></li>
-</ul>
+<section id="modeling-diodes-as-switches" class="title-slide slide level2 center">
+<h2>Modeling Diodes as Switches</h2>
 
-<img data-src="images/buffer.webp" class="quarto-figure quarto-figure-center r-stretch"></section>
-
-<section id="negative-feedback" class="title-slide slide level2 center">
-<h2>Negative Feedback</h2>
-<ul>
-<li><p>Negative feedback occurs when a portion of the output signal is fed back to the inverting input of the op-amp.</p></li>
-<li><p>This configuration stabilizes the gain and improves linearity.</p></li>
-<li><p>It can also reduce distortion and increase bandwidth.</p></li>
-</ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>Negative feedback means that the op-amp will adjust its output to minimize the difference between the inverting and non-inverting inputs.</p>
-<p><span class="math display">\[
-v_+ = v_-
-\]</span></p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="buffer-operation" class="title-slide slide level2 center">
-<h2>Buffer Operation</h2>
-<ul>
-<li><p><span class="math inline">\(V_-\)</span> is connected to <span class="math inline">\(V_{out}\)</span>, so the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
-<li><p><span class="math inline">\(V_{out} = V_{in}\)</span>.</p></li>
-<li><p><span class="math inline">\(I_{in} = 0\)</span> (ideal op-amp input current).</p></li>
-</ul>
-</section>
-
-<section id="op-amp-chip-pinout" class="title-slide slide level2 center">
-<h2>Op-Amp Chip Pinout</h2>
-
-<img data-src="images/opamp_chip_pinout.webp" class="quarto-figure quarto-figure-center r-stretch"></section>
+<img data-src="images/diodes_as_switches.webp" class="quarto-figure quarto-figure-center r-stretch"></section>
 
 <section>
-<section id="amplifiers" class="title-slide slide level2 center">
-<h2>Amplifiers</h2>
-<ul>
-<li><p>Inverting Amplifier</p></li>
-<li><p>Non-inverting Amplifier</p></li>
-<li><p>Summing Amplifier</p></li>
-<li><p>Differential Amplifier</p></li>
-<li><p>Instrumentation Amplifier</p></li>
-</ul>
-</section>
-<section id="inverting-amplifier" class="slide level3">
-<h3>Inverting Amplifier</h3>
+<section id="rectifiers" class="title-slide slide level2 center">
+<h2>Rectifiers</h2>
 
-<img data-src="images/inverting_amp.webp" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
-<li><p>Since <span class="math inline">\(V_+ = 0V\)</span> (grounded), <span class="math inline">\(V_- = 0V\)</span>.</p></li>
-<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
-<ul>
-<li><p><span class="math inline">\(I_{in} = \frac{V_{in} - V_-}{R_{in}} = \frac{V_{in}}{R_{in}}\)</span></p></li>
-<li><p><span class="math inline">\(I_{f} = \frac{V_- - V_{out}}{R_f} = \frac{-V_{out}}{R_f}\)</span></p></li>
-<li><p>Since <span class="math inline">\(I_{in} = I_{f}\)</span> (no current into op-amp input):</p>
-<p><span class="math display">\[
-\begin{gather}
-\frac{V_{in}}{R_{in}} = \frac{-V_{out}}{R_f} \\
-\frac{V_{out}}{V_{in}} = -\frac{R_f}{R_{in}}
-\end{gather}
-\]</span></p></li>
-<li><p>Gain is controlled by the ratio of resistors (until saturation).</p></li>
-<li><p>The negative sign indicates a 180-degree phase shift between input and output.</p></li>
-</ul></li>
-</ul>
 </section>
-<section id="non-inverting-amplifier" class="slide level3">
-<h3>Non-Inverting Amplifier</h3>
-
-<img data-src="images/noninverting_amp.webp" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
-<li><p>Since <span class="math inline">\(V_+ = V_{in}\)</span>, <span class="math inline">\(V_- = V_{in}\)</span>.</p></li>
-<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
-<ul>
-<li><p><span class="math inline">\(I_{f} = \frac{V_- - V_{out}}{R_f} = \frac{V_{in} - V_{out}}{R_f}\)</span></p></li>
-<li><p><span class="math inline">\(I_{g} = \frac{V_{-} - 0V}{R_g} = \frac{V_{in}}{R_g}\)</span></p></li>
-<li><p>Since <span class="math inline">\(I_{f} = I_{g}\)</span> (no current into op-amp input):</p>
-<p><span class="math display">\[
-\begin{gather}
-\frac{V_{in} - V_{out}}{R_f} = \frac{V_{in}}{R_g} \\
-\frac{V_{out}}{V_{in}} = 1 + \frac{R_f}{R_g}
-\end{gather}
-\]</span></p></li>
-<li><p>Gain is controlled by the ratio of resistors plus one (until saturation).</p></li>
-<li><p>The output is in phase with the input.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="summing-amplifier" class="slide level3">
-<h3>Summing Amplifier</h3>
-
-<img data-src="images/summing_amp.webp" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
-<li><p>Since <span class="math inline">\(V_+ = 0V\)</span> (grounded), <span class="math inline">\(V_- = 0V\)</span>.</p></li>
-<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
-<ul>
-<li><p><span class="math inline">\(I_{1} = \frac{V_{in1} - V_-}{R_{1}} = \frac{V_{in1}}{R_{1}}\)</span></p></li>
-<li><p><span class="math inline">\(I_{2} = \frac{V_{in2} - V_-}{R_{2}} = \frac{V_{in2}}{R_{2}}\)</span></p></li>
-<li><p><span class="math inline">\(I_{f} = \frac{V_- - V_{out}}{R_f} = \frac{-V_{out}}{R_f}\)</span></p></li>
-<li><p>Since <span class="math inline">\(I_{1} + I_{2} = I_{f}\)</span> (no current into op-amp input):</p>
-<p><span class="math display">\[
-\begin{gather}
-\frac{V_{in1}}{R_{1}} + \frac{V_{in2}}{R_{2}} = \frac{-V_{out}}{R_f} \\
-V_{out} = -R_f \left( \frac{V_{in1}}{R_{1}} + \frac{V_{in2}}{R_{2}} \right)
-\end{gather}
-\]</span></p></li>
-</ul></li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="half-wave-rectifier" class="slide level3">
+<h3>Half-Wave Rectifier</h3>
+<p><strong>Half-Wave Rectifier</strong>: Allows only one half of the AC waveform to pass; simple but inefficient.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/rectifier.webp"></p>
+<figcaption>Half-Wave Rectifier</figcaption>
+</figure>
 </div>
-<p><strong>Note</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/transformer_rectifier.webp"></p>
+<figcaption>Transformer and Rectifier Circuit</figcaption>
+</figure>
 </div>
-<div class="callout-content">
-<p>The output voltage is the <strong>negative weighted sum</strong> of the input voltages.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="differential-amplifier" class="slide level3">
-<h3>Differential Amplifier</h3>
-
-<img data-src="images/differential_amp.webp" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li><p>Using negative feedback, the op-amp adjusts <span class="math inline">\(V_{out}\)</span> to make <span class="math inline">\(V_+ = V_-\)</span>.</p></li>
-<li><p>Using Ohm’s Law and Kirchhoff’s Current Law (KCL):</p>
-<ul>
-<li><p>For the non-inverting input:</p>
-<p><span class="math display">\[
-V_+ = V_2 \frac{R_4}{R_2 + R_4}
-\]</span></p></li>
-<li><p>For the inverting input:</p>
-<p><span class="math display">\[
-\begin{gather}
-I_1 = I_f \\
-\frac{V_1 - V_-}{R_1} = \frac{V_- - V_{out}}{R_3} \\
-\end{gather}
-\]</span></p></li>
-<li><p>If we set <span class="math inline">\(R_1 = R_2\)</span> and <span class="math inline">\(R_3 = R_4\)</span>, solving for <span class="math inline">\(V_{out}\)</span>:</p>
-<p><span class="math display">\[
-V_{out} = \frac{R_3}{R_1} (V_2 - V_1)
-\]</span></p></li>
-</ul></li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>The output voltage is the <strong>amplified difference</strong> between the two input voltages.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="instrumentation-amplifier" class="slide level3">
-<h3>Instrumentation Amplifier</h3>
 </section></section>
 <section>
-<section id="active-filters" class="title-slide slide level2 center">
-<h2>Active Filters</h2>
-<ul>
-<li><p>“Active” filters use op-amps to provide the possibility for gain <span class="math inline">\(&gt;\)</span> 0 dB, along with resistors and capacitors to achieve desired frequency response characteristics</p></li>
-<li><p>Same “rules” for analyzing op-amp circuits with negative feedback apply, along with those for first-order filters.</p></li>
-</ul>
-</section>
-<section id="active-low-pass-filter" class="slide level3">
-<h3>Active Low-Pass Filter</h3>
-
-<img data-src="images/active_lpf_.webp" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li><p>D.C. Gain: <span class="math inline">\(\frac{-R_2}{R_1}\)</span></p></li>
-<li><p>A.C. Gain: <span class="math inline">\(\frac{-R_2}{R_1} \frac{1}{1+\omega R_2 C}\)</span></p></li>
-<li><p>Cutoff Frequency: <span class="math inline">\(\omega_c = \frac{1}{R_2 C}\)</span></p></li>
-</ul>
-</section>
-<section id="kicad-spice-active-low-pass-filter" class="slide level3">
-<h3>KiCad SPICE: Active Low-Pass Filter</h3>
-<p>In-class demo…</p>
-</section>
-<section id="active-high-pass-filter" class="slide level3">
-<h3>Active High-Pass Filter</h3>
+<section id="how-much-power-in-half-wave-rectified-signal" class="title-slide slide level2 center">
+<h2>How Much Power in Half-Wave Rectified Signal?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/active_hpf.webp" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/half_rectified_power.webp"></p>
+<figcaption>Half-Wave Rectified Power</figcaption>
 </figure>
 </div>
-<p><img data-src="images/active_hpf_xfer_func.webp"></p>
-</section>
-<section id="active-band-pass-filter" class="slide level3">
-<h3>Active Band-Pass Filter</h3>
+<p><span class="math display">\[
+V_{DC} = \frac{V_{peak}}{\pi} \quad , \quad P_{DC} = \frac{V_{DC}^2}{R} = \frac{V_{peak}^2}{\pi^2 R}
+\]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/active_bpf.gif" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/half_wave_rect_w_cap.webp"></p>
+<figcaption>Half-Wave Rectifier with Smoothing Capacitor</figcaption>
+</figure>
+</div>
+</section>
+<section id="full-wave-rectifier" class="slide level3">
+<h3>Full-Wave Rectifier</h3>
+<ul>
+<li><strong>Full-Wave Rectifier</strong>: Utilizes both halves of the AC waveform; more efficient and provides smoother output.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/full_wave_rectifier.webp"></p>
+<figcaption>Full-Wave Rectifier</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/active_bpf_xfer_func.webp" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/full_wave_rectifier_transformer.webp"></p>
+<figcaption>Full-Wave Rectifier with Transformer</figcaption>
 </figure>
 </div>
+</section></section>
+<section>
+<section id="applications-of-diodes" class="title-slide slide level2 center">
+<h2>Applications of Diodes</h2>
 <ul>
-<li><p>D.C. Gain: <span class="math inline">\(\frac{-R_2}{R_1}\)</span></p></li>
-<li><p><span class="math inline">\(\omega_{HP} = \frac{1}{R_1 C_1}\)</span></p></li>
-<li><p><span class="math inline">\(\omega_{LP} = \frac{1}{R_2 C_2}\)</span></p></li>
+<li>Voltage regulation (Zener diodes)</li>
+<li>Signal demodulation</li>
+<li>Power conversion (rectifiers)</li>
+<li>Light emission (LEDs)</li>
+<li>Photodetection (photodiodes)</li>
 </ul>
 </section>
-<section id="comparator" class="slide level3">
-<h3>Comparator</h3>
-<ul>
-<li><p>A comparator is a device that compares two voltages or currents and outputs a digital signal indicating which is larger.</p></li>
-<li><p>It lacks negative feedback, resulting in a high gain that drives the output to saturation.</p></li>
-</ul>
-
-<img data-src="images/comparator.webp" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="comparator-with-hysteresis-schmitt-trigger" class="slide level3">
-<h3>Comparator with Hysteresis (Schmitt Trigger)</h3>
+<section id="light-emitting-diodes-leds" class="slide level3">
+<h3>Light Emitting Diodes (LEDs)</h3>
 
 
 
-<img data-src="images/schmitt_trigger.webp" class="quarto-figure quarto-figure-center r-stretch"><script type="ojs-module-contents">
+<img data-src="images/led.webp" class="r-stretch quarto-figure-center"><p class="caption">LED</p><script type="ojs-module-contents">
 eyJjb250ZW50cyI6W119
 </script>
 <div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
