@@ -455,6 +455,17 @@
     ]
   },
   {
+    "objectID": "slides/diodes-notes.html#voltage-regulation-with-zener-diodes",
+    "href": "slides/diodes-notes.html#voltage-regulation-with-zener-diodes",
+    "title": "Diodes and Rectifiers",
+    "section": "Voltage Regulation with Zener Diodes",
+    "text": "Voltage Regulation with Zener Diodes\nIn-class demo…",
+    "crumbs": [
+      "Learning Modules",
+      "Diodes & Rectifiers"
+    ]
+  },
+  {
     "objectID": "slides/diodes-notes.html#transformers",
     "href": "slides/diodes-notes.html#transformers",
     "title": "Diodes and Rectifiers",
@@ -535,6 +546,13 @@
     "title": "Diodes and Rectifiers",
     "section": "Applications of Diodes",
     "text": "Applications of Diodes\n\nVoltage regulation (Zener diodes)\nSignal demodulation\nPower conversion (rectifiers)\nLight emission (LEDs)\nPhotodetection (photodiodes)"
+  },
+  {
+    "objectID": "slides/diodes-slides.html#voltage-regulation-with-zener-diodes",
+    "href": "slides/diodes-slides.html#voltage-regulation-with-zener-diodes",
+    "title": "Diodes and Rectifiers",
+    "section": "Voltage Regulation with Zener Diodes",
+    "text": "Voltage Regulation with Zener Diodes\nIn-class demo…"
   },
   {
     "objectID": "slides/diodes-slides.html#transformers",
