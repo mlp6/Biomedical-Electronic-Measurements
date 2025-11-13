@@ -455,6 +455,39 @@
     ]
   },
   {
+    "objectID": "slides/diodes-notes.html#transformers",
+    "href": "slides/diodes-notes.html#transformers",
+    "title": "Diodes and Rectifiers",
+    "section": "Transformers",
+    "text": "Transformers\nhttps://www.electronics-tutorials.ws/transformer/transformer-basics.html",
+    "crumbs": [
+      "Learning Modules",
+      "Diodes & Rectifiers"
+    ]
+  },
+  {
+    "objectID": "slides/diodes-notes.html#clipping-and-clamping-circuits",
+    "href": "slides/diodes-notes.html#clipping-and-clamping-circuits",
+    "title": "Diodes and Rectifiers",
+    "section": "Clipping and Clamping Circuits",
+    "text": "Clipping and Clamping Circuits\n\nClipping Circuits: https://www.electronics-tutorials.ws/diode/diode-clipping-circuits.html\nClamping Circuits: https://www.tutorialspoint.com/electronic_circuits/electronic_clamper_circuits.htm",
+    "crumbs": [
+      "Learning Modules",
+      "Diodes & Rectifiers"
+    ]
+  },
+  {
+    "objectID": "slides/diodes-notes.html#photodiode-amplifier-circuit",
+    "href": "slides/diodes-notes.html#photodiode-amplifier-circuit",
+    "title": "Diodes and Rectifiers",
+    "section": "Photodiode Amplifier Circuit",
+    "text": "Photodiode Amplifier Circuit\n\nhttps://www.electronics-tutorials.ws/diode/photodiode.html",
+    "crumbs": [
+      "Learning Modules",
+      "Diodes & Rectifiers"
+    ]
+  },
+  {
     "objectID": "slides/diodes-slides.html#overview",
     "href": "slides/diodes-slides.html#overview",
     "title": "Diodes and Rectifiers",
@@ -502,6 +535,27 @@
     "title": "Diodes and Rectifiers",
     "section": "Applications of Diodes",
     "text": "Applications of Diodes\n\nVoltage regulation (Zener diodes)\nSignal demodulation\nPower conversion (rectifiers)\nLight emission (LEDs)\nPhotodetection (photodiodes)"
+  },
+  {
+    "objectID": "slides/diodes-slides.html#transformers",
+    "href": "slides/diodes-slides.html#transformers",
+    "title": "Diodes and Rectifiers",
+    "section": "Transformers",
+    "text": "Transformers\nhttps://www.electronics-tutorials.ws/transformer/transformer-basics.html"
+  },
+  {
+    "objectID": "slides/diodes-slides.html#clipping-and-clamping-circuits",
+    "href": "slides/diodes-slides.html#clipping-and-clamping-circuits",
+    "title": "Diodes and Rectifiers",
+    "section": "Clipping and Clamping Circuits",
+    "text": "Clipping and Clamping Circuits\n\nClipping Circuits: https://www.electronics-tutorials.ws/diode/diode-clipping-circuits.html\nClamping Circuits: https://www.tutorialspoint.com/electronic_circuits/electronic_clamper_circuits.htm"
+  },
+  {
+    "objectID": "slides/diodes-slides.html#photodiode-amplifier-circuit",
+    "href": "slides/diodes-slides.html#photodiode-amplifier-circuit",
+    "title": "Diodes and Rectifiers",
+    "section": "Photodiode Amplifier Circuit",
+    "text": "Photodiode Amplifier Circuit\n\nhttps://www.electronics-tutorials.ws/diode/photodiode.html"
   },
   {
     "objectID": "slides/ecad_kicad_schematic-notes.html",
