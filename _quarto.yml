@@ -82,8 +82,6 @@ website:
           text: "Operational Amplifiers"
         - href: labs/diodes.qmd
           text: "Diodes and Rectifiers"
-        - href: labs/wheatstone_temperature.qmd
-          text: "Wheatstone Bridge: Temperature Measurement"
       - section: Resources
         contents:
         - href: resources/XYZs_of_Oscopes_Tektronix.pdf
