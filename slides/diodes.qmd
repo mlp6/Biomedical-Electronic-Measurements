@@ -82,3 +82,17 @@ $$
 ### Light Emitting Diodes (LEDs)
 
 ![LED](images/led.webp){fig-align="center"}
+
+## Transformers
+
+[https://www.electronics-tutorials.ws/transformer/transformer-basics.html](https://www.electronics-tutorials.ws/transformer/transformer-basics.html)
+
+## Clipping and Clamping Circuits
+
+* Clipping Circuits: [https://www.electronics-tutorials.ws/diode/diode-clipping-circuits.html](https://www.electronics-tutorials.ws/diode/diode-clipping-circuits.html)
+
+* Clamping Circuits: [https://www.tutorialspoint.com/electronic_circuits/electronic_clamper_circuits.htm](https://www.tutorialspoint.com/electronic_circuits/electronic_clamper_circuits.htm)
+
+## Photodiode Amplifier Circuit
+
+* [https://www.electronics-tutorials.ws/diode/photodiode.html](https://www.electronics-tutorials.ws/diode/photodiode.html)
