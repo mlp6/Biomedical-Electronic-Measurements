@@ -83,6 +83,10 @@ $$
 
 ![LED](images/led.webp){fig-align="center"}
 
+## Voltage Regulation with Zener Diodes
+
+In-class demo...
+
 ## Transformers
 
 [https://www.electronics-tutorials.ws/transformer/transformer-basics.html](https://www.electronics-tutorials.ws/transformer/transformer-basics.html)
