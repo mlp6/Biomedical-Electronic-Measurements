@@ -1,15 +1,20 @@
-| Module | Materials | Assessment | Lab Exercise |
-| --- | --- | --- | --- |
-| Resistive Circuit Analysis | [-> Introduction to Circuits](slides/intro-circuits.qmd) <br> [-> Ohm's Law, KCL & KVL, Resistive Loads, Meters](slides/ohm-kcl-kvl.qmd) <br> [-> Equivalent Resistance](slides/r_eq.qmd) <br> [-> Circuit Analysis Approaches](slides/circuit-analysis.qmd) [-> Source Equivalents](slides/sources.qmd) | [-> Software Installation & Tutorials](software-install-tutorials.qmd) <br> [-> Problem Set 01](problem_sets/ps1.qmd) <br> [-> Problem Set 02](problem_sets/ps2.qmd) <br> [-> Problem Set 03](problem_sets/ps3.qmd) | [-> Introduction](labs/introduction.qmd) <br> [-> Ohm's Law & Power](labs/ohms_power.qmd) |
-| ECAD (KiCad) | [-> ECAD using KiCad: Schematic Capture](slides/ecad_kicad_schematic.qmd) <br> [-> ECAD using KiCad: SPICE Modeling](slides/ecad_kicad_spice.qmd) | | [-> Schematic Capture & SPICE Simulation](labs/kicad.qmd) |
-| Midterm I (Sep 22, 2025) | | |
-| Capacitors & Inductors <br> DC RC/RL Circuit Analysis | [-> Reactive Components: Capacitors & Inductors](slides/reactive_components.qmd) | [-> Problem Set 04](problem_sets/ps4.qmd) | [Capacitors, Inductors & Oscilloscopes](labs/caps_inductors_scopes.qmd) |
-| Complex Impedance, AC Signals, Phasors | [-> Sinusoidal Signals](slides/sinusoidal_signals.qmd) <br> [-> Complex Impedance](slides/complex_impedance.qmd) | | [Impedance](labs/impedance.qmd) |
-| AC RLC Circuit Analysis <br> Passive Filters <br> Transfer Functions & Bode Plots (Frequency Domain) | [-> Filters](slides/filters.qmd) | [-> Problem Set 05](problem_sets/ps5.qmd) | [Filters](labs/filters.qmd) |
-| Midterm II (Oct 27, 2025) | | |
-| Transient Analysis (Time Domain) | [-> Transient Analysis](slides/transient_analysis.qmd) | | [Transient Response](labs/transient_resp.qmd) |
-| Operational Amplifiers & Active Filters | [-> Operational Amplifiers (Op-Amps)](slides/opamps.qmd) | [Operational Amplifiers](problem_sets/ps6.qmd)| [Operational Amplifiers](labs/opamps.qmd)|
-| Diodes & Rectifiers | [-> Diodes & Rectifiers](slides/diodes.qmd) | | [Diodes & Rectifiers](labs/diodes.qmd) |
-| Wheatstone Bridge & Sensors | | | Final Project / Lab Practical |
-| Midterm III (Due: Dec 03, 2025) | | |
-| Final Lab Practical (Due: Dec 10, 2025) | | |
+<!-- SCHEDULE -->
+<iframe class="airtable-embed" 
+        src="https://airtable.com/embed/appSbKgaoxtXJQFCn/shrrm1lPFgrzjeUsx" 
+        frameborder="0" 
+        onmousewheel="" 
+        width="100%" 
+        height="533" 
+        style="background: transparent; border: 1px solid #ccc;">
+</iframe>
+
+
+<!-- CALENDAR -->
+<iframe class="airtable-embed" 
+        src="https://airtable.com/embed/appSbKgaoxtXJQFCn/shrywg4DluQnEG1nP" 
+        frameborder="0" 
+        onmousewheel=""
+        width="100%" 
+        height="533" 
+        style="background: transparent; border: 1px solid #ccc;">
+</iframe>
