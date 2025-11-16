@@ -105,25 +105,10 @@ All grades will be posted via Canvas/Gradescope.
 ## Class Schedule
 
 This class is organized in a sequence of learning modules.  Specific details
-surrounding dates for assignments associated with each module will be posted to
-Gradescope and linked below.  
-
-### Learning Module Schedule
+surrounding dates for assignments associated with each module will be 
+updated throughout the semester in the table and calendar below.
 
 {{< include _schedule.qmd >}}
-
-### Special Dates
-
-* Labor Day - No Class (Sep 01, 2025)
-* Fall Break - No Class (Oct 11-14, 2025)
-* Midterm I (Mon, Sep 22, 2025)
-* Midterm II (Wed, Oct 27, 2025)
-* Midterm III (Wed, Dec 03, 2025)
-* Final Lab Practical (Dec 10, 2025, 09:00-12:00)
-
-::: callout-important
-Unless there are unforeseen circumstances that affect our course schedule, midterm and final lab practical dates should not change.
-:::
 
 ## Attendance & Participation
 
