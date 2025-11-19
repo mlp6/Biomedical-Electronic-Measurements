@@ -58,7 +58,7 @@ temperature threshold has been exceeded.
 A Wheatsone bridge that can be used to measure changes in resistance of a
 thermistor is shown below:
 
-![Wheatstone Bridge with Thermistor](./wheatstone/wheatstone.svg){fig-align="center" width="400"}
+![Wheatstone Bridge with Thermistor](./wheatstone/wheatstone.png){fig-align="center" width="400"}
 
 `R2` is a potentiometer that is used to "balance" the bridge at a reference temperature (i.e., when $V_{out} = 0$ V).  
 
