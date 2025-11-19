@@ -1643,58 +1643,124 @@
     ]
   },
   {
-    "objectID": "labs/kicad.html",
-    "href": "labs/kicad.html",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "objectID": "labs/opamps.html",
+    "href": "labs/opamps.html",
+    "title": "Op Amps: Amplifiers & Active Filers",
     "section": "",
-    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
+    "text": "Build and analyze inverting and non-inverting amplifiers, characterizing:\n\nGain,\nPhase shift, and\nSaturation.\n\nBuild and analyze an active low-pass filter.\nBuild and analyze a summing amplifier.",
     "crumbs": [
       "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
+      "Operational Amplifiers"
     ]
   },
   {
-    "objectID": "labs/kicad.html#learning-objectives",
-    "href": "labs/kicad.html#learning-objectives",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "objectID": "labs/opamps.html#objectives",
+    "href": "labs/opamps.html#objectives",
+    "title": "Op Amps: Amplifiers & Active Filers",
     "section": "",
-    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
+    "text": "Build and analyze inverting and non-inverting amplifiers, characterizing:\n\nGain,\nPhase shift, and\nSaturation.\n\nBuild and analyze an active low-pass filter.\nBuild and analyze a summing amplifier.",
     "crumbs": [
       "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
+      "Operational Amplifiers"
     ]
   },
   {
-    "objectID": "labs/kicad.html#voltage-divider-circuit",
-    "href": "labs/kicad.html#voltage-divider-circuit",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
-    "section": "Voltage Divider Circuit",
-    "text": "Voltage Divider Circuit\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate Maximum Power Transfer\nIn a recent problem set, you analytically solved for the load resistance that maximizes power transfer in a voltage divider circuit. In this section, you will simulate the same circuit in KiCad and verify your results.\n\nSweep the value of \\(R_2\\) (representing the load resistance) from 0.1 to 10k\\(\\Omega\\) in increments of 100\\(\\Omega\\), for a fixed \\(R_1\\) of 1k\\(\\Omega\\) (representing the source resistance).\nPlot the power dissipated in \\(R_2\\) as a function of \\(R_2\\) and identify the value that maximizes power transfer.\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your swept resistance plot demonstrating maximum power transfer to Gradescope.",
+    "objectID": "labs/opamps.html#background",
+    "href": "labs/opamps.html#background",
+    "title": "Op Amps: Amplifiers & Active Filers",
+    "section": "Background",
+    "text": "Background\nPlease review all of the lecture content on operational amplifiers.",
     "crumbs": [
       "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
+      "Operational Amplifiers"
     ]
   },
   {
-    "objectID": "labs/kicad.html#multi-source-circuit",
-    "href": "labs/kicad.html#multi-source-circuit",
-    "title": "KiCad: Schematic Capture & SPICE Simulation",
-    "section": "Multi-Source Circuit",
-    "text": "Multi-Source Circuit\nThe circuit shown below was one of the problems in your recent exam.\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate the Operating Point (OP) Analysis\n\nOperating Point simulations are appropriate for circuits that have DC sources and single-valued element current / voltage values.\nRun an OP simulation for this circuit and verify your results, as shown annoted in the circuit above and summarized below.\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your operating point (OP) simulation results to Gradescope.\n\n\n\n\nSimulate DC Sweeps\n\nPerform a new analysis that sweeps several components over a range of values:\n\nSweep \\(V_1\\) from 1 to 10 V in increments of 0.2 V\nSweep \\(I_1\\) from 1 to 5 A in increments of 0.2 A\n\nPlot:\n\n\\(I_{R_2}\\)\n\\(P_{V_1}\\)\n\\(P_{I_1}\\)\n\n\nYou should see results similar to those shown below.\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your DC sweep simulation results to Gradescope.",
+    "objectID": "labs/opamps.html#procedure",
+    "href": "labs/opamps.html#procedure",
+    "title": "Op Amps: Amplifiers & Active Filers",
+    "section": "Procedure",
+    "text": "Procedure\n\n1. Inverting Amplifier\n\n\n\nInverting Amplifier Circuit\n\n\n\nBuild the circuit above.\n\nUse \\(R_i\\) = 2.7 kΩ, \\(R_f\\) = 4.7 kΩ.\nThe input should be a 0.1 \\(V_{pp}\\) sine wave at 1 kHz.\nThe op-amp should be powered with ±12 V.\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe \\(0.1 \\mu F\\) capacitors are for power supply decoupling, which helps stabalize the power supply lines to the chip.\nYou should have these capacitors physically be as close to the op-amp power pins as possible.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe pin-out for the DIP-8 package for this chip is available in the datasheet.\n\n\n\n\n\n\n\n\nNote\n\n\n\nOpamps are active devices and must always have a source of power. Many schematics, including those that follow in this course, omit the power supply connections because they are assumed.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nOpamps can be damaged by applying the wrong voltages to terminals. A good idea is to build the circuit with the power supply output turned off. When you turn on the power supply, check the supply voltages and currents. If they don’t look correct, turn off the power supply output until you’ve corrected your problem. Each LF353 opamp should draw about 4 mA from each supply.\n\n\n\nExperimentally determine the voltage gain of this inverting circuit by capturing both the input and output signals on your oscilloscope and showing relevant measurements.\nWhat is the phase relationship between the input and output signals, and how does this compare to the nominal value?\nCompare the experimentally determined gain with the nominal values from the components in your circuit. Discuss any differences.\nReplace \\(R_f =100\\,k\\Omega\\) and calculate the nominal and experimentally-measured voltage gains. Again, discuss any differences.\nFor \\(R_f = 100\\,k\\Omega\\), what is the maximum input voltage amplitude you can apply before the output signal becomes saturated? Explain why this happens.\nDemonstrate saturation on your oscilloscope by adjusting the input voltage amplitude to 10% greater than the threshold you specified in the previous step.\n\n\n\n2. Non-Inverting Amplifier\n\n\n\nNon-Inverting Amplifier Circuit\n\n\n\nBuild the circuit above.\n\nApply a 0.1 \\(V_{pp}\\), 1 kHz sine wave to the input.\nLet \\(R_i = 560\\,\\Omega\\) and \\(R_f = 150\\,\\Omega\\).\n\n\n\nExperimentally determine the voltage gain of this inverting circuit by capturing both the input and output signals on your oscilloscope and showing relevant measurements.\nWhat is the phase relationship between the input and output signals, and how does this compare to the nominal value?\nCompare the experimentally determined gain with the nominal values from the components in your circuit. Discuss any differences.\nReplace \\(R_f =1\\,k\\Omega\\) and calculate the nominal and experimentally-measured voltage gains. Again, discuss any differences.\nFor \\(R_f = 1\\,k\\Omega\\), what is the maximum input voltage amplitude you can apply before the output signal becomes saturated? Explain why this happens.\nDemonstrate saturation on your oscilloscope by adjusting the input voltage amplitude to 10% greater than the threshold you specified in the previous step.\n\n\n\n3. Active Low-Pass Filter\n\n\n\nActive Low-Pass Filter Circuit\n\n\n\nBuild the circuit above.\n\n\\(R_f = R_i~= 3.3\\,k\\Omega\\) and \\(C_f = 470\\,nF\\).\nUse the function generator to apply a 1 \\(V_{pp}\\) sine wave at 1 kHz.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThis circuit sometimes misbehaves when it does not have proper decoupling capacitors. Have the lab staff check your circuit and tell you about decoupling capacitors after you build this circuit.\n\n\n\nSketch the magnitude and phase Bode plots for this circuit, annotating all important features and taking care to label the axes appropriately.\nCapture a screenshot of the circuit’s input and output signals.\nChange the input signal to a 1 \\(V_{pp}\\) triangular wave at 1 kHz. Capture a screenshot of the circuit’s input and output signals.\nChange the input signal to a 1 \\(V_{pp}\\) square wave at 1 kHz. Capture a screenshot of the circuit’s input and output signals.\nComment on the relationship between input and output voltages. Explain what you observe.\nRepeat all of the input waveforms (sine, triangle, square) at 100 Hz. Capture screenshots of the circuit’s input and output signals for each waveform and comment on the relationship between input and output voltages. Explain what you observe, and compare/contrast with the 1 kHz waveform and your insights in this circuit acting as an active low-pass filter.\n\n\n\n4. Summing Amplifier\n\n\n\nSumming Amplifier Circuit\n\n\n\nBuild the circuit above.\n\n\\(R_1 = R_2 = R_f = 10\\,k\\Omega\\).\nThe op-amp should be powered with ±12 V.\n\nApply a 0.25 \\(V_{pp}\\), 1 kHz sine wave to the input \\(V_1\\) and +0.25 V (DC) to input \\(V_2\\).\n\n\nCapture a screenshot of the circuit’s sinusoidal input and output signals.\nDerive the expected output voltage expression based on the input voltages and resistor values to confirm your experimental results. Note both amplitudes and phase.\nWithout changing the input voltage signals, change the values of \\(R_1\\), \\(R_2\\), and/or \\(R_f\\) to achieve an output signal of \\(V_{out} = 0.5 \\sin(2 \\pi 1000 t + \\pi) + 0.5 V\\).\n\nCapture a screenshot of the output signal.\nShow your calculations using these new resistor values to confirm your experimental results.",
     "crumbs": [
       "Labs",
-      "KiCad: Schematic Capture & SPICE Simulation"
+      "Operational Amplifiers"
     ]
   },
   {
-    "objectID": "bme-lab-policies.html",
-    "href": "bme-lab-policies.html",
-    "title": "BME Lab Procedures and Safety Expectations",
+    "objectID": "labs/transient_resp.html",
+    "href": "labs/transient_resp.html",
+    "title": "Transient Response",
     "section": "",
-    "text": "Important\n\n\n\nSafety is Always First, Cleanliness a close second\n\n\nSafety always comes first in lab. To that end, you are expected to follow the rules in this document. Failure to do so may result in revocation of laboratory privileges, reduction of your course grade, and possible withdrawal from your course. Understanding risks and learning to work safely in the laboratory are an important part of your education.\nBefore entering lab, your safety training must be current. You need Duke’s Occupational and Environmental Safety Office’s:\n\nFire/Life Safety, and\nLaboratory Safety-General\n\ntraining modules. We know that you may have done this training before, but it expires in one year, and you must be current through the end of the semester.\nMost accidents are the result of a series of failures. That said, most accidents are preventable. You are responsible for your safety and the safety of those around you. The vast majority of accidents involve some combination of inattention, carelessness, horseplay, impairment, broken tools, and lack of knowledge. All of these factors can be mitigated and it’s your job to do so.\nYou are responsible for keeping the lab clean.\n\n\n\n\n\n\nWarning\n\n\n\nFailure to keep a clean workspace can result in a lower grade for you and your team.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you or someone else in lab needs immediate medical attention, call 911.\n\n\nIn case you need to report your location, you are in CIEMAS B209. Non-emergent problems, call 681-WELL (681-9355). If you are injured in lab, you must let an instructor/TA/lab staff member know as soon as possible. Lab staff after-hours phone number is on the contact cards posted outside every lab door.\n\n\n\n\n\n\nNote\n\n\n\nKeep these points in mind… - In an emergency, call 911. Location: CIEMAS B209\n\nIn the event of a non-emergent injury, seek medical attention and let an instructor/TA/lab staff know within 12 hours.\nFind the emergency exits.\nNever work alone. Two or more people must be present and able to see and hear each other.\nInspect every tool before use. Remove broken tools from service, place them on the broken tools shelf at the back of the room, and notify lab staff.\nWear safety glasses when appropriate. This includes, but is not limited to, activities such as soldering, sanding, filing, hammering, cutting, and drilling.\nWear hearing protection when using noisy tools such as drills and the Dremel tool. Ear buds or music headphones are not sufficient hearing protection.\nNever work impaired. If you are tired, stressed, in a rush, or impaired in any other way then do not work in lab. Go home and recuperate.\nTie back long hair to keep it away from tools.\nClosed-toe shoes must be worn in the lab. Long trousers are preferred.\nProperly secure materials. Clamps, vises and portable worktables are available.\nDon’t force anything. If the job requires significant force, you’re doing it wrong.\nKeep food and drink out of the lab!\nPower down equipment when finished with it.\nA fire extinguisher is outside the door.\nWash your hands before leaving lab.\nBits of unused solder, wire and lead trimmings all go in a “Solder Scrap” container.\nAnything contaminated with solder paste (wipes, boards, applicators) goes in a “Solder Scrap” container.\nOther hazardous waste dealt with on a case by case basis; ask lab staff for help.\nPut tools away, in the right place. Tool drawers are labeled, but if you’re unsure where to put a tool, ask your TA/lab staff.\nDo not hoard parts or tools.\nThis bears repeating: Take the parts you need, but only the parts you need. Do not hoard parts. If you see a part becoming scarce, let lab staff know so they can re-order.\nBenches are for temporary use only. Leave no trace that you were at the bench when you leave for the day. Rarely, with approval, a bench can be claimed for the semester.\nAny and all paint must be pre-approved by an instructor/TA/lab staff. Unapproved paint on projects will result in a lower grade. (Spray paint indoors is never approved.)\nA representative from your group is expected to participate in weekly cleaning. Your instructor will give you the schedule.\nPlace a cover on the bench for messy work. Chucks and Ram Board are available for this.\nLab staff have a collection of good soldering tips and fine tools (e.g. tweezers). If you have need for something better than you can find in lab, ask lab staff.",
+    "text": "Time constant for first-order circuits.\nResonant and natural frequencies of an RLC circuit.\nExplore the behavior of an LC resonant circuit.",
     "crumbs": [
-      "Course Information",
-      "BME Lab Policies"
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#objectives",
+    "href": "labs/transient_resp.html#objectives",
+    "title": "Transient Response",
+    "section": "",
+    "text": "Time constant for first-order circuits.\nResonant and natural frequencies of an RLC circuit.\nExplore the behavior of an LC resonant circuit.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#background",
+    "href": "labs/transient_resp.html#background",
+    "title": "Transient Response",
+    "section": "Background",
+    "text": "Background\nA time constant is the amount of time required for an exponential decay (or rise) to reach approximately 63.2% of its final value.\nFor first-order circuits, the time constant, \\(\\tau\\), is \\(RC\\) for RC series circuits, or \\(\\frac{L}{R}\\) for RL series circuits.\nIn addition to RC/RL first-order systems, RLC circuits are second-order systems that are described using additional parameters. The governing equations for any linear second-order system:\n\\[\na_2 \\frac{d^2x(t)}{dt^2} + a_1 \\frac{dx(t)}{dt} + a_0x(t) = b_0f(t)\n\\]\n\\[\n\\frac{1}{\\omega^{2}_{n}} \\frac{d^2x(t)}{dt^2} + \\frac{2\\zeta}{\\omega_n} \\frac{dx(t)}{dt} + x(t) = K_Sf(t)\n\\]\nThe function \\(x(t)\\) is a general, time-varying function that can be used to model any time-varying parameter measured in the system.\nThe following constants can be determined which hold true for all linear, second-order systems:\n\nResonant Frequency (radians/seconds)\n\\[\n\\omega_n = \\sqrt{\\frac{a_0}{a_2}}\n\\]\n\n\nDamping Ratio\n\\[\n\\zeta = \\left(\\frac{a_1}{2} \\right)\\sqrt{\\frac{1}{a_0a_2}}\n\\]\n\n\nStatic Sensitivity\n\\[\nK_S = \\frac{b_0}{a_0}\n\\]\nFor the purposes of this experiment, we are concerned with the following constants and parameters which pertain specifically to series RLC circuits.\n\n\n\n\n\n\nNote\n\n\n\nNote that the resonant frequency is the same for both a series and parallel RLC circuit, but the damping ratio is different. One should always derive the governing differential equations to evaluate these parameters.\n\n\n\n\nResonant Frequency (radians/second)\n\\[\n\\omega_n = \\frac{1}{\\sqrt{LC}}\n\\]\n\n\nDamping Ratio\n\\[\n\\zeta = RC\\frac{\\omega_n}{2} = \\frac{R}{2}\\sqrt{\\frac{C}{L}}\n\\]\n\n\nQuality Factor\n\\[\nQ = \\frac{1}{2\\zeta}\n\\]\n\n\nBandwidth (radians/second)\n\\[\nB = \\frac{\\omega_n}{Q} = \\omega_n 2 \\zeta\n\\]\n\n\nDamped Responses\nThree different types of responses from an RLC circuit are possible depending on the relationship between R, L, and C and can be characterized by a system’s damping ratio:\n\n\n\nResponse Type\nDamping Ratio\n\n\n\n\nUnderdamped or Oscillatory\n\\(\\zeta &lt; 1\\)\n\n\nCritically Damped\n\\(\\zeta = 1\\)\n\n\nOverdamped\n\\(\\zeta &gt; 1\\)\n\n\n\nThe frequency of the oscillation is known as the damped natural frequency and is given by:\n\\[\n\\omega_d = \\omega_n \\sqrt{1 - \\zeta ^2}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nUnlike the previous labs, please prepare a Jupyter notebook and render a final PDF for all of the parts of this lab and submit that PDF to the associated Gradescope assignment.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#the-rc-low-pass-filter",
+    "href": "labs/transient_resp.html#the-rc-low-pass-filter",
+    "title": "Transient Response",
+    "section": "The RC Low Pass Filter",
+    "text": "The RC Low Pass Filter\n\n\n\nRC circuit\n\n\n\nFor the circuit above, calculate the time constant if\n\nR = 100 Ω and C = 100 nF and\nR = 3.3 kΩ and C = 470 nF.\n\nHow does this circuit filter signals at frequencies of 100 Hz, 10 kHz, 100 kHz?\nCreate a KiCad SPICE simulation of the circuit above with R = 1.0 kΩ and C = 220 nF. Apply a 10 \\(V_{pp}\\) square wave at a frequency acceptable for measuring the time constant of the circuit.\n\n\n\n\n\n\n\nNote\n\n\n\nAt an “acceptable frequency”, the top and bottom of the output wave will reach steady state. Remember that after five time constants, a signal will have decayed by over 99%.\n\n\n\nEstimate the time constant for this combination of R and C from your SPICE simulation.\nHow closely does does the measured time constant match the theoretical time constant? Explain any discrepancy.\nDiscuss how the circuit filters signals at different frequencies and the difference between the input and output waveforms for frequencies clearly in the passband and the stopband. Support your discussion with representative waveforms from your SPICE simulation.\nRepeat (a-c) with R = 33 kΩ and C = 470 nF.\n\n\nCreate a modified KiCad SPICE simulation using a sinusoidal input, and generate plots of input and output waveforms at 1 kHz, 10 kHz, and 20 kHz for each set of R and C, with each input/output pair on the same axes.\n\n\n\n\n\n\n\nNote\n\n\n\nThis will yield six separate graphs. Note the relationship between the circuit’s frequency response and its time constant.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#the-rl-high-pass-filter",
+    "href": "labs/transient_resp.html#the-rl-high-pass-filter",
+    "title": "Transient Response",
+    "section": "The RL High Pass Filter",
+    "text": "The RL High Pass Filter\n\n\n\nRL circuit\n\n\n\nFor the circuit above, find the time constant if R = 10 kΩ and L = 47 mH.\nHow does this circuit filter signals at 100 Hz, 10 kHz, 100 kHz?\nCreate a KiCad SPICE simulation for the circuit above with R = 10 kΩ and L = 10 mH. Apply a 10 \\(V_{pp}\\) square wave at a frequency appropriate for measuring the time constant of the circuit.\n\n\nEstimate the time constant for this combination of R and L from your SPICE simulation.\nHow closely does the measured time constant match the theoretical time constant? Explain any discrepancy.\nDiscuss how the circuit filters signals at different frequencies and the difference between the input and output waveforms for frequencies clearly in the passband and the stopband. Support your discussion with representative waveforms from your SPICE simulation.\n\n\nCreate a modified KiCad SPICE simulation for sinusoidal inputs at 1 kHz and 10 kHz and show the resultant output signals.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#the-series-rlc-circuit",
+    "href": "labs/transient_resp.html#the-series-rlc-circuit",
+    "title": "Transient Response",
+    "section": "The Series RLC circuit",
+    "text": "The Series RLC circuit\n\n\n\nRLC circuit\n\n\n\nFor the circuit above, if R = 330 Ω, C = 22 nF and L = 10 mH, what is:\n\nthe resonant frequency,\nthe damping constant, and\nthe quality factor if ?\nIs the circuit damped or underdamped?\nFind the value of R that will give a critically damped response.\n\nSimulate the circuit with a 2 \\(V_{pp}\\) sinusoidal wave.\n\nSweep the input frequency to find the resonant frequency and capture this response.\nSwitch the input to a square wave and determine the damped natural frequency. Compare the measured damped natural frequency to its theoretical value. Compare the damped natural frequency to the resonant frequency.\nLeave the input a square wave. Replace the 330 Ω resistor with one that gives a critically-damped response. (Hint - you might do with by sweeping a component value.) Show the simulation output capturing the input and output waveforms for this critically-damped response for this optimized resistor value.\nReplace the resistor in your simulation with one that gives an over-damped response. Record the resistor value used and generate a simulation output image showing the input and output waveforms.",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
+    ]
+  },
+  {
+    "objectID": "labs/transient_resp.html#the-lc-circuit",
+    "href": "labs/transient_resp.html#the-lc-circuit",
+    "title": "Transient Response",
+    "section": "The LC Circuit",
+    "text": "The LC Circuit\n\n\n\nLC circuit\n\n\n\nRemove the resistor and modify the circuit as shown above. Set the input to be a sinusoid at the resonant frequency and measure the output of the circuit.\nCan the amplitude of the output voltage exceed the amplitude of the input voltage?",
+    "crumbs": [
+      "Labs",
+      "Transient Response"
     ]
   },
   {
@@ -1830,124 +1896,102 @@
     ]
   },
   {
-    "objectID": "labs/transient_resp.html",
-    "href": "labs/transient_resp.html",
-    "title": "Transient Response",
+    "objectID": "bme-lab-policies.html",
+    "href": "bme-lab-policies.html",
+    "title": "BME Lab Procedures and Safety Expectations",
     "section": "",
-    "text": "Time constant for first-order circuits.\nResonant and natural frequencies of an RLC circuit.\nExplore the behavior of an LC resonant circuit.",
+    "text": "Important\n\n\n\nSafety is Always First, Cleanliness a close second\n\n\nSafety always comes first in lab. To that end, you are expected to follow the rules in this document. Failure to do so may result in revocation of laboratory privileges, reduction of your course grade, and possible withdrawal from your course. Understanding risks and learning to work safely in the laboratory are an important part of your education.\nBefore entering lab, your safety training must be current. You need Duke’s Occupational and Environmental Safety Office’s:\n\nFire/Life Safety, and\nLaboratory Safety-General\n\ntraining modules. We know that you may have done this training before, but it expires in one year, and you must be current through the end of the semester.\nMost accidents are the result of a series of failures. That said, most accidents are preventable. You are responsible for your safety and the safety of those around you. The vast majority of accidents involve some combination of inattention, carelessness, horseplay, impairment, broken tools, and lack of knowledge. All of these factors can be mitigated and it’s your job to do so.\nYou are responsible for keeping the lab clean.\n\n\n\n\n\n\nWarning\n\n\n\nFailure to keep a clean workspace can result in a lower grade for you and your team.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you or someone else in lab needs immediate medical attention, call 911.\n\n\nIn case you need to report your location, you are in CIEMAS B209. Non-emergent problems, call 681-WELL (681-9355). If you are injured in lab, you must let an instructor/TA/lab staff member know as soon as possible. Lab staff after-hours phone number is on the contact cards posted outside every lab door.\n\n\n\n\n\n\nNote\n\n\n\nKeep these points in mind… - In an emergency, call 911. Location: CIEMAS B209\n\nIn the event of a non-emergent injury, seek medical attention and let an instructor/TA/lab staff know within 12 hours.\nFind the emergency exits.\nNever work alone. Two or more people must be present and able to see and hear each other.\nInspect every tool before use. Remove broken tools from service, place them on the broken tools shelf at the back of the room, and notify lab staff.\nWear safety glasses when appropriate. This includes, but is not limited to, activities such as soldering, sanding, filing, hammering, cutting, and drilling.\nWear hearing protection when using noisy tools such as drills and the Dremel tool. Ear buds or music headphones are not sufficient hearing protection.\nNever work impaired. If you are tired, stressed, in a rush, or impaired in any other way then do not work in lab. Go home and recuperate.\nTie back long hair to keep it away from tools.\nClosed-toe shoes must be worn in the lab. Long trousers are preferred.\nProperly secure materials. Clamps, vises and portable worktables are available.\nDon’t force anything. If the job requires significant force, you’re doing it wrong.\nKeep food and drink out of the lab!\nPower down equipment when finished with it.\nA fire extinguisher is outside the door.\nWash your hands before leaving lab.\nBits of unused solder, wire and lead trimmings all go in a “Solder Scrap” container.\nAnything contaminated with solder paste (wipes, boards, applicators) goes in a “Solder Scrap” container.\nOther hazardous waste dealt with on a case by case basis; ask lab staff for help.\nPut tools away, in the right place. Tool drawers are labeled, but if you’re unsure where to put a tool, ask your TA/lab staff.\nDo not hoard parts or tools.\nThis bears repeating: Take the parts you need, but only the parts you need. Do not hoard parts. If you see a part becoming scarce, let lab staff know so they can re-order.\nBenches are for temporary use only. Leave no trace that you were at the bench when you leave for the day. Rarely, with approval, a bench can be claimed for the semester.\nAny and all paint must be pre-approved by an instructor/TA/lab staff. Unapproved paint on projects will result in a lower grade. (Spray paint indoors is never approved.)\nA representative from your group is expected to participate in weekly cleaning. Your instructor will give you the schedule.\nPlace a cover on the bench for messy work. Chucks and Ram Board are available for this.\nLab staff have a collection of good soldering tips and fine tools (e.g. tweezers). If you have need for something better than you can find in lab, ask lab staff.",
     "crumbs": [
-      "Labs",
-      "Transient Response"
+      "Course Information",
+      "BME Lab Policies"
     ]
   },
   {
-    "objectID": "labs/transient_resp.html#objectives",
-    "href": "labs/transient_resp.html#objectives",
-    "title": "Transient Response",
+    "objectID": "labs/kicad.html",
+    "href": "labs/kicad.html",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
     "section": "",
-    "text": "Time constant for first-order circuits.\nResonant and natural frequencies of an RLC circuit.\nExplore the behavior of an LC resonant circuit.",
+    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
     "crumbs": [
       "Labs",
-      "Transient Response"
+      "KiCad: Schematic Capture & SPICE Simulation"
     ]
   },
   {
-    "objectID": "labs/transient_resp.html#background",
-    "href": "labs/transient_resp.html#background",
-    "title": "Transient Response",
-    "section": "Background",
-    "text": "Background\nA time constant is the amount of time required for an exponential decay (or rise) to reach approximately 63.2% of its final value.\nFor first-order circuits, the time constant, \\(\\tau\\), is \\(RC\\) for RC series circuits, or \\(\\frac{L}{R}\\) for RL series circuits.\nIn addition to RC/RL first-order systems, RLC circuits are second-order systems that are described using additional parameters. The governing equations for any linear second-order system:\n\\[\na_2 \\frac{d^2x(t)}{dt^2} + a_1 \\frac{dx(t)}{dt} + a_0x(t) = b_0f(t)\n\\]\n\\[\n\\frac{1}{\\omega^{2}_{n}} \\frac{d^2x(t)}{dt^2} + \\frac{2\\zeta}{\\omega_n} \\frac{dx(t)}{dt} + x(t) = K_Sf(t)\n\\]\nThe function \\(x(t)\\) is a general, time-varying function that can be used to model any time-varying parameter measured in the system.\nThe following constants can be determined which hold true for all linear, second-order systems:\n\nResonant Frequency (radians/seconds)\n\\[\n\\omega_n = \\sqrt{\\frac{a_0}{a_2}}\n\\]\n\n\nDamping Ratio\n\\[\n\\zeta = \\left(\\frac{a_1}{2} \\right)\\sqrt{\\frac{1}{a_0a_2}}\n\\]\n\n\nStatic Sensitivity\n\\[\nK_S = \\frac{b_0}{a_0}\n\\]\nFor the purposes of this experiment, we are concerned with the following constants and parameters which pertain specifically to series RLC circuits.\n\n\n\n\n\n\nNote\n\n\n\nNote that the resonant frequency is the same for both a series and parallel RLC circuit, but the damping ratio is different. One should always derive the governing differential equations to evaluate these parameters.\n\n\n\n\nResonant Frequency (radians/second)\n\\[\n\\omega_n = \\frac{1}{\\sqrt{LC}}\n\\]\n\n\nDamping Ratio\n\\[\n\\zeta = RC\\frac{\\omega_n}{2} = \\frac{R}{2}\\sqrt{\\frac{C}{L}}\n\\]\n\n\nQuality Factor\n\\[\nQ = \\frac{1}{2\\zeta}\n\\]\n\n\nBandwidth (radians/second)\n\\[\nB = \\frac{\\omega_n}{Q} = \\omega_n 2 \\zeta\n\\]\n\n\nDamped Responses\nThree different types of responses from an RLC circuit are possible depending on the relationship between R, L, and C and can be characterized by a system’s damping ratio:\n\n\n\nResponse Type\nDamping Ratio\n\n\n\n\nUnderdamped or Oscillatory\n\\(\\zeta &lt; 1\\)\n\n\nCritically Damped\n\\(\\zeta = 1\\)\n\n\nOverdamped\n\\(\\zeta &gt; 1\\)\n\n\n\nThe frequency of the oscillation is known as the damped natural frequency and is given by:\n\\[\n\\omega_d = \\omega_n \\sqrt{1 - \\zeta ^2}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nUnlike the previous labs, please prepare a Jupyter notebook and render a final PDF for all of the parts of this lab and submit that PDF to the associated Gradescope assignment.",
-    "crumbs": [
-      "Labs",
-      "Transient Response"
-    ]
-  },
-  {
-    "objectID": "labs/transient_resp.html#the-rc-low-pass-filter",
-    "href": "labs/transient_resp.html#the-rc-low-pass-filter",
-    "title": "Transient Response",
-    "section": "The RC Low Pass Filter",
-    "text": "The RC Low Pass Filter\n\n\n\nRC circuit\n\n\n\nFor the circuit above, calculate the time constant if\n\nR = 100 Ω and C = 100 nF and\nR = 3.3 kΩ and C = 470 nF.\n\nHow does this circuit filter signals at frequencies of 100 Hz, 10 kHz, 100 kHz?\nCreate a KiCad SPICE simulation of the circuit above with R = 1.0 kΩ and C = 220 nF. Apply a 10 \\(V_{pp}\\) square wave at a frequency acceptable for measuring the time constant of the circuit.\n\n\n\n\n\n\n\nNote\n\n\n\nAt an “acceptable frequency”, the top and bottom of the output wave will reach steady state. Remember that after five time constants, a signal will have decayed by over 99%.\n\n\n\nEstimate the time constant for this combination of R and C from your SPICE simulation.\nHow closely does does the measured time constant match the theoretical time constant? Explain any discrepancy.\nDiscuss how the circuit filters signals at different frequencies and the difference between the input and output waveforms for frequencies clearly in the passband and the stopband. Support your discussion with representative waveforms from your SPICE simulation.\nRepeat (a-c) with R = 33 kΩ and C = 470 nF.\n\n\nCreate a modified KiCad SPICE simulation using a sinusoidal input, and generate plots of input and output waveforms at 1 kHz, 10 kHz, and 20 kHz for each set of R and C, with each input/output pair on the same axes.\n\n\n\n\n\n\n\nNote\n\n\n\nThis will yield six separate graphs. Note the relationship between the circuit’s frequency response and its time constant.",
-    "crumbs": [
-      "Labs",
-      "Transient Response"
-    ]
-  },
-  {
-    "objectID": "labs/transient_resp.html#the-rl-high-pass-filter",
-    "href": "labs/transient_resp.html#the-rl-high-pass-filter",
-    "title": "Transient Response",
-    "section": "The RL High Pass Filter",
-    "text": "The RL High Pass Filter\n\n\n\nRL circuit\n\n\n\nFor the circuit above, find the time constant if R = 10 kΩ and L = 47 mH.\nHow does this circuit filter signals at 100 Hz, 10 kHz, 100 kHz?\nCreate a KiCad SPICE simulation for the circuit above with R = 10 kΩ and L = 10 mH. Apply a 10 \\(V_{pp}\\) square wave at a frequency appropriate for measuring the time constant of the circuit.\n\n\nEstimate the time constant for this combination of R and L from your SPICE simulation.\nHow closely does the measured time constant match the theoretical time constant? Explain any discrepancy.\nDiscuss how the circuit filters signals at different frequencies and the difference between the input and output waveforms for frequencies clearly in the passband and the stopband. Support your discussion with representative waveforms from your SPICE simulation.\n\n\nCreate a modified KiCad SPICE simulation for sinusoidal inputs at 1 kHz and 10 kHz and show the resultant output signals.",
-    "crumbs": [
-      "Labs",
-      "Transient Response"
-    ]
-  },
-  {
-    "objectID": "labs/transient_resp.html#the-series-rlc-circuit",
-    "href": "labs/transient_resp.html#the-series-rlc-circuit",
-    "title": "Transient Response",
-    "section": "The Series RLC circuit",
-    "text": "The Series RLC circuit\n\n\n\nRLC circuit\n\n\n\nFor the circuit above, if R = 330 Ω, C = 22 nF and L = 10 mH, what is:\n\nthe resonant frequency,\nthe damping constant, and\nthe quality factor if ?\nIs the circuit damped or underdamped?\nFind the value of R that will give a critically damped response.\n\nSimulate the circuit with a 2 \\(V_{pp}\\) sinusoidal wave.\n\nSweep the input frequency to find the resonant frequency and capture this response.\nSwitch the input to a square wave and determine the damped natural frequency. Compare the measured damped natural frequency to its theoretical value. Compare the damped natural frequency to the resonant frequency.\nLeave the input a square wave. Replace the 330 Ω resistor with one that gives a critically-damped response. (Hint - you might do with by sweeping a component value.) Show the simulation output capturing the input and output waveforms for this critically-damped response for this optimized resistor value.\nReplace the resistor in your simulation with one that gives an over-damped response. Record the resistor value used and generate a simulation output image showing the input and output waveforms.",
-    "crumbs": [
-      "Labs",
-      "Transient Response"
-    ]
-  },
-  {
-    "objectID": "labs/transient_resp.html#the-lc-circuit",
-    "href": "labs/transient_resp.html#the-lc-circuit",
-    "title": "Transient Response",
-    "section": "The LC Circuit",
-    "text": "The LC Circuit\n\n\n\nLC circuit\n\n\n\nRemove the resistor and modify the circuit as shown above. Set the input to be a sinusoid at the resonant frequency and measure the output of the circuit.\nCan the amplitude of the output voltage exceed the amplitude of the input voltage?",
-    "crumbs": [
-      "Labs",
-      "Transient Response"
-    ]
-  },
-  {
-    "objectID": "labs/opamps.html",
-    "href": "labs/opamps.html",
-    "title": "Op Amps: Amplifiers & Active Filers",
+    "objectID": "labs/kicad.html#learning-objectives",
+    "href": "labs/kicad.html#learning-objectives",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
     "section": "",
-    "text": "Build and analyze inverting and non-inverting amplifiers, characterizing:\n\nGain,\nPhase shift, and\nSaturation.\n\nBuild and analyze an active low-pass filter.\nBuild and analyze a summing amplifier.",
+    "text": "Create a schematic in KiCad\nAnnotate and assign component values\nSet up and run a SPICE simulation\nAnalyze simulation results",
     "crumbs": [
       "Labs",
-      "Operational Amplifiers"
+      "KiCad: Schematic Capture & SPICE Simulation"
     ]
   },
   {
-    "objectID": "labs/opamps.html#objectives",
-    "href": "labs/opamps.html#objectives",
-    "title": "Op Amps: Amplifiers & Active Filers",
+    "objectID": "labs/kicad.html#voltage-divider-circuit",
+    "href": "labs/kicad.html#voltage-divider-circuit",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "Voltage Divider Circuit",
+    "text": "Voltage Divider Circuit\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate Maximum Power Transfer\nIn a recent problem set, you analytically solved for the load resistance that maximizes power transfer in a voltage divider circuit. In this section, you will simulate the same circuit in KiCad and verify your results.\n\nSweep the value of \\(R_2\\) (representing the load resistance) from 0.1 to 10k\\(\\Omega\\) in increments of 100\\(\\Omega\\), for a fixed \\(R_1\\) of 1k\\(\\Omega\\) (representing the source resistance).\nPlot the power dissipated in \\(R_2\\) as a function of \\(R_2\\) and identify the value that maximizes power transfer.\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your swept resistance plot demonstrating maximum power transfer to Gradescope.",
+    "crumbs": [
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
+    ]
+  },
+  {
+    "objectID": "labs/kicad.html#multi-source-circuit",
+    "href": "labs/kicad.html#multi-source-circuit",
+    "title": "KiCad: Schematic Capture & SPICE Simulation",
+    "section": "Multi-Source Circuit",
+    "text": "Multi-Source Circuit\nThe circuit shown below was one of the problems in your recent exam.\n\nCapture the Schematic\n\nCreate a new KiCad project.\nFill in the schematic metadata that is populated in the right foot of the sheet.\nCreate the circuit shown below using the schematic editor. Note that all of the sources chosen are SPICE DC sources.\n\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your complete schematic window to Gradescope.\n\n\n\n\nSimulate the Operating Point (OP) Analysis\n\nOperating Point simulations are appropriate for circuits that have DC sources and single-valued element current / voltage values.\nRun an OP simulation for this circuit and verify your results, as shown annoted in the circuit above and summarized below.\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your operating point (OP) simulation results to Gradescope.\n\n\n\n\nSimulate DC Sweeps\n\nPerform a new analysis that sweeps several components over a range of values:\n\nSweep \\(V_1\\) from 1 to 10 V in increments of 0.2 V\nSweep \\(I_1\\) from 1 to 5 A in increments of 0.2 A\n\nPlot:\n\n\\(I_{R_2}\\)\n\\(P_{V_1}\\)\n\\(P_{I_1}\\)\n\n\nYou should see results similar to those shown below.\n\n\n\n\n\n\n\n\n\n\n\nGradescope!\n\n\n\nUpload a screenshot of your DC sweep simulation results to Gradescope.",
+    "crumbs": [
+      "Labs",
+      "KiCad: Schematic Capture & SPICE Simulation"
+    ]
+  },
+  {
+    "objectID": "labs/lab_practical.html",
+    "href": "labs/lab_practical.html",
+    "title": "BME290L - Fall 2025 - Lab Practical: Temperature Measurement with a Wheatstone Bridge",
     "section": "",
-    "text": "Build and analyze inverting and non-inverting amplifiers, characterizing:\n\nGain,\nPhase shift, and\nSaturation.\n\nBuild and analyze an active low-pass filter.\nBuild and analyze a summing amplifier.",
+    "text": "This lab practical has a pre-lab analysis / KiCad component and an in-lab experimental meaurement component.\nThe prelab component is open notes and online resources can be used for knowledge lookup, but you cannot directly post any of these questions to solicit answers from online forums or AI resources.\nYou are not allowed to collaborate with classmates on this lab practical.\nAll circuit sources are assumed to be ideal and linear, all wires are ideal (lossless), and all circuit elements are also assumed to be linear.\nAll opamps are assumed to be ideal and powered by ± 12 V, unless otherwise indicated.\nCreate a PDF of your analyses, simulation outputs and calculated values from SPICE simulations to include in your submission (zip archive of the project).\nYou will email a zip archive of your KiCad project files to Dr. Palmeri before performing the in-lab components of this practical.\n\nPlease make the subject line of your email as BME290L F25 Lab Practical - FirstName LastName, replacing FirstName LastName with your full name.\nPlease name your zip file as BME290L_F25_LabPractical_FirstName_LastName.zip, replacing FirstName_LastName with your full name.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease schedule a 20 minute time slot to demonstrate your completed circuit during the in-lab component of this practical.\nNot everyone can present during the dedicated 3 hour time block that would have been our final exam slot (Dec 12, 09:00-12:00), so I would greatly appreciate folks signing up for days in advance!\nIf you would like to present during a weekday evening, please email Dr. Palmeri directly to arrange a time.\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou do not have to upload anything to Gradescope; that will be done by Dr. Palmeri after the in-lab component of this practical.",
     "crumbs": [
       "Labs",
-      "Operational Amplifiers"
+      "Lab Practical"
     ]
   },
   {
-    "objectID": "labs/opamps.html#background",
-    "href": "labs/opamps.html#background",
-    "title": "Op Amps: Amplifiers & Active Filers",
-    "section": "Background",
-    "text": "Background\nPlease review all of the lecture content on operational amplifiers.",
+    "objectID": "labs/lab_practical.html#instructions",
+    "href": "labs/lab_practical.html#instructions",
+    "title": "BME290L - Fall 2025 - Lab Practical: Temperature Measurement with a Wheatstone Bridge",
+    "section": "",
+    "text": "This lab practical has a pre-lab analysis / KiCad component and an in-lab experimental meaurement component.\nThe prelab component is open notes and online resources can be used for knowledge lookup, but you cannot directly post any of these questions to solicit answers from online forums or AI resources.\nYou are not allowed to collaborate with classmates on this lab practical.\nAll circuit sources are assumed to be ideal and linear, all wires are ideal (lossless), and all circuit elements are also assumed to be linear.\nAll opamps are assumed to be ideal and powered by ± 12 V, unless otherwise indicated.\nCreate a PDF of your analyses, simulation outputs and calculated values from SPICE simulations to include in your submission (zip archive of the project).\nYou will email a zip archive of your KiCad project files to Dr. Palmeri before performing the in-lab components of this practical.\n\nPlease make the subject line of your email as BME290L F25 Lab Practical - FirstName LastName, replacing FirstName LastName with your full name.\nPlease name your zip file as BME290L_F25_LabPractical_FirstName_LastName.zip, replacing FirstName_LastName with your full name.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease schedule a 20 minute time slot to demonstrate your completed circuit during the in-lab component of this practical.\nNot everyone can present during the dedicated 3 hour time block that would have been our final exam slot (Dec 12, 09:00-12:00), so I would greatly appreciate folks signing up for days in advance!\nIf you would like to present during a weekday evening, please email Dr. Palmeri directly to arrange a time.\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou do not have to upload anything to Gradescope; that will be done by Dr. Palmeri after the in-lab component of this practical.",
     "crumbs": [
       "Labs",
-      "Operational Amplifiers"
+      "Lab Practical"
     ]
   },
   {
-    "objectID": "labs/opamps.html#procedure",
-    "href": "labs/opamps.html#procedure",
-    "title": "Op Amps: Amplifiers & Active Filers",
-    "section": "Procedure",
-    "text": "Procedure\n\n1. Inverting Amplifier\n\n\n\nInverting Amplifier Circuit\n\n\n\nBuild the circuit above.\n\nUse \\(R_i\\) = 2.7 kΩ, \\(R_f\\) = 4.7 kΩ.\nThe input should be a 0.1 \\(V_{pp}\\) sine wave at 1 kHz.\nThe op-amp should be powered with ±12 V.\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe \\(0.1 \\mu F\\) capacitors are for power supply decoupling, which helps stabalize the power supply lines to the chip.\nYou should have these capacitors physically be as close to the op-amp power pins as possible.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe pin-out for the DIP-8 package for this chip is available in the datasheet.\n\n\n\n\n\n\n\n\nNote\n\n\n\nOpamps are active devices and must always have a source of power. Many schematics, including those that follow in this course, omit the power supply connections because they are assumed.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nOpamps can be damaged by applying the wrong voltages to terminals. A good idea is to build the circuit with the power supply output turned off. When you turn on the power supply, check the supply voltages and currents. If they don’t look correct, turn off the power supply output until you’ve corrected your problem. Each LF353 opamp should draw about 4 mA from each supply.\n\n\n\nExperimentally determine the voltage gain of this inverting circuit by capturing both the input and output signals on your oscilloscope and showing relevant measurements.\nWhat is the phase relationship between the input and output signals, and how does this compare to the nominal value?\nCompare the experimentally determined gain with the nominal values from the components in your circuit. Discuss any differences.\nReplace \\(R_f =100\\,k\\Omega\\) and calculate the nominal and experimentally-measured voltage gains. Again, discuss any differences.\nFor \\(R_f = 100\\,k\\Omega\\), what is the maximum input voltage amplitude you can apply before the output signal becomes saturated? Explain why this happens.\nDemonstrate saturation on your oscilloscope by adjusting the input voltage amplitude to 10% greater than the threshold you specified in the previous step.\n\n\n\n2. Non-Inverting Amplifier\n\n\n\nNon-Inverting Amplifier Circuit\n\n\n\nBuild the circuit above.\n\nApply a 0.1 \\(V_{pp}\\), 1 kHz sine wave to the input.\nLet \\(R_i = 560\\,\\Omega\\) and \\(R_f = 150\\,\\Omega\\).\n\n\n\nExperimentally determine the voltage gain of this inverting circuit by capturing both the input and output signals on your oscilloscope and showing relevant measurements.\nWhat is the phase relationship between the input and output signals, and how does this compare to the nominal value?\nCompare the experimentally determined gain with the nominal values from the components in your circuit. Discuss any differences.\nReplace \\(R_f =1\\,k\\Omega\\) and calculate the nominal and experimentally-measured voltage gains. Again, discuss any differences.\nFor \\(R_f = 1\\,k\\Omega\\), what is the maximum input voltage amplitude you can apply before the output signal becomes saturated? Explain why this happens.\nDemonstrate saturation on your oscilloscope by adjusting the input voltage amplitude to 10% greater than the threshold you specified in the previous step.\n\n\n\n3. Active Low-Pass Filter\n\n\n\nActive Low-Pass Filter Circuit\n\n\n\nBuild the circuit above.\n\n\\(R_f = R_i~= 3.3\\,k\\Omega\\) and \\(C_f = 470\\,nF\\).\nUse the function generator to apply a 1 \\(V_{pp}\\) sine wave at 1 kHz.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThis circuit sometimes misbehaves when it does not have proper decoupling capacitors. Have the lab staff check your circuit and tell you about decoupling capacitors after you build this circuit.\n\n\n\nSketch the magnitude and phase Bode plots for this circuit, annotating all important features and taking care to label the axes appropriately.\nCapture a screenshot of the circuit’s input and output signals.\nChange the input signal to a 1 \\(V_{pp}\\) triangular wave at 1 kHz. Capture a screenshot of the circuit’s input and output signals.\nChange the input signal to a 1 \\(V_{pp}\\) square wave at 1 kHz. Capture a screenshot of the circuit’s input and output signals.\nComment on the relationship between input and output voltages. Explain what you observe.\nRepeat all of the input waveforms (sine, triangle, square) at 100 Hz. Capture screenshots of the circuit’s input and output signals for each waveform and comment on the relationship between input and output voltages. Explain what you observe, and compare/contrast with the 1 kHz waveform and your insights in this circuit acting as an active low-pass filter.\n\n\n\n4. Summing Amplifier\n\n\n\nSumming Amplifier Circuit\n\n\n\nBuild the circuit above.\n\n\\(R_1 = R_2 = R_f = 10\\,k\\Omega\\).\nThe op-amp should be powered with ±12 V.\n\nApply a 0.25 \\(V_{pp}\\), 1 kHz sine wave to the input \\(V_1\\) and +0.25 V (DC) to input \\(V_2\\).\n\n\nCapture a screenshot of the circuit’s sinusoidal input and output signals.\nDerive the expected output voltage expression based on the input voltages and resistor values to confirm your experimental results. Note both amplitudes and phase.\nWithout changing the input voltage signals, change the values of \\(R_1\\), \\(R_2\\), and/or \\(R_f\\) to achieve an output signal of \\(V_{out} = 0.5 \\sin(2 \\pi 1000 t + \\pi) + 0.5 V\\).\n\nCapture a screenshot of the output signal.\nShow your calculations using these new resistor values to confirm your experimental results.",
+    "objectID": "labs/lab_practical.html#designing-a-temperature-measurement-circuit",
+    "href": "labs/lab_practical.html#designing-a-temperature-measurement-circuit",
+    "title": "BME290L - Fall 2025 - Lab Practical: Temperature Measurement with a Wheatstone Bridge",
+    "section": "Designing a Temperature Measurement Circuit",
+    "text": "Designing a Temperature Measurement Circuit\nAs discussed in lecture, a Wheatstone bridge can be used to measure small changes in resistance, such as those produced by a temperature sensor. In this pre-lab component, you will design a Wheatstone bridge circuit in KiCad, along with amplification, filtering and threshold comparisons, to measure temperature changes using a thermistor and toggle a digital output signal to indicate if a temperature threshold has been exceeded.\n\nWheatstone Bridge Thermistor Measurement Circuit\nA Wheatsone bridge that can be used to measure changes in resistance of a thermistor is shown below:\n\n\n\nWheatstone Bridge with Thermistor\n\n\nR2 is a potentiometer that is used to “balance” the bridge at a reference temperature (i.e., when \\(V_{out} = 0\\) V).\n\n\n\n\n\n\nLab Practical Task\n\n\n\nYou will be asked to discuss why a potentiometer is used in this configuration instead of a fixed value resistor during the in-lab component of this practical.\n\n\nIn this lab practical, you will use an Omega 44033 thermistor as your temperature sensor. You can consult the datasheet for the Omega 44033 thermistor to determine its resistance at various temperatures. This behavior is governed by the Steinhart-Hart equation:\n\\[\nT_{(R)}  =(A_1 + B_1 \\ln (R) +C_1 (\\ln (R))^3 )^{-1}\n\\] where:\n\n\\(T\\) is the temperature in Kelvins\n\\(R\\) is the resistance at temperature \\(T\\)\n\\(A_1\\), \\(B_1\\), and \\(C_1\\) are the Steinhart-Hart coefficients for the thermistor.\n\nFor our thermistor:\n\n\\(A_1 = 1.468 \\times 10^{-3}\\)\n\\(B_1 = 2.383 \\times 10^{-4}\\)\n\\(C_1 = 1.007 \\times 10^{-7}\\)\n\n\n\nBalance the Bridge\n\nWhat value of R2 balances your bridge (i.e., \\(V_{out}\\) = 0) if TH1 is 1 kΩ at a reference temperature, and R1 is +10% of its nominal value, and R3 is -10% of its nominal value??\nSPICE simulate this balanced bridge and calculate the power supplied by the power source and dissipated by each of the resistors in this balanced configuration.\n\n\n\n\n\n\n\nTip\n\n\n\nSPICE can model a potentiometer using a variable resistor element, but you can also use a simple resistor and choose to “sweep” its value.\nMake sure these simulated values make sense to you, as you will have to verify them during the in-lab component of this practical!\n\n\n\n\n\n\n\n\nLab Practical Task\n\n\n\nYou will be asked to build this balanced bridge circuit during the in-lab component of this practical and verify your power supplied/dissipated values from your SPICE simulation.\n\n\n\n\nSweep The Thermistor Resistance\n\nSPICE simulate the output voltage of your Wheatstone bridge (\\(V_{out}\\)) as you sweep the resistance of the thermistor (TH1) from 100 - 10 kΩ.\n\n\n\n\n\n\n\nTip\n\n\n\nYou do not need to directly model the Omega 44033 thermistor in SPICE; simply sweep the resistance value of TH1 over this range.\n\n\n\nInclude in your plot of the output voltage how the power supplies by the source varies as this thermistor resistance changes.\n\n\n\nCalibrate the Bridge for Temperature Measurement\n\nUsing the Steinhart-Hart equation and the datasheet for the Omega 44033 thermistor, what is the measured temperature when the resistance of the thermistor is 3 kΩ?\nDerive an expression to correlate \\(V_{out}\\) to temperature (in °C) for this Wheatstone bridge configuration.\n\n\n\nImprove the Measurement Signal-to-Noise Ratio (SNR)\nWheatstone bridges are often used to measure small changes in resistance, which can lead to small output voltages that are susceptible to noise. To improve the SNR of your temperature measurement, you will design an amplification and filtering stage.\n\nDesign a two-stage opamp circuit to amplify and low-pass filter the output voltage of your Wheatstone bridge.\n\nThe first stage should use a differential amplifier with a gain that does not cause the output to saturate at the maximum expected output voltage from the Wheatstone bridge.\nThe second stage should be an active low-pass filter with a cutoff frequency of 10 Hz and gain that maximized the differential output signal without saturating.\n\n\n\n\n\n\n\n\nTip\n\n\n\nYou must choose realistic resistor and capacitor values for your circuit design to be able to build this circuit during the in-lab component of this practical. See the appendix at the end of this handout for available component values.\n\n\n\nSPICE simulate the following signals as you sweep the resistance of the thermistor (TH1) to match a temperature range from 0 - 100 °C:\n\nThe output voltage of the Wheatstone bridge (\\(V_{out}\\))\nThe output voltage of the differential amplifier stage\nThe output voltage of the low-pass filter stage\n\n\n\n\n\n\n\n\nLab Practical Task\n\n\n\nYou will be asked to build this amplification and filtering stage during the in-lab component of this practical and make matching measurements using an oscilloscope.\nBe ready to answer questions about how you chose your component values for this stage, input/output impedances, and how actual resistor values (compared to their nominal values) affect your circuit performance.\n\n\n\n\nTemperature Threshold Detection\nTo indicate when a temperature threshold has been exceeded, design a comparator circuit stage after your filtering stage that toggles a digital output signal when the filtered output voltage exceeds a certain threshold voltage. This comparator will output a LOW signal (0 V) when the temperature is below the threshold and a HIGH signal (+5 V) when the temperature exceeds the threshold.\n\nAdd this comparator stage to your KiCad schematic, and simulate the output for a temperature of 0 °C and 100 °C, assuming a temperature threshold of 50 °C.\n\n\n\n\n\n\n\nLab Practical Task\n\n\n\nDr. Palmeri will test your final circuit design by setting the termistor into a water baths at two different temperatures to test this functionality.\nPlan to ask him questions supporting your design choices for this entire circuit.",
     "crumbs": [
       "Labs",
-      "Operational Amplifiers"
+      "Lab Practical"
+    ]
+  },
+  {
+    "objectID": "labs/lab_practical.html#appendix-available-component-values",
+    "href": "labs/lab_practical.html#appendix-available-component-values",
+    "title": "BME290L - Fall 2025 - Lab Practical: Temperature Measurement with a Wheatstone Bridge",
+    "section": "Appendix: Available Component Values",
+    "text": "Appendix: Available Component Values\nWhen designing your circuits, you should choose component values from the following lists to ensure you can build your circuit during the in-lab component of this practical.\n\n\n\nResistor Values\nCapacitor Values\n\n\n\n\n10\n22p\n\n\n24.9\n47p\n\n\n49.9\n150p\n\n\n52\n330p\n\n\n100\n680p\n\n\n120\n1.5n\n\n\n150\n4.7n\n\n\n180\n10n\n\n\n200\n22n\n\n\n270\n47n\n\n\n330\n0.1u\n\n\n470\n0.22u\n\n\n510\n0.47u\n\n\n560\n0.82u\n\n\n620\n1u\n\n\n680\n1.2u\n\n\n1k\n2.2u\n\n\n1.5k\n4.7u\n\n\n1.8k\n10u\n\n\n2k\n100u\n\n\n2.2k\n\n\n\n2.7k\n\n\n\n3k\n\n\n\n3.3k\n\n\n\n3.9k\n\n\n\n4.7k\n\n\n\n5.1k\n\n\n\n7.5k\n\n\n\n10k\n\n\n\n12k\n\n\n\n13k\n\n\n\n15k\n\n\n\n18k\n\n\n\n20k\n\n\n\n22k\n\n\n\n33k\n\n\n\n47k\n\n\n\n63.4k\n\n\n\n82k\n\n\n\n100k\n\n\n\n127k\n\n\n\n150k\n\n\n\n330k\n\n\n\n470k\n\n\n\n1M\n\n\n\n3.3M",
+    "crumbs": [
+      "Labs",
+      "Lab Practical"
     ]
   },
   {

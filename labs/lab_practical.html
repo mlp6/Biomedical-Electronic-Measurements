@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-11-07">
+<meta name="author" content="Duke Biomedical Engineering">
 
-<title>Problem Set 06: Operational Amplifier Circuits – Biomedical Electronic Measurements</title>
+<title>BME290L - Fall 2025 - Lab Practical: Temperature Measurement with a Wheatstone Bridge – Biomedical Electronic Measurements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -99,7 +99,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -111,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/_formatting_guidelines.qmd">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ps6.html">Problem Set 06</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab_practical.html">Lab Practical</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -335,7 +334,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab_practical.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab_practical.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lab Practical</span></a>
   </div>
 </li>
@@ -435,7 +434,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problem_sets/ps6.html" class="sidebar-item-text sidebar-link active">
+  <a href="../problem_sets/ps6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 06</span></a>
   </div>
 </li>
@@ -470,16 +469,33 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps6.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#designing-a-temperature-measurement-circuit" id="toc-designing-a-temperature-measurement-circuit" class="nav-link" data-scroll-target="#designing-a-temperature-measurement-circuit">Designing a Temperature Measurement Circuit</a>
+  <ul class="collapse">
+  <li><a href="#wheatstone-bridge-thermistor-measurement-circuit" id="toc-wheatstone-bridge-thermistor-measurement-circuit" class="nav-link" data-scroll-target="#wheatstone-bridge-thermistor-measurement-circuit">Wheatstone Bridge Thermistor Measurement Circuit</a></li>
+  <li><a href="#balance-the-bridge" id="toc-balance-the-bridge" class="nav-link" data-scroll-target="#balance-the-bridge">Balance the Bridge</a></li>
+  <li><a href="#sweep-the-thermistor-resistance" id="toc-sweep-the-thermistor-resistance" class="nav-link" data-scroll-target="#sweep-the-thermistor-resistance">Sweep The Thermistor Resistance</a></li>
+  <li><a href="#calibrate-the-bridge-for-temperature-measurement" id="toc-calibrate-the-bridge-for-temperature-measurement" class="nav-link" data-scroll-target="#calibrate-the-bridge-for-temperature-measurement">Calibrate the Bridge for Temperature Measurement</a></li>
+  <li><a href="#improve-the-measurement-signal-to-noise-ratio-snr" id="toc-improve-the-measurement-signal-to-noise-ratio-snr" class="nav-link" data-scroll-target="#improve-the-measurement-signal-to-noise-ratio-snr">Improve the Measurement Signal-to-Noise Ratio (SNR)</a></li>
+  <li><a href="#temperature-threshold-detection" id="toc-temperature-threshold-detection" class="nav-link" data-scroll-target="#temperature-threshold-detection">Temperature Threshold Detection</a></li>
+  </ul></li>
+  <li><a href="#appendix-available-component-values" id="toc-appendix-available-component-values" class="nav-link" data-scroll-target="#appendix-available-component-values">Appendix: Available Component Values</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab_practical.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problem_sets/_formatting_guidelines.qmd">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problem_sets/ps6.html">Problem Set 06</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/introduction.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab_practical.html">Lab Practical</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Problem Set 06: Operational Amplifier Circuits</h1>
-<p class="subtitle lead">BME253L - Fall 2025</p>
+<h1 class="title">BME290L - Fall 2025 - Lab Practical: Temperature Measurement with a Wheatstone Bridge</h1>
+<p class="subtitle lead">Due: Wed, Dec 10, 2025 @ 12:00</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Problem Set</div>
+    <div class="quarto-category">Lab</div>
   </div>
   </div>
 
@@ -487,13 +503,13 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
-    
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 7, 2025</p>
-    </div>
+             <p>Duke Biomedical Engineering </p>
+          </div>
   </div>
+    
   
     
   </div>
@@ -503,50 +519,36 @@ window.Quarto = {
 </header>
 
 
-<p>Please complete the following problems and tasks, and upload your solutions to Gradescope, using the <a href="_formatting_guidelines.qmd">formatting guidelines</a> below.</p>
-<section id="design-an-amplifier" class="level2">
-<h2 class="anchored" data-anchor-id="design-an-amplifier">1. Design an Amplifier</h2>
-<p>You have an input signal described by the equation:</p>
-<p><span class="math display">\[
-v_{in}(t) = 0.1 \sin(2000 \pi t) \text{ V}
-\]</span></p>
-<p>Design an operational amplifier circuit that is powered by <span class="math inline">\(\pm\)</span> 12 V that meets the following specifications:</p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
 <ul>
-<li><p>Gain: The output signal should have a peak voltage of 5 V.</p></li>
-<li><p>Phase Shift: The output signal should be inverted (180-degree phase shift).</p></li>
+<li><p>This lab practical has a pre-lab analysis / KiCad component and an in-lab experimental meaurement component.</p></li>
+<li><p>The prelab component is open notes and online resources can be used for knowledge lookup, but you cannot directly post any of these questions to solicit answers from online forums or AI resources.</p></li>
+<li><p>You are not allowed to collaborate with classmates on this lab practical.</p></li>
+<li><p>All circuit sources are assumed to be ideal and linear, all wires are ideal (lossless), and all circuit elements are also assumed to be linear.</p></li>
+<li><p>All opamps are assumed to be ideal and powered by ± 12 V, unless otherwise indicated.</p></li>
+<li><p>Create a PDF of your analyses, simulation outputs and calculated values from SPICE simulations to include in your submission (zip archive of the project).</p></li>
+<li><p>You will email a zip archive of your KiCad project files to <a href="mailto:mlp6@duke.edu">Dr.&nbsp;Palmeri</a> before performing the in-lab components of this practical.</p>
+<ul>
+<li><p>Please make the subject line of your email as <code>BME290L F25 Lab Practical - FirstName LastName</code>, replacing <code>FirstName LastName</code> with your full name.</p></li>
+<li><p>Please name your zip file as <code>BME290L_F25_LabPractical_FirstName_LastName.zip</code>, replacing <code>FirstName_LastName</code> with your full name.</p></li>
+</ul></li>
 </ul>
-<ol type="a">
-<li><p>Sketch your circuit, labeling all relevant components and their values.</p></li>
-<li><p>Derive the expression for the output voltage <span class="math inline">\(v_{out}(t)\)</span>.</p></li>
-<li><p>Plot both the input and output signals over 5 periods of the input signal. Be sure to label your axes, including units.</p></li>
-</ol>
-</section>
-<section id="input-impedance" class="level2">
-<h2 class="anchored" data-anchor-id="input-impedance">2. Input Impedance</h2>
-<ol type="a">
-<li><p>Describe why we typically want the input impedance of an op-amp circuit to be very high.</p></li>
-<li><p>What is the input impedance of your circuit from Problem 1?</p></li>
-<li><p>If the input impedance of your circuit from Problem 1 isn’t “ideal” given the considerations you described in part (a), suggest a modification to your circuit that would improve the input impedance.</p></li>
-</ol>
-</section>
-<section id="op-amp-saturation" class="level2">
-<h2 class="anchored" data-anchor-id="op-amp-saturation">3. Op-Amp Saturation</h2>
-<p>You have an input signal described by the equation:</p>
-<p><span class="math display">\[
-v_{in}(t) = 0.2 \cos(1000 \pi t) \text{ V}
-\]</span></p>
-<p>What is the maximum gain that you can achieve with a single op-amp stage powered by <span class="math inline">\(\pm\)</span> 12 V without clipping the output signal?</p>
-</section>
-<section id="dc-offset" class="level2">
-<h2 class="anchored" data-anchor-id="dc-offset">4. DC Offset</h2>
-<p>You have an input signal described by the equation:</p>
-<p><span class="math display">\[
-v_{in}(t) = 0.05 \sin(500 \pi t) + 0.5 \text{ V}
-\]</span></p>
-<p>Design an operational amplifier circuit powered by <span class="math inline">\(\pm\)</span> 12 V that creates an output signal described by the equation:</p>
-<p><span class="math display">\[
-v_{out}(t) = 2 \sin(500 \pi t) \text{ V}
-\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please <a href="https://outlook.office.com/bookwithme/user/b65348e3d8d949d38306522cadcdb57b@duke.edu/meetingtype/_THM23N3YEqY9S1W8uEHIw2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink">schedule</a> a 20 minute time slot to demonstrate your completed circuit during the in-lab component of this practical.</p>
+<p>Not everyone can present during the dedicated 3 hour time block that would have been our final exam slot (Dec 12, 09:00-12:00), so I would greatly appreciate folks signing up for days in advance!</p>
+<p>If you would like to present during a weekday evening, please <a href="mailto:mlp6@duke.edu">email Dr.&nbsp;Palmeri</a> directly to arrange a time.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -557,24 +559,380 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Note the phase of the output signal relative to the input signal. You can use more than one op-amp stage if necessary.</p>
+<p>You do not have to upload anything to Gradescope; that will be done by Dr. Palmeri after the in-lab component of this practical.</p>
 </div>
 </div>
-<ol type="a">
-<li><p>Sketch your circuit, labeling all relevant components and their values.</p></li>
-<li><p>For your design, how much power does your <span class="math inline">\(v_{in}(t)\)</span> signal source deliver if your overall circuit is driving a load of 100 k<span class="math inline">\(\Omega\)</span>?</p></li>
-</ol>
 </section>
-<section id="differential-amplifier" class="level2">
-<h2 class="anchored" data-anchor-id="differential-amplifier">5. Differential Amplifier</h2>
-<p>For the differential amplifier circuit that was presented in <a href="../slides/opamps-notes.html">lecture</a>, we make an assumption that <span class="math inline">\(R_1 = R_2\)</span> and <span class="math inline">\(R_3 = R_4\)</span>.</p>
+<section id="designing-a-temperature-measurement-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="designing-a-temperature-measurement-circuit">Designing a Temperature Measurement Circuit</h2>
+<p>As discussed in lecture, a Wheatstone bridge can be used to measure small changes in resistance, such as those produced by a temperature sensor. In this pre-lab component, you will design a Wheatstone bridge circuit in KiCad, along with amplification, filtering and threshold comparisons, to measure temperature changes using a thermistor and toggle a digital output signal to indicate if a temperature threshold has been exceeded.</p>
+<section id="wheatstone-bridge-thermistor-measurement-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="wheatstone-bridge-thermistor-measurement-circuit">Wheatstone Bridge Thermistor Measurement Circuit</h3>
+<p>A Wheatsone bridge that can be used to measure changes in resistance of a thermistor is shown below:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/differential_amp.png" class="img-fluid figure-img"></p>
-<figcaption>Differential Amplifier Circuit</figcaption>
+<p><img src="./wheatstone/wheatstone.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>Wheatstone Bridge with Thermistor</figcaption>
 </figure>
 </div>
-<p>If <span class="math inline">\(R_2 = (1\pm0.1)R_1\)</span> and <span class="math inline">\(R_4 = (1\pm0.1)R_3\)</span>, meaning that the resistors can vary by as much as 10% from their nominal values, what is the maximum possible error in the output voltage <span class="math inline">\(V_{out}\)</span> when the input voltages are <span class="math inline">\(V_1 = 2\)</span> V and <span class="math inline">\(V_2 = 1\)</span> V? Assume that <span class="math inline">\(R_1 = R_3 = 10\)</span> k<span class="math inline">\(\Omega\)</span>.</p>
+<p><code>R2</code> is a potentiometer that is used to “balance” the bridge at a reference temperature (i.e., when <span class="math inline">\(V_{out} = 0\)</span> V).</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Lab Practical Task">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lab Practical Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will be asked to discuss why a potentiometer is used in this configuration instead of a fixed value resistor during the in-lab component of this practical.</p>
+</div>
+</div>
+<p>In this lab practical, you will use an Omega 44033 thermistor as your temperature sensor. You can consult the datasheet for the <a href="https://assets.omega.com/spec/44000_THERMIS_ELEMENTS.pdf">Omega 44033</a> thermistor to determine its resistance at various temperatures. This behavior is governed by the Steinhart-Hart equation:</p>
+<p><span class="math display">\[
+T_{(R)}  =(A_1 + B_1 \ln (R) +C_1 (\ln (R))^3 )^{-1}
+\]</span> where:</p>
+<ul>
+<li><span class="math inline">\(T\)</span> is the temperature in Kelvins</li>
+<li><span class="math inline">\(R\)</span> is the resistance at temperature <span class="math inline">\(T\)</span></li>
+<li><span class="math inline">\(A_1\)</span>, <span class="math inline">\(B_1\)</span>, and <span class="math inline">\(C_1\)</span> are the Steinhart-Hart coefficients for the thermistor.</li>
+</ul>
+<p>For our thermistor:</p>
+<ul>
+<li><span class="math inline">\(A_1 = 1.468 \times 10^{-3}\)</span></li>
+<li><span class="math inline">\(B_1 = 2.383 \times 10^{-4}\)</span></li>
+<li><span class="math inline">\(C_1 = 1.007 \times 10^{-7}\)</span></li>
+</ul>
+</section>
+<section id="balance-the-bridge" class="level3">
+<h3 class="anchored" data-anchor-id="balance-the-bridge">Balance the Bridge</h3>
+<ul>
+<li><p>What value of <code>R2</code> balances your bridge (i.e., <span class="math inline">\(V_{out}\)</span> = 0) if <code>TH1</code> is 1 kΩ at a reference temperature, and <code>R1</code> is +10% of its nominal value, and <code>R3</code> is -10% of its nominal value??</p></li>
+<li><p>SPICE simulate this balanced bridge and calculate the power supplied by the power source and dissipated by each of the resistors in this balanced configuration.</p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>SPICE can model a potentiometer using a variable resistor element, but you can also use a simple resistor and choose to “sweep” its value.</p>
+<p>Make sure these simulated values make sense to you, as you will have to verify them during the in-lab component of this practical!</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lab Practical Task">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lab Practical Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will be asked to build this balanced bridge circuit during the in-lab component of this practical and verify your power supplied/dissipated values from your SPICE simulation.</p>
+</div>
+</div>
+</section>
+<section id="sweep-the-thermistor-resistance" class="level3">
+<h3 class="anchored" data-anchor-id="sweep-the-thermistor-resistance">Sweep The Thermistor Resistance</h3>
+<ul>
+<li>SPICE simulate the output voltage of your Wheatstone bridge (<span class="math inline">\(V_{out}\)</span>) as you sweep the resistance of the thermistor (<code>TH1</code>) from 100 - 10 kΩ.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You do not need to directly model the Omega 44033 thermistor in SPICE; simply sweep the resistance value of <code>TH1</code> over this range.</p>
+</div>
+</div>
+<ul>
+<li>Include in your plot of the output voltage how the power supplies by the source varies as this thermistor resistance changes.</li>
+</ul>
+</section>
+<section id="calibrate-the-bridge-for-temperature-measurement" class="level3">
+<h3 class="anchored" data-anchor-id="calibrate-the-bridge-for-temperature-measurement">Calibrate the Bridge for Temperature Measurement</h3>
+<ul>
+<li><p>Using the Steinhart-Hart equation and the datasheet for the Omega 44033 thermistor, what is the measured temperature when the resistance of the thermistor is 3 kΩ?</p></li>
+<li><p>Derive an expression to correlate <span class="math inline">\(V_{out}\)</span> to temperature (in °C) for this Wheatstone bridge configuration.</p></li>
+</ul>
+</section>
+<section id="improve-the-measurement-signal-to-noise-ratio-snr" class="level3">
+<h3 class="anchored" data-anchor-id="improve-the-measurement-signal-to-noise-ratio-snr">Improve the Measurement Signal-to-Noise Ratio (SNR)</h3>
+<p>Wheatstone bridges are often used to measure small changes in resistance, which can lead to small output voltages that are susceptible to noise. To improve the SNR of your temperature measurement, you will design an amplification and filtering stage.</p>
+<ul>
+<li><p>Design a two-stage opamp circuit to amplify and low-pass filter the output voltage of your Wheatstone bridge.</p>
+<ol type="1">
+<li><p>The first stage should use a differential amplifier with a gain that does not cause the output to saturate at the maximum expected output voltage from the Wheatstone bridge.</p></li>
+<li><p>The second stage should be an active low-pass filter with a cutoff frequency of 10 Hz and gain that maximized the differential output signal without saturating.</p></li>
+</ol></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You must choose realistic resistor and capacitor values for your circuit design to be able to build this circuit during the in-lab component of this practical. See the appendix at the end of this handout for available component values.</p>
+</div>
+</div>
+<ul>
+<li><p>SPICE simulate the following signals as you sweep the resistance of the thermistor (<code>TH1</code>) to match a temperature range from 0 - 100 °C:</p>
+<ul>
+<li>The output voltage of the Wheatstone bridge (<span class="math inline">\(V_{out}\)</span>)</li>
+<li>The output voltage of the differential amplifier stage</li>
+<li>The output voltage of the low-pass filter stage</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lab Practical Task">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lab Practical Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will be asked to build this amplification and filtering stage during the in-lab component of this practical and make matching measurements using an oscilloscope.</p>
+<p>Be ready to answer questions about how you chose your component values for this stage, input/output impedances, and how actual resistor values (compared to their nominal values) affect your circuit performance.</p>
+</div>
+</div>
+</section>
+<section id="temperature-threshold-detection" class="level3">
+<h3 class="anchored" data-anchor-id="temperature-threshold-detection">Temperature Threshold Detection</h3>
+<p>To indicate when a temperature threshold has been exceeded, design a comparator circuit stage after your filtering stage that toggles a digital output signal when the filtered output voltage exceeds a certain threshold voltage. This comparator will output a <code>LOW</code> signal (0 V) when the temperature is below the threshold and a <code>HIGH</code> signal (+5 V) when the temperature exceeds the threshold.</p>
+<ul>
+<li>Add this comparator stage to your KiCad schematic, and simulate the output for a temperature of 0 °C and 100 °C, assuming a temperature threshold of 50 °C.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Lab Practical Task">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lab Practical Task
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dr.&nbsp;Palmeri will test your final circuit design by setting the termistor into a water baths at two different temperatures to test this functionality.</p>
+<p>Plan to ask him questions supporting your design choices for this entire circuit.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="appendix-available-component-values" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-available-component-values">Appendix: Available Component Values</h2>
+<p>When designing your circuits, you should choose component values from the following lists to ensure you can build your circuit during the in-lab component of this practical.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Resistor Values</th>
+<th>Capacitor Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>22p</td>
+</tr>
+<tr class="even">
+<td>24.9</td>
+<td>47p</td>
+</tr>
+<tr class="odd">
+<td>49.9</td>
+<td>150p</td>
+</tr>
+<tr class="even">
+<td>52</td>
+<td>330p</td>
+</tr>
+<tr class="odd">
+<td>100</td>
+<td>680p</td>
+</tr>
+<tr class="even">
+<td>120</td>
+<td>1.5n</td>
+</tr>
+<tr class="odd">
+<td>150</td>
+<td>4.7n</td>
+</tr>
+<tr class="even">
+<td>180</td>
+<td>10n</td>
+</tr>
+<tr class="odd">
+<td>200</td>
+<td>22n</td>
+</tr>
+<tr class="even">
+<td>270</td>
+<td>47n</td>
+</tr>
+<tr class="odd">
+<td>330</td>
+<td>0.1u</td>
+</tr>
+<tr class="even">
+<td>470</td>
+<td>0.22u</td>
+</tr>
+<tr class="odd">
+<td>510</td>
+<td>0.47u</td>
+</tr>
+<tr class="even">
+<td>560</td>
+<td>0.82u</td>
+</tr>
+<tr class="odd">
+<td>620</td>
+<td>1u</td>
+</tr>
+<tr class="even">
+<td>680</td>
+<td>1.2u</td>
+</tr>
+<tr class="odd">
+<td>1k</td>
+<td>2.2u</td>
+</tr>
+<tr class="even">
+<td>1.5k</td>
+<td>4.7u</td>
+</tr>
+<tr class="odd">
+<td>1.8k</td>
+<td>10u</td>
+</tr>
+<tr class="even">
+<td>2k</td>
+<td>100u</td>
+</tr>
+<tr class="odd">
+<td>2.2k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2.7k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3.3k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3.9k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4.7k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5.1k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>7.5k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>10k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>15k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>18k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>20k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>22k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>33k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>47k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>63.4k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>82k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>100k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>127k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>150k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>330k</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>470k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1M</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3.3M</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
@@ -984,4 +1342,4 @@ Note
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlp6/Embedded-Medical-Devices/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
