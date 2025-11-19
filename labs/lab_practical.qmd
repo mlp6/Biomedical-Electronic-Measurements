@@ -1,0 +1,229 @@
+---
+title: "BME290L - Fall 2025 - Lab Practical: Temperature Measurement with a Wheatstone Bridge"
+subtitle: "Due: Wed, Dec 10, 2025 @ 12:00"
+format:
+  html: default
+  pdf: default
+---
+
+## Instructions
+
+- This lab practical has a pre-lab analysis / KiCad component and an in-lab
+experimental meaurement component.
+
+- The prelab component is open notes and online resources can be used for
+knowledge lookup, but you cannot directly post any of these questions to solicit
+answers from online forums or AI resources.
+
+- You are not allowed to collaborate with classmates on this lab practical.
+
+- All circuit sources are assumed to be ideal and linear, all wires are ideal
+(lossless), and all circuit elements are also assumed to be linear.
+
+- All opamps are assumed to be ideal and powered by ± 12 V, unless otherwise indicated.
+  
+- Create a PDF of your analyses, simulation outputs and calculated values from
+SPICE simulations to include in your submission (zip archive of the project).
+
+- You will email a zip archive of your KiCad project files to [Dr. Palmeri](mailto:mlp6@duke.edu) before performing the in-lab components of this practical.
+
+  - Please make the subject line of your email as `BME290L F25 Lab Practical - FirstName LastName`, replacing `FirstName LastName` with your full name.
+
+  - Please name your zip file as `BME290L_F25_LabPractical_FirstName_LastName.zip`, replacing `FirstName_LastName` with your full name.
+    
+::: callout-important
+Please [schedule](https://outlook.office.com/bookwithme/user/b65348e3d8d949d38306522cadcdb57b@duke.edu/meetingtype/_THM23N3YEqY9S1W8uEHIw2?anonymous&ismsaljsauthenabled&ep=mlink) a 20 minute time slot to demonstrate your completed circuit during the in-lab component of this practical.
+
+Not everyone can present during the dedicated 3 hour time block that would have been our final exam slot (Dec 12, 09:00-12:00), so I would greatly appreciate folks signing up for days in advance!
+
+If you would like to present during a weekday evening, please [email Dr. Palmeri](mailto:mlp6@duke.edu) directly to arrange a time.
+:::
+    
+::: callout-note
+You do not have to upload anything to Gradescope; that will be done by Dr.
+Palmeri after the in-lab component of this practical.
+:::
+
+## Designing a Temperature Measurement Circuit
+
+As discussed in lecture, a Wheatstone bridge can be used to measure small
+changes in resistance, such as those produced by a temperature sensor. In this
+pre-lab component, you will design a Wheatstone bridge circuit in KiCad, along
+with amplification, filtering and threshold comparisons, to measure temperature
+changes using a thermistor and toggle a digital output signal to indicate if a
+temperature threshold has been exceeded.
+
+### Wheatstone Bridge Thermistor Measurement Circuit
+
+A Wheatsone bridge that can be used to measure changes in resistance of a
+thermistor is shown below:
+
+![Wheatstone Bridge with Thermistor](./wheatstone/wheatstone.svg){fig-align="center" width="400"}
+
+`R2` is a potentiometer that is used to "balance" the bridge at a reference temperature (i.e., when $V_{out} = 0$ V).  
+
+::: {.callout-note title="Lab Practical Task"}
+You will be asked to discuss why a potentiometer is used in this configuration
+instead of a fixed value resistor during the in-lab component of this practical.
+:::
+
+In this lab practical, you will use an Omega 44033 thermistor as your temperature sensor.  You can consult the datasheet for the [Omega 44033](https://assets.omega.com/spec/44000_THERMIS_ELEMENTS.pdf) thermistor to determine its resistance at various temperatures.  This behavior is governed by the Steinhart-Hart equation:
+
+$$
+T_{(R)}  =(A_1 + B_1 \ln (R) +C_1 (\ln (R))^3 )^{-1}
+$$
+where:
+
+- $T$ is the temperature in Kelvins 
+- $R$ is the resistance at temperature $T$
+- $A_1$, $B_1$, and $C_1$ are the Steinhart-Hart coefficients for the thermistor. 
+
+For our thermistor:
+
+- $A_1 = 1.468 \times 10^{-3}$
+- $B_1 = 2.383 \times 10^{-4}$
+- $C_1 = 1.007 \times 10^{-7}$
+  
+### Balance the Bridge
+
+- What value of `R2` balances your bridge (i.e., $V_{out}$ = 0) if `TH1` is 1 kΩ
+at a reference temperature, and `R1` is +10% of its nominal value, and `R3` is
+-10% of its nominal value??
+
+- SPICE simulate this balanced bridge and calculate the power supplied by the
+power source and dissipated by each of the resistors in this balanced
+configuration.
+  
+::: callout-tip
+SPICE can model a potentiometer using a variable resistor element, but you can
+also use a simple resistor and choose to "sweep" its value.
+
+Make sure these simulated values make sense to you, as you will have to verify
+them during the in-lab component of this practical!
+:::
+
+::: {.callout-note title="Lab Practical Task"}
+You will be asked to build this balanced bridge circuit during the in-lab component of this practical and verify your power supplied/dissipated values from your SPICE simulation.
+:::
+
+### Sweep The Thermistor Resistance
+
+- SPICE simulate the output voltage of your Wheatstone bridge ($V_{out}$) as you sweep the resistance of the thermistor (`TH1`) from 100 - 10 kΩ.
+
+::: callout-tip
+You do not need to directly model the Omega 44033 thermistor in SPICE; simply sweep the resistance value of `TH1` over this range.
+:::
+  
+- Include in your plot of the output voltage how the power supplies by the source varies as this thermistor resistance changes.
+
+### Calibrate the Bridge for Temperature Measurement
+
+- Using the Steinhart-Hart equation and the datasheet for the Omega 44033 thermistor, what is the measured temperature when the resistance of the thermistor is 3 kΩ?
+  
+- Derive an expression to correlate $V_{out}$ to temperature (in °C) for this Wheatstone bridge configuration.
+  
+### Improve the Measurement Signal-to-Noise Ratio (SNR)
+
+Wheatstone bridges are often used to measure small changes in resistance, which can lead to small output voltages that are susceptible to noise. To improve the SNR of your temperature measurement, you will design an amplification and filtering stage.
+
+- Design a two-stage opamp circuit to amplify and low-pass filter the output voltage of your Wheatstone bridge.
+
+  1. The first stage should use a differential amplifier with a gain that does
+  not cause the output to saturate at the maximum expected output voltage from
+  the Wheatstone bridge.
+
+  2. The second stage should be an active low-pass filter with a cutoff frequency
+  of 10 Hz and gain that maximized the differential output signal without
+  saturating.
+    
+::: callout-tip
+You must choose realistic resistor and capacitor values for your circuit design
+to be able to build this circuit during the in-lab component of this practical.
+See the appendix at the end of this handout for available component values.
+:::
+    
+- SPICE simulate the following signals as you sweep the resistance of the thermistor (`TH1`) to match a temperature range from 0 - 100 °C:
+
+  - The output voltage of the Wheatstone bridge ($V_{out}$)
+  - The output voltage of the differential amplifier stage
+  - The output voltage of the low-pass filter stage
+
+::: {.callout-note title="Lab Practical Task"}
+You will be asked to build this amplification and filtering stage during the in-lab component of this practical and make matching measurements using an oscilloscope.
+
+Be ready to answer questions about how you chose your component values for this stage, input/output impedances, and how actual resistor values (compared to their nominal values) affect your circuit performance.
+:::
+  
+### Temperature Threshold Detection
+
+To indicate when a temperature threshold has been exceeded, design a comparator
+circuit stage after your filtering stage that toggles a digital output signal
+when the filtered output voltage exceeds a certain threshold voltage.  This
+comparator will output a `LOW` signal (0 V) when the temperature is below the
+threshold and a `HIGH` signal (+5 V) when the temperature exceeds the threshold.
+
+- Add this comparator stage to your KiCad schematic, and simulate the output for
+a temperature of 0 °C and 100 °C, assuming a temperature threshold of 50 °C.
+
+::: {.callout-note title="Lab Practical Task"}
+Dr. Palmeri will test your final circuit design by setting the termistor into a
+water baths at two different temperatures to test this functionality.
+
+Plan to ask him questions supporting your design choices for this entire
+circuit.
+:::
+
+## Appendix: Available Component Values
+
+When designing your circuits, you should choose component values from the
+following lists to ensure you can build your circuit during the in-lab component
+of this practical.  
+
+| Resistor Values | Capacitor Values |
+|-----------------|------------------|
+| 10 | 22p |
+| 24.9 | 47p |
+| 49.9 | 150p |
+| 52 | 330p |
+| 100 | 680p |
+| 120 | 1.5n |
+| 150 | 4.7n |
+| 180 | 10n |
+| 200 | 22n |
+| 270 | 47n |
+| 330 | 0.1u |
+| 470 | 0.22u |
+| 510 | 0.47u |
+| 560 | 0.82u |
+| 620 | 1u |
+| 680 | 1.2u |
+| 1k | 2.2u |
+| 1.5k | 4.7u |
+| 1.8k | 10u |
+| 2k | 100u |
+| 2.2k | |
+| 2.7k | |
+| 3k | |
+| 3.3k | |
+| 3.9k | |
+| 4.7k | |
+| 5.1k | |
+| 7.5k | |
+| 10k | |
+| 12k | |
+| 13k | |
+| 15k | |
+| 18k | |
+| 20k | |
+| 22k | |
+| 33k | |
+| 47k | |
+| 63.4k | |
+| 82k | |
+| 100k | |
+| 127k | |
+| 150k | |
+| 330k | |
+| 470k | |
+| 1M | |
+| 3.3M | |

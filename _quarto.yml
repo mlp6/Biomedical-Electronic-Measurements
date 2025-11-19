@@ -82,6 +82,8 @@ website:
           text: "Operational Amplifiers"
         - href: labs/diodes.qmd
           text: "Diodes and Rectifiers"
+        - href: labs/lab_practical.qmd
+          text: "Lab Practical"
       - section: Resources
         contents:
         - href: resources/XYZs_of_Oscopes_Tektronix.pdf
