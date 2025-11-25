@@ -108,7 +108,24 @@ This class is organized in a sequence of learning modules.  Specific details
 surrounding dates for assignments associated with each module will be 
 updated throughout the semester in the table and calendar below.
 
-{{< include _schedule.qmd >}}
+- Resistive Circuit Analysis
+  - [Introduction to Circuits](slides/intro-circuits.qmd)
+  - [Ohm's Law, KCL, KVL](slides/ohm-kcl-kvl.qmd)
+  - [Equivalent Resistance](slides/r_eq.qmd)
+  - [Node Voltage & Mesh Current Analysis](slides/circuit-analysis.qmd)
+  - [Thevenin & Norton Equivalents](slides/sources.qmd)
+- KiCad
+  - [Schematic Capture](slides/ecad_kicad_schematic.qmd)
+  - [SPICE Simulation](slides/ecad_kicad_spice.qmd)
+- Reactive Circuit Analysis
+  - [Capacitors & Inductors](slides/reactive_components.qmd)
+  - [Sinusoidal Signals](slides/sinusoidal_signals.qmd)
+  - [Complex Impedance & Phasors](slides/complex_impedance.qmd)
+- [Filters](slides/filters.qmd)
+- [Transient Analysis](slides/transient_analysis.qmd)
+- [Operational Amplifiers](slides/opamps.qmd)
+- [Diodes](slides/diodes.qmd)
+- [Temperature Measurement Circuit](labs/lab_practical.qmd)
 
 ## Attendance & Participation
 
