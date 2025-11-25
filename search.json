@@ -1643,6 +1643,13 @@
     ]
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Biomedical Electronic Measurements",
+    "section": "",
+    "text": "Please use the links in the sidebar to navigate through the course materials."
+  },
+  {
     "objectID": "labs/opamps.html",
     "href": "labs/opamps.html",
     "title": "Op Amps: Amplifiers & Active Filers",
@@ -1845,7 +1852,7 @@
     "href": "course-syllabus.html#class-schedule",
     "title": "Biomedical Electronic Measurements",
     "section": "Class Schedule",
-    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be updated throughout the semester in the table and calendar below.",
+    "text": "Class Schedule\nThis class is organized in a sequence of learning modules. Specific details surrounding dates for assignments associated with each module will be updated throughout the semester in the table and calendar below.\n\nResistive Circuit Analysis\n\nIntroduction to Circuits\nOhm’s Law, KCL, KVL\nEquivalent Resistance\nNode Voltage & Mesh Current Analysis\nThevenin & Norton Equivalents\n\nKiCad\n\nSchematic Capture\nSPICE Simulation\n\nReactive Circuit Analysis\n\nCapacitors & Inductors\nSinusoidal Signals\nComplex Impedance & Phasors\n\nFilters\nTransient Analysis\nOperational Amplifiers\nDiodes\nTemperature Measurement Circuit",
     "crumbs": [
       "Course Information",
       "Course Syllabus"
