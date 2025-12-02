@@ -114,7 +114,7 @@ You will be asked to build this balanced bridge circuit during the in-lab compon
 You do not need to directly model the Omega 44033 thermistor in SPICE; simply sweep the resistance value of `TH1` over this range.
 :::
   
-- Include in your plot of the output voltage how the power supplies by the source varies as this thermistor resistance changes.
+- Include in your plot of the output voltage how the power supplied by the source varies as this thermistor resistance changes.
 
 ### Calibrate the Bridge for Temperature Measurement
 
