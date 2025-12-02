@@ -1,7 +1,7 @@
 # TODO
 
 - [ ] Update the [Makefile](Makefile) to compile all of the `circuitikz` images
-  and clean things up.
+  and clean things up.  MAYBE CONVERT TO KICAD SCHEMATICS??
 
 - [ ] Setup semester-long calendar
 
