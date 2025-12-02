@@ -2017,7 +2017,7 @@
     "href": "TODO.html",
     "title": "TODO",
     "section": "",
-    "text": "Update the Makefile to compile all of the circuitikz images and clean things up.\nSetup semester-long calendar\n\n\n\n\nOrganize slide images by lecture (not monolithic directory)\nAdd input/output impedance to resistive loading, for example, real source resistance and designed voltage divider."
+    "text": "Update the Makefile to compile all of the circuitikz images and clean things up. MAYBE CONVERT TO KICAD SCHEMATICS??\nSetup semester-long calendar\n\n\n\n\nOrganize slide images by lecture (not monolithic directory)\nAdd input/output impedance to resistive loading, for example, real source resistance and designed voltage divider."
   },
   {
     "objectID": "TODO.html#slides",
