@@ -34,7 +34,7 @@ SPICE simulations to include in your submission (zip archive of the project).
 ::: callout-important
 Please [schedule](https://outlook.office.com/bookwithme/user/b65348e3d8d949d38306522cadcdb57b@duke.edu/meetingtype/_THM23N3YEqY9S1W8uEHIw2?anonymous&ismsaljsauthenabled&ep=mlink) a 20 minute time slot to demonstrate your completed circuit during the in-lab component of this practical.
 
-Not everyone can present during the dedicated 3 hour time block that would have been our final exam slot (Dec 12, 09:00-12:00), so I would greatly appreciate folks signing up for days in advance!
+Not everyone can present during the dedicated 3 hour time block that would have been our final exam slot (Dec 10, 09:00-12:00), so I would greatly appreciate folks signing up for days in advance!
 
 If you would like to present during a weekday evening, please [email Dr. Palmeri](mailto:mlp6@duke.edu) directly to arrange a time.
 :::
