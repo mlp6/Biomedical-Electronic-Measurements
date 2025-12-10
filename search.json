@@ -2015,16 +2015,37 @@
   {
     "objectID": "TODO.html",
     "href": "TODO.html",
-    "title": "TODO",
+    "title": "TODO / NOTES",
     "section": "",
-    "text": "Update the Makefile to compile all of the circuitikz images and clean things up. MAYBE CONVERT TO KICAD SCHEMATICS??\nSetup semester-long calendar\n\n\n\n\nOrganize slide images by lecture (not monolithic directory)\nAdd input/output impedance to resistive loading, for example, real source resistance and designed voltage divider."
+    "text": "Update the Makefile to compile all of the circuitikz images and clean things up. MAYBE CONVERT TO KICAD SCHEMATICS??\nSetup semester-long calendar\nLecture attendance suffered at the end of the semester. Consider having more participation-based credit and make in-class activities have higher yield for the students (e.g., complete some project tasks in class to get feedback).\n\n\n\n\nOrganize slide images by lecture (not monolithic directory)\nAdd input/output impedance to resistive loading, for example, real source resistance and designed voltage divider.\n\n\n\n\n\nFinal project conflicted w/ exam 03 and was challenging to have students present during reading period / final exam block. Pivot this to be the final lab exercise.\n\n\n\n\n\nTraditional problem sets sucked; pivot to more of the mini-projects. Maybe leverage KiCad even sooner for ability to simulate to validate analytic circuit analysis.\n\n\n\n\n\nIn-class exam was a bummer; take-home mini-projects were a win."
   },
   {
     "objectID": "TODO.html#slides",
     "href": "TODO.html#slides",
-    "title": "TODO",
+    "title": "TODO / NOTES",
     "section": "",
     "text": "Organize slide images by lecture (not monolithic directory)\nAdd input/output impedance to resistive loading, for example, real source resistance and designed voltage divider."
+  },
+  {
+    "objectID": "TODO.html#labs",
+    "href": "TODO.html#labs",
+    "title": "TODO / NOTES",
+    "section": "",
+    "text": "Final project conflicted w/ exam 03 and was challenging to have students present during reading period / final exam block. Pivot this to be the final lab exercise."
+  },
+  {
+    "objectID": "TODO.html#problems-sets",
+    "href": "TODO.html#problems-sets",
+    "title": "TODO / NOTES",
+    "section": "",
+    "text": "Traditional problem sets sucked; pivot to more of the mini-projects. Maybe leverage KiCad even sooner for ability to simulate to validate analytic circuit analysis."
+  },
+  {
+    "objectID": "TODO.html#exams",
+    "href": "TODO.html#exams",
+    "title": "TODO / NOTES",
+    "section": "",
+    "text": "In-class exam was a bummer; take-home mini-projects were a win."
   },
   {
     "objectID": "slides/sources-slides.html#summary-of-analysis-approaches-so-far",
