@@ -181,8 +181,8 @@ enforced), and a traditional grading scheme will be used (e.g., 90-93 = A-,
 rounding up/down for fractional grades.
 
 ::: callout-warning
-Failing the course can happen with a cummulative score $<$ 65 (D) or more than
-one unexcused lab absence.
+Failing the course can happen with a cummulative score $<$ 60 or more than one
+unexcused lab absence.
 :::
 
 ### Regrades
