@@ -569,6 +569,7 @@ Note
 <section id="wheatstone-bridge-thermistor-measurement-circuit" class="level3">
 <h3 class="anchored" data-anchor-id="wheatstone-bridge-thermistor-measurement-circuit">Wheatstone Bridge Thermistor Measurement Circuit</h3>
 <p>A Wheatsone bridge that can be used to measure changes in resistance of a thermistor is shown below:</p>
+<!-- CHANGE: use +12 or +5 V from PSU to reduce number of independent sources -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./wheatstone/wheatstone.png" class="img-fluid figure-img" width="400"></p>
@@ -671,6 +672,7 @@ Tip
 <section id="improve-the-measurement-signal-to-noise-ratio-snr" class="level3">
 <h3 class="anchored" data-anchor-id="improve-the-measurement-signal-to-noise-ratio-snr">Improve the Measurement Signal-to-Noise Ratio (SNR)</h3>
 <p>Wheatstone bridges are often used to measure small changes in resistance, which can lead to small output voltages that are susceptible to noise. To improve the SNR of your temperature measurement, you will design an amplification and filtering stage.</p>
+<!-- TODO: current specs don't need gain b/c of saturation concerns; consider restricting range of bridge to make gain more reasonable to implement -->
 <ul>
 <li><p>Design a two-stage opamp circuit to amplify and low-pass filter the output voltage of your Wheatstone bridge.</p>
 <ol type="1">
@@ -720,7 +722,10 @@ Lab Practical Task
 <ul>
 <li><p>This comparator will output a <code>LOW</code> signal (0 V) when the temperature is below the threshold and a <code>HIGH</code> signal (+5 V) when the temperature exceeds the threshold.</p></li>
 <li><p>Have your comparator <code>HIGH</code> output turn on an LED.</p></li>
-<li><p>Add this comparator stage to your KiCad schematic, and simulate the output for a temperature of 0 °C and 100 °C, assuming a temperature threshold of 50 °C.</p></li>
+</ul>
+<!-- TODO: have the students create this reference voltage with a pot, not a separate PSU -->
+<ul>
+<li>Add this comparator stage to your KiCad schematic, and simulate the output for a temperature of 0 °C and 100 °C, assuming a temperature threshold of 50 °C.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled" title="Lab Practical Task">
 <div class="callout-header d-flex align-content-center">
