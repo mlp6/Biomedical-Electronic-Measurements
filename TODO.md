@@ -22,6 +22,8 @@ the students (e.g., complete some project tasks in class to get feedback).
 present during reading period / final exam block.  Pivot this to be the final
 lab exercise.
 
+- Reduce number of power supplies needed in final project.
+
 ## Problems Sets
 
 - Traditional problem sets sucked; pivot to more of the mini-projects.  Maybe
