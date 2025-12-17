@@ -24,6 +24,8 @@ lab exercise.
 
 - Reduce number of power supplies needed in final project.
 
+- Clarify if lab "reports" should be done individually or with partner(s).
+
 ## Problems Sets
 
 - Traditional problem sets sucked; pivot to more of the mini-projects.  Maybe
