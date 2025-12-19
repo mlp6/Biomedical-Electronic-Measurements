@@ -4,9 +4,9 @@ project:
 website:
   title: "Biomedical Electronic Measurements"
   description: "Duke BME 253L - Fall 2025"
-  site-url: "https://mlp6.github.io/Embedded-Medical-Devices/"
+  site-url: "https://mlp6.github.io/Biomedical-Electronic-Measurements/"
   
-  repo-url: "https://github.com/mlp6/Embedded-Medical-Devices/"
+  repo-url: "https://github.com/mlp6/Biomedical-Electronic-Measurements/"
   repo-actions: [issue]
 
   sidebar:
