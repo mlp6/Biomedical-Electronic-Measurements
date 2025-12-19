@@ -1,1 +1,1 @@
-Sitemap: https://mlp6.github.io/Embedded-Medical-Devices/sitemap.xml
+Sitemap: https://mlp6.github.io/Biomedical-Electronic-Measurements/sitemap.xml
